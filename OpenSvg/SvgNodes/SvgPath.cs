@@ -8,10 +8,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
 {
     public readonly PathAttr Path = new();
 
-    public SvgPath()
-    {
-        Path.Set(new SKPath());
-    }
+    public SvgPath() => this.Path.Set(new SKPath());
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="SvgPath" /> class with the specified <see cref="TextConfig" />.
@@ -20,39 +17,30 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
     public SvgPath(TextConfig textConfig)
     {
         DrawConfig = textConfig.DrawConfig;
-        Path.Set(ConvertTextToSkPath(textConfig));
+        this.Path.Set(ConvertTextToSkPath(textConfig));
     }
 
 
     public override string SvgName => SvgNames.Path;
 
-    public void Dispose()
-    {
-        Path.Get().Dispose();
-    }
+    public void Dispose() => this.Path.Get().Dispose();
 
-    protected override ConvexHull ComputeConvexHull()
-    {
-        return ApproximateToMultiPolygon().ComputeConvexHull();
-    }
+    protected override ConvexHull ComputeConvexHull() => ApproximateToMultiPolygon().ComputeConvexHull();
 
     /// <summary>
     ///     Approximates the path to multi polygon.
     /// </summary>
     /// <param name="segments">The number of line segments to use to approximate every single Bezier curve.</param>
     /// <returns>A multi polygon object.</returns>
-    public MultiPolygon ApproximateToMultiPolygon(int segments = 10)
-    {
-        return new MultiPolygon(ApproximatePathToPolygons(segments));
-    }
+    public MultiPolygon ApproximateToMultiPolygon(int segments = 10) => new(ApproximatePathToPolygons(segments));
 
     private IEnumerable<Polygon> ApproximatePathToPolygons(int segments = 10)
     {
-        var path = Path.Get();
+        SKPath path = this.Path.Get();
 
         var currentPoints = new List<Point>();
 
-        using var iterator = path.CreateRawIterator();
+        using SKPath.RawIterator iterator = path.CreateRawIterator();
         var points = new SKPoint[4];
         SKPathVerb verb;
 
@@ -115,12 +103,12 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
     {
         var points = new List<Point>();
 
-        for (var i = 0; i <= segments; i++)
+        for (int i = 0; i <= segments; i++)
         {
-            var t = i / (float)segments;
-            var u = 1.0f - t;
-            var x = u * u * start.X + 2.0f * u * t * control.X + t * t * end.X;
-            var y = u * u * start.Y + 2.0f * u * t * control.Y + t * t * end.Y;
+            float t = i / (float)segments;
+            float u = 1.0f - t;
+            float x = u * u * start.X + 2.0f * u * t * control.X + t * t * end.X;
+            float y = u * u * start.Y + 2.0f * u * t * control.Y + t * t * end.Y;
             points.Add(new Point(x, y));
         }
 
@@ -141,12 +129,12 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
     {
         var points = new List<Point>();
 
-        for (var i = 0; i <= segments; i++)
+        for (int i = 0; i <= segments; i++)
         {
-            var t = i / (float)segments;
-            var u = 1.0f - t;
-            var x = u * u * u * start.X + 3 * u * u * t * control1.X + 3 * u * t * t * control2.X + t * t * t * end.X;
-            var y = u * u * u * start.Y + 3 * u * u * t * control1.Y + 3 * u * t * t * control2.Y + t * t * t * end.Y;
+            float t = i / (float)segments;
+            float u = 1.0f - t;
+            float x = u * u * u * start.X + 3 * u * u * t * control1.X + 3 * u * t * t * control2.X + t * t * t * end.X;
+            float y = u * u * u * start.Y + 3 * u * u * t * control1.Y + 3 * u * t * t * control2.Y + t * t * t * end.Y;
             points.Add(new Point(x, y));
         }
 
@@ -167,13 +155,13 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
     {
         var points = new List<Point>();
 
-        for (var i = 0; i <= segments; i++)
+        for (int i = 0; i <= segments; i++)
         {
-            var t = i / (float)segments;
-            var u = 1.0f - t;
-            var w = (u * weight + t) / (u + t * weight);
-            var x = u * start.X + t * end.X + w * (control.X - u * start.X - t * end.X);
-            var y = u * start.Y + t * end.Y + w * (control.Y - u * start.Y - t * end.Y);
+            float t = i / (float)segments;
+            float u = 1.0f - t;
+            float w = (u * weight + t) / (u + t * weight);
+            float x = u * start.X + t * end.X + w * (control.X - u * start.X - t * end.X);
+            float y = u * start.Y + t * end.Y + w * (control.Y - u * start.Y - t * end.Y);
             points.Add(new Point(x, y));
         }
 
@@ -184,13 +172,13 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
         double doublePrecision = Constants.DoublePrecision)
     {
         if (ReferenceEquals(this, other)) return (true, "Same reference");
-        var (equal, message) = base.CompareSelfAndDescendants(other);
+        (bool equal, string message) = base.CompareSelfAndDescendants(other);
         if (!equal)
             return (equal, message);
         var sameType = (SvgPath)other;
 
-        if (Path != sameType.Path)
-            return (false, $"Path: {Path} != {sameType.Path}");
+        if (this.Path != sameType.Path)
+            return (false, $"Path: {this.Path} != {sameType.Path}");
 
         return (true, "Equal");
     }

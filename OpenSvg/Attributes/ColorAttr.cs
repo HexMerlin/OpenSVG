@@ -8,13 +8,7 @@ public class ColorAttr : Attr<SKColor>
     {
     }
 
-    protected override SKColor Deserialize(string xmlString)
-    {
-        return xmlString.ToColor();
-    }
+    protected override SKColor Deserialize(string xmlString) => xmlString.ToColor();
 
-    protected override string Serialize(SKColor value)
-    {
-        return value.ToHexColorString();
-    }
+    protected override string Serialize(SKColor value) => value.ToHexColorString();
 }

@@ -1,5 +1,4 @@
-﻿using System.Xml.Serialization;
-using OpenSvg.Attributes;
+﻿using OpenSvg.Attributes;
 using OpenSvg.Config;
 using SkiaSharp;
 
@@ -50,10 +49,7 @@ public class SvgText : SvgVisual, IHasElementContent
     ///     if it does not already exist.
     /// </remarks>
     /// <param name="textConfig">A <see cref="TextConfig" /> object providing properties for the text.</param>
-    public SvgText(TextConfig textConfig)
-    {
-        TextConfig = textConfig;
-    }
+    public SvgText(TextConfig textConfig) => TextConfig = textConfig;
 
     public override string SvgName => SvgNames.Text;
 
@@ -61,23 +57,23 @@ public class SvgText : SvgVisual, IHasElementContent
     {
         get
         {
-            var fontName = FontName.Get();
-            var svgFont = RootDocument.EmbeddedFont(fontName) ?? throw new InvalidOperationException(
+            string fontName = this.FontName.Get();
+            SvgFont svgFont = RootDocument.EmbeddedFont(fontName) ?? throw new InvalidOperationException(
                 $"An embedded font with name {fontName} could not be found in the current {nameof(SvgDocument)}");
-            var drawConfig = DrawConfig;
-            var textContent = Content;
-            var svgFontSize = FontSize.Get();
+            DrawConfig drawConfig = DrawConfig;
+            string textContent = Content;
+            double svgFontSize = this.FontSize.Get();
             return new TextConfig(textContent, svgFont, svgFontSize, drawConfig);
         }
         set
         {
-            (size, offset) = GetSizeAndOffset(value.Text, value.SvgFont.Font, value.FontSize);
-            X.Set(offset.X);
-            Y.Set(offset.Y);
+            (this.size, this.offset) = GetSizeAndOffset(value.Text, value.SvgFont.Font, value.FontSize);
+            this.X.Set(this.offset.X);
+            this.Y.Set(this.offset.Y);
             DrawConfig = value.DrawConfig;
             Content = value.Text;
-            FontName.Set(value.FontName);
-            FontSize.Set(value.FontSize);
+            this.FontName.Set(value.FontName);
+            this.FontSize.Set(value.FontSize);
         }
     }
 
@@ -107,7 +103,7 @@ public class SvgText : SvgVisual, IHasElementContent
         textPaint.MeasureText(text, ref textBounds);
         var size = new Size(textBounds.Width, textBounds.Height);
 
-        using var textPath = textPaint.GetTextPath(text, 0, 0);
+        using SKPath textPath = textPaint.GetTextPath(text, 0, 0);
         var offset = new Point(-textPath.Bounds.Left, -textPath.Bounds.Top);
 
         return (size, offset);
@@ -116,12 +112,9 @@ public class SvgText : SvgVisual, IHasElementContent
 
     protected override ConvexHull ComputeConvexHull()
     {
-        Point ActualXY(double x, double y)
-        {
-            return new Point(X.Get() - offset.X + x, Y.Get() - offset.Y + y);
-        }
+        Point ActualXY(double x, double y) => new(this.X.Get() - this.offset.X + x, this.Y.Get() - this.offset.Y + y);
 
         return new ConvexHull(new[]
-            { ActualXY(0, 0), ActualXY(size.Width, 0), ActualXY(size.Width, size.Height), ActualXY(0, size.Height) });
+            { ActualXY(0, 0), ActualXY(this.size.Width, 0), ActualXY(this.size.Width, this.size.Height), ActualXY(0, this.size.Height) });
     }
 }

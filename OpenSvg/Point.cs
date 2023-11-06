@@ -32,20 +32,14 @@ public readonly record struct Point(double X, double Y) : IComparable<Point>
     /// // Output: (0, 10)
     /// ]]></code>
     /// </example>
-    public int CompareTo(Point other)
-    {
-        return (Y, X).CompareTo((other.Y, other.X));
-    }
+    public int CompareTo(Point other) => (Y, X).CompareTo((other.Y, other.X));
 
     /// <summary>
     ///     Applies the specified transform to the point.
     /// </summary>
     /// <param name="transform">The transform to apply.</param>
     /// <returns>A new Point that has been transformed.</returns>
-    public Point Transform(Transform transform)
-    {
-        return new Point(Vector2.Transform(AsVector, transform.Matrix));
-    }
+    public Point Transform(Transform transform) => new(Vector2.Transform(AsVector, transform.Matrix));
 
     /// <summary>
     ///     Determines whether this point is on the line segment between points a and b.
@@ -62,27 +56,18 @@ public readonly record struct Point(double X, double Y) : IComparable<Point>
         if (Y < Math.Min(a.Y, b.Y) || Y > Math.Max(a.Y, b.Y)) return false;
 
         // Check if point is collinear with line segment using cross-product
-        var crossProduct = (Y - a.Y) * (b.X - a.X) - (X - a.X) * (b.Y - a.Y);
+        double crossProduct = (Y - a.Y) * (b.X - a.X) - (X - a.X) * (b.Y - a.Y);
         return Math.Abs(crossProduct) <= Tolerance;
     }
 
 
-    public static implicit operator Point((double x, double y) tuple)
-    {
-        return new Point(tuple.x, tuple.y);
-    }
+    public static implicit operator Point((double x, double y) tuple) => new(tuple.x, tuple.y);
 
-    public static implicit operator (double X, double Y)(Point p)
-    {
-        return (p.X, p.Y);
-    }
+    public static implicit operator (double X, double Y)(Point p) => (p.X, p.Y);
 
     /// <summary>
     ///     Returns a string that represents the point.
     /// </summary>
     /// <returns>A string representation of this object</returns>
-    public override string ToString()
-    {
-        return $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
-    }
+    public override string ToString() => $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
 }

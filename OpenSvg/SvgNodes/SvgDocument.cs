@@ -1,7 +1,7 @@
-﻿using System.Xml;
+﻿using OpenSvg.Attributes;
+using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using OpenSvg.Attributes;
 
 namespace OpenSvg.SvgNodes;
 
@@ -14,10 +14,10 @@ public class SvgDocument : SvgVisualContainer
 
     public override string SvgName => SvgNames.Svg;
 
-    public override double ViewPortWidth => DefinedViewPortWidth.Get()
+    public override double ViewPortWidth => this.DefinedViewPortWidth.Get()
         .Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Size.Width);
 
-    public override double ViewPortHeight => DefinedViewPortHeight.Get()
+    public override double ViewPortHeight => this.DefinedViewPortHeight.Get()
         .Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Size.Height);
 
     public XDocument ToXDocument()
@@ -25,7 +25,7 @@ public class SvgDocument : SvgVisualContainer
         var serializer = new XmlSerializer(typeof(SvgDocument));
 
         var xDocument = new XDocument();
-        using (var xmlWriter = xDocument.CreateWriter())
+        using (XmlWriter xmlWriter = xDocument.CreateWriter())
         {
             var emptyNamespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
             serializer.Serialize(xmlWriter, this, emptyNamespaces);
@@ -38,12 +38,10 @@ public class SvgDocument : SvgVisualContainer
     {
         var serializer = new XmlSerializer(typeof(SvgDocument));
 
-        using (var xmlReader = xDocument.CreateReader())
-        {
-            var svgDocument = serializer.Deserialize(xmlReader) as SvgDocument
-                              ?? throw new InvalidDataException("Source is not a valid SVG document");
-            return svgDocument;
-        }
+        using XmlReader xmlReader = xDocument.CreateReader();
+        SvgDocument svgDocument = serializer.Deserialize(xmlReader) as SvgDocument
+                          ?? throw new InvalidDataException("Source is not a valid SVG document");
+        return svgDocument;
     }
 
     /// <summary>
@@ -63,7 +61,7 @@ public class SvgDocument : SvgVisualContainer
     /// <param name="svgFilePath">The path to the SVG file to write to.</param>
     public void Save(string svgFilePath)
     {
-        var xDocument = ToXDocument();
+        XDocument xDocument = ToXDocument();
 
         var settings = new XmlWriterSettings
         {
@@ -82,7 +80,7 @@ public class SvgDocument : SvgVisualContainer
     /// <param name="svgFont">The font to add.</param>
     public void EmbedFont(SvgFont svgFont)
     {
-        var svgDefs = Descendants().OfType<SvgDefs>().FirstOrDefault();
+        SvgDefs? svgDefs = Descendants().OfType<SvgDefs>().FirstOrDefault();
         if (svgDefs is null)
         {
             svgDefs = new SvgDefs();
@@ -97,36 +95,30 @@ public class SvgDocument : SvgVisualContainer
     /// </summary>
     /// <param name="fontName">The name of the font to get.</param>
     /// <returns>The embedded font with the specified font name, or <c>null</c> if no such font was found.</returns>
-    public SvgFont? EmbeddedFont(string fontName)
-    {
-        return EmbeddedFonts().FirstOrDefault(svgFont => svgFont.FontName == fontName);
-    }
+    public SvgFont? EmbeddedFont(string fontName) => EmbeddedFonts().FirstOrDefault(svgFont => svgFont.FontName == fontName);
 
 
-    public IEnumerable<SvgFont> EmbeddedFonts()
-    {
-        return Descendants().OfType<SvgCssStyle>().SelectMany(cssStyle => cssStyle.Fonts);
-    }
+    public IEnumerable<SvgFont> EmbeddedFonts() => Descendants().OfType<SvgCssStyle>().SelectMany(cssStyle => cssStyle.Fonts);
 
     public void SetViewPortToActualSize()
     {
-        DefinedViewPortWidth.Set(BoundingBox.Size.Width);
-        DefinedViewPortHeight.Set(BoundingBox.Size.Height);
+        this.DefinedViewPortWidth.Set(BoundingBox.Size.Width);
+        this.DefinedViewPortHeight.Set(BoundingBox.Size.Height);
     }
 
     public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
         double precision = Constants.DoublePrecision)
     {
         if (ReferenceEquals(this, other)) return (true, "Same reference");
-        var (equal, message) = base.CompareSelfAndDescendants(other);
+        (bool equal, string message) = base.CompareSelfAndDescendants(other);
         if (!equal)
             return (equal, message);
         var sameType = (SvgDocument)other;
-        if (DefinedViewPortWidth != sameType.DefinedViewPortWidth)
-            return (false, $"DefinedViewPortWidth: {DefinedViewPortWidth} != {sameType.DefinedViewPortWidth}");
+        if (this.DefinedViewPortWidth != sameType.DefinedViewPortWidth)
+            return (false, $"DefinedViewPortWidth: {this.DefinedViewPortWidth} != {sameType.DefinedViewPortWidth}");
 
-        if (DefinedViewPortHeight != sameType.DefinedViewPortHeight)
-            return (false, $"DefinedViewPortHeight: {DefinedViewPortHeight} != {sameType.DefinedViewPortHeight}");
+        if (this.DefinedViewPortHeight != sameType.DefinedViewPortHeight)
+            return (false, $"DefinedViewPortHeight: {this.DefinedViewPortHeight} != {sameType.DefinedViewPortHeight}");
         return (true, "Equal");
     }
 }

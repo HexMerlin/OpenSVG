@@ -39,16 +39,16 @@ public abstract class SvgVisual : SvgElement
 
     public DrawConfig DrawConfig
     {
-        get => new(FillColor.Get(), StrokeColor.Get(), StrokeWidth.Get());
+        get => new(this.FillColor.Get(), this.StrokeColor.Get(), this.StrokeWidth.Get());
         set
         {
-            FillColor.Set(value.FillColor);
-            StrokeColor.Set(value.StrokeColor);
-            StrokeWidth.Set(value.StrokeWidth);
+            this.FillColor.Set(value.FillColor);
+            this.StrokeColor.Set(value.StrokeColor);
+            this.StrokeWidth.Set(value.StrokeWidth);
         }
     }
 
-    public ConvexHull ConvexHull => ComputeConvexHull().Transform(Transform.Get());
+    public ConvexHull ConvexHull => ComputeConvexHull().Transform(this.Transform.Get());
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox();
 
@@ -85,10 +85,10 @@ public abstract class SvgVisual : SvgElement
     public void AlignRelativeTo(SvgVisual referenceElement, HorizontalAlignment? horizontalAlignment = null,
         VerticalAlignment? verticalAlignment = null)
     {
-        var thisBox = BoundingBox;
-        var refBox = referenceElement.BoundingBox;
+        BoundingBox thisBox = BoundingBox;
+        BoundingBox refBox = referenceElement.BoundingBox;
 
-        var dx = horizontalAlignment switch
+        double dx = horizontalAlignment switch
         {
             null => 0,
             HorizontalAlignment.InsideLeft => refBox.MinX - thisBox.MinX,
@@ -99,7 +99,7 @@ public abstract class SvgVisual : SvgElement
             _ => throw new NotSupportedException($"Unknown HorizontalAlignment: {horizontalAlignment}")
         };
 
-        var dy = verticalAlignment switch
+        double dy = verticalAlignment switch
         {
             null => 0,
             VerticalAlignment.InsideUp => refBox.MinY - thisBox.MinY,
@@ -110,25 +110,25 @@ public abstract class SvgVisual : SvgElement
             _ => throw new NotSupportedException($"Unknown VerticalAlignment: {verticalAlignment}")
         };
 
-        Transform.ComposeWith(OpenSvg.Transform.CreateTranslation(dx, dy));
+        this.Transform.ComposeWith(OpenSvg.Transform.CreateTranslation(dx, dy));
     }
 
     public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
         double doublePrecision = Constants.DoublePrecision)
     {
         if (ReferenceEquals(this, other)) return (true, "Same reference");
-        var (equal, message) = base.CompareSelfAndDescendants(other);
+        (bool equal, string message) = base.CompareSelfAndDescendants(other);
         if (!equal)
             return (equal, message);
         var sameType = (SvgVisual)other;
-        if (Transform != sameType.Transform)
-            return (false, $"Transform: {Transform} != {sameType.Transform}");
-        if (FillColor != sameType.FillColor)
-            return (false, $"FillColor: {FillColor} != {sameType.FillColor}");
-        if (StrokeColor != sameType.StrokeColor)
-            return (false, $"StrokeColor: {StrokeColor} != {sameType.StrokeColor}");
-        if (StrokeWidth != sameType.StrokeWidth)
-            return (false, $"StrokeWidth: {StrokeWidth} != {sameType.StrokeWidth}");
+        if (this.Transform != sameType.Transform)
+            return (false, $"Transform: {this.Transform} != {sameType.Transform}");
+        if (this.FillColor != sameType.FillColor)
+            return (false, $"FillColor: {this.FillColor} != {sameType.FillColor}");
+        if (this.StrokeColor != sameType.StrokeColor)
+            return (false, $"StrokeColor: {this.StrokeColor} != {sameType.StrokeColor}");
+        if (this.StrokeWidth != sameType.StrokeWidth)
+            return (false, $"StrokeWidth: {this.StrokeWidth} != {sameType.StrokeWidth}");
         return (true, "Equal");
     }
 }

@@ -1,18 +1,11 @@
 ﻿using OpenSvg.Config;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
-using Xunit.Abstractions;
 
 namespace OpenSvg.Tests;
 
 public class TextConfigTests
 {
-    private readonly ITestOutputHelper _output;
-
-    public TextConfigTests(ITestOutputHelper output)
-    {
-        _output = output;
-    }
 
     [Theory]
     [InlineData(Resources.FontFileNameDsDigital, TextRenderMode.SvgPath, false)]
@@ -24,8 +17,8 @@ public class TextConfigTests
     {
         // Arrange
         var svgFont = SvgFont.LoadFromFile(TestPaths.GetFontPath(fontFileName));
-        var fontName = svgFont.FontName;
-        var (expectedFilePath, actualFilePath) =
+        string fontName = svgFont.FontName;
+        (string expectedFilePath, string actualFilePath) =
             TestPaths.GetReferenceAndActualTestFilePaths(
                 $"{nameof(CreateTextShape_FromFontAndRenderMode_MatchesExpected)}_{fontName}_{textRenderMode}", "svg");
 
@@ -39,9 +32,9 @@ public class TextConfigTests
             _ => throw new NotSupportedException($"{nameof(textRenderMode)} not supported")
         };
 
-        var textSize = svgTextElement.BoundingBox.Size;
+        Size textSize = svgTextElement.BoundingBox.Size;
         var rectangle = new RectangleConfig(textSize, new DrawConfig(SKColors.Black, SKColors.Red, 1)).ToSvgPolygon();
-        _output.WriteLine(svgTextElement.BoundingBox.ToString());
+
 
         var svgDocument = new SvgDocument();
         svgDocument.Add(rectangle);
@@ -54,7 +47,7 @@ public class TextConfigTests
         svgDocument.Save(actualFilePath);
 
         // Assert
-        var (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
+        (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
 
@@ -62,15 +55,15 @@ public class TextConfigTests
     public void CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected()
     {
         // Arrange
-        var (expectedFilePath, actualFilePath) =
+        (string expectedFilePath, string actualFilePath) =
             TestPaths.GetReferenceAndActualTestFilePaths(nameof(CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected),
                 "svg");
         var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
-        var expectedSvgPath = expectedSvgDocument.Descendants().OfType<SvgPath>().First();
+        SvgPath expectedSvgPath = expectedSvgDocument.Descendants().OfType<SvgPath>().First();
 
         // Act
-        var embeddedFont = expectedSvgDocument.EmbeddedFonts().First();
+        SvgFont embeddedFont = expectedSvgDocument.EmbeddedFonts().First();
         var actualSvgPath =
             new TextConfig("TIME 23:59", embeddedFont, 100, new DrawConfig(SKColors.Blue, SKColors.DarkBlue, 1))
                 .ToSvgPath();
@@ -86,7 +79,7 @@ public class TextConfigTests
         Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth.Get());
         Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight.Get());
 
-        (var isEqual, var errorMessage) = expectedSvgPath.CompareSelfAndDescendants(actualSvgPath);
+        (bool isEqual, string? errorMessage) = expectedSvgPath.CompareSelfAndDescendants(actualSvgPath);
         Assert.True(isEqual, errorMessage);
 
         (isEqual, errorMessage) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);

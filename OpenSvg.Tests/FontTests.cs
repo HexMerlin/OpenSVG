@@ -10,16 +10,16 @@ public class FontTests
     public void LoadAndSaveFont_SameFile_BinaryFilesMatch()
     {
         // Arrange
-        var expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
+        string expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
         var expectedFont = SvgFont.LoadFromFile(expectedFilePath);
 
         // Act
-        var actualFilePath = TestPaths.GetTestFilePath(nameof(LoadAndSaveFont_SameFile_BinaryFilesMatch), "output",
+        string actualFilePath = TestPaths.GetTestFilePath(nameof(LoadAndSaveFont_SameFile_BinaryFilesMatch), "output",
             FileCategory.Actual);
         expectedFont.Font.SaveToFile(actualFilePath);
 
         // Assert
-        var (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
+        (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
 
@@ -27,20 +27,20 @@ public class FontTests
     public void CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal()
     {
         // Arrange
-        var expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameSourceSans);
+        string expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameSourceSans);
 
         var expectedFont = SvgFont.LoadFromFile(expectedFilePath);
 
         // Act
-        var actualFilePath = TestPaths.GetTestFilePath(nameof(CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal),
+        string actualFilePath = TestPaths.GetTestFilePath(nameof(CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal),
             "output", FileCategory.Actual);
         var svgCssStyle = new SvgCssStyle();
         svgCssStyle.Add(expectedFont);
-        var actualFont = svgCssStyle.Fonts.First();
+        SvgFont actualFont = svgCssStyle.Fonts[0];
         actualFont.SaveFontToFile(actualFilePath);
 
         // Assert
-        var (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
+        (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
 }

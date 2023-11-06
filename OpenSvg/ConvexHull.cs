@@ -39,10 +39,7 @@ public class ConvexHull : Polygon
     }
 
 
-    public ConvexHull Transform(Transform transform)
-    {
-        return new ConvexHull(this.Select(p => p.Transform(transform)), SkipGrahamScan.Yes);
-    }
+    public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), SkipGrahamScan.Yes);
 
     /// <summary>
     ///     Extracts the convex hull for a collection of points using Graham's scan algorithm.
@@ -61,14 +58,14 @@ public class ConvexHull : Polygon
     {
         if (points.Length <= 2) return points;
 
-        var pivot = points.Min();
+        Point pivot = points.Min();
         Array.Sort(points,
             (a, b) => Math.Atan2(a.Y - pivot.Y, a.X - pivot.X).CompareTo(Math.Atan2(b.Y - pivot.Y, b.X - pivot.X)));
         List<Point> hull = new() { pivot };
 
-        for (var i = 1; i < points.Length; i++) // Start from 1 to skip the pivot
+        for (int i = 1; i < points.Length; i++) // Start from 1 to skip the pivot
         {
-            var point = points[i];
+            Point point = points[i];
             while (hull.Count >= 2 && CrossProduct(hull[^2], hull[^1], point) <= 0)
                 hull.RemoveAt(hull.Count - 1);
 
@@ -81,9 +78,9 @@ public class ConvexHull : Polygon
     public static bool IsConvexHull(IEnumerable<Point> points)
     {
         var pointList = points.ToList();
-        var n = pointList.Count;
+        int n = pointList.Count;
 
-        var pivot = pointList.OrderBy(p => p.Y).ThenBy(p => p.X).First();
+        Point pivot = pointList.OrderBy(p => p.Y).ThenBy(p => p.X).First();
 
         // Sort remaining points based on polar angle with respect to pivot
         var sortedByPolarAngle = pointList.Where(p => p != pivot)
@@ -97,9 +94,9 @@ public class ConvexHull : Polygon
         hull.Push(sortedByPolarAngle[1]);
 
         // Validate convexity
-        for (var i = 2; i < n - 1; i++)
+        for (int i = 2; i < n - 1; i++)
         {
-            var top = hull.Pop();
+            Point top = hull.Pop();
             if (CrossProduct(hull.Peek(), top, sortedByPolarAngle[i]) <= 0)
                 return false;
 
@@ -110,10 +107,7 @@ public class ConvexHull : Polygon
         return true;
     }
 
-    private static double CrossProduct(Point a, Point b, Point c)
-    {
-        return (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
-    }
+    private static double CrossProduct(Point a, Point b, Point c) => (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
 
     private enum SkipGrahamScan
     {

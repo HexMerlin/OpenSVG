@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace OpenSvg.SvgNodes;
+﻿namespace OpenSvg.SvgNodes;
 
 public class SvgNode
 {

@@ -8,27 +8,21 @@ public class TransformAttr : Attr<Transform>
     {
     }
 
-    public void ComposeWith(Transform transform)
-    {
-        Set(Get().ComposeWith(transform));
-    }
+    public void ComposeWith(Transform transform) => Set(Get().ComposeWith(transform));
 
-    protected override string Serialize(Transform value)
-    {
-        return value.ToXmlString();
-    }
+    protected override string Serialize(Transform value) => value.ToXmlString();
 
 
     protected override Transform Deserialize(string xmlString)
     {
-        var result = Transform.Identity;
-        var matches = RegexStore.ValidTransformString().Matches(xmlString);
+        Transform result = Transform.Identity;
+        MatchCollection matches = RegexStore.ValidTransformString().Matches(xmlString);
 
-        foreach (var match in matches.Cast<Match>())
+        foreach (Match match in matches.Cast<Match>())
         {
-            var type = match.Groups[1].Value;
-            var rawParams = match.Groups[2].Value.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            var paramCount = rawParams.Length;
+            string type = match.Groups[1].Value;
+            string[] rawParams = match.Groups[2].Value.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int paramCount = rawParams.Length;
 
             result = type switch
             {
@@ -69,6 +63,6 @@ public class TransformAttr : Attr<Transform>
     public override bool Equals(Attr<Transform>? other)
     {
         if (other is null) return false;
-        return DefaultValue.Equals(other.DefaultValue) && Get().Equals(other.Get());
+        return this.DefaultValue.Equals(other.DefaultValue) && Get().Equals(other.Get());
     }
 }

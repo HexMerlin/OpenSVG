@@ -26,7 +26,7 @@ public static class FileIO
         while ((bytesRead = fs1.Read(buffer1, 0, bufferSize)) > 0)
         {
             fs2.Read(buffer2, 0, bufferSize);
-            for (var i = 0; i < bytesRead; i++)
+            for (int i = 0; i < bytesRead; i++)
                 if (buffer1[i] != buffer2[i])
                     return (false, $"Byte mismatch at {fs1.Position - bytesRead + i}");
         }

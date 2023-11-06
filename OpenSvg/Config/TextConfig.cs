@@ -25,36 +25,24 @@ public record TextConfig(string Text, SvgFont SvgFont, double FontSize, DrawConf
     /// </summary>
     /// <param name="text">The text for the new TextConfig.</param>
     /// <returns>A new TextConfig object with the specified text.</returns>
-    public TextConfig WithText(string text)
-    {
-        return this with { Text = text };
-    }
+    public TextConfig WithText(string text) => this with { Text = text };
 
     /// <summary>
     ///     Creates a new TextConfig object with the specified color.
     /// </summary>
     /// <param name="textColor">The color for the new TextConfig.</param>
     /// <returns>A new TextConfig object with the specified color.</returns>
-    public TextConfig WithTextColor(SKColor textColor)
-    {
-        return this with { DrawConfig = DrawConfig.WithStrokeColor(textColor).WithFillColor(textColor) };
-    }
+    public TextConfig WithTextColor(SKColor textColor) => this with { DrawConfig = DrawConfig.WithStrokeColor(textColor).WithFillColor(textColor) };
 
     /// <summary>
     ///     Converts the TextConfig object to a SvgPath object.
     /// </summary>
     /// <returns>A new SvgPath object.</returns>
-    public SvgPath ToSvgPath()
-    {
-        return new SvgPath(this);
-    }
+    public SvgPath ToSvgPath() => new(this);
 
     /// <summary>
     ///     Converts the TextConfig object to a SvgText object.
     /// </summary>
     /// <returns>A new SvgText object.</returns>
-    public SvgText ToSvgText()
-    {
-        return new SvgText(this);
-    }
+    public SvgText ToSvgText() => new(this);
 }

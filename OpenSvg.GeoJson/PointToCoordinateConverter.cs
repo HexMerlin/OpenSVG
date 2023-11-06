@@ -52,12 +52,12 @@ public record PointToCoordinateConverter
     /// <returns>The geographic coordinate.</returns>
     public Coordinate ConvertToCoordinate(Point point)
     {
-        var invertedY = ImageHeight - point.Y;
+        double invertedY = ImageHeight - point.Y;
 
-        var dxMeters = point.X * MetersPerPixel;
-        var dyMeters = invertedY * MetersPerPixel;
+        double dxMeters = point.X * MetersPerPixel;
+        double dyMeters = invertedY * MetersPerPixel;
 
-        var coordinate = StartLocation.Translate(dxMeters, dyMeters);
+        Coordinate coordinate = StartLocation.Translate(dxMeters, dyMeters);
 
         if (RoundToDecimals >= 0)
             coordinate = new Coordinate(Math.Round(coordinate.Long, RoundToDecimals),

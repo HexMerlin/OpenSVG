@@ -37,10 +37,7 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
     /// <returns>
     ///     A new instance of the <see cref="RectangleConfig" /> with transparent <see cref="DrawConfig" />.
     /// </returns>
-    public static RectangleConfig Transparent(Size size)
-    {
-        return new RectangleConfig(size, DrawConfig.Transparent);
-    }
+    public static RectangleConfig Transparent(Size size) => new(size, DrawConfig.Transparent);
 
     /// <summary>
     ///     Creates a <see cref="SvgPolygon" /> element from this <see cref="RectangleConfig" />"/>
@@ -56,34 +53,25 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
     /// <summary>
     ///     Convert to SVG Rectangle object
     /// </summary>
-    public SvgRectangleAsRect ToSvgRect()
-    {
-        return new SvgRectangleAsRect { RectangleConfig = this };
-    }
+    public SvgRectangleAsRect ToSvgRect() => new() { RectangleConfig = this };
 
     /// <summary>
     ///     Returns a new copy of the RectangleConfig record with the specified fill color.
     /// </summary>
     /// <param name="fillColor">The new fill color to set.</param>
     /// <returns>A new RectangleConfig with the specified fill color.</returns>
-    public RectangleConfig WithFillColor(SKColor fillColor)
-    {
-        return this with { DrawConfig = DrawConfig.WithFillColor(fillColor) };
-    }
+    public RectangleConfig WithFillColor(SKColor fillColor) => this with { DrawConfig = DrawConfig.WithFillColor(fillColor) };
 
     /// <summary>
     ///     Returns a new copy of the RectangleConfig record with the specified stroke color.
     /// </summary>
     /// <param name="strokeColor">The new stroke color to set.</param>
     /// <returns>A new RectangleConfig with the specified stroke color.</returns>
-    public RectangleConfig WithStrokeColor(SKColor strokeColor)
-    {
-        return this with { DrawConfig = DrawConfig.WithStrokeColor(strokeColor) };
-    }
+    public RectangleConfig WithStrokeColor(SKColor strokeColor) => this with { DrawConfig = DrawConfig.WithStrokeColor(strokeColor) };
 
     public Polygon ToPolygon()
     {
-        var roundedCorners = CornerRadius > 0;
+        bool roundedCorners = CornerRadius > 0;
 
         if (CornerRadius < 0)
             throw new ArgumentException("CornerRadius cannot be negative");
@@ -95,9 +83,9 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
         if (roundedCorners && NumberOfCornerPoints < 2)
             throw new ArgumentException("numberOfCornerPoints must be at least 2");
 
-        var cr = CornerRadius;
-        var height = Size.Height;
-        var width = Size.Width;
+        double cr = CornerRadius;
+        double height = Size.Height;
+        double width = Size.Width;
         List<Point> points = new();
         const float
             arcLength = -90; //draw the corners arcs clockwise, since we draw the polygon clockwise (from the top left corner)

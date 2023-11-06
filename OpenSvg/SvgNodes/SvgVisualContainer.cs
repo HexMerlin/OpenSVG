@@ -17,26 +17,23 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     /// </returns>
     public IEnumerable<SvgElement> Descendants()
     {
-        foreach (var element in ChildElements)
+        foreach (SvgElement element in ChildElements)
         {
             yield return element;
 
             if (element is not ISvgElementContainer container)
                 continue;
 
-            foreach (var child in container.Descendants())
+            foreach (SvgElement child in container.Descendants())
                 yield return child;
         }
     }
 
-    public IEnumerable<SvgElement> Children()
-    {
-        return ChildElements;
-    }
+    public IEnumerable<SvgElement> Children() => ChildElements;
 
     public void AddAll(IEnumerable<SvgElement> svgElements)
     {
-        foreach (var svgElement in svgElements)
+        foreach (SvgElement svgElement in svgElements)
             Add(svgElement);
     }
 
@@ -58,22 +55,19 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
         Add(child);
     }
 
-    protected override ConvexHull ComputeConvexHull()
-    {
-        return new ConvexHull(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
-    }
+    protected override ConvexHull ComputeConvexHull() => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
 
     public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
         double doublePrecision = Constants.DoublePrecision)
     {
         if (ReferenceEquals(this, other)) return (true, "Same reference");
-        var (equal, message) = base.CompareSelfAndDescendants(other);
+        (bool equal, string message) = base.CompareSelfAndDescendants(other);
         if (!equal)
             return (equal, message);
         var sameType = (SvgVisualContainer)other;
         if (ChildElements.Count != sameType.ChildElements.Count)
             return (false, $"ChildElements count: {ChildElements.Count} != {sameType.ChildElements.Count}");
-        for (var i = 0; i < ChildElements.Count; i++)
+        for (int i = 0; i < ChildElements.Count; i++)
         {
             (equal, message) = ChildElements[i].CompareSelfAndDescendants(sameType.ChildElements[i]);
             if (!equal)

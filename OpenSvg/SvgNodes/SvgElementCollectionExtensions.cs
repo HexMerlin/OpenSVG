@@ -32,7 +32,7 @@ public static class SvgElementCollectionExtensions
             orientation == Orientation.Vertical ? VerticalAlignment.OutsideDown : null;
         var svgGroup = new SvgGroup();
 
-        foreach (var svgVisual in svgVisuals)
+        foreach (SvgVisual svgVisual in svgVisuals)
         {
             svgVisual.AlignRelativeTo(svgGroup, horizontalAlignment, verticalAlignment);
             svgGroup.Add(svgVisual);

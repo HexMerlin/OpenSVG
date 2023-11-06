@@ -11,15 +11,7 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public sealed partial class SvgPath : SvgVisual, IDisposable
 {
-    private static string ConvertTextToSkPathData(TextConfig textConfig)
-    {
-        return ConvertTextToSkPath(textConfig).ToSvgPathData();
-    }
-
-    private static SKPath ConvertTextToSkPath(TextConfig textConfig)
-    {
-        return ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
-    }
+    private static SKPath ConvertTextToSkPath(TextConfig textConfig) => ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
 
     private static SKPath ConvertTextToSkPath(string text, SKTypeface typeFace, float fontSize)
     {
@@ -31,19 +23,19 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
         };
 
         var path = new SKPath();
-        var font = typeFace.ToFont(fontSize);
+        SKFont font = typeFace.ToFont(fontSize);
 
         using var shaper = new SKShaper(typeFace);
-        var result = shaper.Shape(text, paint);
+        SKShaper.Result result = shaper.Shape(text, paint);
 
-        for (var i = 0; i < result.Points.Length; i++)
+        for (int i = 0; i < result.Points.Length; i++)
         {
-            var point = result.Points[i];
-            var codePoint = (int)result.Codepoints[i];
+            SKPoint point = result.Points[i];
+            int codePoint = (int)result.Codepoints[i];
 
             if (codePoint != 0)
             {
-                using var glyphPath = font.GetGlyphPath((ushort)codePoint);
+                using SKPath glyphPath = font.GetGlyphPath((ushort)codePoint);
                 var matrix = SKMatrix.CreateTranslation(point.X, point.Y);
                 glyphPath.Transform(matrix);
                 path.AddPath(glyphPath);
@@ -56,7 +48,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
 
     private static void NormalizeToOrigin(SKPath path)
     {
-        var bounds = path.Bounds;
+        SKRect bounds = path.Bounds;
         path.Offset(-bounds.Left, -bounds.Top);
     }
 }

@@ -17,10 +17,7 @@ public partial class Polygon : List<Point>
     public static Polygon Empty => new(Enumerable.Empty<Point>());
 
 
-    public ConvexHull GetConvexHull()
-    {
-        return new ConvexHull(this);
-    }
+    public ConvexHull GetConvexHull() => new(this);
 
 
     /// <summary>
@@ -50,8 +47,5 @@ public partial class Polygon : List<Point>
     ///     Returns a string representing the current polygon object in a readable format.
     /// </summary>
     /// <returns>A string that represents the current object.</returns>
-    public override string ToString()
-    {
-        return "{\n" + string.Join(",\n", this.Select(p => p.ToString())) + "\n}";
-    }
+    public override string ToString() => "{\n" + string.Join(",\n", this.Select(p => p.ToString())) + "\n}";
 }

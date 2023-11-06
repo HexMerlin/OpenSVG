@@ -14,16 +14,10 @@ public class DoubleAttr : Attr<double>
     public override bool Equals(Attr<double>? other)
     {
         if (other is null) return false;
-        return DefaultValue.RobustEquals(other.DefaultValue) && Get().RobustEquals(other.Get());
+        return this.DefaultValue.RobustEquals(other.DefaultValue) && Get().RobustEquals(other.Get());
     }
 
-    protected override double Deserialize(string xmlString)
-    {
-        return xmlString.ToDouble();
-    }
+    protected override double Deserialize(string xmlString) => xmlString.ToDouble();
 
-    protected override string Serialize(double value)
-    {
-        return value.ToXmlString();
-    }
+    protected override string Serialize(double value) => value.ToXmlString();
 }

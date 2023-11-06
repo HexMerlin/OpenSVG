@@ -1,5 +1,4 @@
-﻿using System.Xml.Serialization;
-using OpenSvg.Attributes;
+﻿using OpenSvg.Attributes;
 
 namespace OpenSvg.SvgNodes;
 
@@ -20,14 +19,14 @@ public class SvgCssStyle : SvgStyle, IHasElementContent
     public override string SvgName => SvgNames.Style;
 
 
-    public IReadOnlyList<SvgFont> Fonts => singleFont is null ? Array.Empty<SvgFont>() : new[] { singleFont };
+    public IReadOnlyList<SvgFont> Fonts => this.singleFont is null ? Array.Empty<SvgFont>() : new[] { this.singleFont };
 
     public string Content
     {
-        get => singleFont is null ? "" : singleFont.XText;
+        get => this.singleFont is null ? "" : this.singleFont.XText;
         set
         {
-            singleFont = null;
+            this.singleFont = null;
             Add(new SvgFont(value));
         }
     }
@@ -39,9 +38,9 @@ public class SvgCssStyle : SvgStyle, IHasElementContent
     /// <param name="svgFont">The <see cref="SvgFont" /> element to add.</param>
     public void Add(SvgFont svgFont)
     {
-        if (singleFont != null)
+        if (this.singleFont != null)
             throw new NotSupportedException("Adding more than one font to a CSS style is not currently supported");
-        singleFont = svgFont;
+        this.singleFont = svgFont;
         svgFont.Parent = this;
     }
 }

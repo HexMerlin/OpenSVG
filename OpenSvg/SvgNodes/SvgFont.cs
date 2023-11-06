@@ -7,8 +7,8 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public sealed class SvgFont : SvgNode
 {
-    private readonly Lazy<SKTypeface> _font;
-    private readonly Lazy<string> _xText;
+    private readonly Lazy<SKTypeface> font;
+    private readonly Lazy<string> xText;
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="SvgFont" /> class by boxing an existing <see cref="SKTypeface" />
@@ -17,8 +17,8 @@ public sealed class SvgFont : SvgNode
     /// <param name="font">An existing <see cref="SKTypeface" /> font-family descriptor instance.</param>
     public SvgFont(SKTypeface font)
     {
-        _font = new Lazy<SKTypeface>(font);
-        _xText = new Lazy<string>(FontToXText(Font));
+        this.font = new Lazy<SKTypeface>(font);
+        this.xText = new Lazy<string>(FontToXText(Font));
     }
 
     /// <summary>
@@ -27,24 +27,24 @@ public sealed class SvgFont : SvgNode
     /// <param name="xText">An existing <see cref="XText" /> XML element that describes a font-family descriptor.</param>
     internal SvgFont(string xText)
     {
-        _xText = new Lazy<string>(xText);
-        _font = new Lazy<SKTypeface>(XTextToFont(XText));
+        this.xText = new Lazy<string>(xText);
+        this.font = new Lazy<SKTypeface>(XTextToFont(XText));
     }
 
     /// <summary>
     ///     Gets the declared object that represents the value of the SVG 'font-face' rule : an XML element.
     /// </summary>
-    public string XText => _xText.Value;
+    public string XText => this.xText.Value;
 
     /// <summary>
     ///     Gets the actual value of the <see cref="SKTypeface" /> font instance that is used for rendering.
     /// </summary>
-    public SKTypeface Font => _font.Value;
+    public SKTypeface Font => this.font.Value;
 
     /// <summary>
     ///     Gets the name of the font-family for an SVG font element property.
     /// </summary>
-    public string FontName => _font.IsValueCreated ? Font.FamilyName : GetFontName(XText);
+    public string FontName => this.font.IsValueCreated ? Font.FamilyName : GetFontName(XText);
 
     /// <summary>
     ///     Gets a numerical representation of the font-weight for a font-family SVG property or a CSS property.
@@ -66,19 +66,13 @@ public sealed class SvgFont : SvgNode
     /// </summary>
     /// <param name="fontFilePath">The file path of the SvgFont file to load.</param>
     /// <returns>The SvgFont instance that was loaded from the file.</returns>
-    public static SvgFont LoadFromFile(string fontFilePath)
-    {
-        return new SvgFont(fontFilePath.LoadFromFile());
-    }
+    public static SvgFont LoadFromFile(string fontFilePath) => new(fontFilePath.LoadFromFile());
 
     /// <summary>
     ///     Saves the SVG font to a file (e.g. .TTF, .OTF).
     /// </summary>
     /// <param name="fontFilePath">The path and name of the file to save.</param>
-    public void SaveFontToFile(string fontFilePath)
-    {
-        Font.SaveToFile(fontFilePath);
-    }
+    public void SaveFontToFile(string fontFilePath) => Font.SaveToFile(fontFilePath);
 
     /// <summary>
     ///     Returns the font name specified in the XText.
@@ -91,7 +85,7 @@ public sealed class SvgFont : SvgNode
     /// </exception>
     private static string GetFontName(string xText)
     {
-        var match = RegexStore.GetFontNameFromXText().Match(xText);
+        System.Text.RegularExpressions.Match match = RegexStore.GetFontNameFromXText().Match(xText);
         return match.Success
             ? match.Groups[1].Value
             : throw new InvalidOperationException("An expected definition of 'font-family' is missing in the XText.");
@@ -104,10 +98,10 @@ public sealed class SvgFont : SvgNode
     /// <param name="xText">The <see cref="XText" /> XML element that contains the font data and descriptors.</param>
     private static SKTypeface XTextToFont(string xText)
     {
-        var fontFaceXText = xText;
-        var base64FontData = fontFaceXText.Split("base64,", StringSplitOptions.RemoveEmptyEntries)[1];
+        string fontFaceXText = xText;
+        string base64FontData = fontFaceXText.Split("base64,", StringSplitOptions.RemoveEmptyEntries)[1];
         base64FontData = base64FontData.Split(')')[0];
-        var fontData = Convert.FromBase64String(base64FontData);
+        byte[] fontData = Convert.FromBase64String(base64FontData);
 
         using var stream = new MemoryStream(fontData);
         return SKTypeface.FromStream(stream);
@@ -122,14 +116,14 @@ public sealed class SvgFont : SvgNode
     private static string FontToXText(SKTypeface font)
     {
         ArgumentNullException.ThrowIfNull(font, nameof(font));
-        using var stream = font.OpenStream(out _);
-        var fontData = new byte[stream.Length];
-        var bytesRead = stream.Read(fontData, fontData.Length);
+        using SKStreamAsset stream = font.OpenStream(out _);
+        byte[] fontData = new byte[stream.Length];
+        int bytesRead = stream.Read(fontData, fontData.Length);
         if (bytesRead != fontData.Length)
             throw new InvalidOperationException("Failed to read the entire font data stream.");
 
-        var format = GetFontFormatFromBase64(fontData);
-        var base64Font = Convert.ToBase64String(fontData);
+        string format = GetFontFormatFromBase64(fontData);
+        string base64Font = Convert.ToBase64String(fontData);
         return
             $"{SvgNames.FontFaceRule} {{ {SvgNames.FontName}: '{font.FamilyName}'; {SvgNames.Format}('{format}'); src: url(data:{format};base64,{base64Font}); }}";
     }

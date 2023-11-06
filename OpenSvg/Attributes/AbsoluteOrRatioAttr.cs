@@ -6,10 +6,7 @@ public class AbsoluteOrRatioAttr : Attr<AbsoluteOrRatio>
     {
     }
 
-    protected override string Serialize(AbsoluteOrRatio value)
-    {
-        return value.IsAbsolute ? value.Value.ToXmlString() : $"{value.Value * 100d}%";
-    }
+    protected override string Serialize(AbsoluteOrRatio value) => value.IsAbsolute ? value.Value.ToXmlString() : $"{value.Value * 100d}%";
 
     protected override AbsoluteOrRatio Deserialize(string xmlString)
     {

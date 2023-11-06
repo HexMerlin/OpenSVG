@@ -20,7 +20,7 @@ public class SvgDocumentTest
         var actual = SvgDocument.FromXDocument(xDocument);
 
         //Assert
-        var (equal, message) = expected.CompareSelfAndDescendants(actual);
+        (bool equal, string message) = expected.CompareSelfAndDescendants(actual);
         Assert.True(equal, message);
     }
 

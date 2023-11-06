@@ -8,21 +8,21 @@ public class SvgFileGeneratorTests
     public void Test_SvgFileGeneration_MatchesExpected()
     {
         // Arrange
-        var (expectedFilePath, actualFilePath) =
+        (string expectedFilePath, string actualFilePath) =
             TestPaths.GetReferenceAndActualTestFilePaths(nameof(Test_SvgFileGeneration_MatchesExpected), "svg");
         var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
         // Act
         var config = new SvgImageConfig();
-        var actualSvgDocument = config.CreateSvgDocument();
+        SvgDocument actualSvgDocument = config.CreateSvgDocument();
         actualSvgDocument.SetViewPortToActualSize();
         actualSvgDocument.Save(actualFilePath);
 
         // Assert
-        var (equal, message) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);
+        (bool equal, string message) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);
         Assert.True(equal, message);
 
-        var (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
+        (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
 }

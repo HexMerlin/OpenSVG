@@ -37,9 +37,9 @@ public static class SkiaSharpExtensions
     {
         ArgumentNullException.ThrowIfNull(fontFilePath, nameof(fontFilePath));
 
-        using var stream = font.OpenStream(out _);
-        var fontData = new byte[stream.Length];
-        var bytesRead = stream.Read(fontData, fontData.Length);
+        using SKStreamAsset stream = font.OpenStream(out _);
+        byte[] fontData = new byte[stream.Length];
+        int bytesRead = stream.Read(fontData, fontData.Length);
         if (bytesRead != fontData.Length)
             throw new InvalidOperationException("Failed to read the entire font data stream.");
 

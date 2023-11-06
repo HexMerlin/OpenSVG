@@ -8,13 +8,7 @@ public class PathAttr : Attr<SKPath>
     {
     }
 
-    protected override SKPath Deserialize(string xmlString)
-    {
-        return SKPath.ParseSvgPathData(xmlString);
-    }
+    protected override SKPath Deserialize(string xmlString) => SKPath.ParseSvgPathData(xmlString);
 
-    protected override string Serialize(SKPath value)
-    {
-        return value.ToSvgPathData();
-    }
+    protected override string Serialize(SKPath value) => value.ToSvgPathData();
 }

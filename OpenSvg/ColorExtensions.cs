@@ -1,5 +1,5 @@
-﻿using System.Reflection;
-using SkiaSharp;
+﻿using SkiaSharp;
+using System.Reflection;
 
 namespace OpenSvg;
 
@@ -18,10 +18,7 @@ public static class ColorExtensions
     /// </summary>
     /// <param name="sKColor">The <see cref="SKColor" /> instance to check.</param>
     /// <returns><c>true</c> if the color is transparent; otherwise, <c>false</c>.</returns>
-    public static bool IsTransparent(this SKColor sKColor)
-    {
-        return sKColor.Alpha == 0;
-    }
+    public static bool IsTransparent(this SKColor sKColor) => sKColor.Alpha == 0;
 
     /// <summary>
     ///     Parses a hexadecimal color string and returns the corresponding <see cref="SKColor" />.
@@ -55,10 +52,10 @@ public static class ColorExtensions
         if (colorString.Equals(SvgNames.Transparent, StringComparison.OrdinalIgnoreCase))
             return Transparent;
 
-        if (colorString[0] == '#' && SKColor.TryParse(colorString, out var color))
+        if (colorString[0] == '#' && SKColor.TryParse(colorString, out SKColor color))
             return color;
 
-        if (TryGetNamedColor(colorString, out var namedColor))
+        if (TryGetNamedColor(colorString, out SKColor namedColor))
             return namedColor;
 
         throw new ArgumentException("Malformed color string or unknown color.", nameof(colorString));
@@ -77,10 +74,7 @@ public static class ColorExtensions
         return $"#{color.Red:X2}{color.Green:X2}{color.Blue:X2}";
     }
 
-    public static string ToString(this SKColor color)
-    {
-        return color.ToHexColorString();
-    }
+    public static string ToString(this SKColor color) => color.ToHexColorString();
 
     /// <summary>
     ///     Tries to get an SKColor by its named color.
@@ -91,9 +85,9 @@ public static class ColorExtensions
     private static bool TryGetNamedColor(string colorString, out SKColor color)
     {
         // Get all public static fields of the SKColors struct
-        var fields = typeof(SKColors).GetFields(BindingFlags.Public | BindingFlags.Static);
+        FieldInfo[] fields = typeof(SKColors).GetFields(BindingFlags.Public | BindingFlags.Static);
 
-        foreach (var field in fields)
+        foreach (FieldInfo field in fields)
             // Compare the name of the field to the input string, ignoring case
             if (string.Equals(field.Name, colorString, StringComparison.OrdinalIgnoreCase))
             {

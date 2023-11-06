@@ -12,17 +12,17 @@ public class SvgCssStyleTest
     {
         // Arrange
 
-        var sourceSvgFilePath =
+        string sourceSvgFilePath =
             TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected), "svg",
                 FileCategory.Expected);
 
         var sourceSvgDocument = SvgDocument.Load(sourceSvgFilePath);
-        var expectedFontFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
-        var actualFontFilePath = TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected),
+        string expectedFontFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
+        string actualFontFilePath = TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected),
             "ttf", FileCategory.Actual);
 
         // Act
-        var actualFont = sourceSvgDocument.EmbeddedFonts().First();
+        SvgFont actualFont = sourceSvgDocument.EmbeddedFonts().First();
         actualFont.SaveFontToFile(actualFontFilePath);
 
         // Assert
@@ -32,7 +32,7 @@ public class SvgCssStyleTest
         Assert.Equal(5, actualFont.FontWidth);
         Assert.NotNull(actualFont.Parent);
         Assert.IsType<SvgCssStyle>(actualFont.Parent);
-        (var isEqual, var errorMessage) = FileIO.BinaryFileCompare(expectedFontFilePath, actualFontFilePath);
+        (bool isEqual, string? errorMessage) = FileIO.BinaryFileCompare(expectedFontFilePath, actualFontFilePath);
         Assert.True(isEqual, errorMessage);
     }
 }

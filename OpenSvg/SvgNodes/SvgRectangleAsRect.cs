@@ -23,28 +23,25 @@ public class SvgRectangleAsRect : SvgVisual
     public RectangleConfig RectangleConfig
     {
         get => new(BoundingBox.Size, DrawConfig,
-            CornerRadius: CornerRadiusX.Get()); //TODO: Add support for different X and Y CornerRadius
+            CornerRadius: this.CornerRadiusX.Get()); //TODO: Add support for different X and Y CornerRadius
         set
         {
-            DefinedWidth.Set(value.Size.Width);
-            DefinedHeight.Set(value.Size.Height);
+            this.DefinedWidth.Set(value.Size.Width);
+            this.DefinedHeight.Set(value.Size.Height);
             DrawConfig = value.DrawConfig;
-            CornerRadiusX.Set(value.CornerRadius);
-            CornerRadiusY.Set(value.CornerRadius);
+            this.CornerRadiusX.Set(value.CornerRadius);
+            this.CornerRadiusY.Set(value.CornerRadius);
         }
     }
 
-    public double DefinedWidthAbsolute => DefinedWidth.Get().Resolve(() => ViewPortWidth);
+    public double DefinedWidthAbsolute => this.DefinedWidth.Get().Resolve(() => ViewPortWidth);
 
-    public double DefinedHeightAbsolute => DefinedHeight.Get().Resolve(() => ViewPortHeight);
+    public double DefinedHeightAbsolute => this.DefinedHeight.Get().Resolve(() => ViewPortHeight);
 
-    public Point TopLeft => new(X.Get(), Y.Get());
+    public Point TopLeft => new(this.X.Get(), this.Y.Get());
 
-    public Point BottomRight => new(X.Get() + DefinedWidthAbsolute, Y.Get() + DefinedHeightAbsolute);
+    public Point BottomRight => new(this.X.Get() + DefinedWidthAbsolute, this.Y.Get() + DefinedHeightAbsolute);
 
-    protected override ConvexHull ComputeConvexHull()
-    {
-        return new ConvexHull(new Point[]
+    protected override ConvexHull ComputeConvexHull() => new(new Point[]
             { TopLeft, (BottomRight.X, TopLeft.Y), BottomRight, (TopLeft.X, BottomRight.Y) });
-    }
 }

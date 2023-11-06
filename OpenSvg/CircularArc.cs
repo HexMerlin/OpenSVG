@@ -34,16 +34,16 @@ public static class CircularArc
         startAngle = NormalizeDegreesToPositiveBelow360(startAngle);
         arcLength = NormalizeDegreesTo360NegativeOrPositive(arcLength);
 
-        var startAngleRad = startAngle * (Math.PI / 180.0);
-        var arcLengthRad = arcLength * (Math.PI / 180.0);
+        double startAngleRad = startAngle * (Math.PI / 180.0);
+        double arcLengthRad = arcLength * (Math.PI / 180.0);
 
-        var angleStep = arcLengthRad / (numberOfPoints - 1);
+        double angleStep = arcLengthRad / (numberOfPoints - 1);
 
         return Enumerable.Range(0, numberOfPoints).Select(i =>
         {
-            var angle = startAngleRad + i * angleStep;
-            var x = circleCenter.X + radius * Math.Cos(angle);
-            var y = circleCenter.Y - radius * Math.Sin(angle); // Invert the y-coordinate
+            double angle = startAngleRad + i * angleStep;
+            double x = circleCenter.X + radius * Math.Cos(angle);
+            double y = circleCenter.Y - radius * Math.Sin(angle); // Invert the y-coordinate
             return new Point((float)x, (float)y);
         });
     }
@@ -67,8 +67,5 @@ public static class CircularArc
     /// </summary>
     /// <param name="degrees">A value in degrees, positive or negative.</param>
     /// <returns>A double.</returns>
-    private static double NormalizeDegreesTo360NegativeOrPositive(double degrees)
-    {
-        return degrees % 360;
-    }
+    private static double NormalizeDegreesTo360NegativeOrPositive(double degrees) => degrees % 360;
 }

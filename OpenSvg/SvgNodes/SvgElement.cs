@@ -1,8 +1,8 @@
-﻿using System.Reflection;
+﻿using OpenSvg.Attributes;
+using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using OpenSvg.Attributes;
 
 namespace OpenSvg.SvgNodes;
 
@@ -63,14 +63,14 @@ public abstract class SvgElement : IXmlSerializable
 
     public void WriteXml(XmlWriter writer)
     {
-        foreach (var attribute in Attributes().Where(attribute => !attribute.HasDefaultValue)
+        foreach (IAttr? attribute in Attributes().Where(attribute => !attribute.HasDefaultValue)
                      .OrderBy(attr => attr.Name.Length + attr.ToXmlString().Length).ThenBy(attr => attr.Name))
             writer.WriteAttributeString(attribute.Name, attribute.ToXmlString());
 
         if (this is IHasElementContent hasElementContent) writer.WriteString(hasElementContent.Content);
 
         if (this is ISvgElementContainer svgElementContainer)
-            foreach (var childElement in svgElementContainer.Children())
+            foreach (SvgElement childElement in svgElementContainer.Children())
             {
                 writer.WriteStartElement(childElement.SvgName);
                 childElement.WriteXml(writer);
@@ -85,9 +85,9 @@ public abstract class SvgElement : IXmlSerializable
             return;
 
         // Read attributes
-        foreach (var attribute in Attributes())
+        foreach (IAttr attribute in Attributes())
         {
-            var xmlString = reader.GetAttribute(attribute.Name);
+            string? xmlString = reader.GetAttribute(attribute.Name);
 
             if (!attribute.IsConstant && xmlString is not null)
                 attribute.Set(xmlString);
@@ -106,7 +106,7 @@ public abstract class SvgElement : IXmlSerializable
                 while (reader.NodeType != XmlNodeType.EndElement)
                     if (reader.NodeType == XmlNodeType.Element)
                     {
-                        var childElement = CreateSvgElement(reader.Name);
+                        SvgElement childElement = CreateSvgElement(reader.Name);
                         childElement.ReadXml(reader);
                         svgElementContainer.Add(childElement);
                     }
@@ -161,25 +161,19 @@ public abstract class SvgElement : IXmlSerializable
     }
 
 
-    public IEnumerable<IAttr> Attributes()
-    {
-        return GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
+    public IEnumerable<IAttr> Attributes() => GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
             .Select(field => field.GetValue(this)).OfType<IAttr>();
-    }
 
-    private SvgElement CreateSvgElement(string elementName)
+    private static SvgElement CreateSvgElement(string elementName) => elementName switch
     {
-        return elementName switch
-        {
-            SvgNames.Svg => new SvgDocument(),
-            SvgNames.Line => new SvgLine(),
-            SvgNames.Group => new SvgGroup(),
-            SvgNames.Text => new SvgText(),
-            SvgNames.Path => new SvgPath(),
-            SvgNames.Polygon => new SvgPolygon(),
-            SvgNames.Defs => new SvgDefs(),
-            SvgNames.Style => new SvgCssStyle(),
-            _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")
-        };
-    }
+        SvgNames.Svg => new SvgDocument(),
+        SvgNames.Line => new SvgLine(),
+        SvgNames.Group => new SvgGroup(),
+        SvgNames.Text => new SvgText(),
+        SvgNames.Path => new SvgPath(),
+        SvgNames.Polygon => new SvgPolygon(),
+        SvgNames.Defs => new SvgDefs(),
+        SvgNames.Style => new SvgCssStyle(),
+        _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")
+    };
 }

@@ -45,11 +45,11 @@ public record SvgImageConfig
         to.AddChildWithAlignment(SmallTextConfig.WithText(toText).ToSvgPath(), HorizontalAlignment.InsideLeft,
             VerticalAlignment.InsideDown);
 
-        var verticalGroup = new[] { from, to }.Stack(Orientation.Vertical);
+        SvgGroup verticalGroup = new[] { from, to }.Stack(Orientation.Vertical);
         verticalGroup.AlignRelativeTo(badge, verticalAlignment: VerticalAlignment.Center);
         var delimiter = RectangleConfig.Transparent(new Size(40, 10)).ToSvgPolygon();
 
-        var horizontalGroup = new SvgVisual[] { badge, delimiter, verticalGroup }.Stack(Orientation.Horizontal);
+        SvgGroup horizontalGroup = new SvgVisual[] { badge, delimiter, verticalGroup }.Stack(Orientation.Horizontal);
 
         return horizontalGroup;
     }
@@ -65,9 +65,9 @@ public record SvgImageConfig
             return new[] { rect, line }.Group();
         }
 
-        var white = SKColors.White;
-        var black = SKColors.Black;
-        var data = new[]
+        SKColor white = SKColors.White;
+        SKColor black = SKColors.Black;
+        (string, string, string, SKColor, SKColor)[] data = new[]
         {
             ("1", "Skäggetorp", "Vidingsjö", white, new SKColor(235, 29, 42)),
             ("2", "Resecentrum", "Lambohov", white, new SKColor(0, 145, 202)),
@@ -89,14 +89,14 @@ public record SvgImageConfig
 
         var list = new List<SvgVisual>();
 
-        for (var i = 0; i < data.Length; i++)
+        for (int i = 0; i < data.Length; i++)
         {
             list.Add(CreateSvgElement(data[i].Item1, data[i].Item2, data[i].Item3, data[i].Item4, data[i].Item5));
             if (i < data.Length - 1) list.Add(CreateLineDelimiter(860, 80, 6));
         }
 
         var svgDocument = new SvgDocument();
-        var stackedItems = list.Stack(Orientation.Vertical);
+        SvgGroup stackedItems = list.Stack(Orientation.Vertical);
 
 
         var background = new RectangleConfig(stackedItems.BoundingBox.Size,

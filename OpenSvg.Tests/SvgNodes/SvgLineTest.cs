@@ -12,9 +12,9 @@ public class SvgLineTest
     {
         var line = new SvgLine();
 
-        var fillColor = line.FillColor.Get();
-        var strokeColor = line.StrokeColor.Get();
-        var strokeWidth = line.StrokeWidth.Get();
+        SKColor fillColor = line.FillColor.Get();
+        SKColor strokeColor = line.StrokeColor.Get();
+        double strokeWidth = line.StrokeWidth.Get();
 
         Assert.Equal(SKColors.Black, fillColor);
         Assert.Equal(SKColors.Transparent, strokeColor);
@@ -31,7 +31,7 @@ public class SvgLineTest
         var line1 = new SvgLine();
         var line2 = new SvgLine();
 
-        var (equal, message) = line1.CompareSelfAndDescendants(line2);
+        (bool equal, string message) = line1.CompareSelfAndDescendants(line2);
         Assert.True(equal, message);
     }
 
@@ -44,7 +44,7 @@ public class SvgLineTest
         line2.X1.Set(1000);
 
         //Act
-        var (equal, message) = line1.CompareSelfAndDescendants(line2);
+        (bool equal, string message) = line1.CompareSelfAndDescendants(line2);
 
         //Assert
         Assert.Equal("X1: 0 != 1000", message);

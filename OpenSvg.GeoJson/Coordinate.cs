@@ -22,7 +22,7 @@ public record Coordinate(double Long, double Lat)
     public Coordinate Translate(double dxMeters, double dyMeters)
     {
         // Define WGS84 ellipsoid
-        var wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
 
         // Transform the point to Mercator projection (meters)
         double[] z = { 0 };
@@ -50,19 +50,19 @@ public record Coordinate(double Long, double Lat)
     public double DistanceTo(Coordinate coordinate)
     {
         // Define WGS84 ellipsoid
-        var wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
 
         // Transform the points to Mercator projection (meters)
-        var z = new double[2];
+        double[] z = new double[2];
         double[] xy1 = { Long, Lat };
         double[] xy2 = { coordinate.Long, coordinate.Lat };
         Reproject.ReprojectPoints(xy1, z, wgs84, KnownCoordinateSystems.Projected.World.WebMercator, 0, 1);
         Reproject.ReprojectPoints(xy2, z, wgs84, KnownCoordinateSystems.Projected.World.WebMercator, 0, 1);
 
         // Calculate distance on a flat surface
-        var dx = xy2[0] - xy1[0];
-        var dy = xy2[1] - xy1[1];
-        var distance = Math.Sqrt(dx * dx + dy * dy);
+        double dx = xy2[0] - xy1[0];
+        double dy = xy2[1] - xy1[1];
+        double distance = Math.Sqrt(dx * dx + dy * dy);
 
         return distance;
     }
@@ -71,8 +71,5 @@ public record Coordinate(double Long, double Lat)
     ///     A world coordinate as a string in a JSON friendly format
     /// </summary>
     /// <returns>The coordinate as a string in a JSON friendly format.</returns>
-    public override string ToString()
-    {
-        return $"{{ \"long\": {Math.Round(Long, 3).ToXmlString()}, \"lat\": {Math.Round(Lat, 3).ToXmlString()} }}";
-    }
+    public override string ToString() => $"{{ \"long\": {Math.Round(Long, 3).ToXmlString()}, \"lat\": {Math.Round(Lat, 3).ToXmlString()} }}";
 }

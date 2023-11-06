@@ -16,7 +16,7 @@ public class SvgPolygonTests
 
         // Act
         var svgPolygon = rectangleConfig.ToSvgPolygon();
-        var actualBoundingBox = svgPolygon.BoundingBox;
+        BoundingBox actualBoundingBox = svgPolygon.BoundingBox;
 
         // Assert
         Assert.Equal(expectedBoundingBox, actualBoundingBox);

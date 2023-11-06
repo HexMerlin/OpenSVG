@@ -6,13 +6,7 @@ public class StringAttr : Attr<string>
     {
     }
 
-    protected override string Deserialize(string xmlString)
-    {
-        return xmlString;
-    }
+    protected override string Deserialize(string xmlString) => xmlString;
 
-    protected override string Serialize(string value)
-    {
-        return value;
-    }
+    protected override string Serialize(string value) => value;
 }

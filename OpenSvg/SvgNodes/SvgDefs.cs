@@ -9,20 +9,11 @@ public class SvgDefs : SvgElement, ISvgElementContainer
 
     public override string SvgName => SvgNames.Defs;
 
-    public void Add(SvgElement child)
-    {
-        Add((SvgStyle)child);
-    }
+    public void Add(SvgElement child) => Add((SvgStyle)child);
 
-    public IEnumerable<SvgElement> Children()
-    {
-        return ChildElements;
-    }
+    public IEnumerable<SvgElement> Children() => ChildElements;
 
-    public IEnumerable<SvgElement> Descendants()
-    {
-        return ChildElements;
-    }
+    public IEnumerable<SvgElement> Descendants() => ChildElements;
 
     public void Add(SvgStyle svgStyle)
     {
@@ -36,7 +27,7 @@ public class SvgDefs : SvgElement, ISvgElementContainer
     /// <param name="svgFont">The font to add.</param>
     public void AddEmbeddedFont(SvgFont svgFont)
     {
-        var svgCssStyle = Descendants().OfType<SvgCssStyle>().FirstOrDefault();
+        SvgCssStyle? svgCssStyle = Descendants().OfType<SvgCssStyle>().FirstOrDefault();
         if (svgCssStyle is null)
         {
             svgCssStyle = new SvgCssStyle();
