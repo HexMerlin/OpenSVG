@@ -361,12 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/OpenSvg.Tests/TestOutput/CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal_Actual.output
-/OpenSvg.Tests/TestOutput/CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected_Actual.svg
-/OpenSvg.Tests/TestOutput/CreateTextShape_FromFontAndRenderMode_MatchesExpected_DS-Digital_SvgPath_Actual.svg
-/OpenSvg.Tests/TestOutput/CreateTextShape_FromFontAndRenderMode_MatchesExpected_DS-Digital_SvgText_Actual.svg
-/OpenSvg.Tests/TestOutput/CreateTextShape_FromFontAndRenderMode_MatchesExpected_Source Sans Pro_SvgPath_Actual.svg
-/OpenSvg.Tests/TestOutput/CreateTextShape_FromFontAndRenderMode_MatchesExpected_Source Sans Pro_SvgText_Actual.svg
-/OpenSvg.Tests/TestOutput/Deserialize_FromFileWithEmbeddedFont_FileIsExpected_Actual.ttf
-/OpenSvg.Tests/TestOutput/LoadAndSaveFont_SameFile_BinaryFilesMatch_Actual.output
-/OpenSvg.Tests/TestOutput/Test_SvgFileGeneration_MatchesExpected_Actual.svg
+
+# OpenSVG specific
+/OpenSvg.Tests/TestOutput/
