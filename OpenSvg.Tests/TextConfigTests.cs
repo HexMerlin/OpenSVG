@@ -1,6 +1,6 @@
-﻿using SkiaSharp;
-using OpenSvg.Config;
+﻿using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using SkiaSharp;
 using Xunit.Abstractions;
 
 namespace OpenSvg.Tests;
@@ -11,7 +11,7 @@ public class TextConfigTests
 
     public TextConfigTests(ITestOutputHelper output)
     {
-        this._output = output;
+        _output = output;
     }
 
     [Theory]
@@ -19,16 +19,18 @@ public class TextConfigTests
     [InlineData(Resources.FontFileNameDsDigital, TextRenderMode.SvgText, true)]
     [InlineData(Resources.FontFileNameSourceSans, TextRenderMode.SvgPath, false)]
     [InlineData(Resources.FontFileNameSourceSans, TextRenderMode.SvgText, true)]
-    public void CreateTextShape_FromFontAndRenderMode_MatchesExpected(string fontFileName, TextRenderMode textRenderMode, bool embedFont)
+    public void CreateTextShape_FromFontAndRenderMode_MatchesExpected(string fontFileName,
+        TextRenderMode textRenderMode, bool embedFont)
     {
         // Arrange
         var svgFont = SvgFont.LoadFromFile(TestPaths.GetFontPath(fontFileName));
         var fontName = svgFont.FontName;
         var (expectedFilePath, actualFilePath) =
-            TestPaths.GetReferenceAndActualTestFilePaths($"{nameof(CreateTextShape_FromFontAndRenderMode_MatchesExpected)}_{fontName}_{textRenderMode}", "svg");
+            TestPaths.GetReferenceAndActualTestFilePaths(
+                $"{nameof(CreateTextShape_FromFontAndRenderMode_MatchesExpected)}_{fontName}_{textRenderMode}", "svg");
 
         // Act
-        TextConfig textConfig = new TextConfig("SAMPLE TEXT", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Red, 1));
+        var textConfig = new TextConfig("SAMPLE TEXT", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Red, 1));
 
         SvgVisual svgTextElement = textRenderMode switch
         {
@@ -39,12 +41,12 @@ public class TextConfigTests
 
         var textSize = svgTextElement.BoundingBox.Size;
         var rectangle = new RectangleConfig(textSize, new DrawConfig(SKColors.Black, SKColors.Red, 1)).ToSvgPolygon();
-        this._output.WriteLine(svgTextElement.BoundingBox.ToString());
+        _output.WriteLine(svgTextElement.BoundingBox.ToString());
 
         var svgDocument = new SvgDocument();
         svgDocument.Add(rectangle);
         svgDocument.Add(svgTextElement);
-     
+
         if (embedFont)
             svgDocument.EmbedFont(textConfig.SvgFont);
 
@@ -60,17 +62,19 @@ public class TextConfigTests
     public void CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected()
     {
         // Arrange
-        var (expectedFilePath, actualFilePath) = TestPaths.GetReferenceAndActualTestFilePaths(nameof(CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected), "svg");
-        SvgDocument expectedSvgDocument = SvgDocument.Load(expectedFilePath);
+        var (expectedFilePath, actualFilePath) =
+            TestPaths.GetReferenceAndActualTestFilePaths(nameof(CreateTextPath_FromSvgWithEmbeddedFont_MatchesExpected),
+                "svg");
+        var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
-        SvgPath expectedSvgPath = expectedSvgDocument.Descendants().OfType<SvgPath>().First();
-     
+        var expectedSvgPath = expectedSvgDocument.Descendants().OfType<SvgPath>().First();
+
         // Act
         var embeddedFont = expectedSvgDocument.EmbeddedFonts().First();
-        SvgPath actualSvgPath =
+        var actualSvgPath =
             new TextConfig("TIME 23:59", embeddedFont, 100, new DrawConfig(SKColors.Blue, SKColors.DarkBlue, 1))
                 .ToSvgPath();
-        SvgDocument actualSvgDocument = actualSvgPath.ToSvgDocument();
+        var actualSvgDocument = actualSvgPath.ToSvgDocument();
         actualSvgDocument.SetViewPortToActualSize();
         actualSvgDocument.EmbedFont(embeddedFont);
         actualSvgDocument.Save(actualFilePath);
@@ -82,7 +86,7 @@ public class TextConfigTests
         Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth.Get());
         Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight.Get());
 
-        (bool isEqual, string errorMessage) = expectedSvgPath.CompareSelfAndDescendants(actualSvgPath);
+        (var isEqual, var errorMessage) = expectedSvgPath.CompareSelfAndDescendants(actualSvgPath);
         Assert.True(isEqual, errorMessage);
 
         (isEqual, errorMessage) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);
@@ -91,5 +95,4 @@ public class TextConfigTests
         (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
-    
 }

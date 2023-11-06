@@ -1,4 +1,5 @@
 ﻿namespace OpenSvg;
+
 internal static class Constants
 {
     internal const double DefaultContainerWidth = 1000;

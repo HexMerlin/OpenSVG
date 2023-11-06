@@ -2,13 +2,9 @@
 
 public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
 {
-    public string Name { get; }
-
     public readonly T DefaultValue;
 
     private T val;
-
-    public bool IsConstant { get; }
 
     protected Attr(string name, T defaultValue, bool isConstant)
     {
@@ -18,22 +14,24 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
         IsConstant = isConstant;
     }
 
-    public void Set(T value)
+    public string Name { get; }
+
+    public bool IsConstant { get; }
+
+    public void Set(string xmlString)
     {
-        if (IsConstant) throw new InvalidOperationException("Cannot modify constant attribute");
-        val = value;
-    } 
-    public void Set(string xmlString) => Set(Deserialize(xmlString));
-    public bool HasDefaultValue => !IsConstant && Serialize(DefaultValue) == Serialize(val); //Constant attributes should always be serialized, and therefore this property returns false for them
+        Set(Deserialize(xmlString));
+    }
 
-    public T Get() => val;
+    public bool HasDefaultValue =>
+        !IsConstant &&
+        Serialize(DefaultValue) ==
+        Serialize(val); //Constant attributes should always be serialized, and therefore this property returns false for them
 
-    protected abstract string Serialize(T value);
-    protected abstract T Deserialize(string xmlString);
-
-    public string ToXmlString() => Serialize(val);
-
-    public override string ToString() => ToXmlString();
+    public string ToXmlString()
+    {
+        return Serialize(val);
+    }
 
     public virtual bool Equals(Attr<T>? other)
     {
@@ -45,12 +43,42 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
         return Serialize(val) == other.Serialize(other.val);
     }
 
-    public override bool Equals(object? obj) => Equals(obj as Attr<T>);
+    public void Set(T value)
+    {
+        if (IsConstant) throw new InvalidOperationException("Cannot modify constant attribute");
+        val = value;
+    }
 
-    public override int GetHashCode() => DefaultValue.GetHashCode();
+    public T Get()
+    {
+        return val;
+    }
 
-    public static bool operator ==(Attr<T>? left, Attr<T>? right) => Equals(left, right);
+    protected abstract string Serialize(T value);
+    protected abstract T Deserialize(string xmlString);
 
-    public static bool operator !=(Attr<T>? left, Attr<T>? right) => !Equals(left, right);
+    public override string ToString()
+    {
+        return ToXmlString();
+    }
 
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Attr<T>);
+    }
+
+    public override int GetHashCode()
+    {
+        return DefaultValue.GetHashCode();
+    }
+
+    public static bool operator ==(Attr<T>? left, Attr<T>? right)
+    {
+        return Equals(left, right);
+    }
+
+    public static bool operator !=(Attr<T>? left, Attr<T>? right)
+    {
+        return !Equals(left, right);
+    }
 }

@@ -1,16 +1,15 @@
-﻿
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace OpenSvg;
 
 internal static partial class RegexStore
 {
-    [GeneratedRegex($@"\b(\w+)\(([^)]+)\)")]
+    [GeneratedRegex(@"\b(\w+)\(([^)]+)\)")]
     internal static partial Regex ValidTransformString();
 
     [GeneratedRegex($@"\b{SvgNames.FontName}:\s*'([^']+)';")]
     internal static partial Regex GetFontNameFromXText();
-    
+
     [GeneratedRegex($"{SvgNames.Scale}\\(([^,]+),([^)]+)\\)")]
     internal static partial Regex ValidScaleString();
 

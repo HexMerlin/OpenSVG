@@ -1,19 +1,25 @@
 ﻿//File SvgPath.Text.cs
+
+using OpenSvg.Config;
 using SkiaSharp;
 using SkiaSharp.HarfBuzz;
-using OpenSvg.Config;
 
 namespace OpenSvg.SvgNodes;
 
 /// <summary>
-/// Represents an SVG Path element that renders a text with the specified styling.
+///     Represents an SVG Path element that renders a text with the specified styling.
 /// </summary>
 public sealed partial class SvgPath : SvgVisual, IDisposable
 {
-  
-    private static string ConvertTextToSkPathData(TextConfig textConfig) => ConvertTextToSkPath(textConfig).ToSvgPathData();
+    private static string ConvertTextToSkPathData(TextConfig textConfig)
+    {
+        return ConvertTextToSkPath(textConfig).ToSvgPathData();
+    }
 
-    private static SKPath ConvertTextToSkPath(TextConfig textConfig) => ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
+    private static SKPath ConvertTextToSkPath(TextConfig textConfig)
+    {
+        return ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
+    }
 
     private static SKPath ConvertTextToSkPath(string text, SKTypeface typeFace, float fontSize)
     {
@@ -21,24 +27,24 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
         {
             Typeface = typeFace,
             TextSize = fontSize,
-            IsAntialias = true,
+            IsAntialias = true
         };
 
-        SKPath path = new SKPath();
-        SKFont font = typeFace.ToFont(fontSize);
+        var path = new SKPath();
+        var font = typeFace.ToFont(fontSize);
 
-        using SKShaper shaper = new SKShaper(typeFace);
-        SKShaper.Result result = shaper.Shape(text, paint);
+        using var shaper = new SKShaper(typeFace);
+        var result = shaper.Shape(text, paint);
 
-        for (int i = 0; i < result.Points.Length; i++)
+        for (var i = 0; i < result.Points.Length; i++)
         {
-            SKPoint point = result.Points[i];
-            int codePoint = (int)result.Codepoints[i];
+            var point = result.Points[i];
+            var codePoint = (int)result.Codepoints[i];
 
             if (codePoint != 0)
             {
-                using SKPath glyphPath = font.GetGlyphPath((ushort)codePoint);
-                SKMatrix matrix = SKMatrix.CreateTranslation(point.X, point.Y);
+                using var glyphPath = font.GetGlyphPath((ushort)codePoint);
+                var matrix = SKMatrix.CreateTranslation(point.X, point.Y);
                 glyphPath.Transform(matrix);
                 path.AddPath(glyphPath);
             }
@@ -50,7 +56,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
 
     private static void NormalizeToOrigin(SKPath path)
     {
-        SKRect bounds = path.Bounds;
+        var bounds = path.Bounds;
         path.Offset(-bounds.Left, -bounds.Top);
     }
 }

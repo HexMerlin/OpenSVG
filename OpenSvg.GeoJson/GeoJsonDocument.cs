@@ -109,7 +109,7 @@
 //                }
 //            case SvgLine svgLine:
 //                {
-                   
+
 //                    var nativeLine = new LineString(new[] { ToNativeCoordinate(svgLine.P1, composedTransform), ToNativeCoordinate(svgLine.P2, composedTransform) });
 //                    featureCollection.Add(new Feature(nativeLine, GetDrawConfigAttributes(svgLine)));
 //                    break;
@@ -224,3 +224,4 @@
 //        return (new Coordinate(minLong, minLat), new Coordinate(maxLong, maxLat));
 //    }
 //}
+

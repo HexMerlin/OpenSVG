@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices.ComTypes;
-using System.Xml.Linq;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using OpenSvg.SvgNodes;
 
 namespace OpenSvg.Tests.SvgNodes;
@@ -12,14 +10,14 @@ public class SvgDocumentTest
     public void Serialization_ConstructorToXDocumentAndBack_ObjectIsRestored()
     {
         // Arrange
-        
-        SvgDocument expected = new SvgDocument();
+
+        var expected = new SvgDocument();
         expected.Add(new SvgLine());
         expected.Add(new SvgText());
-        
+
         // Act
-        XDocument xDocument = expected.ToXDocument();
-        SvgDocument actual = SvgDocument.FromXDocument(xDocument);
+        var xDocument = expected.ToXDocument();
+        var actual = SvgDocument.FromXDocument(xDocument);
 
         //Assert
         var (equal, message) = expected.CompareSelfAndDescendants(actual);
@@ -43,10 +41,9 @@ public class SvgDocumentTest
         //SvgDocument doc2 = xmlFormat2.Deserialize();
 
         //SvgDocument actualDoc = xmlFormat.Deserialize();
-      
+
         ////Assert
 
         //Assert.Equal(xmlFormat, xmlFormat2);
     }
-
 }

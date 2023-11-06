@@ -1,17 +1,17 @@
-﻿
-namespace OpenSvg.Tests;
+﻿namespace OpenSvg.Tests;
 
 public partial class PolygonTests
 {
     [Fact]
     public void Test_PointInsidePolygon_ReturnsInside()
     {
-        var polygon = new Polygon(new[] {
-                new Point(0, 0),
-                new Point(10, 0),
-                new Point(10, 10),
-                new Point(0, 10)
-            });
+        var polygon = new Polygon(new[]
+        {
+            new Point(0, 0),
+            new Point(10, 0),
+            new Point(10, 10),
+            new Point(0, 10)
+        });
 
         var point = new Point(5, 5);
         Assert.Equal(PointRelation.Inside, polygon.RelationTo(point));
@@ -20,12 +20,13 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointOutsidePolygon_ReturnsDisjoint()
     {
-        var polygon = new Polygon(new[] {
-                new Point(0, 0),
-                new Point(10, 0),
-                new Point(10, 10),
-                new Point(0, 10)
-            });
+        var polygon = new Polygon(new[]
+        {
+            new Point(0, 0),
+            new Point(10, 0),
+            new Point(10, 10),
+            new Point(0, 10)
+        });
 
         var point = new Point(15, 15);
         Assert.Equal(PointRelation.Disjoint, polygon.RelationTo(point));
@@ -34,12 +35,13 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointOnPolygonEdge_ReturnsInside()
     {
-        var polygon = new Polygon(new[] {
-                new Point(0, 0),
-                new Point(10, 0),
-                new Point(10, 10),
-                new Point(0, 10)
-            });
+        var polygon = new Polygon(new[]
+        {
+            new Point(0, 0),
+            new Point(10, 0),
+            new Point(10, 10),
+            new Point(0, 10)
+        });
 
         var point = new Point(10, 5);
         Assert.Equal(PointRelation.Inside, polygon.RelationTo(point));
@@ -48,7 +50,8 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointOnPolygonVertex_ReturnsInside()
     {
-        var polygon = new Polygon(new[] {
+        var polygon = new Polygon(new[]
+        {
             new Point(0, 0),
             new Point(10, 0),
             new Point(10, 10),
@@ -62,7 +65,8 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointOnNonRectangularPolygonEdge_ReturnsInside()
     {
-        var polygon = new Polygon(new[] {
+        var polygon = new Polygon(new[]
+        {
             new Point(0, 0),
             new Point(10, 0),
             new Point(10, 5),
@@ -78,7 +82,8 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointInsideConcavePolygon_ReturnsInside()
     {
-        var polygon = new Polygon(new[] {
+        var polygon = new Polygon(new[]
+        {
             new Point(0, 0),
             new Point(10, 0),
             new Point(10, 10),
@@ -93,7 +98,8 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointOutsideConcavePolygon_ReturnsDisjoint()
     {
-        var polygon = new Polygon(new[] {
+        var polygon = new Polygon(new[]
+        {
             new Point(0, 0),
             new Point(10, 0),
             new Point(10, 10),

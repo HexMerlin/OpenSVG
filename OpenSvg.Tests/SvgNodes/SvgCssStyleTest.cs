@@ -1,8 +1,6 @@
 ﻿using JetBrains.Annotations;
-using OpenSvg.Config;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
-using OpenSvg.Tests;
 
 namespace OpenSvg.Tests.SvgNodes;
 
@@ -17,10 +15,11 @@ public class SvgCssStyleTest
         var sourceSvgFilePath =
             TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected), "svg",
                 FileCategory.Expected);
-       
-        SvgDocument sourceSvgDocument = SvgDocument.Load(sourceSvgFilePath);
+
+        var sourceSvgDocument = SvgDocument.Load(sourceSvgFilePath);
         var expectedFontFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
-        var actualFontFilePath = TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected), "ttf", FileCategory.Actual);
+        var actualFontFilePath = TestPaths.GetTestFilePath(nameof(Deserialize_FromFileWithEmbeddedFont_FileIsExpected),
+            "ttf", FileCategory.Actual);
 
         // Act
         var actualFont = sourceSvgDocument.EmbeddedFonts().First();
@@ -33,9 +32,7 @@ public class SvgCssStyleTest
         Assert.Equal(5, actualFont.FontWidth);
         Assert.NotNull(actualFont.Parent);
         Assert.IsType<SvgCssStyle>(actualFont.Parent);
-        (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFontFilePath, actualFontFilePath);
+        (var isEqual, var errorMessage) = FileIO.BinaryFileCompare(expectedFontFilePath, actualFontFilePath);
         Assert.True(isEqual, errorMessage);
-
-
     }
 }

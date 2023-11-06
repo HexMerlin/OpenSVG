@@ -10,11 +10,11 @@ public class SvgLineTest
     [Fact]
     public void Constructor_SetsDefaultPropertiesCorrectly()
     {
-        SvgLine line = new SvgLine();
+        var line = new SvgLine();
 
-        SKColor fillColor = line.FillColor.Get();
-        SKColor strokeColor = line.StrokeColor.Get();
-        double strokeWidth = line.StrokeWidth.Get();
+        var fillColor = line.FillColor.Get();
+        var strokeColor = line.StrokeColor.Get();
+        var strokeWidth = line.StrokeWidth.Get();
 
         Assert.Equal(SKColors.Black, fillColor);
         Assert.Equal(SKColors.Transparent, strokeColor);
@@ -23,15 +23,13 @@ public class SvgLineTest
         Assert.Equal(0, line.Y1.Get());
         Assert.Equal(0, line.X2.Get());
         Assert.Equal(0, line.Y2.Get());
-
-
     }
 
     [Fact]
     public void CompareSelfAndDescendants_ReturnsTrueForEqualObjects()
     {
-        SvgLine line1 = new SvgLine();
-        SvgLine line2 = new SvgLine();
+        var line1 = new SvgLine();
+        var line2 = new SvgLine();
 
         var (equal, message) = line1.CompareSelfAndDescendants(line2);
         Assert.True(equal, message);
@@ -41,18 +39,17 @@ public class SvgLineTest
     public void CompareSelfAndDescendants_ReturnsFalseForDifferentObjects()
     {
         // Arrange
-        SvgLine line1 = new SvgLine();
-        SvgLine line2 = new SvgLine();
+        var line1 = new SvgLine();
+        var line2 = new SvgLine();
         line2.X1.Set(1000);
 
         //Act
         var (equal, message) = line1.CompareSelfAndDescendants(line2);
-        
+
         //Assert
         Assert.Equal("X1: 0 != 1000", message);
         Assert.False(equal, message);
     }
-
 
 
     //[Fact]

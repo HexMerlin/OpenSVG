@@ -10,11 +10,12 @@ public class FontTests
     public void LoadAndSaveFont_SameFile_BinaryFilesMatch()
     {
         // Arrange
-        string expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
-        SvgFont expectedFont = SvgFont.LoadFromFile(expectedFilePath);
+        var expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameDsDigital);
+        var expectedFont = SvgFont.LoadFromFile(expectedFilePath);
 
         // Act
-        string actualFilePath = TestPaths.GetTestFilePath(nameof(LoadAndSaveFont_SameFile_BinaryFilesMatch), "output", FileCategory.Actual);
+        var actualFilePath = TestPaths.GetTestFilePath(nameof(LoadAndSaveFont_SameFile_BinaryFilesMatch), "output",
+            FileCategory.Actual);
         expectedFont.Font.SaveToFile(actualFilePath);
 
         // Assert
@@ -26,15 +27,16 @@ public class FontTests
     public void CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal()
     {
         // Arrange
-        string expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameSourceSans);
+        var expectedFilePath = TestPaths.GetFontPath(Resources.FontFileNameSourceSans);
 
-        SvgFont expectedFont = SvgFont.LoadFromFile(expectedFilePath);
+        var expectedFont = SvgFont.LoadFromFile(expectedFilePath);
 
         // Act
-        string actualFilePath = TestPaths.GetTestFilePath(nameof(CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal), "output", FileCategory.Actual);
-        SvgCssStyle svgCssStyle = new SvgCssStyle();
+        var actualFilePath = TestPaths.GetTestFilePath(nameof(CreateSvgCssStyle_FromFont_SavedFontMatchesOriginal),
+            "output", FileCategory.Actual);
+        var svgCssStyle = new SvgCssStyle();
         svgCssStyle.Add(expectedFont);
-        SvgFont actualFont = svgCssStyle.Fonts.First();
+        var actualFont = svgCssStyle.Fonts.First();
         actualFont.SaveFontToFile(actualFilePath);
 
         // Assert

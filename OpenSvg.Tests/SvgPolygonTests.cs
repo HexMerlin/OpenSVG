@@ -1,6 +1,5 @@
-﻿using SkiaSharp;
-using OpenSvg.Config;
-using OpenSvg.SvgNodes;
+﻿using OpenSvg.Config;
+using SkiaSharp;
 
 namespace OpenSvg.Tests;
 
@@ -11,11 +10,12 @@ public class SvgPolygonTests
     {
         // Arrange
         var expectedSize = new Size(100, 100);
-        RectangleConfig rectangleConfig = new RectangleConfig(expectedSize, new DrawConfig(SKColors.LightBlue, SKColors.LightBlue, 10));
+        var rectangleConfig =
+            new RectangleConfig(expectedSize, new DrawConfig(SKColors.LightBlue, SKColors.LightBlue, 10));
         var expectedBoundingBox = new BoundingBox(new Point(0, 0), new Point(expectedSize.Width, expectedSize.Height));
 
         // Act
-        SvgPolygon svgPolygon = rectangleConfig.ToSvgPolygon();
+        var svgPolygon = rectangleConfig.ToSvgPolygon();
         var actualBoundingBox = svgPolygon.BoundingBox;
 
         // Assert

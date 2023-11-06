@@ -2,20 +2,20 @@
 
 namespace OpenSvg;
 
-public partial class Polygon 
+public partial class Polygon
 {
     /// <summary>
-    /// Determines the relationship between two polygons.
+    ///     Determines the relationship between two polygons.
     /// </summary>
     /// <param name="target">The target polygon.</param>
-    /// <returns>A <see cref="PolygonRelation"/> value indicating the relationship between the polygons.</returns>
+    /// <returns>A <see cref="PolygonRelation" /> value indicating the relationship between the polygons.</returns>
     public PolygonRelation RelationTo(Polygon target)
     {
         if (ArePolygonsDisjointByBoundingBox(target))
             return PolygonRelation.Disjoint;
 
-        int insideCount = CountVerticesInsidePolygon(target);
-        int neutralCount = CountNeutralVertices(target);
+        var insideCount = CountVerticesInsidePolygon(target);
+        var neutralCount = CountNeutralVertices(target);
 
         if (insideCount == Count - neutralCount)
             return PolygonRelation.Inside;
@@ -27,28 +27,26 @@ public partial class Polygon
     }
 
     /// <summary>
-    /// Determines if the given point is on the edge of this polygon.
+    ///     Determines if the given point is on the edge of this polygon.
     /// </summary>
     /// <param name="point">The point to check.</param>
     /// <returns>True if the point is on the edge of this polygon, false otherwise.</returns>
     public bool IsOnEdge(Point point)
     {
-        for (int i = 0; i < Count; i++)
+        for (var i = 0; i < Count; i++)
         {
-            Point a = this[i];
-            Point b = this[(i + 1) % Count];
-            if (point.IsOnLineSegment(a, b))
-            {
-                return true;
-            }
+            var a = this[i];
+            var b = this[(i + 1) % Count];
+            if (point.IsOnLineSegment(a, b)) return true;
         }
+
         return false;
     }
 
     private bool ArePolygonsDisjointByBoundingBox(Polygon target)
     {
-        BoundingBox thisBoundingBox = BoundingBox();
-        BoundingBox otherBoundingBox = target.BoundingBox();
+        var thisBoundingBox = BoundingBox();
+        var otherBoundingBox = target.BoundingBox();
         return !thisBoundingBox.Intersects(otherBoundingBox);
     }
 
@@ -64,73 +62,63 @@ public partial class Polygon
 
     private bool DoEdgesIntersectIgnoringNeutral(Polygon otherPolygon)
     {
-        for (int i = 0; i < Count; i++)
+        for (var i = 0; i < Count; i++)
         {
-            Point a1 = this[i];
-            Point a2 = this[(i + 1) % Count];
+            var a1 = this[i];
+            var a2 = this[(i + 1) % Count];
 
-            for (int j = 0; j < otherPolygon.Count; j++)
+            for (var j = 0; j < otherPolygon.Count; j++)
             {
-                Point b1 = otherPolygon[j];
-                Point b2 = otherPolygon[(j + 1) % otherPolygon.Count];
+                var b1 = otherPolygon[j];
+                var b2 = otherPolygon[(j + 1) % otherPolygon.Count];
 
-                if (EdgesIntersect(a1, a2, b1, b2) && !IsNeutralIntersection(a1, a2, b1, b2))
-                {
-                    return true;
-                }
+                if (EdgesIntersect(a1, a2, b1, b2) && !IsNeutralIntersection(a1, a2, b1, b2)) return true;
             }
         }
+
         return false;
     }
 
     private static bool EdgesIntersect(Point a1, Point a2, Point b1, Point b2)
     {
-        int o1 = Orientation(a1, a2, b1);
-        int o2 = Orientation(a1, a2, b2);
-        int o3 = Orientation(b1, b2, a1);
-        int o4 = Orientation(b1, b2, a2);
+        var o1 = Orientation(a1, a2, b1);
+        var o2 = Orientation(a1, a2, b2);
+        var o3 = Orientation(b1, b2, a1);
+        var o4 = Orientation(b1, b2, a2);
 
-        if (o1 != o2 && o3 != o4)
-        {
-            return true;
-        }
+        if (o1 != o2 && o3 != o4) return true;
 
         return false;
     }
 
     private static bool IsNeutralIntersection(Point a1, Point a2, Point b1, Point b2)
     {
-        Point? intersection = ComputeIntersection(a1, a2, b1, b2);
-        if (intersection == null)
-        {
-            return false;
-        }
+        var intersection = ComputeIntersection(a1, a2, b1, b2);
+        if (intersection == null) return false;
 
-        Point interPoint = intersection.Value;
+        var interPoint = intersection.Value;
         return interPoint.Equals(a1) || interPoint.Equals(a2) || interPoint.Equals(b1) || interPoint.Equals(b2);
     }
 
     private static Point? ComputeIntersection(Point a1, Point a2, Point b1, Point b2)
     {
-        double A1 = a2.Y - a1.Y;
-        double B1 = a1.X - a2.X;
-        double C1 = A1 * a1.X + B1 * a1.Y;
+        var A1 = a2.Y - a1.Y;
+        var B1 = a1.X - a2.X;
+        var C1 = A1 * a1.X + B1 * a1.Y;
 
-        double A2 = b2.Y - b1.Y;
-        double B2 = b1.X - b2.X;
-        double C2 = A2 * b1.X + B2 * b1.Y;
+        var A2 = b2.Y - b1.Y;
+        var B2 = b1.X - b2.X;
+        var C2 = A2 * b1.X + B2 * b1.Y;
 
-        double determinant = A1 * B2 - A2 * B1;
+        var determinant = A1 * B2 - A2 * B1;
 
         if (determinant == 0)
         {
             return null; // parallel lines
         }
-        else
-        {
-            double x = (B2 * C1 - B1 * C2) / determinant;
-            double y = (A1 * C2 - A2 * C1) / determinant;
-            return new Point(x, y);
-        }
+
+        var x = (B2 * C1 - B1 * C2) / determinant;
+        var y = (A1 * C2 - A2 * C1) / determinant;
+        return new Point(x, y);
     }
 }

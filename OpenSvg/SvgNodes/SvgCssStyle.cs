@@ -1,48 +1,42 @@
-﻿using System.Xml.Linq;
-using System.Xml.Serialization;
-using HarfBuzzSharp;
+﻿using System.Xml.Serialization;
 using OpenSvg.Attributes;
-
 
 namespace OpenSvg.SvgNodes;
 
 /// <summary>
-/// Represents an SVG style element with CSS text content.
+///     Represents an SVG style element with CSS text content.
 /// </summary>
 /// <remarks>
-/// The style element is used inside SVG documents to embed stylings. CSS can be used as a standalone stylesheet or can be included directly into SVG elements as attributes.
+///     The style element is used inside SVG documents to embed stylings. CSS can be used as a standalone stylesheet or can
+///     be included directly into SVG elements as attributes.
 /// </remarks>
-
 public class SvgCssStyle : SvgStyle, IHasElementContent
 {
+    public readonly StringAttr Type = new(SvgNames.Type, SvgNames.TextCss, true);
 
 
-    public readonly StringAttr Type = new(SvgNames.Type, SvgNames.TextCss, isConstant: true);
+    private SvgFont? singleFont;
 
     public override string SvgName => SvgNames.Style;
 
-    public string Content 
-    { 
+
+    public IReadOnlyList<SvgFont> Fonts => singleFont is null ? Array.Empty<SvgFont>() : new[] { singleFont };
+
+    public string Content
+    {
         get => singleFont is null ? "" : singleFont.XText;
         set
         {
-            singleFont = null; Add(new SvgFont(value));
+            singleFont = null;
+            Add(new SvgFont(value));
         }
     }
 
-  
-    private SvgFont? singleFont = null;
-
-
-    [XmlIgnore] 
-    public IReadOnlyList<SvgFont> Fonts => singleFont is null ? Array.Empty<SvgFont>() :  new[] { singleFont };
-
-
 
     /// <summary>
-    /// Adds an <see cref="SvgFont"/> element into the current SVG style.
+    ///     Adds an <see cref="SvgFont" /> element into the current SVG style.
     /// </summary>
-    /// <param name="svgFont">The <see cref="SvgFont"/> element to add.</param>
+    /// <param name="svgFont">The <see cref="SvgFont" /> element to add.</param>
     public void Add(SvgFont svgFont)
     {
         if (singleFont != null)
@@ -50,8 +44,4 @@ public class SvgCssStyle : SvgStyle, IHasElementContent
         singleFont = svgFont;
         svgFont.Parent = this;
     }
-
-
-
-
 }

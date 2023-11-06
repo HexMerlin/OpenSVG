@@ -1,5 +1,4 @@
-﻿
-namespace OpenSvg.Tests;
+﻿namespace OpenSvg.Tests;
 
 public static class Resources
 {

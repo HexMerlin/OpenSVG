@@ -1,5 +1,4 @@
-﻿
-using OpenSvg.SvgNodes;
+﻿using OpenSvg.SvgNodes;
 
 namespace OpenSvg.Tests;
 
@@ -9,12 +8,13 @@ public class SvgFileGeneratorTests
     public void Test_SvgFileGeneration_MatchesExpected()
     {
         // Arrange
-        var (expectedFilePath, actualFilePath) = TestPaths.GetReferenceAndActualTestFilePaths(nameof(Test_SvgFileGeneration_MatchesExpected), "svg");
-        SvgDocument expectedSvgDocument = SvgDocument.Load(expectedFilePath);
+        var (expectedFilePath, actualFilePath) =
+            TestPaths.GetReferenceAndActualTestFilePaths(nameof(Test_SvgFileGeneration_MatchesExpected), "svg");
+        var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
         // Act
-        SvgImageConfig config = new SvgImageConfig();
-        SvgDocument actualSvgDocument = config.CreateSvgDocument();
+        var config = new SvgImageConfig();
+        var actualSvgDocument = config.CreateSvgDocument();
         actualSvgDocument.SetViewPortToActualSize();
         actualSvgDocument.Save(actualFilePath);
 

@@ -1,15 +1,9 @@
-﻿
-using OpenSvg.SvgNodes;
-using SkiaSharp;
+﻿namespace OpenSvg.ConsoleTest;
 
-namespace OpenSvg.ConsoleTest;
-
-class Program
+internal class Program
 {
-    static void Main()
+    private static void Main()
     {
         Console.WriteLine("See unit tests for examples of how to use OpenSVG");
-
     }
-
 }

@@ -1,36 +1,31 @@
-﻿using System.Xml;
-using System.Xml.Schema;
-using System.Xml.Serialization;
-using OpenSvg.Attributes;
+﻿using OpenSvg.Attributes;
 
 namespace OpenSvg.SvgNodes;
 
-
-public class SvgLine : SvgVisual 
+public class SvgLine : SvgVisual
 {
-
-    public override string SvgName => SvgNames.Line;
-
-
     public readonly DoubleAttr X1 = new(SvgNames.X1);
-
-    public readonly DoubleAttr Y1 = new(SvgNames.Y1);
 
     public readonly DoubleAttr X2 = new(SvgNames.X2);
 
+    public readonly DoubleAttr Y1 = new(SvgNames.Y1);
+
     public readonly DoubleAttr Y2 = new(SvgNames.Y2);
+
+    public override string SvgName => SvgNames.Line;
 
     public Point P1 => new(X1.Get(), Y1.Get());
 
     public Point P2 => new(X2.Get(), Y2.Get());
 
-    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other, double doublePrecision = Constants.DoublePrecision)
+    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
+        double doublePrecision = Constants.DoublePrecision)
     {
         if (ReferenceEquals(this, other)) return (true, "Same reference");
         var (equal, message) = base.CompareSelfAndDescendants(other);
         if (!equal)
             return (equal, message);
-        SvgLine sameType = (SvgLine)other;
+        var sameType = (SvgLine)other;
         if (X1 != sameType.X1)
             return (false, $"X1: {X1} != {sameType.X1}");
         if (Y1 != sameType.Y1)
@@ -42,7 +37,8 @@ public class SvgLine : SvgVisual
         return (true, "Equal");
     }
 
-    protected override ConvexHull ComputeConvexHull() => new(new[] { P1, P2 });
-
+    protected override ConvexHull ComputeConvexHull()
+    {
+        return new ConvexHull(new[] { P1, P2 });
+    }
 }
-
