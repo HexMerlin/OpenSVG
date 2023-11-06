@@ -23,7 +23,7 @@ public class SvgText : SvgVisual, IHasElementContent
     /// <remarks>
     ///     The default font size is not defined according to the SVG 1.1 specification.
     ///     Instead a de facto standard based on browser implementation and CSS specifications is adopted.
-    ///     The CSS2 specification, for example, suggests a "medium" font size that equates to 16px in many desktop browsers.
+    ///     The CSS2 specification suggests a "medium" font size that equates to 16px in many desktop browsers, which is adopted here.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/CSS2/fonts.html#font-size-props">SVG 1.1 Font size</seealso>
     public readonly DoubleAttr FontSize = new(SvgNames.FontSize, 16);

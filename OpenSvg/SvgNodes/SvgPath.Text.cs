@@ -1,5 +1,4 @@
-﻿//File SvgPath.Text.cs
-
+﻿
 using OpenSvg.Config;
 using SkiaSharp;
 using SkiaSharp.HarfBuzz;

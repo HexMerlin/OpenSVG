@@ -16,12 +16,14 @@ public class MultiPolygon : List<EnclosedPolygonGroup>
     /// <summary>
     ///     Initializes a new instance of the <see cref="MultiPolygon" /> class with the specified collection of
     ///     <see cref="Polygon" /> objects.
+    ///     The input polygons will be added into to proper groups of type <see cref="EnclosedPolygonGroup"/>  
     /// </summary>
     /// <param name="polygons">The collection of <see cref="Polygon" /> objects to add.</param>
     public MultiPolygon(IEnumerable<Polygon> polygons) : this() => AddAll(polygons);
 
     /// <summary>
     ///     Adds the specified <see cref="Polygon" /> object to the <see cref="MultiPolygon" />.
+    ///     The input polygon will be added to to proper group of type <see cref="EnclosedPolygonGroup"/>  
     /// </summary>
     /// <param name="polygon">The <see cref="Polygon" /> object to add.</param>
     public void Add(Polygon polygon)
@@ -66,6 +68,7 @@ public class MultiPolygon : List<EnclosedPolygonGroup>
     ///     Adds the specified collection of <see cref="Polygon" /> objects to the <see cref="MultiPolygon" />.
     /// </summary>
     /// <param name="polygons">The collection of <see cref="Polygon" /> objects to add.</param>
+    /// <seealso cref="Add(Polygon)"/>
     public void AddAll(IEnumerable<Polygon> polygons)
     {
         foreach (Polygon polygon in polygons)
@@ -76,18 +79,7 @@ public class MultiPolygon : List<EnclosedPolygonGroup>
     ///     Gets the bounding box that encloses all polygons in the <see cref="MultiPolygon" />.
     /// </summary>
     /// <returns>The bounding box enclosing all polygons.</returns>
-    public BoundingBox BoundingBox()
-    {
-        var boundingBox = new BoundingBox(Point.Origin, Point.Origin);
-        foreach (EnclosedPolygonGroup polygonGroup in this)
-        {
-            boundingBox = boundingBox.UnionWith(polygonGroup.ExteriorPolygon.BoundingBox());
-            foreach (Polygon interiorPolygon in polygonGroup.InteriorPolygons)
-                boundingBox = boundingBox.UnionWith(interiorPolygon.BoundingBox());
-        }
-
-        return boundingBox;
-    }
+    public BoundingBox BoundingBox() => ComputeConvexHull().BoundingBox();
 
     public ConvexHull ComputeConvexHull() => new(this.SelectMany(polygonGroup => polygonGroup.ExteriorPolygon));
 }

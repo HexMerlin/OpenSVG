@@ -42,7 +42,7 @@ public abstract class SvgElement : IXmlSerializable
     ///             calculated by traversing upwards, accumulating ratios until an ancestor with an absolute size is found.
     ///         </item>
     ///         <item>If an SvgDocument has no size set, it is equivalent to having a ratio of 1 (<c>100%</c>).</item>
-    ///         <item>If the topmost SvgDocument has a ratio or no size set, a default container size is assumed</item>
+    ///         <item>If no topmost SvgDocument exists, or the topmost SvgDocument has a ratio or no size set, a default container size is assumed</item>
     ///     </list>
     /// </remarks>
     /// <returns>The absolute value for the viewport size, width and height.</returns>
