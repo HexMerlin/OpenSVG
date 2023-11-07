@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # OpenSVG specific
 /OpenSvg.Tests/TestOutput/
+/api
