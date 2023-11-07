@@ -1,9 +1,9 @@
-﻿using JetBrains.Annotations;
+﻿
 using OpenSvg.SvgNodes;
 
 namespace OpenSvg.Tests.SvgNodes;
 
-[TestSubject(typeof(SvgDocument))]
+
 public class SvgDocumentTest
 {
     [Fact]

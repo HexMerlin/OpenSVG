@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class RectangleConfig
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class RectangleConfig
+ ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OpenSvg.Config.RectangleConfig">
+
+
+
+  <h1 id="OpenSvg_Config_RectangleConfig" data-uid="OpenSvg.Config.RectangleConfig" class="text-break">Class RectangleConfig
+</h1>
+  <div class="markdown level0 summary"><p>Defining attributes of a rectangle in SVG
+The rectangle can be rendered either as a 'polygon' or a high-level 'rect' in SVG.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">RectangleConfig</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a>.<a class="xref" href="OpenSvg.Config.html">Config</a></h6>
+  <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
+  <h5 id="OpenSvg_Config_RectangleConfig_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record RectangleConfig : IEquatable&lt;RectangleConfig&gt;</code></pre>
+  </div>
+  <h5 id="OpenSvg_Config_RectangleConfig_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>When converting to GeoJSON rectangles must be drwawn as <a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a></p>
+</div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.%23ctor(OpenSvg.Size%2COpenSvg.Config.DrawConfig%2CSystem.Int32%2CSystem.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig__ctor_" data-uid="OpenSvg.Config.RectangleConfig.#ctor*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double_" data-uid="OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Double)">RectangleConfig(Size, DrawConfig, int, double)</h4>
+  <div class="markdown level1 summary"><p>Defining attributes of a rectangle in SVG
+The rectangle can be rendered either as a 'polygon' or a high-level 'rect' in SVG.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCornerPoints = 10, double CornerRadius = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Size.html">Size</a></td>
+        <td><span class="parametername">Size</span></td>
+        <td><p>Size of the rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Config.DrawConfig.html">DrawConfig</a></td>
+        <td><span class="parametername">DrawConfig</span></td>
+        <td><p>Styling options for the rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">NumberOfCornerPoints</span></td>
+        <td><p>Number of points used to approximate curved corners, when the rectangle is drawn as
+a polygon</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">CornerRadius</span></td>
+        <td><p>Defines the circle radius of the corners.
+If CornerRadius=0 there will be no rounding corners, but just normal square corners</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When converting to GeoJSON rectangles must be drwawn as <a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a></p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_CornerRadius.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.CornerRadius%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_CornerRadius_" data-uid="OpenSvg.Config.RectangleConfig.CornerRadius*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_CornerRadius" data-uid="OpenSvg.Config.RectangleConfig.CornerRadius">CornerRadius</h4>
+  <div class="markdown level1 summary"><p>Defines the circle radius of the corners.
+If CornerRadius=0 there will be no rounding corners, but just normal square corners</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double CornerRadius { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_DrawConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.DrawConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_DrawConfig_" data-uid="OpenSvg.Config.RectangleConfig.DrawConfig*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_DrawConfig" data-uid="OpenSvg.Config.RectangleConfig.DrawConfig">DrawConfig</h4>
+  <div class="markdown level1 summary"><p>Styling options for the rectangle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawConfig DrawConfig { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Config.DrawConfig.html">DrawConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_NumberOfCornerPoints.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.NumberOfCornerPoints%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_NumberOfCornerPoints_" data-uid="OpenSvg.Config.RectangleConfig.NumberOfCornerPoints*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_NumberOfCornerPoints" data-uid="OpenSvg.Config.RectangleConfig.NumberOfCornerPoints">NumberOfCornerPoints</h4>
+  <div class="markdown level1 summary"><p>Number of points used to approximate curved corners, when the rectangle is drawn as
+a polygon</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumberOfCornerPoints { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Size.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Size%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_Size_" data-uid="OpenSvg.Config.RectangleConfig.Size*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_Size" data-uid="OpenSvg.Config.RectangleConfig.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Size of the rectangle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size Size { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Size.html">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L72">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_ToPolygon_" data-uid="OpenSvg.Config.RectangleConfig.ToPolygon*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_ToPolygon" data-uid="OpenSvg.Config.RectangleConfig.ToPolygon">ToPolygon()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Polygon ToPolygon()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Polygon.html">Polygon</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L45">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_ToSvgPolygon_" data-uid="OpenSvg.Config.RectangleConfig.ToSvgPolygon*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_ToSvgPolygon" data-uid="OpenSvg.Config.RectangleConfig.ToSvgPolygon">ToSvgPolygon()</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a> element from this <a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a>&quot;/&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgPolygon ToSvgPolygon()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgRect.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgRect%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L56">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_ToSvgRect_" data-uid="OpenSvg.Config.RectangleConfig.ToSvgRect*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_ToSvgRect" data-uid="OpenSvg.Config.RectangleConfig.ToSvgRect">ToSvgRect()</h4>
+  <div class="markdown level1 summary"><p>Convert to SVG Rectangle object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRectangleAsRect ToSvgRect()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgRectangleAsRect.html">SvgRectangleAsRect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Transparent_OpenSvg_Size_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Transparent(OpenSvg.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L40">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_Transparent_" data-uid="OpenSvg.Config.RectangleConfig.Transparent*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_Transparent_OpenSvg_Size_" data-uid="OpenSvg.Config.RectangleConfig.Transparent(OpenSvg.Size)">Transparent(Size)</h4>
+  <div class="markdown level1 summary"><p>Gets a transparent RectangleConfig instance.
+This is useful for creating invisible spaces between shapes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleConfig Transparent(Size size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Size.html">Size</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Size of the rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a></td>
+        <td><p>A new instance of the <a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a> with transparent <a class="xref" href="OpenSvg.Config.RectangleConfig.html#OpenSvg_Config_RectangleConfig_DrawConfig">DrawConfig</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithFillColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithFillColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L63">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_WithFillColor_" data-uid="OpenSvg.Config.RectangleConfig.WithFillColor*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_WithFillColor_SkiaSharp_SKColor_" data-uid="OpenSvg.Config.RectangleConfig.WithFillColor(SkiaSharp.SKColor)">WithFillColor(SKColor)</h4>
+  <div class="markdown level1 summary"><p>Returns a new copy of the RectangleConfig record with the specified fill color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleConfig WithFillColor(SKColor fillColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skcolor">SKColor</a></td>
+        <td><span class="parametername">fillColor</span></td>
+        <td><p>The new fill color to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a></td>
+        <td><p>A new RectangleConfig with the specified fill color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithStrokeColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithStrokeColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L70">View Source</a>
+  </span>
+  <a id="OpenSvg_Config_RectangleConfig_WithStrokeColor_" data-uid="OpenSvg.Config.RectangleConfig.WithStrokeColor*"></a>
+  <h4 id="OpenSvg_Config_RectangleConfig_WithStrokeColor_SkiaSharp_SKColor_" data-uid="OpenSvg.Config.RectangleConfig.WithStrokeColor(SkiaSharp.SKColor)">WithStrokeColor(SKColor)</h4>
+  <div class="markdown level1 summary"><p>Returns a new copy of the RectangleConfig record with the specified stroke color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleConfig WithStrokeColor(SKColor strokeColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skcolor">SKColor</a></td>
+        <td><span class="parametername">strokeColor</span></td>
+        <td><p>The new stroke color to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Config.RectangleConfig.html">RectangleConfig</a></td>
+        <td><p>A new RectangleConfig with the specified stroke color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

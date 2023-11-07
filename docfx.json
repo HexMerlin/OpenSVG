@@ -1,0 +1,48 @@
+{
+    "metadata": [
+      {
+        "src": [
+          {
+            "files": ["**/OpenSvg.csproj"],
+            "exclude": ["**/obj/**", "**/bin/**", "**/OpenSvg.ConsoleTest/**"]
+          }
+        ],
+        "dest": "api"
+      }
+    ],
+    "build": {
+      "content": [
+        {
+          "files": ["api/**.yml", "api/index.md"],
+          "src": ".",
+          "dest": "api"
+        },
+        {
+          "files": ["**/*.md", "toc.yml"],
+          "exclude": ["**/obj/**", "**/bin/**", "api/**"]
+        }
+      ],
+      "resource": [
+        {
+          "files": ["images/**"]
+        }
+      ],
+      "overwrite": [
+        {
+          "files": ["apidoc/**.md"],
+          "exclude": ["api/**"]
+        }
+      ],
+      "dest": "docs",
+      "globalMetadata": {},
+      "fileMetadata": {},
+      "template": ["default"],
+      "postProcessors": [],
+      "markdownEngineName": "markdig",
+      "noLangKeyword": false,
+      "keepFileLink": false,
+      "cleanupCacheHistory": false,
+      "disableGitFeatures": false
+    }
+  }
+  

@@ -1,10 +1,10 @@
-﻿using JetBrains.Annotations;
+﻿
 using OpenSvg.SvgNodes;
 using SkiaSharp;
 
 namespace OpenSvg.Tests.SvgNodes;
 
-[TestSubject(typeof(SvgLine))]
+
 public class SvgLineTest
 {
     [Fact]

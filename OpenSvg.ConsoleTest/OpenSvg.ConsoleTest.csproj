@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Docfx.App" Version="2.73.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\OpenSvg\OpenSvg.csproj" />
   </ItemGroup>
 

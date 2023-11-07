@@ -1,10 +1,8 @@
-﻿using JetBrains.Annotations;
-using OpenSvg.SvgNodes;
+﻿using OpenSvg.SvgNodes;
 using SkiaSharp;
 
 namespace OpenSvg.Tests.SvgNodes;
 
-[TestSubject(typeof(SvgCssStyle))]
 public class SvgCssStyleTest
 {
     [Fact]

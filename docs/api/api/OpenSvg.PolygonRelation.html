@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Enum PolygonRelation
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Enum PolygonRelation
+ ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OpenSvg.PolygonRelation">
+
+
+
+
+  <h1 id="OpenSvg_PolygonRelation" data-uid="OpenSvg.PolygonRelation" class="text-break">Enum PolygonRelation
+</h1>
+  <div class="markdown level0 summary"><p>Enumerates the types of spatial relationships between two polygons, A and B, based on the positions of their
+vertices.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a></h6>
+  <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
+  <h5 id="OpenSvg_PolygonRelation_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum PolygonRelation</code></pre>
+  </div>
+  <h5 id="OpenSvg_PolygonRelation_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    Note: Border-touching vertices are treated as "neutral" and do not by themselves determine the relationship.
+    The relationship is assessed based on the positions of the other vertices.
+</p>
+<p>
+    The relationships are symmetric, meaning:
+    <ul><li>If A is <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Inside">Inside</a> B, then B <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Cover">Cover</a> A.</li><li>If A is <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Disjoint">Disjoint</a> from B, then B is <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Disjoint">Disjoint</a> from A.</li><li>If A <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Intersect">Intersect</a> B, then B <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Intersect">Intersect</a> A.</li><li>If A is <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Equal">Equal</a> to B, then B is <a class="xref" href="OpenSvg.PolygonRelation.html#OpenSvg_PolygonRelation_Equal">Equal</a> to A.</li></ul>
+
+</div>
+  <h3 id="fields">Fields
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="OpenSvg_PolygonRelation_Cover">Cover</td>
+        <td><p>All vertices of B are within the interior of A. Any border-touching vertices are not considered.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_PolygonRelation_Disjoint">Disjoint</td>
+        <td><p>No part of A overlaps with B. Any border-touching vertices are not considered.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_PolygonRelation_Equal">Equal</td>
+        <td><p>Both polygons have the same vertices and are identical in shape and position.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_PolygonRelation_Inside">Inside</td>
+        <td><p>All vertices of A are within the interior of B. Any border-touching vertices are not considered.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_PolygonRelation_Intersect">Intersect</td>
+        <td><p>At least one vertex of A is inside the interior of B, or vice versa. Any border-touching vertices are not
+considered.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PolygonRelation.md&amp;value=---%0Auid%3A%20OpenSvg.PolygonRelation%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PolygonRelation.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
