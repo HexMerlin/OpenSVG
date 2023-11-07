@@ -37,9 +37,10 @@
     ],
     "dest": "docs",
     "globalMetadata": {
-      "appLogoPath": "logo.svg",
-      "appTitle": "OpenSVG",
-      "locale": "en-us"
+      "_appLogoPath": "logo.svg",
+      "_appTitle": "OpenSVG",
+      "_appFooter": "OpenSVG (c) Veridict AB, www.veridict.com",
+      "_enableNewTab": true
     },
     "fileMetadata": {},
     "template": [ "default", "docs_project/templates/singulinkfx" ],

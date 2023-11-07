@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		docfx.json = docfx.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenSvg.ConsoleTest", "OpenSvg.ConsoleTest\OpenSvg.ConsoleTest.csproj", "{6AA48506-33E9-4F65-9F10-51B8DEF9DAD4}"
@@ -19,7 +20,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenSvg.Tests", "OpenSvg.Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs_project", "docs_project", "{2701FF4A-0ECC-4812-B2E2-AA96B3A1AF72}"
 	ProjectSection(SolutionItems) = preProject
-		docs_project\docfx.json = docs_project\docfx.json
 		docs_project\index.md = docs_project\index.md
 		docs_project\logo.svg = docs_project\logo.svg
 	EndProjectSection
