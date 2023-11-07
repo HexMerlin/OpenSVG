@@ -13,8 +13,3 @@ OpenSVG is a [brief description of what your library does].
 ## Examples
 [Link to any examples or tutorials]
 
-## Contributing
-[Information on how to contribute to the project]
-
-## License
-[Information about the project's license]
