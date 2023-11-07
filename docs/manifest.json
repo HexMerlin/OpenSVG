@@ -4,11 +4,21 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.AbsoluteOrRatio.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.AbsoluteOrRatio.html"
+          "relative_path": "api/OpenSvg.AbsoluteOrRatio.html"
         }
       },
       "version": ""
@@ -18,7 +28,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.AbsoluteOrRatioAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.AbsoluteOrRatioAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.AbsoluteOrRatioAttr.html"
         }
       },
       "version": ""
@@ -28,7 +38,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.Attr-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.Attr-1.html"
+          "relative_path": "api/OpenSvg.Attributes.Attr-1.html"
         }
       },
       "version": ""
@@ -38,7 +48,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.ColorAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.ColorAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.ColorAttr.html"
         }
       },
       "version": ""
@@ -48,7 +58,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.DoubleAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.DoubleAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.DoubleAttr.html"
         }
       },
       "version": ""
@@ -58,7 +68,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.IAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.IAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.IAttr.html"
         }
       },
       "version": ""
@@ -68,7 +78,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.IHasElementContent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.IHasElementContent.html"
+          "relative_path": "api/OpenSvg.Attributes.IHasElementContent.html"
         }
       },
       "version": ""
@@ -78,7 +88,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.PathAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.PathAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.PathAttr.html"
         }
       },
       "version": ""
@@ -88,7 +98,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.PolygonAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.PolygonAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.PolygonAttr.html"
         }
       },
       "version": ""
@@ -98,7 +108,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.StringAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.StringAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.StringAttr.html"
         }
       },
       "version": ""
@@ -108,7 +118,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.TransformAttr.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.TransformAttr.html"
+          "relative_path": "api/OpenSvg.Attributes.TransformAttr.html"
         }
       },
       "version": ""
@@ -118,7 +128,7 @@
       "source_relative_path": "api/OpenSvg.Attributes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Attributes.html"
+          "relative_path": "api/OpenSvg.Attributes.html"
         }
       },
       "version": ""
@@ -128,7 +138,7 @@
       "source_relative_path": "api/OpenSvg.BoundingBox.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.BoundingBox.html"
+          "relative_path": "api/OpenSvg.BoundingBox.html"
         }
       },
       "version": ""
@@ -138,7 +148,7 @@
       "source_relative_path": "api/OpenSvg.CircularArc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.CircularArc.html"
+          "relative_path": "api/OpenSvg.CircularArc.html"
         }
       },
       "version": ""
@@ -148,7 +158,7 @@
       "source_relative_path": "api/OpenSvg.ColorExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.ColorExtensions.html"
+          "relative_path": "api/OpenSvg.ColorExtensions.html"
         }
       },
       "version": ""
@@ -158,7 +168,7 @@
       "source_relative_path": "api/OpenSvg.CommonTypeExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.CommonTypeExtensions.html"
+          "relative_path": "api/OpenSvg.CommonTypeExtensions.html"
         }
       },
       "version": ""
@@ -168,7 +178,7 @@
       "source_relative_path": "api/OpenSvg.Config.DrawConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Config.DrawConfig.html"
+          "relative_path": "api/OpenSvg.Config.DrawConfig.html"
         }
       },
       "version": ""
@@ -178,7 +188,7 @@
       "source_relative_path": "api/OpenSvg.Config.RectangleConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Config.RectangleConfig.html"
+          "relative_path": "api/OpenSvg.Config.RectangleConfig.html"
         }
       },
       "version": ""
@@ -188,7 +198,7 @@
       "source_relative_path": "api/OpenSvg.Config.TextConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Config.TextConfig.html"
+          "relative_path": "api/OpenSvg.Config.TextConfig.html"
         }
       },
       "version": ""
@@ -198,7 +208,7 @@
       "source_relative_path": "api/OpenSvg.Config.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Config.html"
+          "relative_path": "api/OpenSvg.Config.html"
         }
       },
       "version": ""
@@ -208,7 +218,7 @@
       "source_relative_path": "api/OpenSvg.ConvexHull.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.ConvexHull.html"
+          "relative_path": "api/OpenSvg.ConvexHull.html"
         }
       },
       "version": ""
@@ -218,7 +228,7 @@
       "source_relative_path": "api/OpenSvg.EnclosedPolygonGroup.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.EnclosedPolygonGroup.html"
+          "relative_path": "api/OpenSvg.EnclosedPolygonGroup.html"
         }
       },
       "version": ""
@@ -228,7 +238,7 @@
       "source_relative_path": "api/OpenSvg.FileIO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.FileIO.html"
+          "relative_path": "api/OpenSvg.FileIO.html"
         }
       },
       "version": ""
@@ -238,7 +248,7 @@
       "source_relative_path": "api/OpenSvg.HorizontalAlignment.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.HorizontalAlignment.html"
+          "relative_path": "api/OpenSvg.HorizontalAlignment.html"
         }
       },
       "version": ""
@@ -248,7 +258,7 @@
       "source_relative_path": "api/OpenSvg.MultiPolygon.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.MultiPolygon.html"
+          "relative_path": "api/OpenSvg.MultiPolygon.html"
         }
       },
       "version": ""
@@ -258,7 +268,7 @@
       "source_relative_path": "api/OpenSvg.Orientation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Orientation.html"
+          "relative_path": "api/OpenSvg.Orientation.html"
         }
       },
       "version": ""
@@ -268,7 +278,7 @@
       "source_relative_path": "api/OpenSvg.Point.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Point.html"
+          "relative_path": "api/OpenSvg.Point.html"
         }
       },
       "version": ""
@@ -278,7 +288,7 @@
       "source_relative_path": "api/OpenSvg.PointRelation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.PointRelation.html"
+          "relative_path": "api/OpenSvg.PointRelation.html"
         }
       },
       "version": ""
@@ -288,7 +298,7 @@
       "source_relative_path": "api/OpenSvg.Polygon.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Polygon.html"
+          "relative_path": "api/OpenSvg.Polygon.html"
         }
       },
       "version": ""
@@ -298,7 +308,7 @@
       "source_relative_path": "api/OpenSvg.PolygonRelation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.PolygonRelation.html"
+          "relative_path": "api/OpenSvg.PolygonRelation.html"
         }
       },
       "version": ""
@@ -308,7 +318,7 @@
       "source_relative_path": "api/OpenSvg.RectangleRenderMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.RectangleRenderMode.html"
+          "relative_path": "api/OpenSvg.RectangleRenderMode.html"
         }
       },
       "version": ""
@@ -318,7 +328,7 @@
       "source_relative_path": "api/OpenSvg.Size.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Size.html"
+          "relative_path": "api/OpenSvg.Size.html"
         }
       },
       "version": ""
@@ -328,7 +338,7 @@
       "source_relative_path": "api/OpenSvg.SkiaSharpExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SkiaSharpExtensions.html"
+          "relative_path": "api/OpenSvg.SkiaSharpExtensions.html"
         }
       },
       "version": ""
@@ -338,7 +348,7 @@
       "source_relative_path": "api/OpenSvg.SvgNames.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNames.html"
+          "relative_path": "api/OpenSvg.SvgNames.html"
         }
       },
       "version": ""
@@ -348,7 +358,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.ISvgElementContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.ISvgElementContainer.html"
+          "relative_path": "api/OpenSvg.SvgNodes.ISvgElementContainer.html"
         }
       },
       "version": ""
@@ -358,7 +368,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgCssStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgCssStyle.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgCssStyle.html"
         }
       },
       "version": ""
@@ -368,7 +378,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgDefs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgDefs.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgDefs.html"
         }
       },
       "version": ""
@@ -378,7 +388,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgDocument.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgDocument.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgDocument.html"
         }
       },
       "version": ""
@@ -388,7 +398,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgElement.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgElement.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgElement.html"
         }
       },
       "version": ""
@@ -398,7 +408,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgElementCollectionExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgElementCollectionExtensions.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgElementCollectionExtensions.html"
         }
       },
       "version": ""
@@ -408,7 +418,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgFont.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgFont.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgFont.html"
         }
       },
       "version": ""
@@ -418,7 +428,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgGroup.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgGroup.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgGroup.html"
         }
       },
       "version": ""
@@ -428,7 +438,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgLine.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgLine.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgLine.html"
         }
       },
       "version": ""
@@ -438,7 +448,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgNode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgNode.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgNode.html"
         }
       },
       "version": ""
@@ -448,7 +458,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgPath.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgPath.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgPath.html"
         }
       },
       "version": ""
@@ -458,7 +468,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgPolygon.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgPolygon.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgPolygon.html"
         }
       },
       "version": ""
@@ -468,7 +478,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgRectangleAsRect.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgRectangleAsRect.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgRectangleAsRect.html"
         }
       },
       "version": ""
@@ -478,7 +488,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgStyle.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgStyle.html"
         }
       },
       "version": ""
@@ -488,7 +498,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgText.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgText.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgText.html"
         }
       },
       "version": ""
@@ -498,7 +508,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgVisual.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgVisual.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgVisual.html"
         }
       },
       "version": ""
@@ -508,7 +518,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.SvgVisualContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.SvgVisualContainer.html"
+          "relative_path": "api/OpenSvg.SvgNodes.SvgVisualContainer.html"
         }
       },
       "version": ""
@@ -518,7 +528,7 @@
       "source_relative_path": "api/OpenSvg.SvgNodes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.SvgNodes.html"
+          "relative_path": "api/OpenSvg.SvgNodes.html"
         }
       },
       "version": ""
@@ -528,7 +538,7 @@
       "source_relative_path": "api/OpenSvg.TextRenderMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.TextRenderMode.html"
+          "relative_path": "api/OpenSvg.TextRenderMode.html"
         }
       },
       "version": ""
@@ -538,7 +548,7 @@
       "source_relative_path": "api/OpenSvg.Transform.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.Transform.html"
+          "relative_path": "api/OpenSvg.Transform.html"
         }
       },
       "version": ""
@@ -548,7 +558,7 @@
       "source_relative_path": "api/OpenSvg.VerticalAlignment.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.VerticalAlignment.html"
+          "relative_path": "api/OpenSvg.VerticalAlignment.html"
         }
       },
       "version": ""
@@ -558,7 +568,7 @@
       "source_relative_path": "api/OpenSvg.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/OpenSvg.html"
+          "relative_path": "api/OpenSvg.html"
         }
       },
       "version": ""
@@ -568,7 +578,7 @@
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/api/toc.html"
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""

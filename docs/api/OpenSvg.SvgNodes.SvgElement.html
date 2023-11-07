@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class SvgElement
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class SvgElement
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgElement">
+
+
+
+  <h1 id="OpenSvg_SvgNodes_SvgElement" data-uid="OpenSvg.SvgNodes.SvgElement" class="text-break">Class SvgElement
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">SvgElement</span></div>
+      <div class="level2"><a class="xref" href="OpenSvg.SvgNodes.SvgDefs.html">SvgDefs</a></div>
+      <div class="level2"><a class="xref" href="OpenSvg.SvgNodes.SvgStyle.html">SvgStyle</a></div>
+      <div class="level2"><a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a>.<a class="xref" href="OpenSvg.SvgNodes.html">SvgNodes</a></h6>
+  <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
+  <h5 id="OpenSvg_SvgNodes_SvgElement_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SvgElement : IXmlSerializable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ID.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ID%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L13">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ID_" data-uid="OpenSvg.SvgNodes.SvgElement.ID*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ID" data-uid="OpenSvg.SvgNodes.SvgElement.ID">ID</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringAttr ID { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Attributes.StringAttr.html">StringAttr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_Parent.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.Parent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L21">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_Parent_" data-uid="OpenSvg.SvgNodes.SvgElement.Parent*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_Parent" data-uid="OpenSvg.SvgNodes.SvgElement.Parent">Parent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgElement? Parent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_Root.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.Root%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L19">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_Root_" data-uid="OpenSvg.SvgNodes.SvgElement.Root*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_Root" data-uid="OpenSvg.SvgNodes.SvgElement.Root">Root</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgElement Root { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_RootDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.RootDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L15">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_RootDocument_" data-uid="OpenSvg.SvgNodes.SvgElement.RootDocument*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_RootDocument" data-uid="OpenSvg.SvgNodes.SvgElement.RootDocument">RootDocument</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgDocument RootDocument { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgDocument.html">SvgDocument</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L11">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_SvgName_" data-uid="OpenSvg.SvgNodes.SvgElement.SvgName*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_SvgName" data-uid="OpenSvg.SvgNodes.SvgElement.SvgName">SvgName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string SvgName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ViewPort.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ViewPort%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L54">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ViewPort_" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPort*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ViewPort" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPort">ViewPort</h4>
+  <div class="markdown level1 summary"><p>Gets the current viewport for the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size ViewPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Size.html">Size</a></td>
+        <td><p>The absolute value for the viewport size, width and height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_SvgNodes_SvgElement_ViewPort_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul><li>If the element is not an SvgDocument, the viewport will be equal to its closest SvgDocument ancestor.</li><li>
+        If the closest SvgDocument ancestor has a relative defined size (e.g., <code>40%</code>), the viewport will be
+        calculated by traversing upwards, accumulating ratios until an ancestor with an absolute size is found.
+    </li><li>If an SvgDocument has no size set, it is equivalent to having a ratio of 1 (<code>100%</code>).</li><li>If no topmost SvgDocument exists, or the topmost SvgDocument has a ratio or no size set, a default container size is assumed</li></ul>
+</div>
+  <h5 id="OpenSvg_SvgNodes_SvgElement_ViewPort_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ViewPortWidth">ViewPortWidth</a></div>
+      <div><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ViewPortHeight">ViewPortHeight</a></div>
+      <div><a class="xref" href="OpenSvg.Constants.html#OpenSvg.Constants.DefaultContainerWidth">DefaultContainerWidth</a></div>
+      <div><a class="xref" href="OpenSvg.Constants.html#OpenSvg.Constants.DefaultContainerHeight">DefaultContainerHeight</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ViewPortHeight.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ViewPortHeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L59">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ViewPortHeight_" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPortHeight*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ViewPortHeight" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPortHeight">ViewPortHeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double ViewPortHeight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ViewPortWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ViewPortWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L57">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ViewPortWidth_" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPortWidth*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ViewPortWidth" data-uid="OpenSvg.SvgNodes.SvgElement.ViewPortWidth">ViewPortWidth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double ViewPortWidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_Attributes.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.Attributes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L164">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_Attributes_" data-uid="OpenSvg.SvgNodes.SvgElement.Attributes*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_Attributes" data-uid="OpenSvg.SvgNodes.SvgElement.Attributes">Attributes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IAttr&gt; Attributes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement%2CSystem.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L150">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_" data-uid="OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_" data-uid="OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)">CompareSelfAndDescendants(SvgElement, double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other, double doublePrecision = 1E-06)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">doublePrecision</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.isequal">IsEqual</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.errormessage">ErrorMessage</a>)</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_GetSchema.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.GetSchema%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L61">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_GetSchema_" data-uid="OpenSvg.SvgNodes.SvgElement.GetSchema*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_GetSchema" data-uid="OpenSvg.SvgNodes.SvgElement.GetSchema">GetSchema()</h4>
+  <div class="markdown level1 summary"><p>This method is reserved and should not be used. When implementing the <code>IXmlSerializable</code> interface, you should return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> (<code>Nothing</code> in Visual Basic) from this method, and instead, if specifying a custom schema is required, apply the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.xmlschemaproviderattribute">XmlSchemaProviderAttribute</a> to the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlSchema? GetSchema()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.schema.xmlschema">XmlSchema</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.schema.xmlschema">XmlSchema</a> that describes the XML representation of the object that is produced by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable.writexml">WriteXml(XmlWriter)</a> method and consumed by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable.readxml">ReadXml(XmlReader)</a> method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ReadXml_System_Xml_XmlReader_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ReadXml(System.Xml.XmlReader)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L82">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ReadXml_" data-uid="OpenSvg.SvgNodes.SvgElement.ReadXml*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ReadXml_System_Xml_XmlReader_" data-uid="OpenSvg.SvgNodes.SvgElement.ReadXml(System.Xml.XmlReader)">ReadXml(XmlReader)</h4>
+  <div class="markdown level1 summary"><p>Generates an object from its XML representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReadXml(XmlReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a> stream from which the object is deserialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ToSvgDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ToSvgDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L142">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ToSvgDocument_" data-uid="OpenSvg.SvgNodes.SvgElement.ToSvgDocument*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ToSvgDocument" data-uid="OpenSvg.SvgNodes.SvgElement.ToSvgDocument">ToSvgDocument()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgDocument ToSvgDocument()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgDocument.html">SvgDocument</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_ToSvgGroup.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.ToSvgGroup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L134">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_ToSvgGroup_" data-uid="OpenSvg.SvgNodes.SvgElement.ToSvgGroup*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_ToSvgGroup" data-uid="OpenSvg.SvgNodes.SvgElement.ToSvgGroup">ToSvgGroup()</h4>
+  <div class="markdown level1 summary"><p>Encapsulates the current <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a> in an <a class="xref" href="OpenSvg.SvgNodes.SvgGroup.html">SvgGroup</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgGroup ToSvgGroup()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.SvgNodes.SvgGroup.html">SvgGroup</a></td>
+        <td><p>An instance of <a class="xref" href="OpenSvg.SvgNodes.SvgGroup.html">SvgGroup</a> if the current object is an <a class="xref" href="OpenSvg.SvgNodes.SvgGroup.html">SvgGroup</a> or a new
+<a class="xref" href="OpenSvg.SvgNodes.SvgGroup.html">SvgGroup</a> object created from the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement_WriteXml_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement.WriteXml(System.Xml.XmlWriter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L64">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgElement_WriteXml_" data-uid="OpenSvg.SvgNodes.SvgElement.WriteXml*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgElement_WriteXml_System_Xml_XmlWriter_" data-uid="OpenSvg.SvgNodes.SvgElement.WriteXml(System.Xml.XmlWriter)">WriteXml(XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Converts an object into its XML representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteXml(XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a> stream to which the object is serialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgElement.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgElement%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgElement.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
