@@ -4,16 +4,6 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.AbsoluteOrRatio.yml",
       "output": {
@@ -584,8 +574,28 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "docs_project/images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs_project/images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "source_relative_path": "docs_project/index.md",
       "output": {
         ".html": {
           "relative_path": "index.html"

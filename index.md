@@ -1,2 +1,0 @@
-
-[View the OpenSvg API Documentation](api/OpenSvg.yml)

@@ -1,47 +1,53 @@
 {
-    "metadata": [
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "**/OpenSvg.csproj" ],
+          "exclude": [ "**/obj/**", "**/bin/**", "**/OpenSvg.ConsoleTest/**" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
       {
-        "src": [
-          {
-            "files": ["**/OpenSvg.csproj"],
-            "exclude": ["**/obj/**", "**/bin/**", "**/OpenSvg.ConsoleTest/**"]
-          }
-        ],
-        "dest": "api"
+        "files": [ "api/**.yml", "api/index.md" ],
+        "dest": "."
+      },
+      {
+        "files": [ "**/*.md", "toc.yml" ],
+        "src": "docs_project"
       }
     ],
-    "build": {
-      "content": [
-        {
-          "files": ["api/**.yml", "api/index.md"],
-          "src": ".",
-          "dest": "."
-        },
-        {
-          "files": ["**/*.md", "toc.yml"],
-          "exclude": ["**/obj/**", "**/bin/**", "api/**"]
-        }
-      ],
-      "resource": [
-        {
-          "files": ["images/**"]
-        }
-      ],
-      "overwrite": [
-        {
-          "files": ["apidoc/**.md"],
-          "exclude": ["api/**"]
-        }
-      ],
-      "dest": "docs",
-      "globalMetadata": {},
-      "fileMetadata": {},
-      "template": ["default", "templates/singulinkfx"],
-      "postProcessors": [],
-      "markdownEngineName": "markdig",
-      "noLangKeyword": false,
-      "keepFileLink": false,
-      "cleanupCacheHistory": false,
-      "disableGitFeatures": false
-    }
+    "resource": [
+      {
+        "files": [ "**" ],
+        "src": "docs_project/images",
+        "dest": "."
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [ "*.md" ],
+        "src": "api",
+        "dest": "."
+      }
+    ],
+    "dest": "docs",
+    "globalMetadata": {
+      "appLogoPath": "logo.svg",
+      "appTitle": "OpenSVG",
+      "locale": "en-us"
+    },
+    "fileMetadata": {},
+    "template": [ "default", "docs_project/templates/singulinkfx" ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
   }
+}
