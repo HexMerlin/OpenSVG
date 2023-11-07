@@ -2,6 +2,8 @@
 
 OpenSVG is a [brief description of what your library does].
 
+[View the OpenSvg API Documentation](api/OpenSvg.yml)
+
 ## Getting Started
 [Include a brief introduction about how to get started with your project]
 
