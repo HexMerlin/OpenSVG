@@ -19,8 +19,8 @@ public class SvgFileGeneratorTests
         actualSvgDocument.Save(actualFilePath);
 
         // Assert
-        (bool equal, string message) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);
-        Assert.True(equal, message);
+        (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
+        Assert.True(equal, diffMessage);
 
         (bool isEqual, string errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);

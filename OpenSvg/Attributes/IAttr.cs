@@ -1,6 +1,6 @@
 ﻿namespace OpenSvg.Attributes;
 
-public interface IAttr
+public interface IAttr : IEquatable<IAttr>
 {
     public string Name { get; }
 
@@ -8,4 +8,5 @@ public interface IAttr
     public bool HasDefaultValue { get; }
     public void Set(string xmlString);
     string ToXmlString();
+
 }

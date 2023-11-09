@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "C:/Dev/HexMerlin/OpenSvg",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -569,6 +568,9 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -604,7 +606,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

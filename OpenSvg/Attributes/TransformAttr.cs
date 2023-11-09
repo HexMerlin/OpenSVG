@@ -12,7 +12,6 @@ public class TransformAttr : Attr<Transform>
 
     protected override string Serialize(Transform value) => value.ToXmlString();
 
-
     protected override Transform Deserialize(string xmlString)
     {
         Transform result = Transform.Identity;
@@ -60,9 +59,9 @@ public class TransformAttr : Attr<Transform>
         return result;
     }
 
-    public override bool Equals(Attr<Transform>? other)
-    {
-        if (other is null) return false;
-        return this.DefaultValue.Equals(other.DefaultValue) && Get().Equals(other.Get());
-    }
+    //public override bool Equals(Attr<Transform>? other)
+    //{
+    //    if (other is null) return false;
+    //    return this.DefaultValue.Equals(other.DefaultValue) && Get().Equals(other.Get());
+    //}
 }

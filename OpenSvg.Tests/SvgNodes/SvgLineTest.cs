@@ -31,8 +31,11 @@ public class SvgLineTest
         var line1 = new SvgLine();
         var line2 = new SvgLine();
 
-        (bool equal, string message) = line1.CompareSelfAndDescendants(line2);
-        Assert.True(equal, message);
+        (bool equal, string diffMessage) = line1.InformedEquals(line2);
+        Assert.True(equal, diffMessage);
+
+        Assert.Equal(line1, line2);
+
     }
 
     [Fact]
@@ -44,43 +47,10 @@ public class SvgLineTest
         line2.X1.Set(1000);
 
         //Act
-        (bool equal, string message) = line1.CompareSelfAndDescendants(line2);
-
+       
         //Assert
-        Assert.Equal("X1: 0 != 1000", message);
-        Assert.False(equal, message);
+        Assert.NotEqual(line1, line2);
+
     }
 
-
-    //[Fact]
-    //public void SerializeToXml_XmlContainsEmptyValuesForDefaultProperties()
-    //{
-    //    SvgLine line = new SvgLine();
-
-    //}   
-
-    //[Fact]
-    //public void SerializeToXml_XmlContainsEmptyValuesForDefaultProperties()
-    //{
-    //    SvgLine line = new SvgLine();
-    //    line.FillColor.Set(SKColors.Red);
-
-    //    XmlFormat xmlFormat = XmlFormat.Serialize(line);
-    //    XElement xElement = xmlFormat.XElement;
-    //    var elements = xElement.Elements();
-
-    //    XElement? fillElementChild = xElement.Element(SvgNames.Fill);
-    //    Assert.NotNull(fillElementChild);
-    //    Assert.Equal("black", fillElementChild!.Value);
-
-    //    Console.WriteLine(xElement);
-    //    //string xml = xmlFormat.ToString();
-    //    //Assert.Contains("X1=\"0\"", xml);
-    //    //Assert.Contains("X2=\"0\"", xml);
-    //    //Assert.Contains("Y1=\"0\"", xml);
-    //    //Assert.Contains("Y2=\"0\"", xml);
-    //    //Assert.Contains("Stroke=\"none\"", xml);
-    //    //Assert.Contains("StrokeWidth=\"1\"", xml);
-    //    //Assert.Contains("Fill=\"black\"", xml);
-    //}
 }

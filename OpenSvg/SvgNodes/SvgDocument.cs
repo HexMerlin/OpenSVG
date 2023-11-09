@@ -106,19 +106,19 @@ public class SvgDocument : SvgVisualContainer
         this.DefinedViewPortHeight.Set(BoundingBox.Size.Height);
     }
 
-    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-        double precision = Constants.DoublePrecision)
-    {
-        if (ReferenceEquals(this, other)) return (true, "Same reference");
-        (bool equal, string message) = base.CompareSelfAndDescendants(other);
-        if (!equal)
-            return (equal, message);
-        var sameType = (SvgDocument)other;
-        if (this.DefinedViewPortWidth != sameType.DefinedViewPortWidth)
-            return (false, $"DefinedViewPortWidth: {this.DefinedViewPortWidth} != {sameType.DefinedViewPortWidth}");
+    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
+    //    double precision = Constants.DoublePrecision)
+    //{
+    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
+    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
+    //    if (!equal)
+    //        return (equal, message);
+    //    var sameType = (SvgDocument)other;
+    //    if (this.DefinedViewPortWidth != sameType.DefinedViewPortWidth)
+    //        return (false, $"DefinedViewPortWidth: {this.DefinedViewPortWidth} != {sameType.DefinedViewPortWidth}");
 
-        if (this.DefinedViewPortHeight != sameType.DefinedViewPortHeight)
-            return (false, $"DefinedViewPortHeight: {this.DefinedViewPortHeight} != {sameType.DefinedViewPortHeight}");
-        return (true, "Equal");
-    }
+    //    if (this.DefinedViewPortHeight != sameType.DefinedViewPortHeight)
+    //        return (false, $"DefinedViewPortHeight: {this.DefinedViewPortHeight} != {sameType.DefinedViewPortHeight}");
+    //    return (true, "Equal");
+    //}
 }

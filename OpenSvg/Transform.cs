@@ -14,8 +14,11 @@ public readonly struct Transform : IEquatable<Transform>
     /// </summary>
     public static Transform Identity => new(Matrix3x2.Identity);
 
-    private Transform(Matrix3x2 matrix) => this.Matrix = matrix;
-
+    private Transform(Matrix3x2 matrix) 
+    {
+        static float R(float value) => (float)Math.Round(value, Constants.DoubleDecimalPrecision);
+        Matrix = new Matrix3x2(R(matrix.M11), R(matrix.M12), R(matrix.M21), R(matrix.M22), R(matrix.M31), R(matrix.M32));
+    }
 
     /// <summary>
     ///     Gets the translation components of the transform.
@@ -89,16 +92,11 @@ public readonly struct Transform : IEquatable<Transform>
     private static float ToRad(double degrees) => (float)(Math.PI * degrees / 180.0);
 
 
-    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.Translation.X.ToXmlString()} {this.Matrix.Translation.Y.ToXmlString()})";
+    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";
 
     public override string ToString() => ToXmlString();
 
-    public bool Equals(Transform other) => this.Matrix.M11.RobustEquals(other.Matrix.M11) &&
-               this.Matrix.M12.RobustEquals(other.Matrix.M12) &&
-               this.Matrix.M21.RobustEquals(other.Matrix.M21) &&
-               this.Matrix.M22.RobustEquals(other.Matrix.M22) &&
-               this.Matrix.M31.RobustEquals(other.Matrix.M31) &&
-               this.Matrix.M32.RobustEquals(other.Matrix.M32);
+    public bool Equals(Transform other) => this.Matrix.Equals(other.Matrix);
 
     public override bool Equals(object? obj) => obj is Transform transform && Equals(transform);
 

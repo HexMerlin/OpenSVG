@@ -10,9 +10,9 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public sealed partial class SvgPath : SvgVisual, IDisposable
 {
-    private static SKPath ConvertTextToSkPath(TextConfig textConfig) => ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
+    private static Path ConvertTextToSkPath(TextConfig textConfig) => ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
 
-    private static SKPath ConvertTextToSkPath(string text, SKTypeface typeFace, float fontSize)
+    private static Path ConvertTextToSkPath(string text, SKTypeface typeFace, float fontSize)
     {
         using var paint = new SKPaint
         {
@@ -42,7 +42,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
         }
 
         NormalizeToOrigin(path);
-        return path;
+        return new Path(path);
     }
 
     private static void NormalizeToOrigin(SKPath path)

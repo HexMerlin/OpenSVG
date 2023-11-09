@@ -6,11 +6,11 @@ using System.Xml.Serialization;
 
 namespace OpenSvg.SvgNodes;
 
-public abstract class SvgElement : IXmlSerializable
+public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
 {
     public abstract string SvgName { get; }
 
-    public StringAttr ID { get; set; } = new(SvgNames.ID, "", false);
+    public readonly StringAttr ID = new(SvgNames.ID, "", false);
 
     public SvgDocument RootDocument => Root as SvgDocument ??
                                        throw new InvalidOperationException(
@@ -147,18 +147,7 @@ public abstract class SvgElement : IXmlSerializable
         return newSvgSvgDocument;
     }
 
-    public virtual (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-        double doublePrecision = Constants.DoublePrecision)
-    {
-        if (ReferenceEquals(this, other))
-            return (true, "Same reference");
-        if (GetType() != other.GetType())
-            return (false, $"Type: {GetType()} != {other.GetType()}");
-        if (ID != other.ID)
-            return (false, $"ID: {ID} != {other.ID}");
 
-        return (true, "Equal");
-    }
 
 
     public IEnumerable<IAttr> Attributes() => GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
@@ -176,4 +165,64 @@ public abstract class SvgElement : IXmlSerializable
         SvgNames.Style => new SvgCssStyle(),
         _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")
     };
+    public bool Equals(SvgElement? other)
+    {
+        if (other is null) return false;
+        if (ReferenceEquals(this, other)) return true;
+        if (GetType() != other.GetType()) return false;
+        if (! Attributes().SequenceEqual(other.Attributes()) ) return false;
+        if (this is IHasElementContent hasElementContent)
+            if (hasElementContent.Content != ((IHasElementContent) other).Content) return false;
+        if (this is ISvgElementContainer svgElementContainer)
+            if (!svgElementContainer.Children().SequenceEqual(((ISvgElementContainer) other).Children())) return false;
+        return true;
+    }
+
+    public override bool Equals(object? obj) => Equals(obj as SvgElement);
+
+    public (bool equal, string diffMessage) InformedEquals(SvgElement? other)
+    {
+        string Descr = $"Element {SvgName}:";
+
+        if (other is null) return (false, $"{Descr} other is null");
+        if (ReferenceEquals(this, other)) return (true, "same reference");
+        if (GetType() != other.GetType()) return (false, $"{Descr} {GetType()} != {other.GetType()}");
+        IAttr[] attributes1 = Attributes().ToArray();
+        IAttr[] attributes2 = other.Attributes().ToArray();
+        if (attributes1.Length != attributes2.Length) return (false, $"{Descr} Attribute count: {attributes1.Length} != {attributes2.Length}");
+        for (int i = 0; i < attributes1.Length; i++)
+        {
+            IAttr a1 = attributes1[i];
+            IAttr a2 = attributes2[i];
+           
+            if (a1.Name != a2.Name) return (false, $"{Descr} Attribute {i+1}: {a1.Name} != {a2.Name}");
+            if (!a1.Equals(a2)) 
+                return (false, $"{Descr} Attribute {a1.Name}:\n{a1.ToXmlString()} !=\n{a2.ToXmlString()}"); 
+        }
+
+        if (this is IHasElementContent hasElementContent && hasElementContent.Content != ((IHasElementContent)other).Content)
+           return (false, $"{Descr} Content: {hasElementContent.Content} != {((IHasElementContent)other).Content}");
+        if (this is ISvgElementContainer svgElementContainer)
+        {
+            var c1 = svgElementContainer.Children().ToArray();
+            var c2 = ((ISvgElementContainer)other).Children().ToArray();
+            if (c1.Length != c2.Length) return (false, $"{Descr} Child count: {c1.Length} != {c2.Length}");
+            for (int i = 0; i < c1.Length; i++)
+            {
+                var (equal, diffMessage) = c1[i].InformedEquals(c2[i]);
+                if (!equal) return (false, diffMessage);
+            }
+
+        }
+        return (true, "equal");
+    }
+
+    
+    public static bool operator ==(SvgElement left, SvgElement right) => left.Equals(right);
+
+    public static bool operator !=(SvgElement? left, SvgElement? right) => !left.Equals(right);
+    public override int GetHashCode() => HashCode.Combine(SvgName, ID.Get());
+
+   
+
 }

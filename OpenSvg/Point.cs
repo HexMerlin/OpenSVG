@@ -5,8 +5,18 @@ namespace OpenSvg;
 /// <summary>
 ///     Represents a point in a pixel coordinate system. The origin (0, 0) is at the top-left corner
 /// </summary>
-public readonly record struct Point(double X, double Y) : IComparable<Point>
+public readonly struct Point : IComparable<Point>, IEquatable<Point>
 {
+    public double X { get; }
+
+    public double Y { get; }
+
+    public Point(double x, double y)
+    {
+        this.X = x.Round();
+        this.Y = y.Round();
+    }
+
     public Point(Vector2 vector) : this(vector.X, vector.Y)
     {
     }
@@ -60,6 +70,7 @@ public readonly record struct Point(double X, double Y) : IComparable<Point>
         return Math.Abs(crossProduct) <= Tolerance;
     }
 
+    public readonly bool Equals(Point other) => X.Equals(other.X) && Y.Equals(other.Y);
 
     public static implicit operator Point((double x, double y) tuple) => new(tuple.x, tuple.y);
 
@@ -70,4 +81,20 @@ public readonly record struct Point(double X, double Y) : IComparable<Point>
     /// </summary>
     /// <returns>A string representation of this object</returns>
     public override string ToString() => $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
+
+    public override bool Equals(object obj) => obj is Point other && Equals(other);
+
+    public override int GetHashCode() => HashCode.Combine(X, Y);
+
+    public static bool operator ==(Point left, Point right) => left.Equals(right);
+
+    public static bool operator !=(Point left, Point right) => !(left == right);
+
+    public static bool operator <(Point left, Point right) => left.CompareTo(right) < 0;
+
+    public static bool operator <=(Point left, Point right) => left.CompareTo(right) <= 0;
+
+    public static bool operator >(Point left, Point right) => left.CompareTo(right) > 0;
+
+    public static bool operator >=(Point left, Point right) => left.CompareTo(right) >= 0;
 }

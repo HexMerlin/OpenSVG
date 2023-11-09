@@ -1,6 +1,7 @@
 ﻿namespace OpenSvg.Attributes;
 
-public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
+
+public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull, IEquatable<T>
 {
     public readonly T DefaultValue;
 
@@ -21,20 +22,31 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
     public void Set(string xmlString) => Set(Deserialize(xmlString));
 
     public bool HasDefaultValue =>
-        !IsConstant &&
-        Serialize(this.DefaultValue) ==
-        Serialize(this.val); //Constant attributes should always be serialized, and therefore this property returns false for them
+        !IsConstant && ValueEquals(DefaultValue); //Constant attributes should always be serialized, and therefore this property returns false for them
 
-    public string ToXmlString() => Serialize(this.val);
+    public string ToXmlString() => Serialize(Get());
 
-    public virtual bool Equals(Attr<T>? other)
+    protected virtual bool DefaultEquals(T value) => this.DefaultValue.Equals(value);
+
+    protected virtual bool ValueEquals(T value) => Get().Equals(value);
+
+    public bool Equals(Attr<T>? other)
     {
-        if (other is null) return false;
-        if (ReferenceEquals(this, other)) return true;
-        if (GetType() != other.GetType()) return false;
-        if (IsConstant != other.IsConstant) return false;
-        if (Serialize(this.DefaultValue) != other.Serialize(other.DefaultValue)) return false;
-        return Serialize(this.val) == other.Serialize(other.val);
+        if (other is null) 
+            return false;
+        if (ReferenceEquals(this, other)) 
+            return true;
+        if (GetType() != other.GetType()) 
+            return false;
+        if (IsConstant != other.IsConstant) 
+            return false;
+        if (Name != other.Name) 
+            return false;
+        if (!DefaultEquals(other.DefaultValue))
+            return false;
+        if(!ValueEquals(other.Get()))
+            return false;
+        return true;
     }
 
     public void Set(T value)
@@ -50,11 +62,12 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull
 
     public override string ToString() => ToXmlString();
 
-    public override bool Equals(object? obj) => Equals(obj as Attr<T>);
+    public bool Equals(IAttr? other)
+        => Equals(other as Attr<T>);
 
     public override int GetHashCode() => this.DefaultValue.GetHashCode();
 
-    public static bool operator ==(Attr<T>? left, Attr<T>? right) => Equals(left, right);
+    public static bool operator ==(Attr<T> left, Attr<T> right) => left.Equals(right);
 
-    public static bool operator !=(Attr<T>? left, Attr<T>? right) => !Equals(left, right);
+    public static bool operator !=(Attr<T> left, Attr<T> right) => !left.Equals(right);
 }

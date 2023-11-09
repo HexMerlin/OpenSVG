@@ -1,5 +1,7 @@
 ﻿namespace OpenSvg.Tests;
 
+using Path = System.IO.Path;
+
 public enum FileCategory
 {
     Expected,

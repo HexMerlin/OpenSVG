@@ -18,24 +18,24 @@ public class SvgLine : SvgVisual
 
     public Point P2 => new(this.X2.Get(), this.Y2.Get());
 
-    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-        double doublePrecision = Constants.DoublePrecision)
-    {
-        if (ReferenceEquals(this, other)) return (true, "Same reference");
-        (bool equal, string message) = base.CompareSelfAndDescendants(other);
-        if (!equal)
-            return (equal, message);
-        var sameType = (SvgLine)other;
-        if (this.X1 != sameType.X1)
-            return (false, $"X1: {this.X1} != {sameType.X1}");
-        if (this.Y1 != sameType.Y1)
-            return (false, $"Y1: {this.Y1} != {sameType.Y1}");
-        if (this.X2 != sameType.X2)
-            return (false, $"X2: {this.X2} != {sameType.X2}");
-        if (this.Y2 != sameType.Y2)
-            return (false, $"Y2: {this.Y2} != {sameType.Y2}");
-        return (true, "Equal");
-    }
+    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
+    //    double doublePrecision = Constants.DoublePrecision)
+    //{
+    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
+    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
+    //    if (!equal)
+    //        return (equal, message);
+    //    var sameType = (SvgLine)other;
+    //    if (this.X1 != sameType.X1)
+    //        return (false, $"X1: {this.X1} != {sameType.X1}");
+    //    if (this.Y1 != sameType.Y1)
+    //        return (false, $"Y1: {this.Y1} != {sameType.Y1}");
+    //    if (this.X2 != sameType.X2)
+    //        return (false, $"X2: {this.X2} != {sameType.X2}");
+    //    if (this.Y2 != sameType.Y2)
+    //        return (false, $"Y2: {this.Y2} != {sameType.Y2}");
+    //    return (true, "Equal");
+    //}
 
     protected override ConvexHull ComputeConvexHull() => new(new[] { P1, P2 });
 }

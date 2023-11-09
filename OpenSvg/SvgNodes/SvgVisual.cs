@@ -113,22 +113,4 @@ public abstract class SvgVisual : SvgElement
         this.Transform.ComposeWith(OpenSvg.Transform.CreateTranslation(dx, dy));
     }
 
-    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-        double doublePrecision = Constants.DoublePrecision)
-    {
-        if (ReferenceEquals(this, other)) return (true, "Same reference");
-        (bool equal, string message) = base.CompareSelfAndDescendants(other);
-        if (!equal)
-            return (equal, message);
-        var sameType = (SvgVisual)other;
-        if (this.Transform != sameType.Transform)
-            return (false, $"Transform: {this.Transform} != {sameType.Transform}");
-        if (this.FillColor != sameType.FillColor)
-            return (false, $"FillColor: {this.FillColor} != {sameType.FillColor}");
-        if (this.StrokeColor != sameType.StrokeColor)
-            return (false, $"StrokeColor: {this.StrokeColor} != {sameType.StrokeColor}");
-        if (this.StrokeWidth != sameType.StrokeWidth)
-            return (false, $"StrokeWidth: {this.StrokeWidth} != {sameType.StrokeWidth}");
-        return (true, "Equal");
-    }
 }

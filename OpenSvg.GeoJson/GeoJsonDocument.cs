@@ -21,6 +21,8 @@ public class GeoJsonDocument
     /// </summary>
     public const bool ErrorOnUnsupportedElement = true;
 
+    
+
     private readonly FeatureCollection featureCollection;
 
     private readonly PointToCoordinateConverter converter;
@@ -43,7 +45,7 @@ public class GeoJsonDocument
     /// In all other cases, you can probably safely skip rounding.
     /// </param>
 
-    public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int coordinateRoundToDecimals = -1)
+    public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int segmentCountForCurveApproximation = 10, int coordinateRoundToDecimals = -1)
     {
         Size svgSize = svgDocument.BoundingBox.Size;
 
@@ -51,7 +53,7 @@ public class GeoJsonDocument
 
         this.featureCollection = new FeatureCollection();
 
-        ParseSvgShape(svgDocument, Transform.Identity);
+        ParseSvgShape(svgDocument, Transform.Identity, segmentCountForCurveApproximation);
     }
 
     private static AttributesTable GetDrawConfigAttributes(SvgVisual svgVisual)
@@ -84,7 +86,7 @@ public class GeoJsonDocument
         return new NetTopologySuite.Geometries.Coordinate(coord.Long, coord.Lat);
     }
 
-    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform)
+    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform, int segmentCountForCurveApproximation)
     {
         Transform composedTransform = svgElement is SvgVisual svgVisual ? parentTransform.ComposeWith(svgVisual.Transform.Get()) : parentTransform;
 
@@ -92,7 +94,7 @@ public class GeoJsonDocument
         {
             case SvgVisualContainer parent:
                 foreach (SvgElement child in parent.ChildElements)
-                    ParseSvgShape(child, composedTransform);
+                    ParseSvgShape(child, composedTransform, segmentCountForCurveApproximation);
                 break;
 
             case SvgPolygon svgPolygon:
@@ -104,7 +106,7 @@ public class GeoJsonDocument
 
             case SvgPath svgPath:
                 {
-                    featureCollection.Add(ConvertSvgPathToFeature(svgPath, composedTransform));
+                    featureCollection.Add(ConvertSvgPathToFeature(svgPath, composedTransform, segmentCountForCurveApproximation));
                     break;
                 }
             case SvgLine svgLine:
@@ -154,9 +156,9 @@ public class GeoJsonDocument
     /// <param name="svgPath">The SvgPath to convert.</param>
     /// <param name="transform">The transformation object for the SvgPath.</param>
     /// <returns>The resulting GeoJSON feature.</returns>
-    public Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform)
+    private Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform, int segmentCountForCurveApproximation)
     {
-        MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon();
+        MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon(segmentCountForCurveApproximation);
 
         List<NetTopologySuite.Geometries.Polygon> nativePolygons = new();
 

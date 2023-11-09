@@ -2,13 +2,13 @@
 
 namespace OpenSvg.Attributes;
 
-public class PathAttr : Attr<SKPath>
+public class PathAttr : Attr<Path>
 {
-    public PathAttr() : base(SvgNames.D, new SKPath(), false)
+    public PathAttr() : base(SvgNames.D, new Path(), false)
     {
     }
 
-    protected override SKPath Deserialize(string xmlString) => SKPath.ParseSvgPathData(xmlString);
+    protected override Path Deserialize(string xmlString) => Path.FromXmlString(xmlString);
 
-    protected override string Serialize(SKPath value) => value.ToSvgPathData();
+    protected override string Serialize(Path value) => value.ToXmlString();
 }

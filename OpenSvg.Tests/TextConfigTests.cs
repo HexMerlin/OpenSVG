@@ -79,13 +79,13 @@ public class TextConfigTests
         Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth.Get());
         Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight.Get());
 
-        (bool isEqual, string? errorMessage) = expectedSvgPath.CompareSelfAndDescendants(actualSvgPath);
-        Assert.True(isEqual, errorMessage);
+        (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
+        Assert.True(equal, diffMessage);
 
-        (isEqual, errorMessage) = expectedSvgDocument.CompareSelfAndDescendants(actualSvgDocument);
-        Assert.True(isEqual, errorMessage);
+        Assert.Equal(expectedSvgPath, actualSvgPath);
+        Assert.Equal(expectedSvgDocument, actualSvgDocument);
 
-        (isEqual, errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
+        (var isEqual, var errorMessage) = FileIO.BinaryFileCompare(expectedFilePath, actualFilePath);
         Assert.True(isEqual, errorMessage);
     }
 }

@@ -6,5 +6,5 @@ internal static class Constants
 
     internal const double DefaultContainerHeight = 1000;
 
-    internal const double DoublePrecision = 0.000001d;
+    internal const int DoubleDecimalPrecision = 4;
 }

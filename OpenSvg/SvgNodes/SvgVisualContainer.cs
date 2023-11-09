@@ -57,23 +57,23 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
 
     protected override ConvexHull ComputeConvexHull() => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
 
-    public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-        double doublePrecision = Constants.DoublePrecision)
-    {
-        if (ReferenceEquals(this, other)) return (true, "Same reference");
-        (bool equal, string message) = base.CompareSelfAndDescendants(other);
-        if (!equal)
-            return (equal, message);
-        var sameType = (SvgVisualContainer)other;
-        if (ChildElements.Count != sameType.ChildElements.Count)
-            return (false, $"ChildElements count: {ChildElements.Count} != {sameType.ChildElements.Count}");
-        for (int i = 0; i < ChildElements.Count; i++)
-        {
-            (equal, message) = ChildElements[i].CompareSelfAndDescendants(sameType.ChildElements[i]);
-            if (!equal)
-                return (false, $"ChildElements[{i}]: {message}");
-        }
+    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
+    //    double doublePrecision = Constants.DoublePrecision)
+    //{
+    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
+    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
+    //    if (!equal)
+    //        return (equal, message);
+    //    var sameType = (SvgVisualContainer)other;
+    //    if (ChildElements.Count != sameType.ChildElements.Count)
+    //        return (false, $"ChildElements count: {ChildElements.Count} != {sameType.ChildElements.Count}");
+    //    for (int i = 0; i < ChildElements.Count; i++)
+    //    {
+    //        (equal, message) = ChildElements[i].CompareSelfAndDescendants(sameType.ChildElements[i]);
+    //        if (!equal)
+    //            return (false, $"ChildElements[{i}]: {message}");
+    //    }
 
-        return (true, "Equal");
-    }
+    //    return (true, "Equal");
+    //}
 }

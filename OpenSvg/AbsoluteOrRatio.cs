@@ -8,7 +8,7 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
 
     public AbsoluteOrRatio(double value, bool isAbsolute)
     {
-        this.Value = value;
+        this.Value = value.Round();
         this.IsAbsolute = isAbsolute;
     }
 
@@ -22,7 +22,7 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     public static implicit operator AbsoluteOrRatio(double value) => Absolute(value);
 
 
-    public bool Equals(AbsoluteOrRatio other) => this.Value.RobustEquals(other.Value) && this.IsAbsolute == other.IsAbsolute;
+    public bool Equals(AbsoluteOrRatio other) => this.Value.Equals(other.Value) && this.IsAbsolute == other.IsAbsolute;
 
     public override bool Equals(object? obj) => obj is AbsoluteOrRatio other && Equals(other);
 

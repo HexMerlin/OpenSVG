@@ -15,4 +15,5 @@ public class AbsoluteOrRatioAttr : Attr<AbsoluteOrRatio>
             ? AbsoluteOrRatio.Ratio(xmlString[..^1].ToDouble() / 100d)
             : AbsoluteOrRatio.Absolute(xmlString.ToDouble());
     }
+
 }

@@ -9,7 +9,9 @@ public class SvgPathTests
     [Fact]
     public void ApproximateToMultiPolygon_BoundingBoxIsUnchanged()
     {
+
         // Arrange
+        const int SegmentCountForCurveApproximation = 10;
 
         var svgFont = SvgFont.LoadFromFile(TestPaths.GetFontPath(Resources.FontFileNameArial));
         var textConfig = new TextConfig("HÅÄj", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Black, 1));
@@ -17,7 +19,7 @@ public class SvgPathTests
         BoundingBox expectedBoundingBox = svgPath.BoundingBox;
 
         // Act
-        MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon();
+        MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon(SegmentCountForCurveApproximation);
         BoundingBox resultingBoundingBox = multiPolygon.BoundingBox();
 
         // Assert
