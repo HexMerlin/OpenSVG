@@ -59,9 +59,4 @@ public class TransformAttr : Attr<Transform>
         return result;
     }
 
-    //public override bool Equals(Attr<Transform>? other)
-    //{
-    //    if (other is null) return false;
-    //    return this.DefaultValue.Equals(other.DefaultValue) && Get().Equals(other.Get());
-    //}
 }

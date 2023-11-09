@@ -1,4 +1,8 @@
-﻿namespace OpenSvg;
+﻿using SkiaSharp;
+using System.Globalization;
+using YamlDotNet.Core.Tokens;
+
+namespace OpenSvg;
 
 /// <summary>
 ///     Represents a polygon of points.
@@ -43,11 +47,21 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
     }
 
 
-    /// <summary>
-    ///     Returns a string representing the current polygon object in a readable format.
-    /// </summary>
-    /// <returns>A string that represents the current object.</returns>
-    public override string ToString() => "{\n" + string.Join(",\n", this.Select(p => p.ToString())) + "\n}";
+  
+    public static Polygon FromXmlString(string xmlString) =>
+        new(xmlString.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(pointStr =>
+        {
+            string[] coordinates = pointStr.Split(',', StringSplitOptions.TrimEntries);
+            if (coordinates.Length != 2)
+                throw new ArgumentException("Invalid point in SVG polygon data.");
+
+            if (!double.TryParse(coordinates[0], NumberStyles.Float, CultureInfo.InvariantCulture, out double x) ||
+                !double.TryParse(coordinates[1], NumberStyles.Float, CultureInfo.InvariantCulture, out double y))
+                throw new FormatException("Invalid coordinate in SVG polygon data.");
+
+            return new Point(x, y);
+        }));
+
 
     /// <summary>
     ///     Determines whether the specified object is equal to the current object.
@@ -71,4 +85,15 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
 
     public override bool Equals(object? obj) => base.Equals(obj);
     public override int GetHashCode() => base.GetHashCode();
+
+
+    public string ToXmlString() 
+        => string.Join(" ", this.Select(p => $"{p.X.ToXmlString()},{p.Y.ToXmlString()}"));
+
+    /// <summary>
+    ///     Returns a string representing the current polygon object in a readable format.
+    /// </summary>
+    /// <returns>A string that represents the current object.</returns>
+    public override string ToString() => ToXmlString();
+
 }
