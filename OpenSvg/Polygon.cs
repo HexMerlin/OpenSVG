@@ -20,6 +20,10 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
 
     public static Polygon Empty => new(Enumerable.Empty<Point>());
 
+    /// <summary>
+    /// Calculates the convex hull of the polygon.
+    /// </summary>
+    /// <returns>The convex hull as a ConvexHull object.</returns>
 
     public ConvexHull GetConvexHull() => new(this);
 

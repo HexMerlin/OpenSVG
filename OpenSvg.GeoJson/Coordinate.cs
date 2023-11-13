@@ -8,17 +8,12 @@ namespace OpenSvg.GeoJson;
 public record Coordinate(double Long, double Lat)
 {
     /// <summary>
-    ///     Translates the coordinate to a new coordinate by a movement a given distance in meters in X and Y.
+    /// Translates the coordinate by a specified distance in meters along the X and Y axes.
     /// </summary>
-    /// <param name="dxMeters">
-    ///     The east-west translation (movement) in meters. Positive values means to the east, negative
-    ///     values means to the west.
-    /// </param>
-    /// <param name="dyMeters">
-    ///     The north-south translation (movement) in meters. Positive values means to the north, negative
-    ///     values means to the south.
-    /// </param>
-    /// <returns>A Coordinate.</returns>
+    /// <param name="dxMeters">East-west translation in meters. Positive values move east, negative values move west.</param>
+    /// <param name="dyMeters">North-south translation in meters. Positive values move north, negative values move south.</param>
+    /// <returns>A new Coordinate object representing the translated position.</returns>
+
     public Coordinate Translate(double dxMeters, double dyMeters)
     {
         // Define WGS84 ellipsoid

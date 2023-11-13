@@ -11,6 +11,12 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
 
     public double Y { get; }
 
+    /// <summary>
+    /// Initializes a new instance of the Point struct with specified X and Y coordinates.
+    /// </summary>
+    /// <param name="x">The X-coordinate of the point.</param>
+    /// <param name="y">The Y-coordinate of the point.</param>
+
     public Point(double x, double y)
     {
         this.X = x.Round();
@@ -45,18 +51,19 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     public int CompareTo(Point other) => (Y, X).CompareTo((other.Y, other.X));
 
     /// <summary>
-    ///     Applies the specified transform to the point.
+    /// Transforms the point by the specified transform.
     /// </summary>
-    /// <param name="transform">The transform to apply.</param>
-    /// <returns>A new Point that has been transformed.</returns>
+    /// <param name="transform">The transform to apply to the point.</param>
+    /// <returns>The transformed point.</returns>
+
     public Point Transform(Transform transform) => new(Vector2.Transform(AsVector, transform.Matrix));
 
     /// <summary>
-    ///     Determines whether this point is on the line segment between points a and b.
+    /// Determines whether the point is on a line segment defined by two points.
     /// </summary>
-    /// <param name="a">The first point of the line segment.</param>
-    /// <param name="b">The second point of the line segment.</param>
-    /// <returns>True if this point is on the line segment, otherwise false.</returns>
+    /// <param name="a">The start point of the line segment.</param>
+    /// <param name="b">The end point of the line segment.</param>
+    /// <returns>True if the point is on the line segment; otherwise, false.</returns>
     public readonly bool IsOnLineSegment(Point a, Point b)
     {
         const double Tolerance = 1e-6;

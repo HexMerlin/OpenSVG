@@ -1,15 +1,28 @@
 ﻿using SkiaSharp;
 
 namespace OpenSvg;
+
+/// <summary>
+/// Represents a graphical path
+/// </summary>
 public class Path : IEquatable<Path>, IDisposable
 {
     private readonly SKPath path;
 
     private readonly string xmlString;
 
+    /// <summary>
+    /// Represents a graphical path with various drawing commands.
+    /// </summary>
+
     public Path() : this(new SKPath())
     {
     }
+
+    /// <summary>
+    /// Initializes a new instance of the Path class with the specified SKPath object.
+    /// </summary>
+    /// <param name="path">The SKPath object to initialize the Path with.</param>
 
     public Path(SKPath path)
     {
@@ -24,10 +37,11 @@ public class Path : IEquatable<Path>, IDisposable
     public string ToXmlString() => xmlString;
 
     /// <summary>
-    ///     Approximates the path to multi polygon.
+    /// Approximates the path to a multi-polygon representation.
     /// </summary>
-    /// <param name="segments">The number of line segments to use to approximate every single Bezier curve.</param>
-    /// <returns>A multi polygon object.</returns>
+    /// <param name="segments">The number of line segments to use for approximating Bezier curves.</param>
+    /// <returns>A MultiPolygon object representing the approximated path.</returns>
+
     public MultiPolygon ApproximateToMultiPolygon(int segments) => new(ApproximatePathToPolygons(segments));
 
     public IEnumerable<Polygon> ApproximatePathToPolygons(int segments)

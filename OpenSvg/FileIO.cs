@@ -1,16 +1,18 @@
 ﻿namespace OpenSvg;
 
+/// <summary>
+/// Provides utility methods for file input/output operations.
+/// </summary>
+
 public static class FileIO
 {
     /// <summary>
-    ///     Compares files for equality using fast generic binary comparison.
+    /// Compares two files for binary equality.
     /// </summary>
     /// <param name="filePath1">The path to the first file.</param>
     /// <param name="filePath2">The path to the second file.</param>
-    /// <returns>
-    ///     A tuple containing a boolean indicating whether the files are equal and a string with an error message if they
-    ///     are not.
-    /// </returns>
+    /// <returns>A tuple indicating whether the files are equal and an error message if not.</returns>
+
     public static (bool IsEqual, string ErrorMessage) BinaryFileCompare(string filePath1, string filePath2)
     {
         const int bufferSize = 4096;
