@@ -1,5 +1,8 @@
 ﻿namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Represents an attribute for double precision floating-point values.
+/// </summary>
 public class DoubleAttr : Attr<double>
 {
     public DoubleAttr(string name) : base(name, 0, false)

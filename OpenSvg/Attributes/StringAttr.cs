@@ -1,5 +1,8 @@
 ﻿namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Represents an attribute for string values.
+/// </summary>
 public class StringAttr : Attr<string>
 {
     public StringAttr(string name, string defaultValue, bool isConstant) : base(name, defaultValue, isConstant)

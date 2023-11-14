@@ -2,6 +2,10 @@
 
 namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Represents an attribute for transform data.
+/// A transform is represented as a <see cref="Transform"/> class.
+/// </summary>
 public class TransformAttr : Attr<Transform>
 {
     public TransformAttr() : base(SvgNames.Transform, Transform.Identity, false)

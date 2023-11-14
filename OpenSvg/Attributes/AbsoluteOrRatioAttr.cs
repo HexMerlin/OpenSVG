@@ -1,5 +1,8 @@
 ﻿namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Represents an attribute that can hold either an absolute or a ratio value.
+/// </summary>
 public class AbsoluteOrRatioAttr : Attr<AbsoluteOrRatio>
 {
     public AbsoluteOrRatioAttr(string name) : base(name, AbsoluteOrRatio.Ratio(1), false)

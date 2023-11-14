@@ -2,6 +2,9 @@
 
 namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Represents an attribute for path data, represented as a <see cref="Path"/> class.
+/// </summary>
 public class PathAttr : Attr<Path>
 {
     public PathAttr() : base(SvgNames.D, new Path(), false)

@@ -1,5 +1,8 @@
 ﻿namespace OpenSvg.Attributes;
 
+/// <summary>
+/// Defines a common interface for SVG attributes.
+/// </summary>
 public interface IAttr : IEquatable<IAttr>
 {
     public string Name { get; }
