@@ -114,12 +114,8 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <returns>A string representation of this object</returns>
     public override string ToString() => $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
 
-    /// <summary>
-    /// Determines whether the specified object is equal to the current point.
-    /// </summary>
-    /// <param name="obj">The object to compare with the current point.</param>
-    /// <returns>True if the specified object is equal to the current point; otherwise, false.</returns>
-    public override bool Equals(object obj) => obj is Point other && Equals(other);
+    ///<inheritdoc/>
+    public override bool Equals(object? obj) => obj is Point other && Equals(other);
 
     /// <summary>
     /// Determines whether the specified point is equal to the current point.

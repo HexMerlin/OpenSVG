@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgGroup.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgGroup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgGroup.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgGroup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgGroup">
@@ -100,7 +100,8 @@
 
   <h1 id="OpenSvg_SvgNodes_SvgGroup" data-uid="OpenSvg.SvgNodes.SvgGroup" class="text-break">Class SvgGroup
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a group of SVG elements.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -113,6 +114,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a>&gt;</div>
     <div><a class="xref" href="OpenSvg.SvgNodes.ISvgElementContainer.html">ISvgElementContainer</a></div>
   </div>
   <div class="inheritedMembers">
@@ -137,9 +139,6 @@
     </div>
     <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_ComputeConvexHull">SvgVisualContainer.ComputeConvexHull()</a>
-    </div>
-    <div>
-      <a class="xref" href="OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_">SvgVisualContainer.CompareSelfAndDescendants(SvgElement, double)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_FillColor">SvgVisual.FillColor</a>
@@ -205,13 +204,19 @@
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes">SvgElement.Attributes()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_OpenSvg_SvgNodes_SvgElement_">SvgElement.Equals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_System_Object_">SvgElement.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_InformedEquals_OpenSvg_SvgNodes_SvgElement_">SvgElement.InformedEquals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetHashCode">SvgElement.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -230,16 +235,16 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_SvgNodes_SvgGroup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SvgGroup : SvgVisualContainer, IXmlSerializable, ISvgElementContainer</code></pre>
+    <pre><code class="lang-csharp hljs">public class SvgGroup : SvgVisualContainer, IXmlSerializable, IEquatable&lt;SvgElement&gt;, ISvgElementContainer</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgGroup_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgGroup.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgGroup_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgGroup.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgGroup.cs/#L5">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgGroup.cs/#L8">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgGroup_SvgName_" data-uid="OpenSvg.SvgNodes.SvgGroup.SvgName*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgGroup_SvgName" data-uid="OpenSvg.SvgNodes.SvgGroup.SvgName">SvgName</h4>
@@ -269,6 +274,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="OpenSvg.SvgNodes.ISvgElementContainer.html">ISvgElementContainer</a>

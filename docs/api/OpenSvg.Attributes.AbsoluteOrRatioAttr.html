@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr">
@@ -100,7 +100,8 @@
 
   <h1 id="OpenSvg_Attributes_AbsoluteOrRatioAttr" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr" class="text-break">Class AbsoluteOrRatioAttr
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an attribute that can hold either an absolute or a ratio value.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -111,6 +112,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.Attr-1.html">Attr</a>&lt;<a class="xref" href="OpenSvg.AbsoluteOrRatio.html">AbsoluteOrRatio</a>&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -134,6 +136,12 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToXmlString">Attr&lt;AbsoluteOrRatio&gt;.ToXmlString()</a>
     </div>
     <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultEquals__0_">Attr&lt;AbsoluteOrRatio&gt;.DefaultEquals(AbsoluteOrRatio)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ValueEquals__0_">Attr&lt;AbsoluteOrRatio&gt;.ValueEquals(AbsoluteOrRatio)</a>
+    </div>
+    <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_Attr__0__">Attr&lt;AbsoluteOrRatio&gt;.Equals(Attr&lt;AbsoluteOrRatio&gt;)</a>
     </div>
     <div>
@@ -146,10 +154,13 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToString">Attr&lt;AbsoluteOrRatio&gt;.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;AbsoluteOrRatio&gt;.Equals(object)</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_IAttr_">Attr&lt;AbsoluteOrRatio&gt;.Equals(IAttr)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_GetHashCode">Attr&lt;AbsoluteOrRatio&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;AbsoluteOrRatio&gt;.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -168,20 +179,21 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_Attributes_AbsoluteOrRatioAttr_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AbsoluteOrRatioAttr : Attr&lt;AbsoluteOrRatio&gt;, IAttr, IEquatable&lt;Attr&lt;AbsoluteOrRatio&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class AbsoluteOrRatioAttr : Attr&lt;AbsoluteOrRatio&gt;, IAttr, IEquatable&lt;IAttr&gt;, IEquatable&lt;Attr&lt;AbsoluteOrRatio&gt;&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr__ctor_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr__ctor_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L5">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L13">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_AbsoluteOrRatioAttr__ctor_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.#ctor*"></a>
   <h4 id="OpenSvg_Attributes_AbsoluteOrRatioAttr__ctor_System_String_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.#ctor(System.String)">AbsoluteOrRatioAttr(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OpenSvg.Attributes.AbsoluteOrRatioAttr.html">AbsoluteOrRatioAttr</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -200,7 +212,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of the attribute.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -208,14 +221,15 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L11">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L21">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_AbsoluteOrRatioAttr_Deserialize_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.Deserialize*"></a>
   <h4 id="OpenSvg_Attributes_AbsoluteOrRatioAttr_Deserialize_System_String_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.Deserialize(System.String)">Deserialize(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deserializes an XML string to the value of the attribute.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,7 +248,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmlString</span></td>
-        <td></td>
+        <td><p>The XML string to deserialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -249,7 +264,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="OpenSvg.AbsoluteOrRatio.html">AbsoluteOrRatio</a></td>
-        <td></td>
+        <td><p>The deserialized value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -257,14 +273,15 @@
   <div><a class="xref" href="OpenSvg.Attributes.Attr{OpenSvg.AbsoluteOrRatio}.html#OpenSvg.Attributes.Attr{OpenSvg.AbsoluteOrRatio}.Deserialize(System.String)">Attr&lt;AbsoluteOrRatio&gt;.Deserialize(string)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr_Serialize_OpenSvg_AbsoluteOrRatio_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.Serialize(OpenSvg.AbsoluteOrRatio)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_AbsoluteOrRatioAttr_Serialize_OpenSvg_AbsoluteOrRatio_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.AbsoluteOrRatioAttr.Serialize(OpenSvg.AbsoluteOrRatio)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L9">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/AbsoluteOrRatioAttr.cs/#L18">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_AbsoluteOrRatioAttr_Serialize_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.Serialize*"></a>
   <h4 id="OpenSvg_Attributes_AbsoluteOrRatioAttr_Serialize_OpenSvg_AbsoluteOrRatio_" data-uid="OpenSvg.Attributes.AbsoluteOrRatioAttr.Serialize(OpenSvg.AbsoluteOrRatio)">Serialize(AbsoluteOrRatio)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serializes the value of the attribute to an XML string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -283,7 +300,8 @@
       <tr>
         <td><a class="xref" href="OpenSvg.AbsoluteOrRatio.html">AbsoluteOrRatio</a></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value to serialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -298,7 +316,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The XML string representation of the value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -307,6 +326,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>

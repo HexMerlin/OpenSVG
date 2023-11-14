@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.ConvexHull">
@@ -121,6 +121,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Polygon.html">Polygon</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -132,6 +133,21 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_BoundingBox">Polygon.BoundingBox()</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_FromXmlString_System_String_">Polygon.FromXmlString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_OpenSvg_Polygon_">Polygon.Equals(Polygon)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_System_Object_">Polygon.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_GetHashCode">Polygon.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString">Polygon.ToXmlString()</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_ToString">Polygon.ToString()</a>
@@ -296,13 +312,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">List&lt;Point&gt;.this[int]</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -318,16 +328,16 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_ConvexHull_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConvexHull : Polygon, IList&lt;Point&gt;, ICollection&lt;Point&gt;, IReadOnlyList&lt;Point&gt;, IReadOnlyCollection&lt;Point&gt;, IEnumerable&lt;Point&gt;, IList, ICollection, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConvexHull : Polygon, IList&lt;Point&gt;, ICollection&lt;Point&gt;, IReadOnlyList&lt;Point&gt;, IReadOnlyCollection&lt;Point&gt;, IEnumerable&lt;Point&gt;, IList, ICollection, IEnumerable, IEquatable&lt;Polygon&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_ConvexHull__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.ConvexHull%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_ConvexHull__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.ConvexHull%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L22">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L23">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull__ctor_" data-uid="OpenSvg.ConvexHull.#ctor*"></a>
   <h4 id="OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_ConvexHull__" data-uid="OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.ConvexHull})">ConvexHull(IEnumerable&lt;ConvexHull&gt;)</h4>
@@ -358,10 +368,10 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L13">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L14">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull__ctor_" data-uid="OpenSvg.ConvexHull.#ctor*"></a>
   <h4 id="OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})">ConvexHull(IEnumerable&lt;Point&gt;)</h4>
@@ -394,14 +404,15 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L78">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L88">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull_IsConvexHull_" data-uid="OpenSvg.ConvexHull.IsConvexHull*"></a>
   <h4 id="OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{OpenSvg.Point})">IsConvexHull(IEnumerable&lt;Point&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified collection of points forms a convex hull.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -420,7 +431,8 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</td>
         <td><span class="parametername">points</span></td>
-        <td></td>
+        <td><p>The collection of points to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -435,20 +447,22 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p>True if the collection of points forms a convex hull, otherwise false.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_Transform_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.Transform(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_Transform_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.Transform(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L42">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L47">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull_Transform_" data-uid="OpenSvg.ConvexHull.Transform*"></a>
   <h4 id="OpenSvg_ConvexHull_Transform_OpenSvg_Transform_" data-uid="OpenSvg.ConvexHull.Transform(OpenSvg.Transform)">Transform(Transform)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms the convex hull by applying the specified transform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -467,7 +481,8 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
       <tr>
         <td><a class="xref" href="OpenSvg.Transform.html">Transform</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transform to apply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -482,7 +497,8 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="OpenSvg.ConvexHull.html">ConvexHull</a></td>
-        <td></td>
+        <td><p>A new convex hull that is the result of applying the transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -510,6 +526,9 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
 
 </article>

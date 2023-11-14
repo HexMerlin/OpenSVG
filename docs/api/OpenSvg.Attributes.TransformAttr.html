@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.Attributes.TransformAttr">
@@ -100,7 +100,9 @@
 
   <h1 id="OpenSvg_Attributes_TransformAttr" data-uid="OpenSvg.Attributes.TransformAttr" class="text-break">Class TransformAttr
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an attribute for transform data.
+A transform is represented as a <a class="xref" href="OpenSvg.Transform.html">Transform</a> class.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -111,6 +113,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.Attr-1.html">Attr</a>&lt;<a class="xref" href="OpenSvg.Transform.html">Transform</a>&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -134,6 +137,15 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToXmlString">Attr&lt;Transform&gt;.ToXmlString()</a>
     </div>
     <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultEquals__0_">Attr&lt;Transform&gt;.DefaultEquals(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ValueEquals__0_">Attr&lt;Transform&gt;.ValueEquals(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_Attr__0__">Attr&lt;Transform&gt;.Equals(Attr&lt;Transform&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set__0_">Attr&lt;Transform&gt;.Set(Transform)</a>
     </div>
     <div>
@@ -143,10 +155,13 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToString">Attr&lt;Transform&gt;.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;Transform&gt;.Equals(object)</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_IAttr_">Attr&lt;Transform&gt;.Equals(IAttr)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_GetHashCode">Attr&lt;Transform&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;Transform&gt;.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -165,16 +180,16 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_Attributes_TransformAttr_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TransformAttr : Attr&lt;Transform&gt;, IAttr, IEquatable&lt;Attr&lt;Transform&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TransformAttr : Attr&lt;Transform&gt;, IAttr, IEquatable&lt;IAttr&gt;, IEquatable&lt;Attr&lt;Transform&gt;&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr__ctor.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr__ctor.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L7">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L11">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_TransformAttr__ctor_" data-uid="OpenSvg.Attributes.TransformAttr.#ctor*"></a>
   <h4 id="OpenSvg_Attributes_TransformAttr__ctor" data-uid="OpenSvg.Attributes.TransformAttr.#ctor">TransformAttr()</h4>
@@ -188,10 +203,10 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_ComposeWith_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_ComposeWith_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L11">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L15">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_TransformAttr_ComposeWith_" data-uid="OpenSvg.Attributes.TransformAttr.ComposeWith*"></a>
   <h4 id="OpenSvg_Attributes_TransformAttr_ComposeWith_OpenSvg_Transform_" data-uid="OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)">ComposeWith(Transform)</h4>
@@ -220,14 +235,15 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L16">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L19">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_TransformAttr_Deserialize_" data-uid="OpenSvg.Attributes.TransformAttr.Deserialize*"></a>
   <h4 id="OpenSvg_Attributes_TransformAttr_Deserialize_System_String_" data-uid="OpenSvg.Attributes.TransformAttr.Deserialize(System.String)">Deserialize(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deserializes an XML string to the value of the attribute.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -246,7 +262,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmlString</span></td>
-        <td></td>
+        <td><p>The XML string to deserialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -261,7 +278,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="OpenSvg.Transform.html">Transform</a></td>
-        <td></td>
+        <td><p>The deserialized value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -269,66 +287,15 @@
   <div><a class="xref" href="OpenSvg.Attributes.Attr{OpenSvg.Transform}.html#OpenSvg.Attributes.Attr{OpenSvg.Transform}.Deserialize(System.String)">Attr&lt;Transform&gt;.Deserialize(string)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_Equals_OpenSvg_Attributes_Attr_OpenSvg_Transform__.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr%7BOpenSvg.Transform%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_Serialize_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.Serialize(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L63">View Source</a>
-  </span>
-  <a id="OpenSvg_Attributes_TransformAttr_Equals_" data-uid="OpenSvg.Attributes.TransformAttr.Equals*"></a>
-  <h4 id="OpenSvg_Attributes_TransformAttr_Equals_OpenSvg_Attributes_Attr_OpenSvg_Transform__" data-uid="OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr{OpenSvg.Transform})">Equals(Attr&lt;Transform&gt;?)</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(Attr&lt;Transform&gt;? other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.Attributes.Attr-1.html">Attr</a>&lt;<a class="xref" href="OpenSvg.Transform.html">Transform</a>&gt;</td>
-        <td><span class="parametername">other</span></td>
-        <td><p>An object to compare with this object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="OpenSvg.Attributes.Attr{OpenSvg.Transform}.html#OpenSvg.Attributes.Attr{OpenSvg.Transform}.Equals(OpenSvg.Attributes.Attr{OpenSvg.Transform})">Attr&lt;Transform&gt;.Equals(Attr&lt;Transform&gt;)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_TransformAttr_Serialize_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.TransformAttr.Serialize(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L13">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/TransformAttr.cs/#L17">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_TransformAttr_Serialize_" data-uid="OpenSvg.Attributes.TransformAttr.Serialize*"></a>
   <h4 id="OpenSvg_Attributes_TransformAttr_Serialize_OpenSvg_Transform_" data-uid="OpenSvg.Attributes.TransformAttr.Serialize(OpenSvg.Transform)">Serialize(Transform)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serializes the value of the attribute to an XML string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +314,8 @@
       <tr>
         <td><a class="xref" href="OpenSvg.Transform.html">Transform</a></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value to serialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -362,7 +330,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The XML string representation of the value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -371,6 +340,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>

@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgCssStyle">
@@ -113,6 +113,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a>&gt;</div>
     <div><a class="xref" href="OpenSvg.Attributes.IHasElementContent.html">IHasElementContent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -154,19 +155,22 @@
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ToSvgDocument">SvgElement.ToSvgDocument()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_">SvgElement.CompareSelfAndDescendants(SvgElement, double)</a>
-    </div>
-    <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes">SvgElement.Attributes()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_OpenSvg_SvgNodes_SvgElement_">SvgElement.Equals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_System_Object_">SvgElement.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_InformedEquals_OpenSvg_SvgNodes_SvgElement_">SvgElement.InformedEquals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetHashCode">SvgElement.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -185,7 +189,7 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_SvgNodes_SvgCssStyle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SvgCssStyle : SvgStyle, IXmlSerializable, IHasElementContent</code></pre>
+    <pre><code class="lang-csharp hljs">public class SvgCssStyle : SvgStyle, IXmlSerializable, IEquatable&lt;SvgElement&gt;, IHasElementContent</code></pre>
   </div>
   <h5 id="OpenSvg_SvgNodes_SvgCssStyle_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The style element is used inside SVG documents to embed stylings. CSS can be used as a standalone stylesheet or can
@@ -195,7 +199,7 @@ be included directly into SVG elements as attributes.</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Type.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Type%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Type.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Type%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L14">View Source</a>
@@ -226,14 +230,15 @@ be included directly into SVG elements as attributes.</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Content.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Content%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Content.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Content%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L24">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgCssStyle_Content_" data-uid="OpenSvg.SvgNodes.SvgCssStyle.Content*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgCssStyle_Content" data-uid="OpenSvg.SvgNodes.SvgCssStyle.Content">Content</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the content of the element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -256,7 +261,7 @@ be included directly into SVG elements as attributes.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Fonts.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Fonts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Fonts.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Fonts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L22">View Source</a>
@@ -286,7 +291,7 @@ be included directly into SVG elements as attributes.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L19">View Source</a>
@@ -320,14 +325,14 @@ be included directly into SVG elements as attributes.</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Add_OpenSvg_SvgNodes_SvgFont_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Add(OpenSvg.SvgNodes.SvgFont)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgCssStyle_Add_OpenSvg_SvgNodes_SvgFont_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgCssStyle.Add(OpenSvg.SvgNodes.SvgFont)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L39">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgCssStyle.cs/#L40">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgCssStyle_Add_" data-uid="OpenSvg.SvgNodes.SvgCssStyle.Add*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgCssStyle_Add_OpenSvg_SvgNodes_SvgFont_" data-uid="OpenSvg.SvgNodes.SvgCssStyle.Add(OpenSvg.SvgNodes.SvgFont)">Add(SvgFont)</h4>
-  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="OpenSvg.SvgNodes.SvgFont.html">SvgFont</a> element into the current SVG style.</p>
+  <div class="markdown level1 summary"><p>Adds the specified <a class="xref" href="OpenSvg.SvgNodes.SvgFont.html">SvgFont</a> to the CSS style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -347,7 +352,23 @@ be included directly into SVG elements as attributes.</p>
       <tr>
         <td><a class="xref" href="OpenSvg.SvgNodes.SvgFont.html">SvgFont</a></td>
         <td><span class="parametername">svgFont</span></td>
-        <td><p>The <a class="xref" href="OpenSvg.SvgNodes.SvgFont.html">SvgFont</a> element to add.</p>
+        <td><p>The SVG font to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p>Thrown when adding more than one font.</p>
 </td>
       </tr>
     </tbody>
@@ -355,6 +376,9 @@ be included directly into SVG elements as attributes.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="OpenSvg.Attributes.IHasElementContent.html">IHasElementContent</a>

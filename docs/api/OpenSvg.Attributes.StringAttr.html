@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.Attributes.StringAttr">
@@ -100,7 +100,8 @@
 
   <h1 id="OpenSvg_Attributes_StringAttr" data-uid="OpenSvg.Attributes.StringAttr" class="text-break">Class StringAttr
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an attribute for string values.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -111,6 +112,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Attributes.Attr-1.html">Attr</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -134,6 +136,12 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToXmlString">Attr&lt;string&gt;.ToXmlString()</a>
     </div>
     <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultEquals__0_">Attr&lt;string&gt;.DefaultEquals(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ValueEquals__0_">Attr&lt;string&gt;.ValueEquals(string)</a>
+    </div>
+    <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_Attr__0__">Attr&lt;string&gt;.Equals(Attr&lt;string&gt;)</a>
     </div>
     <div>
@@ -143,10 +151,13 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToString">Attr&lt;string&gt;.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;string&gt;.Equals(object)</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_IAttr_">Attr&lt;string&gt;.Equals(IAttr)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_GetHashCode">Attr&lt;string&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_">Attr&lt;string&gt;.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -165,16 +176,16 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_Attributes_StringAttr_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StringAttr : Attr&lt;string&gt;, IAttr, IEquatable&lt;Attr&lt;string&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class StringAttr : Attr&lt;string&gt;, IAttr, IEquatable&lt;IAttr&gt;, IEquatable&lt;Attr&lt;string&gt;&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr__ctor_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.%23ctor(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr__ctor_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.%23ctor(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L5">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L8">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr__ctor_" data-uid="OpenSvg.Attributes.StringAttr.#ctor*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr__ctor_System_String_System_String_System_Boolean_" data-uid="OpenSvg.Attributes.StringAttr.#ctor(System.String,System.String,System.Boolean)">StringAttr(string, string, bool)</h4>
@@ -215,14 +226,15 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L9">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L12">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr_Deserialize_" data-uid="OpenSvg.Attributes.StringAttr.Deserialize*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr_Deserialize_System_String_" data-uid="OpenSvg.Attributes.StringAttr.Deserialize(System.String)">Deserialize(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deserializes an XML string to the value of the attribute.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -241,7 +253,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">xmlString</span></td>
-        <td></td>
+        <td><p>The XML string to deserialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -256,7 +269,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The deserialized value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -264,14 +278,15 @@
   <div><a class="xref" href="OpenSvg.Attributes.Attr{System.String}.html#OpenSvg.Attributes.Attr{System.String}.Deserialize(System.String)">Attr&lt;string&gt;.Deserialize(string)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Serialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Serialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Serialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Serialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L11">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L14">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr_Serialize_" data-uid="OpenSvg.Attributes.StringAttr.Serialize*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr_Serialize_System_String_" data-uid="OpenSvg.Attributes.StringAttr.Serialize(System.String)">Serialize(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serializes the value of the attribute to an XML string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -290,7 +305,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value to serialize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -305,7 +321,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>The XML string representation of the value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -314,6 +331,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="OpenSvg.Attributes.IAttr.html">IAttr</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>

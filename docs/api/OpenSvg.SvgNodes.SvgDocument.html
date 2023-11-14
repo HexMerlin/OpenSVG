@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgDocument">
@@ -100,7 +100,8 @@
 
   <h1 id="OpenSvg_SvgNodes_SvgDocument" data-uid="OpenSvg.SvgNodes.SvgDocument" class="text-break">Class SvgDocument
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a SVG document.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -113,6 +114,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a>&gt;</div>
     <div><a class="xref" href="OpenSvg.SvgNodes.ISvgElementContainer.html">ISvgElementContainer</a></div>
   </div>
   <div class="inheritedMembers">
@@ -196,13 +198,19 @@
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes">SvgElement.Attributes()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_OpenSvg_SvgNodes_SvgElement_">SvgElement.Equals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_System_Object_">SvgElement.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_InformedEquals_OpenSvg_SvgNodes_SvgElement_">SvgElement.InformedEquals(SvgElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetHashCode">SvgElement.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -221,16 +229,16 @@
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_SvgNodes_SvgDocument_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SvgDocument : SvgVisualContainer, IXmlSerializable, ISvgElementContainer</code></pre>
+    <pre><code class="lang-csharp hljs">public class SvgDocument : SvgVisualContainer, IXmlSerializable, IEquatable&lt;SvgElement&gt;, ISvgElementContainer</code></pre>
   </div>
   <h3 id="fields">Fields
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L11">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L14">View Source</a>
   </span>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight" data-uid="OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight">DefinedViewPortHeight</h4>
   <div class="markdown level1 summary"></div>
@@ -256,10 +264,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_DefinedViewPortWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_DefinedViewPortWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L13">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L16">View Source</a>
   </span>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_DefinedViewPortWidth" data-uid="OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth">DefinedViewPortWidth</h4>
   <div class="markdown level1 summary"></div>
@@ -287,10 +295,10 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L15">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L18">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_SvgName_" data-uid="OpenSvg.SvgNodes.SvgDocument.SvgName*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_SvgName" data-uid="OpenSvg.SvgNodes.SvgDocument.SvgName">SvgName</h4>
@@ -319,10 +327,10 @@
   <div><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_SvgName">SvgElement.SvgName</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ViewPortHeight.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ViewPortHeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ViewPortHeight.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ViewPortHeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L20">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L23">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_ViewPortHeight_" data-uid="OpenSvg.SvgNodes.SvgDocument.ViewPortHeight*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_ViewPortHeight" data-uid="OpenSvg.SvgNodes.SvgDocument.ViewPortHeight">ViewPortHeight</h4>
@@ -351,10 +359,10 @@
   <div><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ViewPortHeight">SvgElement.ViewPortHeight</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ViewPortWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ViewPortWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ViewPortWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ViewPortWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L17">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L20">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_ViewPortWidth_" data-uid="OpenSvg.SvgNodes.SvgDocument.ViewPortWidth*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_ViewPortWidth" data-uid="OpenSvg.SvgNodes.SvgDocument.ViewPortWidth">ViewPortWidth</h4>
@@ -385,68 +393,14 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement%2CSystem.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbedFont_OpenSvg_SvgNodes_SvgFont_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L109">View Source</a>
-  </span>
-  <a id="OpenSvg_SvgNodes_SvgDocument_CompareSelfAndDescendants_" data-uid="OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgDocument_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_" data-uid="OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)">CompareSelfAndDescendants(SvgElement, double)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other, double precision = 1E-06)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-        <td><span class="parametername">precision</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.isequal">IsEqual</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.errormessage">ErrorMessage</a>)</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_">SvgVisualContainer.CompareSelfAndDescendants(SvgElement, double)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbedFont_OpenSvg_SvgNodes_SvgFont_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L81">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L84">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_EmbedFont_" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbedFont*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_EmbedFont_OpenSvg_SvgNodes_SvgFont_" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)">EmbedFont(SvgFont)</h4>
-  <div class="markdown level1 summary"><p>Adds the specified font to the SVG document.</p>
+  <div class="markdown level1 summary"><p>Embeds a font into the SVG document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -466,17 +420,17 @@
       <tr>
         <td><a class="xref" href="OpenSvg.SvgNodes.SvgFont.html">SvgFont</a></td>
         <td><span class="parametername">svgFont</span></td>
-        <td><p>The font to add.</p>
+        <td><p>The SVG font to embed.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbeddedFont_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbeddedFont(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbeddedFont_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbeddedFont(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L98">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L101">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_EmbeddedFont_" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbeddedFont*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_EmbeddedFont_System_String_" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbeddedFont(System.String)">EmbeddedFont(string)</h4>
@@ -523,10 +477,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbeddedFonts.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbeddedFonts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_EmbeddedFonts.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.EmbeddedFonts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L101">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L104">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_EmbeddedFonts_" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbeddedFonts*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_EmbeddedFonts" data-uid="OpenSvg.SvgNodes.SvgDocument.EmbeddedFonts">EmbeddedFonts()</h4>
@@ -553,10 +507,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_FromXDocument_System_Xml_Linq_XDocument_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.FromXDocument(System.Xml.Linq.XDocument)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_FromXDocument_System_Xml_Linq_XDocument_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.FromXDocument(System.Xml.Linq.XDocument)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L37">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L40">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_FromXDocument_" data-uid="OpenSvg.SvgNodes.SvgDocument.FromXDocument*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_FromXDocument_System_Xml_Linq_XDocument_" data-uid="OpenSvg.SvgNodes.SvgDocument.FromXDocument(System.Xml.Linq.XDocument)">FromXDocument(XDocument)</h4>
@@ -600,10 +554,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_Load_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.Load(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_Load_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.Load(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L52">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L55">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_Load_" data-uid="OpenSvg.SvgNodes.SvgDocument.Load*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_Load_System_String_" data-uid="OpenSvg.SvgNodes.SvgDocument.Load(System.String)">Load(string)</h4>
@@ -650,10 +604,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_Save_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.Save(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_Save_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.Save(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L62">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L65">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_Save_" data-uid="OpenSvg.SvgNodes.SvgDocument.Save*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_Save_System_String_" data-uid="OpenSvg.SvgNodes.SvgDocument.Save(System.String)">Save(string)</h4>
@@ -684,10 +638,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L103">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L106">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize_" data-uid="OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize" data-uid="OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize">SetViewPortToActualSize()</h4>
@@ -699,10 +653,10 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ToXDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ToXDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgDocument_ToXDocument.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgDocument.ToXDocument%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L23">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgDocument.cs/#L26">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgDocument_ToXDocument_" data-uid="OpenSvg.SvgNodes.SvgDocument.ToXDocument*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgDocument_ToXDocument" data-uid="OpenSvg.SvgNodes.SvgDocument.ToXDocument">ToXDocument()</h4>
@@ -730,6 +684,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="OpenSvg.SvgNodes.ISvgElementContainer.html">ISvgElementContainer</a>

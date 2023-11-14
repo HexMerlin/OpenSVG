@@ -162,5 +162,5 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull, IE
 
 
     /// <inheritdoc/>
-    public override bool Equals(object obj) => Equals(obj as Attr<T>);
+    public override bool Equals(object? obj) => Equals(obj as Attr<T>);
 }

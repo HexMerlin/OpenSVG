@@ -89,6 +89,44 @@ references:
   commentId: F:OpenSvg.AbsoluteOrRatio.IsAbsolute
   fullName: OpenSvg.AbsoluteOrRatio.IsAbsolute
   nameWithType: AbsoluteOrRatio.IsAbsolute
+- uid: OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
+  name: Ratio(double)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_System_Double_
+  commentId: M:OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
+  name.vb: Ratio(Double)
+  fullName: OpenSvg.AbsoluteOrRatio.Ratio(double)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.Ratio(Double)
+  nameWithType: AbsoluteOrRatio.Ratio(double)
+  nameWithType.vb: AbsoluteOrRatio.Ratio(Double)
+- uid: OpenSvg.AbsoluteOrRatio.Ratio*
+  name: Ratio
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_
+  commentId: Overload:OpenSvg.AbsoluteOrRatio.Ratio
+  isSpec: "True"
+  fullName: OpenSvg.AbsoluteOrRatio.Ratio
+  nameWithType: AbsoluteOrRatio.Ratio
+- uid: OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
+  name: Resolve(Func<double>)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_System_Func_System_Double__
+  commentId: M:OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
+  name.vb: Resolve(Func(Of Double))
+  fullName: OpenSvg.AbsoluteOrRatio.Resolve(System.Func<double>)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.Resolve(System.Func(Of Double))
+  nameWithType: AbsoluteOrRatio.Resolve(Func<double>)
+  nameWithType.vb: AbsoluteOrRatio.Resolve(Func(Of Double))
+- uid: OpenSvg.AbsoluteOrRatio.Resolve*
+  name: Resolve
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_
+  commentId: Overload:OpenSvg.AbsoluteOrRatio.Resolve
+  isSpec: "True"
+  fullName: OpenSvg.AbsoluteOrRatio.Resolve
+  nameWithType: AbsoluteOrRatio.Resolve
+- uid: OpenSvg.AbsoluteOrRatio.Value
+  name: Value
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Value
+  commentId: F:OpenSvg.AbsoluteOrRatio.Value
+  fullName: OpenSvg.AbsoluteOrRatio.Value
+  nameWithType: AbsoluteOrRatio.Value
 - uid: OpenSvg.AbsoluteOrRatio.op_Equality(OpenSvg.AbsoluteOrRatio,OpenSvg.AbsoluteOrRatio)
   name: operator ==(AbsoluteOrRatio, AbsoluteOrRatio)
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_op_Equality_OpenSvg_AbsoluteOrRatio_OpenSvg_AbsoluteOrRatio_
@@ -146,44 +184,6 @@ references:
   fullName.vb: OpenSvg.AbsoluteOrRatio.<>
   nameWithType: AbsoluteOrRatio.operator !=
   nameWithType.vb: AbsoluteOrRatio.<>
-- uid: OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
-  name: Ratio(double)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_System_Double_
-  commentId: M:OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
-  name.vb: Ratio(Double)
-  fullName: OpenSvg.AbsoluteOrRatio.Ratio(double)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.Ratio(Double)
-  nameWithType: AbsoluteOrRatio.Ratio(double)
-  nameWithType.vb: AbsoluteOrRatio.Ratio(Double)
-- uid: OpenSvg.AbsoluteOrRatio.Ratio*
-  name: Ratio
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_
-  commentId: Overload:OpenSvg.AbsoluteOrRatio.Ratio
-  isSpec: "True"
-  fullName: OpenSvg.AbsoluteOrRatio.Ratio
-  nameWithType: AbsoluteOrRatio.Ratio
-- uid: OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
-  name: Resolve(Func<double>)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_System_Func_System_Double__
-  commentId: M:OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
-  name.vb: Resolve(Func(Of Double))
-  fullName: OpenSvg.AbsoluteOrRatio.Resolve(System.Func<double>)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.Resolve(System.Func(Of Double))
-  nameWithType: AbsoluteOrRatio.Resolve(Func<double>)
-  nameWithType.vb: AbsoluteOrRatio.Resolve(Func(Of Double))
-- uid: OpenSvg.AbsoluteOrRatio.Resolve*
-  name: Resolve
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_
-  commentId: Overload:OpenSvg.AbsoluteOrRatio.Resolve
-  isSpec: "True"
-  fullName: OpenSvg.AbsoluteOrRatio.Resolve
-  nameWithType: AbsoluteOrRatio.Resolve
-- uid: OpenSvg.AbsoluteOrRatio.Value
-  name: Value
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Value
-  commentId: F:OpenSvg.AbsoluteOrRatio.Value
-  fullName: OpenSvg.AbsoluteOrRatio.Value
-  nameWithType: AbsoluteOrRatio.Value
 - uid: OpenSvg.Attributes
   name: OpenSvg.Attributes
   href: api/OpenSvg.Attributes.html
@@ -272,6 +272,23 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).New
   nameWithType: Attr<T>.Attr
   nameWithType.vb: Attr(Of T).New
+- uid: OpenSvg.Attributes.Attr`1.DefaultEquals(`0)
+  name: DefaultEquals(T)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultEquals__0_
+  commentId: M:OpenSvg.Attributes.Attr`1.DefaultEquals(`0)
+  fullName: OpenSvg.Attributes.Attr<T>.DefaultEquals(T)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).DefaultEquals(T)
+  nameWithType: Attr<T>.DefaultEquals(T)
+  nameWithType.vb: Attr(Of T).DefaultEquals(T)
+- uid: OpenSvg.Attributes.Attr`1.DefaultEquals*
+  name: DefaultEquals
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultEquals_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.DefaultEquals
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.Attr<T>.DefaultEquals
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).DefaultEquals
+  nameWithType: Attr<T>.DefaultEquals
+  nameWithType.vb: Attr(Of T).DefaultEquals
 - uid: OpenSvg.Attributes.Attr`1.DefaultValue
   name: DefaultValue
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_DefaultValue
@@ -307,6 +324,15 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Equals(OpenSvg.Attributes.Attr(Of T))
   nameWithType: Attr<T>.Equals(Attr<T>?)
   nameWithType.vb: Attr(Of T).Equals(Attr(Of T))
+- uid: OpenSvg.Attributes.Attr`1.Equals(OpenSvg.Attributes.IAttr)
+  name: Equals(IAttr?)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_IAttr_
+  commentId: M:OpenSvg.Attributes.Attr`1.Equals(OpenSvg.Attributes.IAttr)
+  name.vb: Equals(IAttr)
+  fullName: OpenSvg.Attributes.Attr<T>.Equals(OpenSvg.Attributes.IAttr?)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).Equals(OpenSvg.Attributes.IAttr)
+  nameWithType: Attr<T>.Equals(IAttr?)
+  nameWithType.vb: Attr(Of T).Equals(IAttr)
 - uid: OpenSvg.Attributes.Attr`1.Equals(System.Object)
   name: Equals(object?)
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_System_Object_
@@ -410,44 +436,6 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Name
   nameWithType: Attr<T>.Name
   nameWithType.vb: Attr(Of T).Name
-- uid: OpenSvg.Attributes.Attr`1.op_Equality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
-  name: operator ==(Attr<T>?, Attr<T>?)
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Equality_OpenSvg_Attributes_Attr__0__OpenSvg_Attributes_Attr__0__
-  commentId: M:OpenSvg.Attributes.Attr`1.op_Equality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
-  name.vb: =(Attr(Of T), Attr(Of T))
-  fullName: OpenSvg.Attributes.Attr<T>.operator ==(OpenSvg.Attributes.Attr<T>?, OpenSvg.Attributes.Attr<T>?)
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).=(OpenSvg.Attributes.Attr(Of T), OpenSvg.Attributes.Attr(Of T))
-  nameWithType: Attr<T>.operator ==(Attr<T>?, Attr<T>?)
-  nameWithType.vb: Attr(Of T).=(Attr(Of T), Attr(Of T))
-- uid: OpenSvg.Attributes.Attr`1.op_Equality*
-  name: operator ==
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Equality_
-  commentId: Overload:OpenSvg.Attributes.Attr`1.op_Equality
-  isSpec: "True"
-  name.vb: =
-  fullName: OpenSvg.Attributes.Attr<T>.operator ==
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).=
-  nameWithType: Attr<T>.operator ==
-  nameWithType.vb: Attr(Of T).=
-- uid: OpenSvg.Attributes.Attr`1.op_Inequality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
-  name: operator !=(Attr<T>?, Attr<T>?)
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Inequality_OpenSvg_Attributes_Attr__0__OpenSvg_Attributes_Attr__0__
-  commentId: M:OpenSvg.Attributes.Attr`1.op_Inequality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
-  name.vb: <>(Attr(Of T), Attr(Of T))
-  fullName: OpenSvg.Attributes.Attr<T>.operator !=(OpenSvg.Attributes.Attr<T>?, OpenSvg.Attributes.Attr<T>?)
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).<>(OpenSvg.Attributes.Attr(Of T), OpenSvg.Attributes.Attr(Of T))
-  nameWithType: Attr<T>.operator !=(Attr<T>?, Attr<T>?)
-  nameWithType.vb: Attr(Of T).<>(Attr(Of T), Attr(Of T))
-- uid: OpenSvg.Attributes.Attr`1.op_Inequality*
-  name: operator !=
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Inequality_
-  commentId: Overload:OpenSvg.Attributes.Attr`1.op_Inequality
-  isSpec: "True"
-  name.vb: <>
-  fullName: OpenSvg.Attributes.Attr<T>.operator !=
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).<>
-  nameWithType: Attr<T>.operator !=
-  nameWithType.vb: Attr(Of T).<>
 - uid: OpenSvg.Attributes.Attr`1.Serialize(`0)
   name: Serialize(T)
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Serialize__0_
@@ -465,14 +453,6 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Serialize
   nameWithType: Attr<T>.Serialize
   nameWithType.vb: Attr(Of T).Serialize
-- uid: OpenSvg.Attributes.Attr`1.Set(`0)
-  name: Set(T)
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set__0_
-  commentId: M:OpenSvg.Attributes.Attr`1.Set(`0)
-  fullName: OpenSvg.Attributes.Attr<T>.Set(T)
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).Set(T)
-  nameWithType: Attr<T>.Set(T)
-  nameWithType.vb: Attr(Of T).Set(T)
 - uid: OpenSvg.Attributes.Attr`1.Set(System.String)
   name: Set(string)
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set_System_String_
@@ -482,6 +462,14 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Set(String)
   nameWithType: Attr<T>.Set(string)
   nameWithType.vb: Attr(Of T).Set(String)
+- uid: OpenSvg.Attributes.Attr`1.Set(`0)
+  name: Set(T)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set__0_
+  commentId: M:OpenSvg.Attributes.Attr`1.Set(`0)
+  fullName: OpenSvg.Attributes.Attr<T>.Set(T)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).Set(T)
+  nameWithType: Attr<T>.Set(T)
+  nameWithType.vb: Attr(Of T).Set(T)
 - uid: OpenSvg.Attributes.Attr`1.Set*
   name: Set
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set_
@@ -525,21 +513,76 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).ToXmlString
   nameWithType: Attr<T>.ToXmlString
   nameWithType.vb: Attr(Of T).ToXmlString
+- uid: OpenSvg.Attributes.Attr`1.ValueEquals(`0)
+  name: ValueEquals(T)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ValueEquals__0_
+  commentId: M:OpenSvg.Attributes.Attr`1.ValueEquals(`0)
+  fullName: OpenSvg.Attributes.Attr<T>.ValueEquals(T)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).ValueEquals(T)
+  nameWithType: Attr<T>.ValueEquals(T)
+  nameWithType.vb: Attr(Of T).ValueEquals(T)
+- uid: OpenSvg.Attributes.Attr`1.ValueEquals*
+  name: ValueEquals
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ValueEquals_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.ValueEquals
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.Attr<T>.ValueEquals
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).ValueEquals
+  nameWithType: Attr<T>.ValueEquals
+  nameWithType.vb: Attr(Of T).ValueEquals
+- uid: OpenSvg.Attributes.Attr`1.op_Equality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
+  name: operator ==(Attr<T>, Attr<T>)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Equality_OpenSvg_Attributes_Attr__0__OpenSvg_Attributes_Attr__0__
+  commentId: M:OpenSvg.Attributes.Attr`1.op_Equality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
+  name.vb: =(Attr(Of T), Attr(Of T))
+  fullName: OpenSvg.Attributes.Attr<T>.operator ==(OpenSvg.Attributes.Attr<T>, OpenSvg.Attributes.Attr<T>)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).=(OpenSvg.Attributes.Attr(Of T), OpenSvg.Attributes.Attr(Of T))
+  nameWithType: Attr<T>.operator ==(Attr<T>, Attr<T>)
+  nameWithType.vb: Attr(Of T).=(Attr(Of T), Attr(Of T))
+- uid: OpenSvg.Attributes.Attr`1.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Equality_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Attributes.Attr<T>.operator ==
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).=
+  nameWithType: Attr<T>.operator ==
+  nameWithType.vb: Attr(Of T).=
+- uid: OpenSvg.Attributes.Attr`1.op_Inequality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
+  name: operator !=(Attr<T>, Attr<T>)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Inequality_OpenSvg_Attributes_Attr__0__OpenSvg_Attributes_Attr__0__
+  commentId: M:OpenSvg.Attributes.Attr`1.op_Inequality(OpenSvg.Attributes.Attr{`0},OpenSvg.Attributes.Attr{`0})
+  name.vb: <>(Attr(Of T), Attr(Of T))
+  fullName: OpenSvg.Attributes.Attr<T>.operator !=(OpenSvg.Attributes.Attr<T>, OpenSvg.Attributes.Attr<T>)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).<>(OpenSvg.Attributes.Attr(Of T), OpenSvg.Attributes.Attr(Of T))
+  nameWithType: Attr<T>.operator !=(Attr<T>, Attr<T>)
+  nameWithType.vb: Attr(Of T).<>(Attr(Of T), Attr(Of T))
+- uid: OpenSvg.Attributes.Attr`1.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_op_Inequality_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Attributes.Attr<T>.operator !=
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).<>
+  nameWithType: Attr<T>.operator !=
+  nameWithType.vb: Attr(Of T).<>
 - uid: OpenSvg.Attributes.ColorAttr
   name: ColorAttr
   href: api/OpenSvg.Attributes.ColorAttr.html
   commentId: T:OpenSvg.Attributes.ColorAttr
   fullName: OpenSvg.Attributes.ColorAttr
   nameWithType: ColorAttr
-- uid: OpenSvg.Attributes.ColorAttr.#ctor(System.String,SkiaSharp.SKColor)
-  name: ColorAttr(string, SKColor)
-  href: api/OpenSvg.Attributes.ColorAttr.html#OpenSvg_Attributes_ColorAttr__ctor_System_String_SkiaSharp_SKColor_
-  commentId: M:OpenSvg.Attributes.ColorAttr.#ctor(System.String,SkiaSharp.SKColor)
-  name.vb: New(String, SKColor)
-  fullName: OpenSvg.Attributes.ColorAttr.ColorAttr(string, SkiaSharp.SKColor)
-  fullName.vb: OpenSvg.Attributes.ColorAttr.New(String, SkiaSharp.SKColor)
-  nameWithType: ColorAttr.ColorAttr(string, SKColor)
-  nameWithType.vb: ColorAttr.New(String, SKColor)
+- uid: OpenSvg.Attributes.ColorAttr.#ctor(System.String,SkiaSharp.SKColor,System.Boolean)
+  name: ColorAttr(string, SKColor, bool)
+  href: api/OpenSvg.Attributes.ColorAttr.html#OpenSvg_Attributes_ColorAttr__ctor_System_String_SkiaSharp_SKColor_System_Boolean_
+  commentId: M:OpenSvg.Attributes.ColorAttr.#ctor(System.String,SkiaSharp.SKColor,System.Boolean)
+  name.vb: New(String, SKColor, Boolean)
+  fullName: OpenSvg.Attributes.ColorAttr.ColorAttr(string, SkiaSharp.SKColor, bool)
+  fullName.vb: OpenSvg.Attributes.ColorAttr.New(String, SkiaSharp.SKColor, Boolean)
+  nameWithType: ColorAttr.ColorAttr(string, SKColor, bool)
+  nameWithType.vb: ColorAttr.New(String, SKColor, Boolean)
 - uid: OpenSvg.Attributes.ColorAttr.#ctor*
   name: ColorAttr
   href: api/OpenSvg.Attributes.ColorAttr.html#OpenSvg_Attributes_ColorAttr__ctor_
@@ -585,15 +628,6 @@ references:
   commentId: T:OpenSvg.Attributes.DoubleAttr
   fullName: OpenSvg.Attributes.DoubleAttr
   nameWithType: DoubleAttr
-- uid: OpenSvg.Attributes.DoubleAttr.#ctor(System.String,System.Double)
-  name: DoubleAttr(string, double)
-  href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr__ctor_System_String_System_Double_
-  commentId: M:OpenSvg.Attributes.DoubleAttr.#ctor(System.String,System.Double)
-  name.vb: New(String, Double)
-  fullName: OpenSvg.Attributes.DoubleAttr.DoubleAttr(string, double)
-  fullName.vb: OpenSvg.Attributes.DoubleAttr.New(String, Double)
-  nameWithType: DoubleAttr.DoubleAttr(string, double)
-  nameWithType.vb: DoubleAttr.New(String, Double)
 - uid: OpenSvg.Attributes.DoubleAttr.#ctor(System.String)
   name: DoubleAttr(string)
   href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr__ctor_System_String_
@@ -603,6 +637,15 @@ references:
   fullName.vb: OpenSvg.Attributes.DoubleAttr.New(String)
   nameWithType: DoubleAttr.DoubleAttr(string)
   nameWithType.vb: DoubleAttr.New(String)
+- uid: OpenSvg.Attributes.DoubleAttr.#ctor(System.String,System.Double)
+  name: DoubleAttr(string, double)
+  href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr__ctor_System_String_System_Double_
+  commentId: M:OpenSvg.Attributes.DoubleAttr.#ctor(System.String,System.Double)
+  name.vb: New(String, Double)
+  fullName: OpenSvg.Attributes.DoubleAttr.DoubleAttr(string, double)
+  fullName.vb: OpenSvg.Attributes.DoubleAttr.New(String, Double)
+  nameWithType: DoubleAttr.DoubleAttr(string, double)
+  nameWithType.vb: DoubleAttr.New(String, Double)
 - uid: OpenSvg.Attributes.DoubleAttr.#ctor*
   name: DoubleAttr
   href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr__ctor_
@@ -629,22 +672,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.DoubleAttr.Deserialize
   nameWithType: DoubleAttr.Deserialize
-- uid: OpenSvg.Attributes.DoubleAttr.Equals(OpenSvg.Attributes.Attr{System.Double})
-  name: Equals(Attr<double>?)
-  href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr_Equals_OpenSvg_Attributes_Attr_System_Double__
-  commentId: M:OpenSvg.Attributes.DoubleAttr.Equals(OpenSvg.Attributes.Attr{System.Double})
-  name.vb: Equals(Attr(Of Double))
-  fullName: OpenSvg.Attributes.DoubleAttr.Equals(OpenSvg.Attributes.Attr<double>?)
-  fullName.vb: OpenSvg.Attributes.DoubleAttr.Equals(OpenSvg.Attributes.Attr(Of Double))
-  nameWithType: DoubleAttr.Equals(Attr<double>?)
-  nameWithType.vb: DoubleAttr.Equals(Attr(Of Double))
-- uid: OpenSvg.Attributes.DoubleAttr.Equals*
-  name: Equals
-  href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr_Equals_
-  commentId: Overload:OpenSvg.Attributes.DoubleAttr.Equals
-  isSpec: "True"
-  fullName: OpenSvg.Attributes.DoubleAttr.Equals
-  nameWithType: DoubleAttr.Equals
 - uid: OpenSvg.Attributes.DoubleAttr.Serialize(System.Double)
   name: Serialize(double)
   href: api/OpenSvg.Attributes.DoubleAttr.html#OpenSvg_Attributes_DoubleAttr_Serialize_System_Double_
@@ -795,12 +822,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.PathAttr.Deserialize
   nameWithType: PathAttr.Deserialize
-- uid: OpenSvg.Attributes.PathAttr.Serialize(SkiaSharp.SKPath)
-  name: Serialize(SKPath)
-  href: api/OpenSvg.Attributes.PathAttr.html#OpenSvg_Attributes_PathAttr_Serialize_SkiaSharp_SKPath_
-  commentId: M:OpenSvg.Attributes.PathAttr.Serialize(SkiaSharp.SKPath)
-  fullName: OpenSvg.Attributes.PathAttr.Serialize(SkiaSharp.SKPath)
-  nameWithType: PathAttr.Serialize(SKPath)
+- uid: OpenSvg.Attributes.PathAttr.Serialize(OpenSvg.Path)
+  name: Serialize(Path)
+  href: api/OpenSvg.Attributes.PathAttr.html#OpenSvg_Attributes_PathAttr_Serialize_OpenSvg_Path_
+  commentId: M:OpenSvg.Attributes.PathAttr.Serialize(OpenSvg.Path)
+  fullName: OpenSvg.Attributes.PathAttr.Serialize(OpenSvg.Path)
+  nameWithType: PathAttr.Serialize(Path)
 - uid: OpenSvg.Attributes.PathAttr.Serialize*
   name: Serialize
   href: api/OpenSvg.Attributes.PathAttr.html#OpenSvg_Attributes_PathAttr_Serialize_
@@ -973,22 +1000,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.TransformAttr.Deserialize
   nameWithType: TransformAttr.Deserialize
-- uid: OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr{OpenSvg.Transform})
-  name: Equals(Attr<Transform>?)
-  href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_Equals_OpenSvg_Attributes_Attr_OpenSvg_Transform__
-  commentId: M:OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr{OpenSvg.Transform})
-  name.vb: Equals(Attr(Of Transform))
-  fullName: OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr<OpenSvg.Transform>?)
-  fullName.vb: OpenSvg.Attributes.TransformAttr.Equals(OpenSvg.Attributes.Attr(Of OpenSvg.Transform))
-  nameWithType: TransformAttr.Equals(Attr<Transform>?)
-  nameWithType.vb: TransformAttr.Equals(Attr(Of Transform))
-- uid: OpenSvg.Attributes.TransformAttr.Equals*
-  name: Equals
-  href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_Equals_
-  commentId: Overload:OpenSvg.Attributes.TransformAttr.Equals
-  isSpec: "True"
-  fullName: OpenSvg.Attributes.TransformAttr.Equals
-  nameWithType: TransformAttr.Equals
 - uid: OpenSvg.Attributes.TransformAttr.Serialize(OpenSvg.Transform)
   name: Serialize(Transform)
   href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_Serialize_OpenSvg_Transform_
@@ -1302,31 +1313,22 @@ references:
   commentId: T:OpenSvg.CommonTypeExtensions
   fullName: OpenSvg.CommonTypeExtensions
   nameWithType: CommonTypeExtensions
-- uid: OpenSvg.CommonTypeExtensions.RobustEquals(System.Double,System.Double,System.Double)
-  name: RobustEquals(double, double, double)
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_RobustEquals_System_Double_System_Double_System_Double_
-  commentId: M:OpenSvg.CommonTypeExtensions.RobustEquals(System.Double,System.Double,System.Double)
-  name.vb: RobustEquals(Double, Double, Double)
-  fullName: OpenSvg.CommonTypeExtensions.RobustEquals(double, double, double)
-  fullName.vb: OpenSvg.CommonTypeExtensions.RobustEquals(Double, Double, Double)
-  nameWithType: CommonTypeExtensions.RobustEquals(double, double, double)
-  nameWithType.vb: CommonTypeExtensions.RobustEquals(Double, Double, Double)
-- uid: OpenSvg.CommonTypeExtensions.RobustEquals(System.Single,System.Single,System.Double)
-  name: RobustEquals(float, float, double)
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_RobustEquals_System_Single_System_Single_System_Double_
-  commentId: M:OpenSvg.CommonTypeExtensions.RobustEquals(System.Single,System.Single,System.Double)
-  name.vb: RobustEquals(Single, Single, Double)
-  fullName: OpenSvg.CommonTypeExtensions.RobustEquals(float, float, double)
-  fullName.vb: OpenSvg.CommonTypeExtensions.RobustEquals(Single, Single, Double)
-  nameWithType: CommonTypeExtensions.RobustEquals(float, float, double)
-  nameWithType.vb: CommonTypeExtensions.RobustEquals(Single, Single, Double)
-- uid: OpenSvg.CommonTypeExtensions.RobustEquals*
-  name: RobustEquals
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_RobustEquals_
-  commentId: Overload:OpenSvg.CommonTypeExtensions.RobustEquals
+- uid: OpenSvg.CommonTypeExtensions.Round(System.Double)
+  name: Round(double)
+  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_Round_System_Double_
+  commentId: M:OpenSvg.CommonTypeExtensions.Round(System.Double)
+  name.vb: Round(Double)
+  fullName: OpenSvg.CommonTypeExtensions.Round(double)
+  fullName.vb: OpenSvg.CommonTypeExtensions.Round(Double)
+  nameWithType: CommonTypeExtensions.Round(double)
+  nameWithType.vb: CommonTypeExtensions.Round(Double)
+- uid: OpenSvg.CommonTypeExtensions.Round*
+  name: Round
+  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_Round_
+  commentId: Overload:OpenSvg.CommonTypeExtensions.Round
   isSpec: "True"
-  fullName: OpenSvg.CommonTypeExtensions.RobustEquals
-  nameWithType: CommonTypeExtensions.RobustEquals
+  fullName: OpenSvg.CommonTypeExtensions.Round
+  nameWithType: CommonTypeExtensions.Round
 - uid: OpenSvg.CommonTypeExtensions.ToDouble(System.String)
   name: ToDouble(string)
   href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToDouble_System_String_
@@ -1343,22 +1345,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.CommonTypeExtensions.ToDouble
   nameWithType: CommonTypeExtensions.ToDouble
-- uid: OpenSvg.CommonTypeExtensions.ToFloat(System.String)
-  name: ToFloat(string)
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToFloat_System_String_
-  commentId: M:OpenSvg.CommonTypeExtensions.ToFloat(System.String)
-  name.vb: ToFloat(String)
-  fullName: OpenSvg.CommonTypeExtensions.ToFloat(string)
-  fullName.vb: OpenSvg.CommonTypeExtensions.ToFloat(String)
-  nameWithType: CommonTypeExtensions.ToFloat(string)
-  nameWithType.vb: CommonTypeExtensions.ToFloat(String)
-- uid: OpenSvg.CommonTypeExtensions.ToFloat*
-  name: ToFloat
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToFloat_
-  commentId: Overload:OpenSvg.CommonTypeExtensions.ToFloat
-  isSpec: "True"
-  fullName: OpenSvg.CommonTypeExtensions.ToFloat
-  nameWithType: CommonTypeExtensions.ToFloat
 - uid: OpenSvg.CommonTypeExtensions.ToInt(System.String)
   name: ToInt(string)
   href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToInt_System_String_
@@ -2097,6 +2083,199 @@ references:
   commentId: F:OpenSvg.Orientation.Vertical
   fullName: OpenSvg.Orientation.Vertical
   nameWithType: Orientation.Vertical
+- uid: OpenSvg.Path
+  name: Path
+  href: api/OpenSvg.Path.html
+  commentId: T:OpenSvg.Path
+  fullName: OpenSvg.Path
+  nameWithType: Path
+- uid: OpenSvg.Path.#ctor
+  name: Path()
+  href: api/OpenSvg.Path.html#OpenSvg_Path__ctor
+  commentId: M:OpenSvg.Path.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Path.Path()
+  fullName.vb: OpenSvg.Path.New()
+  nameWithType: Path.Path()
+  nameWithType.vb: Path.New()
+- uid: OpenSvg.Path.#ctor(SkiaSharp.SKPath)
+  name: Path(SKPath)
+  href: api/OpenSvg.Path.html#OpenSvg_Path__ctor_SkiaSharp_SKPath_
+  commentId: M:OpenSvg.Path.#ctor(SkiaSharp.SKPath)
+  name.vb: New(SKPath)
+  fullName: OpenSvg.Path.Path(SkiaSharp.SKPath)
+  fullName.vb: OpenSvg.Path.New(SkiaSharp.SKPath)
+  nameWithType: Path.Path(SKPath)
+  nameWithType.vb: Path.New(SKPath)
+- uid: OpenSvg.Path.#ctor*
+  name: Path
+  href: api/OpenSvg.Path.html#OpenSvg_Path__ctor_
+  commentId: Overload:OpenSvg.Path.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Path.Path
+  fullName.vb: OpenSvg.Path.New
+  nameWithType: Path.Path
+  nameWithType.vb: Path.New
+- uid: OpenSvg.Path.ApproximatePathToPolygons(System.Int32)
+  name: ApproximatePathToPolygons(int)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ApproximatePathToPolygons_System_Int32_
+  commentId: M:OpenSvg.Path.ApproximatePathToPolygons(System.Int32)
+  name.vb: ApproximatePathToPolygons(Integer)
+  fullName: OpenSvg.Path.ApproximatePathToPolygons(int)
+  fullName.vb: OpenSvg.Path.ApproximatePathToPolygons(Integer)
+  nameWithType: Path.ApproximatePathToPolygons(int)
+  nameWithType.vb: Path.ApproximatePathToPolygons(Integer)
+- uid: OpenSvg.Path.ApproximatePathToPolygons*
+  name: ApproximatePathToPolygons
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ApproximatePathToPolygons_
+  commentId: Overload:OpenSvg.Path.ApproximatePathToPolygons
+  isSpec: "True"
+  fullName: OpenSvg.Path.ApproximatePathToPolygons
+  nameWithType: Path.ApproximatePathToPolygons
+- uid: OpenSvg.Path.ApproximateToMultiPolygon(System.Int32)
+  name: ApproximateToMultiPolygon(int)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ApproximateToMultiPolygon_System_Int32_
+  commentId: M:OpenSvg.Path.ApproximateToMultiPolygon(System.Int32)
+  name.vb: ApproximateToMultiPolygon(Integer)
+  fullName: OpenSvg.Path.ApproximateToMultiPolygon(int)
+  fullName.vb: OpenSvg.Path.ApproximateToMultiPolygon(Integer)
+  nameWithType: Path.ApproximateToMultiPolygon(int)
+  nameWithType.vb: Path.ApproximateToMultiPolygon(Integer)
+- uid: OpenSvg.Path.ApproximateToMultiPolygon*
+  name: ApproximateToMultiPolygon
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ApproximateToMultiPolygon_
+  commentId: Overload:OpenSvg.Path.ApproximateToMultiPolygon
+  isSpec: "True"
+  fullName: OpenSvg.Path.ApproximateToMultiPolygon
+  nameWithType: Path.ApproximateToMultiPolygon
+- uid: OpenSvg.Path.Dispose
+  name: Dispose()
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Dispose
+  commentId: M:OpenSvg.Path.Dispose
+  fullName: OpenSvg.Path.Dispose()
+  nameWithType: Path.Dispose()
+- uid: OpenSvg.Path.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Dispose_System_Boolean_
+  commentId: M:OpenSvg.Path.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: OpenSvg.Path.Dispose(bool)
+  fullName.vb: OpenSvg.Path.Dispose(Boolean)
+  nameWithType: Path.Dispose(bool)
+  nameWithType.vb: Path.Dispose(Boolean)
+- uid: OpenSvg.Path.Dispose*
+  name: Dispose
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Dispose_
+  commentId: Overload:OpenSvg.Path.Dispose
+  isSpec: "True"
+  fullName: OpenSvg.Path.Dispose
+  nameWithType: Path.Dispose
+- uid: OpenSvg.Path.Equals(OpenSvg.Path)
+  name: Equals(Path?)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Equals_OpenSvg_Path_
+  commentId: M:OpenSvg.Path.Equals(OpenSvg.Path)
+  name.vb: Equals(Path)
+  fullName: OpenSvg.Path.Equals(OpenSvg.Path?)
+  fullName.vb: OpenSvg.Path.Equals(OpenSvg.Path)
+  nameWithType: Path.Equals(Path?)
+  nameWithType.vb: Path.Equals(Path)
+- uid: OpenSvg.Path.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Equals_System_Object_
+  commentId: M:OpenSvg.Path.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Path.Equals(object?)
+  fullName.vb: OpenSvg.Path.Equals(Object)
+  nameWithType: Path.Equals(object?)
+  nameWithType.vb: Path.Equals(Object)
+- uid: OpenSvg.Path.Equals*
+  name: Equals
+  href: api/OpenSvg.Path.html#OpenSvg_Path_Equals_
+  commentId: Overload:OpenSvg.Path.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Path.Equals
+  nameWithType: Path.Equals
+- uid: OpenSvg.Path.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_FromXmlString_System_String_
+  commentId: M:OpenSvg.Path.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.Path.FromXmlString(string)
+  fullName.vb: OpenSvg.Path.FromXmlString(String)
+  nameWithType: Path.FromXmlString(string)
+  nameWithType.vb: Path.FromXmlString(String)
+- uid: OpenSvg.Path.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.Path.html#OpenSvg_Path_FromXmlString_
+  commentId: Overload:OpenSvg.Path.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Path.FromXmlString
+  nameWithType: Path.FromXmlString
+- uid: OpenSvg.Path.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Path.html#OpenSvg_Path_GetHashCode
+  commentId: M:OpenSvg.Path.GetHashCode
+  fullName: OpenSvg.Path.GetHashCode()
+  nameWithType: Path.GetHashCode()
+- uid: OpenSvg.Path.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Path.html#OpenSvg_Path_GetHashCode_
+  commentId: Overload:OpenSvg.Path.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Path.GetHashCode
+  nameWithType: Path.GetHashCode
+- uid: OpenSvg.Path.ToXmlString
+  name: ToXmlString()
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ToXmlString
+  commentId: M:OpenSvg.Path.ToXmlString
+  fullName: OpenSvg.Path.ToXmlString()
+  nameWithType: Path.ToXmlString()
+- uid: OpenSvg.Path.ToXmlString*
+  name: ToXmlString
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ToXmlString_
+  commentId: Overload:OpenSvg.Path.ToXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Path.ToXmlString
+  nameWithType: Path.ToXmlString
+- uid: OpenSvg.Path.op_Equality(OpenSvg.Path,OpenSvg.Path)
+  name: operator ==(Path?, Path?)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_op_Equality_OpenSvg_Path_OpenSvg_Path_
+  commentId: M:OpenSvg.Path.op_Equality(OpenSvg.Path,OpenSvg.Path)
+  name.vb: =(Path, Path)
+  fullName: OpenSvg.Path.operator ==(OpenSvg.Path?, OpenSvg.Path?)
+  fullName.vb: OpenSvg.Path.=(OpenSvg.Path, OpenSvg.Path)
+  nameWithType: Path.operator ==(Path?, Path?)
+  nameWithType.vb: Path.=(Path, Path)
+- uid: OpenSvg.Path.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Path.html#OpenSvg_Path_op_Equality_
+  commentId: Overload:OpenSvg.Path.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Path.operator ==
+  fullName.vb: OpenSvg.Path.=
+  nameWithType: Path.operator ==
+  nameWithType.vb: Path.=
+- uid: OpenSvg.Path.op_Inequality(OpenSvg.Path,OpenSvg.Path)
+  name: operator !=(Path?, Path?)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_op_Inequality_OpenSvg_Path_OpenSvg_Path_
+  commentId: M:OpenSvg.Path.op_Inequality(OpenSvg.Path,OpenSvg.Path)
+  name.vb: <>(Path, Path)
+  fullName: OpenSvg.Path.operator !=(OpenSvg.Path?, OpenSvg.Path?)
+  fullName.vb: OpenSvg.Path.<>(OpenSvg.Path, OpenSvg.Path)
+  nameWithType: Path.operator !=(Path?, Path?)
+  nameWithType.vb: Path.<>(Path, Path)
+- uid: OpenSvg.Path.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Path.html#OpenSvg_Path_op_Inequality_
+  commentId: Overload:OpenSvg.Path.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Path.operator !=
+  fullName.vb: OpenSvg.Path.<>
+  nameWithType: Path.operator !=
+  nameWithType.vb: Path.<>
 - uid: OpenSvg.Point
   name: Point
   href: api/OpenSvg.Point.html
@@ -2157,6 +2336,41 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Point.CompareTo
   nameWithType: Point.CompareTo
+- uid: OpenSvg.Point.Equals(OpenSvg.Point)
+  name: Equals(Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_Equals_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.Equals(OpenSvg.Point)
+  fullName: OpenSvg.Point.Equals(OpenSvg.Point)
+  nameWithType: Point.Equals(Point)
+- uid: OpenSvg.Point.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_Equals_System_Object_
+  commentId: M:OpenSvg.Point.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Point.Equals(object?)
+  fullName.vb: OpenSvg.Point.Equals(Object)
+  nameWithType: Point.Equals(object?)
+  nameWithType.vb: Point.Equals(Object)
+- uid: OpenSvg.Point.Equals*
+  name: Equals
+  href: api/OpenSvg.Point.html#OpenSvg_Point_Equals_
+  commentId: Overload:OpenSvg.Point.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Point.Equals
+  nameWithType: Point.Equals
+- uid: OpenSvg.Point.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Point.html#OpenSvg_Point_GetHashCode
+  commentId: M:OpenSvg.Point.GetHashCode
+  fullName: OpenSvg.Point.GetHashCode()
+  nameWithType: Point.GetHashCode()
+- uid: OpenSvg.Point.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Point.html#OpenSvg_Point_GetHashCode_
+  commentId: Overload:OpenSvg.Point.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Point.GetHashCode
+  nameWithType: Point.GetHashCode
 - uid: OpenSvg.Point.IsOnLineSegment(OpenSvg.Point,OpenSvg.Point)
   name: IsOnLineSegment(Point, Point)
   href: api/OpenSvg.Point.html#OpenSvg_Point_IsOnLineSegment_OpenSvg_Point_OpenSvg_Point_
@@ -2170,34 +2384,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Point.IsOnLineSegment
   nameWithType: Point.IsOnLineSegment
-- uid: OpenSvg.Point.op_Implicit(OpenSvg.Point)~System.ValueTuple{System.Double,System.Double}
-  name: implicit operator (double X, double Y)(Point)
-  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_OpenSvg_Point__System_ValueTuple_System_Double_System_Double_
-  commentId: M:OpenSvg.Point.op_Implicit(OpenSvg.Point)~System.ValueTuple{System.Double,System.Double}
-  name.vb: CType(Point)
-  fullName: OpenSvg.Point.implicit operator (double X, double Y)(OpenSvg.Point)
-  fullName.vb: OpenSvg.Point.CType(OpenSvg.Point)
-  nameWithType: Point.implicit operator (double X, double Y)(Point)
-  nameWithType.vb: Point.CType(Point)
-- uid: OpenSvg.Point.op_Implicit(System.ValueTuple{System.Double,System.Double})~OpenSvg.Point
-  name: implicit operator Point((double x, double y))
-  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_System_ValueTuple_System_Double_System_Double___OpenSvg_Point
-  commentId: M:OpenSvg.Point.op_Implicit(System.ValueTuple{System.Double,System.Double})~OpenSvg.Point
-  name.vb: CType((x As Double, y As Double))
-  fullName: OpenSvg.Point.implicit operator OpenSvg.Point((double x, double y))
-  fullName.vb: OpenSvg.Point.CType((x As Double, y As Double))
-  nameWithType: Point.implicit operator Point((double x, double y))
-  nameWithType.vb: Point.CType((x As Double, y As Double))
-- uid: OpenSvg.Point.op_Implicit*
-  name: implicit operator
-  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_
-  commentId: Overload:OpenSvg.Point.op_Implicit
-  isSpec: "True"
-  name.vb: CType
-  fullName: OpenSvg.Point.implicit operator
-  fullName.vb: OpenSvg.Point.CType
-  nameWithType: Point.implicit operator
-  nameWithType.vb: Point.CType
 - uid: OpenSvg.Point.Origin
   name: Origin
   href: api/OpenSvg.Point.html#OpenSvg_Point_Origin
@@ -2263,6 +2449,148 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Point.Y
   nameWithType: Point.Y
+- uid: OpenSvg.Point.op_Equality(OpenSvg.Point,OpenSvg.Point)
+  name: operator ==(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Equality_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_Equality(OpenSvg.Point,OpenSvg.Point)
+  name.vb: =(Point, Point)
+  fullName: OpenSvg.Point.operator ==(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.=(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator ==(Point, Point)
+  nameWithType.vb: Point.=(Point, Point)
+- uid: OpenSvg.Point.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Equality_
+  commentId: Overload:OpenSvg.Point.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Point.operator ==
+  fullName.vb: OpenSvg.Point.=
+  nameWithType: Point.operator ==
+  nameWithType.vb: Point.=
+- uid: OpenSvg.Point.op_GreaterThan(OpenSvg.Point,OpenSvg.Point)
+  name: operator >(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_GreaterThan_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_GreaterThan(OpenSvg.Point,OpenSvg.Point)
+  name.vb: '>(Point, Point)'
+  fullName: OpenSvg.Point.operator >(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.>(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator >(Point, Point)
+  nameWithType.vb: Point.>(Point, Point)
+- uid: OpenSvg.Point.op_GreaterThan*
+  name: operator >
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_GreaterThan_
+  commentId: Overload:OpenSvg.Point.op_GreaterThan
+  isSpec: "True"
+  name.vb: '>'
+  fullName: OpenSvg.Point.operator >
+  fullName.vb: OpenSvg.Point.>
+  nameWithType: Point.operator >
+  nameWithType.vb: Point.>
+- uid: OpenSvg.Point.op_GreaterThanOrEqual(OpenSvg.Point,OpenSvg.Point)
+  name: operator >=(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_GreaterThanOrEqual_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_GreaterThanOrEqual(OpenSvg.Point,OpenSvg.Point)
+  name.vb: '>=(Point, Point)'
+  fullName: OpenSvg.Point.operator >=(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.>=(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator >=(Point, Point)
+  nameWithType.vb: Point.>=(Point, Point)
+- uid: OpenSvg.Point.op_GreaterThanOrEqual*
+  name: operator >=
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_GreaterThanOrEqual_
+  commentId: Overload:OpenSvg.Point.op_GreaterThanOrEqual
+  isSpec: "True"
+  name.vb: '>='
+  fullName: OpenSvg.Point.operator >=
+  fullName.vb: OpenSvg.Point.>=
+  nameWithType: Point.operator >=
+  nameWithType.vb: Point.>=
+- uid: OpenSvg.Point.op_Implicit(OpenSvg.Point)~System.ValueTuple{System.Double,System.Double}
+  name: implicit operator (double X, double Y)(Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_OpenSvg_Point__System_ValueTuple_System_Double_System_Double_
+  commentId: M:OpenSvg.Point.op_Implicit(OpenSvg.Point)~System.ValueTuple{System.Double,System.Double}
+  name.vb: CType(Point)
+  fullName: OpenSvg.Point.implicit operator (double X, double Y)(OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.CType(OpenSvg.Point)
+  nameWithType: Point.implicit operator (double X, double Y)(Point)
+  nameWithType.vb: Point.CType(Point)
+- uid: OpenSvg.Point.op_Implicit(System.ValueTuple{System.Double,System.Double})~OpenSvg.Point
+  name: implicit operator Point((double x, double y))
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_System_ValueTuple_System_Double_System_Double___OpenSvg_Point
+  commentId: M:OpenSvg.Point.op_Implicit(System.ValueTuple{System.Double,System.Double})~OpenSvg.Point
+  name.vb: CType((x As Double, y As Double))
+  fullName: OpenSvg.Point.implicit operator OpenSvg.Point((double x, double y))
+  fullName.vb: OpenSvg.Point.CType((x As Double, y As Double))
+  nameWithType: Point.implicit operator Point((double x, double y))
+  nameWithType.vb: Point.CType((x As Double, y As Double))
+- uid: OpenSvg.Point.op_Implicit*
+  name: implicit operator
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Implicit_
+  commentId: Overload:OpenSvg.Point.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: OpenSvg.Point.implicit operator
+  fullName.vb: OpenSvg.Point.CType
+  nameWithType: Point.implicit operator
+  nameWithType.vb: Point.CType
+- uid: OpenSvg.Point.op_Inequality(OpenSvg.Point,OpenSvg.Point)
+  name: operator !=(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Inequality_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_Inequality(OpenSvg.Point,OpenSvg.Point)
+  name.vb: <>(Point, Point)
+  fullName: OpenSvg.Point.operator !=(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.<>(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator !=(Point, Point)
+  nameWithType.vb: Point.<>(Point, Point)
+- uid: OpenSvg.Point.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_Inequality_
+  commentId: Overload:OpenSvg.Point.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Point.operator !=
+  fullName.vb: OpenSvg.Point.<>
+  nameWithType: Point.operator !=
+  nameWithType.vb: Point.<>
+- uid: OpenSvg.Point.op_LessThan(OpenSvg.Point,OpenSvg.Point)
+  name: operator <(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_LessThan_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_LessThan(OpenSvg.Point,OpenSvg.Point)
+  name.vb: <(Point, Point)
+  fullName: OpenSvg.Point.operator <(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.<(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator <(Point, Point)
+  nameWithType.vb: Point.<(Point, Point)
+- uid: OpenSvg.Point.op_LessThan*
+  name: operator <
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_LessThan_
+  commentId: Overload:OpenSvg.Point.op_LessThan
+  isSpec: "True"
+  name.vb: <
+  fullName: OpenSvg.Point.operator <
+  fullName.vb: OpenSvg.Point.<
+  nameWithType: Point.operator <
+  nameWithType.vb: Point.<
+- uid: OpenSvg.Point.op_LessThanOrEqual(OpenSvg.Point,OpenSvg.Point)
+  name: operator <=(Point, Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_LessThanOrEqual_OpenSvg_Point_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.op_LessThanOrEqual(OpenSvg.Point,OpenSvg.Point)
+  name.vb: <=(Point, Point)
+  fullName: OpenSvg.Point.operator <=(OpenSvg.Point, OpenSvg.Point)
+  fullName.vb: OpenSvg.Point.<=(OpenSvg.Point, OpenSvg.Point)
+  nameWithType: Point.operator <=(Point, Point)
+  nameWithType.vb: Point.<=(Point, Point)
+- uid: OpenSvg.Point.op_LessThanOrEqual*
+  name: operator <=
+  href: api/OpenSvg.Point.html#OpenSvg_Point_op_LessThanOrEqual_
+  commentId: Overload:OpenSvg.Point.op_LessThanOrEqual
+  isSpec: "True"
+  name.vb: <=
+  fullName: OpenSvg.Point.operator <=
+  fullName.vb: OpenSvg.Point.<=
+  nameWithType: Point.operator <=
+  nameWithType.vb: Point.<=
 - uid: OpenSvg.PointRelation
   name: PointRelation
   href: api/OpenSvg.PointRelation.html
@@ -2332,6 +2660,47 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.Empty
   nameWithType: Polygon.Empty
+- uid: OpenSvg.Polygon.Equals(OpenSvg.Polygon)
+  name: Equals(Polygon?)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_OpenSvg_Polygon_
+  commentId: M:OpenSvg.Polygon.Equals(OpenSvg.Polygon)
+  name.vb: Equals(Polygon)
+  fullName: OpenSvg.Polygon.Equals(OpenSvg.Polygon?)
+  fullName.vb: OpenSvg.Polygon.Equals(OpenSvg.Polygon)
+  nameWithType: Polygon.Equals(Polygon?)
+  nameWithType.vb: Polygon.Equals(Polygon)
+- uid: OpenSvg.Polygon.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_System_Object_
+  commentId: M:OpenSvg.Polygon.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Polygon.Equals(object?)
+  fullName.vb: OpenSvg.Polygon.Equals(Object)
+  nameWithType: Polygon.Equals(object?)
+  nameWithType.vb: Polygon.Equals(Object)
+- uid: OpenSvg.Polygon.Equals*
+  name: Equals
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_
+  commentId: Overload:OpenSvg.Polygon.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.Equals
+  nameWithType: Polygon.Equals
+- uid: OpenSvg.Polygon.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_FromXmlString_System_String_
+  commentId: M:OpenSvg.Polygon.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.Polygon.FromXmlString(string)
+  fullName.vb: OpenSvg.Polygon.FromXmlString(String)
+  nameWithType: Polygon.FromXmlString(string)
+  nameWithType.vb: Polygon.FromXmlString(String)
+- uid: OpenSvg.Polygon.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_FromXmlString_
+  commentId: Overload:OpenSvg.Polygon.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.FromXmlString
+  nameWithType: Polygon.FromXmlString
 - uid: OpenSvg.Polygon.GetConvexHull
   name: GetConvexHull()
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetConvexHull
@@ -2345,6 +2714,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.GetConvexHull
   nameWithType: Polygon.GetConvexHull
+- uid: OpenSvg.Polygon.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetHashCode
+  commentId: M:OpenSvg.Polygon.GetHashCode
+  fullName: OpenSvg.Polygon.GetHashCode()
+  nameWithType: Polygon.GetHashCode()
+- uid: OpenSvg.Polygon.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetHashCode_
+  commentId: Overload:OpenSvg.Polygon.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.GetHashCode
+  nameWithType: Polygon.GetHashCode
 - uid: OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)
   name: IsOnEdge(Point)
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_IsOnEdge_OpenSvg_Point_
@@ -2390,6 +2772,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.ToString
   nameWithType: Polygon.ToString
+- uid: OpenSvg.Polygon.ToXmlString
+  name: ToXmlString()
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString
+  commentId: M:OpenSvg.Polygon.ToXmlString
+  fullName: OpenSvg.Polygon.ToXmlString()
+  nameWithType: Polygon.ToXmlString()
+- uid: OpenSvg.Polygon.ToXmlString*
+  name: ToXmlString
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString_
+  commentId: Overload:OpenSvg.Polygon.ToXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.ToXmlString
+  nameWithType: Polygon.ToXmlString
 - uid: OpenSvg.PolygonRelation
   name: PolygonRelation
   href: api/OpenSvg.PolygonRelation.html
@@ -3046,22 +3441,6 @@ references:
   commentId: T:OpenSvg.SvgNodes.SvgDocument
   fullName: OpenSvg.SvgNodes.SvgDocument
   nameWithType: SvgDocument
-- uid: OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgDocument.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgDocument.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgDocument.CompareSelfAndDescendants
-  nameWithType: SvgDocument.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
   name: DefinedViewPortHeight
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight
@@ -3074,6 +3453,19 @@ references:
   commentId: F:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
   fullName: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
   nameWithType: SvgDocument.DefinedViewPortWidth
+- uid: OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
+  name: EmbedFont(SvgFont)
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_EmbedFont_OpenSvg_SvgNodes_SvgFont_
+  commentId: M:OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
+  fullName: OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
+  nameWithType: SvgDocument.EmbedFont(SvgFont)
+- uid: OpenSvg.SvgNodes.SvgDocument.EmbedFont*
+  name: EmbedFont
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_EmbedFont_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.EmbedFont
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgDocument.EmbedFont
+  nameWithType: SvgDocument.EmbedFont
 - uid: OpenSvg.SvgNodes.SvgDocument.EmbeddedFont(System.String)
   name: EmbeddedFont(string)
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_EmbeddedFont_System_String_
@@ -3103,19 +3495,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.EmbeddedFonts
   nameWithType: SvgDocument.EmbeddedFonts
-- uid: OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
-  name: EmbedFont(SvgFont)
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_EmbedFont_OpenSvg_SvgNodes_SvgFont_
-  commentId: M:OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
-  fullName: OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
-  nameWithType: SvgDocument.EmbedFont(SvgFont)
-- uid: OpenSvg.SvgNodes.SvgDocument.EmbedFont*
-  name: EmbedFont
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_EmbedFont_
-  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.EmbedFont
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgDocument.EmbedFont
-  nameWithType: SvgDocument.EmbedFont
 - uid: OpenSvg.SvgNodes.SvgDocument.FromXDocument(System.Xml.Linq.XDocument)
   name: FromXDocument(XDocument)
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_FromXDocument_System_Xml_Linq_XDocument_
@@ -3245,22 +3624,44 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgElement.Attributes
   nameWithType: SvgElement.Attributes
-- uid: OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgElement.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgElement.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants
+- uid: OpenSvg.SvgNodes.SvgElement.Equals(OpenSvg.SvgNodes.SvgElement)
+  name: Equals(SvgElement?)
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_OpenSvg_SvgNodes_SvgElement_
+  commentId: M:OpenSvg.SvgNodes.SvgElement.Equals(OpenSvg.SvgNodes.SvgElement)
+  name.vb: Equals(SvgElement)
+  fullName: OpenSvg.SvgNodes.SvgElement.Equals(OpenSvg.SvgNodes.SvgElement?)
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.Equals(OpenSvg.SvgNodes.SvgElement)
+  nameWithType: SvgElement.Equals(SvgElement?)
+  nameWithType.vb: SvgElement.Equals(SvgElement)
+- uid: OpenSvg.SvgNodes.SvgElement.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_System_Object_
+  commentId: M:OpenSvg.SvgNodes.SvgElement.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.SvgNodes.SvgElement.Equals(object?)
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.Equals(Object)
+  nameWithType: SvgElement.Equals(object?)
+  nameWithType.vb: SvgElement.Equals(Object)
+- uid: OpenSvg.SvgNodes.SvgElement.Equals*
+  name: Equals
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.Equals
   isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgElement.CompareSelfAndDescendants
-  nameWithType: SvgElement.CompareSelfAndDescendants
+  fullName: OpenSvg.SvgNodes.SvgElement.Equals
+  nameWithType: SvgElement.Equals
+- uid: OpenSvg.SvgNodes.SvgElement.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetHashCode
+  commentId: M:OpenSvg.SvgNodes.SvgElement.GetHashCode
+  fullName: OpenSvg.SvgNodes.SvgElement.GetHashCode()
+  nameWithType: SvgElement.GetHashCode()
+- uid: OpenSvg.SvgNodes.SvgElement.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetHashCode_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgElement.GetHashCode
+  nameWithType: SvgElement.GetHashCode
 - uid: OpenSvg.SvgNodes.SvgElement.GetSchema
   name: GetSchema()
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_GetSchema
@@ -3277,16 +3678,25 @@ references:
 - uid: OpenSvg.SvgNodes.SvgElement.ID
   name: ID
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ID
-  commentId: P:OpenSvg.SvgNodes.SvgElement.ID
+  commentId: F:OpenSvg.SvgNodes.SvgElement.ID
   fullName: OpenSvg.SvgNodes.SvgElement.ID
   nameWithType: SvgElement.ID
-- uid: OpenSvg.SvgNodes.SvgElement.ID*
-  name: ID
-  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ID_
-  commentId: Overload:OpenSvg.SvgNodes.SvgElement.ID
+- uid: OpenSvg.SvgNodes.SvgElement.InformedEquals(OpenSvg.SvgNodes.SvgElement)
+  name: InformedEquals(SvgElement?)
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_InformedEquals_OpenSvg_SvgNodes_SvgElement_
+  commentId: M:OpenSvg.SvgNodes.SvgElement.InformedEquals(OpenSvg.SvgNodes.SvgElement)
+  name.vb: InformedEquals(SvgElement)
+  fullName: OpenSvg.SvgNodes.SvgElement.InformedEquals(OpenSvg.SvgNodes.SvgElement?)
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.InformedEquals(OpenSvg.SvgNodes.SvgElement)
+  nameWithType: SvgElement.InformedEquals(SvgElement?)
+  nameWithType.vb: SvgElement.InformedEquals(SvgElement)
+- uid: OpenSvg.SvgNodes.SvgElement.InformedEquals*
+  name: InformedEquals
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_InformedEquals_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.InformedEquals
   isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgElement.ID
-  nameWithType: SvgElement.ID
+  fullName: OpenSvg.SvgNodes.SvgElement.InformedEquals
+  nameWithType: SvgElement.InformedEquals
 - uid: OpenSvg.SvgNodes.SvgElement.Parent
   name: Parent
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Parent
@@ -3430,6 +3840,44 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgElement.WriteXml
   nameWithType: SvgElement.WriteXml
+- uid: OpenSvg.SvgNodes.SvgElement.op_Equality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
+  name: operator ==(SvgElement, SvgElement)
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Equality_OpenSvg_SvgNodes_SvgElement_OpenSvg_SvgNodes_SvgElement_
+  commentId: M:OpenSvg.SvgNodes.SvgElement.op_Equality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
+  name.vb: =(SvgElement, SvgElement)
+  fullName: OpenSvg.SvgNodes.SvgElement.operator ==(OpenSvg.SvgNodes.SvgElement, OpenSvg.SvgNodes.SvgElement)
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.=(OpenSvg.SvgNodes.SvgElement, OpenSvg.SvgNodes.SvgElement)
+  nameWithType: SvgElement.operator ==(SvgElement, SvgElement)
+  nameWithType.vb: SvgElement.=(SvgElement, SvgElement)
+- uid: OpenSvg.SvgNodes.SvgElement.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Equality_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.SvgNodes.SvgElement.operator ==
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.=
+  nameWithType: SvgElement.operator ==
+  nameWithType.vb: SvgElement.=
+- uid: OpenSvg.SvgNodes.SvgElement.op_Inequality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
+  name: operator !=(SvgElement?, SvgElement?)
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Inequality_OpenSvg_SvgNodes_SvgElement_OpenSvg_SvgNodes_SvgElement_
+  commentId: M:OpenSvg.SvgNodes.SvgElement.op_Inequality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
+  name.vb: <>(SvgElement, SvgElement)
+  fullName: OpenSvg.SvgNodes.SvgElement.operator !=(OpenSvg.SvgNodes.SvgElement?, OpenSvg.SvgNodes.SvgElement?)
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.<>(OpenSvg.SvgNodes.SvgElement, OpenSvg.SvgNodes.SvgElement)
+  nameWithType: SvgElement.operator !=(SvgElement?, SvgElement?)
+  nameWithType.vb: SvgElement.<>(SvgElement, SvgElement)
+- uid: OpenSvg.SvgNodes.SvgElement.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Inequality_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.SvgNodes.SvgElement.operator !=
+  fullName.vb: OpenSvg.SvgNodes.SvgElement.<>
+  nameWithType: SvgElement.operator !=
+  nameWithType.vb: SvgElement.<>
 - uid: OpenSvg.SvgNodes.SvgElementCollectionExtensions
   name: SvgElementCollectionExtensions
   href: api/OpenSvg.SvgNodes.SvgElementCollectionExtensions.html
@@ -3628,22 +4076,6 @@ references:
   commentId: T:OpenSvg.SvgNodes.SvgLine
   fullName: OpenSvg.SvgNodes.SvgLine
   nameWithType: SvgLine
-- uid: OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgLine.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgLine.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgLine.CompareSelfAndDescendants
-  nameWithType: SvgLine.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgLine.ComputeConvexHull
   name: ComputeConvexHull()
   href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_ComputeConvexHull
@@ -3789,22 +4221,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPath.ApproximateToMultiPolygon
   nameWithType: SvgPath.ApproximateToMultiPolygon
-- uid: OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgPath.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgPath.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgPath.CompareSelfAndDescendants
-  nameWithType: SvgPath.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgPath.ComputeConvexHull
   name: ComputeConvexHull()
   href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_ComputeConvexHull
@@ -3856,22 +4272,6 @@ references:
   commentId: T:OpenSvg.SvgNodes.SvgPolygon
   fullName: OpenSvg.SvgNodes.SvgPolygon
   nameWithType: SvgPolygon
-- uid: OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgPolygon.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgPolygon.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgPolygon.CompareSelfAndDescendants
-  nameWithType: SvgPolygon.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgPolygon.ComputeConvexHull
   name: ComputeConvexHull()
   href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_ComputeConvexHull
@@ -4185,22 +4585,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgVisual.BoundingBox
   nameWithType: SvgVisual.BoundingBox
-- uid: OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgVisual.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgVisual.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgVisual.CompareSelfAndDescendants
-  nameWithType: SvgVisual.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgVisual.ComputeConvexHull
   name: ComputeConvexHull()
   href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_ComputeConvexHull
@@ -4338,22 +4722,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgVisualContainer.Children
   nameWithType: SvgVisualContainer.Children
-- uid: OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name: CompareSelfAndDescendants(SvgElement, double)
-  href: api/OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_CompareSelfAndDescendants_OpenSvg_SvgNodes_SvgElement_System_Double_
-  commentId: M:OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement,System.Double)
-  name.vb: CompareSelfAndDescendants(SvgElement, Double)
-  fullName: OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, double)
-  fullName.vb: OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants(OpenSvg.SvgNodes.SvgElement, Double)
-  nameWithType: SvgVisualContainer.CompareSelfAndDescendants(SvgElement, double)
-  nameWithType.vb: SvgVisualContainer.CompareSelfAndDescendants(SvgElement, Double)
-- uid: OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants*
-  name: CompareSelfAndDescendants
-  href: api/OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_CompareSelfAndDescendants_
-  commentId: Overload:OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgVisualContainer.CompareSelfAndDescendants
-  nameWithType: SvgVisualContainer.CompareSelfAndDescendants
 - uid: OpenSvg.SvgNodes.SvgVisualContainer.ComputeConvexHull
   name: ComputeConvexHull()
   href: api/OpenSvg.SvgNodes.SvgVisualContainer.html#OpenSvg_SvgNodes_SvgVisualContainer_ComputeConvexHull
@@ -4551,44 +4919,6 @@ references:
   commentId: F:OpenSvg.Transform.Matrix
   fullName: OpenSvg.Transform.Matrix
   nameWithType: Transform.Matrix
-- uid: OpenSvg.Transform.op_Equality(OpenSvg.Transform,OpenSvg.Transform)
-  name: operator ==(Transform, Transform)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Equality_OpenSvg_Transform_OpenSvg_Transform_
-  commentId: M:OpenSvg.Transform.op_Equality(OpenSvg.Transform,OpenSvg.Transform)
-  name.vb: =(Transform, Transform)
-  fullName: OpenSvg.Transform.operator ==(OpenSvg.Transform, OpenSvg.Transform)
-  fullName.vb: OpenSvg.Transform.=(OpenSvg.Transform, OpenSvg.Transform)
-  nameWithType: Transform.operator ==(Transform, Transform)
-  nameWithType.vb: Transform.=(Transform, Transform)
-- uid: OpenSvg.Transform.op_Equality*
-  name: operator ==
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Equality_
-  commentId: Overload:OpenSvg.Transform.op_Equality
-  isSpec: "True"
-  name.vb: =
-  fullName: OpenSvg.Transform.operator ==
-  fullName.vb: OpenSvg.Transform.=
-  nameWithType: Transform.operator ==
-  nameWithType.vb: Transform.=
-- uid: OpenSvg.Transform.op_Inequality(OpenSvg.Transform,OpenSvg.Transform)
-  name: operator !=(Transform, Transform)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Inequality_OpenSvg_Transform_OpenSvg_Transform_
-  commentId: M:OpenSvg.Transform.op_Inequality(OpenSvg.Transform,OpenSvg.Transform)
-  name.vb: <>(Transform, Transform)
-  fullName: OpenSvg.Transform.operator !=(OpenSvg.Transform, OpenSvg.Transform)
-  fullName.vb: OpenSvg.Transform.<>(OpenSvg.Transform, OpenSvg.Transform)
-  nameWithType: Transform.operator !=(Transform, Transform)
-  nameWithType.vb: Transform.<>(Transform, Transform)
-- uid: OpenSvg.Transform.op_Inequality*
-  name: operator !=
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Inequality_
-  commentId: Overload:OpenSvg.Transform.op_Inequality
-  isSpec: "True"
-  name.vb: <>
-  fullName: OpenSvg.Transform.operator !=
-  fullName.vb: OpenSvg.Transform.<>
-  nameWithType: Transform.operator !=
-  nameWithType.vb: Transform.<>
 - uid: OpenSvg.Transform.Scale
   name: Scale
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_Scale
@@ -4654,6 +4984,44 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.Translation
   nameWithType: Transform.Translation
+- uid: OpenSvg.Transform.op_Equality(OpenSvg.Transform,OpenSvg.Transform)
+  name: operator ==(Transform, Transform)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Equality_OpenSvg_Transform_OpenSvg_Transform_
+  commentId: M:OpenSvg.Transform.op_Equality(OpenSvg.Transform,OpenSvg.Transform)
+  name.vb: =(Transform, Transform)
+  fullName: OpenSvg.Transform.operator ==(OpenSvg.Transform, OpenSvg.Transform)
+  fullName.vb: OpenSvg.Transform.=(OpenSvg.Transform, OpenSvg.Transform)
+  nameWithType: Transform.operator ==(Transform, Transform)
+  nameWithType.vb: Transform.=(Transform, Transform)
+- uid: OpenSvg.Transform.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Equality_
+  commentId: Overload:OpenSvg.Transform.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Transform.operator ==
+  fullName.vb: OpenSvg.Transform.=
+  nameWithType: Transform.operator ==
+  nameWithType.vb: Transform.=
+- uid: OpenSvg.Transform.op_Inequality(OpenSvg.Transform,OpenSvg.Transform)
+  name: operator !=(Transform, Transform)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Inequality_OpenSvg_Transform_OpenSvg_Transform_
+  commentId: M:OpenSvg.Transform.op_Inequality(OpenSvg.Transform,OpenSvg.Transform)
+  name.vb: <>(Transform, Transform)
+  fullName: OpenSvg.Transform.operator !=(OpenSvg.Transform, OpenSvg.Transform)
+  fullName.vb: OpenSvg.Transform.<>(OpenSvg.Transform, OpenSvg.Transform)
+  nameWithType: Transform.operator !=(Transform, Transform)
+  nameWithType.vb: Transform.<>(Transform, Transform)
+- uid: OpenSvg.Transform.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_op_Inequality_
+  commentId: Overload:OpenSvg.Transform.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Transform.operator !=
+  fullName.vb: OpenSvg.Transform.<>
+  nameWithType: Transform.operator !=
+  nameWithType.vb: Transform.<>
 - uid: OpenSvg.VerticalAlignment
   name: VerticalAlignment
   href: api/OpenSvg.VerticalAlignment.html
