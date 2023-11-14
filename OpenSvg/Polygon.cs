@@ -51,7 +51,14 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
     }
 
 
-  
+    /// <summary>
+    /// Creates a polygon from an XML string representation.
+    /// </summary>
+    /// <param name="xmlString">The XML string representing the polygon points.</param>
+    /// <returns>A new Polygon instance.</returns>
+    /// <exception cref="ArgumentException">Thrown when an invalid point is encountered in the SVG polygon data.</exception>
+    /// <exception cref="FormatException">Thrown when a coordinate in the SVG polygon data is invalid.</exception>
+
     public static Polygon FromXmlString(string xmlString) =>
         new(xmlString.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(pointStr =>
         {
@@ -90,6 +97,10 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
     public override bool Equals(object? obj) => base.Equals(obj);
     public override int GetHashCode() => base.GetHashCode();
 
+    /// <summary>
+    /// Converts the polygon to its XML string representation.
+    /// </summary>
+    /// <returns>A string representing the polygon in XML format.</returns>
 
     public string ToXmlString() 
         => string.Join(" ", this.Select(p => $"{p.X.ToXmlString()},{p.Y.ToXmlString()}"));

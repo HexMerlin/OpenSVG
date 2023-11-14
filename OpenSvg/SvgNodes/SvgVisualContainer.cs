@@ -2,6 +2,13 @@
 
 public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
 {
+    /// <summary>
+    /// Gets or sets the child elements of this <see cref="SvgVisualContainer"/>.
+    /// </summary>
+    /// <remarks>
+    /// This property holds a list of child <see cref="SvgElement"/> instances.
+    /// </remarks>
+
     public List<SvgElement> ChildElements { get; set; } = new();
 
     public void Add(SvgElement svgElement)
@@ -11,10 +18,11 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     }
 
 
-    /// <returns>
-    ///     Returns an enumerable of <see cref="SvgElement" /> containing the descendants (children
-    ///     and their children down to the leaf level) of the specified type
-    /// </returns>
+    /// <summary>
+    /// Retrieves all descendant elements of this <see cref="SvgVisualContainer"/>.
+    /// </summary>
+    /// <returns>An enumerable of <see cref="SvgElement"/> representing the descendants.</returns>
+
     public IEnumerable<SvgElement> Descendants()
     {
         foreach (SvgElement element in ChildElements)
@@ -29,7 +37,17 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
         }
     }
 
+    /// <summary>
+    /// Retrieves the direct children of this <see cref="SvgVisualContainer"/>.
+    /// </summary>
+    /// <returns>An enumerable of <see cref="SvgElement"/> representing the direct children.</returns>
+
     public IEnumerable<SvgElement> Children() => ChildElements;
+
+    /// <summary>
+    /// Adds a collection of <see cref="SvgElement"/> to the children of this <see cref="SvgVisualContainer"/>.
+    /// </summary>
+    /// <param name="svgElements">The collection of <see cref="SvgElement"/> to add.</param>
 
     public void AddAll(IEnumerable<SvgElement> svgElements)
     {
@@ -57,23 +75,4 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
 
     protected override ConvexHull ComputeConvexHull() => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
 
-    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-    //    double doublePrecision = Constants.DoublePrecision)
-    //{
-    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
-    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
-    //    if (!equal)
-    //        return (equal, message);
-    //    var sameType = (SvgVisualContainer)other;
-    //    if (ChildElements.Count != sameType.ChildElements.Count)
-    //        return (false, $"ChildElements count: {ChildElements.Count} != {sameType.ChildElements.Count}");
-    //    for (int i = 0; i < ChildElements.Count; i++)
-    //    {
-    //        (equal, message) = ChildElements[i].CompareSelfAndDescendants(sameType.ChildElements[i]);
-    //        if (!equal)
-    //            return (false, $"ChildElements[{i}]: {message}");
-    //    }
-
-    //    return (true, "Equal");
-    //}
 }

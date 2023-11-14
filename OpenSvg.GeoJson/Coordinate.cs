@@ -38,10 +38,11 @@ public record Coordinate(double Long, double Lat)
     }
 
     /// <summary>
-    ///     Gets the distance between two coordinates.
+    /// Calculates the distance to another coordinate.
     /// </summary>
-    /// <param name="coordinate">The coordinate.</param>
-    /// <returns>A double.</returns>
+    /// <param name="coordinate">The coordinate to calculate the distance to.</param>
+    /// <returns>The distance between the two coordinates in meters.</returns>
+
     public double DistanceTo(Coordinate coordinate)
     {
         // Define WGS84 ellipsoid

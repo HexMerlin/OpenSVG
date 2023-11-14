@@ -37,10 +37,10 @@ public class Path : IEquatable<Path>, IDisposable
     public string ToXmlString() => xmlString;
 
     /// <summary>
-    /// Approximates the path to a multi-polygon representation.
+    /// Approximates the path to a collection of polygons.
     /// </summary>
-    /// <param name="segments">The number of line segments to use for approximating Bezier curves.</param>
-    /// <returns>A MultiPolygon object representing the approximated path.</returns>
+    /// <param name="segments">The number of segments for approximating curves.</param>
+    /// <returns>An enumerable of polygons approximating the path.</returns>
 
     public MultiPolygon ApproximateToMultiPolygon(int segments) => new(ApproximatePathToPolygons(segments));
 
@@ -89,7 +89,7 @@ public class Path : IEquatable<Path>, IDisposable
 
 
     /// <summary>
-    ///     Approximates a quadratic Bezier curve using the De Casteljau's algorithm.
+    /// Approximates a quadratic Bezier curve using De Casteljau's algorithm.
     /// </summary>
     /// <param name="start">The start point of the curve.</param>
     /// <param name="control">The control point of the curve.</param>

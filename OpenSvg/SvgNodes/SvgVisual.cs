@@ -34,8 +34,21 @@ public abstract class SvgVisual : SvgElement
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</seealso>
     public readonly DoubleAttr StrokeWidth = new(SvgNames.StrokeWidth, 1);
 
+    /// <summary>
+    /// Gets the transformation attribute of this <see cref="SvgVisual"/> element.
+    /// </summary>
+    /// <remarks>
+    /// This attribute defines the transformation to be applied to the element.
+    /// </remarks>
+
     public readonly TransformAttr Transform = new();
 
+    /// <summary>
+    /// Gets or sets the drawing configuration for this <see cref="SvgVisual"/> element.
+    /// </summary>
+    /// <remarks>
+    /// This configuration includes fill color, stroke color, and stroke width.
+    /// </remarks>
 
     public DrawConfig DrawConfig
     {
@@ -48,7 +61,21 @@ public abstract class SvgVisual : SvgElement
         }
     }
 
+    /// <summary>
+    /// Gets the convex hull of this <see cref="SvgVisual"/> element.
+    /// </summary>
+    /// <remarks>
+    /// The convex hull is calculated based on the current transformation of the element.
+    /// </remarks>
+
     public ConvexHull ConvexHull => ComputeConvexHull().Transform(this.Transform.Get());
+
+    /// <summary>
+    /// Gets the bounding box of this <see cref="SvgVisual"/> element.
+    /// </summary>
+    /// <remarks>
+    /// The bounding box is derived from the convex hull of the element.
+    /// </remarks>
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox();
 
