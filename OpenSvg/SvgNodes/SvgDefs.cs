@@ -2,6 +2,9 @@
 
 namespace OpenSvg.SvgNodes;
 
+/// <summary>
+/// Represents a SVG 'defs' element that can contain definitions for reuse by other elements.
+/// </summary>
 public class SvgDefs : SvgElement, ISvgElementContainer
 {
     [XmlElement(SvgNames.Style, typeof(SvgCssStyle))]
@@ -22,9 +25,9 @@ public class SvgDefs : SvgElement, ISvgElementContainer
     }
 
     /// <summary>
-    ///     Adds an embedded font to the parent element.
+    /// Adds an embedded font to the SVG definitions.
     /// </summary>
-    /// <param name="svgFont">The font to add.</param>
+    /// <param name="svgFont">The font to embed.</param>
     public void AddEmbeddedFont(SvgFont svgFont)
     {
         SvgCssStyle? svgCssStyle = Descendants().OfType<SvgCssStyle>().FirstOrDefault();

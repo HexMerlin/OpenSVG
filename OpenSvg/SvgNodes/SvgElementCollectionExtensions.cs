@@ -1,7 +1,7 @@
 ﻿namespace OpenSvg.SvgNodes;
 
 /// <summary>
-///     Extension methods for collections of SvgShape.
+/// Provides extension methods for collections of <see cref="SvgElement"/>.
 /// </summary>
 public static class SvgElementCollectionExtensions
 {

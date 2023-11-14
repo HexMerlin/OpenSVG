@@ -33,9 +33,10 @@ public class SvgCssStyle : SvgStyle, IHasElementContent
 
 
     /// <summary>
-    ///     Adds an <see cref="SvgFont" /> element into the current SVG style.
+    /// Adds the specified <see cref="SvgFont"/> to the CSS style.
     /// </summary>
-    /// <param name="svgFont">The <see cref="SvgFont" /> element to add.</param>
+    /// <param name="svgFont">The SVG font to add.</param>
+    /// <exception cref="NotSupportedException">Thrown when adding more than one font.</exception>
     public void Add(SvgFont svgFont)
     {
         if (this.singleFont != null)

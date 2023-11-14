@@ -2,6 +2,9 @@
 
 namespace OpenSvg.SvgNodes;
 
+/// <summary>
+/// Represents an SVG line element.
+/// </summary>
 public class SvgLine : SvgVisual
 {
     public readonly DoubleAttr X1 = new(SvgNames.X1);

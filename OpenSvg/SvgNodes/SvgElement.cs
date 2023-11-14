@@ -6,6 +6,9 @@ using System.Xml.Serialization;
 
 namespace OpenSvg.SvgNodes;
 
+/// <summary>
+/// Represents the base class for all SVG elements.
+/// </summary>
 public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
 {
     public abstract string SvgName { get; }

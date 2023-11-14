@@ -5,6 +5,9 @@ using System.Xml.Serialization;
 
 namespace OpenSvg.SvgNodes;
 
+/// <summary>
+/// Represents a SVG document.
+/// </summary>
 [XmlRoot(ElementName = SvgNames.Svg, Namespace = SvgNames.SvgNamespace)]
 public class SvgDocument : SvgVisualContainer
 {
@@ -75,9 +78,9 @@ public class SvgDocument : SvgVisualContainer
 
 
     /// <summary>
-    ///     Adds the specified font to the SVG document.
+    /// Embeds a font into the SVG document.
     /// </summary>
-    /// <param name="svgFont">The font to add.</param>
+    /// <param name="svgFont">The SVG font to embed.</param>
     public void EmbedFont(SvgFont svgFont)
     {
         SvgDefs? svgDefs = Descendants().OfType<SvgDefs>().FirstOrDefault();
