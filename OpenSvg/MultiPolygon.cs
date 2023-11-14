@@ -1,5 +1,6 @@
 ﻿namespace OpenSvg;
 
+
 /// <summary>
 ///     Represents a collection of enclosed polygon groups.
 /// </summary>
@@ -79,7 +80,17 @@ public class MultiPolygon : List<EnclosedPolygonGroup>
     ///     Gets the bounding box that encloses all polygons in the <see cref="MultiPolygon" />.
     /// </summary>
     /// <returns>The bounding box enclosing all polygons.</returns>
+    /// <remarks>
+    ///     Computes the convex hull of all polygons in the <see cref="MultiPolygon" /> and returns its bounding box.
+    /// </remarks>
     public BoundingBox BoundingBox() => ComputeConvexHull().BoundingBox();
 
+    /// <summary>
+    ///     Computes the convex hull of all polygons in the <see cref="MultiPolygon" />.
+    /// </summary>
+    /// <returns>The convex hull of all polygons.</returns>
+    /// <remarks>
+    ///     The convex hull is computed using the QuickHull algorithm.
+    /// </remarks>
     public ConvexHull ComputeConvexHull() => new(this.SelectMany(polygonGroup => polygonGroup.ExteriorPolygon));
 }

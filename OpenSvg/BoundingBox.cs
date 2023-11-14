@@ -1,5 +1,6 @@
 ﻿namespace OpenSvg;
 
+
 /// <summary>
 ///     Represents a bounding box defined by two points.
 /// </summary>
@@ -7,20 +8,34 @@
 /// <param name="LowerRight">The LowerRight point.</param>
 public readonly struct BoundingBox
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BoundingBox"/> struct.
+    /// </summary>
     public BoundingBox()
     {
         this.UpperLeft = Point.Origin;
         this.LowerRight = Point.Origin;
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BoundingBox"/> struct.
+    /// </summary>
+    /// <param name="upperLeft">The upper left point.</param>
+    /// <param name="lowerRight">The lower right point.</param>
     public BoundingBox(Point upperLeft, Point lowerRight)
     {
         this.UpperLeft = upperLeft;
         this.LowerRight = lowerRight;
     }
 
+    /// <summary>
+    /// Gets the upper left point.
+    /// </summary>
     public readonly Point UpperLeft;
 
+    /// <summary>
+    /// Gets the lower right point.
+    /// </summary>
     public readonly Point LowerRight;
 
     /// <summary>
@@ -78,5 +93,9 @@ public readonly struct BoundingBox
     /// <returns>True if the bounding boxes intersect, false otherwise.</returns>
     public readonly bool Intersects(BoundingBox other) => !(MaxX < other.MinX || MinX > other.MaxX || MaxY < other.MinY || MinY > other.MaxY);
 
+    /// <summary>
+    /// Returns a string that represents the current object.
+    /// </summary>
+    /// <returns>A string that represents the current object.</returns>
     public override string ToString() => $"Upper left: {this.UpperLeft}, Lower right: {this.LowerRight}";
 }

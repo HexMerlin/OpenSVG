@@ -18,13 +18,15 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
     {
     }
 
+    /// <summary>
+    /// Returns an empty polygon.
+    /// </summary>
     public static Polygon Empty => new(Enumerable.Empty<Point>());
 
     /// <summary>
     /// Calculates the convex hull of the polygon.
     /// </summary>
     /// <returns>The convex hull as a ConvexHull object.</returns>
-
     public ConvexHull GetConvexHull() => new(this);
 
 
@@ -94,14 +96,16 @@ public partial class Polygon : List<Point>, IEquatable<Polygon>
         return true;
     }
 
+    ///<inheritdoc/>
     public override bool Equals(object? obj) => base.Equals(obj);
+
+    ///<inheritdoc/>
     public override int GetHashCode() => base.GetHashCode();
 
     /// <summary>
     /// Converts the polygon to its XML string representation.
     /// </summary>
     /// <returns>A string representing the polygon in XML format.</returns>
-
     public string ToXmlString() 
         => string.Join(" ", this.Select(p => $"{p.X.ToXmlString()},{p.Y.ToXmlString()}"));
 

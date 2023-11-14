@@ -3,8 +3,5 @@
 internal class Program
 {
 
-    public static void Main()
-    {
-        Console.WriteLine("Main");
-    }
+    public static void Main() => Console.WriteLine("Main");
 }

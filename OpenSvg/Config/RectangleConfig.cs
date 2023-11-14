@@ -69,6 +69,9 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
     /// <returns>A new RectangleConfig with the specified stroke color.</returns>
     public RectangleConfig WithStrokeColor(SKColor strokeColor) => this with { DrawConfig = DrawConfig.WithStrokeColor(strokeColor) };
 
+    /// <summary>
+    /// Creates a polygon from the rectangle config
+    /// </summary>
     public Polygon ToPolygon()
     {
         bool roundedCorners = CornerRadius > 0;

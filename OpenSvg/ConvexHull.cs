@@ -1,5 +1,6 @@
 ﻿namespace OpenSvg;
 
+
 /// <summary>
 ///     Represents a convex hull of points.
 ///     Provides specialized methods for manipulating and querying convex hulls.
@@ -38,7 +39,11 @@ public class ConvexHull : Polygon
     {
     }
 
-
+    /// <summary>
+    /// Transforms the convex hull by applying the specified transform.
+    /// </summary>
+    /// <param name="transform">The transform to apply.</param>
+    /// <returns>A new convex hull that is the result of applying the transform.</returns>
     public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), SkipGrahamScan.Yes);
 
     /// <summary>
@@ -75,6 +80,11 @@ public class ConvexHull : Polygon
         return hull;
     }
 
+    /// <summary>
+    /// Determines whether the specified collection of points forms a convex hull.
+    /// </summary>
+    /// <param name="points">The collection of points to check.</param>
+    /// <returns>True if the collection of points forms a convex hull, otherwise false.</returns>
     public static bool IsConvexHull(IEnumerable<Point> points)
     {
         var pointList = points.ToList();
@@ -107,6 +117,13 @@ public class ConvexHull : Polygon
         return true;
     }
 
+    /// <summary>
+    /// Calculates the cross product of three points.
+    /// </summary>
+    /// <param name="a">The first point.</param>
+    /// <param name="b">The second point.</param>
+    /// <param name="c">The third point.</param>
+    /// <returns>The cross product of the three points.</returns>
     private static double CrossProduct(Point a, Point b, Point c) => (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
 
     private enum SkipGrahamScan

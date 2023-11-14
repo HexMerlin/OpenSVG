@@ -2,13 +2,22 @@
 
 namespace OpenSvg;
 
+
 /// <summary>
 ///     Represents a point in a pixel coordinate system. The origin (0, 0) is at the top-left corner
 /// </summary>
 public readonly struct Point : IComparable<Point>, IEquatable<Point>
 {
+    /// <summary>
+    /// The X-coordinate of the point.
+    /// </summary>
+    /// <value>The X-coordinate of the point.</value>
     public double X { get; }
 
+    /// <summary>
+    /// The Y-coordinate of the point.
+    /// </summary>
+    /// <value>The Y-coordinate of the point.</value>
     public double Y { get; }
 
     /// <summary>
@@ -16,13 +25,16 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// </summary>
     /// <param name="x">The X-coordinate of the point.</param>
     /// <param name="y">The Y-coordinate of the point.</param>
-
     public Point(double x, double y)
     {
-        this.X = x.Round();
-        this.Y = y.Round();
+        X = x.Round();
+        Y = y.Round();
     }
 
+    /// <summary>
+    /// Initializes a new instance of the Point struct with specified X and Y coordinates.
+    /// </summary>
+    /// <param name="vector">The vector to convert to a point.</param>
     public Point(Vector2 vector) : this(vector.X, vector.Y)
     {
     }
@@ -30,10 +42,14 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <summary>
     ///     Gets the origin point at (0, 0).
     /// </summary>
+    /// <value>The origin point at (0, 0).</value>
     public static Point Origin => new(0, 0);
 
+    /// <summary>
+    /// Converts the point to a vector.
+    /// </summary>
+    /// <value>The point as a vector.</value>
     public Vector2 AsVector => new((float)X, (float)Y);
-
 
     /// <summary>
     ///     Points are ordered by Y, then X.
@@ -48,6 +64,8 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// // Output: (0, 10)
     /// ]]></code>
     /// </example>
+    /// <param name="other">The point to compare to.</param>
+    /// <returns>A value indicating the relative order of the points.</returns>
     public int CompareTo(Point other) => (Y, X).CompareTo((other.Y, other.X));
 
     /// <summary>
@@ -55,7 +73,6 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// </summary>
     /// <param name="transform">The transform to apply to the point.</param>
     /// <returns>The transformed point.</returns>
-
     public Point Transform(Transform transform) => new(Vector2.Transform(AsVector, transform.Matrix));
 
     /// <summary>
@@ -77,10 +94,18 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
         return Math.Abs(crossProduct) <= Tolerance;
     }
 
-    public readonly bool Equals(Point other) => X.Equals(other.X) && Y.Equals(other.Y);
-
+    /// <summary>
+    /// Implicitly converts a tuple of doubles to a point.
+    /// </summary>
+    /// <param name="tuple">The tuple to convert.</param>
+    /// <returns>The converted point.</returns>
     public static implicit operator Point((double x, double y) tuple) => new(tuple.x, tuple.y);
 
+    /// <summary>
+    /// Implicitly converts a point to a tuple of doubles.
+    /// </summary>
+    /// <param name="p">The point to convert.</param>
+    /// <returns>The converted tuple.</returns>
     public static implicit operator (double X, double Y)(Point p) => (p.X, p.Y);
 
     /// <summary>
@@ -89,19 +114,72 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <returns>A string representation of this object</returns>
     public override string ToString() => $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
 
+    /// <summary>
+    /// Determines whether the specified object is equal to the current point.
+    /// </summary>
+    /// <param name="obj">The object to compare with the current point.</param>
+    /// <returns>True if the specified object is equal to the current point; otherwise, false.</returns>
     public override bool Equals(object obj) => obj is Point other && Equals(other);
 
+    /// <summary>
+    /// Determines whether the specified point is equal to the current point.
+    /// </summary>
+    /// <param name="other">The point to compare with the current point.</param>
+    /// <returns>True if the specified point is equal to the current point; otherwise, false.</returns>
+    public readonly bool Equals(Point other) => X.Equals(other.X) && Y.Equals(other.Y);
+
+    /// <summary>
+    /// Returns a hash code for the current point.
+    /// </summary>
+    /// <returns>A hash code for the current point.</returns>
     public override int GetHashCode() => HashCode.Combine(X, Y);
 
+    /// <summary>
+    /// Determines whether two points are equal.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the two points are equal; otherwise, false.</returns>
     public static bool operator ==(Point left, Point right) => left.Equals(right);
 
+    /// <summary>
+    /// Determines whether two points are not equal.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the two points are not equal; otherwise, false.</returns>
     public static bool operator !=(Point left, Point right) => !(left == right);
 
+    /// <summary>
+    /// Determines whether the first point is less than the second point.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the first point is less than the second point; otherwise, false.</returns>
     public static bool operator <(Point left, Point right) => left.CompareTo(right) < 0;
 
+    /// <summary>
+    /// Determines whether the first point is less than or equal to the second point.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the first point is less than or equal to the second point; otherwise, false.</returns>
     public static bool operator <=(Point left, Point right) => left.CompareTo(right) <= 0;
 
+    /// <summary>
+    /// Determines whether the first point is greater than the second point.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the first point is greater than the second point; otherwise, false.</returns>
     public static bool operator >(Point left, Point right) => left.CompareTo(right) > 0;
 
+    /// <summary>
+    /// Determines whether the first point is greater than or equal to the second point.
+    /// </summary>
+    /// <param name="left">The first point to compare.</param>
+    /// <param name="right">The second point to compare.</param>
+    /// <returns>True if the first point is greater than or equal to the second point; otherwise, false.</returns>
     public static bool operator >=(Point left, Point right) => left.CompareTo(right) >= 0;
+
 }

@@ -12,15 +12,26 @@ namespace OpenSvg.SvgNodes;
 public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
 {
     public abstract string SvgName { get; }
-
+    /// <summary>
+    /// Gets or sets the ID of the element.
+    /// </summary>
     public readonly StringAttr ID = new(SvgNames.ID, "", false);
 
+    /// <summary>
+    /// Gets the root document of the element.
+    /// </summary>
     public SvgDocument RootDocument => Root as SvgDocument ??
                                        throw new InvalidOperationException(
                                            "Element does not have a SvgDocument as root element");
 
+    /// <summary>
+    /// Gets the root element of the element.
+    /// </summary>
     public SvgElement Root => Parent?.Root ?? this;
 
+    /// <summary>
+    /// Gets or sets the parent element of the element.
+    /// </summary>
     public SvgElement? Parent { get; set; } = null;
 
 
@@ -207,12 +218,12 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
            return (false, $"{Descr} Content: {hasElementContent.Content} != {((IHasElementContent)other).Content}");
         if (this is ISvgElementContainer svgElementContainer)
         {
-            var c1 = svgElementContainer.Children().ToArray();
-            var c2 = ((ISvgElementContainer)other).Children().ToArray();
+            SvgElement[] c1 = svgElementContainer.Children().ToArray();
+            SvgElement[] c2 = ((ISvgElementContainer)other).Children().ToArray();
             if (c1.Length != c2.Length) return (false, $"{Descr} Child count: {c1.Length} != {c2.Length}");
             for (int i = 0; i < c1.Length; i++)
             {
-                var (equal, diffMessage) = c1[i].InformedEquals(c2[i]);
+                (bool equal, string diffMessage) = c1[i].InformedEquals(c2[i]);
                 if (!equal) return (false, diffMessage);
             }
 

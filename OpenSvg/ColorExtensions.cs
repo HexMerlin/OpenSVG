@@ -3,6 +3,7 @@ using System.Reflection;
 
 namespace OpenSvg;
 
+
 /// <summary>
 ///     Provides extension methods for SKColor to support hexadecimal color codes.
 /// </summary>
@@ -74,6 +75,11 @@ public static class ColorExtensions
         return $"#{color.Red:X2}{color.Green:X2}{color.Blue:X2}";
     }
 
+    /// <summary>
+    ///     Returns a string representation of the given <see cref="SKColor" />.
+    /// </summary>
+    /// <param name="color">The <see cref="SKColor" /> instance to be converted.</param>
+    /// <returns>A string that represents the given color.</returns>
     public static string ToString(this SKColor color) => color.ToHexColorString();
 
     /// <summary>
