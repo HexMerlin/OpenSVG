@@ -15,11 +15,14 @@ public class SvgDocument : SvgVisualContainer
 
     public readonly AbsoluteOrRatioAttr DefinedViewPortWidth = new(SvgNames.Width);
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Svg;
 
+    /// <inheritdoc/>
     public override double ViewPortWidth => this.DefinedViewPortWidth.Get()
         .Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Size.Width);
 
+    /// <inheritdoc/>
     public override double ViewPortHeight => this.DefinedViewPortHeight.Get()
         .Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Size.Height);
 

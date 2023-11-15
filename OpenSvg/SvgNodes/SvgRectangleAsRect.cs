@@ -18,6 +18,7 @@ public class SvgRectangleAsRect : SvgVisual
 
     public readonly DoubleAttr Y = new(SvgNames.Y);
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Rect;
 
     public RectangleConfig RectangleConfig

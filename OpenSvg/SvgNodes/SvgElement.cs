@@ -6,12 +6,17 @@ using System.Xml.Serialization;
 
 namespace OpenSvg.SvgNodes;
 
+
 /// <summary>
 /// Represents the base class for all SVG elements.
 /// </summary>
 public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
 {
+    /// <summary>
+    /// Gets or sets the name of the SVG element.
+    /// </summary>
     public abstract string SvgName { get; }
+
     /// <summary>
     /// Gets or sets the ID of the element.
     /// </summary>
@@ -34,9 +39,8 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// </summary>
     public SvgElement? Parent { get; set; } = null;
 
-
     /// <summary>
-    ///     Gets the current viewport for the element.
+    /// Gets the current viewport for the element.
     /// </summary>
     /// <remarks>
     ///     <list type="bullet">
@@ -64,17 +68,29 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// <seealso cref="ViewPortHeight" />
     /// <seealso cref="Constants.DefaultContainerWidth" />
     /// <seealso cref="Constants.DefaultContainerHeight" />
-
     public Size ViewPort => new(ViewPortWidth, ViewPortHeight);
 
-
+    /// <summary>
+    /// Gets the width of the current viewport for the element.
+    /// </summary>
     public virtual double ViewPortWidth => Parent?.ViewPortWidth ?? Constants.DefaultContainerWidth;
 
+    /// <summary>
+    /// Gets the height of the current viewport for the element.
+    /// </summary>
     public virtual double ViewPortHeight => Parent?.ViewPortHeight ?? Constants.DefaultContainerHeight;
 
+    /// <summary>
+    /// Gets the schema for the element.
+    /// Required by interface <see cref="IXmlSerializable"/>.
+    /// </summary>
+    /// <returns><c>null</c></returns>
     public XmlSchema? GetSchema() => null;
 
-
+    /// <summary>
+    /// Writes the XML representation of the element to the specified writer.
+    /// </summary>
+    /// <param name="writer">The writer to which the element is written.</param>
     public void WriteXml(XmlWriter writer)
     {
         foreach (IAttr? attribute in Attributes().Where(attribute => !attribute.HasDefaultValue)
@@ -92,7 +108,10 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             }
     }
 
-
+    /// <summary>
+    /// Reads the XML representation of the element from the specified reader.
+    /// </summary>
+    /// <param name="reader">The reader from which the element is read.</param>
     public void ReadXml(XmlReader reader)
     {
         if (reader.MoveToContent() != XmlNodeType.Element)
@@ -137,13 +156,11 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         }
     }
 
-
     /// <summary>
-    ///     Encapsulates the current <see cref="SvgElement" /> in an <see cref="SvgGroup" />.
+    /// Encapsulates the current <see cref="SvgElement" /> in an <see cref="SvgGroup" /> if it is not already a <see cref="SvgGroup"/>.
     /// </summary>
     /// <returns>
-    ///     An instance of <see cref="SvgGroup" /> if the current object is an <see cref="SvgGroup" /> or a new
-    ///     <see cref="SvgGroup" /> object created from the current object.
+    ///     A new instance of <see cref="SvgGroup" /> containing this instance as a child, or this instance if it already is a <see cref="SvgGroup"/>.
     /// </returns>
     public SvgGroup ToSvgGroup()
     {
@@ -153,6 +170,12 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         return newSvgGroup;
     }
 
+    /// <summary>
+    /// Encapsulates the current <see cref="SvgElement" /> in an <see cref="SvgDocument" /> if it is not already a <see cref="SvgDocument"/>.
+    /// </summary>
+    /// <returns>
+    ///     A new instance of <see cref="SvgDocument" /> containing this instance as a child, or this instance if it already is a <see cref="SvgDocument"/>.
+    /// </returns>
     public SvgDocument ToSvgDocument()
     {
         if (this is SvgDocument svgDocument) return svgDocument;
@@ -161,9 +184,10 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         return newSvgSvgDocument;
     }
 
-
-
-
+    /// <summary>
+    /// Gets the attributes of the element.
+    /// </summary>
+    /// <returns>The attributes of the element.</returns>
     public IEnumerable<IAttr> Attributes() => GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
             .Select(field => field.GetValue(this)).OfType<IAttr>();
 
@@ -179,21 +203,37 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         SvgNames.Style => new SvgCssStyle(),
         _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")
     };
+
+    /// <summary>
+    /// Determines whether the specified object is equal to the current object.
+    /// </summary>
+    /// <param name="obj">The object to compare with the current object.</param>
+    /// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+    public override bool Equals(object? obj) => Equals(obj as SvgElement);
+
+    /// <summary>
+    /// Determines whether the specified object is equal to the current object.
+    /// </summary>
+    /// <param name="other">The object to compare with the current object.</param>
+    /// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
     public bool Equals(SvgElement? other)
     {
         if (other is null) return false;
         if (ReferenceEquals(this, other)) return true;
         if (GetType() != other.GetType()) return false;
-        if (! Attributes().SequenceEqual(other.Attributes()) ) return false;
-        if (this is IHasElementContent hasElementContent)
-            if (hasElementContent.Content != ((IHasElementContent) other).Content) return false;
-        if (this is ISvgElementContainer svgElementContainer)
-            if (!svgElementContainer.Children().SequenceEqual(((ISvgElementContainer) other).Children())) return false;
+        if (!Attributes().SequenceEqual(other.Attributes())) return false;
+        if (this is IHasElementContent hasElementContent && hasElementContent.Content != ((IHasElementContent)other).Content)
+            return false;
+        if (this is ISvgElementContainer svgElementContainer && !svgElementContainer.Children().SequenceEqual(((ISvgElementContainer)other).Children()))
+            return false;
         return true;
     }
 
-    public override bool Equals(object? obj) => Equals(obj as SvgElement);
-
+    /// <summary>
+    /// Verbose comparison of two SvgElements, including all attributes and child elements.
+    /// </summary>
+    /// <param name="other">The object to compare with the current object.</param>
+    /// <returns>A tuple containing a boolean indicating whether the specified object is equal to the current object and a message describing the differences.</returns>
     public (bool equal, string diffMessage) InformedEquals(SvgElement? other)
     {
         string Descr = $"Element {SvgName}:";
@@ -208,14 +248,14 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         {
             IAttr a1 = attributes1[i];
             IAttr a2 = attributes2[i];
-           
-            if (a1.Name != a2.Name) return (false, $"{Descr} Attribute {i+1}: {a1.Name} != {a2.Name}");
-            if (!a1.Equals(a2)) 
-                return (false, $"{Descr} Attribute {a1.Name}:\n{a1.ToXmlString()} !=\n{a2.ToXmlString()}"); 
+
+            if (a1.Name != a2.Name) return (false, $"{Descr} Attribute {i + 1}: {a1.Name} != {a2.Name}");
+            if (!a1.Equals(a2))
+                return (false, $"{Descr} Attribute {a1.Name}:\n{a1.ToXmlString()} !=\n{a2.ToXmlString()}");
         }
 
         if (this is IHasElementContent hasElementContent && hasElementContent.Content != ((IHasElementContent)other).Content)
-           return (false, $"{Descr} Content: {hasElementContent.Content} != {((IHasElementContent)other).Content}");
+            return (false, $"{Descr} Content: {hasElementContent.Content} != {((IHasElementContent)other).Content}");
         if (this is ISvgElementContainer svgElementContainer)
         {
             SvgElement[] c1 = svgElementContainer.Children().ToArray();
@@ -231,12 +271,13 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         return (true, "equal");
     }
 
-    
     public static bool operator ==(SvgElement left, SvgElement right) => left.Equals(right);
 
-    public static bool operator !=(SvgElement? left, SvgElement? right) => !left.Equals(right);
+    public static bool operator !=(SvgElement left, SvgElement right) => !left.Equals(right);
+
+    /// <summary>
+    /// Returns a hash code for the current object.
+    /// </summary>
+    /// <returns>A hash code for the current object.</returns>
     public override int GetHashCode() => HashCode.Combine(SvgName, ID.Get());
-
-   
-
 }

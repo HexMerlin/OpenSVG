@@ -16,11 +16,13 @@ public class SvgCssStyle : SvgStyle, IHasElementContent
 
     private SvgFont? singleFont;
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Style;
 
 
     public IReadOnlyList<SvgFont> Fonts => this.singleFont is null ? Array.Empty<SvgFont>() : new[] { this.singleFont };
 
+    /// <inheritdoc/>
     public string Content
     {
         get => this.singleFont is null ? "" : this.singleFont.XText;

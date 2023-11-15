@@ -21,6 +21,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
         this.Path.Set(ConvertTextToSkPath(textConfig));
     }
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Path;
 
     public void Dispose() => this.Path.Get().Dispose();

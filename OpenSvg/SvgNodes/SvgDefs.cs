@@ -10,6 +10,7 @@ public class SvgDefs : SvgElement, ISvgElementContainer
     [XmlElement(SvgNames.Style, typeof(SvgCssStyle))]
     public List<SvgStyle> ChildElements { get; set; } = new();
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Defs;
 
     public void Add(SvgElement child) => Add((SvgStyle)child);

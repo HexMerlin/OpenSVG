@@ -28,9 +28,7 @@ public class SvgLine : SvgVisual
     /// </summary>
     public readonly DoubleAttr Y2 = new(SvgNames.Y2);
 
-    /// <summary>
-    /// Gets the name of the SVG line element.
-    /// </summary>
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Line;
 
     /// <summary>

@@ -2,6 +2,7 @@
 
 namespace OpenSvg;
 
+
 /// <summary>
 ///     Represents a 2D transformation matrix applied to graphical elements.
 /// </summary>
@@ -14,7 +15,11 @@ public readonly struct Transform : IEquatable<Transform>
     /// </summary>
     public static Transform Identity => new(Matrix3x2.Identity);
 
-    private Transform(Matrix3x2 matrix) 
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="Transform"/> struct.
+    /// </summary>
+    /// <param name="matrix">The matrix.</param>
+    private Transform(Matrix3x2 matrix)
     {
         static float R(float value) => (float)Math.Round(value, Constants.DoubleDecimalPrecision);
         Matrix = new Matrix3x2(R(matrix.M11), R(matrix.M12), R(matrix.M21), R(matrix.M22), R(matrix.M31), R(matrix.M32));
@@ -23,7 +28,7 @@ public readonly struct Transform : IEquatable<Transform>
     /// <summary>
     ///     Gets the translation components of the transform.
     /// </summary>
-    public (double dx, double dy) Translation => (this.Matrix.Translation.X, this.Matrix.Translation.Y);
+    public (double dx, double dy) Translation => (this.Matrix.M31, this.Matrix.M32);
 
     /// <summary>
     ///     Gets the scale components of the transform.
@@ -89,22 +94,64 @@ public readonly struct Transform : IEquatable<Transform>
     /// <returns>A new transform that applies both transforms in sequence.</returns>
     public Transform ComposeWith(Transform other) => new(Matrix3x2.Multiply(this.Matrix, other.Matrix));
 
+    /// <summary>
+    /// Converts degrees to radians.
+    /// </summary>
+    /// <param name="degrees">Degrees to convert</param>
     private static float ToRad(double degrees) => (float)(Math.PI * degrees / 180.0);
 
+    /// <summary>
+    /// Converts radians to degrees.
+    /// </summary>
+    /// <param name="radians">Radians to convert</param>
     private static double ToDeg(double radians) => radians * (180.0 / Math.PI);
 
 
-    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";
-
+    /// <summary>
+    ///     Returns a string that represents the current object.
+    /// </summary>
+    /// <returns>A string that represents the current object.</returns>
     public override string ToString() => ToXmlString();
 
-    public bool Equals(Transform other) => this.Matrix.Equals(other.Matrix);
-
+    /// <summary>
+    ///     Determines whether the specified object is equal to the current object.
+    /// </summary>
+    /// <param name="obj">The object to compare with the current object.</param>
+    /// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
     public override bool Equals(object? obj) => obj is Transform transform && Equals(transform);
 
+    /// <summary>
+    ///     Serves as the default hash function.
+    /// </summary>
+    /// <returns>A hash code for the current object.</returns>
     public override int GetHashCode() => this.Matrix.GetHashCode();
 
+    /// <summary>
+    ///     Determines whether the specified <see cref="Transform"/> is equal to the current <see cref="Transform"/>.
+    /// </summary>
+    /// <param name="other">The <see cref="Transform"/> to compare with the current <see cref="Transform"/>.</param>
+    /// <returns>true if the specified <see cref="Transform"/> is equal to the current <see cref="Transform"/>; otherwise, false.</returns>
+    public bool Equals(Transform other) => this.Matrix.Equals(other.Matrix);
+
+    /// <summary>
+    ///     Gets the XML string representation of this <see cref="Transform"/>.
+    /// </summary>
+    /// <returns>The XML string representation of this <see cref="Transform"/>.</returns>
+    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";
+
+    /// <summary>
+    ///     Determines whether two specified instances of <see cref="Transform"/> are equal.
+    /// </summary>
+    /// <param name="left">The first <see cref="Transform"/> to compare.</param>
+    /// <param name="right">The second <see cref="Transform"/> to compare.</param>
+    /// <returns>true if <paramref name="left"/> and <paramref name="right"/> represent the same <see cref="Transform"/>; otherwise, false.</returns>
     public static bool operator ==(Transform left, Transform right) => left.Equals(right);
 
+    /// <summary>
+    ///     Determines whether two specified instances of <see cref="Transform"/> are not equal.
+    /// </summary>
+    /// <param name="left">The first <see cref="Transform"/> to compare.</param>
+    /// <param name="right">The second <see cref="Transform"/> to compare.</param>
+    /// <returns>true if <paramref name="left"/> and <paramref name="right"/> do not represent the same <see cref="Transform"/>; otherwise, false.</returns>
     public static bool operator !=(Transform left, Transform right) => !(left == right);
 }

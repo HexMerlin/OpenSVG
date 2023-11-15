@@ -4,6 +4,11 @@ using SkiaSharp;
 
 namespace OpenSvg.SvgNodes;
 
+
+/// <summary>
+///     Represents an SVG element that can be rendered.
+///     It has a convex hull, a bounding box and a size
+/// </summary>
 public abstract class SvgVisual : SvgElement
 {
     /// <summary>
@@ -49,7 +54,6 @@ public abstract class SvgVisual : SvgElement
     /// <remarks>
     /// This configuration includes fill color, stroke color, and stroke width.
     /// </remarks>
-
     public DrawConfig DrawConfig
     {
         get => new(this.FillColor.Get(), this.StrokeColor.Get(), this.StrokeWidth.Get());
@@ -67,11 +71,10 @@ public abstract class SvgVisual : SvgElement
     /// <remarks>
     /// The convex hull is calculated based on the current transformation of the element.
     /// </remarks>
-
     public ConvexHull ConvexHull => ComputeConvexHull().Transform(this.Transform.Get());
 
     /// <summary>
-    /// Gets the bounding box of this <see cref="SvgVisual"/> element.
+    /// Gets the rectangular bounding box of this <see cref="SvgVisual"/> element.
     /// </summary>
     /// <remarks>
     /// The bounding box is derived from the convex hull of the element.

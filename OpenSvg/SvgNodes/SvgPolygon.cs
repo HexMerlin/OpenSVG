@@ -9,8 +9,10 @@ public class SvgPolygon : SvgVisual
 {
     public readonly PolygonAttr Polygon = new();
 
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Polygon;
 
+    /// <inheritdoc/>
     protected override ConvexHull ComputeConvexHull() => new(this.Polygon.Get());
 
 }

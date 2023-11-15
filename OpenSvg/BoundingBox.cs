@@ -4,8 +4,6 @@
 /// <summary>
 ///     Represents a bounding box defined by two points.
 /// </summary>
-/// <param name="UpperLeft">The UpperLeft point.</param>
-/// <param name="LowerRight">The LowerRight point.</param>
 public readonly struct BoundingBox
 {
     /// <summary>

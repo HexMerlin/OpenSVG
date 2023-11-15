@@ -8,14 +8,23 @@ namespace OpenSvg.Attributes;
 /// </summary>
 public class TransformAttr : Attr<Transform>
 {
+    /// <summary>
+    /// Constructs a new instance of <see cref="TransformAttr"/> with a default identity <see cref="Transform"/>.
+    /// </summary>
     public TransformAttr() : base(SvgNames.Transform, Transform.Identity, false)
     {
     }
 
+    ///<summary>
+    ///     Adds a new transform to the current transform.
+    ///</summary>
+    ///<param name="transform">The transform to add.</param>
     public void ComposeWith(Transform transform) => Set(Get().ComposeWith(transform));
 
+    /// <inheritdoc />
     protected override string Serialize(Transform value) => value.ToXmlString();
 
+    /// <inheritdoc />
     protected override Transform Deserialize(string xmlString)
     {
         Transform result = Transform.Identity;

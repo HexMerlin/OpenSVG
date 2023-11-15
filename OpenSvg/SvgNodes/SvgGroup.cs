@@ -5,5 +5,6 @@
 /// </summary>
 public class SvgGroup : SvgVisualContainer
 {
+    /// <inheritdoc/>
     public override string SvgName => SvgNames.Group;
 }

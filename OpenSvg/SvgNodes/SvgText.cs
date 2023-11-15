@@ -4,6 +4,9 @@ using SkiaSharp;
 
 namespace OpenSvg.SvgNodes;
 
+/// <summary>
+///     Represents a SVG 'text' element
+/// </summary>
 public class SvgText : SvgVisual, IHasElementContent
 {
     /// <summary>
@@ -28,21 +31,29 @@ public class SvgText : SvgVisual, IHasElementContent
     /// <seealso href="https://www.w3.org/TR/CSS2/fonts.html#font-size-props">SVG 1.1 Font size</seealso>
     public readonly DoubleAttr FontSize = new(SvgNames.FontSize, 16);
 
-
+    /// <summary>
+    /// Attribute for getting or setting X position of this element
+    /// </summary>
     public readonly DoubleAttr X = new(SvgNames.X);
 
+    /// <summary>
+    /// Attribute for getting or setting Y position of this element
+    /// </summary>
     public readonly DoubleAttr Y = new(SvgNames.Y);
 
     private Point offset = Point.Origin;
 
     private Size size = new(0, 0);
 
+    /// <summary>
+    ///     Constructs a new empty instance of a <see cref="SvgText" />
+    /// </summary>
     public SvgText()
     {
     }
 
     /// <summary>
-    ///     Initializes a new instance of the <see cref="SvgText" /> using the provided <see cref="TextConfig" />
+    ///     Constructs a new instance of the <see cref="SvgText" /> using the provided <see cref="TextConfig" />
     /// </summary>
     /// <remarks>
     ///     The <see cref="SvgFont" /> provided in the <see cref="TextConfig" /> will be embedded in the provided SVG document
@@ -51,8 +62,12 @@ public class SvgText : SvgVisual, IHasElementContent
     /// <param name="textConfig">A <see cref="TextConfig" /> object providing properties for the text.</param>
     public SvgText(TextConfig textConfig) => TextConfig = textConfig;
 
+    ///<inheritdoc/>
     public override string SvgName => SvgNames.Text;
 
+    /// <summary>
+    /// Setting or getting the text configuration for this <see cref="SvgText"/> element.
+    /// </summary>
     public TextConfig TextConfig
     {
         get

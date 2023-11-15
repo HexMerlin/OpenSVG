@@ -1,5 +1,8 @@
 ﻿namespace OpenSvg.SvgNodes;
 
+/// <summary>
+///     Represents a visual SVG element that can contain other element as children.
+/// </summary>
 public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
 {
     /// <summary>
@@ -8,21 +11,22 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     /// <remarks>
     /// This property holds a list of child <see cref="SvgElement"/> instances.
     /// </remarks>
-
     public List<SvgElement> ChildElements { get; set; } = new();
 
-    public void Add(SvgElement svgElement)
-    {
-        svgElement.Parent = this;
-        ChildElements.Add(svgElement);
-    }
+    
 
+
+
+    /// <summary>
+    /// Retrieves the children of this <see cref="SvgVisualContainer"/>.
+    /// </summary>
+    /// <returns>An enumerable of <see cref="SvgElement"/> representing the direct children.</returns>
+    public IEnumerable<SvgElement> Children() => ChildElements;
 
     /// <summary>
     /// Retrieves all descendant elements of this <see cref="SvgVisualContainer"/>.
     /// </summary>
     /// <returns>An enumerable of <see cref="SvgElement"/> representing the descendants.</returns>
-
     public IEnumerable<SvgElement> Descendants()
     {
         foreach (SvgElement element in ChildElements)
@@ -38,14 +42,17 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     }
 
     /// <summary>
-    /// Retrieves the direct children of this <see cref="SvgVisualContainer"/>.
+    /// Adds a <see cref="SvgElement"/> as a child of this <see cref="SvgVisualContainer"/>.
     /// </summary>
-    /// <returns>An enumerable of <see cref="SvgElement"/> representing the direct children.</returns>
-
-    public IEnumerable<SvgElement> Children() => ChildElements;
+    /// <param name="svgElement"></param>
+    public void Add(SvgElement svgElement)
+    {
+        svgElement.Parent = this;
+        ChildElements.Add(svgElement);
+    }
 
     /// <summary>
-    /// Adds a collection of <see cref="SvgElement"/> to the children of this <see cref="SvgVisualContainer"/>.
+    /// Adds a collection of <see cref="SvgElement"/> as children of this <see cref="SvgVisualContainer"/>.
     /// </summary>
     /// <param name="svgElements">The collection of <see cref="SvgElement"/> to add.</param>
 
@@ -73,6 +80,7 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
         Add(child);
     }
 
+    ///<inheritdoc/>
     protected override ConvexHull ComputeConvexHull() => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
 
 }
