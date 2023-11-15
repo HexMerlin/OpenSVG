@@ -101,7 +101,8 @@
 
   <h1 id="OpenSvg_VerticalAlignment" data-uid="OpenSvg.VerticalAlignment" class="text-break">Enum VerticalAlignment
 </h1>
-  <div class="markdown level0 summary"><p>Specifies the vertical alignment of a <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element relative to a reference element.</p>
+  <div class="markdown level0 summary"><p>Specifies the vertical alignment of a <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element relative to a reference element.
+Used by <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_AlignRelativeTo_OpenSvg_SvgNodes_SvgVisual_System_Nullable_OpenSvg_HorizontalAlignment__System_Nullable_OpenSvg_VerticalAlignment__">AlignRelativeTo(SvgVisual, HorizontalAlignment?, VerticalAlignment?)</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a></h6>
@@ -110,20 +111,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public enum VerticalAlignment</code></pre>
   </div>
-  <h5 id="OpenSvg_VerticalAlignment_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>The alignment determines the vertical position of the element in relation to a reference bounding box.</p>
-<ul><li><span class="term">
-            <a class="xref" href="OpenSvg.VerticalAlignment.html#OpenSvg_VerticalAlignment_InsideUp">InsideUp</a>
-        </span>Align the top edge of the element with the top edge of the reference.</li><li><span class="term">
-            <a class="xref" href="OpenSvg.VerticalAlignment.html#OpenSvg_VerticalAlignment_Center">Center</a>
-        </span>Align the vertical center of the element with the vertical center of the reference.</li><li><span class="term">
-            <a class="xref" href="OpenSvg.VerticalAlignment.html#OpenSvg_VerticalAlignment_InsideDown">InsideDown</a>
-        </span>Align the bottom edge of the element with the bottom edge of the reference.</li><li><span class="term">
-            <a class="xref" href="OpenSvg.VerticalAlignment.html#OpenSvg_VerticalAlignment_OutsideUp">OutsideUp</a>
-        </span>Place the element above the reference, aligning its bottom edge with the reference's top edge.</li><li><span class="term">
-            <a class="xref" href="OpenSvg.VerticalAlignment.html#OpenSvg_VerticalAlignment_OutsideDown">OutsideDown</a>
-        </span>Place the element below the reference, aligning its top edge with the reference's bottom edge.</li></ul>
-</div>
   <h3 id="fields">Fields
 </h3>
   <table class="table table-bordered table-condensed">
@@ -135,28 +122,48 @@
     <thead>
     <tbody>
       <tr>
-        <td id="OpenSvg_VerticalAlignment_Center">Center</td>
-        <td><p>Align the vertical center of the element with the vertical center of the reference.</p>
+        <td id="OpenSvg_VerticalAlignment_BottomWithBottom">BottomWithBottom</td>
+        <td><p>Align the <code>bottom edge</code> of the element with the <code>bottom edge</code> of the reference.</p>
 </td>
       </tr>
       <tr>
-        <td id="OpenSvg_VerticalAlignment_InsideDown">InsideDown</td>
-        <td><p>Align the bottom edge of the element with the bottom edge of the reference.</p>
+        <td id="OpenSvg_VerticalAlignment_BottomWithCenter">BottomWithCenter</td>
+        <td><p>Align the <code>bottom edge</code> of the element with the <code>vertical center</code> of the reference.</p>
 </td>
       </tr>
       <tr>
-        <td id="OpenSvg_VerticalAlignment_InsideUp">InsideUp</td>
-        <td><p>Align the top edge of the element with the top edge of the reference.</p>
+        <td id="OpenSvg_VerticalAlignment_BottomWithTop">BottomWithTop</td>
+        <td><p>Align the <code>bottom edge</code> of the element with the <code>top edge</code> of the reference.</p>
 </td>
       </tr>
       <tr>
-        <td id="OpenSvg_VerticalAlignment_OutsideDown">OutsideDown</td>
-        <td><p>Place the element below the reference, aligning its top edge with the reference's bottom edge.</p>
+        <td id="OpenSvg_VerticalAlignment_CenterWithBottom">CenterWithBottom</td>
+        <td><p>Align the <code>vertical center</code> of the element with the <code>bottom edge</code> of the reference.</p>
 </td>
       </tr>
       <tr>
-        <td id="OpenSvg_VerticalAlignment_OutsideUp">OutsideUp</td>
-        <td><p>Place the element above the reference, aligning its bottom edge with the reference's top edge.</p>
+        <td id="OpenSvg_VerticalAlignment_CenterWithCenter">CenterWithCenter</td>
+        <td><p>Align the <code>vertical center</code> of the element with the <code>vertical center</code> of the reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_VerticalAlignment_CenterWithTop">CenterWithTop</td>
+        <td><p>Align the <code>vertical center</code> of the element with the <code>top edge</code> of the reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_VerticalAlignment_TopWithBottom">TopWithBottom</td>
+        <td><p>Align the <code>top edge</code> of the element with the <code>bottom edge</code> of the reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_VerticalAlignment_TopWithCenter">TopWithCenter</td>
+        <td><p>Align the <code>top edge</code> of the element with the <code>vertical center</code> of the reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="OpenSvg_VerticalAlignment_TopWithTop">TopWithTop</td>
+        <td><p>Align the <code>top edge</code> of the element with the <code>top edge</code> of the reference.</p>
 </td>
       </tr>
     </tbody>
@@ -164,6 +171,7 @@
   <h5 id="OpenSvg_VerticalAlignment_seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a></div>
+      <div><a class="xref" href="OpenSvg.HorizontalAlignment.html">HorizontalAlignment</a></div>
   </div>
 </article>
                 </div>

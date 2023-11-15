@@ -20,7 +20,7 @@ public static class SvgElementCollectionExtensions
     /// <summary>
     ///     Creates a new SvgGroup element from a SvgElement collection
     ///     and stacking the elements in the specified orientation.
-    ///     If the orientation is <see cref="Orientation.Orientation"/>, the elements are stacked horizontally, from left to right.
+    ///     If the orientation is <see cref="Orientation.Horizontal"/>, the elements are stacked horizontally, from left to right.
     ///     If the orientation is <see cref="Orientation.Vertical"/>, the elements are stacked vertically, from top to bottom."/>
     /// </summary>
     /// <param name="orientation">The orientation of the elements in the collection.</param>
