@@ -7,63 +7,46 @@ namespace OpenSvg;
 
 /// <summary>
 ///     Specifies the vertical alignment of a <see cref="SvgVisual" /> element relative to a reference element.
+///     Used by <see cref="SvgVisual.AlignRelativeTo" />.
 /// </summary>
-/// <remarks>
-///     The alignment determines the vertical position of the element in relation to a reference bounding box.
-///     <list type="bullet">
-///         <item>
-///             <term>
-///                 <see cref="VerticalAlignment.InsideUp" />
-///             </term>
-///             <description>Align the top edge of the element with the top edge of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="VerticalAlignment.Center" />
-///             </term>
-///             <description>Align the vertical center of the element with the vertical center of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="VerticalAlignment.InsideDown" />
-///             </term>
-///             <description>Align the bottom edge of the element with the bottom edge of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="VerticalAlignment.OutsideUp" />
-///             </term>
-///             <description>Place the element above the reference, aligning its bottom edge with the reference's top edge.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="VerticalAlignment.OutsideDown" />
-///             </term>
-///             <description>Place the element below the reference, aligning its top edge with the reference's bottom edge.</description>
-///         </item>
-///     </list>
-/// </remarks>
 /// <seealso cref="SvgVisual"/>
+/// <seealso cref="HorizontalAlignment"/>
 public enum VerticalAlignment
 {
     /// <summary>
-    /// Align the top edge of the element with the top edge of the reference.
+    ///     Align the <c>top edge</c> of the element with the <c>top edge</c> of the reference.
     /// </summary>
-    InsideUp,
+    TopWithTop,
     /// <summary>
-    /// Align the vertical center of the element with the vertical center of the reference.
+    ///     Align the <c>top edge</c> of the element with the <c>vertical center</c> of the reference.
     /// </summary>
-    Center,
+    TopWithCenter,
     /// <summary>
-    /// Align the bottom edge of the element with the bottom edge of the reference.
+    ///     Align the <c>top edge</c> of the element with the <c>bottom edge</c> of the reference.
     /// </summary>
-    InsideDown,
+    TopWithBottom,
     /// <summary>
-    /// Place the element above the reference, aligning its bottom edge with the reference's top edge.
+    ///     Align the <c>vertical center</c> of the element with the <c>top edge</c> of the reference.
     /// </summary>
-    OutsideUp,
+    CenterWithTop,
     /// <summary>
-    /// Place the element below the reference, aligning its top edge with the reference's bottom edge.
+    ///     Align the <c>vertical center</c> of the element with the <c>vertical center</c> of the reference.
     /// </summary>
-    OutsideDown
+    CenterWithCenter,
+    /// <summary>
+    ///     Align the <c>vertical center</c> of the element with the <c>bottom edge</c> of the reference.
+    /// </summary>
+    CenterWithBottom,
+    /// <summary>
+    ///     Align the <c>bottom edge</c> of the element with the <c>top edge</c> of the reference.
+    /// </summary>
+    BottomWithTop,
+    /// <summary>
+    ///     Align the <c>bottom edge</c> of the element with the <c>vertical center</c> of the reference.
+    /// </summary>
+    BottomWithCenter,
+    /// <summary>
+    ///     Align the <c>bottom edge</c> of the element with the <c>bottom edge</c> of the reference.
+    /// </summary>
+    BottomWithBottom,
 }

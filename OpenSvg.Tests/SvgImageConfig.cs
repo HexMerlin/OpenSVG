@@ -31,22 +31,22 @@ public record SvgImageConfig
             .ToSvgPolygon()
             .ToSvgGroup();
         badge.AddChildWithAlignment(BadgeTextConfig.WithText(badgeText).WithTextColor(badgeTextColor).ToSvgPath(),
-            HorizontalAlignment.Center, VerticalAlignment.Center);
+            HorizontalAlignment.CenterWithCenter, VerticalAlignment.CenterWithCenter);
 
         var from = SmallRectConfig
             .ToSvgPolygon()
             .ToSvgGroup();
-        from.AddChildWithAlignment(SmallTextConfig.WithText(fromText).ToSvgPath(), HorizontalAlignment.InsideLeft,
-            VerticalAlignment.InsideUp);
+        from.AddChildWithAlignment(SmallTextConfig.WithText(fromText).ToSvgPath(), HorizontalAlignment.LeftWithLeft,
+            VerticalAlignment.TopWithTop);
 
         var to = SmallRectConfig
             .ToSvgPolygon()
             .ToSvgGroup();
-        to.AddChildWithAlignment(SmallTextConfig.WithText(toText).ToSvgPath(), HorizontalAlignment.InsideLeft,
-            VerticalAlignment.InsideDown);
+        to.AddChildWithAlignment(SmallTextConfig.WithText(toText).ToSvgPath(), HorizontalAlignment.LeftWithLeft,
+            VerticalAlignment.BottomWithBottom);
 
         SvgGroup verticalGroup = new[] { from, to }.Stack(Orientation.Vertical);
-        verticalGroup.AlignRelativeTo(badge, verticalAlignment: VerticalAlignment.Center);
+        verticalGroup.AlignRelativeTo(badge, verticalAlignment: VerticalAlignment.CenterWithCenter);
         var delimiter = RectangleConfig.Transparent(new Size(40, 10)).ToSvgPolygon();
 
         SvgGroup horizontalGroup = new SvgVisual[] { badge, delimiter, verticalGroup }.Stack(Orientation.Horizontal);
@@ -61,7 +61,7 @@ public record SvgImageConfig
             var rect = RectangleConfig.Transparent(new Size(width, height)).ToSvgPolygon();
             var line = new RectangleConfig(new Size(width, strokeWidth),
                 new DrawConfig(SKColors.White, SKColors.Transparent, 0)).ToSvgPolygon();
-            line.AlignRelativeTo(rect, HorizontalAlignment.Center, VerticalAlignment.Center);
+            line.AlignRelativeTo(rect, HorizontalAlignment.CenterWithCenter, VerticalAlignment.CenterWithCenter);
             return new[] { rect, line }.Group();
         }
 

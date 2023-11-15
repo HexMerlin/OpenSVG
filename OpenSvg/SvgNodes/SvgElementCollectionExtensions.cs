@@ -20,6 +20,8 @@ public static class SvgElementCollectionExtensions
     /// <summary>
     ///     Creates a new SvgGroup element from a SvgElement collection
     ///     and stacking the elements in the specified orientation.
+    ///     If the orientation is <see cref="Orientation.Orientation"/>, the elements are stacked horizontally, from left to right.
+    ///     If the orientation is <see cref="Orientation.Vertical"/>, the elements are stacked vertically, from top to bottom."/>
     /// </summary>
     /// <param name="orientation">The orientation of the elements in the collection.</param>
     /// <param name="svgVisuals">The collection of type SvgElement.</param>
@@ -27,9 +29,9 @@ public static class SvgElementCollectionExtensions
     public static SvgGroup Stack(this IEnumerable<SvgVisual> svgVisuals, Orientation orientation)
     {
         HorizontalAlignment? horizontalAlignment =
-            orientation == Orientation.Horizontal ? HorizontalAlignment.OutsideRight : null;
+            orientation == Orientation.Horizontal ? HorizontalAlignment.LeftWithRight : null;
         VerticalAlignment? verticalAlignment =
-            orientation == Orientation.Vertical ? VerticalAlignment.OutsideDown : null;
+            orientation == Orientation.Vertical ? VerticalAlignment.TopWithBottom : null;
         var svgGroup = new SvgGroup();
 
         foreach (SvgVisual svgVisual in svgVisuals)

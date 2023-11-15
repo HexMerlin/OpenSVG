@@ -31,10 +31,10 @@ public readonly struct Transform : IEquatable<Transform>
     public (double scaleX, double scaleY) Scale => (this.Matrix.M11, this.Matrix.M22);
 
     /// <summary>
-    ///     Gets the skew components of the transform in radians.
+    ///     Gets the skew components of the transform in degrees.
     /// </summary>
     public (double skewXDegrees, double skewYDegrees) Skew =>
-        (Math.Atan2(this.Matrix.M21, this.Matrix.M11), Math.Atan2(this.Matrix.M12, this.Matrix.M22));
+        (ToDeg(Math.Atan2(this.Matrix.M21, this.Matrix.M11)), ToDeg(Math.Atan2(this.Matrix.M12, this.Matrix.M22)));
 
     /// <summary>
     ///     Creates a translation transform that moves an element along the x and y-axis.
@@ -90,6 +90,8 @@ public readonly struct Transform : IEquatable<Transform>
     public Transform ComposeWith(Transform other) => new(Matrix3x2.Multiply(this.Matrix, other.Matrix));
 
     private static float ToRad(double degrees) => (float)(Math.PI * degrees / 180.0);
+
+    private static double ToDeg(double radians) => radians * (180.0 / Math.PI);
 
 
     public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";

@@ -6,70 +6,47 @@ namespace OpenSvg;
 
 /// <summary>
 ///     Specifies the horizontal alignment of a <see cref="SvgVisual" /> element relative to a reference element.
+///     Used by <see cref="SvgVisual.AlignRelativeTo" />.
 /// </summary>
-/// <remarks>
-///     The alignment determines the horizontal position of the element in relation to a reference bounding box.
-///     <list type="bullet">
-///         <item>
-///             <term>
-///                 <see cref="HorizontalAlignment.InsideLeft" />
-///             </term>
-///             <description>Align the left edge of the element with the left edge of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="HorizontalAlignment.Center" />
-///             </term>
-///             <description>Align the horizontal center of the element with the horizontal center of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="HorizontalAlignment.InsideRight" />
-///             </term>
-///             <description>Align the right edge of the element with the right edge of the reference.</description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="HorizontalAlignment.OutsideLeft" />
-///             </term>
-///             <description>
-///                 Place the element to the left of the reference, aligning its right edge with the reference's
-///                 left edge.
-///             </description>
-///         </item>
-///         <item>
-///             <term>
-///                 <see cref="HorizontalAlignment.OutsideRight" />
-///             </term>
-///             <description>
-///                 Place the element to the right of the reference, aligning its left edge with the reference's
-///                 right edge.
-///             </description>
-///         </item>
-///     </list>
-/// </remarks>
 /// <seealso cref="SvgVisual"/>
+/// <seealso cref="VerticalAlignment"/>
 
 public enum HorizontalAlignment
 {
     /// <summary>
-    /// Align the left edge of the element with the left edge of the reference.
+    ///     Align the <c>left edge</c> of the element with the <c>left edge</c> of the reference.
     /// </summary>
-    InsideLeft,
+    LeftWithLeft,
     /// <summary>
-    /// Align the horizontal center of the element with the horizontal center of the reference.
+    ///     Align the <c>left edge</c> of the element with the <c>horizontal center</c> of the reference.
     /// </summary>
-    Center,
+    LeftWithCenter,
     /// <summary>
-    /// Align the right edge of the element with the right edge of the reference.
+    ///     Align the <c>left edge</c> of the element with the <c>right edge</c> of the reference.
     /// </summary>
-    InsideRight,
+    LeftWithRight,
     /// <summary>
-    /// Place the element to the left of the reference, aligning its right edge with the reference's left edge.
+    ///     Align the <c>horizontal center</c> of the element with the <c>left edge</c> of the reference.
     /// </summary>
-    OutsideLeft,
+    CenterWithLeft,
     /// <summary>
-    /// Place the element to the right of the reference, aligning its left edge with the reference's right edge.
+    ///     Align the <c>horizontal center</c> of the element with the <c>horizontal center</c> of the reference.
     /// </summary>
-    OutsideRight
+    CenterWithCenter,
+    /// <summary>
+    ///     Align the <c>horizontal center</c> of the element with the <c>right edge</c> of the reference.
+    /// </summary>
+    CenterWithRight,
+    /// <summary>
+    ///     Align the <c>right edge</c> of the element with the <c>left edge</c> of the reference.
+    /// </summary>
+    RightWithLeft,
+    /// <summary>
+    ///     Align the <c>right edge</c> of the element with the <c>horizontal center</c> of the reference.
+    /// </summary>
+    RightWithCenter,
+    /// <summary>
+    ///     Align the <c>right edge</c> of the element with the <c>right edge</c> of the reference.
+    /// </summary>
+    RightWithRight,
 }

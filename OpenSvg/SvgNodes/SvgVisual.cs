@@ -79,6 +79,10 @@ public abstract class SvgVisual : SvgElement
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox();
 
+    /// <summary>
+    /// Protected abstract method to compute the raw convex hull of this <see cref="SvgVisual"/> element.
+    /// By raw meaning that the resulting convex hull of this method does not apply any apply the current transformation of the element.
+    /// </summary>
     protected abstract ConvexHull ComputeConvexHull();
 
     /// <summary>
@@ -86,15 +90,7 @@ public abstract class SvgVisual : SvgElement
     ///     and vertical alignment parameters.
     /// </summary>
     /// <remarks>
-    ///     This method calculates the necessary translation of the <see cref="SvgVisual" /> element so it aligns with the
-    ///     reference element based on specified alignments.
-    ///     Horizontal alignment can be <see cref="HorizontalAlignment.InsideLeft" />,
-    ///     <see cref="HorizontalAlignment.Center" />, <see cref="HorizontalAlignment.InsideRight" />,
-    ///     <see cref="HorizontalAlignment.OutsideLeft" />, or <see cref="HorizontalAlignment.OutsideRight" />.
-    ///     Vertical alignment can be <see cref="VerticalAlignment.InsideUp" />, <see cref="VerticalAlignment.Center" />,
-    ///     <see cref="VerticalAlignment.InsideDown" />, <see cref="VerticalAlignment.OutsideUp" />, or
-    ///     <see cref="VerticalAlignment.OutsideDown" />.
-    ///     See individual enum values for detailed explanations.
+    ///     This operations moves this element. The reference element is not moved.
     /// </remarks>
     /// <param name="referenceElement">
     ///     The reference <see cref="SvgVisual" /> element to which this element will be aligned. It
@@ -108,35 +104,53 @@ public abstract class SvgVisual : SvgElement
     ///     The vertical alignment strategy. If null, no vertical alignment is applied. See
     ///     <see cref="VerticalAlignment" /> for detailed options.
     /// </param>
-    /// <exception cref="NotSupportedException">Thrown when an unsupported alignment is provided.</exception>
+    /// <exception cref="NotSupportedException">
+    ///     Thrown if an unsupported alignment is provided.
+    /// </exception>
+    /// <seealso cref="HorizontalAlignment"/>
+    /// <seealso cref="VerticalAlignment"/>"/>
     public void AlignRelativeTo(SvgVisual referenceElement, HorizontalAlignment? horizontalAlignment = null,
         VerticalAlignment? verticalAlignment = null)
     {
         BoundingBox thisBox = BoundingBox;
         BoundingBox refBox = referenceElement.BoundingBox;
 
-        double dx = horizontalAlignment switch
+        double xThis = horizontalAlignment switch
         {
             null => 0,
-            HorizontalAlignment.InsideLeft => refBox.MinX - thisBox.MinX,
-            HorizontalAlignment.Center => refBox.MidX - thisBox.MidX,
-            HorizontalAlignment.InsideRight => refBox.MaxX - thisBox.MaxX,
-            HorizontalAlignment.OutsideLeft => refBox.MinX - thisBox.MaxX,
-            HorizontalAlignment.OutsideRight => refBox.MaxX - thisBox.MinX,
+            HorizontalAlignment.LeftWithLeft or HorizontalAlignment.LeftWithCenter or HorizontalAlignment.LeftWithRight => thisBox.MinX,
+            HorizontalAlignment.CenterWithLeft or HorizontalAlignment.CenterWithCenter or HorizontalAlignment.CenterWithRight => thisBox.MidX,
+            HorizontalAlignment.RightWithLeft or HorizontalAlignment.RightWithCenter or HorizontalAlignment.RightWithRight => thisBox.MaxX,
+            _ => throw new NotSupportedException($"Unknown HorizontalAlignment: {horizontalAlignment}")
+        };
+        double xRef = horizontalAlignment switch
+        {
+            null => 0,
+            HorizontalAlignment.LeftWithLeft or HorizontalAlignment.CenterWithLeft or HorizontalAlignment.RightWithLeft => refBox.MinX,
+            HorizontalAlignment.LeftWithCenter or HorizontalAlignment.CenterWithCenter or HorizontalAlignment.RightWithCenter => refBox.MidX,
+            HorizontalAlignment.LeftWithRight or HorizontalAlignment.CenterWithRight or HorizontalAlignment.RightWithRight => refBox.MaxX,
             _ => throw new NotSupportedException($"Unknown HorizontalAlignment: {horizontalAlignment}")
         };
 
-        double dy = verticalAlignment switch
+        double yThis = verticalAlignment switch
         {
             null => 0,
-            VerticalAlignment.InsideUp => refBox.MinY - thisBox.MinY,
-            VerticalAlignment.Center => refBox.MidY - thisBox.MidY,
-            VerticalAlignment.InsideDown => refBox.MaxY - thisBox.MaxY,
-            VerticalAlignment.OutsideUp => refBox.MinY - thisBox.MaxY,
-            VerticalAlignment.OutsideDown => refBox.MaxY - thisBox.MinY,
+            VerticalAlignment.TopWithTop or VerticalAlignment.TopWithCenter or VerticalAlignment.TopWithBottom => thisBox.MinY,
+            VerticalAlignment.CenterWithTop or VerticalAlignment.CenterWithCenter or VerticalAlignment.CenterWithBottom => thisBox.MidY,
+            VerticalAlignment.BottomWithTop or VerticalAlignment.BottomWithCenter or VerticalAlignment.BottomWithBottom => thisBox.MaxY,
+            _ => throw new NotSupportedException($"Unknown VerticalAlignment: {verticalAlignment}")
+        };
+        double yRef = verticalAlignment switch
+        {
+            null => 0,
+            VerticalAlignment.TopWithTop or VerticalAlignment.CenterWithTop or VerticalAlignment.BottomWithTop => refBox.MinY,
+            VerticalAlignment.TopWithCenter or VerticalAlignment.CenterWithCenter or VerticalAlignment.BottomWithCenter => refBox.MidY,
+            VerticalAlignment.TopWithBottom or VerticalAlignment.CenterWithBottom or VerticalAlignment.BottomWithBottom => refBox.MaxY,
             _ => throw new NotSupportedException($"Unknown VerticalAlignment: {verticalAlignment}")
         };
 
+        double dx = xRef - xThis;
+        double dy = yRef - yThis;
         this.Transform.ComposeWith(OpenSvg.Transform.CreateTranslation(dx, dy));
     }
 
