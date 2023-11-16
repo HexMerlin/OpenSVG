@@ -45,8 +45,8 @@ public partial class Polygon
 
     private bool ArePolygonsDisjointByBoundingBox(Polygon target)
     {
-        BoundingBox thisBoundingBox = BoundingBox();
-        BoundingBox otherBoundingBox = target.BoundingBox();
+        BoundingBox thisBoundingBox = BoundingBox;
+        BoundingBox otherBoundingBox = target.BoundingBox;
         return !thisBoundingBox.Intersects(otherBoundingBox);
     }
 

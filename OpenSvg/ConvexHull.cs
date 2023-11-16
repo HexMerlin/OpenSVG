@@ -46,6 +46,30 @@ public class ConvexHull : Polygon
     /// <returns>A new convex hull that is the result of applying the transform.</returns>
     public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), SkipGrahamScan.Yes);
 
+
+    /// <summary>
+    ///     Gets the bounding box of the polygon.
+    /// </summary>
+    /// <returns>The bounding box as a <see cref="BoundingBox" /> object.</returns>
+    public BoundingBox BoundingBox()
+    {
+        if (Count == 0) return new BoundingBox(); // return empty bounding box
+
+        const double min = double.MinValue;
+        const double max = double.MaxValue;
+
+        var bounds = this.Aggregate(
+            new { UpperLeft = new Point(max, max), LowerRight = new Point(min, min) },
+            (acc, p) => new
+            {
+                UpperLeft = new Point(Math.Min(acc.UpperLeft.X, p.X), Math.Min(acc.UpperLeft.Y, p.Y)),
+                LowerRight = new Point(Math.Max(acc.LowerRight.X, p.X), Math.Max(acc.LowerRight.Y, p.Y))
+            });
+
+        return new BoundingBox(bounds.UpperLeft, bounds.LowerRight);
+    }
+
+
     /// <summary>
     ///     Extracts the convex hull for a collection of points using Graham's scan algorithm.
     /// </summary>
