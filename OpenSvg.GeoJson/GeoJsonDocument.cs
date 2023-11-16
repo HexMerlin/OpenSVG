@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using OpenSvg;
 using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using System;
 
 namespace OpenSvg.GeoJson;
 
@@ -21,11 +22,13 @@ public class GeoJsonDocument
     /// </summary>
     public const bool ErrorOnUnsupportedElement = true;
 
-    
-
     private readonly FeatureCollection featureCollection;
 
-    private readonly PointToCoordinateConverter converter;
+
+    public GeoJsonDocument(FeatureCollection featureCollection)
+    {
+        this.featureCollection = featureCollection;
+    }
 
     /// <summary>
     /// Creates a GeoJSON document of type <see cref="GeoJsonDocument"/> from an <see cref="SvgDocument"/>.
@@ -49,11 +52,25 @@ public class GeoJsonDocument
     {
         Size svgSize = svgDocument.BoundingBox.Size;
 
-        this.converter = new PointToCoordinateConverter(startLocation, metersPerPixel, svgSize.Height, coordinateRoundToDecimals);
+        PointToCoordinateConverter pointToCoordinateConverter = new PointToCoordinateConverter(startLocation, metersPerPixel, svgSize.Height, coordinateRoundToDecimals);
 
         this.featureCollection = new FeatureCollection();
 
-        ParseSvgShape(svgDocument, Transform.Identity, segmentCountForCurveApproximation);
+        ParseSvgShape(svgDocument, Transform.Identity, segmentCountForCurveApproximation, pointToCoordinateConverter);
+    }
+
+    /// <summary>
+    /// Loads a GeoJSON file and creates a GeoJsonDocument instance.
+    /// </summary>
+    /// <param name="geoJsonFilePath">Path to the GeoJSON file.</param>
+    /// <returns>A new instance of GeoJsonDocument.</returns>
+    public static GeoJsonDocument Load(string geoJsonFilePath)
+    {
+        using var reader = new StreamReader(geoJsonFilePath);
+        using var jsonReader = new JsonTextReader(reader);
+        var geoJsonReader = new GeoJsonReader();
+        var featureCollection = geoJsonReader.Read<FeatureCollection>(jsonReader);
+        return new GeoJsonDocument(featureCollection);
     }
 
     private static AttributesTable GetDrawConfigAttributes(SvgVisual svgVisual)
@@ -73,20 +90,20 @@ public class GeoJsonDocument
         return attributesTable;
     }
 
-    private LinearRing GetLinearRing(Polygon polygon, Transform transform)
+    private LinearRing GetLinearRing(PointToCoordinateConverter converter, Polygon polygon, Transform transform)
     {
-        var coordinateList = polygon.Select(svgPoint => ToNativeCoordinate(svgPoint, transform)).ToList();
+        var coordinateList = polygon.Select(svgPoint => ToNativeCoordinate(converter, svgPoint, transform)).ToList();
         coordinateList.Add(coordinateList[0]); //close the ring
         return new LinearRing(coordinateList.ToArray());
     }
 
-    private NetTopologySuite.Geometries.Coordinate ToNativeCoordinate(Point point, Transform transform)
+    private NetTopologySuite.Geometries.Coordinate ToNativeCoordinate(PointToCoordinateConverter converter, Point point, Transform transform)
     {
         Coordinate coord = converter.ConvertToCoordinate(point.Transform(transform));
         return new NetTopologySuite.Geometries.Coordinate(coord.Long, coord.Lat);
     }
 
-    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform, int segmentCountForCurveApproximation)
+    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform, int segmentCountForCurveApproximation, PointToCoordinateConverter converter)
     {
         Transform composedTransform = svgElement is SvgVisual svgVisual ? parentTransform.ComposeWith(svgVisual.Transform.Get()) : parentTransform;
 
@@ -94,25 +111,25 @@ public class GeoJsonDocument
         {
             case SvgVisualContainer parent:
                 foreach (SvgElement child in parent.ChildElements)
-                    ParseSvgShape(child, composedTransform, segmentCountForCurveApproximation);
+                    ParseSvgShape(child, composedTransform, segmentCountForCurveApproximation, converter);
                 break;
 
             case SvgPolygon svgPolygon:
 
                 Polygon polygon = svgPolygon.Polygon.Get();
-                NetTopologySuite.Geometries.Polygon nativePolygon = new(GetLinearRing(polygon, composedTransform));
+                NetTopologySuite.Geometries.Polygon nativePolygon = new(GetLinearRing(converter, polygon, composedTransform));
                 featureCollection.Add(new Feature(nativePolygon, GetDrawConfigAttributes(svgPolygon)));
                 break;
 
             case SvgPath svgPath:
                 {
-                    featureCollection.Add(ConvertSvgPathToFeature(svgPath, composedTransform, segmentCountForCurveApproximation));
+                    featureCollection.Add(ConvertSvgPathToFeature(svgPath, composedTransform, segmentCountForCurveApproximation, converter));
                     break;
                 }
             case SvgLine svgLine:
                 {
 
-                    var nativeLine = new LineString(new[] { ToNativeCoordinate(svgLine.P1, composedTransform), ToNativeCoordinate(svgLine.P2, composedTransform) });
+                    var nativeLine = new LineString(new[] { ToNativeCoordinate(converter, svgLine.P1, composedTransform), ToNativeCoordinate(converter, svgLine.P2, composedTransform) });
                     featureCollection.Add(new Feature(nativeLine, GetDrawConfigAttributes(svgLine)));
                     break;
                 }
@@ -121,7 +138,7 @@ public class GeoJsonDocument
                     // Extract position from the SVG text element
 
                     var textPoint = new Point(svgText.X.Get(), svgText.Y.Get());
-                    NetTopologySuite.Geometries.Coordinate geoJsonTextCoordinate = ToNativeCoordinate(textPoint, composedTransform);
+                    NetTopologySuite.Geometries.Coordinate geoJsonTextCoordinate = ToNativeCoordinate(converter, textPoint, composedTransform);
 
                     // Create a GeoJSON Point for the text position
                     NetTopologySuite.Geometries.Point textPointNative = new(geoJsonTextCoordinate);
@@ -156,7 +173,7 @@ public class GeoJsonDocument
     /// <param name="svgPath">The SvgPath to convert.</param>
     /// <param name="transform">The transformation object for the SvgPath.</param>
     /// <returns>The resulting GeoJSON feature.</returns>
-    private Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform, int segmentCountForCurveApproximation)
+    private Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform, int segmentCountForCurveApproximation, PointToCoordinateConverter converter)
     {
         MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon(segmentCountForCurveApproximation);
 
@@ -164,9 +181,9 @@ public class GeoJsonDocument
 
         foreach (EnclosedPolygonGroup enclosedPolygonGroup in multiPolygon)
         {
-            LinearRing exteriorRing = GetLinearRing(enclosedPolygonGroup.ExteriorPolygon, transform);
+            LinearRing exteriorRing = GetLinearRing(converter, enclosedPolygonGroup.ExteriorPolygon, transform);
 
-            List<LinearRing> interiorRings = enclosedPolygonGroup.InteriorPolygons.Select(p => GetLinearRing(p, transform)).ToList();
+            List<LinearRing> interiorRings = enclosedPolygonGroup.InteriorPolygons.Select(p => GetLinearRing(converter, p, transform)).ToList();
 
             NetTopologySuite.Geometries.Polygon nativePolygon = new(exteriorRing, interiorRings.ToArray());
 

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OpenSvg.GeoJson\OpenSvg.GeoJson.csproj" />
     <ProjectReference Include="..\OpenSvg\OpenSvg.csproj" />
   </ItemGroup>
 
