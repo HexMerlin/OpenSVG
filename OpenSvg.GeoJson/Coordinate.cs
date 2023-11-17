@@ -5,13 +5,25 @@ namespace OpenSvg.GeoJson;
 /// <summary>
 ///     A world coordinate (in WGS84 datum) defined by longitude and latitude
 /// </summary>
-public record Coordinate(double Long, double Lat)
+public readonly struct Coordinate
 {
+    public readonly double Long;
+    
+    public readonly double Lat;
+
+    public Coordinate(double longitude, double latitude)
+    {
+        this.Long = longitude;
+        this.Lat = latitude;
+    }
+
+    
     /// <summary>
     /// Translates the coordinate by a specified distance in meters along the X and Y axes.
     /// </summary>
     /// <param name="dxMeters">East-west translation in meters. Positive values move east, negative values move west.</param>
     /// <param name="dyMeters">North-south translation in meters. Positive values move north, negative values move south.</param>
+    /// <remarks>Note that the y-coordinates increase upwards (north), whereas SVG Y-coordinates increase downwards</remarks>
     /// <returns>A new Coordinate object representing the translated position.</returns>
 
     public Coordinate Translate(double dxMeters, double dyMeters)
@@ -38,12 +50,16 @@ public record Coordinate(double Long, double Lat)
     }
 
     /// <summary>
-    /// Calculates the distance to another coordinate.
+    /// Calculates the Cartesian offset to another coordinate in meters, as a tuple of X (dx) and Y (dy) distances.
+    /// Positive dx indicates eastward distance, negative dx indicates westward distance.
+    /// Positive dy indicates northward distance, negative dy indicates southward distance.
+    /// This method assumes a flat Earth projection to compute the distances.
     /// </summary>
-    /// <param name="coordinate">The coordinate to calculate the distance to.</param>
-    /// <returns>The distance between the two coordinates in meters.</returns>
-
-    public double DistanceTo(Coordinate coordinate)
+    /// <param name="coordinate">The coordinate to calculate the offset to.</param>
+    /// <returns>
+    /// A tuple containing the X (dx) and Y (dy) distances in meters between the current coordinate and the specified coordinate.
+    /// </returns>
+    public (double dx, double dy) CartesianOffset(Coordinate coordinate)
     {
         // Define WGS84 ellipsoid
         ProjectionInfo wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
@@ -58,8 +74,21 @@ public record Coordinate(double Long, double Lat)
         // Calculate distance on a flat surface
         double dx = xy2[0] - xy1[0];
         double dy = xy2[1] - xy1[1];
-        double distance = Math.Sqrt(dx * dx + dy * dy);
+        return (dx, dy);
 
+    }
+
+
+    /// <summary>
+    /// Calculates the distance to another coordinate.
+    /// </summary>
+    /// <param name="coordinate">The coordinate to calculate the distance to.</param>
+    /// <returns>The distance between the two coordinates in meters.</returns>
+
+    public double DistanceTo(Coordinate coordinate)
+    {
+        var (dx, dy) = CartesianOffset(coordinate);
+        double distance = Math.Sqrt(dx * dx + dy * dy);
         return distance;
     }
 
@@ -67,5 +96,5 @@ public record Coordinate(double Long, double Lat)
     ///     A world coordinate as a string in a JSON friendly format
     /// </summary>
     /// <returns>The coordinate as a string in a JSON friendly format.</returns>
-    public override string ToString() => $"{{ \"long\": {Math.Round(Long, 3).ToXmlString()}, \"lat\": {Math.Round(Lat, 3).ToXmlString()} }}";
+    public override string ToString() => $"{{ \"long\": {Long.ToXmlString()}, \"lat\": {Lat.ToXmlString()} }}";
 }

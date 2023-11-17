@@ -5,10 +5,8 @@ using NetTopologySuite.Geometries;
 using NetTopologySuite.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using OpenSvg;
 using OpenSvg.Config;
 using OpenSvg.SvgNodes;
-using System;
 
 namespace OpenSvg.GeoJson;
 
@@ -48,11 +46,9 @@ public class GeoJsonDocument
     /// In all other cases, you can probably safely skip rounding.
     /// </param>
 
-    public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int segmentCountForCurveApproximation = 10, int coordinateRoundToDecimals = -1)
+    public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int segmentCountForCurveApproximation = 10)
     {
-        Size svgSize = svgDocument.BoundingBox.Size;
-
-        PointToCoordinateConverter pointToCoordinateConverter = new PointToCoordinateConverter(startLocation, metersPerPixel, svgSize.Height, coordinateRoundToDecimals);
+        PointCoordinateConverter pointToCoordinateConverter = new PointCoordinateConverter(startLocation, metersPerPixel);
 
         this.featureCollection = new FeatureCollection();
 
@@ -76,14 +72,14 @@ public class GeoJsonDocument
     public SvgDocument ConvertToSvgDocument()
     {
         SvgDocument svgDocument = new SvgDocument();
-        foreach (var feature in featureCollection)
+        foreach (IFeature? feature in featureCollection)
         {
             switch (feature.Geometry)
             {
                 case NetTopologySuite.Geometries.Point _:
                     throw new NotImplementedException("Conversion for Point not implemented.");
 
-                case NetTopologySuite.Geometries.LineString _:
+                case NetTopologySuite.Geometries.LineString:
                     throw new NotImplementedException("Conversion for LineString not implemented.");
 
                 case NetTopologySuite.Geometries.Polygon _:
@@ -127,20 +123,20 @@ public class GeoJsonDocument
         return attributesTable;
     }
 
-    private LinearRing GetLinearRing(PointToCoordinateConverter converter, Polygon polygon, Transform transform)
+    private LinearRing GetLinearRing(PointCoordinateConverter converter, Polygon polygon, Transform transform)
     {
         var coordinateList = polygon.Select(svgPoint => ToNativeCoordinate(converter, svgPoint, transform)).ToList();
         coordinateList.Add(coordinateList[0]); //close the ring
         return new LinearRing(coordinateList.ToArray());
     }
 
-    private NetTopologySuite.Geometries.Coordinate ToNativeCoordinate(PointToCoordinateConverter converter, Point point, Transform transform)
+    private NetTopologySuite.Geometries.Coordinate ToNativeCoordinate(PointCoordinateConverter converter, Point point, Transform transform)
     {
         Coordinate coord = converter.ConvertToCoordinate(point.Transform(transform));
         return new NetTopologySuite.Geometries.Coordinate(coord.Long, coord.Lat);
     }
 
-    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform, int segmentCountForCurveApproximation, PointToCoordinateConverter converter)
+    private void ParseSvgShape(SvgElement svgElement, Transform parentTransform, int segmentCountForCurveApproximation, PointCoordinateConverter converter)
     {
         Transform composedTransform = svgElement is SvgVisual svgVisual ? parentTransform.ComposeWith(svgVisual.Transform.Get()) : parentTransform;
 
@@ -210,7 +206,7 @@ public class GeoJsonDocument
     /// <param name="svgPath">The SvgPath to convert.</param>
     /// <param name="transform">The transformation object for the SvgPath.</param>
     /// <returns>The resulting GeoJSON feature.</returns>
-    private Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform, int segmentCountForCurveApproximation, PointToCoordinateConverter converter)
+    private Feature ConvertSvgPathToFeature(SvgPath svgPath, Transform transform, int segmentCountForCurveApproximation, PointCoordinateConverter converter)
     {
         MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon(segmentCountForCurveApproximation);
 

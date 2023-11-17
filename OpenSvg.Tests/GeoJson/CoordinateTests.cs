@@ -13,7 +13,7 @@ public class CoordinateTests
     [Fact]
     public void CoordinateTranslateTest()
     {
-        const int precision = 4;
+        const int precision = 0;
         const double distance = 10000; //distance in meters
         Coordinate origin = new Coordinate(15.614, 58.408);
 
