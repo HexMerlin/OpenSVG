@@ -7,7 +7,7 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
 {
     public readonly PathAttr Path = new();
 
-    private const int SegmentCountForCurveApproximation = 10;
+  
 
     public SvgPath() => this.Path.Set(new Path());
 
@@ -28,19 +28,6 @@ public sealed partial class SvgPath : SvgVisual, IDisposable
 
     public MultiPolygon ApproximateToMultiPolygon(int segments) => Path.Get().ApproximateToMultiPolygon(segments);
 
-    protected override ConvexHull ComputeConvexHull() => ApproximateToMultiPolygon(SegmentCountForCurveApproximation).ComputeConvexHull();
+    protected override ConvexHull ComputeConvexHull() => Path.Get().ConvexHull;
 
-    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other, double doublePrecision = Constants.DoublePrecision)
-    //{
-    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
-    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
-    //    if (!equal)
-    //        return (equal, message);
-    //    var sameType = (SvgPath)other;
-
-    //    if (this.Path != sameType.Path)
-    //        return (false, $"Path: {this.Path} != {sameType.Path}");
-
-    //    return (true, "Equal");
-    //}
 }

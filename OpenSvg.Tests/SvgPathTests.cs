@@ -20,7 +20,7 @@ public class SvgPathTests
 
         // Act
         MultiPolygon multiPolygon = svgPath.ApproximateToMultiPolygon(SegmentCountForCurveApproximation);
-        BoundingBox resultingBoundingBox = multiPolygon.BoundingBox();
+        BoundingBox resultingBoundingBox = multiPolygon.BoundingBox;
 
         // Assert
         Assert.Equal(expectedBoundingBox, resultingBoundingBox);

@@ -25,7 +25,7 @@ public class EnclosedPolygonGroup
     public Polygon ExteriorPolygon { get; set; }
 
     /// <summary>
-    ///     Gets or sets the list of polygons inside the exterior polygon.
+    ///     Gets the list of polygons inside the exterior polygon.
     /// </summary>
     public List<Polygon> InteriorPolygons { get; set; }
 }

@@ -1,28 +1,27 @@
 ﻿namespace OpenSvg;
 
-
 /// <summary>
 ///     Represents a convex hull of points.
 ///     Provides specialized methods for manipulating and querying convex hulls.
 /// </summary>
-public class ConvexHull : Polygon
+public class ConvexHull : PointList, IEquatable<ConvexHull>
 {
+
+    public readonly BoundingBox BoundingBox;
+
+
     /// <summary>
     ///     Initializes a new instance of the <see cref="ConvexHull" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public ConvexHull(IEnumerable<Point> points) : base(ExtractHullPoints(points.ToArray()))
-    {
-    }
+    public ConvexHull(IEnumerable<Point> points) : this(points, true)  {}
 
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="ConvexHull" /> class by merging multiple convex hulls.
     /// </summary>
     /// <param name="convexHulls">The collection of convex hulls to merge.</param>
-    public ConvexHull(IEnumerable<ConvexHull> convexHulls) : this(convexHulls.SelectMany(p => p))
-    {
-    }
+    public ConvexHull(IEnumerable<ConvexHull> convexHulls) : this(convexHulls.SelectMany(p => p).ToArray()) {}
 
 
     /// <summary>
@@ -34,9 +33,11 @@ public class ConvexHull : Polygon
     ///     It is used by methods that transform an existing <see cref="ConvexHull" />, preserving its convex nature.
     /// </remarks>
     /// <param name="points">A collection of points that are already in the form of a convex hull.</param>
-    /// <param name="_">A marker parameter indicating that Graham's scan should be skipped.</param>
-    private ConvexHull(IEnumerable<Point> points, SkipGrahamScan _) : base(points)
+    /// <param name="extractHullPoints">True if a Graham's scan should be performed. False if we know the points to be a convex hull already</param>
+    /// <param name="_">A marker parameter .</param>
+    private ConvexHull(IEnumerable<Point> points, bool extractHullPoints) : base(extractHullPoints ? ExtractHullPoints(points.ToArray()) : points)
     {
+        this.BoundingBox = ComputeBoundingBox(base.Points);
     }
 
     /// <summary>
@@ -44,21 +45,21 @@ public class ConvexHull : Polygon
     /// </summary>
     /// <param name="transform">The transform to apply.</param>
     /// <returns>A new convex hull that is the result of applying the transform.</returns>
-    public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), SkipGrahamScan.Yes);
+    public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), extractHullPoints: false);
 
 
     /// <summary>
     ///     Gets the bounding box of the polygon.
     /// </summary>
     /// <returns>The bounding box as a <see cref="BoundingBox" /> object.</returns>
-    public BoundingBox BoundingBox()
+    private static BoundingBox ComputeBoundingBox(Point[] points)
     {
-        if (Count == 0) return new BoundingBox(); // return empty bounding box
+        if (points.Length == 0) return new BoundingBox(); // return empty bounding box
 
         const double min = double.MinValue;
         const double max = double.MaxValue;
 
-        var bounds = this.Aggregate(
+        var bounds = points.Aggregate(
             new { UpperLeft = new Point(max, max), LowerRight = new Point(min, min) },
             (acc, p) => new
             {
@@ -150,8 +151,20 @@ public class ConvexHull : Polygon
     /// <returns>The cross product of the three points.</returns>
     private static double CrossProduct(Point a, Point b, Point c) => (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
 
-    private enum SkipGrahamScan
-    {
-        Yes
-    }
+ 
+
+
+    /// <summary>
+    ///     Determines whether the specified object is equal to the current object.
+    /// </summary>
+    /// <param name="other">The object to compare with the current object.</param>
+    /// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+    public bool Equals(ConvexHull? other) => base.Equals(other);
+
+
+    ///<inheritdoc/>
+    public override bool Equals(object? obj) => base.Equals(obj);
+
+    ///<inheritdoc/>
+    public override int GetHashCode() => base.GetHashCode();
 }

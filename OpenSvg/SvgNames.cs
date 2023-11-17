@@ -60,6 +60,14 @@ public static class SvgNames
     public const string Polygon = "polygon";
 
     /// <summary>
+    ///     Polyline element
+    /// </summary>
+    /// <remarks>
+    ///     Defines a polyline in SVG.
+    /// </remarks>
+    public const string Polyline = "polyline";
+
+    /// <summary>
     ///     Rect element
     /// </summary>
     /// <remarks>

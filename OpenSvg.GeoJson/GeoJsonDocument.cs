@@ -73,6 +73,43 @@ public class GeoJsonDocument
         return new GeoJsonDocument(featureCollection);
     }
 
+    public SvgDocument ConvertToSvgDocument()
+    {
+        SvgDocument svgDocument = new SvgDocument();
+        foreach (var feature in featureCollection)
+        {
+            switch (feature.Geometry)
+            {
+                case NetTopologySuite.Geometries.Point _:
+                    throw new NotImplementedException("Conversion for Point not implemented.");
+
+                case NetTopologySuite.Geometries.LineString _:
+                    throw new NotImplementedException("Conversion for LineString not implemented.");
+
+                case NetTopologySuite.Geometries.Polygon _:
+                    throw new NotImplementedException("Conversion for Polygon not implemented.");
+
+                case NetTopologySuite.Geometries.MultiPoint _:
+                    throw new NotImplementedException("Conversion for MultiPoint not implemented.");
+
+                case NetTopologySuite.Geometries.MultiLineString _:
+                    throw new NotImplementedException("Conversion for MultiLineString not implemented.");
+
+                case NetTopologySuite.Geometries.MultiPolygon _:
+                    throw new NotImplementedException("Conversion for MultiPolygon not implemented.");
+
+                case NetTopologySuite.Geometries.GeometryCollection _:
+                    throw new NotImplementedException("Conversion for GeometryCollection not implemented.");
+
+                default:
+                    throw new NotSupportedException($"Unsupported geometry type: {feature.Geometry.GetType()}");
+            }
+        }
+
+        return svgDocument;
+    }
+
+
     private static AttributesTable GetDrawConfigAttributes(SvgVisual svgVisual)
     {
         static string GeoJsonColorString(SkiaSharp.SKColor color) =>

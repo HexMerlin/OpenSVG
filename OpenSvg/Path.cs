@@ -13,6 +13,10 @@ public class Path : IEquatable<Path>, IDisposable
 
     private readonly string xmlString;
 
+    public ConvexHull ConvexHull { get; }
+
+    private const int SegmentCountForCurveApproximation = 10;
+
     /// <summary>
     /// Represents a graphical path with various drawing commands.
     /// </summary>
@@ -27,10 +31,13 @@ public class Path : IEquatable<Path>, IDisposable
 
     public Path(SKPath path)
     {
-        this.path = path; // path.Simplify() ?? path;
+        this.path = path; 
         this.xmlString = this.path.ToSvgPathData();
+        this.ConvexHull = ApproximateToMultiPolygon(SegmentCountForCurveApproximation).ConvexHull;
 
     }
+
+    public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Path"/> class from an XML string.
@@ -167,7 +174,7 @@ public class Path : IEquatable<Path>, IDisposable
     /// <returns>A sequence of points approximating the curve.</returns>
 #pragma warning disable IDE0051 //Allow unused private members
     private static IEnumerable<Point> ApproximateConicBezier(Point start, Point control, Point end, float weight, int segments)
-#pragma warning restore IDE0051 // Restore disallo unused private members
+#pragma warning restore IDE0051 // Restore disallow unused private members
     {
         for (int i = 0; i <= segments; i++)
         {

@@ -4,7 +4,7 @@ namespace OpenSvg.Attributes;
 
 
 /// <summary>
-/// Represents points attribute of an SVG element. Points are represented as a <see cref="Polygon"/> class.
+/// Represents an attribute for setting a point list as a <see cref="Polygon"/> for an SVG element.
 /// </summary>
 public class PolygonAttr : Attr<Polygon>
 {

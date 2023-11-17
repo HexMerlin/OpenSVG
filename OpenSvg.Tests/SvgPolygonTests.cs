@@ -1,5 +1,7 @@
 ﻿using OpenSvg.Config;
+using OpenSvg.SvgNodes;
 using SkiaSharp;
+using System.Diagnostics;
 
 namespace OpenSvg.Tests;
 
@@ -9,14 +11,15 @@ public class SvgPolygonTests
     public void CreateSvgPolygon_FromRectangleConfig_BoundingBoxIsExpected()
     {
         // Arrange
-        var expectedSize = new Size(100, 100);
-        var rectangleConfig =
+        Size expectedSize = new Size(100, 100);
+        RectangleConfig rectangleConfig =
             new RectangleConfig(expectedSize, new DrawConfig(SKColors.LightBlue, SKColors.LightBlue, 10));
-        var expectedBoundingBox = new BoundingBox(new Point(0, 0), new Point(expectedSize.Width, expectedSize.Height));
+        BoundingBox expectedBoundingBox = new BoundingBox(new Point(0, 0), new Point(expectedSize.Width, expectedSize.Height));
 
         // Act
-        var svgPolygon = rectangleConfig.ToSvgPolygon();
+        SvgPolygon svgPolygon = rectangleConfig.ToSvgPolygon();
         BoundingBox actualBoundingBox = svgPolygon.BoundingBox;
+
 
         // Assert
         Assert.Equal(expectedBoundingBox, actualBoundingBox);

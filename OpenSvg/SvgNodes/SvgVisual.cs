@@ -79,8 +79,7 @@ public abstract class SvgVisual : SvgElement
     /// <remarks>
     /// The bounding box is derived from the convex hull of the element.
     /// </remarks>
-
-    public BoundingBox BoundingBox => ConvexHull.BoundingBox();
+    public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
     /// <summary>
     /// Protected abstract method to compute the raw convex hull of this <see cref="SvgVisual"/> element.

@@ -5,7 +5,7 @@ namespace OpenSvg.SvgNodes;
 /// <summary>
 /// Represents an SVG polygon element.
 /// </summary>
-public class SvgPolygon : SvgVisual
+public class SvgPolygon: SvgVisual
 {
     public readonly PolygonAttr Polygon = new();
 
@@ -13,6 +13,6 @@ public class SvgPolygon : SvgVisual
     public override string SvgName => SvgNames.Polygon;
 
     /// <inheritdoc/>
-    protected override ConvexHull ComputeConvexHull() => new(this.Polygon.Get());
+    protected override ConvexHull ComputeConvexHull() => this.Polygon.Get().ConvexHull;
 
 }
