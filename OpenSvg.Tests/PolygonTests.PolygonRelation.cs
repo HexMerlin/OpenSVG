@@ -273,25 +273,6 @@ public partial class PolygonTests
         Assert.Equal(PolygonRelation.Disjoint, largePolygonA.RelationTo(largePolygonB));
     }
 
-    [Fact]
-    public void Test_DegeneratePolygon_ReturnsDisjoint()
-    {
-        var polygonA = new Polygon(new[]
-        {
-            new Point(0, 0),
-            new Point(10, 0),
-            new Point(10, 10),
-            new Point(0, 10)
-        });
-
-        var degeneratePolygon = new Polygon(new[]
-        {
-            new Point(5, 5),
-            new Point(5, 5)
-        });
-
-        Assert.Equal(PolygonRelation.Inside, degeneratePolygon.RelationTo(polygonA));
-    }
 
     [Fact]
     public void Test_ComplexIntersections_ReturnsIntersect()

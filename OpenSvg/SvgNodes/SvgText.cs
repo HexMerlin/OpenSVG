@@ -18,7 +18,7 @@ public class SvgText : SvgVisual, IHasElementContent
     ///     <c>Times New Roman</c>
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/text.html#FontPropertiesUsedBySVG">SVG 1.1 Font selection properties</seealso>
-    public readonly StringAttr FontName = new(SvgNames.FontName, "Times New Roman", false);
+    public readonly StringAttr FontName = new(SvgNames.FontName, SvgNames.DefaultFontName, false);
 
     /// <summary>
     ///     Gets or sets the font size for this <see cref="SvgVisual" /> element.
@@ -29,7 +29,7 @@ public class SvgText : SvgVisual, IHasElementContent
     ///     The CSS2 specification suggests a "medium" font size that equates to 16px in many desktop browsers, which is adopted here.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/CSS2/fonts.html#font-size-props">SVG 1.1 Font size</seealso>
-    public readonly DoubleAttr FontSize = new(SvgNames.FontSize, 16);
+    public readonly DoubleAttr FontSize = new(SvgNames.FontSize, SvgNames.DefaultFontSize);
 
     /// <summary>
     /// Attribute for getting or setting X position of this element
@@ -50,6 +50,19 @@ public class SvgText : SvgVisual, IHasElementContent
     /// </summary>
     public SvgText()
     {
+    }
+
+    /// <summary>
+    /// Gets or sets the position of the <see cref="SvgText"/> element.
+    /// </summary>
+    public Point Point
+    {
+        get => new(this.X.Get(), this.Y.Get());
+        set
+        {
+            this.X.Set(value.X);
+            this.Y.Set(value.Y);
+        }
     }
 
     /// <summary>

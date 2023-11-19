@@ -11,6 +11,8 @@ namespace OpenSvg.Config;
 public record DrawConfig(SKColor FillColor, SKColor StrokeColor, double StrokeWidth)
 {
 
+    public DrawConfig() : this(DefaultFillColor, DefaultStrokeColor, DefaultStrokeWidth) {}
+
     public static SKColor DefaultFillColor { get; } = SKColors.Black;
     public static SKColor DefaultStrokeColor { get; } = SKColors.Transparent;
     public static double DefaultStrokeWidth { get; } = 1;

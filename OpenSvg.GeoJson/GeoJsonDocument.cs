@@ -1,5 +1,6 @@
-﻿//file GeoJsonDocument.cs
-
+﻿
+using GeoJSON.Net.Feature;
+using GeoJSON.Net.Geometry;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenSvg.GeoJson.Converters;
@@ -45,13 +46,10 @@ public class GeoJsonDocument
 
     public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int segmentCountForCurveApproximation = 10)
     {
-        PointConverter pointToCoordinateConverter = new PointCoordinateConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
-
-        this.featureCollection = new FeatureCollection();
-        var features = svgDocument.ToFeatures(Transform.Identity, pointToCoordinateConverter);
-        foreach (Feature feature in features)
-            this.featureCollection.Add(feature);    
-
+        PointConverter converter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
+               
+        var features = svgDocument.ToFeatures(Transform.Identity, converter).ToList();
+        this.featureCollection = new FeatureCollection(features);    
     }
 
     /// <summary>
@@ -71,49 +69,42 @@ public class GeoJsonDocument
 
 
     /// <summary>
-    /// Writes the GeoJSON representation of the feature collection to a file.
+    ///     Writes the GeoJSON representation of the feature collection to a file.
     /// </summary>
     /// <param name="geoJsonFilePath">The file path and name of the GeoJSON file write.</param>
     /// <param name="indentedFormatting">If set to <c>true</c>, the JSON output will be indented.</param>
-    public void SaveToGeoJsonFile(string geoJsonFilePath, bool indentedFormatting = true)
+
+    public void Save(string geoJsonFilePath, bool indentedFormatting = true)
     {
-        GeoJsonWriter writer = new();
-        string geoJsonString = writer.Write(featureCollection);
-
-        if (indentedFormatting)
-        {
-            // Parse the JSON string to a JObject
-            JObject jsonObject = JObject.Parse(geoJsonString);
-
-            // Serialize the JObject with indented formatting
-            geoJsonString = jsonObject.ToString(Formatting.Indented);
-        }
+        string geoJsonString = JsonConvert.SerializeObject(featureCollection, indentedFormatting ? Formatting.Indented : Formatting.None);
         File.WriteAllText(geoJsonFilePath, geoJsonString);
+
     }
 
-    /// <summary>
-    /// Calculates the minimum and maximum coordinates of all geometries in the feature collection.
-    /// </summary>
-    /// <returns>A tuple containing the minimum and maximum coordinates.</returns>
-    public (Coordinate min, Coordinate max) GetBounds()
-    {
-        double minLong = double.MaxValue;
-        double maxLong = double.MinValue;
-        double minLat = double.MaxValue;
-        double maxLat = double.MinValue;
+    ///// <summary>
+    ///// Calculates the minimum and maximum coordinates of all geometries in the feature collection.
+    ///// </summary>
+    ///// <returns>A tuple containing the minimum and maximum coordinates.</returns>
+    //public (Coordinate min, Coordinate max) GetBounds()
+    //{
+    //    double minLong = double.MaxValue;
+    //    double maxLong = double.MinValue;
+    //    double minLat = double.MaxValue;
+    //    double maxLat = double.MinValue;
 
-        foreach (IFeature? feature in featureCollection)
-        {
-            foreach (NetTopologySuite.Geometries.Coordinate? coordinate in feature.Geometry.Coordinates)
-            {
-                minLong = Math.Min(minLong, coordinate.X);
-                maxLong = Math.Max(maxLong, coordinate.X);
-                minLat = Math.Min(minLat, coordinate.Y);
-                maxLat = Math.Max(maxLat, coordinate.Y);
-            }
-        }
+    //    foreach (Feature feature in featureCollection.Features)
+    //    {
+    //        var xxx = feature.Geometry.
+    //        foreach (var coordinate in feature)
+    //        {
+    //            minLong = Math.Min(minLong, coordinate.X);
+    //            maxLong = Math.Max(maxLong, coordinate.X);
+    //            minLat = Math.Min(minLat, coordinate.Y);
+    //            maxLat = Math.Max(maxLat, coordinate.Y);
+    //        }
+    //    }
 
-        return (new Coordinate(minLong, minLat), new Coordinate(maxLong, maxLat));
-    }
+    //    return (new Coordinate(minLong, minLat), new Coordinate(maxLong, maxLat));
+    //}
 }
 

@@ -32,6 +32,31 @@ public sealed class SvgFont : SvgNode
     }
 
     /// <summary>
+    ///     Gets the default font to use in cases where no font is specified.
+    /// </summary>
+    /// <remarks>
+    ///     The default font is not defined according to the SVG 1.1 specification.
+    ///     The default font is instead set in in accordance to the major browsers (Chrome, Firefox and Edge) to
+    ///     <c>Times New Roman</c>
+    /// </remarks>
+    /// <seealso href="https://www.w3.org/TR/SVG11/text.html#FontPropertiesUsedBySVG">SVG 1.1 Font selection properties</seealso>
+    public static SvgFont DefaultFont { get; } =  new SvgFont(SKTypeface.FromFamilyName(SvgNames.DefaultFontName));
+
+
+    /// <summary>
+    ///     Creates an instance of <see cref="SvgFont"/> based on the specified font name.
+    /// </summary>
+    /// <remarks>
+    ///     This method tries to load a system font based on the specified font name.
+    ///     It should be used with care as the font may not be available on all systems.
+    ///     Consider using embedded fonts in SVG instead, which are supported by the OpenSvg library.
+    /// </remarks>
+    /// <param name="fontName">The name of the font.</param>
+    /// <returns>An instance of <see cref="SvgFont"/>.</returns>
+    /// <seealso cref="SvgDocument.EmbedFont(SvgFont)"/>
+    public static SvgFont GetSystemFont(string fontName) => new SvgFont(SKTypeface.FromFamilyName(fontName));
+
+    /// <summary>
     ///     Gets the declared object that represents the value of the SVG 'font-face' rule : an XML element.
     /// </summary>
     public string XText => this.xText.Value;

@@ -2,5 +2,5 @@
 
 public class Constants
 {
-    internal const int CoordinateDecimalPrecision = 6;
+    internal const int CoordinateDecimalPrecision = 8;
 }

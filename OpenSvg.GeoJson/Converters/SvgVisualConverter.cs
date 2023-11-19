@@ -1,5 +1,4 @@
-﻿using NetTopologySuite.Features;
-using NetTopologySuite.Geometries;
+﻿using GeoJSON.Net.Feature;
 using OpenSvg;
 using OpenSvg.Config;
 using OpenSvg.SvgNodes;
@@ -34,6 +33,7 @@ public static class SvgVisualConverter
         {
             SvgPath svgPath => svgPath.ToFeature(parentTransform, converter),
             SvgPolygon svgPolygon => svgPolygon.ToFeature(parentTransform, converter),
+            SvgPolyline svgPolyline => svgPolyline.ToFeature(parentTransform, converter),
             SvgLine svgLine => svgLine.ToFeature(parentTransform, converter),
             SvgText svgText => svgText.ToFeature(parentTransform, converter),
           

@@ -1,32 +1,37 @@
-﻿using NetTopologySuite.Features;
-using OpenSvg.Config;
+﻿using OpenSvg.Config;
 using SkiaSharp;
 
 namespace OpenSvg.GeoJson.Converters;
 public static class DrawConfigConverter
 {
 
-    public static AttributesTable ToAttributesTable(this DrawConfig drawConfig)
+    public static Dictionary<string, object> ToDictionary(this DrawConfig drawConfig)
     {
         static string GeoJsonColorString(SkiaSharp.SKColor color) =>
-            color.IsTransparent() ? "rgba(0, 0, 0, 0)" : color.ToHexColorString();
+           color.IsTransparent() ? "rgba(0, 0, 0, 0)" : color.ToHexColorString();
 
-        AttributesTable attributesTable = new()
+        var properties = new Dictionary<string, object>
         {
-            { GeoJsonNames.Stroke, GeoJsonColorString(drawConfig.StrokeColor) },
-            { GeoJsonNames.StrokeWidth, drawConfig.StrokeWidth.ToXmlString() },
-
             { GeoJsonNames.Fill, GeoJsonColorString(drawConfig.FillColor) },
+            { GeoJsonNames.Stroke, GeoJsonColorString(drawConfig.StrokeColor) },
+            { GeoJsonNames.StrokeWidth, drawConfig.StrokeWidth },
             { GeoJsonNames.FillOpacity, 1 }
         };
-        return attributesTable;
+
+        return properties;
     }
 
-    public static DrawConfig ToDrawConfig(this IAttributesTable attributesTable)
+
+    public static DrawConfig ToDrawConfig(this Dictionary<string, object> properties)
     {
-        SKColor fillColor = attributesTable.Exists(GeoJsonNames.Fill) ? SKColor.Parse((string)attributesTable[GeoJsonNames.Fill]) : DrawConfig.DefaultFillColor;
-        SKColor strokeColor = attributesTable.Exists(GeoJsonNames.Stroke) ? SKColor.Parse((string)attributesTable[GeoJsonNames.Stroke]) : DrawConfig.DefaultStrokeColor;
-        double strokeWidth = attributesTable.Exists(GeoJsonNames.StrokeWidth) ? float.Parse((string)attributesTable[GeoJsonNames.StrokeWidth]) : DrawConfig.DefaultStrokeWidth;
+        SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToColor() ?? DrawConfig.DefaultFillColor;
+        SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToColor() ?? DrawConfig.DefaultStrokeColor;
+        double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? DrawConfig.DefaultStrokeWidth;
+        
         return new DrawConfig(fillColor, strokeColor, strokeWidth);
     }
+
+   
+
+
 }

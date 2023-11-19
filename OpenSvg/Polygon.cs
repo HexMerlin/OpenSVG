@@ -18,6 +18,8 @@ public partial class Polygon : PointList, IEquatable<Polygon>
     /// <param name="points">The collection of points.</param>
     public Polygon(IEnumerable<Point> points) : base(points)
     {
+        if (Points.Length >= 2 && Points[0] == Points[^1])
+            throw new ArgumentException("The first and last points of a polygon cannot be the same. A polygon auto-closes the last point with the first.");
         convexHull = new ConvexHull(this);
     }
 

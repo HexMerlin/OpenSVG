@@ -13,8 +13,8 @@ public readonly struct Coordinate
 
     public Coordinate(double longitude, double latitude)
     {
-        this.Long = longitude;
-        this.Lat = latitude;
+        this.Long = Math.Round(longitude, Constants.CoordinateDecimalPrecision);
+        this.Lat = Math.Round(latitude, Constants.CoordinateDecimalPrecision);
     }
 
     

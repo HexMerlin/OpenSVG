@@ -117,6 +117,7 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
             points.Add(new Point(0, cr));
 
             points.AddRange(CircularArc.CreateArcPoints(new Point(cr, cr), cr, 180, arcLength, NumberOfCornerPoints));
+            points.Remove(points[points.Count - 1]); //remove last point, since it is the same as the first point
         }
         else
         {

@@ -15,6 +15,18 @@ namespace OpenSvg.Config;
 /// </param>
 public record TextConfig(string Text, SvgFont SvgFont, double FontSize, DrawConfig DrawConfig)
 {
+
+    /// <summary>
+    /// Creates a new TextConfig with default values.
+    /// </summary>
+    public TextConfig() : this(string.Empty, SvgFont.DefaultFont, DefaultFontSize, new DrawConfig()) {}
+
+
+    /// <summary>
+    ///     The default font size used for rendering text.
+    /// </summary>
+    public static double DefaultFontSize = SvgNames.DefaultFontSize;
+
     /// <summary>
     ///     Gets the name of the font.
     /// </summary>

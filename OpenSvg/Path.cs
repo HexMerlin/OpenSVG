@@ -105,7 +105,10 @@ public class Path : IEquatable<Path>, IDisposable
                 case SKPathVerb.Close:
                     if (currentPoints.Count > 0)
                     {
-                        currentPoints.Add(currentPoints[0]); // Close the polygon
+                        if (currentPoints[0] == currentPoints[^1])
+                        {
+                            currentPoints.RemoveAt(currentPoints.Count - 1);
+                        }
                         yield return new Polygon(currentPoints);
                         currentPoints = new List<Point>();
                     }

@@ -323,6 +323,16 @@ public static class SvgNames
     #region Special constants
 
     /// <summary>
+    ///     Default Font in SVG if no font is specified
+    /// </summary>
+    public const string DefaultFontName = "Times New Roman";
+
+    /// <summary>
+    ///     Default Font Size in SVG if no font size is specified
+    /// </summary>
+    public const double DefaultFontSize = 16;
+
+    /// <summary>
     ///     String for CSS font-face rule
     /// </summary>
     public const string FontFaceRule = "@font-face";

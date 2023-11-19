@@ -54,7 +54,7 @@ public record PointConverter
         return new Position(coord.Lat, coord.Long);
     }
 
-    public Point ToPoint(Position position) => ToPoint(new Coordinate(position.Longitude, position.Latitude));
+    public Point ToPoint(IPosition position) => ToPoint(new Coordinate(position.Longitude, position.Latitude));
 
     /// <summary>
     ///     Converts a world coordinate to a point.

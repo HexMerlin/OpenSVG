@@ -12,6 +12,6 @@ public class GeoJsonTestHelper
         Coordinate startLocation = new Coordinate(15.575, 58.416);
         GeoJsonDocument geoJsonDocument = 
             new GeoJsonDocument(svgDocument, startLocation, metersPerPixel:1, segmentCountForCurveApproximation: 8);
-        geoJsonDocument.SaveToGeoJsonFile(filePath);
+        geoJsonDocument.Save(filePath);
     }
 }
