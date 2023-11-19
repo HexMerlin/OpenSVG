@@ -1,19 +1,22 @@
-﻿namespace OpenSvg.GeoJson;
+﻿using GeoJSON.Net.Geometry;
+
+namespace OpenSvg.GeoJson;
 
 /// <summary>
 ///     A class for converting a point to a geographic coordinate.
 /// </summary>
-public record PointCoordinateConverter
+public record PointConverter
 {
     /// <summary>
     ///     Constructor for PointCoordinateConverter class
     /// </summary>
     /// <param name="startLocation">The starting location to use for the conversion</param>
     /// <param name="metersPerPixel">The meters per pixel value used to convert coordinates</param>
-    public PointCoordinateConverter(Coordinate startLocation, double metersPerPixel)
+    public PointConverter(Coordinate startLocation, double metersPerPixel, int segmentCountForCurveApproximation)
     {
         StartLocation = startLocation;
         MetersPerPixel = metersPerPixel;
+        SegmentCountForCurveApproximation = segmentCountForCurveApproximation;
     }
 
     /// <summary>
@@ -26,13 +29,16 @@ public record PointCoordinateConverter
     /// </summary>
     public double MetersPerPixel { get; init; }
 
+    public int SegmentCountForCurveApproximation { get; init; }
+
     /// <summary>
     ///     Converts a point to a world coordinate.
     /// </summary>
     /// <param name="point">The point to convert.</param>
     /// <returns>The geographic coordinate.</returns>
-    public Coordinate ConvertToCoordinate(Point point)
+    public Coordinate ToCoordinate(Point point, Transform? transform)
     {
+        if (transform != null) point = point.Transform((Transform)transform);
         double dxMeters = point.X * MetersPerPixel;
         double dyMeters = -point.Y * MetersPerPixel; // Invert Y-value
 
@@ -42,12 +48,20 @@ public record PointCoordinateConverter
     }
 
 
+    public Position ToPosition(Point point, Transform? transform)
+    {
+        Coordinate coord = ToCoordinate(point, transform);
+        return new Position(coord.Lat, coord.Long);
+    }
+
+    public Point ToPoint(Position position) => ToPoint(new Coordinate(position.Longitude, position.Latitude));
+
     /// <summary>
     ///     Converts a world coordinate to a point.
     /// </summary>
     /// <param name="coordinate">The world coordinate to convert.</param>
     /// <returns>A point converted from the input coordinate.</returns>
-    public Point ConvertToPoint(Coordinate coordinate)
+    public Point ToPoint(Coordinate coordinate)
     {
         var (dx, dy) = StartLocation.CartesianOffset(coordinate);
 

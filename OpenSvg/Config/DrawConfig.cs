@@ -10,6 +10,11 @@ namespace OpenSvg.Config;
 /// </remarks>
 public record DrawConfig(SKColor FillColor, SKColor StrokeColor, double StrokeWidth)
 {
+
+    public static SKColor DefaultFillColor { get; } = SKColors.Black;
+    public static SKColor DefaultStrokeColor { get; } = SKColors.Transparent;
+    public static double DefaultStrokeWidth { get; } = 1;
+
     /// <summary>
     ///     Gets a transparent DrawConfig instance.
     ///     One use-case is for creating invisible spaces between shapes.

@@ -32,14 +32,22 @@ public class SvgLine : SvgVisual
     public override string SvgName => SvgNames.Line;
 
     /// <summary>
-    /// Gets the starting point of the line.
+    /// Gets or sets the starting point of the line.
     /// </summary>
-    public Point P1 => new(this.X1.Get(), this.Y1.Get());
+    public Point P1 
+    { 
+        get => new(this.X1.Get(), this.Y1.Get()); 
+        set { this.X1.Set(value.X); this.Y1.Set(value.Y); }
+    }
 
     /// <summary>
-    /// Gets the ending point of the line.
+    /// Gets or sets the ending point of the line.
     /// </summary>
-    public Point P2 => new(this.X2.Get(), this.Y2.Get());
+    public Point P2
+    {
+        get => new(this.X2.Get(), this.Y2.Get());
+        set { this.X2.Set(value.X); this.Y2.Set(value.Y); }
+    }
 
     /// <summary>
     /// Computes the convex hull of the line.

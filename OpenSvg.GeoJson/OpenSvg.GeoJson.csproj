@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Docfx.App" Version="2.73.2" />
     <PackageReference Include="DotSpatial.Projections" Version="4.0.656" />
-    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
+    <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
   </ItemGroup>
 
   <ItemGroup>

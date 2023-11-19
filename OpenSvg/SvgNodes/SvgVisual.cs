@@ -18,7 +18,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default color is <c>Black</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#FillProperty">SVG 1.1 Fill Property</seealso>
-    public readonly ColorAttr FillColor = new(SvgNames.Fill, SKColors.Black);
+    public readonly ColorAttr FillColor = new(SvgNames.Fill, DrawConfig.DefaultFillColor);
 
     /// <summary>
     ///     Gets or sets the stroke color of this <see cref="SvgVisual" /> element.
@@ -27,7 +27,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default color is <c>None</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeProperty">SVG 1.1 Stroke Property</seealso>
-    public readonly ColorAttr StrokeColor = new(SvgNames.Stroke, SKColors.Transparent);
+    public readonly ColorAttr StrokeColor = new(SvgNames.Stroke, DrawConfig.DefaultStrokeColor);
 
 
     /// <summary>
@@ -37,7 +37,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default stroke-width is <c>1</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</seealso>
-    public readonly DoubleAttr StrokeWidth = new(SvgNames.StrokeWidth, 1);
+    public readonly DoubleAttr StrokeWidth = new(SvgNames.StrokeWidth, DrawConfig.DefaultStrokeWidth);
 
     /// <summary>
     /// Gets the transformation attribute of this <see cref="SvgVisual"/> element.
