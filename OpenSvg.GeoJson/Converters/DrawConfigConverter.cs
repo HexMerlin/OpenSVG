@@ -7,8 +7,8 @@ public static class DrawConfigConverter
 
     public static Dictionary<string, object> ToDictionary(this DrawConfig drawConfig)
     {
-        static string GeoJsonColorString(SkiaSharp.SKColor color) =>
-           color.IsTransparent() ? "rgba(0, 0, 0, 0)" : color.ToHexColorString();
+        static string GeoJsonColorString(SKColor color) =>
+           color.IsTransparent() ? Constants.TransparentColorString : color.ToHexColorString();
 
         var properties = new Dictionary<string, object>
         {
@@ -20,13 +20,15 @@ public static class DrawConfigConverter
 
         return properties;
     }
-
+    public static SKColor ToOpenSvgColor(this string geoJsonColorString) => geoJsonColorString.Equals(Constants.TransparentColorString, StringComparison.OrdinalIgnoreCase)
+            ? SKColors.Transparent
+            : geoJsonColorString.ToColor();
 
     public static DrawConfig ToDrawConfig(this Dictionary<string, object> properties)
     {
-        SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToColor() ?? DrawConfig.DefaultFillColor;
-        SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToColor() ?? DrawConfig.DefaultStrokeColor;
-        double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? DrawConfig.DefaultStrokeWidth;
+        SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToOpenSvgColor() ?? Constants.DefaultFillColor;
+        SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToOpenSvgColor() ?? Constants.DefaultStrokeColor;
+        double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? Constants.DefaultStrokeWidth;
         
         return new DrawConfig(fillColor, strokeColor, strokeWidth);
     }

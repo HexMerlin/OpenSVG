@@ -25,7 +25,7 @@ public interface IAttr : IEquatable<IAttr>
     /// Sets the value of the attribute from an XML string.
     /// </summary>
     /// <param name="xmlString">The XML string to set the value from.</param>
-    public void Set(string xmlString);
+     void SerializerSet(string xmlString);
 
     /// <summary>
     /// Converts the attribute to an XML string.

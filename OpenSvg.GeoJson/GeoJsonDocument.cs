@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenSvg.GeoJson.Converters;
 using OpenSvg.SvgNodes;
+using System.Security.Cryptography.X509Certificates;
 
 namespace OpenSvg.GeoJson;
 
@@ -18,9 +19,9 @@ public class GeoJsonDocument
     /// </summary>
     public const bool ErrorOnUnsupportedElement = true;
 
+
     private readonly FeatureCollection featureCollection;
-
-
+     
     public GeoJsonDocument(FeatureCollection featureCollection)
     {
         this.featureCollection = featureCollection;
@@ -50,13 +51,32 @@ public class GeoJsonDocument
                
         var features = svgDocument.ToFeatures(Transform.Identity, converter).ToList();
         this.featureCollection = new FeatureCollection(features);    
+        
+    }
+    public SvgDocument ToSvgDocument(double metersPerPixel = 10)
+    {
+        const int segmentCountForCurveApproximation = 10; //will not be used for conversion from GeoJson to Svg
+
+        SvgDocument svgDocument = new SvgDocument();
+        GeoJsonBoundingBox geoJsonBoundingBox = new GeoJsonBoundingBox(featureCollection);
+        Coordinate startLocation = geoJsonBoundingBox.TopLeft;
+
+        PointConverter converter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
+        svgDocument.AddAll(featureCollection.Features.Select(f => ToSvgElement(f, converter)));
+        return svgDocument;
     }
 
-    public SvgDocument ToSvgDocument()
+    private SvgElement ToSvgElement(Feature feature, PointConverter converter) => feature.Geometry switch
     {
-        SvgDocument svgDocument = new SvgDocument();
-        throw new NotImplementedException();
-    }
+        GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count == 2 => SvgLineConverter.ToSvgLine(feature, converter),
+        GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count > 2 => SvgPolylineConverter.ToSvgPolyline(feature, converter),
+        GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count == 1 => SvgPolygonConverter.ToSvgPolygon(feature, converter),
+        GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count > 1 => EnclosedPolygonGroupConverter.ToEnclosedPolygonGroup(polygon, converter).ToSvgPolygonGroup(),
+        GeoJSON.Net.Geometry.MultiPolygon multiPolygon => MultiPolygonConverter.ToMultiPolygon(multiPolygon, converter).ToSvgPolygonGroup(),
+        GeoJSON.Net.Geometry.Point when feature.IsTextFeature() => SvgTextConverter.ToSvgText(feature, converter),
+        GeoJSON.Net.Geometry.Point when !feature.IsTextFeature() => throw new NotSupportedException("Single points that are not text element are not supported by SVG"),
+        _ => throw new NotSupportedException($"Unsupported GeoJSON Feature with geometry type {feature.Geometry.GetType().Name}"),
+    };
 
     /// <summary>
     /// Loads a GeoJSON file and creates a GeoJsonDocument instance.
@@ -65,15 +85,13 @@ public class GeoJsonDocument
     /// <returns>A new instance of GeoJsonDocument.</returns>
     public static GeoJsonDocument Load(string geoJsonFilePath)
     {
-        using (StreamReader file = File.OpenText(geoJsonFilePath))
-        using (JsonTextReader reader = new JsonTextReader(file))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            FeatureCollection? featureCollection = serializer.Deserialize<FeatureCollection>(reader);
-            if (featureCollection == null)
-                throw new Exception("Could not deserialize GeoJSON file.");
+        using StreamReader file = File.OpenText(geoJsonFilePath);
+        using JsonTextReader reader = new JsonTextReader(file);
+        JsonSerializer serializer = new JsonSerializer();
+        FeatureCollection? featureCollection = serializer.Deserialize<FeatureCollection>(reader);
+        if (featureCollection != null)
             return new GeoJsonDocument(featureCollection);
-        }       
+        throw new Exception("Could not deserialize GeoJSON file.");
     }
 
 
@@ -85,35 +103,15 @@ public class GeoJsonDocument
 
     public void Save(string geoJsonFilePath, bool indentedFormatting = true)
     {
-        string geoJsonString = JsonConvert.SerializeObject(featureCollection, indentedFormatting ? Formatting.Indented : Formatting.None);
-        File.WriteAllText(geoJsonFilePath, geoJsonString);
-
+        using (StreamWriter file = File.CreateText(geoJsonFilePath))
+        {
+            JsonSerializer serializer = new JsonSerializer
+            {
+                Formatting = indentedFormatting ? Formatting.Indented : Formatting.None
+            };
+            serializer.Serialize(file, featureCollection);
+        }
     }
 
-    ///// <summary>
-    ///// Calculates the minimum and maximum coordinates of all geometries in the feature collection.
-    ///// </summary>
-    ///// <returns>A tuple containing the minimum and maximum coordinates.</returns>
-    //public (Coordinate min, Coordinate max) GetBounds()
-    //{
-    //    double minLong = double.MaxValue;
-    //    double maxLong = double.MinValue;
-    //    double minLat = double.MaxValue;
-    //    double maxLat = double.MinValue;
-
-    //    foreach (Feature feature in featureCollection.Features)
-    //    {
-    //        var xxx = feature.Geometry.
-    //        foreach (var coordinate in feature)
-    //        {
-    //            minLong = Math.Min(minLong, coordinate.X);
-    //            maxLong = Math.Max(maxLong, coordinate.X);
-    //            minLat = Math.Min(minLat, coordinate.Y);
-    //            maxLat = Math.Max(maxLat, coordinate.Y);
-    //        }
-    //    }
-
-    //    return (new Coordinate(minLong, minLat), new Coordinate(maxLong, maxLat));
-    //}
 }
 

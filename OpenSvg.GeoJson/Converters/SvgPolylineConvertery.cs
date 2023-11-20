@@ -36,8 +36,8 @@ public static class SvgPolylineConverter
     /// <returns>The resulting <see cref="SvgPolyline"/>.</returns>
     public static SvgPolyline ToSvgPolyline(this Feature feature, PointConverter converter)
     {
-        if (feature.Geometry is not LineString lineString)
-            throw new ArgumentException($"Feature must have a LineString geometry to convert to {nameof(SvgPolyline)}.");
+        if (feature.Geometry is not LineString lineString || lineString.Coordinates.Count <= 2)
+            throw new ArgumentException($"Feature must have a LineString geometry with more than two points to convert to {nameof(SvgPolyline)}.");
 
         Polyline polyline = lineString.ToPolyline(converter);
 

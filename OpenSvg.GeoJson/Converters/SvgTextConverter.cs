@@ -52,4 +52,11 @@ public static class SvgTextConverter
 
         return svgText;
     }
+
+    public static bool IsTextFeature(this Feature feature)
+    {
+        return feature.Geometry is GeoJSON.Net.Geometry.Point
+            && feature.Properties != null
+            && feature.Properties.ContainsKey(GeoJsonNames.Text);
+    }
 }

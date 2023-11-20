@@ -123,7 +123,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             string? xmlString = reader.GetAttribute(attribute.Name);
 
             if (!attribute.IsConstant && xmlString is not null)
-                attribute.Set(xmlString);
+                attribute.SerializerSet(xmlString);
         }
 
         if (!reader.IsEmptyElement)

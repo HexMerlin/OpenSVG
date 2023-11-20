@@ -2,6 +2,7 @@
 using GeoJSON.Net.Geometry;
 using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using SkiaSharp;
 
 namespace OpenSvg.GeoJson.Converters;
 
@@ -26,7 +27,7 @@ public static class SvgLineConverter
         LineString lineString = new LineString(new List<Position> { p1, p2 });
 
         var properties = svgLine.DrawConfig.ToDictionary();
-
+     
         return new Feature(lineString, properties);
     }
 
@@ -38,8 +39,8 @@ public static class SvgLineConverter
     /// <returns>The resulting <see cref="SvgLine"/>.</returns>
     public static SvgLine ToSvgLine(this Feature feature, PointConverter converter)
     {
-        if (feature.Geometry is not LineString lineString || lineString.Coordinates.Count < 2)
-            throw new ArgumentException($"Feature must have a LineString geometry with at least two points to convert to {nameof(SvgLine)}.");
+        if (feature.Geometry is not LineString lineString || lineString.Coordinates.Count != 2)
+            throw new ArgumentException($"Feature must have a LineString geometry with exactly two points to convert to {nameof(SvgLine)}.");
 
         var p1 = converter.ToPoint(lineString.Coordinates.First());
         var p2 = converter.ToPoint(lineString.Coordinates.Last());

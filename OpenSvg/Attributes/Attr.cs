@@ -42,7 +42,7 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull, IE
     /// Sets the value of the attribute from an XML string.
     /// </summary>
     /// <param name="xmlString">The XML string.</param>
-    public void Set(string xmlString) => Set(Deserialize(xmlString));
+    public void SerializerSet(string xmlString) => Set(Deserialize(xmlString));
 
     /// <summary>
     /// Whether the attribute has the default value.

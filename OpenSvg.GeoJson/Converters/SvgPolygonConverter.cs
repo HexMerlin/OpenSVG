@@ -34,8 +34,8 @@ public static class SvgPolygonConverter
     /// <returns>The resulting <see cref="SvgPolygon"/>.</returns>
     public static SvgPolygon ToSvgPolygon(this Feature feature, PointConverter converter)
     {
-        if (feature.Geometry is not GeoJSON.Net.Geometry.Polygon geoJsonPolygon)
-            throw new ArgumentException($"Feature must have a Polygon geometry to convert to {nameof(SvgPolygon)}.");
+        if (feature.Geometry is not GeoJSON.Net.Geometry.Polygon geoJsonPolygon || geoJsonPolygon.Coordinates.Count != 1)
+            throw new ArgumentException($"Feature must have a Polygon geometry with exactly one LineString to convert to {nameof(SvgPolygon)}.");
 
         Polygon polygon = geoJsonPolygon.ToPolygon(converter);  
 
