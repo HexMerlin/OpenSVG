@@ -13,8 +13,8 @@ public class ColorAttr : Attr<SKColor>
     /// </summary>
     /// <param name="name">The name of the attribute.</param>
     /// <param name="defaultValue">The default value of the attribute.</param>
-    /// <param name="isInherited">Whether the attribute is inherited.</param>
-    public ColorAttr(string name, SKColor defaultValue, bool isInherited = false) : base(name, defaultValue, isInherited)
+    /// <param name="isConstant">Whether the attribute is a constant that cannot be changed.</param>
+    public ColorAttr(string name, SKColor defaultValue, bool isConstant = false) : base(name, defaultValue, isConstant)
     {
     }
 

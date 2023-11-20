@@ -93,7 +93,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// <param name="writer">The writer to which the element is written.</param>
     public void WriteXml(XmlWriter writer)
     {
-        foreach (IAttr? attribute in Attributes().Where(attribute => !attribute.HasDefaultValue)
+        foreach (IAttr? attribute in Attributes().Where(attribute => attribute.ShouldBeSerialized)
                      .OrderBy(attr => attr.Name.Length + attr.ToXmlString().Length).ThenBy(attr => attr.Name))
             writer.WriteAttributeString(attribute.Name, attribute.ToXmlString());
 
@@ -123,7 +123,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             string? xmlString = reader.GetAttribute(attribute.Name);
 
             if (!attribute.IsConstant && xmlString is not null)
-                attribute.SerializerSet(xmlString);
+                attribute.SetBySerializer(xmlString);
         }
 
         if (!reader.IsEmptyElement)

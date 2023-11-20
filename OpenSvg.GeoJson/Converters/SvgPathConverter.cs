@@ -44,8 +44,7 @@ public static class SvgPathConverter
         MultiPolygon multiPolygon = geoJsonMultiPolygon.ToMultiPolygon(converter);
 
         SvgGroup svgGroup = multiPolygon.ToSvgPolygonGroup();
-        svgGroup.DrawConfig = drawConfig;
-        
+      
         return svgGroup;
     }
 

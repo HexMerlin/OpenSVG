@@ -1,4 +1,5 @@
-﻿using OpenSvg.SvgNodes;
+﻿using OpenSvg.Config;
+using OpenSvg.SvgNodes;
 
 namespace OpenSvg;
 
@@ -41,6 +42,7 @@ public class EnclosedPolygonGroup
     public SvgGroup ToSvgPolygonGroup()
     {
         SvgGroup group = new SvgGroup();
+  
         group.Add(ExteriorPolygon.ToSvgPolygon());
 
         foreach (Polygon interiorPolygon in InteriorPolygons)

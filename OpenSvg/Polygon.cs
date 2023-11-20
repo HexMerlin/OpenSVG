@@ -1,4 +1,5 @@
-﻿using OpenSvg.SvgNodes;
+﻿using OpenSvg.Config;
+using OpenSvg.SvgNodes;
 using System.Globalization;
 
 

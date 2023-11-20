@@ -16,16 +16,19 @@ public interface IAttr : IEquatable<IAttr>
     /// </summary>
     public bool IsConstant { get; }
 
-    /// <summary>
-    /// Gets a value indicating whether the attribute has a default value.
-    /// </summary>
-    public bool HasDefaultValue { get; }
+    
+    public bool ShouldBeSerialized { get; }
+
+    ///// <summary>
+    ///// Gets a value indicating whether the attribute has a default value.
+    ///// </summary>
+    //public bool HasDefaultValue { get; }
 
     /// <summary>
-    /// Sets the value of the attribute from an XML string.
+    /// Used by the serializer to set the value of the attribute from an XML string.
     /// </summary>
     /// <param name="xmlString">The XML string to set the value from.</param>
-     void SerializerSet(string xmlString);
+     void SetBySerializer(string xmlString);
 
     /// <summary>
     /// Converts the attribute to an XML string.

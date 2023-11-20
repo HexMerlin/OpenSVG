@@ -1,4 +1,5 @@
-﻿using OpenSvg.SvgNodes;
+﻿using OpenSvg.Config;
+using OpenSvg.SvgNodes;
 using System.Collections;
 
 namespace OpenSvg;
@@ -51,6 +52,7 @@ public class MultiPolygon : IReadOnlyList<EnclosedPolygonGroup>
     public SvgGroup ToSvgPolygonGroup()
     {
         SvgGroup group = new SvgGroup();
+
         foreach (EnclosedPolygonGroup subGroup in enclosedPolygonGroups)
         {
             group.Add(subGroup.ToSvgPolygonGroup()); 
