@@ -52,6 +52,12 @@ public class GeoJsonDocument
         this.featureCollection = new FeatureCollection(features);    
     }
 
+    public SvgDocument ToSvgDocument()
+    {
+        SvgDocument svgDocument = new SvgDocument();
+        throw new NotImplementedException();
+    }
+
     /// <summary>
     /// Loads a GeoJSON file and creates a GeoJsonDocument instance.
     /// </summary>
@@ -59,12 +65,15 @@ public class GeoJsonDocument
     /// <returns>A new instance of GeoJsonDocument.</returns>
     public static GeoJsonDocument Load(string geoJsonFilePath)
     {
-        throw new NotImplementedException(); 
-        //using var reader = new StreamReader(geoJsonFilePath);
-        //using var jsonReader = new JsonTextReader(reader);
-        //var geoJsonReader = new GeoJsonReader();
-        //var featureCollection = geoJsonReader.Read<FeatureCollection>(jsonReader);
-        //return new GeoJsonDocument(featureCollection);
+        using (StreamReader file = File.OpenText(geoJsonFilePath))
+        using (JsonTextReader reader = new JsonTextReader(file))
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            FeatureCollection? featureCollection = serializer.Deserialize<FeatureCollection>(reader);
+            if (featureCollection == null)
+                throw new Exception("Could not deserialize GeoJSON file.");
+            return new GeoJsonDocument(featureCollection);
+        }       
     }
 
 

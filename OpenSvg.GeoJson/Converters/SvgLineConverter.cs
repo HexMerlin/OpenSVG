@@ -35,7 +35,7 @@ public static class SvgLineConverter
     /// </summary>
     /// <param name="feature">The GeoJSON feature to convert.</param>
     /// <param name="converter">A converter for converting points and coordinates</param>
-    /// <returns>The resulting SvgText.</returns>
+    /// <returns>The resulting <see cref="SvgLine"/>.</returns>
     public static SvgLine ToSvgLine(this Feature feature, PointConverter converter)
     {
         if (feature.Geometry is not LineString lineString || lineString.Coordinates.Count < 2)

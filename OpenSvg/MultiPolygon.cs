@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using OpenSvg.SvgNodes;
+using System.Collections;
 
 namespace OpenSvg;
 
@@ -32,7 +33,30 @@ public class MultiPolygon : IReadOnlyList<EnclosedPolygonGroup>
         BoundingBox = ConvexHull.BoundingBox;
     }
 
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="MultiPolygon" /> class with the specified collection of
+    ///     <see cref="EnclosedPolygonGroup" /> objects. 
+    /// </summary>
+    /// <param name="polygonGroups">The collection of <see cref="EnclosedPolygonGroup" /> objects to add.</param>
+    public MultiPolygon(IEnumerable<EnclosedPolygonGroup> polygonGroups)
+    {
+        enclosedPolygonGroups = polygonGroups.ToList();
+        ConvexHull = ComputeConvexHull();
+        BoundingBox = ConvexHull.BoundingBox;
+    }
+
+
     public EnclosedPolygonGroup this[int index] => enclosedPolygonGroups[index];
+
+    public SvgGroup ToSvgPolygonGroup()
+    {
+        SvgGroup group = new SvgGroup();
+        foreach (EnclosedPolygonGroup subGroup in enclosedPolygonGroups)
+        {
+            group.Add(subGroup.ToSvgPolygonGroup()); 
+        }
+        return group;
+    }
 
 
     /// <summary>

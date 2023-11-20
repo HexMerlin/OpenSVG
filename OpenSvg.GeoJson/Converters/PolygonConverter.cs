@@ -5,6 +5,7 @@ namespace OpenSvg.GeoJson.Converters;
 public static class PolygonConverter
 {
 
+
     public static GeoJSON.Net.Geometry.Polygon ToGeoJsonPolygon(this Polygon polygon, Transform transform, PointConverter converter) 
         => new GeoJSON.Net.Geometry.Polygon(new[] { polygon.ToLineString(transform, converter) });
 

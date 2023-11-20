@@ -1,4 +1,6 @@
-﻿namespace OpenSvg;
+﻿using OpenSvg.SvgNodes;
+
+namespace OpenSvg;
 
 /// <summary>
 ///     Represents a group of polygons where the exterior polygon encloses all interior polygons.
@@ -13,10 +15,17 @@ public class EnclosedPolygonGroup
     ///     Initializes a new instance of the <see cref="EnclosedPolygonGroup" /> class.
     /// </summary>
     /// <param name="exteriorPolygon">The polygon that encloses all interior polygons.</param>
-    public EnclosedPolygonGroup(Polygon exteriorPolygon)
+    public EnclosedPolygonGroup(Polygon exteriorPolygon) : this(exteriorPolygon, new List<Polygon>()) {}
+
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="EnclosedPolygonGroup" /> class.
+    /// </summary>
+    /// <param name="exteriorPolygon">The polygon that encloses all interior polygons.</param>
+    /// <param name="interiorPolygons">The list of polygons inside the exterior polygon.</param>
+    public EnclosedPolygonGroup(Polygon exteriorPolygon, List<Polygon> interiorPolygons)
     {
         ExteriorPolygon = exteriorPolygon;
-        InteriorPolygons = new List<Polygon>();
+        InteriorPolygons = interiorPolygons;
     }
 
     /// <summary>
@@ -28,4 +37,14 @@ public class EnclosedPolygonGroup
     ///     Gets the list of polygons inside the exterior polygon.
     /// </summary>
     public List<Polygon> InteriorPolygons { get; set; }
+
+    public SvgGroup ToSvgPolygonGroup()
+    {
+        SvgGroup group = new SvgGroup();
+        group.Add(ExteriorPolygon.ToSvgPolygon());
+
+        foreach (Polygon interiorPolygon in InteriorPolygons)
+            group.Add(interiorPolygon.ToSvgPolygon());
+        return group;
+    }
 }

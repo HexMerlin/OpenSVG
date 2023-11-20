@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using OpenSvg.SvgNodes;
+using System.Globalization;
 
 
 namespace OpenSvg;
@@ -34,6 +35,12 @@ public partial class Polygon : PointList, IEquatable<Polygon>
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
+    public SvgPolygon ToSvgPolygon()
+    {
+        SvgPolygon polygon = new SvgPolygon();
+        polygon.Polygon.Set(this);
+        return polygon;
+    }
 
     /// <summary>
     ///     Determines whether the specified object is equal to the current object.
