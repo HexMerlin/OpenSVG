@@ -11,10 +11,11 @@ namespace OpenSvg.SvgNodes;
 /// </remarks>
 public class SvgCssStyle : SvgStyle, IHasElementContent
 {
-    public readonly StringAttr Type = new(SvgNames.Type, SvgNames.TextCss, true);
-
+    protected readonly StringAttr type = new(SvgNames.Type, SvgNames.TextCss, true);
 
     private SvgFont? singleFont;
+
+    public string Type => type.Get();
 
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Style;

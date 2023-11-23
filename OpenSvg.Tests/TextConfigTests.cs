@@ -73,11 +73,11 @@ public class TextConfigTests
         actualSvgDocument.Save(actualFilePath);
 
         // Assert 
-        Assert.Equal(SKColors.Blue, expectedSvgPath.FillColor.Get());
-        Assert.Equal(SKColors.DarkBlue, expectedSvgPath.StrokeColor.Get());
-        Assert.Equal(0, expectedSvgPath.StrokeWidth.Get());
-        Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth.Get());
-        Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight.Get());
+        Assert.Equal(SKColors.Blue, expectedSvgPath.FillColor);
+        Assert.Equal(SKColors.DarkBlue, expectedSvgPath.StrokeColor);
+        Assert.Equal(0, expectedSvgPath.StrokeWidth);
+        Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth);
+        Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight);
 
         (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
         Assert.True(equal, diffMessage);

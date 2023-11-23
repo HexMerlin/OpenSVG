@@ -11,20 +11,22 @@ namespace OpenSvg.SvgNodes;
 [XmlRoot(ElementName = SvgNames.Svg, Namespace = SvgNames.SvgNamespace)]
 public class SvgDocument : SvgVisualContainer
 {
-    public readonly AbsoluteOrRatioAttr DefinedViewPortHeight = new(SvgNames.Height);
+    protected readonly AbsoluteOrRatioAttr definedViewPortWidth = new(SvgNames.Width);
+    protected readonly AbsoluteOrRatioAttr definedViewPortHeight = new(SvgNames.Height);
 
-    public readonly AbsoluteOrRatioAttr DefinedViewPortWidth = new(SvgNames.Width);
+
+    public AbsoluteOrRatio DefinedViewPortWidth { get => definedViewPortWidth.Get(); set => definedViewPortWidth.Set(value); }
+    public AbsoluteOrRatio DefinedViewPortHeight { get => definedViewPortHeight.Get(); set => definedViewPortHeight.Set(value); }
+
 
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Svg;
 
     /// <inheritdoc/>
-    public override double ViewPortWidth => this.DefinedViewPortWidth.Get()
-        .Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Size.Width);
+    public override double ViewPortWidth => this.DefinedViewPortWidth.Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Size.Width);
 
     /// <inheritdoc/>
-    public override double ViewPortHeight => this.DefinedViewPortHeight.Get()
-        .Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Size.Height);
+    public override double ViewPortHeight => this.DefinedViewPortHeight.Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Size.Height);
 
     public XDocument ToXDocument()
     {
@@ -108,23 +110,8 @@ public class SvgDocument : SvgVisualContainer
 
     public void SetViewPortToActualSize()
     {
-        this.DefinedViewPortWidth.Set(BoundingBox.Size.Width);
-        this.DefinedViewPortHeight.Set(BoundingBox.Size.Height);
+        this.DefinedViewPortWidth = BoundingBox.Size.Width;
+        this.DefinedViewPortHeight = BoundingBox.Size.Height;
     }
 
-    //public override (bool Equal, string Message) CompareSelfAndDescendants(SvgElement other,
-    //    double precision = Constants.DoublePrecision)
-    //{
-    //    if (ReferenceEquals(this, other)) return (true, "Same reference");
-    //    (bool equal, string message) = base.CompareSelfAndDescendants(other);
-    //    if (!equal)
-    //        return (equal, message);
-    //    var sameType = (SvgDocument)other;
-    //    if (this.DefinedViewPortWidth != sameType.DefinedViewPortWidth)
-    //        return (false, $"DefinedViewPortWidth: {this.DefinedViewPortWidth} != {sameType.DefinedViewPortWidth}");
-
-    //    if (this.DefinedViewPortHeight != sameType.DefinedViewPortHeight)
-    //        return (false, $"DefinedViewPortHeight: {this.DefinedViewPortHeight} != {sameType.DefinedViewPortHeight}");
-    //    return (true, "Equal");
-    //}
 }

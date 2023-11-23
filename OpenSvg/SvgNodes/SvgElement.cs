@@ -188,8 +188,11 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// Gets the attributes of the element.
     /// </summary>
     /// <returns>The attributes of the element.</returns>
-    public IEnumerable<IAttr> Attributes() => GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
+    public IEnumerable<IAttr> Attributes() => GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
             .Select(field => field.GetValue(this)).OfType<IAttr>();
+
+
+    public string AttributeStrings() => string.Join("\n", Attributes().Select(attr => attr.Name));
 
     private static SvgElement CreateSvgElement(string elementName) => elementName switch
     {

@@ -7,12 +7,13 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public class SvgPolygon: SvgVisual
 {
-    public readonly PolygonAttr Polygon = new();
+    protected readonly PolygonAttr polygon = new();
 
+    public Polygon Polygon { get => this.polygon.Get(); set => this.polygon.Set(value); }
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Polygon;
 
     /// <inheritdoc/>
-    protected override ConvexHull ComputeConvexHull() => this.Polygon.Get().ConvexHull;
+    protected override ConvexHull ComputeConvexHull() => this.Polygon.ConvexHull;
 
 }

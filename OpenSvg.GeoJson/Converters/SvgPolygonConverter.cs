@@ -1,6 +1,4 @@
-﻿using GeoJSON.Net.Geometry;
-using GeoJSON.Net.Feature;
-using OpenSvg.Config;
+﻿using GeoJSON.Net.Feature;
 using OpenSvg.SvgNodes;
 
 namespace OpenSvg.GeoJson.Converters;
@@ -17,8 +15,8 @@ public static class SvgPolygonConverter
     /// <returns>The resulting GeoJSON feature.</returns>
     public static Feature ToFeature(this SvgPolygon svgPolygon, Transform parentTransform, PointConverter converter)
     {
-        Transform composedTransform = parentTransform.ComposeWith(svgPolygon.Transform.Get());
-        Polygon polygon = svgPolygon.Polygon.Get();
+        Transform composedTransform = parentTransform.ComposeWith(svgPolygon.Transform);
+        Polygon polygon = svgPolygon.Polygon;
 
         GeoJSON.Net.Geometry.Polygon geoJsonPolygon = polygon.ToGeoJsonPolygon(composedTransform, converter);
 
@@ -40,7 +38,7 @@ public static class SvgPolygonConverter
         Polygon polygon = geoJsonPolygon.ToPolygon(converter);  
 
         SvgPolygon svgPolygon = new SvgPolygon();
-        svgPolygon.Polygon.Set(polygon);
+        svgPolygon.Polygon = polygon;
  
         return svgPolygon;
     }

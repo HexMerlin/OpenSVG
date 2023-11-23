@@ -24,7 +24,7 @@ public static class SvgVisualConverter
        
         if (svgVisual is SvgVisualContainer svgVisualContainer) 
         {
-            Transform composedTransform = parentTransform.ComposeWith(svgVisual.Transform.Get());
+            Transform composedTransform = parentTransform.ComposeWith(svgVisual.Transform);
             IEnumerable<Feature> features = svgVisualContainer.Children().OfType<SvgVisual>().SelectMany(c => c.ToFeatures(composedTransform, converter));
             foreach (Feature feature in features)
                 yield return feature;           

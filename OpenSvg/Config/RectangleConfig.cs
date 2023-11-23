@@ -46,7 +46,7 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
     {
         SvgPolygon svgPolygon = new();
         Polygon polygon = ToPolygon();
-        svgPolygon.Polygon.Set(polygon);
+        svgPolygon.Polygon = polygon;
         svgPolygon.DrawConfig = DrawConfig;
         return svgPolygon;
     }

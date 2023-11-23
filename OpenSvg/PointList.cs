@@ -1,7 +1,7 @@
 ﻿using HarfBuzzSharp;
 using System.Collections;
 using System.Globalization;
-
+using System.Collections.Immutable;
 
 namespace OpenSvg;
 
@@ -12,15 +12,15 @@ namespace OpenSvg;
 public abstract class PointList : IReadOnlyList<Point>, IEquatable<PointList>
 {
 
-    protected readonly Point[] Points;
+    protected readonly ImmutableArray<Point> Points;
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="PointList" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public PointList(IEnumerable<Point> points)
+    public PointList(ImmutableArray<Point> points)
     {
-        this.Points = points.ToArray();
+        this.Points = points;
     }
 
     public int Count => Points.Length;

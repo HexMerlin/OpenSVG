@@ -1,6 +1,6 @@
-﻿using OpenSvg.Config;
-using OpenSvg.SvgNodes;
-using System.Globalization;
+﻿using OpenSvg.SvgNodes;
+using System.Collections.Immutable;
+
 
 
 namespace OpenSvg;
@@ -18,7 +18,7 @@ public partial class Polygon : PointList, IEquatable<Polygon>
     ///     Initializes a new instance of the <see cref="Polygon" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public Polygon(IEnumerable<Point> points) : base(points)
+    public Polygon(IEnumerable<Point> points) : base(points.ToImmutableArray())
     {
         if (Points.Length >= 2 && Points[0] == Points[^1])
             throw new ArgumentException("The first and last points of a polygon cannot be the same. A polygon auto-closes the last point with the first.");
@@ -39,7 +39,7 @@ public partial class Polygon : PointList, IEquatable<Polygon>
     public SvgPolygon ToSvgPolygon()
     {
         SvgPolygon polygon = new SvgPolygon();
-        polygon.Polygon.Set(this);
+        polygon.Polygon = this;
         return polygon;
     }
 

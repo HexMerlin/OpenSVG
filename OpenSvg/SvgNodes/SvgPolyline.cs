@@ -7,12 +7,15 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public class SvgPolyline : SvgVisual
 {
-    public readonly PolylineAttr Polyline = new();
+    protected readonly PolylineAttr polyline = new();
+
+
+    public Polyline Polyline { get => this.polyline.Get(); set => this.polyline.Set(value); }
 
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Polyline;
 
     /// <inheritdoc/>
-    protected override ConvexHull ComputeConvexHull() => this.Polyline.Get().ConvexHull;
+    protected override ConvexHull ComputeConvexHull() => this.Polyline.ConvexHull;
 
 }

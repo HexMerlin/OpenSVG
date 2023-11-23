@@ -11,6 +11,14 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public abstract class SvgVisual : SvgElement
 {
+  
+    
+    protected readonly ColorAttr fillColor = new(SvgNames.Fill, DrawConfig.DefaultFillColor);
+    protected readonly ColorAttr strokeColor = new(SvgNames.Stroke, DrawConfig.DefaultStrokeColor);
+    protected readonly DoubleAttr strokeWidth = new(SvgNames.StrokeWidth, DrawConfig.DefaultStrokeWidth);
+
+    public readonly TransformAttr transform = new();
+
     /// <summary>
     ///     Gets or sets the fill color of this <see cref="SvgVisual" /> element.
     /// </summary>
@@ -18,7 +26,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default color is <c>Black</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#FillProperty">SVG 1.1 Fill Property</seealso>
-    public readonly ColorAttr FillColor = new(SvgNames.Fill, DrawConfig.DefaultFillColor);
+    public SKColor FillColor { get => fillColor.Get(); set => fillColor.Set(value); }
 
     /// <summary>
     ///     Gets or sets the stroke color of this <see cref="SvgVisual" /> element.
@@ -27,7 +35,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default color is <c>None</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeProperty">SVG 1.1 Stroke Property</seealso>
-    public readonly ColorAttr StrokeColor = new(SvgNames.Stroke, DrawConfig.DefaultStrokeColor);
+    public SKColor StrokeColor { get => strokeColor.Get(); set => strokeColor.Set(value); }
 
 
     /// <summary>
@@ -37,7 +45,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default stroke-width is <c>1</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</seealso>
-    public readonly DoubleAttr StrokeWidth = new(SvgNames.StrokeWidth, DrawConfig.DefaultStrokeWidth);
+    public double StrokeWidth { get => strokeWidth.Get(); set => strokeWidth.Set(value); }
 
     /// <summary>
     /// Gets the transformation attribute of this <see cref="SvgVisual"/> element.
@@ -45,8 +53,12 @@ public abstract class SvgVisual : SvgElement
     /// <remarks>
     /// This attribute defines the transformation to be applied to the element.
     /// </remarks>
+    public Transform Transform 
+    { 
+        get => transform.Get(); 
+        set => transform.Set(value); 
+    }
 
-    public readonly TransformAttr Transform = new();
 
     /// <summary>
     /// Gets or sets the drawing configuration for this <see cref="SvgVisual"/> element.
@@ -56,12 +68,12 @@ public abstract class SvgVisual : SvgElement
     /// </remarks>
     public DrawConfig DrawConfig
     {
-        get => new(this.FillColor.Get(), this.StrokeColor.Get(), this.StrokeWidth.Get());
+        get => new(FillColor, StrokeColor, StrokeWidth);
         set
         {
-            this.FillColor.Set(value.FillColor);
-            this.StrokeColor.Set(value.StrokeColor);
-            this.StrokeWidth.Set(value.StrokeWidth);
+            FillColor = value.FillColor;
+            StrokeColor = value.StrokeColor;
+            StrokeWidth = value.StrokeWidth;
         }
     }
 
@@ -71,7 +83,7 @@ public abstract class SvgVisual : SvgElement
     /// <remarks>
     /// The convex hull is calculated based on the current transformation of the element.
     /// </remarks>
-    public ConvexHull ConvexHull => ComputeConvexHull().Transform(this.Transform.Get());
+    public ConvexHull ConvexHull => ComputeConvexHull().Transform(Transform);
 
     /// <summary>
     /// Gets the rectangular bounding box of this <see cref="SvgVisual"/> element.
@@ -153,7 +165,7 @@ public abstract class SvgVisual : SvgElement
 
         double dx = xRef - xThis;
         double dy = yRef - yThis;
-        this.Transform.ComposeWith(OpenSvg.Transform.CreateTranslation(dx, dy));
+        this.Transform = Transform.ComposeWith(Transform.CreateTranslation(dx, dy));
     }
 
 }

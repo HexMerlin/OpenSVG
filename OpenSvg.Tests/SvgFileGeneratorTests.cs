@@ -13,12 +13,16 @@ public class SvgFileGeneratorTests
         var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
         // Act
+        Assert.Equal(860, expectedSvgDocument.ViewPortWidth);
+        Assert.Equal(3920, expectedSvgDocument.ViewPortHeight);
         var config = new SvgImageConfig();
         SvgDocument actualSvgDocument = config.CreateSvgDocument();
         actualSvgDocument.SetViewPortToActualSize();
         actualSvgDocument.Save(actualFilePath);
 
         // Assert
+        Assert.Equal(860, actualSvgDocument.ViewPortWidth);
+        Assert.Equal(3920, actualSvgDocument.ViewPortHeight);
         (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
         Assert.True(equal, diffMessage);
 

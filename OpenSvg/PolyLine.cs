@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Immutable;
 using System.Globalization;
 
 
@@ -16,7 +17,7 @@ public class Polyline : PointList, IEquatable<Polyline>
     ///     Initializes a new instance of the <see cref="Polyline" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public Polyline(IEnumerable<Point> points) : base(points)
+    public Polyline(IEnumerable<Point> points) : base(points.ToImmutableArray())
     {
         convexHull = new ConvexHull(this);
     }

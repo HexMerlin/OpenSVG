@@ -19,7 +19,7 @@ public static class SvgLineConverter
     /// <returns>The resulting GeoJSON feature.</returns>
     public static Feature ToFeature(this SvgLine svgLine, Transform parentTransform, PointConverter converter)
     {
-        Transform composedTransform = parentTransform.ComposeWith(svgLine.Transform.Get());
+        Transform composedTransform = parentTransform.ComposeWith(svgLine.Transform);
 
         Position p1 = converter.ToPosition(svgLine.P1, composedTransform);
         Position p2 = converter.ToPosition(svgLine.P2, composedTransform);

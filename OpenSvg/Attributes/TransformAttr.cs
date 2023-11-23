@@ -15,12 +15,6 @@ public class TransformAttr : Attr<Transform>
     {
     }
 
-    ///<summary>
-    ///     Adds a new transform to the current transform.
-    ///</summary>
-    ///<param name="transform">The transform to add.</param>
-    public void ComposeWith(Transform transform) => Set(Get().ComposeWith(transform));
-
     /// <inheritdoc />
     protected override string Serialize(Transform value) => value.ToXmlString();
 

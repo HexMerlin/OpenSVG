@@ -21,8 +21,8 @@ public static class SvgTextConverter
     /// <returns>The resulting GeoJSON feature.</returns>
     public static Feature ToFeature(this SvgText svgText, Transform parentTransform, PointConverter converter)
     {
-        Transform composedTransform = parentTransform.ComposeWith(svgText.Transform.Get());
-        Point textPoint = new Point(svgText.X.Get(), svgText.Y.Get());
+        Transform composedTransform = parentTransform.ComposeWith(svgText.Transform);
+        Point textPoint = new Point(svgText.X, svgText.Y);
         Position position = converter.ToPosition(textPoint, composedTransform);
         TextConfig svgTextConfig = svgText.TextConfig;
         var properties = svgTextConfig.ToDictionary(converter); 
@@ -55,8 +55,8 @@ public static class SvgTextConverter
             double? fontSize = (properties.GetValueOrDefault(GeoJsonNames.FontSize) as string)?.ToDouble() / converter.MetersPerPixel;
 
             if (text != null) svgText.Content = text;
-            if (fontName != null) svgText.FontName.Set(fontName);
-            if (fontSize != null) svgText.FontSize.Set(fontSize.Value);
+            if (fontName != null) svgText.FontName = fontName;
+            if (fontSize != null) svgText.FontSize = fontSize.Value;
         }
 
      

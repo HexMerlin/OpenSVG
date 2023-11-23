@@ -20,6 +20,14 @@ public static class SvgNames
     public const string Unsupported = "unsupported";
 
     /// <summary>
+    ///     Circle element
+    /// </summary>
+    /// <remarks>
+    ///     Defines a circle in SVG.
+    /// </remarks>
+    public const string Circle = "circle";
+
+    /// <summary>
     ///     Defs element
     /// </summary>
     /// <remarks>
@@ -278,6 +286,31 @@ public static class SvgNames
     ///     Defines a vertical position for SVG line elements.
     /// </remarks>
     public const string Y2 = "y2";
+
+    /// <summary>
+    ///     cx attribute
+    /// </summary>
+    /// <remarks>
+    ///     The x-axis coordinate of the center of the circle.
+    /// </remarks>
+    public const string CircleX = "cx";
+
+    /// <summary>
+    ///     cy attribute
+    /// </summary>
+    /// <remarks>
+    ///     The y-axis coordinate of the center of the circle.
+    /// </remarks>
+    public const string CircleY = "cy";
+
+    /// <summary>
+    ///     r attribute
+    /// </summary>
+    /// <remarks>
+    ///     The radius of the circle. A value lower or equal to zero disables rendering of the circle.
+    /// </remarks>
+    public const string Radius = "r";
+
 
     #endregion SVG Attributes
 

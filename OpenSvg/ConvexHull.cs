@@ -1,4 +1,7 @@
-﻿namespace OpenSvg;
+﻿using OpenSvg.SvgNodes;
+using System.Collections.Immutable;
+
+namespace OpenSvg;
 
 /// <summary>
 ///     Represents a convex hull of points.
@@ -14,7 +17,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     ///     Initializes a new instance of the <see cref="ConvexHull" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public ConvexHull(IEnumerable<Point> points) : this(points, true)  {}
+    public ConvexHull(IEnumerable<Point> points) : this(ExtractHullPoints(points.ToArray()), SkipGrahamsScan.Yes) {}
 
 
     /// <summary>
@@ -28,31 +31,31 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     ///     Initializes a new instance of the <see cref="ConvexHull" /> class with a set of points known to form a convex hull.
     /// </summary>
     /// <remarks>
-    ///     This specialized private constructor is intended for internal optimization purposes. It bypasses the Graham's scan
-    ///     algorithm.
-    ///     It is used by methods that transform an existing <see cref="ConvexHull" />, preserving its convex nature.
+    ///     This specialized constructor bypasses the Graham's scan algorithm.
+    ///     It is used in cases where it is known that the input points comprise a convex hull already.
+    ///     For instance is used when transforming an existing <see cref="ConvexHull" /> using affine transformations, that preservs its convex nature.
     /// </remarks>
     /// <param name="points">A collection of points that are already in the form of a convex hull.</param>
-    /// <param name="extractHullPoints">True if a Graham's scan should be performed. False if we know the points to be a convex hull already</param>
-    /// <param name="_">A marker parameter .</param>
-    private ConvexHull(IEnumerable<Point> points, bool extractHullPoints) : base(extractHullPoints ? ExtractHullPoints(points.ToArray()) : points)
+    /// <param name="_">A non-used parameter to clarify that extraction of hull points is skipped.</param>
+    public ConvexHull(ImmutableArray<Point> points, SkipGrahamsScan _) : base(points) 
     {
         this.BoundingBox = ComputeBoundingBox(base.Points);
     }
+
 
     /// <summary>
     /// Transforms the convex hull by applying the specified transform.
     /// </summary>
     /// <param name="transform">The transform to apply.</param>
     /// <returns>A new convex hull that is the result of applying the transform.</returns>
-    public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)), extractHullPoints: false);
+    public ConvexHull Transform(Transform transform) => new(this.Select(p => p.Transform(transform)).ToImmutableArray(), SkipGrahamsScan.Yes);
 
 
     /// <summary>
     ///     Gets the bounding box of the polygon.
     /// </summary>
     /// <returns>The bounding box as a <see cref="BoundingBox" /> object.</returns>
-    private static BoundingBox ComputeBoundingBox(Point[] points)
+    private static BoundingBox ComputeBoundingBox(ImmutableArray<Point> points)
     {
         if (points.Length == 0) return new BoundingBox(); // return empty bounding box
 
@@ -71,6 +74,8 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     }
 
 
+    public SvgPolygon ToSvgPolygon() => new SvgPolygon() { Polygon = new Polygon(this) };
+
     /// <summary>
     ///     Extracts the convex hull for a collection of points using Graham's scan algorithm.
     /// </summary>
@@ -84,9 +89,9 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     ///     For the edge cases where the input is [0..2] points, the input points are returned.
     ///     The results would denote a convex hull of the empty set, a single point, and a line segment, respectively.
     /// </remarks>
-    private static IEnumerable<Point> ExtractHullPoints(Point[] points)
+    private static ImmutableArray<Point> ExtractHullPoints(Point[] points)
     {
-        if (points.Length <= 2) return points;
+        if (points.Length <= 2) return points.ToImmutableArray();
 
         Point pivot = points.Min();
         Array.Sort(points,
@@ -102,7 +107,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
             hull.Add(point);
         }
 
-        return hull;
+        return hull.ToImmutableArray();
     }
 
     /// <summary>
@@ -167,4 +172,9 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
 
     ///<inheritdoc/>
     public override int GetHashCode() => base.GetHashCode();
+
+    public enum SkipGrahamsScan
+    {
+        Yes
+    }
 }

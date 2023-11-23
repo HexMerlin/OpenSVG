@@ -12,17 +12,17 @@ public class SvgLineTest
     {
         var line = new SvgLine();
 
-        SKColor fillColor = line.FillColor.Get();
-        SKColor strokeColor = line.StrokeColor.Get();
-        double strokeWidth = line.StrokeWidth.Get();
+        SKColor fillColor = line.FillColor;
+        SKColor strokeColor = line.StrokeColor;
+        double strokeWidth = line.StrokeWidth;
 
         Assert.Equal(SKColors.Black, fillColor);
         Assert.Equal(SKColors.Transparent, strokeColor);
         Assert.Equal(1, strokeWidth);
-        Assert.Equal(0, line.X1.Get());
-        Assert.Equal(0, line.Y1.Get());
-        Assert.Equal(0, line.X2.Get());
-        Assert.Equal(0, line.Y2.Get());
+        Assert.Equal(0, line.X1);
+        Assert.Equal(0, line.Y1);
+        Assert.Equal(0, line.X2);
+        Assert.Equal(0, line.Y2);
     }
 
     [Fact]
@@ -44,7 +44,7 @@ public class SvgLineTest
         // Arrange
         var line1 = new SvgLine();
         var line2 = new SvgLine();
-        line2.X1.Set(1000);
+        line2.X1= 1000;
 
         //Act
        

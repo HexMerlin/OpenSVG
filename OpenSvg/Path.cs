@@ -44,7 +44,7 @@ public class Path : IEquatable<Path>, IDisposable
     public SvgPath ToSvgPath()
     {
         var svgPath = new SvgPath();
-        svgPath.Path.Set(this);
+        svgPath.Path = this;
         return svgPath;
     }
 

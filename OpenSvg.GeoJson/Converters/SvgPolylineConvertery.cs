@@ -18,8 +18,8 @@ public static class SvgPolylineConverter
     /// <returns>The resulting GeoJSON feature.</returns>
     public static Feature ToFeature(this SvgPolyline svgPolyline, Transform parentTransform, PointConverter converter)
     {
-        Transform composedTransform = parentTransform.ComposeWith(svgPolyline.Transform.Get());
-        Polyline polyline = svgPolyline.Polyline.Get();
+        Transform composedTransform = parentTransform.ComposeWith(svgPolyline.Transform);
+        Polyline polyline = svgPolyline.Polyline;
 
         LineString lineString = polyline.ToLineString(composedTransform, converter);
 
@@ -42,7 +42,7 @@ public static class SvgPolylineConverter
         Polyline polyline = lineString.ToPolyline(converter);
 
         SvgPolyline svgPolyline = new SvgPolyline();
-        svgPolyline.Polyline.Set(polyline);
+        svgPolyline.Polyline = polyline;
 
         return svgPolyline;
     }

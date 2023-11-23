@@ -8,6 +8,7 @@ namespace OpenSvg;
 /// </summary>
 public readonly struct Point : IComparable<Point>, IEquatable<Point>
 {
+
     /// <summary>
     /// The X-coordinate of the point.
     /// </summary>

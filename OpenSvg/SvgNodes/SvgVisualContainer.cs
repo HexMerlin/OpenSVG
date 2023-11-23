@@ -13,9 +13,6 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     /// </remarks>
     public List<SvgElement> ChildElements { get; set; } = new();
 
-    
-
-
 
     /// <summary>
     /// Retrieves the children of this <see cref="SvgVisualContainer"/>.
