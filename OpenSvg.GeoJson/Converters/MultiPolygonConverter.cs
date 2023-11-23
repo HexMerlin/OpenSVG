@@ -21,7 +21,16 @@ public static class MultiPolygonConverter
         return new GeoJSON.Net.Geometry.MultiPolygon(polygons);
     }
 
-    public static MultiPolygon ToMultiPolygon(this GeoJSON.Net.Geometry.MultiPolygon geoJsonMultiPolygon, PointConverter converter)
+    public static SvgPath ToSvgPath(this GeoJSON.Net.Geometry.MultiPolygon geoJsonMultiPolygon, PointConverter converter)
+    {
+        if (geoJsonMultiPolygon.Coordinates.Count == 0)
+            throw new ArgumentException("MultiPolygon must have at least one Polygon to convert to Path.");
+
+        MultiPolygon multiPolygon = geoJsonMultiPolygon.ToMultiPolygon(converter);
+        return multiPolygon.ToPath().ToSvgPath();
+    }
+
+    private static MultiPolygon ToMultiPolygon(this GeoJSON.Net.Geometry.MultiPolygon geoJsonMultiPolygon, PointConverter converter)
     {
         IEnumerable<EnclosedPolygonGroup> enclosedPolygonGroups = geoJsonMultiPolygon.Coordinates.Select(polygon => polygon.ToEnclosedPolygonGroup(converter));
 

@@ -41,11 +41,7 @@ public static class SvgPolylineConverter
 
         Polyline polyline = lineString.ToPolyline(converter);
 
-        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
-        DrawConfig drawConfig = properties?.ToDrawConfig() ?? new DrawConfig();
-
         SvgPolyline svgPolyline = new SvgPolyline();
-        svgPolyline.DrawConfig = drawConfig;
         svgPolyline.Polyline.Set(polyline);
 
         return svgPolyline;

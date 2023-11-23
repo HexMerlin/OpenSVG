@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using OpenSvg.SvgNodes;
+using SkiaSharp;
 using System.Data.Common;
 
 namespace OpenSvg;
@@ -38,6 +39,14 @@ public class Path : IEquatable<Path>, IDisposable
     }
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
+
+
+    public SvgPath ToSvgPath()
+    {
+        var svgPath = new SvgPath();
+        svgPath.Path.Set(this);
+        return svgPath;
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Path"/> class from an XML string.

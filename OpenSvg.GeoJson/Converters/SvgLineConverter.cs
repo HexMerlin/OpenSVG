@@ -41,18 +41,11 @@ public static class SvgLineConverter
     {
         if (feature.Geometry is not LineString lineString || lineString.Coordinates.Count != 2)
             throw new ArgumentException($"Feature must have a LineString geometry with exactly two points to convert to {nameof(SvgLine)}.");
-
-        var p1 = converter.ToPoint(lineString.Coordinates.First());
-        var p2 = converter.ToPoint(lineString.Coordinates.Last());
-
-        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
-        DrawConfig drawConfig = properties?.ToDrawConfig() ?? new DrawConfig();
-
+  
         var svgLine = new SvgLine
         {
-            P1 = p1,
-            P2 = p2,
-            DrawConfig = drawConfig,
+            P1 = converter.ToPoint(lineString.Coordinates.First()),
+            P2 = converter.ToPoint(lineString.Coordinates.Last())
         };
 
         return svgLine;

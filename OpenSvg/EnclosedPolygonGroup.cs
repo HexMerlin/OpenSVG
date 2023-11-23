@@ -1,5 +1,6 @@
 ﻿using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using SkiaSharp;
 
 namespace OpenSvg;
 
@@ -16,7 +17,7 @@ public class EnclosedPolygonGroup
     ///     Initializes a new instance of the <see cref="EnclosedPolygonGroup" /> class.
     /// </summary>
     /// <param name="exteriorPolygon">The polygon that encloses all interior polygons.</param>
-    public EnclosedPolygonGroup(Polygon exteriorPolygon) : this(exteriorPolygon, new List<Polygon>()) {}
+    public EnclosedPolygonGroup(Polygon exteriorPolygon) : this(exteriorPolygon, new List<Polygon>()) { }
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="EnclosedPolygonGroup" /> class.
@@ -39,14 +40,21 @@ public class EnclosedPolygonGroup
     /// </summary>
     public List<Polygon> InteriorPolygons { get; set; }
 
-    public SvgGroup ToSvgPolygonGroup()
+    /// <summary>
+    /// Converts the EnclosedPolygonGroup to a Path.
+    /// </summary>
+    /// <returns>An Path representing the EnclosedPolygonGroup.</returns>
+    public Path ToPath()
     {
-        SvgGroup group = new SvgGroup();
-  
-        group.Add(ExteriorPolygon.ToSvgPolygon());
-
-        foreach (Polygon interiorPolygon in InteriorPolygons)
-            group.Add(interiorPolygon.ToSvgPolygon());
-        return group;
+        var skPath = new SKPath();
+        skPath.AddPolygonToPath(ExteriorPolygon);
+ 
+        foreach (var interiorPolygon in InteriorPolygons)
+           skPath.AddPolygonToPath(interiorPolygon);
+        
+        return new Path(skPath);
     }
+
+
 }
+

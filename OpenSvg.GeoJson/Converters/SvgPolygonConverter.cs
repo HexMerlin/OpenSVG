@@ -39,11 +39,7 @@ public static class SvgPolygonConverter
 
         Polygon polygon = geoJsonPolygon.ToPolygon(converter);  
 
-        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
-        DrawConfig drawConfig = properties?.ToDrawConfig() ?? new DrawConfig();
-
         SvgPolygon svgPolygon = new SvgPolygon();
-        svgPolygon.DrawConfig = drawConfig;
         svgPolygon.Polygon.Set(polygon);
  
         return svgPolygon;

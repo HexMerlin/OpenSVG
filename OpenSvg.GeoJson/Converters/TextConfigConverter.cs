@@ -17,17 +17,17 @@ public static class TextConfigConverter
         return properties;
     }
 
-    public static TextConfig ToTextConfig(this Dictionary<string, object> properties, PointConverter converter)
-    {
-        DrawConfig drawConfig = properties.ToDrawConfig();
+    //public static TextConfig ToTextConfig(this Dictionary<string, object> properties, PointConverter converter)
+    //{
+    //    DrawConfig drawConfig = properties.ToDrawConfig();
 
-        string text = properties.GetValueOrDefault(GeoJsonNames.Text) as string ?? string.Empty;
-        string fontName = properties.GetValueOrDefault(GeoJsonNames.FontName) as string ?? SvgNames.DefaultFontName;
-        SvgFont svgFont = SvgFont.GetSystemFont(fontName);
-        double fontSize = (properties.GetValueOrDefault(GeoJsonNames.FontSize) as string)?.ToDouble() / converter.MetersPerPixel ?? SvgNames.DefaultFontSize;
+    //    string text = properties.GetValueOrDefault(GeoJsonNames.Text) as string ?? string.Empty;
+    //    string fontName = properties.GetValueOrDefault(GeoJsonNames.FontName) as string ?? SvgNames.DefaultFontName;
+    //    SvgFont svgFont = SvgFont.GetSystemFont(fontName);
+    //    double fontSize = (properties.GetValueOrDefault(GeoJsonNames.FontSize) as string)?.ToDouble() / converter.MetersPerPixel ?? SvgNames.DefaultFontSize;
 
-        return new  TextConfig(text, svgFont, fontSize, drawConfig);
+    //    return new  TextConfig(text, svgFont, fontSize, drawConfig);
 
-    }
+    //}
 
 }

@@ -17,6 +17,23 @@ public class GeoJsonBoundingBox
     /// <value>The geographical coordinate of the top-left corner.</value>
     public Coordinate TopLeft => new Coordinate(MinLongitude, MaxLatitude);
 
+
+    /// <summary>
+    /// Gets the coordinate of the top-right corner of the bounding box.
+    /// In geographical terms, this represents the point with the maximum longitude 
+    /// (easternmost) and the maximum latitude (northernmost).
+    /// </summary>
+    /// <value>The geographical coordinate of the top-right corner.</value>
+    public Coordinate TopRight => new Coordinate(MaxLongitude, MaxLatitude);
+
+    /// <summary>
+    /// Gets the coordinate of the bottom-left corner of the bounding box.
+    /// In geographical terms, this represents the point with minimum longitude 
+    /// (westernmost) and the minimum latitude (southernmost).
+    /// </summary>
+    /// <value>The geographical coordinate of the bottom-left corner.</value>
+    public Coordinate BottomLeft => new Coordinate(MinLongitude, MinLatitude);
+
     /// <summary>
     /// Gets the coordinate of the bottom-right corner of the bounding box.
     /// In geographical terms, this represents the point with the maximum longitude 

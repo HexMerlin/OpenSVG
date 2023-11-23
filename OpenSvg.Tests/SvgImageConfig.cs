@@ -16,13 +16,13 @@ public record SvgImageConfig
         new DrawConfig(SKColors.DarkBlue, SKColors.Transparent, 1), CornerRadius: 40);
 
     public TextConfig BadgeTextConfig { get; } =
-        new("", BadgeFont, 130, new DrawConfig(SKColors.LightGray, SKColors.DarkGray, 1));
+        new("", BadgeFont, 130, new DrawConfig(SKColors.LightGray, SKColors.DarkGray, 0));
 
     public RectangleConfig SmallRectConfig { get; } =
-        new(new Size(500, 80), new DrawConfig(SKColors.Transparent, SKColors.Transparent, 1));
+        new(new Size(500, 80), new DrawConfig(SKColors.Transparent, SKColors.Transparent, 0));
 
     public TextConfig SmallTextConfig { get; } =
-        new("", SmallTextFont, 80, new DrawConfig(SKColors.White, SKColors.Transparent, 1));
+        new("", SmallTextFont, 80, new DrawConfig(SKColors.White, SKColors.Transparent, 0));
 
     private SvgGroup CreateSvgElement(string badgeText, string fromText, string toText, SKColor badgeTextColor,
         SKColor badgeColor)

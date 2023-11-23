@@ -35,17 +35,15 @@ public static class SvgPathConverter
     /// <returns>The resulting <see cref="SvgGroup"/> of polygons.</returns>
     public static SvgGroup ToSvgPolygonGroup(this Feature feature, PointConverter converter)
     {
-        if (feature.Geometry is not GeoJSON.Net.Geometry.MultiPolygon geoJsonMultiPolygon)
-            throw new ArgumentException($"Feature must have a MultiPolygon geometry to convert to {nameof(SvgPath)}.");
+        throw new NotImplementedException("THIS METHOD SHOULD NOT EXIST - CONVERT TO PATH INSTEAD");
+        //if (feature.Geometry is not GeoJSON.Net.Geometry.MultiPolygon geoJsonMultiPolygon)
+        //    throw new ArgumentException($"Feature must have a MultiPolygon geometry to convert to {nameof(SvgPath)}.");
 
-        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
-        DrawConfig drawConfig = properties?.ToDrawConfig() ?? new DrawConfig();
+        //MultiPolygon multiPolygon = geoJsonMultiPolygon.ToMultiPolygon(converter);
 
-        MultiPolygon multiPolygon = geoJsonMultiPolygon.ToMultiPolygon(converter);
-
-        SvgGroup svgGroup = multiPolygon.ToSvgPolygonGroup();
+        //SvgGroup svgGroup = multiPolygon.ToSvgPolygonGroup();
       
-        return svgGroup;
+        //return svgGroup;
     }
 
 }

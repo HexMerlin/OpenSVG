@@ -14,7 +14,7 @@ public class SvgPathTests
         const int SegmentCountForCurveApproximation = 10;
 
         var svgFont = SvgFont.LoadFromFile(TestPaths.GetFontPath(Resources.FontFileNameArial));
-        var textConfig = new TextConfig("HÅÄj", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Black, 1));
+        var textConfig = new TextConfig("HÅÄj", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Black, 0));
         var svgPath = new SvgPath(textConfig);
         BoundingBox expectedBoundingBox = svgPath.BoundingBox;
 

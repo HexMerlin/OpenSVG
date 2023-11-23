@@ -1,5 +1,6 @@
 ﻿using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using SkiaSharp;
 using System.Collections;
 
 namespace OpenSvg;
@@ -48,17 +49,6 @@ public class MultiPolygon : IReadOnlyList<EnclosedPolygonGroup>
 
 
     public EnclosedPolygonGroup this[int index] => enclosedPolygonGroups[index];
-
-    public SvgGroup ToSvgPolygonGroup()
-    {
-        SvgGroup group = new SvgGroup();
-
-        foreach (EnclosedPolygonGroup subGroup in enclosedPolygonGroups)
-        {
-            group.Add(subGroup.ToSvgPolygonGroup()); 
-        }
-        return group;
-    }
 
 
     /// <summary>
@@ -126,6 +116,24 @@ public class MultiPolygon : IReadOnlyList<EnclosedPolygonGroup>
     {
         foreach (Polygon polygon in polygons)
             Add(polygonGroups, polygon);
+    }
+
+    /// <summary>
+    /// Converts the MultiPolygon to a Path.
+    /// </summary>
+    /// <returns>An Path representing the MultiPolygon.</returns>
+    public Path ToPath()
+    {
+        var skPath = new SKPath();
+        foreach (EnclosedPolygonGroup epg in enclosedPolygonGroups)
+        {
+            skPath.AddPolygonToPath(epg.ExteriorPolygon);
+
+            foreach (Polygon interiorPolygon in epg.InteriorPolygons)
+              skPath.AddPolygonToPath(interiorPolygon);
+        }
+
+        return new Path(skPath);
     }
 
     public IEnumerator<EnclosedPolygonGroup> GetEnumerator() => enclosedPolygonGroups.GetEnumerator();

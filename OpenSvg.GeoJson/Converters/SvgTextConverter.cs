@@ -3,6 +3,7 @@ using GeoJSON.Net.Geometry;
 using OpenSvg;
 using OpenSvg.Config;
 using OpenSvg.SvgNodes;
+using YamlDotNet.Core.Tokens;
 
 
 namespace OpenSvg.GeoJson.Converters;
@@ -41,15 +42,24 @@ public static class SvgTextConverter
             throw new ArgumentException($"Feature must have a Point geometry to convert to {nameof(SvgText)}.");
 
         Point point = converter.ToPoint(geoJsonPoint.Coordinates);
-        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
-        TextConfig textConfig = properties?.ToTextConfig(converter) ?? new TextConfig();
-
         var svgText = new SvgText
         {
             Point = point,
-            TextConfig = textConfig
         };
 
+        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
+        if (properties != null)
+        {
+            string? text = properties.GetValueOrDefault(GeoJsonNames.Text) as string;
+            string? fontName = properties.GetValueOrDefault(GeoJsonNames.FontName) as string;
+            double? fontSize = (properties.GetValueOrDefault(GeoJsonNames.FontSize) as string)?.ToDouble() / converter.MetersPerPixel;
+
+            if (text != null) svgText.Content = text;
+            if (fontName != null) svgText.FontName.Set(fontName);
+            if (fontSize != null) svgText.FontSize.Set(fontSize.Value);
+        }
+
+     
         return svgText;
     }
 

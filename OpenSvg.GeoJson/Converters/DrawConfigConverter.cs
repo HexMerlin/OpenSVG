@@ -1,4 +1,7 @@
-﻿using OpenSvg.Config;
+﻿using Esprima.Ast;
+using GeoJSON.Net.Feature;
+using OpenSvg.Config;
+using OpenSvg.SvgNodes;
 using SkiaSharp;
 
 namespace OpenSvg.GeoJson.Converters;
@@ -24,16 +27,22 @@ public static class DrawConfigConverter
             ? SKColors.Transparent
             : geoJsonColorString.ToColor();
 
-    public static DrawConfig ToDrawConfig(this Dictionary<string, object> properties)
+    public static SvgVisual ApplyProperties(this SvgVisual svgVisual, Feature feature, DrawConfig defaultValues)
     {
-        SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToOpenSvgColor() ?? Constants.DefaultFillColor;
-        SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToOpenSvgColor() ?? Constants.DefaultStrokeColor;
-        double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? Constants.DefaultStrokeWidth;
-        
-        return new DrawConfig(fillColor, strokeColor, strokeWidth);
+        Dictionary<string, object>? properties = feature.Properties as Dictionary<string, object>;
+        if (properties is not null)
+        {
+            SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToOpenSvgColor() ?? defaultValues.FillColor;
+            SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToOpenSvgColor() ?? defaultValues.StrokeColor;
+            double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? defaultValues.StrokeWidth;
+            svgVisual.FillColor.Set(fillColor);
+            svgVisual.StrokeColor.Set(strokeColor);
+            svgVisual.StrokeWidth.Set(strokeWidth);
+        }
+        return svgVisual;
     }
 
-   
+  
 
 
 }

@@ -1,11 +1,8 @@
 ﻿
 using GeoJSON.Net.Feature;
-using GeoJSON.Net.Geometry;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using OpenSvg.GeoJson.Converters;
 using OpenSvg.SvgNodes;
-using System.Security.Cryptography.X509Certificates;
 
 namespace OpenSvg.GeoJson;
 
@@ -14,12 +11,6 @@ namespace OpenSvg.GeoJson;
 /// </summary>
 public class GeoJsonDocument
 {
-    /// <summary>
-    /// Gets or sets a value indicating whether to throw an exception when an unsupported SVG element is encountered.
-    /// </summary>
-    public const bool ErrorOnUnsupportedElement = true;
-
-
     private readonly FeatureCollection featureCollection;
      
     public GeoJsonDocument(FeatureCollection featureCollection)
@@ -53,30 +44,28 @@ public class GeoJsonDocument
         this.featureCollection = new FeatureCollection(features);    
         
     }
-    public SvgDocument ToSvgDocument(double metersPerPixel = 10)
+
+    /// <summary>
+    /// Converts the GeoJsonDocument to an SvgDocument with the specified desired width in pixels.
+    /// </summary>
+    /// <param name="desiredWidthInPixels">The desired width of the SvgDocument in pixels. Default value: <c>640</c>></param>
+    /// <returns>An SvgDocument representing the GeoJsonDocument.</returns>
+    public SvgDocument ToSvgDocument(double desiredWidthInPixels = 640)
     {
-        const int segmentCountForCurveApproximation = 10; //will not be used for conversion from GeoJson to Svg
+        GeoJsonBoundingBox geoJsonBoundingBox = new GeoJsonBoundingBox(featureCollection);
+        double metersPerPixel = PointConverter.MetersPerPixels(desiredWidthInPixels, geoJsonBoundingBox);
+        const int segmentCountForCurveApproximation = 10; //arbitrarily value, this will not be used for conversion from GeoJson to Svg
 
         SvgDocument svgDocument = new SvgDocument();
-        GeoJsonBoundingBox geoJsonBoundingBox = new GeoJsonBoundingBox(featureCollection);
+
         Coordinate startLocation = geoJsonBoundingBox.TopLeft;
 
         PointConverter converter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
-        svgDocument.AddAll(featureCollection.Features.Select(f => ToSvgElement(f, converter)));
+        svgDocument.AddAll(featureCollection.Features.Select(f => f.ToSvgVisual(converter)));
+        svgDocument.SetViewPortToActualSize();
         return svgDocument;
     }
 
-    private SvgElement ToSvgElement(Feature feature, PointConverter converter) => feature.Geometry switch
-    {
-        GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count == 2 => SvgLineConverter.ToSvgLine(feature, converter),
-        GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count > 2 => SvgPolylineConverter.ToSvgPolyline(feature, converter),
-        GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count == 1 => SvgPolygonConverter.ToSvgPolygon(feature, converter),
-        GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count > 1 => EnclosedPolygonGroupConverter.ToEnclosedPolygonGroup(polygon, converter).ToSvgPolygonGroup(),
-        GeoJSON.Net.Geometry.MultiPolygon multiPolygon => MultiPolygonConverter.ToMultiPolygon(multiPolygon, converter).ToSvgPolygonGroup(),
-        GeoJSON.Net.Geometry.Point when feature.IsTextFeature() => SvgTextConverter.ToSvgText(feature, converter),
-        GeoJSON.Net.Geometry.Point when !feature.IsTextFeature() => throw new NotSupportedException("Single points that are not text element are not supported by SVG"),
-        _ => throw new NotSupportedException($"Unsupported GeoJSON Feature with geometry type {feature.Geometry.GetType().Name}"),
-    };
 
     /// <summary>
     /// Loads a GeoJSON file and creates a GeoJsonDocument instance.

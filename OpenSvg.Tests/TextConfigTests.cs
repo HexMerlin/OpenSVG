@@ -23,7 +23,7 @@ public class TextConfigTests
                 $"{nameof(CreateTextShape_FromFontAndRenderMode_MatchesExpected)}_{fontName}_{textRenderMode}", "svg");
 
         // Act
-        var textConfig = new TextConfig("SAMPLE TEXT", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Red, 1));
+        var textConfig = new TextConfig("SAMPLE TEXT", svgFont, 100, new DrawConfig(SKColors.Red, SKColors.Red, 0));
 
         SvgVisual svgTextElement = textRenderMode switch
         {
@@ -33,7 +33,7 @@ public class TextConfigTests
         };
 
         Size textSize = svgTextElement.BoundingBox.Size;
-        var rectangle = new RectangleConfig(textSize, new DrawConfig(SKColors.Black, SKColors.Red, 1)).ToSvgPolygon();
+        var rectangle = new RectangleConfig(textSize, new DrawConfig(SKColors.Black, SKColors.Red, 0)).ToSvgPolygon();
 
 
         var svgDocument = new SvgDocument();
@@ -65,7 +65,7 @@ public class TextConfigTests
         // Act
         SvgFont embeddedFont = expectedSvgDocument.EmbeddedFonts().First();
         var actualSvgPath =
-            new TextConfig("TIME 23:59", embeddedFont, 100, new DrawConfig(SKColors.Blue, SKColors.DarkBlue, 1))
+            new TextConfig("TIME 23:59", embeddedFont, 100, new DrawConfig(SKColors.Blue, SKColors.DarkBlue, 0))
                 .ToSvgPath();
         var actualSvgDocument = actualSvgPath.ToSvgDocument();
         actualSvgDocument.SetViewPortToActualSize();
@@ -75,7 +75,7 @@ public class TextConfigTests
         // Assert 
         Assert.Equal(SKColors.Blue, expectedSvgPath.FillColor.Get());
         Assert.Equal(SKColors.DarkBlue, expectedSvgPath.StrokeColor.Get());
-        Assert.Equal(1, expectedSvgPath.StrokeWidth.Get());
+        Assert.Equal(0, expectedSvgPath.StrokeWidth.Get());
         Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth.Get());
         Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight.Get());
 

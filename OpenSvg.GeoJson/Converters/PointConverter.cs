@@ -31,6 +31,13 @@ public record PointConverter
 
     public int SegmentCountForCurveApproximation { get; init; }
 
+    public static double MetersPerPixels(double svgWidth, GeoJsonBoundingBox geoJsonBoundingBox)
+    {
+        double widthInMeters = geoJsonBoundingBox.TopLeft.DistanceTo(geoJsonBoundingBox.TopRight);
+        double metersPerPixel = widthInMeters / svgWidth;
+        return metersPerPixel;
+    }
+
     /// <summary>
     ///     Converts a point to a world coordinate.
     /// </summary>

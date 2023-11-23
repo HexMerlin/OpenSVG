@@ -26,11 +26,17 @@ public static class EnclosedPolygonGroupConverter
         return new LineString(positions);
     }
 
-    public static EnclosedPolygonGroup ToEnclosedPolygonGroup(this GeoJSON.Net.Geometry.Polygon polygon, PointConverter converter)
+    public static SvgPath ToSvgPath(this GeoJSON.Net.Geometry.Polygon polygon, PointConverter converter)
     {
         if (polygon.Coordinates.Count == 0)
             throw new ArgumentException("Polygon must have at least a LineString object to convert to EnclosedPolygonGroup.");
 
+        EnclosedPolygonGroup enclosedPolygonGroup = polygon.ToEnclosedPolygonGroup(converter);
+        return enclosedPolygonGroup.ToPath().ToSvgPath();
+    }
+
+    public static EnclosedPolygonGroup ToEnclosedPolygonGroup(this GeoJSON.Net.Geometry.Polygon polygon, PointConverter converter)
+    {
         LineString lineString = polygon.Coordinates.First();
 
         Polygon exteriorPolygon = lineString.ToPolygon(converter);

@@ -19,7 +19,7 @@ public record TextConfig(string Text, SvgFont SvgFont, double FontSize, DrawConf
     /// <summary>
     /// Creates a new TextConfig with default values.
     /// </summary>
-    public TextConfig() : this(string.Empty, SvgFont.DefaultFont, DefaultFontSize, new DrawConfig()) {}
+    public TextConfig() : this(string.Empty, SvgFont.DefaultFont, DefaultFontSize, new DrawConfig().WithStrokeWidth(0)) {}
 
 
     /// <summary>

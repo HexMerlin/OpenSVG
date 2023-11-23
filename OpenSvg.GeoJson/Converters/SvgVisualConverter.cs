@@ -41,4 +41,21 @@ public static class SvgVisualConverter
         };
     }
 
+
+    public static SvgVisual ToSvgVisual(this Feature feature, PointConverter converter)
+    {
+        SvgVisual svgVisual = feature.Geometry switch
+        {
+            GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count == 2 => SvgLineConverter.ToSvgLine(feature, converter).ApplyProperties(feature, Constants.DefaultConfigLines),
+            GeoJSON.Net.Geometry.LineString lineString when lineString.Coordinates.Count > 2 => SvgPolylineConverter.ToSvgPolyline(feature, converter).ApplyProperties(feature, Constants.DefaultConfigLines),
+            GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count == 1 => SvgPolygonConverter.ToSvgPolygon(feature, converter).ApplyProperties(feature, Constants.DefaultConfigPolygon),
+            GeoJSON.Net.Geometry.Polygon polygon when polygon.Coordinates.Count > 1 => EnclosedPolygonGroupConverter.ToSvgPath(polygon, converter).ApplyProperties(feature, Constants.DefaultConfigPath),
+            GeoJSON.Net.Geometry.MultiPolygon multiPolygon => MultiPolygonConverter.ToSvgPath(multiPolygon, converter).ApplyProperties(feature, Constants.DefaultConfigPath),
+            GeoJSON.Net.Geometry.Point when feature.IsTextFeature() => SvgTextConverter.ToSvgText(feature, converter).ApplyProperties(feature, Constants.DefaultConfigText),
+            GeoJSON.Net.Geometry.Point when !feature.IsTextFeature() => throw new NotSupportedException("Single points that are not text element are not supported by SVG"),
+            _ => throw new NotSupportedException($"Unsupported GeoJSON Feature with geometry type {feature.Geometry.GetType().Name}"),
+        };
+
+        return svgVisual;
+    }
 }

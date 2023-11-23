@@ -36,4 +36,11 @@ public record DrawConfig(SKColor FillColor, SKColor StrokeColor, double StrokeWi
     /// <param name="strokeColor">The new stroke color to set.</param>
     /// <returns>A new DrawConfig with the specified stroke color.</returns>
     public DrawConfig WithStrokeColor(SKColor strokeColor) => this with { StrokeColor = strokeColor };
+
+    /// <summary>
+    ///     Returns a new copy of the DrawConfig record with the specified stroke width.
+    /// </summary>
+    /// <param name="strokeWidth">The new stroke width to set.</param>
+    /// <returns>A new DrawConfig with the specified stroke width.</returns>
+    public DrawConfig WithStrokeWidth(double strokeWidth) => this with { StrokeWidth = strokeWidth };
 }
