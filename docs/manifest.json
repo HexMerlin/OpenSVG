@@ -95,6 +95,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.PolylineAttr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.PolylineAttr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.Attributes.StringAttr.yml",
       "output": {
         ".html": {
@@ -109,6 +119,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.Attributes.TransformAttr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.ValueState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.ValueState.html"
         }
       },
       "version": ""
@@ -285,6 +305,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PointList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PointList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.PointRelation.yml",
       "output": {
         ".html": {
@@ -309,6 +339,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.PolygonRelation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Polyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Polyline.html"
         }
       },
       "version": ""
@@ -469,6 +509,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.SvgNodes.SvgPolygon.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.SvgNodes.SvgPolyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.SvgNodes.SvgPolyline.html"
         }
       },
       "version": ""

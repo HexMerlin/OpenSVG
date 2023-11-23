@@ -127,10 +127,10 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_IsConstant">Attr&lt;SKColor&gt;.IsConstant</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set_System_String_">Attr&lt;SKColor&gt;.Set(string)</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ShouldBeSerialized">Attr&lt;SKColor&gt;.ShouldBeSerialized</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_HasDefaultValue">Attr&lt;SKColor&gt;.HasDefaultValue</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_SetBySerializer_System_String_">Attr&lt;SKColor&gt;.SetBySerializer(string)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToXmlString">Attr&lt;SKColor&gt;.ToXmlString()</a>
@@ -197,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ColorAttr(string name, SKColor defaultValue, bool isInherited = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColorAttr(string name, SKColor defaultValue, bool isConstant = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -223,8 +223,8 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">isInherited</span></td>
-        <td><p>Whether the attribute is inherited.</p>
+        <td><span class="parametername">isConstant</span></td>
+        <td><p>Whether the attribute is a constant that cannot be changed.</p>
 </td>
       </tr>
     </tbody>

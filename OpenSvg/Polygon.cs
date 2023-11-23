@@ -25,12 +25,12 @@ public partial class Polygon : PointList, IEquatable<Polygon>
         convexHull = new ConvexHull(this);
     }
 
-    public static Polygon FromXmlString(string xmlString) => new Polygon(PointList.FromXmlString(xmlString));
+    public static new Polygon FromXmlString(string xmlString) => new Polygon(PointList.FromXmlString(xmlString));
 
     /// <summary>
     /// Returns an empty polygon.
     /// </summary>
-    public static new Polygon Empty => new(Enumerable.Empty<Point>());
+    public static Polygon Empty => new(Enumerable.Empty<Point>());
 
     public ConvexHull ConvexHull => convexHull;
 

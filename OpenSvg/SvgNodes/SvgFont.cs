@@ -50,10 +50,11 @@ public sealed class SvgFont : SvgNode
     ///     This method tries to load a system font based on the specified font name.
     ///     It should be used with care as the font may not be available on all systems.
     ///     Consider using embedded fonts in SVG instead, which are supported by the OpenSvg library.
+    ///     <seealso cref="OpenSvg.SvgNodes.SvgDocument.EmbedFont(SvgFont)"/>
     /// </remarks>
     /// <param name="fontName">The name of the font.</param>
     /// <returns>An instance of <see cref="SvgFont"/>.</returns>
-    /// <seealso cref="SvgDocument.EmbedFont(SvgFont)"/>
+
     public static SvgFont GetSystemFont(string fontName) => new SvgFont(SKTypeface.FromFamilyName(fontName));
 
     /// <summary>

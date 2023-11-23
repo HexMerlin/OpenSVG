@@ -127,10 +127,10 @@
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_IsConstant">Attr&lt;string&gt;.IsConstant</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set_System_String_">Attr&lt;string&gt;.Set(string)</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ShouldBeSerialized">Attr&lt;string&gt;.ShouldBeSerialized</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_HasDefaultValue">Attr&lt;string&gt;.HasDefaultValue</a>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_SetBySerializer_System_String_">Attr&lt;string&gt;.SetBySerializer(string)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToXmlString">Attr&lt;string&gt;.ToXmlString()</a>
@@ -143,6 +143,9 @@
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Equals_OpenSvg_Attributes_Attr__0__">Attr&lt;string&gt;.Equals(Attr&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set__0_">Attr&lt;string&gt;.Set(string)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Get">Attr&lt;string&gt;.Get()</a>
@@ -185,11 +188,12 @@
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr__ctor_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.%23ctor(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L8">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L15">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr__ctor_" data-uid="OpenSvg.Attributes.StringAttr.#ctor*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr__ctor_System_String_System_String_System_Boolean_" data-uid="OpenSvg.Attributes.StringAttr.#ctor(System.String,System.String,System.Boolean)">StringAttr(string, string, bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new instance of <a class="xref" href="OpenSvg.Attributes.StringAttr.html">StringAttr</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -208,17 +212,20 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of this attribute.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td></td>
+        <td><p>The default value of this attribute.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">isConstant</span></td>
-        <td></td>
+        <td><p>Set whether this attribute is constant or if the value can be changed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -229,7 +236,7 @@
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Deserialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Deserialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L12">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L20">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr_Deserialize_" data-uid="OpenSvg.Attributes.StringAttr.Deserialize*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr_Deserialize_System_String_" data-uid="OpenSvg.Attributes.StringAttr.Deserialize(System.String)">Deserialize(string)</h4>
@@ -281,7 +288,7 @@
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Attributes_StringAttr_Serialize_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Attributes.StringAttr.Serialize(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L14">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Attributes/StringAttr.cs/#L23">View Source</a>
   </span>
   <a id="OpenSvg_Attributes_StringAttr_Serialize_" data-uid="OpenSvg.Attributes.StringAttr.Serialize*"></a>
   <h4 id="OpenSvg_Attributes_StringAttr_Serialize_System_String_" data-uid="OpenSvg.Attributes.StringAttr.Serialize(System.String)">Serialize(string)</h4>

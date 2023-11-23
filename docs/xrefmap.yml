@@ -385,23 +385,6 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).GetHashCode
   nameWithType: Attr<T>.GetHashCode
   nameWithType.vb: Attr(Of T).GetHashCode
-- uid: OpenSvg.Attributes.Attr`1.HasDefaultValue
-  name: HasDefaultValue
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_HasDefaultValue
-  commentId: P:OpenSvg.Attributes.Attr`1.HasDefaultValue
-  fullName: OpenSvg.Attributes.Attr<T>.HasDefaultValue
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).HasDefaultValue
-  nameWithType: Attr<T>.HasDefaultValue
-  nameWithType.vb: Attr(Of T).HasDefaultValue
-- uid: OpenSvg.Attributes.Attr`1.HasDefaultValue*
-  name: HasDefaultValue
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_HasDefaultValue_
-  commentId: Overload:OpenSvg.Attributes.Attr`1.HasDefaultValue
-  isSpec: "True"
-  fullName: OpenSvg.Attributes.Attr<T>.HasDefaultValue
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).HasDefaultValue
-  nameWithType: Attr<T>.HasDefaultValue
-  nameWithType.vb: Attr(Of T).HasDefaultValue
 - uid: OpenSvg.Attributes.Attr`1.IsConstant
   name: IsConstant
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_IsConstant
@@ -453,15 +436,6 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Serialize
   nameWithType: Attr<T>.Serialize
   nameWithType.vb: Attr(Of T).Serialize
-- uid: OpenSvg.Attributes.Attr`1.Set(System.String)
-  name: Set(string)
-  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set_System_String_
-  commentId: M:OpenSvg.Attributes.Attr`1.Set(System.String)
-  name.vb: Set(String)
-  fullName: OpenSvg.Attributes.Attr<T>.Set(string)
-  fullName.vb: OpenSvg.Attributes.Attr(Of T).Set(String)
-  nameWithType: Attr<T>.Set(string)
-  nameWithType.vb: Attr(Of T).Set(String)
 - uid: OpenSvg.Attributes.Attr`1.Set(`0)
   name: Set(T)
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_Set__0_
@@ -479,6 +453,41 @@ references:
   fullName.vb: OpenSvg.Attributes.Attr(Of T).Set
   nameWithType: Attr<T>.Set
   nameWithType.vb: Attr(Of T).Set
+- uid: OpenSvg.Attributes.Attr`1.SetBySerializer(System.String)
+  name: SetBySerializer(string)
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_SetBySerializer_System_String_
+  commentId: M:OpenSvg.Attributes.Attr`1.SetBySerializer(System.String)
+  name.vb: SetBySerializer(String)
+  fullName: OpenSvg.Attributes.Attr<T>.SetBySerializer(string)
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).SetBySerializer(String)
+  nameWithType: Attr<T>.SetBySerializer(string)
+  nameWithType.vb: Attr(Of T).SetBySerializer(String)
+- uid: OpenSvg.Attributes.Attr`1.SetBySerializer*
+  name: SetBySerializer
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_SetBySerializer_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.SetBySerializer
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.Attr<T>.SetBySerializer
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).SetBySerializer
+  nameWithType: Attr<T>.SetBySerializer
+  nameWithType.vb: Attr(Of T).SetBySerializer
+- uid: OpenSvg.Attributes.Attr`1.ShouldBeSerialized
+  name: ShouldBeSerialized
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ShouldBeSerialized
+  commentId: P:OpenSvg.Attributes.Attr`1.ShouldBeSerialized
+  fullName: OpenSvg.Attributes.Attr<T>.ShouldBeSerialized
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).ShouldBeSerialized
+  nameWithType: Attr<T>.ShouldBeSerialized
+  nameWithType.vb: Attr(Of T).ShouldBeSerialized
+- uid: OpenSvg.Attributes.Attr`1.ShouldBeSerialized*
+  name: ShouldBeSerialized
+  href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ShouldBeSerialized_
+  commentId: Overload:OpenSvg.Attributes.Attr`1.ShouldBeSerialized
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.Attr<T>.ShouldBeSerialized
+  fullName.vb: OpenSvg.Attributes.Attr(Of T).ShouldBeSerialized
+  nameWithType: Attr<T>.ShouldBeSerialized
+  nameWithType.vb: Attr(Of T).ShouldBeSerialized
 - uid: OpenSvg.Attributes.Attr`1.ToString
   name: ToString()
   href: api/OpenSvg.Attributes.Attr-1.html#OpenSvg_Attributes_Attr_1_ToString
@@ -694,19 +703,6 @@ references:
   commentId: T:OpenSvg.Attributes.IAttr
   fullName: OpenSvg.Attributes.IAttr
   nameWithType: IAttr
-- uid: OpenSvg.Attributes.IAttr.HasDefaultValue
-  name: HasDefaultValue
-  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_HasDefaultValue
-  commentId: P:OpenSvg.Attributes.IAttr.HasDefaultValue
-  fullName: OpenSvg.Attributes.IAttr.HasDefaultValue
-  nameWithType: IAttr.HasDefaultValue
-- uid: OpenSvg.Attributes.IAttr.HasDefaultValue*
-  name: HasDefaultValue
-  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_HasDefaultValue_
-  commentId: Overload:OpenSvg.Attributes.IAttr.HasDefaultValue
-  isSpec: "True"
-  fullName: OpenSvg.Attributes.IAttr.HasDefaultValue
-  nameWithType: IAttr.HasDefaultValue
 - uid: OpenSvg.Attributes.IAttr.IsConstant
   name: IsConstant
   href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_IsConstant
@@ -733,22 +729,35 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.IAttr.Name
   nameWithType: IAttr.Name
-- uid: OpenSvg.Attributes.IAttr.Set(System.String)
-  name: Set(string)
-  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_Set_System_String_
-  commentId: M:OpenSvg.Attributes.IAttr.Set(System.String)
-  name.vb: Set(String)
-  fullName: OpenSvg.Attributes.IAttr.Set(string)
-  fullName.vb: OpenSvg.Attributes.IAttr.Set(String)
-  nameWithType: IAttr.Set(string)
-  nameWithType.vb: IAttr.Set(String)
-- uid: OpenSvg.Attributes.IAttr.Set*
-  name: Set
-  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_Set_
-  commentId: Overload:OpenSvg.Attributes.IAttr.Set
+- uid: OpenSvg.Attributes.IAttr.SetBySerializer(System.String)
+  name: SetBySerializer(string)
+  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_SetBySerializer_System_String_
+  commentId: M:OpenSvg.Attributes.IAttr.SetBySerializer(System.String)
+  name.vb: SetBySerializer(String)
+  fullName: OpenSvg.Attributes.IAttr.SetBySerializer(string)
+  fullName.vb: OpenSvg.Attributes.IAttr.SetBySerializer(String)
+  nameWithType: IAttr.SetBySerializer(string)
+  nameWithType.vb: IAttr.SetBySerializer(String)
+- uid: OpenSvg.Attributes.IAttr.SetBySerializer*
+  name: SetBySerializer
+  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_SetBySerializer_
+  commentId: Overload:OpenSvg.Attributes.IAttr.SetBySerializer
   isSpec: "True"
-  fullName: OpenSvg.Attributes.IAttr.Set
-  nameWithType: IAttr.Set
+  fullName: OpenSvg.Attributes.IAttr.SetBySerializer
+  nameWithType: IAttr.SetBySerializer
+- uid: OpenSvg.Attributes.IAttr.ShouldBeSerialized
+  name: ShouldBeSerialized
+  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_ShouldBeSerialized
+  commentId: P:OpenSvg.Attributes.IAttr.ShouldBeSerialized
+  fullName: OpenSvg.Attributes.IAttr.ShouldBeSerialized
+  nameWithType: IAttr.ShouldBeSerialized
+- uid: OpenSvg.Attributes.IAttr.ShouldBeSerialized*
+  name: ShouldBeSerialized
+  href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_ShouldBeSerialized_
+  commentId: Overload:OpenSvg.Attributes.IAttr.ShouldBeSerialized
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.IAttr.ShouldBeSerialized
+  nameWithType: IAttr.ShouldBeSerialized
 - uid: OpenSvg.Attributes.IAttr.ToXmlString
   name: ToXmlString()
   href: api/OpenSvg.Attributes.IAttr.html#OpenSvg_Attributes_IAttr_ToXmlString
@@ -889,6 +898,60 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.PolygonAttr.Serialize
   nameWithType: PolygonAttr.Serialize
+- uid: OpenSvg.Attributes.PolylineAttr
+  name: PolylineAttr
+  href: api/OpenSvg.Attributes.PolylineAttr.html
+  commentId: T:OpenSvg.Attributes.PolylineAttr
+  fullName: OpenSvg.Attributes.PolylineAttr
+  nameWithType: PolylineAttr
+- uid: OpenSvg.Attributes.PolylineAttr.#ctor
+  name: PolylineAttr()
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr__ctor
+  commentId: M:OpenSvg.Attributes.PolylineAttr.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Attributes.PolylineAttr.PolylineAttr()
+  fullName.vb: OpenSvg.Attributes.PolylineAttr.New()
+  nameWithType: PolylineAttr.PolylineAttr()
+  nameWithType.vb: PolylineAttr.New()
+- uid: OpenSvg.Attributes.PolylineAttr.#ctor*
+  name: PolylineAttr
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr__ctor_
+  commentId: Overload:OpenSvg.Attributes.PolylineAttr.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Attributes.PolylineAttr.PolylineAttr
+  fullName.vb: OpenSvg.Attributes.PolylineAttr.New
+  nameWithType: PolylineAttr.PolylineAttr
+  nameWithType.vb: PolylineAttr.New
+- uid: OpenSvg.Attributes.PolylineAttr.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr_Deserialize_System_String_
+  commentId: M:OpenSvg.Attributes.PolylineAttr.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: OpenSvg.Attributes.PolylineAttr.Deserialize(string)
+  fullName.vb: OpenSvg.Attributes.PolylineAttr.Deserialize(String)
+  nameWithType: PolylineAttr.Deserialize(string)
+  nameWithType.vb: PolylineAttr.Deserialize(String)
+- uid: OpenSvg.Attributes.PolylineAttr.Deserialize*
+  name: Deserialize
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr_Deserialize_
+  commentId: Overload:OpenSvg.Attributes.PolylineAttr.Deserialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.PolylineAttr.Deserialize
+  nameWithType: PolylineAttr.Deserialize
+- uid: OpenSvg.Attributes.PolylineAttr.Serialize(OpenSvg.Polyline)
+  name: Serialize(Polyline)
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr_Serialize_OpenSvg_Polyline_
+  commentId: M:OpenSvg.Attributes.PolylineAttr.Serialize(OpenSvg.Polyline)
+  fullName: OpenSvg.Attributes.PolylineAttr.Serialize(OpenSvg.Polyline)
+  nameWithType: PolylineAttr.Serialize(Polyline)
+- uid: OpenSvg.Attributes.PolylineAttr.Serialize*
+  name: Serialize
+  href: api/OpenSvg.Attributes.PolylineAttr.html#OpenSvg_Attributes_PolylineAttr_Serialize_
+  commentId: Overload:OpenSvg.Attributes.PolylineAttr.Serialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.PolylineAttr.Serialize
+  nameWithType: PolylineAttr.Serialize
 - uid: OpenSvg.Attributes.StringAttr
   name: StringAttr
   href: api/OpenSvg.Attributes.StringAttr.html
@@ -1013,6 +1076,30 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.TransformAttr.Serialize
   nameWithType: TransformAttr.Serialize
+- uid: OpenSvg.Attributes.ValueState
+  name: ValueState
+  href: api/OpenSvg.Attributes.ValueState.html
+  commentId: T:OpenSvg.Attributes.ValueState
+  fullName: OpenSvg.Attributes.ValueState
+  nameWithType: ValueState
+- uid: OpenSvg.Attributes.ValueState.Constant
+  name: Constant
+  href: api/OpenSvg.Attributes.ValueState.html#OpenSvg_Attributes_ValueState_Constant
+  commentId: F:OpenSvg.Attributes.ValueState.Constant
+  fullName: OpenSvg.Attributes.ValueState.Constant
+  nameWithType: ValueState.Constant
+- uid: OpenSvg.Attributes.ValueState.NotSet
+  name: NotSet
+  href: api/OpenSvg.Attributes.ValueState.html#OpenSvg_Attributes_ValueState_NotSet
+  commentId: F:OpenSvg.Attributes.ValueState.NotSet
+  fullName: OpenSvg.Attributes.ValueState.NotSet
+  nameWithType: ValueState.NotSet
+- uid: OpenSvg.Attributes.ValueState.Set
+  name: Set
+  href: api/OpenSvg.Attributes.ValueState.html#OpenSvg_Attributes_ValueState_Set
+  commentId: F:OpenSvg.Attributes.ValueState.Set
+  fullName: OpenSvg.Attributes.ValueState.Set
+  nameWithType: ValueState.Set
 - uid: OpenSvg.BoundingBox
   name: BoundingBox
   href: api/OpenSvg.BoundingBox.html
@@ -1407,6 +1494,15 @@ references:
   commentId: T:OpenSvg.Config.DrawConfig
   fullName: OpenSvg.Config.DrawConfig
   nameWithType: DrawConfig
+- uid: OpenSvg.Config.DrawConfig.#ctor
+  name: DrawConfig()
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig__ctor
+  commentId: M:OpenSvg.Config.DrawConfig.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Config.DrawConfig.DrawConfig()
+  fullName.vb: OpenSvg.Config.DrawConfig.New()
+  nameWithType: DrawConfig.DrawConfig()
+  nameWithType.vb: DrawConfig.New()
 - uid: OpenSvg.Config.DrawConfig.#ctor(SkiaSharp.SKColor,SkiaSharp.SKColor,System.Double)
   name: DrawConfig(SKColor, SKColor, double)
   href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig__ctor_SkiaSharp_SKColor_SkiaSharp_SKColor_System_Double_
@@ -1426,6 +1522,45 @@ references:
   fullName.vb: OpenSvg.Config.DrawConfig.New
   nameWithType: DrawConfig.DrawConfig
   nameWithType.vb: DrawConfig.New
+- uid: OpenSvg.Config.DrawConfig.DefaultFillColor
+  name: DefaultFillColor
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultFillColor
+  commentId: P:OpenSvg.Config.DrawConfig.DefaultFillColor
+  fullName: OpenSvg.Config.DrawConfig.DefaultFillColor
+  nameWithType: DrawConfig.DefaultFillColor
+- uid: OpenSvg.Config.DrawConfig.DefaultFillColor*
+  name: DefaultFillColor
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultFillColor_
+  commentId: Overload:OpenSvg.Config.DrawConfig.DefaultFillColor
+  isSpec: "True"
+  fullName: OpenSvg.Config.DrawConfig.DefaultFillColor
+  nameWithType: DrawConfig.DefaultFillColor
+- uid: OpenSvg.Config.DrawConfig.DefaultStrokeColor
+  name: DefaultStrokeColor
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultStrokeColor
+  commentId: P:OpenSvg.Config.DrawConfig.DefaultStrokeColor
+  fullName: OpenSvg.Config.DrawConfig.DefaultStrokeColor
+  nameWithType: DrawConfig.DefaultStrokeColor
+- uid: OpenSvg.Config.DrawConfig.DefaultStrokeColor*
+  name: DefaultStrokeColor
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultStrokeColor_
+  commentId: Overload:OpenSvg.Config.DrawConfig.DefaultStrokeColor
+  isSpec: "True"
+  fullName: OpenSvg.Config.DrawConfig.DefaultStrokeColor
+  nameWithType: DrawConfig.DefaultStrokeColor
+- uid: OpenSvg.Config.DrawConfig.DefaultStrokeWidth
+  name: DefaultStrokeWidth
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultStrokeWidth
+  commentId: P:OpenSvg.Config.DrawConfig.DefaultStrokeWidth
+  fullName: OpenSvg.Config.DrawConfig.DefaultStrokeWidth
+  nameWithType: DrawConfig.DefaultStrokeWidth
+- uid: OpenSvg.Config.DrawConfig.DefaultStrokeWidth*
+  name: DefaultStrokeWidth
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_DefaultStrokeWidth_
+  commentId: Overload:OpenSvg.Config.DrawConfig.DefaultStrokeWidth
+  isSpec: "True"
+  fullName: OpenSvg.Config.DrawConfig.DefaultStrokeWidth
+  nameWithType: DrawConfig.DefaultStrokeWidth
 - uid: OpenSvg.Config.DrawConfig.FillColor
   name: FillColor
   href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_FillColor
@@ -1504,6 +1639,22 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Config.DrawConfig.WithStrokeColor
   nameWithType: DrawConfig.WithStrokeColor
+- uid: OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Double)
+  name: WithStrokeWidth(double)
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_WithStrokeWidth_System_Double_
+  commentId: M:OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Double)
+  name.vb: WithStrokeWidth(Double)
+  fullName: OpenSvg.Config.DrawConfig.WithStrokeWidth(double)
+  fullName.vb: OpenSvg.Config.DrawConfig.WithStrokeWidth(Double)
+  nameWithType: DrawConfig.WithStrokeWidth(double)
+  nameWithType.vb: DrawConfig.WithStrokeWidth(Double)
+- uid: OpenSvg.Config.DrawConfig.WithStrokeWidth*
+  name: WithStrokeWidth
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_WithStrokeWidth_
+  commentId: Overload:OpenSvg.Config.DrawConfig.WithStrokeWidth
+  isSpec: "True"
+  fullName: OpenSvg.Config.DrawConfig.WithStrokeWidth
+  nameWithType: DrawConfig.WithStrokeWidth
 - uid: OpenSvg.Config.RectangleConfig
   name: RectangleConfig
   href: api/OpenSvg.Config.RectangleConfig.html
@@ -1665,6 +1816,15 @@ references:
   commentId: T:OpenSvg.Config.TextConfig
   fullName: OpenSvg.Config.TextConfig
   nameWithType: TextConfig
+- uid: OpenSvg.Config.TextConfig.#ctor
+  name: TextConfig()
+  href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig__ctor
+  commentId: M:OpenSvg.Config.TextConfig.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Config.TextConfig.TextConfig()
+  fullName.vb: OpenSvg.Config.TextConfig.New()
+  nameWithType: TextConfig.TextConfig()
+  nameWithType.vb: TextConfig.New()
 - uid: OpenSvg.Config.TextConfig.#ctor(System.String,OpenSvg.SvgNodes.SvgFont,System.Double,OpenSvg.Config.DrawConfig)
   name: TextConfig(string, SvgFont, double, DrawConfig)
   href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig__ctor_System_String_OpenSvg_SvgNodes_SvgFont_System_Double_OpenSvg_Config_DrawConfig_
@@ -1684,6 +1844,12 @@ references:
   fullName.vb: OpenSvg.Config.TextConfig.New
   nameWithType: TextConfig.TextConfig
   nameWithType.vb: TextConfig.New
+- uid: OpenSvg.Config.TextConfig.DefaultFontSize
+  name: DefaultFontSize
+  href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig_DefaultFontSize
+  commentId: F:OpenSvg.Config.TextConfig.DefaultFontSize
+  fullName: OpenSvg.Config.TextConfig.DefaultFontSize
+  nameWithType: TextConfig.DefaultFontSize
 - uid: OpenSvg.Config.TextConfig.DrawConfig
   name: DrawConfig
   href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig_DrawConfig
@@ -1838,6 +2004,50 @@ references:
   fullName.vb: OpenSvg.ConvexHull.New
   nameWithType: ConvexHull.ConvexHull
   nameWithType.vb: ConvexHull.New
+- uid: OpenSvg.ConvexHull.BoundingBox
+  name: BoundingBox
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_BoundingBox
+  commentId: F:OpenSvg.ConvexHull.BoundingBox
+  fullName: OpenSvg.ConvexHull.BoundingBox
+  nameWithType: ConvexHull.BoundingBox
+- uid: OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull)
+  name: Equals(ConvexHull?)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_Equals_OpenSvg_ConvexHull_
+  commentId: M:OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull)
+  name.vb: Equals(ConvexHull)
+  fullName: OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull?)
+  fullName.vb: OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull)
+  nameWithType: ConvexHull.Equals(ConvexHull?)
+  nameWithType.vb: ConvexHull.Equals(ConvexHull)
+- uid: OpenSvg.ConvexHull.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_Equals_System_Object_
+  commentId: M:OpenSvg.ConvexHull.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.ConvexHull.Equals(object?)
+  fullName.vb: OpenSvg.ConvexHull.Equals(Object)
+  nameWithType: ConvexHull.Equals(object?)
+  nameWithType.vb: ConvexHull.Equals(Object)
+- uid: OpenSvg.ConvexHull.Equals*
+  name: Equals
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_Equals_
+  commentId: Overload:OpenSvg.ConvexHull.Equals
+  isSpec: "True"
+  fullName: OpenSvg.ConvexHull.Equals
+  nameWithType: ConvexHull.Equals
+- uid: OpenSvg.ConvexHull.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_GetHashCode
+  commentId: M:OpenSvg.ConvexHull.GetHashCode
+  fullName: OpenSvg.ConvexHull.GetHashCode()
+  nameWithType: ConvexHull.GetHashCode()
+- uid: OpenSvg.ConvexHull.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_GetHashCode_
+  commentId: Overload:OpenSvg.ConvexHull.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.ConvexHull.GetHashCode
+  nameWithType: ConvexHull.GetHashCode
 - uid: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{OpenSvg.Point})
   name: IsConvexHull(IEnumerable<Point>)
   href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__
@@ -1882,6 +2092,15 @@ references:
   fullName.vb: OpenSvg.EnclosedPolygonGroup.New(OpenSvg.Polygon)
   nameWithType: EnclosedPolygonGroup.EnclosedPolygonGroup(Polygon)
   nameWithType.vb: EnclosedPolygonGroup.New(Polygon)
+- uid: OpenSvg.EnclosedPolygonGroup.#ctor(OpenSvg.Polygon,System.Collections.Generic.List{OpenSvg.Polygon})
+  name: EnclosedPolygonGroup(Polygon, List<Polygon>)
+  href: api/OpenSvg.EnclosedPolygonGroup.html#OpenSvg_EnclosedPolygonGroup__ctor_OpenSvg_Polygon_System_Collections_Generic_List_OpenSvg_Polygon__
+  commentId: M:OpenSvg.EnclosedPolygonGroup.#ctor(OpenSvg.Polygon,System.Collections.Generic.List{OpenSvg.Polygon})
+  name.vb: New(Polygon, List(Of Polygon))
+  fullName: OpenSvg.EnclosedPolygonGroup.EnclosedPolygonGroup(OpenSvg.Polygon, System.Collections.Generic.List<OpenSvg.Polygon>)
+  fullName.vb: OpenSvg.EnclosedPolygonGroup.New(OpenSvg.Polygon, System.Collections.Generic.List(Of OpenSvg.Polygon))
+  nameWithType: EnclosedPolygonGroup.EnclosedPolygonGroup(Polygon, List<Polygon>)
+  nameWithType.vb: EnclosedPolygonGroup.New(Polygon, List(Of Polygon))
 - uid: OpenSvg.EnclosedPolygonGroup.#ctor*
   name: EnclosedPolygonGroup
   href: api/OpenSvg.EnclosedPolygonGroup.html#OpenSvg_EnclosedPolygonGroup__ctor_
@@ -1918,6 +2137,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.EnclosedPolygonGroup.InteriorPolygons
   nameWithType: EnclosedPolygonGroup.InteriorPolygons
+- uid: OpenSvg.EnclosedPolygonGroup.ToPath
+  name: ToPath()
+  href: api/OpenSvg.EnclosedPolygonGroup.html#OpenSvg_EnclosedPolygonGroup_ToPath
+  commentId: M:OpenSvg.EnclosedPolygonGroup.ToPath
+  fullName: OpenSvg.EnclosedPolygonGroup.ToPath()
+  nameWithType: EnclosedPolygonGroup.ToPath()
+- uid: OpenSvg.EnclosedPolygonGroup.ToPath*
+  name: ToPath
+  href: api/OpenSvg.EnclosedPolygonGroup.html#OpenSvg_EnclosedPolygonGroup_ToPath_
+  commentId: Overload:OpenSvg.EnclosedPolygonGroup.ToPath
+  isSpec: "True"
+  fullName: OpenSvg.EnclosedPolygonGroup.ToPath
+  nameWithType: EnclosedPolygonGroup.ToPath
 - uid: OpenSvg.FileIO
   name: FileIO
   href: api/OpenSvg.FileIO.html
@@ -2015,6 +2247,15 @@ references:
   fullName.vb: OpenSvg.MultiPolygon.New()
   nameWithType: MultiPolygon.MultiPolygon()
   nameWithType.vb: MultiPolygon.New()
+- uid: OpenSvg.MultiPolygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.EnclosedPolygonGroup})
+  name: MultiPolygon(IEnumerable<EnclosedPolygonGroup>)
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon__ctor_System_Collections_Generic_IEnumerable_OpenSvg_EnclosedPolygonGroup__
+  commentId: M:OpenSvg.MultiPolygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.EnclosedPolygonGroup})
+  name.vb: New(IEnumerable(Of EnclosedPolygonGroup))
+  fullName: OpenSvg.MultiPolygon.MultiPolygon(System.Collections.Generic.IEnumerable<OpenSvg.EnclosedPolygonGroup>)
+  fullName.vb: OpenSvg.MultiPolygon.New(System.Collections.Generic.IEnumerable(Of OpenSvg.EnclosedPolygonGroup))
+  nameWithType: MultiPolygon.MultiPolygon(IEnumerable<EnclosedPolygonGroup>)
+  nameWithType.vb: MultiPolygon.New(IEnumerable(Of EnclosedPolygonGroup))
 - uid: OpenSvg.MultiPolygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Polygon})
   name: MultiPolygon(IEnumerable<Polygon>)
   href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Polygon__
@@ -2034,41 +2275,12 @@ references:
   fullName.vb: OpenSvg.MultiPolygon.New
   nameWithType: MultiPolygon.MultiPolygon
   nameWithType.vb: MultiPolygon.New
-- uid: OpenSvg.MultiPolygon.Add(OpenSvg.Polygon)
-  name: Add(Polygon)
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Add_OpenSvg_Polygon_
-  commentId: M:OpenSvg.MultiPolygon.Add(OpenSvg.Polygon)
-  fullName: OpenSvg.MultiPolygon.Add(OpenSvg.Polygon)
-  nameWithType: MultiPolygon.Add(Polygon)
-- uid: OpenSvg.MultiPolygon.Add*
-  name: Add
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Add_
-  commentId: Overload:OpenSvg.MultiPolygon.Add
-  isSpec: "True"
-  fullName: OpenSvg.MultiPolygon.Add
-  nameWithType: MultiPolygon.Add
-- uid: OpenSvg.MultiPolygon.AddAll(System.Collections.Generic.IEnumerable{OpenSvg.Polygon})
-  name: AddAll(IEnumerable<Polygon>)
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_AddAll_System_Collections_Generic_IEnumerable_OpenSvg_Polygon__
-  commentId: M:OpenSvg.MultiPolygon.AddAll(System.Collections.Generic.IEnumerable{OpenSvg.Polygon})
-  name.vb: AddAll(IEnumerable(Of Polygon))
-  fullName: OpenSvg.MultiPolygon.AddAll(System.Collections.Generic.IEnumerable<OpenSvg.Polygon>)
-  fullName.vb: OpenSvg.MultiPolygon.AddAll(System.Collections.Generic.IEnumerable(Of OpenSvg.Polygon))
-  nameWithType: MultiPolygon.AddAll(IEnumerable<Polygon>)
-  nameWithType.vb: MultiPolygon.AddAll(IEnumerable(Of Polygon))
-- uid: OpenSvg.MultiPolygon.AddAll*
-  name: AddAll
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_AddAll_
-  commentId: Overload:OpenSvg.MultiPolygon.AddAll
-  isSpec: "True"
-  fullName: OpenSvg.MultiPolygon.AddAll
-  nameWithType: MultiPolygon.AddAll
 - uid: OpenSvg.MultiPolygon.BoundingBox
-  name: BoundingBox()
+  name: BoundingBox
   href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_BoundingBox
-  commentId: M:OpenSvg.MultiPolygon.BoundingBox
-  fullName: OpenSvg.MultiPolygon.BoundingBox()
-  nameWithType: MultiPolygon.BoundingBox()
+  commentId: P:OpenSvg.MultiPolygon.BoundingBox
+  fullName: OpenSvg.MultiPolygon.BoundingBox
+  nameWithType: MultiPolygon.BoundingBox
 - uid: OpenSvg.MultiPolygon.BoundingBox*
   name: BoundingBox
   href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_BoundingBox_
@@ -2076,19 +2288,77 @@ references:
   isSpec: "True"
   fullName: OpenSvg.MultiPolygon.BoundingBox
   nameWithType: MultiPolygon.BoundingBox
-- uid: OpenSvg.MultiPolygon.ComputeConvexHull
-  name: ComputeConvexHull()
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ComputeConvexHull
-  commentId: M:OpenSvg.MultiPolygon.ComputeConvexHull
-  fullName: OpenSvg.MultiPolygon.ComputeConvexHull()
-  nameWithType: MultiPolygon.ComputeConvexHull()
-- uid: OpenSvg.MultiPolygon.ComputeConvexHull*
-  name: ComputeConvexHull
-  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ComputeConvexHull_
-  commentId: Overload:OpenSvg.MultiPolygon.ComputeConvexHull
+- uid: OpenSvg.MultiPolygon.ConvexHull
+  name: ConvexHull
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ConvexHull
+  commentId: P:OpenSvg.MultiPolygon.ConvexHull
+  fullName: OpenSvg.MultiPolygon.ConvexHull
+  nameWithType: MultiPolygon.ConvexHull
+- uid: OpenSvg.MultiPolygon.ConvexHull*
+  name: ConvexHull
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ConvexHull_
+  commentId: Overload:OpenSvg.MultiPolygon.ConvexHull
   isSpec: "True"
-  fullName: OpenSvg.MultiPolygon.ComputeConvexHull
-  nameWithType: MultiPolygon.ComputeConvexHull
+  fullName: OpenSvg.MultiPolygon.ConvexHull
+  nameWithType: MultiPolygon.ConvexHull
+- uid: OpenSvg.MultiPolygon.Count
+  name: Count
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Count
+  commentId: P:OpenSvg.MultiPolygon.Count
+  fullName: OpenSvg.MultiPolygon.Count
+  nameWithType: MultiPolygon.Count
+- uid: OpenSvg.MultiPolygon.Count*
+  name: Count
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Count_
+  commentId: Overload:OpenSvg.MultiPolygon.Count
+  isSpec: "True"
+  fullName: OpenSvg.MultiPolygon.Count
+  nameWithType: MultiPolygon.Count
+- uid: OpenSvg.MultiPolygon.GetEnumerator
+  name: GetEnumerator()
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_GetEnumerator
+  commentId: M:OpenSvg.MultiPolygon.GetEnumerator
+  fullName: OpenSvg.MultiPolygon.GetEnumerator()
+  nameWithType: MultiPolygon.GetEnumerator()
+- uid: OpenSvg.MultiPolygon.GetEnumerator*
+  name: GetEnumerator
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_GetEnumerator_
+  commentId: Overload:OpenSvg.MultiPolygon.GetEnumerator
+  isSpec: "True"
+  fullName: OpenSvg.MultiPolygon.GetEnumerator
+  nameWithType: MultiPolygon.GetEnumerator
+- uid: OpenSvg.MultiPolygon.Item(System.Int32)
+  name: this[int]
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Item_System_Int32_
+  commentId: P:OpenSvg.MultiPolygon.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: OpenSvg.MultiPolygon.this[int]
+  fullName.vb: OpenSvg.MultiPolygon.this[](Integer)
+  nameWithType: MultiPolygon.this[int]
+  nameWithType.vb: MultiPolygon.this[](Integer)
+- uid: OpenSvg.MultiPolygon.Item*
+  name: this
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_Item_
+  commentId: Overload:OpenSvg.MultiPolygon.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: OpenSvg.MultiPolygon.this
+  fullName.vb: OpenSvg.MultiPolygon.this[]
+  nameWithType: MultiPolygon.this
+  nameWithType.vb: MultiPolygon.this[]
+- uid: OpenSvg.MultiPolygon.ToPath
+  name: ToPath()
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ToPath
+  commentId: M:OpenSvg.MultiPolygon.ToPath
+  fullName: OpenSvg.MultiPolygon.ToPath()
+  nameWithType: MultiPolygon.ToPath()
+- uid: OpenSvg.MultiPolygon.ToPath*
+  name: ToPath
+  href: api/OpenSvg.MultiPolygon.html#OpenSvg_MultiPolygon_ToPath_
+  commentId: Overload:OpenSvg.MultiPolygon.ToPath
+  isSpec: "True"
+  fullName: OpenSvg.MultiPolygon.ToPath
+  nameWithType: MultiPolygon.ToPath
 - uid: OpenSvg.Orientation
   name: Orientation
   href: api/OpenSvg.Orientation.html
@@ -2173,6 +2443,32 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Path.ApproximateToMultiPolygon
   nameWithType: Path.ApproximateToMultiPolygon
+- uid: OpenSvg.Path.BoundingBox
+  name: BoundingBox
+  href: api/OpenSvg.Path.html#OpenSvg_Path_BoundingBox
+  commentId: P:OpenSvg.Path.BoundingBox
+  fullName: OpenSvg.Path.BoundingBox
+  nameWithType: Path.BoundingBox
+- uid: OpenSvg.Path.BoundingBox*
+  name: BoundingBox
+  href: api/OpenSvg.Path.html#OpenSvg_Path_BoundingBox_
+  commentId: Overload:OpenSvg.Path.BoundingBox
+  isSpec: "True"
+  fullName: OpenSvg.Path.BoundingBox
+  nameWithType: Path.BoundingBox
+- uid: OpenSvg.Path.ConvexHull
+  name: ConvexHull
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ConvexHull
+  commentId: P:OpenSvg.Path.ConvexHull
+  fullName: OpenSvg.Path.ConvexHull
+  nameWithType: Path.ConvexHull
+- uid: OpenSvg.Path.ConvexHull*
+  name: ConvexHull
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ConvexHull_
+  commentId: Overload:OpenSvg.Path.ConvexHull
+  isSpec: "True"
+  fullName: OpenSvg.Path.ConvexHull
+  nameWithType: Path.ConvexHull
 - uid: OpenSvg.Path.Dispose
   name: Dispose()
   href: api/OpenSvg.Path.html#OpenSvg_Path_Dispose
@@ -2249,6 +2545,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Path.GetHashCode
   nameWithType: Path.GetHashCode
+- uid: OpenSvg.Path.ToSvgPath
+  name: ToSvgPath()
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ToSvgPath
+  commentId: M:OpenSvg.Path.ToSvgPath
+  fullName: OpenSvg.Path.ToSvgPath()
+  nameWithType: Path.ToSvgPath()
+- uid: OpenSvg.Path.ToSvgPath*
+  name: ToSvgPath
+  href: api/OpenSvg.Path.html#OpenSvg_Path_ToSvgPath_
+  commentId: Overload:OpenSvg.Path.ToSvgPath
+  isSpec: "True"
+  fullName: OpenSvg.Path.ToSvgPath
+  nameWithType: Path.ToSvgPath
 - uid: OpenSvg.Path.ToXmlString
   name: ToXmlString()
   href: api/OpenSvg.Path.html#OpenSvg_Path_ToXmlString
@@ -2615,6 +2924,175 @@ references:
   fullName.vb: OpenSvg.Point.<=
   nameWithType: Point.operator <=
   nameWithType.vb: Point.<=
+- uid: OpenSvg.PointList
+  name: PointList
+  href: api/OpenSvg.PointList.html
+  commentId: T:OpenSvg.PointList
+  fullName: OpenSvg.PointList
+  nameWithType: PointList
+- uid: OpenSvg.PointList.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
+  name: PointList(IEnumerable<Point>)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
+  commentId: M:OpenSvg.PointList.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
+  name.vb: New(IEnumerable(Of Point))
+  fullName: OpenSvg.PointList.PointList(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
+  fullName.vb: OpenSvg.PointList.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
+  nameWithType: PointList.PointList(IEnumerable<Point>)
+  nameWithType.vb: PointList.New(IEnumerable(Of Point))
+- uid: OpenSvg.PointList.#ctor*
+  name: PointList
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_
+  commentId: Overload:OpenSvg.PointList.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.PointList.PointList
+  fullName.vb: OpenSvg.PointList.New
+  nameWithType: PointList.PointList
+  nameWithType.vb: PointList.New
+- uid: OpenSvg.PointList.Contains(OpenSvg.Point)
+  name: Contains(Point)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Contains_OpenSvg_Point_
+  commentId: M:OpenSvg.PointList.Contains(OpenSvg.Point)
+  fullName: OpenSvg.PointList.Contains(OpenSvg.Point)
+  nameWithType: PointList.Contains(Point)
+- uid: OpenSvg.PointList.Contains*
+  name: Contains
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Contains_
+  commentId: Overload:OpenSvg.PointList.Contains
+  isSpec: "True"
+  fullName: OpenSvg.PointList.Contains
+  nameWithType: PointList.Contains
+- uid: OpenSvg.PointList.Count
+  name: Count
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Count
+  commentId: P:OpenSvg.PointList.Count
+  fullName: OpenSvg.PointList.Count
+  nameWithType: PointList.Count
+- uid: OpenSvg.PointList.Count*
+  name: Count
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Count_
+  commentId: Overload:OpenSvg.PointList.Count
+  isSpec: "True"
+  fullName: OpenSvg.PointList.Count
+  nameWithType: PointList.Count
+- uid: OpenSvg.PointList.Equals(OpenSvg.PointList)
+  name: Equals(PointList?)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Equals_OpenSvg_PointList_
+  commentId: M:OpenSvg.PointList.Equals(OpenSvg.PointList)
+  name.vb: Equals(PointList)
+  fullName: OpenSvg.PointList.Equals(OpenSvg.PointList?)
+  fullName.vb: OpenSvg.PointList.Equals(OpenSvg.PointList)
+  nameWithType: PointList.Equals(PointList?)
+  nameWithType.vb: PointList.Equals(PointList)
+- uid: OpenSvg.PointList.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Equals_System_Object_
+  commentId: M:OpenSvg.PointList.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.PointList.Equals(object?)
+  fullName.vb: OpenSvg.PointList.Equals(Object)
+  nameWithType: PointList.Equals(object?)
+  nameWithType.vb: PointList.Equals(Object)
+- uid: OpenSvg.PointList.Equals*
+  name: Equals
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Equals_
+  commentId: Overload:OpenSvg.PointList.Equals
+  isSpec: "True"
+  fullName: OpenSvg.PointList.Equals
+  nameWithType: PointList.Equals
+- uid: OpenSvg.PointList.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_FromXmlString_System_String_
+  commentId: M:OpenSvg.PointList.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.PointList.FromXmlString(string)
+  fullName.vb: OpenSvg.PointList.FromXmlString(String)
+  nameWithType: PointList.FromXmlString(string)
+  nameWithType.vb: PointList.FromXmlString(String)
+- uid: OpenSvg.PointList.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_FromXmlString_
+  commentId: Overload:OpenSvg.PointList.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.PointList.FromXmlString
+  nameWithType: PointList.FromXmlString
+- uid: OpenSvg.PointList.GetEnumerator
+  name: GetEnumerator()
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_GetEnumerator
+  commentId: M:OpenSvg.PointList.GetEnumerator
+  fullName: OpenSvg.PointList.GetEnumerator()
+  nameWithType: PointList.GetEnumerator()
+- uid: OpenSvg.PointList.GetEnumerator*
+  name: GetEnumerator
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_GetEnumerator_
+  commentId: Overload:OpenSvg.PointList.GetEnumerator
+  isSpec: "True"
+  fullName: OpenSvg.PointList.GetEnumerator
+  nameWithType: PointList.GetEnumerator
+- uid: OpenSvg.PointList.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_GetHashCode
+  commentId: M:OpenSvg.PointList.GetHashCode
+  fullName: OpenSvg.PointList.GetHashCode()
+  nameWithType: PointList.GetHashCode()
+- uid: OpenSvg.PointList.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_GetHashCode_
+  commentId: Overload:OpenSvg.PointList.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.PointList.GetHashCode
+  nameWithType: PointList.GetHashCode
+- uid: OpenSvg.PointList.Item(System.Int32)
+  name: this[int]
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Item_System_Int32_
+  commentId: P:OpenSvg.PointList.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: OpenSvg.PointList.this[int]
+  fullName.vb: OpenSvg.PointList.this[](Integer)
+  nameWithType: PointList.this[int]
+  nameWithType.vb: PointList.this[](Integer)
+- uid: OpenSvg.PointList.Item*
+  name: this
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Item_
+  commentId: Overload:OpenSvg.PointList.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: OpenSvg.PointList.this
+  fullName.vb: OpenSvg.PointList.this[]
+  nameWithType: PointList.this
+  nameWithType.vb: PointList.this[]
+- uid: OpenSvg.PointList.Points
+  name: Points
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Points
+  commentId: F:OpenSvg.PointList.Points
+  fullName: OpenSvg.PointList.Points
+  nameWithType: PointList.Points
+- uid: OpenSvg.PointList.ToString
+  name: ToString()
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_ToString
+  commentId: M:OpenSvg.PointList.ToString
+  fullName: OpenSvg.PointList.ToString()
+  nameWithType: PointList.ToString()
+- uid: OpenSvg.PointList.ToString*
+  name: ToString
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_ToString_
+  commentId: Overload:OpenSvg.PointList.ToString
+  isSpec: "True"
+  fullName: OpenSvg.PointList.ToString
+  nameWithType: PointList.ToString
+- uid: OpenSvg.PointList.ToXmlString
+  name: ToXmlString()
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_ToXmlString
+  commentId: M:OpenSvg.PointList.ToXmlString
+  fullName: OpenSvg.PointList.ToXmlString()
+  nameWithType: PointList.ToXmlString()
+- uid: OpenSvg.PointList.ToXmlString*
+  name: ToXmlString
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_ToXmlString_
+  commentId: Overload:OpenSvg.PointList.ToXmlString
+  isSpec: "True"
+  fullName: OpenSvg.PointList.ToXmlString
+  nameWithType: PointList.ToXmlString
 - uid: OpenSvg.PointRelation
   name: PointRelation
   href: api/OpenSvg.PointRelation.html
@@ -2659,11 +3137,11 @@ references:
   nameWithType: Polygon.Polygon
   nameWithType.vb: Polygon.New
 - uid: OpenSvg.Polygon.BoundingBox
-  name: BoundingBox()
+  name: BoundingBox
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_BoundingBox
-  commentId: M:OpenSvg.Polygon.BoundingBox
-  fullName: OpenSvg.Polygon.BoundingBox()
-  nameWithType: Polygon.BoundingBox()
+  commentId: P:OpenSvg.Polygon.BoundingBox
+  fullName: OpenSvg.Polygon.BoundingBox
+  nameWithType: Polygon.BoundingBox
 - uid: OpenSvg.Polygon.BoundingBox*
   name: BoundingBox
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_BoundingBox_
@@ -2671,6 +3149,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.BoundingBox
   nameWithType: Polygon.BoundingBox
+- uid: OpenSvg.Polygon.ConvexHull
+  name: ConvexHull
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ConvexHull
+  commentId: P:OpenSvg.Polygon.ConvexHull
+  fullName: OpenSvg.Polygon.ConvexHull
+  nameWithType: Polygon.ConvexHull
+- uid: OpenSvg.Polygon.ConvexHull*
+  name: ConvexHull
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ConvexHull_
+  commentId: Overload:OpenSvg.Polygon.ConvexHull
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.ConvexHull
+  nameWithType: Polygon.ConvexHull
 - uid: OpenSvg.Polygon.Empty
   name: Empty
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_Empty
@@ -2725,19 +3216,6 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.FromXmlString
   nameWithType: Polygon.FromXmlString
-- uid: OpenSvg.Polygon.GetConvexHull
-  name: GetConvexHull()
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetConvexHull
-  commentId: M:OpenSvg.Polygon.GetConvexHull
-  fullName: OpenSvg.Polygon.GetConvexHull()
-  nameWithType: Polygon.GetConvexHull()
-- uid: OpenSvg.Polygon.GetConvexHull*
-  name: GetConvexHull
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetConvexHull_
-  commentId: Overload:OpenSvg.Polygon.GetConvexHull
-  isSpec: "True"
-  fullName: OpenSvg.Polygon.GetConvexHull
-  nameWithType: Polygon.GetConvexHull
 - uid: OpenSvg.Polygon.GetHashCode
   name: GetHashCode()
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_GetHashCode
@@ -2783,32 +3261,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.RelationTo
   nameWithType: Polygon.RelationTo
-- uid: OpenSvg.Polygon.ToString
-  name: ToString()
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToString
-  commentId: M:OpenSvg.Polygon.ToString
-  fullName: OpenSvg.Polygon.ToString()
-  nameWithType: Polygon.ToString()
-- uid: OpenSvg.Polygon.ToString*
-  name: ToString
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToString_
-  commentId: Overload:OpenSvg.Polygon.ToString
+- uid: OpenSvg.Polygon.ToSvgPolygon
+  name: ToSvgPolygon()
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToSvgPolygon
+  commentId: M:OpenSvg.Polygon.ToSvgPolygon
+  fullName: OpenSvg.Polygon.ToSvgPolygon()
+  nameWithType: Polygon.ToSvgPolygon()
+- uid: OpenSvg.Polygon.ToSvgPolygon*
+  name: ToSvgPolygon
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToSvgPolygon_
+  commentId: Overload:OpenSvg.Polygon.ToSvgPolygon
   isSpec: "True"
-  fullName: OpenSvg.Polygon.ToString
-  nameWithType: Polygon.ToString
-- uid: OpenSvg.Polygon.ToXmlString
-  name: ToXmlString()
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString
-  commentId: M:OpenSvg.Polygon.ToXmlString
-  fullName: OpenSvg.Polygon.ToXmlString()
-  nameWithType: Polygon.ToXmlString()
-- uid: OpenSvg.Polygon.ToXmlString*
-  name: ToXmlString
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString_
-  commentId: Overload:OpenSvg.Polygon.ToXmlString
-  isSpec: "True"
-  fullName: OpenSvg.Polygon.ToXmlString
-  nameWithType: Polygon.ToXmlString
+  fullName: OpenSvg.Polygon.ToSvgPolygon
+  nameWithType: Polygon.ToSvgPolygon
 - uid: OpenSvg.PolygonRelation
   name: PolygonRelation
   href: api/OpenSvg.PolygonRelation.html
@@ -2845,6 +3310,124 @@ references:
   commentId: F:OpenSvg.PolygonRelation.Intersect
   fullName: OpenSvg.PolygonRelation.Intersect
   nameWithType: PolygonRelation.Intersect
+- uid: OpenSvg.Polyline
+  name: Polyline
+  href: api/OpenSvg.Polyline.html
+  commentId: T:OpenSvg.Polyline
+  fullName: OpenSvg.Polyline
+  nameWithType: Polyline
+- uid: OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
+  name: Polyline(IEnumerable<Point>)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
+  commentId: M:OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
+  name.vb: New(IEnumerable(Of Point))
+  fullName: OpenSvg.Polyline.Polyline(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
+  fullName.vb: OpenSvg.Polyline.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
+  nameWithType: Polyline.Polyline(IEnumerable<Point>)
+  nameWithType.vb: Polyline.New(IEnumerable(Of Point))
+- uid: OpenSvg.Polyline.#ctor*
+  name: Polyline
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_
+  commentId: Overload:OpenSvg.Polyline.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Polyline.Polyline
+  fullName.vb: OpenSvg.Polyline.New
+  nameWithType: Polyline.Polyline
+  nameWithType.vb: Polyline.New
+- uid: OpenSvg.Polyline.BoundingBox
+  name: BoundingBox
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_BoundingBox
+  commentId: P:OpenSvg.Polyline.BoundingBox
+  fullName: OpenSvg.Polyline.BoundingBox
+  nameWithType: Polyline.BoundingBox
+- uid: OpenSvg.Polyline.BoundingBox*
+  name: BoundingBox
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_BoundingBox_
+  commentId: Overload:OpenSvg.Polyline.BoundingBox
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.BoundingBox
+  nameWithType: Polyline.BoundingBox
+- uid: OpenSvg.Polyline.ConvexHull
+  name: ConvexHull
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ConvexHull
+  commentId: P:OpenSvg.Polyline.ConvexHull
+  fullName: OpenSvg.Polyline.ConvexHull
+  nameWithType: Polyline.ConvexHull
+- uid: OpenSvg.Polyline.ConvexHull*
+  name: ConvexHull
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ConvexHull_
+  commentId: Overload:OpenSvg.Polyline.ConvexHull
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.ConvexHull
+  nameWithType: Polyline.ConvexHull
+- uid: OpenSvg.Polyline.Empty
+  name: Empty
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_Empty
+  commentId: P:OpenSvg.Polyline.Empty
+  fullName: OpenSvg.Polyline.Empty
+  nameWithType: Polyline.Empty
+- uid: OpenSvg.Polyline.Empty*
+  name: Empty
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_Empty_
+  commentId: Overload:OpenSvg.Polyline.Empty
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.Empty
+  nameWithType: Polyline.Empty
+- uid: OpenSvg.Polyline.Equals(OpenSvg.Polyline)
+  name: Equals(Polyline?)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_Equals_OpenSvg_Polyline_
+  commentId: M:OpenSvg.Polyline.Equals(OpenSvg.Polyline)
+  name.vb: Equals(Polyline)
+  fullName: OpenSvg.Polyline.Equals(OpenSvg.Polyline?)
+  fullName.vb: OpenSvg.Polyline.Equals(OpenSvg.Polyline)
+  nameWithType: Polyline.Equals(Polyline?)
+  nameWithType.vb: Polyline.Equals(Polyline)
+- uid: OpenSvg.Polyline.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_Equals_System_Object_
+  commentId: M:OpenSvg.Polyline.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Polyline.Equals(object?)
+  fullName.vb: OpenSvg.Polyline.Equals(Object)
+  nameWithType: Polyline.Equals(object?)
+  nameWithType.vb: Polyline.Equals(Object)
+- uid: OpenSvg.Polyline.Equals*
+  name: Equals
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_Equals_
+  commentId: Overload:OpenSvg.Polyline.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.Equals
+  nameWithType: Polyline.Equals
+- uid: OpenSvg.Polyline.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_FromXmlString_System_String_
+  commentId: M:OpenSvg.Polyline.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.Polyline.FromXmlString(string)
+  fullName.vb: OpenSvg.Polyline.FromXmlString(String)
+  nameWithType: Polyline.FromXmlString(string)
+  nameWithType.vb: Polyline.FromXmlString(String)
+- uid: OpenSvg.Polyline.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_FromXmlString_
+  commentId: Overload:OpenSvg.Polyline.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.FromXmlString
+  nameWithType: Polyline.FromXmlString
+- uid: OpenSvg.Polyline.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_GetHashCode
+  commentId: M:OpenSvg.Polyline.GetHashCode
+  fullName: OpenSvg.Polyline.GetHashCode()
+  nameWithType: Polyline.GetHashCode()
+- uid: OpenSvg.Polyline.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_GetHashCode_
+  commentId: Overload:OpenSvg.Polyline.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.GetHashCode
+  nameWithType: Polyline.GetHashCode
 - uid: OpenSvg.RectangleRenderMode
   name: RectangleRenderMode
   href: api/OpenSvg.RectangleRenderMode.html
@@ -2946,6 +3529,19 @@ references:
   commentId: T:OpenSvg.SkiaSharpExtensions
   fullName: OpenSvg.SkiaSharpExtensions
   nameWithType: SkiaSharpExtensions
+- uid: OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath,OpenSvg.Polygon)
+  name: AddPolygonToPath(SKPath, Polygon)
+  href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_AddPolygonToPath_SkiaSharp_SKPath_OpenSvg_Polygon_
+  commentId: M:OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath,OpenSvg.Polygon)
+  fullName: OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath, OpenSvg.Polygon)
+  nameWithType: SkiaSharpExtensions.AddPolygonToPath(SKPath, Polygon)
+- uid: OpenSvg.SkiaSharpExtensions.AddPolygonToPath*
+  name: AddPolygonToPath
+  href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_AddPolygonToPath_
+  commentId: Overload:OpenSvg.SkiaSharpExtensions.AddPolygonToPath
+  isSpec: "True"
+  fullName: OpenSvg.SkiaSharpExtensions.AddPolygonToPath
+  nameWithType: SkiaSharpExtensions.AddPolygonToPath
 - uid: OpenSvg.SkiaSharpExtensions.LoadFromFile(System.String)
   name: LoadFromFile(string)
   href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_LoadFromFile_System_String_
@@ -2990,6 +3586,18 @@ references:
   commentId: F:OpenSvg.SvgNames.D
   fullName: OpenSvg.SvgNames.D
   nameWithType: SvgNames.D
+- uid: OpenSvg.SvgNames.DefaultFontName
+  name: DefaultFontName
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_DefaultFontName
+  commentId: F:OpenSvg.SvgNames.DefaultFontName
+  fullName: OpenSvg.SvgNames.DefaultFontName
+  nameWithType: SvgNames.DefaultFontName
+- uid: OpenSvg.SvgNames.DefaultFontSize
+  name: DefaultFontSize
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_DefaultFontSize
+  commentId: F:OpenSvg.SvgNames.DefaultFontSize
+  fullName: OpenSvg.SvgNames.DefaultFontSize
+  nameWithType: SvgNames.DefaultFontSize
 - uid: OpenSvg.SvgNames.Defs
   name: Defs
   href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Defs
@@ -3086,6 +3694,12 @@ references:
   commentId: F:OpenSvg.SvgNames.Polygon
   fullName: OpenSvg.SvgNames.Polygon
   nameWithType: SvgNames.Polygon
+- uid: OpenSvg.SvgNames.Polyline
+  name: Polyline
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Polyline
+  commentId: F:OpenSvg.SvgNames.Polyline
+  fullName: OpenSvg.SvgNames.Polyline
+  nameWithType: SvgNames.Polyline
 - uid: OpenSvg.SvgNames.Rect
   name: Rect
   href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Rect
@@ -3884,13 +4498,13 @@ references:
   nameWithType: SvgElement.operator ==
   nameWithType.vb: SvgElement.=
 - uid: OpenSvg.SvgNodes.SvgElement.op_Inequality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
-  name: operator !=(SvgElement?, SvgElement?)
+  name: operator !=(SvgElement, SvgElement)
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Inequality_OpenSvg_SvgNodes_SvgElement_OpenSvg_SvgNodes_SvgElement_
   commentId: M:OpenSvg.SvgNodes.SvgElement.op_Inequality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
   name.vb: <>(SvgElement, SvgElement)
-  fullName: OpenSvg.SvgNodes.SvgElement.operator !=(OpenSvg.SvgNodes.SvgElement?, OpenSvg.SvgNodes.SvgElement?)
+  fullName: OpenSvg.SvgNodes.SvgElement.operator !=(OpenSvg.SvgNodes.SvgElement, OpenSvg.SvgNodes.SvgElement)
   fullName.vb: OpenSvg.SvgNodes.SvgElement.<>(OpenSvg.SvgNodes.SvgElement, OpenSvg.SvgNodes.SvgElement)
-  nameWithType: SvgElement.operator !=(SvgElement?, SvgElement?)
+  nameWithType: SvgElement.operator !=(SvgElement, SvgElement)
   nameWithType.vb: SvgElement.<>(SvgElement, SvgElement)
 - uid: OpenSvg.SvgNodes.SvgElement.op_Inequality*
   name: operator !=
@@ -3965,6 +4579,19 @@ references:
   fullName.vb: OpenSvg.SvgNodes.SvgFont.New
   nameWithType: SvgFont.SvgFont
   nameWithType.vb: SvgFont.New
+- uid: OpenSvg.SvgNodes.SvgFont.DefaultFont
+  name: DefaultFont
+  href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_DefaultFont
+  commentId: P:OpenSvg.SvgNodes.SvgFont.DefaultFont
+  fullName: OpenSvg.SvgNodes.SvgFont.DefaultFont
+  nameWithType: SvgFont.DefaultFont
+- uid: OpenSvg.SvgNodes.SvgFont.DefaultFont*
+  name: DefaultFont
+  href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_DefaultFont_
+  commentId: Overload:OpenSvg.SvgNodes.SvgFont.DefaultFont
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgFont.DefaultFont
+  nameWithType: SvgFont.DefaultFont
 - uid: OpenSvg.SvgNodes.SvgFont.Font
   name: Font
   href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_Font
@@ -4030,6 +4657,22 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgFont.FontWidth
   nameWithType: SvgFont.FontWidth
+- uid: OpenSvg.SvgNodes.SvgFont.GetSystemFont(System.String)
+  name: GetSystemFont(string)
+  href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_GetSystemFont_System_String_
+  commentId: M:OpenSvg.SvgNodes.SvgFont.GetSystemFont(System.String)
+  name.vb: GetSystemFont(String)
+  fullName: OpenSvg.SvgNodes.SvgFont.GetSystemFont(string)
+  fullName.vb: OpenSvg.SvgNodes.SvgFont.GetSystemFont(String)
+  nameWithType: SvgFont.GetSystemFont(string)
+  nameWithType.vb: SvgFont.GetSystemFont(String)
+- uid: OpenSvg.SvgNodes.SvgFont.GetSystemFont*
+  name: GetSystemFont
+  href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_GetSystemFont_
+  commentId: Overload:OpenSvg.SvgNodes.SvgFont.GetSystemFont
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgFont.GetSystemFont
+  nameWithType: SvgFont.GetSystemFont
 - uid: OpenSvg.SvgNodes.SvgFont.LoadFromFile(System.String)
   name: LoadFromFile(string)
   href: api/OpenSvg.SvgNodes.SvgFont.html#OpenSvg_SvgNodes_SvgFont_LoadFromFile_System_String_
@@ -4328,6 +4971,44 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPolygon.SvgName
   nameWithType: SvgPolygon.SvgName
+- uid: OpenSvg.SvgNodes.SvgPolyline
+  name: SvgPolyline
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html
+  commentId: T:OpenSvg.SvgNodes.SvgPolyline
+  fullName: OpenSvg.SvgNodes.SvgPolyline
+  nameWithType: SvgPolyline
+- uid: OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull
+  name: ComputeConvexHull()
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_ComputeConvexHull
+  commentId: M:OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull
+  fullName: OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull()
+  nameWithType: SvgPolyline.ComputeConvexHull()
+- uid: OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull*
+  name: ComputeConvexHull
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_ComputeConvexHull_
+  commentId: Overload:OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull
+  nameWithType: SvgPolyline.ComputeConvexHull
+- uid: OpenSvg.SvgNodes.SvgPolyline.Polyline
+  name: Polyline
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_Polyline
+  commentId: F:OpenSvg.SvgNodes.SvgPolyline.Polyline
+  fullName: OpenSvg.SvgNodes.SvgPolyline.Polyline
+  nameWithType: SvgPolyline.Polyline
+- uid: OpenSvg.SvgNodes.SvgPolyline.SvgName
+  name: SvgName
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_SvgName
+  commentId: P:OpenSvg.SvgNodes.SvgPolyline.SvgName
+  fullName: OpenSvg.SvgNodes.SvgPolyline.SvgName
+  nameWithType: SvgPolyline.SvgName
+- uid: OpenSvg.SvgNodes.SvgPolyline.SvgName*
+  name: SvgName
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_SvgName_
+  commentId: Overload:OpenSvg.SvgNodes.SvgPolyline.SvgName
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgPolyline.SvgName
+  nameWithType: SvgPolyline.SvgName
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect
   name: SvgRectangleAsRect
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html
@@ -4539,6 +5220,19 @@ references:
   commentId: F:OpenSvg.SvgNodes.SvgText.FontSize
   fullName: OpenSvg.SvgNodes.SvgText.FontSize
   nameWithType: SvgText.FontSize
+- uid: OpenSvg.SvgNodes.SvgText.Point
+  name: Point
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_Point
+  commentId: P:OpenSvg.SvgNodes.SvgText.Point
+  fullName: OpenSvg.SvgNodes.SvgText.Point
+  nameWithType: SvgText.Point
+- uid: OpenSvg.SvgNodes.SvgText.Point*
+  name: Point
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_Point_
+  commentId: Overload:OpenSvg.SvgNodes.SvgText.Point
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgText.Point
+  nameWithType: SvgText.Point
 - uid: OpenSvg.SvgNodes.SvgText.SvgName
   name: SvgName
   href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_SvgName

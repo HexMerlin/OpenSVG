@@ -21,7 +21,7 @@ public class Polyline : PointList, IEquatable<Polyline>
         convexHull = new ConvexHull(this);
     }
 
-    public static Polyline FromXmlString(string xmlString) => new Polyline(PointList.FromXmlString(xmlString));
+    public static new Polyline FromXmlString(string xmlString) => new Polyline(PointList.FromXmlString(xmlString));
 
     public ConvexHull ConvexHull => convexHull;
 

@@ -107,209 +107,46 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
-    <div class="level2"><a class="xref" href="OpenSvg.Polygon.html">Polygon</a></div>
-    <div class="level3"><span class="xref">ConvexHull</span></div>
+    <div class="level1"><a class="xref" href="OpenSvg.PointList.html">PointList</a></div>
+    <div class="level2"><span class="xref">ConvexHull</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Polygon.html">Polygon</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.PointList.html">PointList</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.ConvexHull.html">ConvexHull</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_Empty">Polygon.Empty</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Points">PointList.Points</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_GetConvexHull">Polygon.GetConvexHull()</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Count">PointList.Count</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_BoundingBox">Polygon.BoundingBox()</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Item_System_Int32_">PointList.this[int]</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_FromXmlString_System_String_">Polygon.FromXmlString(string)</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Contains_OpenSvg_Point_">PointList.Contains(Point)</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_OpenSvg_Polygon_">Polygon.Equals(Polygon)</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_FromXmlString_System_String_">PointList.FromXmlString(string)</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_Equals_System_Object_">Polygon.Equals(object)</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Equals_OpenSvg_PointList_">PointList.Equals(PointList)</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_GetHashCode">Polygon.GetHashCode()</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_ToXmlString">PointList.ToXmlString()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_ToXmlString">Polygon.ToXmlString()</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_ToString">PointList.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_ToString">Polygon.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_OpenSvg_Point_">Polygon.RelationTo(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_OpenSvg_Polygon_">Polygon.RelationTo(Polygon)</a>
-    </div>
-    <div>
-      <a class="xref" href="OpenSvg.Polygon.html#OpenSvg_Polygon_IsOnEdge_OpenSvg_Point_">Polygon.IsOnEdge(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.add">List&lt;Point&gt;.Add(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.addrange">List&lt;Point&gt;.AddRange(IEnumerable&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.asreadonly">List&lt;Point&gt;.AsReadOnly()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#system-collections-generic-list-1-binarysearch(system-int32-system-int32-0-system-collections-generic-icomparer((-0)))">List&lt;Point&gt;.BinarySearch(int, int, Point, IComparer&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#system-collections-generic-list-1-binarysearch(-0)">List&lt;Point&gt;.BinarySearch(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#system-collections-generic-list-1-binarysearch(-0-system-collections-generic-icomparer((-0)))">List&lt;Point&gt;.BinarySearch(Point, IComparer&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.clear">List&lt;Point&gt;.Clear()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.contains">List&lt;Point&gt;.Contains(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.convertall">List&lt;Point&gt;.ConvertAll&lt;TOutput&gt;(Converter&lt;Point, TOutput&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.copyto#system-collections-generic-list-1-copyto(system-int32-0()-system-int32-system-int32)">List&lt;Point&gt;.CopyTo(int, Point[], int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.copyto#system-collections-generic-list-1-copyto(-0())">List&lt;Point&gt;.CopyTo(Point[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.copyto#system-collections-generic-list-1-copyto(-0()-system-int32)">List&lt;Point&gt;.CopyTo(Point[], int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.ensurecapacity">List&lt;Point&gt;.EnsureCapacity(int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.exists">List&lt;Point&gt;.Exists(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.find">List&lt;Point&gt;.Find(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findall">List&lt;Point&gt;.FindAll(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findindex#system-collections-generic-list-1-findindex(system-int32-system-int32-system-predicate((-0)))">List&lt;Point&gt;.FindIndex(int, int, Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findindex#system-collections-generic-list-1-findindex(system-int32-system-predicate((-0)))">List&lt;Point&gt;.FindIndex(int, Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findindex#system-collections-generic-list-1-findindex(system-predicate((-0)))">List&lt;Point&gt;.FindIndex(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findlast">List&lt;Point&gt;.FindLast(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findlastindex#system-collections-generic-list-1-findlastindex(system-int32-system-int32-system-predicate((-0)))">List&lt;Point&gt;.FindLastIndex(int, int, Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findlastindex#system-collections-generic-list-1-findlastindex(system-int32-system-predicate((-0)))">List&lt;Point&gt;.FindLastIndex(int, Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.findlastindex#system-collections-generic-list-1-findlastindex(system-predicate((-0)))">List&lt;Point&gt;.FindLastIndex(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.foreach">List&lt;Point&gt;.ForEach(Action&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.getenumerator">List&lt;Point&gt;.GetEnumerator()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.getrange">List&lt;Point&gt;.GetRange(int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.indexof#system-collections-generic-list-1-indexof(-0)">List&lt;Point&gt;.IndexOf(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.indexof#system-collections-generic-list-1-indexof(-0-system-int32)">List&lt;Point&gt;.IndexOf(Point, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.indexof#system-collections-generic-list-1-indexof(-0-system-int32-system-int32)">List&lt;Point&gt;.IndexOf(Point, int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.insert">List&lt;Point&gt;.Insert(int, Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.insertrange">List&lt;Point&gt;.InsertRange(int, IEnumerable&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.lastindexof#system-collections-generic-list-1-lastindexof(-0)">List&lt;Point&gt;.LastIndexOf(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.lastindexof#system-collections-generic-list-1-lastindexof(-0-system-int32)">List&lt;Point&gt;.LastIndexOf(Point, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.lastindexof#system-collections-generic-list-1-lastindexof(-0-system-int32-system-int32)">List&lt;Point&gt;.LastIndexOf(Point, int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.remove">List&lt;Point&gt;.Remove(Point)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.removeall">List&lt;Point&gt;.RemoveAll(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.removeat">List&lt;Point&gt;.RemoveAt(int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.removerange">List&lt;Point&gt;.RemoveRange(int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.reverse#system-collections-generic-list-1-reverse">List&lt;Point&gt;.Reverse()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.reverse#system-collections-generic-list-1-reverse(system-int32-system-int32)">List&lt;Point&gt;.Reverse(int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.sort#system-collections-generic-list-1-sort">List&lt;Point&gt;.Sort()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.sort#system-collections-generic-list-1-sort(system-collections-generic-icomparer((-0)))">List&lt;Point&gt;.Sort(IComparer&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.sort#system-collections-generic-list-1-sort(system-comparison((-0)))">List&lt;Point&gt;.Sort(Comparison&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.sort#system-collections-generic-list-1-sort(system-int32-system-int32-system-collections-generic-icomparer((-0)))">List&lt;Point&gt;.Sort(int, int, IComparer&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.toarray">List&lt;Point&gt;.ToArray()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.trimexcess">List&lt;Point&gt;.TrimExcess()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.trueforall">List&lt;Point&gt;.TrueForAll(Predicate&lt;Point&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.capacity">List&lt;Point&gt;.Capacity</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.count">List&lt;Point&gt;.Count</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">List&lt;Point&gt;.this[int]</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_GetEnumerator">PointList.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -328,7 +165,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_ConvexHull_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConvexHull : Polygon, IList&lt;Point&gt;, ICollection&lt;Point&gt;, IReadOnlyList&lt;Point&gt;, IReadOnlyCollection&lt;Point&gt;, IEnumerable&lt;Point&gt;, IList, ICollection, IEnumerable, IEquatable&lt;Polygon&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConvexHull : PointList, IReadOnlyList&lt;Point&gt;, IReadOnlyCollection&lt;Point&gt;, IEnumerable&lt;Point&gt;, IEnumerable, IEquatable&lt;PointList&gt;, IEquatable&lt;ConvexHull&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -337,7 +174,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_ConvexHull__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.ConvexHull%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L23">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L24">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull__ctor_" data-uid="OpenSvg.ConvexHull.#ctor*"></a>
   <h4 id="OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_ConvexHull__" data-uid="OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.ConvexHull})">ConvexHull(IEnumerable&lt;ConvexHull&gt;)</h4>
@@ -371,7 +208,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L14">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L17">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull__ctor_" data-uid="OpenSvg.ConvexHull.#ctor*"></a>
   <h4 id="OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})">ConvexHull(IEnumerable&lt;Point&gt;)</h4>
@@ -400,14 +237,181 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_BoundingBox.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.BoundingBox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L10">View Source</a>
+  </span>
+  <h4 id="OpenSvg_ConvexHull_BoundingBox" data-uid="OpenSvg.ConvexHull.BoundingBox">BoundingBox</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly BoundingBox BoundingBox</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.BoundingBox.html">BoundingBox</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_Equals_OpenSvg_ConvexHull_.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L162">View Source</a>
+  </span>
+  <a id="OpenSvg_ConvexHull_Equals_" data-uid="OpenSvg.ConvexHull.Equals*"></a>
+  <h4 id="OpenSvg_ConvexHull_Equals_OpenSvg_ConvexHull_" data-uid="OpenSvg.ConvexHull.Equals(OpenSvg.ConvexHull)">Equals(ConvexHull?)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ConvexHull? other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.ConvexHull.html">ConvexHull</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>true if the specified object is equal to the current object; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_Equals_System_Object_.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.Equals(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L166">View Source</a>
+  </span>
+  <a id="OpenSvg_ConvexHull_Equals_" data-uid="OpenSvg.ConvexHull.Equals*"></a>
+  <h4 id="OpenSvg_ConvexHull_Equals_System_Object_" data-uid="OpenSvg.ConvexHull.Equals(System.Object)">Equals(object?)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Equals_System_Object_">PointList.Equals(object?)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_GetHashCode.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L169">View Source</a>
+  </span>
+  <a id="OpenSvg_ConvexHull_GetHashCode_" data-uid="OpenSvg.ConvexHull.GetHashCode*"></a>
+  <h4 id="OpenSvg_ConvexHull_GetHashCode" data-uid="OpenSvg.ConvexHull.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>A hash code for the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_GetHashCode">PointList.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L88">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L113">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull_IsConvexHull_" data-uid="OpenSvg.ConvexHull.IsConvexHull*"></a>
   <h4 id="OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{OpenSvg.Point})">IsConvexHull(IEnumerable&lt;Point&gt;)</h4>
@@ -457,7 +461,7 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_ConvexHull_Transform_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.ConvexHull.Transform(OpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L47">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/ConvexHull.cs/#L48">View Source</a>
   </span>
   <a id="OpenSvg_ConvexHull_Transform_" data-uid="OpenSvg.ConvexHull.Transform*"></a>
   <h4 id="OpenSvg_ConvexHull_Transform_OpenSvg_Transform_" data-uid="OpenSvg.ConvexHull.Transform(OpenSvg.Transform)">Transform(Transform)</h4>
@@ -504,12 +508,6 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection&lt;T&gt;</a>
-  </div>
-  <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a>
   </div>
   <div>
@@ -519,13 +517,10 @@ Provides specialized methods for manipulating and querying convex hulls.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>
-  </div>
-  <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>

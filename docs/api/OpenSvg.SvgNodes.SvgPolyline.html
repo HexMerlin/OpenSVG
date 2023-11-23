@@ -5,10 +5,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class SvgPath
+      <title>Class SvgPolyline
  | OpenSVG </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class SvgPath
+      <meta name="title" content="Class SvgPolyline
  | OpenSVG ">
       <meta name="generator" content="docfx ">
   
@@ -91,16 +91,16 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPolyline.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPolyline%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                          </div>
 
-                    <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgPath">
+                    <article class="content wrap" id="_content" data-uid="OpenSvg.SvgNodes.SvgPolyline">
 
 
 
-  <h1 id="OpenSvg_SvgNodes_SvgPath" data-uid="OpenSvg.SvgNodes.SvgPath" class="text-break">Class SvgPath
+  <h1 id="OpenSvg_SvgNodes_SvgPolyline" data-uid="OpenSvg.SvgNodes.SvgPolyline" class="text-break">Class SvgPolyline
 </h1>
-  <div class="markdown level0 summary"><p>Represents an SVG Path element that renders a text with the specified styling.</p>
+  <div class="markdown level0 summary"><p>Represents an SVG polygon element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -108,13 +108,12 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></div>
     <div class="level2"><a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a></div>
-    <div class="level3"><span class="xref">SvgPath</span></div>
+    <div class="level3"><span class="xref">SvgPolyline</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -200,6 +199,9 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
@@ -208,76 +210,25 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a>.<a class="xref" href="OpenSvg.SvgNodes.html">SvgNodes</a></h6>
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
-  <h5 id="OpenSvg_SvgNodes_SvgPath_syntax">Syntax</h5>
+  <h5 id="OpenSvg_SvgNodes_SvgPolyline_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SvgPath : SvgVisual, IXmlSerializable, IEquatable&lt;SvgElement&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SvgPolyline : SvgVisual, IXmlSerializable, IEquatable&lt;SvgElement&gt;</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath__ctor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L12">View Source</a>
-  </span>
-  <a id="OpenSvg_SvgNodes_SvgPath__ctor_" data-uid="OpenSvg.SvgNodes.SvgPath.#ctor*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath__ctor" data-uid="OpenSvg.SvgNodes.SvgPath.#ctor">SvgPath()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SvgPath()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath__ctor_OpenSvg_Config_TextConfig_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.%23ctor(OpenSvg.Config.TextConfig)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L18">View Source</a>
-  </span>
-  <a id="OpenSvg_SvgNodes_SvgPath__ctor_" data-uid="OpenSvg.SvgNodes.SvgPath.#ctor*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath__ctor_OpenSvg_Config_TextConfig_" data-uid="OpenSvg.SvgNodes.SvgPath.#ctor(OpenSvg.Config.TextConfig)">SvgPath(TextConfig)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OpenSvg.SvgNodes.SvgPath.html">SvgPath</a> class with the specified <a class="xref" href="OpenSvg.Config.TextConfig.html">TextConfig</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SvgPath(TextConfig textConfig)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.Config.TextConfig.html">TextConfig</a></td>
-        <td><span class="parametername">textConfig</span></td>
-        <td><p>The styling information for the text.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="fields">Fields
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath_Path.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.Path%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPolyline_Polyline.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPolyline.Polyline%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L8">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPolyline.cs/#L10">View Source</a>
   </span>
-  <h4 id="OpenSvg_SvgNodes_SvgPath_Path" data-uid="OpenSvg.SvgNodes.SvgPath.Path">Path</h4>
+  <h4 id="OpenSvg_SvgNodes_SvgPolyline_Polyline" data-uid="OpenSvg.SvgNodes.SvgPolyline.Polyline">Polyline</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly PathAttr Path</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly PolylineAttr Polyline</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -289,7 +240,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="OpenSvg.Attributes.PathAttr.html">PathAttr</a></td>
+        <td><a class="xref" href="OpenSvg.Attributes.PolylineAttr.html">PolylineAttr</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,13 +249,13 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPolyline_SvgName.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPolyline.SvgName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L25">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPolyline.cs/#L13">View Source</a>
   </span>
-  <a id="OpenSvg_SvgNodes_SvgPath_SvgName_" data-uid="OpenSvg.SvgNodes.SvgPath.SvgName*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath_SvgName" data-uid="OpenSvg.SvgNodes.SvgPath.SvgName">SvgName</h4>
+  <a id="OpenSvg_SvgNodes_SvgPolyline_SvgName_" data-uid="OpenSvg.SvgNodes.SvgPolyline.SvgName*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgPolyline_SvgName" data-uid="OpenSvg.SvgNodes.SvgPolyline.SvgName">SvgName</h4>
   <div class="markdown level1 summary"><p>Gets or sets the name of the SVG element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -333,60 +284,13 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath_ApproximateToMultiPolygon_System_Int32_.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.ApproximateToMultiPolygon(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPolyline_ComputeConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L29">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPolyline.cs/#L16">View Source</a>
   </span>
-  <a id="OpenSvg_SvgNodes_SvgPath_ApproximateToMultiPolygon_" data-uid="OpenSvg.SvgNodes.SvgPath.ApproximateToMultiPolygon*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath_ApproximateToMultiPolygon_System_Int32_" data-uid="OpenSvg.SvgNodes.SvgPath.ApproximateToMultiPolygon(System.Int32)">ApproximateToMultiPolygon(int)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MultiPolygon ApproximateToMultiPolygon(int segments)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">segments</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.MultiPolygon.html">MultiPolygon</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath_ComputeConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.ComputeConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L31">View Source</a>
-  </span>
-  <a id="OpenSvg_SvgNodes_SvgPath_ComputeConvexHull_" data-uid="OpenSvg.SvgNodes.SvgPath.ComputeConvexHull*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath_ComputeConvexHull" data-uid="OpenSvg.SvgNodes.SvgPath.ComputeConvexHull">ComputeConvexHull()</h4>
+  <a id="OpenSvg_SvgNodes_SvgPolyline_ComputeConvexHull_" data-uid="OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgPolyline_ComputeConvexHull" data-uid="OpenSvg.SvgNodes.SvgPolyline.ComputeConvexHull">ComputeConvexHull()</h4>
   <div class="markdown level1 summary"><p>Protected abstract method to compute the raw convex hull of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.
 By raw meaning that the resulting convex hull of this method does not apply any apply the current transformation of the element.</p>
 </div>
@@ -412,31 +316,12 @@ By raw meaning that the resulting convex hull of this method does not apply any 
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_ComputeConvexHull">SvgVisual.ComputeConvexHull()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgPath_Dispose.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgPath.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgPath.cs/#L27">View Source</a>
-  </span>
-  <a id="OpenSvg_SvgNodes_SvgPath_Dispose_" data-uid="OpenSvg.SvgNodes.SvgPath.Dispose*"></a>
-  <h4 id="OpenSvg_SvgNodes_SvgPath_Dispose" data-uid="OpenSvg.SvgNodes.SvgPath.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.serialization.ixmlserializable">IXmlSerializable</a>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
 
 </article>
