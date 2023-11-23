@@ -110,7 +110,7 @@ public abstract class SvgVisual : SvgElement
     ///     Thrown if an unsupported alignment is provided.
     /// </exception>
     /// <seealso cref="HorizontalAlignment"/>
-    /// <seealso cref="VerticalAlignment"/>"/>
+    /// <seealso cref="VerticalAlignment"/>
     public void AlignRelativeTo(SvgVisual referenceElement, HorizontalAlignment? horizontalAlignment = null,
         VerticalAlignment? verticalAlignment = null)
     {

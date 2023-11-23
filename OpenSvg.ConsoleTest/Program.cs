@@ -18,7 +18,12 @@ internal class Program
 
         svgDocument1.Save(@"D:\Downloads\Test\legend.svg");
         svgDocument2.Save(@"D:\Downloads\Test\otraf.svg");
-       
+
+
+        //GeoJsonDocument geoJsonDocument2 = GeoJsonDocument.Load(@"D:\Downloads\Test\otraf.geojson");
+        //SvgDocument svgDocument2 = geoJsonDocument2.ToSvgDocument();
+
+        //svgDocument2.Save(@"D:\Downloads\Test\otraf.svg");
 
     }
 }
