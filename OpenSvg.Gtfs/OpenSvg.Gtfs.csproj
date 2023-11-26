@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GTFS\GTFS.csproj" />
+    <ProjectReference Include="..\OpenSvg.GeoJson\OpenSvg.GeoJson.csproj" />
     <ProjectReference Include="..\OpenSvg\OpenSvg.csproj" />
   </ItemGroup>
 

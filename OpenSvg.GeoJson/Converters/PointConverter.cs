@@ -31,10 +31,17 @@ public record PointConverter
 
     public int SegmentCountForCurveApproximation { get; init; }
 
-    public static double MetersPerPixels(double svgWidth, GeoJsonBoundingBox geoJsonBoundingBox)
+    public static double MetersPerPixels(double desiredSvgWidth, GeoBoundingBox geoBoundingBox)
+    {
+        double widthInMeters = geoBoundingBox.TopLeft.DistanceTo(geoBoundingBox.TopRight);
+        double metersPerPixel = widthInMeters / desiredSvgWidth;
+        return metersPerPixel;
+    }
+
+    public static double MetersPerPixels(double desiredSvgWidth, GeoJsonBoundingBox geoJsonBoundingBox)
     {
         double widthInMeters = geoJsonBoundingBox.TopLeft.DistanceTo(geoJsonBoundingBox.TopRight);
-        double metersPerPixel = widthInMeters / svgWidth;
+        double metersPerPixel = widthInMeters / desiredSvgWidth;
         return metersPerPixel;
     }
 

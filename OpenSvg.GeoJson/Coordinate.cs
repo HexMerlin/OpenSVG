@@ -11,10 +11,10 @@ public readonly struct Coordinate
     
     public readonly double Lat;
 
-    public Coordinate(double longitude, double latitude)
+    public Coordinate(double longitude, double latitude, int coordinateToDecimalPrecision = Constants.CoordinateDecimalPrecision)
     {
-        this.Long = Math.Round(longitude, Constants.CoordinateDecimalPrecision);
-        this.Lat = Math.Round(latitude, Constants.CoordinateDecimalPrecision);
+        this.Long = coordinateToDecimalPrecision <= 0 ?  longitude : Math.Round(longitude, coordinateToDecimalPrecision);
+        this.Lat = coordinateToDecimalPrecision <= 0 ? latitude : Math.Round(latitude, coordinateToDecimalPrecision);
     }
 
     

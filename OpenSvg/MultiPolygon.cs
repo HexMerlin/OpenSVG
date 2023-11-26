@@ -127,10 +127,10 @@ public class MultiPolygon : IReadOnlyList<EnclosedPolygonGroup>
         var skPath = new SKPath();
         foreach (EnclosedPolygonGroup epg in enclosedPolygonGroups)
         {
-            skPath.AddPolygonToPath(epg.ExteriorPolygon);
+            skPath.AddPoly(epg.ExteriorPolygon.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: true);
 
             foreach (Polygon interiorPolygon in epg.InteriorPolygons)
-              skPath.AddPolygonToPath(interiorPolygon);
+                 skPath.AddPoly(interiorPolygon.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: true);
         }
 
         return new Path(skPath);

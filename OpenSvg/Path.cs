@@ -1,6 +1,6 @@
 ﻿using OpenSvg.SvgNodes;
 using SkiaSharp;
-using System.Data.Common;
+using System.Diagnostics.CodeAnalysis;
 
 namespace OpenSvg;
 
@@ -32,11 +32,14 @@ public class Path : IEquatable<Path>, IDisposable
 
     public Path(SKPath path)
     {
-        this.path = path; 
+        this.path = path;
         this.xmlString = this.path.ToSvgPathData();
-        this.ConvexHull = ApproximateToMultiPolygon(SegmentCountForCurveApproximation).ConvexHull;
+
+        ConvexHull = TryConvertToPoints(out PointList? pointList) ? new ConvexHull(pointList) :
+            ApproximateToMultiPolygon(SegmentCountForCurveApproximation).ConvexHull;
 
     }
+
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
@@ -198,6 +201,45 @@ public class Path : IEquatable<Path>, IDisposable
             yield return new Point(x, y);
         }
 
+    }
+
+
+
+    public bool TryConvertToPoints([NotNullWhen(true)] out PointList? pointList)
+    {
+        pointList = null;
+        var points = new List<Point>();
+           
+        int verbCount = 0;
+        int closeCount = 0;
+        foreach (var command in Commands())
+        {
+            verbCount++;
+            if (command.verb == SKPathVerb.Close)
+            {
+                closeCount++;
+                if (closeCount > 1) return false; //return false if more than one close command
+            }
+            if (command.verb == SKPathVerb.Move)
+            {
+                if (verbCount == 1)
+                {
+                    points.Add(command.p1);
+                    continue;
+                }
+                else return false; //return false if move command is not first
+            }
+            if (command.verb is SKPathVerb.Line)
+            {
+                points.Add(command.p1);
+                continue;
+            }
+            return false; //return false, not linear path
+
+        }
+        
+        pointList = closeCount == 1 ? new Polygon(points) : new Polyline(points);
+        return true;
     }
 
     private IEnumerable<(SKPathVerb verb, Point p0, Point p1, Point p2, Point p3)> Commands()

@@ -47,14 +47,15 @@ public class EnclosedPolygonGroup
     public Path ToPath()
     {
         var skPath = new SKPath();
-        skPath.AddPolygonToPath(ExteriorPolygon);
- 
-        foreach (var interiorPolygon in InteriorPolygons)
-           skPath.AddPolygonToPath(interiorPolygon);
-        
-        return new Path(skPath);
+        skPath.AddPoly(ExteriorPolygon.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: true);
+      
+       foreach (var interiorPolygon in InteriorPolygons)
+       {
+          skPath.AddPoly(interiorPolygon.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: true);
+       }
+          
+       return new Path(skPath);
     }
-
 
 }
 

@@ -8,20 +8,6 @@ namespace OpenSvg;
 public static class SkiaSharpExtensions
 {
 
-    public static void AddPolygonToPath(this SKPath path, Polygon polygon)
-    {
-        if (polygon.Count > 0)
-        {
-            path.MoveTo((float)polygon[0].X, (float)polygon[0].Y);
-            
-            for (int i = 1; i < polygon.Count; i++)
-            {
-                path.LineTo((float)polygon[i].X, (float)polygon[i].Y);
-            }
-
-            path.Close();
-        }
-    }
 
     /// <summary>
     ///     Loads a <see cref="SKTypeface" /> font from the specified file path.

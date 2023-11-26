@@ -1,7 +1,10 @@
-﻿using OpenSvg.Config;
+﻿using System.Collections.Immutable;
+using SkiaSharp;
+using OpenSvg.Gtfs;
+using OpenSvg.Config;
 using OpenSvg.GeoJson;
 using OpenSvg.SvgNodes;
-using SkiaSharp;
+using Microsoft.VisualBasic.FileIO;
 
 namespace OpenSvg.ConsoleTest;
 
@@ -10,6 +13,12 @@ internal class Program
 
     public static void Main()
     {
+        GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
+
+
+        SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
+        svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svgz");
+
 
 
         //GeoJsonDocument geoJsonDocument1 = GeoJsonDocument.Load(@"D:\Downloads\Test\legend.geojson");
@@ -21,10 +30,6 @@ internal class Program
         //svgDocument2.Save(@"D:\Downloads\Test\otraf.svg");
 
 
-        //GeoJsonDocument geoJsonDocument2 = GeoJsonDocument.Load(@"D:\Downloads\Test\otraf.geojson");
-        //SvgDocument svgDocument2 = geoJsonDocument2.ToSvgDocument();
-
-        //svgDocument2.Save(@"D:\Downloads\Test\otraf.svg");
 
     }
 }

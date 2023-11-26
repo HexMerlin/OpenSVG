@@ -16,11 +16,13 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// Gets or sets the name of the SVG element.
     /// </summary>
     public abstract string SvgName { get; }
+       
+    protected readonly StringAttr id = new(SvgNames.ID, "", false);
 
     /// <summary>
     /// Gets or sets the ID of the element.
     /// </summary>
-    public readonly StringAttr ID = new(SvgNames.ID, "", false);
+    public string ID { get => id.Get(); set => id.Set(value); }
 
     /// <summary>
     /// Gets the root document of the element.
@@ -282,5 +284,5 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// Returns a hash code for the current object.
     /// </summary>
     /// <returns>A hash code for the current object.</returns>
-    public override int GetHashCode() => HashCode.Combine(SvgName, ID.Get());
+    public override int GetHashCode() => HashCode.Combine(SvgName, ID);
 }

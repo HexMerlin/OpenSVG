@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using OpenSvg.SvgNodes;
+using SkiaSharp;
+using System.Collections;
 using System.Collections.Immutable;
 using System.Globalization;
+using System.IO;
 
 
 namespace OpenSvg;
@@ -27,6 +30,27 @@ public class Polyline : PointList, IEquatable<Polyline>
     public ConvexHull ConvexHull => convexHull;
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
+
+    public SvgPolyline ToSvgPolyline()
+    {
+        SvgPolyline svgPolyline = new SvgPolyline();
+        svgPolyline.Polyline = this;
+        return svgPolyline;
+    }
+
+
+
+    /// <summary>
+    /// Converts the <see cref="Polyline"/> to a <see cref="Path"/>.
+    /// </summary>
+    /// <returns>The <see cref="Polyline"/> represented as a <see cref="Path"/>.</returns>
+    public Path ToPath()
+    {
+        SKPath skPath = new SKPath();
+        skPath.AddPoly(this.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: false);
+ 
+        return new Path(skPath);       
+    }
 
     /// <summary>
     /// Returns an empty polyLine.

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Globalization;
 using System.Collections.Immutable;
+using SkiaSharp;
 
 namespace OpenSvg;
 
@@ -29,6 +30,9 @@ public abstract class PointList : IReadOnlyList<Point>, IEquatable<PointList>
 
 
     public bool Contains(Point point) => Points.Contains(point);
+
+
+
 
     /// <summary>
     /// Creates a point sequence from an XML string representation.

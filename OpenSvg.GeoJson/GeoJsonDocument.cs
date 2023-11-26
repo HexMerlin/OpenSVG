@@ -48,9 +48,9 @@ public class GeoJsonDocument
     /// <summary>
     /// Converts the GeoJsonDocument to an SvgDocument with the specified desired width in pixels.
     /// </summary>
-    /// <param name="desiredWidthInPixels">The desired width of the SvgDocument in pixels. Default value: <c>640</c>></param>
+    /// <param name="desiredWidthInPixels">The desired width of the SvgDocument in pixels. Default value: <c>800</c>></param>
     /// <returns>An SvgDocument representing the GeoJsonDocument.</returns>
-    public SvgDocument ToSvgDocument(double desiredWidthInPixels = 640)
+    public SvgDocument ToSvgDocument(double desiredWidthInPixels = 800)
     {
         GeoJsonBoundingBox geoJsonBoundingBox = new GeoJsonBoundingBox(featureCollection);
         double metersPerPixel = PointConverter.MetersPerPixels(desiredWidthInPixels, geoJsonBoundingBox);

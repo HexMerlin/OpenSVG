@@ -1,4 +1,5 @@
 ﻿using OpenSvg.SvgNodes;
+using SkiaSharp;
 using System.Collections.Immutable;
 
 
@@ -36,11 +37,22 @@ public partial class Polygon : PointList, IEquatable<Polygon>
 
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
+    /// <summary>
+    /// Converts the <see cref="Polygon"/> to a <see cref="Path"/>.
+    /// </summary>
+    /// <returns>The <see cref="Polygon"/> represented as a <see cref="Path"/>.</returns>
+    public Path ToPath()
+    {
+        SKPath skPath = new SKPath();
+        skPath.AddPoly(this.Select(p => new SKPoint((float)p.X, (float)p.Y)).ToArray(), close: true);
+        return new Path(skPath);
+    }
+
     public SvgPolygon ToSvgPolygon()
     {
-        SvgPolygon polygon = new SvgPolygon();
-        polygon.Polygon = this;
-        return polygon;
+        SvgPolygon svgPolygon = new SvgPolygon();
+        svgPolygon.Polygon = this;
+        return svgPolygon;
     }
 
     /// <summary>
