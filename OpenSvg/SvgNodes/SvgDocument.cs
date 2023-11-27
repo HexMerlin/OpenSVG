@@ -18,17 +18,23 @@ public class SvgDocument : SvgVisualContainer
     protected readonly ViewBoxAttr viewBox = new();
     protected readonly PreserveAspectRatioAttr preserveAspectRatio = new();
 
+    /// <summary>
+    /// Gets or sets the view box of this SvgDocument.
+    /// </summary>
     public BoundingBox ViewBox { get => viewBox.Get(); set => viewBox.Set(value); }
 
+    /// <summary>
+    /// Gets or sets the 'preserveAspectRatio' of this SvgDocument.
+    /// </summary>
     public AspectRatio PreserveAspectRatio { get => preserveAspectRatio.Get(); set => preserveAspectRatio.Set(value); }
 
     /// <summary>
-    /// Gets or sets the defined view port width.
+    /// Gets or sets the defined view port width of this SvgDocument.
     /// </summary>
     public AbsoluteOrRatio DefinedViewPortWidth { get => definedViewPortWidth.Get(); set => definedViewPortWidth.Set(value); }
 
     /// <summary>
-    /// Gets or sets the defined view port height.
+    /// Gets or sets the defined view port height of this SvgDocument.
     /// </summary>
     public AbsoluteOrRatio DefinedViewPortHeight { get => definedViewPortHeight.Get(); set => definedViewPortHeight.Set(value); }
 
@@ -36,10 +42,10 @@ public class SvgDocument : SvgVisualContainer
     public override string SvgName => SvgNames.Svg;
 
     /// <inheritdoc/>
-    public override double ViewPortWidth => DefinedViewPortWidth.Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Size.Width);
+    public override double ViewPortWidth => DefinedViewPortWidth.Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Width);
 
     /// <inheritdoc/>
-    public override double ViewPortHeight => DefinedViewPortHeight.Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Size.Height);
+    public override double ViewPortHeight => DefinedViewPortHeight.Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Height);
 
     /// <summary>
     /// Converts the SVG document to an XDocument.
@@ -192,6 +198,10 @@ public class SvgDocument : SvgVisualContainer
     /// The default viewport dimensions are defined by <see cref="Constants.DefaultContainerWidth"/> 
     /// and <see cref="Constants.DefaultContainerHeight"/>, which are set to 1024 and 768 pixels respectively.
     /// </remarks>
+    /// <seealso cref="AspectRatio"/>
+    /// <seealso cref="AspectRatioAlign"/>
+    /// <seealso cref="AspectRatioMeetOrSlice"/>
+
     public void SetViewBoxToActualSizeAndDefaultViewPort()
     {
         ViewBox = this.BoundingBox;

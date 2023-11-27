@@ -19,7 +19,7 @@ public class ViewBoxAttr : Attr<BoundingBox>
     protected override string Serialize(BoundingBox value) 
         => value.Equals(BoundingBox.None)
             ? string.Empty
-            : $"{value.MinX.ToXmlString()} {value.MinY.ToXmlString()} {value.Size.Width.ToXmlString()} {value.Size.Height.ToXmlString()}";
+            : $"{value.MinX.ToXmlString()} {value.MinY.ToXmlString()} {value.Width.ToXmlString()} {value.Height.ToXmlString()}";
 
     /// <inheritdoc/>
     protected override BoundingBox Deserialize(string xmlString)

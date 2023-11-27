@@ -28,11 +28,20 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// </summary>
     public static readonly BoundingBox None = new(Point.Origin, Point.Origin);
 
+    /// <summary>
+    ///     Gets the width of the bounding box.
+    /// </summary>
+    public double Width => this.LowerRight.X - this.UpperLeft.X;
+
+    /// <summary>
+    ///     Gets the height of the bounding box.
+    /// </summary>
+    public double Height => this.LowerRight.Y - this.UpperLeft.Y;
 
     /// <summary>
     ///     Gets the size of the bounding box.
     /// </summary>
-    public readonly Size Size => new(this.LowerRight.X - this.UpperLeft.X, this.LowerRight.Y - this.UpperLeft.Y);
+    public readonly Size Size => new(Width, Height);
 
     /// <summary>
     ///     Gets the minimum x coordinate of the bounding box.

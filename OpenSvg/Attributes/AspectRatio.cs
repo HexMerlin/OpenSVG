@@ -1,7 +1,5 @@
 ﻿namespace OpenSvg.Attributes;
 
-
-
 /// <summary>
 /// Represents the 'preserveAspectRatio' attribute value in SVG.
 /// Encapsulates the alignment and meet-or-slice settings.

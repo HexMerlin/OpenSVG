@@ -14,8 +14,8 @@ public class SvgFileGeneratorTests
         var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
         // Act
-        Assert.Equal(860, expectedSvgDocument.BoundingBox.Size.Width);
-        Assert.Equal(3920, expectedSvgDocument.BoundingBox.Size.Height);
+        Assert.Equal(860, expectedSvgDocument.BoundingBox.Width);
+        Assert.Equal(3920, expectedSvgDocument.BoundingBox.Height);
         Assert.Equal(expectedSvgDocument.BoundingBox, expectedSvgDocument.ViewBox);
         Assert.Equal(Constants.DefaultContainerWidth, expectedSvgDocument.ViewPortWidth);
         Assert.Equal(Constants.DefaultContainerHeight, expectedSvgDocument.ViewPortHeight);
@@ -26,8 +26,8 @@ public class SvgFileGeneratorTests
         actualSvgDocument.Save(actualFilePath);
 
         // Assert
-        Assert.Equal(860, actualSvgDocument.BoundingBox.Size.Width);
-        Assert.Equal(3920, actualSvgDocument.BoundingBox.Size.Height);
+        Assert.Equal(860, actualSvgDocument.BoundingBox.Width);
+        Assert.Equal(3920, actualSvgDocument.BoundingBox.Height);
         Assert.Equal(actualSvgDocument.BoundingBox, actualSvgDocument.ViewBox);
         Assert.Equal(Constants.DefaultContainerWidth, actualSvgDocument.ViewPortWidth);
         Assert.Equal(Constants.DefaultContainerHeight, actualSvgDocument.ViewPortHeight);
