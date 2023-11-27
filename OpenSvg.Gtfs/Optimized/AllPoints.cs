@@ -55,6 +55,5 @@ public class AllPoints
 
         Console.WriteLine("Total coordinates: " + coordinates.Length);
         Console.WriteLine("Total points: " + points.Count);
-
     }
 }

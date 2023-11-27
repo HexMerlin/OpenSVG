@@ -3,7 +3,7 @@ using OpenSvg.Config;
 
 namespace OpenSvg.SvgNodes;
 
-public sealed partial class SvgPath : SvgVisual, IDisposable
+public partial class SvgPath : SvgVisual, IDisposable
 {
     protected readonly PathAttr path = new();
 

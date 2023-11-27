@@ -109,6 +109,7 @@ It has a convex hull, a bounding box and a size</p>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="OpenSvg.SvgNodes.SvgElement.html">SvgElement</a></div>
     <div class="level2"><span class="xref">SvgVisual</span></div>
+      <div class="level3"><a class="xref" href="OpenSvg.SvgNodes.SvgCircle.html">SvgCircle</a></div>
       <div class="level3"><a class="xref" href="OpenSvg.SvgNodes.SvgLine.html">SvgLine</a></div>
       <div class="level3"><a class="xref" href="OpenSvg.SvgNodes.SvgPath.html">SvgPath</a></div>
       <div class="level3"><a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a></div>
@@ -126,6 +127,9 @@ It has a convex hull, a bounding box and a size</p>
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_SvgName">SvgElement.SvgName</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_id">SvgElement.id</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ID">SvgElement.ID</a>
@@ -167,6 +171,9 @@ It has a convex hull, a bounding box and a size</p>
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes">SvgElement.Attributes()</a>
     </div>
     <div>
+      <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_AttributeStrings">SvgElement.AttributeStrings()</a>
+    </div>
+    <div>
       <a class="xref" href="OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Equals_System_Object_">SvgElement.Equals(object)</a>
     </div>
     <div>
@@ -204,18 +211,17 @@ It has a convex hull, a bounding box and a size</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_FillColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.FillColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_fillColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.fillColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L21">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L16">View Source</a>
   </span>
-  <h4 id="OpenSvg_SvgNodes_SvgVisual_FillColor" data-uid="OpenSvg.SvgNodes.SvgVisual.FillColor">FillColor</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the fill color of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
-</div>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_fillColor" data-uid="OpenSvg.SvgNodes.SvgVisual.fillColor">fillColor</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ColorAttr FillColor</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ColorAttr fillColor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -232,27 +238,19 @@ It has a convex hull, a bounding box and a size</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_FillColor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The default color is <code>Black</code> according to the SVG 1.1 specification.</p>
-</div>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_FillColor_seealso">See Also</h5>
-  <div class="seealso">
-      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#FillProperty">SVG 1.1 Fill Property</a></span></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_StrokeColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.StrokeColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_strokeColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.strokeColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L30">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L17">View Source</a>
   </span>
-  <h4 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeColor">StrokeColor</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the stroke color of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
-</div>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_strokeColor" data-uid="OpenSvg.SvgNodes.SvgVisual.strokeColor">strokeColor</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ColorAttr StrokeColor</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ColorAttr strokeColor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -269,27 +267,19 @@ It has a convex hull, a bounding box and a size</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The default color is <code>None</code> according to the SVG 1.1 specification.</p>
-</div>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor_seealso">See Also</h5>
-  <div class="seealso">
-      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#StrokeProperty">SVG 1.1 Stroke Property</a></span></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_StrokeWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.StrokeWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_strokeWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.strokeWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L40">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L18">View Source</a>
   </span>
-  <h4 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeWidth">StrokeWidth</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the stroke-width of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
-</div>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_strokeWidth" data-uid="OpenSvg.SvgNodes.SvgVisual.strokeWidth">strokeWidth</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly DoubleAttr StrokeWidth</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly DoubleAttr strokeWidth</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -306,27 +296,19 @@ It has a convex hull, a bounding box and a size</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The default stroke-width is <code>1</code> according to the SVG 1.1 specification.</p>
-</div>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth_seealso">See Also</h5>
-  <div class="seealso">
-      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</a></span></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_Transform.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.Transform%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_transform.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.transform%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L49">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L20">View Source</a>
   </span>
-  <h4 id="OpenSvg_SvgNodes_SvgVisual_Transform" data-uid="OpenSvg.SvgNodes.SvgVisual.Transform">Transform</h4>
-  <div class="markdown level1 summary"><p>Gets the transformation attribute of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
-</div>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_transform" data-uid="OpenSvg.SvgNodes.SvgVisual.transform">transform</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TransformAttr Transform</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly TransformAttr transform</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -343,9 +325,6 @@ It has a convex hull, a bounding box and a size</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="OpenSvg_SvgNodes_SvgVisual_Transform_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This attribute defines the transformation to be applied to the element.</p>
-</div>
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
@@ -353,7 +332,7 @@ It has a convex hull, a bounding box and a size</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_BoundingBox.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.BoundingBox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L82">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L94">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgVisual_BoundingBox_" data-uid="OpenSvg.SvgNodes.SvgVisual.BoundingBox*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgVisual_BoundingBox" data-uid="OpenSvg.SvgNodes.SvgVisual.BoundingBox">BoundingBox</h4>
@@ -387,7 +366,7 @@ It has a convex hull, a bounding box and a size</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_ConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.ConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L74">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L86">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgVisual_ConvexHull_" data-uid="OpenSvg.SvgNodes.SvgVisual.ConvexHull*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgVisual_ConvexHull" data-uid="OpenSvg.SvgNodes.SvgVisual.ConvexHull">ConvexHull</h4>
@@ -421,7 +400,7 @@ It has a convex hull, a bounding box and a size</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_DrawConfig.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.DrawConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L57">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L69">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgVisual_DrawConfig_" data-uid="OpenSvg.SvgNodes.SvgVisual.DrawConfig*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgVisual_DrawConfig" data-uid="OpenSvg.SvgNodes.SvgVisual.DrawConfig">DrawConfig</h4>
@@ -450,6 +429,154 @@ It has a convex hull, a bounding box and a size</p>
   <h5 id="OpenSvg_SvgNodes_SvgVisual_DrawConfig_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This configuration includes fill color, stroke color, and stroke width.</p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_FillColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.FillColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L29">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgVisual_FillColor_" data-uid="OpenSvg.SvgNodes.SvgVisual.FillColor*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_FillColor" data-uid="OpenSvg.SvgNodes.SvgVisual.FillColor">FillColor</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the fill color of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SKColor FillColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skcolor">SKColor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_FillColor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default color is <code>Black</code> according to the SVG 1.1 specification.</p>
+</div>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_FillColor_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#FillProperty">SVG 1.1 Fill Property</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_StrokeColor.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.StrokeColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L38">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgVisual_StrokeColor_" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeColor*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeColor">StrokeColor</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the stroke color of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SKColor StrokeColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skcolor">SKColor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default color is <code>None</code> according to the SVG 1.1 specification.</p>
+</div>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeColor_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#StrokeProperty">SVG 1.1 Stroke Property</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_StrokeWidth.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.StrokeWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L48">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth_" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeWidth*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth" data-uid="OpenSvg.SvgNodes.SvgVisual.StrokeWidth">StrokeWidth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the stroke-width of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double StrokeWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default stroke-width is <code>1</code> according to the SVG 1.1 specification.</p>
+</div>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_StrokeWidth_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_Transform.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.Transform%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L56">View Source</a>
+  </span>
+  <a id="OpenSvg_SvgNodes_SvgVisual_Transform_" data-uid="OpenSvg.SvgNodes.SvgVisual.Transform*"></a>
+  <h4 id="OpenSvg_SvgNodes_SvgVisual_Transform" data-uid="OpenSvg.SvgNodes.SvgVisual.Transform">Transform</h4>
+  <div class="markdown level1 summary"><p>Gets the transformation attribute of this <a class="xref" href="OpenSvg.SvgNodes.SvgVisual.html">SvgVisual</a> element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.Transform.html">Transform</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_SvgNodes_SvgVisual_Transform_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This attribute defines the transformation to be applied to the element.</p>
+</div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
@@ -457,7 +584,7 @@ It has a convex hull, a bounding box and a size</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_AlignRelativeTo_OpenSvg_SvgNodes_SvgVisual_System_Nullable_OpenSvg_HorizontalAlignment__System_Nullable_OpenSvg_VerticalAlignment__.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.AlignRelativeTo(OpenSvg.SvgNodes.SvgVisual%2CSystem.Nullable%7BOpenSvg.HorizontalAlignment%7D%2CSystem.Nullable%7BOpenSvg.VerticalAlignment%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L114">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L126">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgVisual_AlignRelativeTo_" data-uid="OpenSvg.SvgNodes.SvgVisual.AlignRelativeTo*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgVisual_AlignRelativeTo_OpenSvg_SvgNodes_SvgVisual_System_Nullable_OpenSvg_HorizontalAlignment__System_Nullable_OpenSvg_VerticalAlignment__" data-uid="OpenSvg.SvgNodes.SvgVisual.AlignRelativeTo(OpenSvg.SvgNodes.SvgVisual,System.Nullable{OpenSvg.HorizontalAlignment},System.Nullable{OpenSvg.VerticalAlignment})">AlignRelativeTo(SvgVisual, HorizontalAlignment?, VerticalAlignment?)</h4>
@@ -531,7 +658,7 @@ provides the frame of reference for alignment.</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SvgNodes_SvgVisual_ComputeConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.SvgNodes.SvgVisual.ComputeConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L88">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SvgNodes/SvgVisual.cs/#L100">View Source</a>
   </span>
   <a id="OpenSvg_SvgNodes_SvgVisual_ComputeConvexHull_" data-uid="OpenSvg.SvgNodes.SvgVisual.ComputeConvexHull*"></a>
   <h4 id="OpenSvg_SvgNodes_SvgVisual_ComputeConvexHull" data-uid="OpenSvg.SvgNodes.SvgVisual.ComputeConvexHull">ComputeConvexHull()</h4>

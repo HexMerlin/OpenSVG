@@ -70,6 +70,22 @@ references:
   isSpec: "True"
   fullName: OpenSvg.AbsoluteOrRatio.Equals
   nameWithType: AbsoluteOrRatio.Equals
+- uid: OpenSvg.AbsoluteOrRatio.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_FromXmlString_System_String_
+  commentId: M:OpenSvg.AbsoluteOrRatio.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.AbsoluteOrRatio.FromXmlString(string)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.FromXmlString(String)
+  nameWithType: AbsoluteOrRatio.FromXmlString(string)
+  nameWithType.vb: AbsoluteOrRatio.FromXmlString(String)
+- uid: OpenSvg.AbsoluteOrRatio.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_FromXmlString_
+  commentId: Overload:OpenSvg.AbsoluteOrRatio.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.AbsoluteOrRatio.FromXmlString
+  nameWithType: AbsoluteOrRatio.FromXmlString
 - uid: OpenSvg.AbsoluteOrRatio.GetHashCode
   name: GetHashCode()
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_GetHashCode
@@ -244,6 +260,183 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.AbsoluteOrRatioAttr.Serialize
   nameWithType: AbsoluteOrRatioAttr.Serialize
+- uid: OpenSvg.Attributes.AspectRatio
+  name: AspectRatio
+  href: api/OpenSvg.Attributes.AspectRatio.html
+  commentId: T:OpenSvg.Attributes.AspectRatio
+  fullName: OpenSvg.Attributes.AspectRatio
+  nameWithType: AspectRatio
+- uid: OpenSvg.Attributes.AspectRatio.#ctor(OpenSvg.Attributes.AspectRatioAlign,OpenSvg.Attributes.AspectRatioMeetOrSlice)
+  name: AspectRatio(AspectRatioAlign, AspectRatioMeetOrSlice)
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio__ctor_OpenSvg_Attributes_AspectRatioAlign_OpenSvg_Attributes_AspectRatioMeetOrSlice_
+  commentId: M:OpenSvg.Attributes.AspectRatio.#ctor(OpenSvg.Attributes.AspectRatioAlign,OpenSvg.Attributes.AspectRatioMeetOrSlice)
+  name.vb: New(AspectRatioAlign, AspectRatioMeetOrSlice)
+  fullName: OpenSvg.Attributes.AspectRatio.AspectRatio(OpenSvg.Attributes.AspectRatioAlign, OpenSvg.Attributes.AspectRatioMeetOrSlice)
+  fullName.vb: OpenSvg.Attributes.AspectRatio.New(OpenSvg.Attributes.AspectRatioAlign, OpenSvg.Attributes.AspectRatioMeetOrSlice)
+  nameWithType: AspectRatio.AspectRatio(AspectRatioAlign, AspectRatioMeetOrSlice)
+  nameWithType.vb: AspectRatio.New(AspectRatioAlign, AspectRatioMeetOrSlice)
+- uid: OpenSvg.Attributes.AspectRatio.#ctor*
+  name: AspectRatio
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio__ctor_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Attributes.AspectRatio.AspectRatio
+  fullName.vb: OpenSvg.Attributes.AspectRatio.New
+  nameWithType: AspectRatio.AspectRatio
+  nameWithType.vb: AspectRatio.New
+- uid: OpenSvg.Attributes.AspectRatio.Align
+  name: Align
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_Align
+  commentId: P:OpenSvg.Attributes.AspectRatio.Align
+  fullName: OpenSvg.Attributes.AspectRatio.Align
+  nameWithType: AspectRatio.Align
+- uid: OpenSvg.Attributes.AspectRatio.Align*
+  name: Align
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_Align_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.Align
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.AspectRatio.Align
+  nameWithType: AspectRatio.Align
+- uid: OpenSvg.Attributes.AspectRatio.FromXmlString(System.String)
+  name: FromXmlString(string)
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_FromXmlString_System_String_
+  commentId: M:OpenSvg.Attributes.AspectRatio.FromXmlString(System.String)
+  name.vb: FromXmlString(String)
+  fullName: OpenSvg.Attributes.AspectRatio.FromXmlString(string)
+  fullName.vb: OpenSvg.Attributes.AspectRatio.FromXmlString(String)
+  nameWithType: AspectRatio.FromXmlString(string)
+  nameWithType.vb: AspectRatio.FromXmlString(String)
+- uid: OpenSvg.Attributes.AspectRatio.FromXmlString*
+  name: FromXmlString
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_FromXmlString_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.FromXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.AspectRatio.FromXmlString
+  nameWithType: AspectRatio.FromXmlString
+- uid: OpenSvg.Attributes.AspectRatio.MeetOrSlice
+  name: MeetOrSlice
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_MeetOrSlice
+  commentId: P:OpenSvg.Attributes.AspectRatio.MeetOrSlice
+  fullName: OpenSvg.Attributes.AspectRatio.MeetOrSlice
+  nameWithType: AspectRatio.MeetOrSlice
+- uid: OpenSvg.Attributes.AspectRatio.MeetOrSlice*
+  name: MeetOrSlice
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_MeetOrSlice_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.MeetOrSlice
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.AspectRatio.MeetOrSlice
+  nameWithType: AspectRatio.MeetOrSlice
+- uid: OpenSvg.Attributes.AspectRatio.ToString
+  name: ToString()
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_ToString
+  commentId: M:OpenSvg.Attributes.AspectRatio.ToString
+  fullName: OpenSvg.Attributes.AspectRatio.ToString()
+  nameWithType: AspectRatio.ToString()
+- uid: OpenSvg.Attributes.AspectRatio.ToString*
+  name: ToString
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_ToString_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.ToString
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.AspectRatio.ToString
+  nameWithType: AspectRatio.ToString
+- uid: OpenSvg.Attributes.AspectRatio.ToXmlString
+  name: ToXmlString()
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_ToXmlString
+  commentId: M:OpenSvg.Attributes.AspectRatio.ToXmlString
+  fullName: OpenSvg.Attributes.AspectRatio.ToXmlString()
+  nameWithType: AspectRatio.ToXmlString()
+- uid: OpenSvg.Attributes.AspectRatio.ToXmlString*
+  name: ToXmlString
+  href: api/OpenSvg.Attributes.AspectRatio.html#OpenSvg_Attributes_AspectRatio_ToXmlString_
+  commentId: Overload:OpenSvg.Attributes.AspectRatio.ToXmlString
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.AspectRatio.ToXmlString
+  nameWithType: AspectRatio.ToXmlString
+- uid: OpenSvg.Attributes.AspectRatioAlign
+  name: AspectRatioAlign
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html
+  commentId: T:OpenSvg.Attributes.AspectRatioAlign
+  fullName: OpenSvg.Attributes.AspectRatioAlign
+  nameWithType: AspectRatioAlign
+- uid: OpenSvg.Attributes.AspectRatioAlign.None
+  name: None
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_None
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.None
+  fullName: OpenSvg.Attributes.AspectRatioAlign.None
+  nameWithType: AspectRatioAlign.None
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMaxYMax
+  name: XMaxYMax
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMaxYMax
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMaxYMax
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMaxYMax
+  nameWithType: AspectRatioAlign.XMaxYMax
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMaxYMid
+  name: XMaxYMid
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMaxYMid
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMaxYMid
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMaxYMid
+  nameWithType: AspectRatioAlign.XMaxYMid
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMaxYMin
+  name: XMaxYMin
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMaxYMin
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMaxYMin
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMaxYMin
+  nameWithType: AspectRatioAlign.XMaxYMin
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMidYMax
+  name: XMidYMax
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMidYMax
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMidYMax
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMidYMax
+  nameWithType: AspectRatioAlign.XMidYMax
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMidYMid
+  name: XMidYMid
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMidYMid
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMidYMid
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMidYMid
+  nameWithType: AspectRatioAlign.XMidYMid
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMidYMin
+  name: XMidYMin
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMidYMin
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMidYMin
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMidYMin
+  nameWithType: AspectRatioAlign.XMidYMin
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMinYMax
+  name: XMinYMax
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMinYMax
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMinYMax
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMinYMax
+  nameWithType: AspectRatioAlign.XMinYMax
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMinYMid
+  name: XMinYMid
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMinYMid
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMinYMid
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMinYMid
+  nameWithType: AspectRatioAlign.XMinYMid
+- uid: OpenSvg.Attributes.AspectRatioAlign.XMinYMin
+  name: XMinYMin
+  href: api/OpenSvg.Attributes.AspectRatioAlign.html#OpenSvg_Attributes_AspectRatioAlign_XMinYMin
+  commentId: F:OpenSvg.Attributes.AspectRatioAlign.XMinYMin
+  fullName: OpenSvg.Attributes.AspectRatioAlign.XMinYMin
+  nameWithType: AspectRatioAlign.XMinYMin
+- uid: OpenSvg.Attributes.AspectRatioMeetOrSlice
+  name: AspectRatioMeetOrSlice
+  href: api/OpenSvg.Attributes.AspectRatioMeetOrSlice.html
+  commentId: T:OpenSvg.Attributes.AspectRatioMeetOrSlice
+  fullName: OpenSvg.Attributes.AspectRatioMeetOrSlice
+  nameWithType: AspectRatioMeetOrSlice
+- uid: OpenSvg.Attributes.AspectRatioMeetOrSlice.Meet
+  name: Meet
+  href: api/OpenSvg.Attributes.AspectRatioMeetOrSlice.html#OpenSvg_Attributes_AspectRatioMeetOrSlice_Meet
+  commentId: F:OpenSvg.Attributes.AspectRatioMeetOrSlice.Meet
+  fullName: OpenSvg.Attributes.AspectRatioMeetOrSlice.Meet
+  nameWithType: AspectRatioMeetOrSlice.Meet
+- uid: OpenSvg.Attributes.AspectRatioMeetOrSlice.Slice
+  name: Slice
+  href: api/OpenSvg.Attributes.AspectRatioMeetOrSlice.html#OpenSvg_Attributes_AspectRatioMeetOrSlice_Slice
+  commentId: F:OpenSvg.Attributes.AspectRatioMeetOrSlice.Slice
+  fullName: OpenSvg.Attributes.AspectRatioMeetOrSlice.Slice
+  nameWithType: AspectRatioMeetOrSlice.Slice
 - uid: OpenSvg.Attributes.Attr`1
   name: Attr<T>
   href: api/OpenSvg.Attributes.Attr-1.html
@@ -952,6 +1145,60 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.PolylineAttr.Serialize
   nameWithType: PolylineAttr.Serialize
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr
+  name: PreserveAspectRatioAttr
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html
+  commentId: T:OpenSvg.Attributes.PreserveAspectRatioAttr
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr
+  nameWithType: PreserveAspectRatioAttr
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.#ctor
+  name: PreserveAspectRatioAttr()
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr__ctor
+  commentId: M:OpenSvg.Attributes.PreserveAspectRatioAttr.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.PreserveAspectRatioAttr()
+  fullName.vb: OpenSvg.Attributes.PreserveAspectRatioAttr.New()
+  nameWithType: PreserveAspectRatioAttr.PreserveAspectRatioAttr()
+  nameWithType.vb: PreserveAspectRatioAttr.New()
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.#ctor*
+  name: PreserveAspectRatioAttr
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr__ctor_
+  commentId: Overload:OpenSvg.Attributes.PreserveAspectRatioAttr.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.PreserveAspectRatioAttr
+  fullName.vb: OpenSvg.Attributes.PreserveAspectRatioAttr.New
+  nameWithType: PreserveAspectRatioAttr.PreserveAspectRatioAttr
+  nameWithType.vb: PreserveAspectRatioAttr.New
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr_Deserialize_System_String_
+  commentId: M:OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize(string)
+  fullName.vb: OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize(String)
+  nameWithType: PreserveAspectRatioAttr.Deserialize(string)
+  nameWithType.vb: PreserveAspectRatioAttr.Deserialize(String)
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize*
+  name: Deserialize
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr_Deserialize_
+  commentId: Overload:OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.Deserialize
+  nameWithType: PreserveAspectRatioAttr.Deserialize
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize(OpenSvg.Attributes.AspectRatio)
+  name: Serialize(AspectRatio)
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr_Serialize_OpenSvg_Attributes_AspectRatio_
+  commentId: M:OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize(OpenSvg.Attributes.AspectRatio)
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize(OpenSvg.Attributes.AspectRatio)
+  nameWithType: PreserveAspectRatioAttr.Serialize(AspectRatio)
+- uid: OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize*
+  name: Serialize
+  href: api/OpenSvg.Attributes.PreserveAspectRatioAttr.html#OpenSvg_Attributes_PreserveAspectRatioAttr_Serialize_
+  commentId: Overload:OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.PreserveAspectRatioAttr.Serialize
+  nameWithType: PreserveAspectRatioAttr.Serialize
 - uid: OpenSvg.Attributes.StringAttr
   name: StringAttr
   href: api/OpenSvg.Attributes.StringAttr.html
@@ -1034,19 +1281,6 @@ references:
   fullName.vb: OpenSvg.Attributes.TransformAttr.New
   nameWithType: TransformAttr.TransformAttr
   nameWithType.vb: TransformAttr.New
-- uid: OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)
-  name: ComposeWith(Transform)
-  href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_ComposeWith_OpenSvg_Transform_
-  commentId: M:OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)
-  fullName: OpenSvg.Attributes.TransformAttr.ComposeWith(OpenSvg.Transform)
-  nameWithType: TransformAttr.ComposeWith(Transform)
-- uid: OpenSvg.Attributes.TransformAttr.ComposeWith*
-  name: ComposeWith
-  href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_ComposeWith_
-  commentId: Overload:OpenSvg.Attributes.TransformAttr.ComposeWith
-  isSpec: "True"
-  fullName: OpenSvg.Attributes.TransformAttr.ComposeWith
-  nameWithType: TransformAttr.ComposeWith
 - uid: OpenSvg.Attributes.TransformAttr.Deserialize(System.String)
   name: Deserialize(string)
   href: api/OpenSvg.Attributes.TransformAttr.html#OpenSvg_Attributes_TransformAttr_Deserialize_System_String_
@@ -1100,6 +1334,60 @@ references:
   commentId: F:OpenSvg.Attributes.ValueState.Set
   fullName: OpenSvg.Attributes.ValueState.Set
   nameWithType: ValueState.Set
+- uid: OpenSvg.Attributes.ViewBoxAttr
+  name: ViewBoxAttr
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html
+  commentId: T:OpenSvg.Attributes.ViewBoxAttr
+  fullName: OpenSvg.Attributes.ViewBoxAttr
+  nameWithType: ViewBoxAttr
+- uid: OpenSvg.Attributes.ViewBoxAttr.#ctor
+  name: ViewBoxAttr()
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr__ctor
+  commentId: M:OpenSvg.Attributes.ViewBoxAttr.#ctor
+  name.vb: New()
+  fullName: OpenSvg.Attributes.ViewBoxAttr.ViewBoxAttr()
+  fullName.vb: OpenSvg.Attributes.ViewBoxAttr.New()
+  nameWithType: ViewBoxAttr.ViewBoxAttr()
+  nameWithType.vb: ViewBoxAttr.New()
+- uid: OpenSvg.Attributes.ViewBoxAttr.#ctor*
+  name: ViewBoxAttr
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr__ctor_
+  commentId: Overload:OpenSvg.Attributes.ViewBoxAttr.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Attributes.ViewBoxAttr.ViewBoxAttr
+  fullName.vb: OpenSvg.Attributes.ViewBoxAttr.New
+  nameWithType: ViewBoxAttr.ViewBoxAttr
+  nameWithType.vb: ViewBoxAttr.New
+- uid: OpenSvg.Attributes.ViewBoxAttr.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr_Deserialize_System_String_
+  commentId: M:OpenSvg.Attributes.ViewBoxAttr.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: OpenSvg.Attributes.ViewBoxAttr.Deserialize(string)
+  fullName.vb: OpenSvg.Attributes.ViewBoxAttr.Deserialize(String)
+  nameWithType: ViewBoxAttr.Deserialize(string)
+  nameWithType.vb: ViewBoxAttr.Deserialize(String)
+- uid: OpenSvg.Attributes.ViewBoxAttr.Deserialize*
+  name: Deserialize
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr_Deserialize_
+  commentId: Overload:OpenSvg.Attributes.ViewBoxAttr.Deserialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.ViewBoxAttr.Deserialize
+  nameWithType: ViewBoxAttr.Deserialize
+- uid: OpenSvg.Attributes.ViewBoxAttr.Serialize(OpenSvg.BoundingBox)
+  name: Serialize(BoundingBox)
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr_Serialize_OpenSvg_BoundingBox_
+  commentId: M:OpenSvg.Attributes.ViewBoxAttr.Serialize(OpenSvg.BoundingBox)
+  fullName: OpenSvg.Attributes.ViewBoxAttr.Serialize(OpenSvg.BoundingBox)
+  nameWithType: ViewBoxAttr.Serialize(BoundingBox)
+- uid: OpenSvg.Attributes.ViewBoxAttr.Serialize*
+  name: Serialize
+  href: api/OpenSvg.Attributes.ViewBoxAttr.html#OpenSvg_Attributes_ViewBoxAttr_Serialize_
+  commentId: Overload:OpenSvg.Attributes.ViewBoxAttr.Serialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.ViewBoxAttr.Serialize
+  nameWithType: ViewBoxAttr.Serialize
 - uid: OpenSvg.BoundingBox
   name: BoundingBox
   href: api/OpenSvg.BoundingBox.html
@@ -1124,6 +1412,15 @@ references:
   fullName.vb: OpenSvg.BoundingBox.New(OpenSvg.Point, OpenSvg.Point)
   nameWithType: BoundingBox.BoundingBox(Point, Point)
   nameWithType.vb: BoundingBox.New(Point, Point)
+- uid: OpenSvg.BoundingBox.#ctor(OpenSvg.Point,System.Double,System.Double)
+  name: BoundingBox(Point, double, double)
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_OpenSvg_Point_System_Double_System_Double_
+  commentId: M:OpenSvg.BoundingBox.#ctor(OpenSvg.Point,System.Double,System.Double)
+  name.vb: New(Point, Double, Double)
+  fullName: OpenSvg.BoundingBox.BoundingBox(OpenSvg.Point, double, double)
+  fullName.vb: OpenSvg.BoundingBox.New(OpenSvg.Point, Double, Double)
+  nameWithType: BoundingBox.BoundingBox(Point, double, double)
+  nameWithType.vb: BoundingBox.New(Point, Double, Double)
 - uid: OpenSvg.BoundingBox.#ctor*
   name: BoundingBox
   href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_
@@ -1134,6 +1431,19 @@ references:
   fullName.vb: OpenSvg.BoundingBox.New
   nameWithType: BoundingBox.BoundingBox
   nameWithType.vb: BoundingBox.New
+- uid: OpenSvg.BoundingBox.Height
+  name: Height
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_Height
+  commentId: P:OpenSvg.BoundingBox.Height
+  fullName: OpenSvg.BoundingBox.Height
+  nameWithType: BoundingBox.Height
+- uid: OpenSvg.BoundingBox.Height*
+  name: Height
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_Height_
+  commentId: Overload:OpenSvg.BoundingBox.Height
+  isSpec: "True"
+  fullName: OpenSvg.BoundingBox.Height
+  nameWithType: BoundingBox.Height
 - uid: OpenSvg.BoundingBox.Intersects(OpenSvg.BoundingBox)
   name: Intersects(BoundingBox)
   href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_Intersects_OpenSvg_BoundingBox_
@@ -1150,7 +1460,14 @@ references:
 - uid: OpenSvg.BoundingBox.LowerRight
   name: LowerRight
   href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_LowerRight
-  commentId: F:OpenSvg.BoundingBox.LowerRight
+  commentId: P:OpenSvg.BoundingBox.LowerRight
+  fullName: OpenSvg.BoundingBox.LowerRight
+  nameWithType: BoundingBox.LowerRight
+- uid: OpenSvg.BoundingBox.LowerRight*
+  name: LowerRight
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_LowerRight_
+  commentId: Overload:OpenSvg.BoundingBox.LowerRight
+  isSpec: "True"
   fullName: OpenSvg.BoundingBox.LowerRight
   nameWithType: BoundingBox.LowerRight
 - uid: OpenSvg.BoundingBox.MaxX
@@ -1279,9 +1596,29 @@ references:
 - uid: OpenSvg.BoundingBox.UpperLeft
   name: UpperLeft
   href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_UpperLeft
-  commentId: F:OpenSvg.BoundingBox.UpperLeft
+  commentId: P:OpenSvg.BoundingBox.UpperLeft
   fullName: OpenSvg.BoundingBox.UpperLeft
   nameWithType: BoundingBox.UpperLeft
+- uid: OpenSvg.BoundingBox.UpperLeft*
+  name: UpperLeft
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_UpperLeft_
+  commentId: Overload:OpenSvg.BoundingBox.UpperLeft
+  isSpec: "True"
+  fullName: OpenSvg.BoundingBox.UpperLeft
+  nameWithType: BoundingBox.UpperLeft
+- uid: OpenSvg.BoundingBox.Width
+  name: Width
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_Width
+  commentId: P:OpenSvg.BoundingBox.Width
+  fullName: OpenSvg.BoundingBox.Width
+  nameWithType: BoundingBox.Width
+- uid: OpenSvg.BoundingBox.Width*
+  name: Width
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox_Width_
+  commentId: Overload:OpenSvg.BoundingBox.Width
+  isSpec: "True"
+  fullName: OpenSvg.BoundingBox.Width
+  nameWithType: BoundingBox.Width
 - uid: OpenSvg.CircularArc
   name: CircularArc
   href: api/OpenSvg.CircularArc.html
@@ -1970,6 +2307,30 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Config.TextConfig.WithTextColor
   nameWithType: TextConfig.WithTextColor
+- uid: OpenSvg.Constants
+  name: Constants
+  href: api/OpenSvg.Constants.html
+  commentId: T:OpenSvg.Constants
+  fullName: OpenSvg.Constants
+  nameWithType: Constants
+- uid: OpenSvg.Constants.DefaultContainerHeight
+  name: DefaultContainerHeight
+  href: api/OpenSvg.Constants.html#OpenSvg_Constants_DefaultContainerHeight
+  commentId: F:OpenSvg.Constants.DefaultContainerHeight
+  fullName: OpenSvg.Constants.DefaultContainerHeight
+  nameWithType: Constants.DefaultContainerHeight
+- uid: OpenSvg.Constants.DefaultContainerWidth
+  name: DefaultContainerWidth
+  href: api/OpenSvg.Constants.html#OpenSvg_Constants_DefaultContainerWidth
+  commentId: F:OpenSvg.Constants.DefaultContainerWidth
+  fullName: OpenSvg.Constants.DefaultContainerWidth
+  nameWithType: Constants.DefaultContainerWidth
+- uid: OpenSvg.Constants.DoubleDecimalPrecision
+  name: DoubleDecimalPrecision
+  href: api/OpenSvg.Constants.html#OpenSvg_Constants_DoubleDecimalPrecision
+  commentId: F:OpenSvg.Constants.DoubleDecimalPrecision
+  fullName: OpenSvg.Constants.DoubleDecimalPrecision
+  nameWithType: Constants.DoubleDecimalPrecision
 - uid: OpenSvg.ConvexHull
   name: ConvexHull
   href: api/OpenSvg.ConvexHull.html
@@ -1994,6 +2355,15 @@ references:
   fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
   nameWithType: ConvexHull.ConvexHull(IEnumerable<Point>)
   nameWithType.vb: ConvexHull.New(IEnumerable(Of Point))
+- uid: OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point},OpenSvg.ConvexHull.SkipGrahamsScan)
+  name: ConvexHull(ImmutableArray<Point>, SkipGrahamsScan)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__OpenSvg_ConvexHull_SkipGrahamsScan_
+  commentId: M:OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point},OpenSvg.ConvexHull.SkipGrahamsScan)
+  name.vb: New(ImmutableArray(Of Point), SkipGrahamsScan)
+  fullName: OpenSvg.ConvexHull.ConvexHull(System.Collections.Immutable.ImmutableArray<OpenSvg.Point>, OpenSvg.ConvexHull.SkipGrahamsScan)
+  fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Immutable.ImmutableArray(Of OpenSvg.Point), OpenSvg.ConvexHull.SkipGrahamsScan)
+  nameWithType: ConvexHull.ConvexHull(ImmutableArray<Point>, ConvexHull.SkipGrahamsScan)
+  nameWithType.vb: ConvexHull.New(ImmutableArray(Of Point), ConvexHull.SkipGrahamsScan)
 - uid: OpenSvg.ConvexHull.#ctor*
   name: ConvexHull
   href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_
@@ -2064,6 +2434,31 @@ references:
   isSpec: "True"
   fullName: OpenSvg.ConvexHull.IsConvexHull
   nameWithType: ConvexHull.IsConvexHull
+- uid: OpenSvg.ConvexHull.SkipGrahamsScan
+  name: ConvexHull.SkipGrahamsScan
+  href: api/OpenSvg.ConvexHull.SkipGrahamsScan.html
+  commentId: T:OpenSvg.ConvexHull.SkipGrahamsScan
+  fullName: OpenSvg.ConvexHull.SkipGrahamsScan
+  nameWithType: ConvexHull.SkipGrahamsScan
+- uid: OpenSvg.ConvexHull.SkipGrahamsScan.Yes
+  name: Yes
+  href: api/OpenSvg.ConvexHull.SkipGrahamsScan.html#OpenSvg_ConvexHull_SkipGrahamsScan_Yes
+  commentId: F:OpenSvg.ConvexHull.SkipGrahamsScan.Yes
+  fullName: OpenSvg.ConvexHull.SkipGrahamsScan.Yes
+  nameWithType: ConvexHull.SkipGrahamsScan.Yes
+- uid: OpenSvg.ConvexHull.ToSvgPolygon
+  name: ToSvgPolygon()
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_ToSvgPolygon
+  commentId: M:OpenSvg.ConvexHull.ToSvgPolygon
+  fullName: OpenSvg.ConvexHull.ToSvgPolygon()
+  nameWithType: ConvexHull.ToSvgPolygon()
+- uid: OpenSvg.ConvexHull.ToSvgPolygon*
+  name: ToSvgPolygon
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_ToSvgPolygon_
+  commentId: Overload:OpenSvg.ConvexHull.ToSvgPolygon
+  isSpec: "True"
+  fullName: OpenSvg.ConvexHull.ToSvgPolygon
+  nameWithType: ConvexHull.ToSvgPolygon
 - uid: OpenSvg.ConvexHull.Transform(OpenSvg.Transform)
   name: Transform(Transform)
   href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_Transform_OpenSvg_Transform_
@@ -2150,6 +2545,30 @@ references:
   isSpec: "True"
   fullName: OpenSvg.EnclosedPolygonGroup.ToPath
   nameWithType: EnclosedPolygonGroup.ToPath
+- uid: OpenSvg.FileFormat
+  name: FileFormat
+  href: api/OpenSvg.FileFormat.html
+  commentId: T:OpenSvg.FileFormat
+  fullName: OpenSvg.FileFormat
+  nameWithType: FileFormat
+- uid: OpenSvg.FileFormat.Auto
+  name: Auto
+  href: api/OpenSvg.FileFormat.html#OpenSvg_FileFormat_Auto
+  commentId: F:OpenSvg.FileFormat.Auto
+  fullName: OpenSvg.FileFormat.Auto
+  nameWithType: FileFormat.Auto
+- uid: OpenSvg.FileFormat.Svg
+  name: Svg
+  href: api/OpenSvg.FileFormat.html#OpenSvg_FileFormat_Svg
+  commentId: F:OpenSvg.FileFormat.Svg
+  fullName: OpenSvg.FileFormat.Svg
+  nameWithType: FileFormat.Svg
+- uid: OpenSvg.FileFormat.Svgz
+  name: Svgz
+  href: api/OpenSvg.FileFormat.html#OpenSvg_FileFormat_Svgz
+  commentId: F:OpenSvg.FileFormat.Svgz
+  fullName: OpenSvg.FileFormat.Svgz
+  nameWithType: FileFormat.Svgz
 - uid: OpenSvg.FileIO
   name: FileIO
   href: api/OpenSvg.FileIO.html
@@ -2571,6 +2990,22 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Path.ToXmlString
   nameWithType: Path.ToXmlString
+- uid: OpenSvg.Path.TryConvertToPoints(OpenSvg.PointList@)
+  name: TryConvertToPoints(out PointList?)
+  href: api/OpenSvg.Path.html#OpenSvg_Path_TryConvertToPoints_OpenSvg_PointList__
+  commentId: M:OpenSvg.Path.TryConvertToPoints(OpenSvg.PointList@)
+  name.vb: TryConvertToPoints(PointList)
+  fullName: OpenSvg.Path.TryConvertToPoints(out OpenSvg.PointList?)
+  fullName.vb: OpenSvg.Path.TryConvertToPoints(OpenSvg.PointList)
+  nameWithType: Path.TryConvertToPoints(out PointList?)
+  nameWithType.vb: Path.TryConvertToPoints(PointList)
+- uid: OpenSvg.Path.TryConvertToPoints*
+  name: TryConvertToPoints
+  href: api/OpenSvg.Path.html#OpenSvg_Path_TryConvertToPoints_
+  commentId: Overload:OpenSvg.Path.TryConvertToPoints
+  isSpec: "True"
+  fullName: OpenSvg.Path.TryConvertToPoints
+  nameWithType: Path.TryConvertToPoints
 - uid: OpenSvg.Path.op_Equality(OpenSvg.Path,OpenSvg.Path)
   name: operator ==(Path?, Path?)
   href: api/OpenSvg.Path.html#OpenSvg_Path_op_Equality_OpenSvg_Path_OpenSvg_Path_
@@ -2609,6 +3044,34 @@ references:
   fullName.vb: OpenSvg.Path.<>
   nameWithType: Path.operator !=
   nameWithType.vb: Path.<>
+- uid: OpenSvg.PathOptimize
+  name: OpenSvg.PathOptimize
+  href: api/OpenSvg.PathOptimize.html
+  commentId: N:OpenSvg.PathOptimize
+  fullName: OpenSvg.PathOptimize
+  nameWithType: OpenSvg.PathOptimize
+- uid: OpenSvg.PathOptimize.PointReduction
+  name: PointReduction
+  href: api/OpenSvg.PathOptimize.PointReduction.html
+  commentId: T:OpenSvg.PathOptimize.PointReduction
+  fullName: OpenSvg.PathOptimize.PointReduction
+  nameWithType: PointReduction
+- uid: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[],System.Double)
+  name: Reduce(Point[], double)
+  href: api/OpenSvg.PathOptimize.PointReduction.html#OpenSvg_PathOptimize_PointReduction_Reduce_OpenSvg_Point___System_Double_
+  commentId: M:OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[],System.Double)
+  name.vb: Reduce(Point(), Double)
+  fullName: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[], double)
+  fullName.vb: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point(), Double)
+  nameWithType: PointReduction.Reduce(Point[], double)
+  nameWithType.vb: PointReduction.Reduce(Point(), Double)
+- uid: OpenSvg.PathOptimize.PointReduction.Reduce*
+  name: Reduce
+  href: api/OpenSvg.PathOptimize.PointReduction.html#OpenSvg_PathOptimize_PointReduction_Reduce_
+  commentId: Overload:OpenSvg.PathOptimize.PointReduction.Reduce
+  isSpec: "True"
+  fullName: OpenSvg.PathOptimize.PointReduction.Reduce
+  nameWithType: PointReduction.Reduce
 - uid: OpenSvg.Point
   name: Point
   href: api/OpenSvg.Point.html
@@ -2669,6 +3132,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Point.CompareTo
   nameWithType: Point.CompareTo
+- uid: OpenSvg.Point.DistanceTo(OpenSvg.Point)
+  name: DistanceTo(Point)
+  href: api/OpenSvg.Point.html#OpenSvg_Point_DistanceTo_OpenSvg_Point_
+  commentId: M:OpenSvg.Point.DistanceTo(OpenSvg.Point)
+  fullName: OpenSvg.Point.DistanceTo(OpenSvg.Point)
+  nameWithType: Point.DistanceTo(Point)
+- uid: OpenSvg.Point.DistanceTo*
+  name: DistanceTo
+  href: api/OpenSvg.Point.html#OpenSvg_Point_DistanceTo_
+  commentId: Overload:OpenSvg.Point.DistanceTo
+  isSpec: "True"
+  fullName: OpenSvg.Point.DistanceTo
+  nameWithType: Point.DistanceTo
 - uid: OpenSvg.Point.Equals(OpenSvg.Point)
   name: Equals(Point)
   href: api/OpenSvg.Point.html#OpenSvg_Point_Equals_OpenSvg_Point_
@@ -2930,15 +3406,15 @@ references:
   commentId: T:OpenSvg.PointList
   fullName: OpenSvg.PointList
   nameWithType: PointList
-- uid: OpenSvg.PointList.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name: PointList(IEnumerable<Point>)
-  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
-  commentId: M:OpenSvg.PointList.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name.vb: New(IEnumerable(Of Point))
-  fullName: OpenSvg.PointList.PointList(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
-  fullName.vb: OpenSvg.PointList.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
-  nameWithType: PointList.PointList(IEnumerable<Point>)
-  nameWithType.vb: PointList.New(IEnumerable(Of Point))
+- uid: OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point})
+  name: PointList(ImmutableArray<Point>)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__
+  commentId: M:OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point})
+  name.vb: New(ImmutableArray(Of Point))
+  fullName: OpenSvg.PointList.PointList(System.Collections.Immutable.ImmutableArray<OpenSvg.Point>)
+  fullName.vb: OpenSvg.PointList.New(System.Collections.Immutable.ImmutableArray(Of OpenSvg.Point))
+  nameWithType: PointList.PointList(ImmutableArray<Point>)
+  nameWithType.vb: PointList.New(ImmutableArray(Of Point))
 - uid: OpenSvg.PointList.#ctor*
   name: PointList
   href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_
@@ -3261,6 +3737,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.RelationTo
   nameWithType: Polygon.RelationTo
+- uid: OpenSvg.Polygon.ToPath
+  name: ToPath()
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToPath
+  commentId: M:OpenSvg.Polygon.ToPath
+  fullName: OpenSvg.Polygon.ToPath()
+  nameWithType: Polygon.ToPath()
+- uid: OpenSvg.Polygon.ToPath*
+  name: ToPath
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToPath_
+  commentId: Overload:OpenSvg.Polygon.ToPath
+  isSpec: "True"
+  fullName: OpenSvg.Polygon.ToPath
+  nameWithType: Polygon.ToPath
 - uid: OpenSvg.Polygon.ToSvgPolygon
   name: ToSvgPolygon()
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_ToSvgPolygon
@@ -3428,6 +3917,32 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polyline.GetHashCode
   nameWithType: Polyline.GetHashCode
+- uid: OpenSvg.Polyline.ToPath
+  name: ToPath()
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ToPath
+  commentId: M:OpenSvg.Polyline.ToPath
+  fullName: OpenSvg.Polyline.ToPath()
+  nameWithType: Polyline.ToPath()
+- uid: OpenSvg.Polyline.ToPath*
+  name: ToPath
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ToPath_
+  commentId: Overload:OpenSvg.Polyline.ToPath
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.ToPath
+  nameWithType: Polyline.ToPath
+- uid: OpenSvg.Polyline.ToSvgPolyline
+  name: ToSvgPolyline()
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ToSvgPolyline
+  commentId: M:OpenSvg.Polyline.ToSvgPolyline
+  fullName: OpenSvg.Polyline.ToSvgPolyline()
+  nameWithType: Polyline.ToSvgPolyline()
+- uid: OpenSvg.Polyline.ToSvgPolyline*
+  name: ToSvgPolyline
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline_ToSvgPolyline_
+  commentId: Overload:OpenSvg.Polyline.ToSvgPolyline
+  isSpec: "True"
+  fullName: OpenSvg.Polyline.ToSvgPolyline
+  nameWithType: Polyline.ToSvgPolyline
 - uid: OpenSvg.RectangleRenderMode
   name: RectangleRenderMode
   href: api/OpenSvg.RectangleRenderMode.html
@@ -3529,19 +4044,6 @@ references:
   commentId: T:OpenSvg.SkiaSharpExtensions
   fullName: OpenSvg.SkiaSharpExtensions
   nameWithType: SkiaSharpExtensions
-- uid: OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath,OpenSvg.Polygon)
-  name: AddPolygonToPath(SKPath, Polygon)
-  href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_AddPolygonToPath_SkiaSharp_SKPath_OpenSvg_Polygon_
-  commentId: M:OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath,OpenSvg.Polygon)
-  fullName: OpenSvg.SkiaSharpExtensions.AddPolygonToPath(SkiaSharp.SKPath, OpenSvg.Polygon)
-  nameWithType: SkiaSharpExtensions.AddPolygonToPath(SKPath, Polygon)
-- uid: OpenSvg.SkiaSharpExtensions.AddPolygonToPath*
-  name: AddPolygonToPath
-  href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_AddPolygonToPath_
-  commentId: Overload:OpenSvg.SkiaSharpExtensions.AddPolygonToPath
-  isSpec: "True"
-  fullName: OpenSvg.SkiaSharpExtensions.AddPolygonToPath
-  nameWithType: SkiaSharpExtensions.AddPolygonToPath
 - uid: OpenSvg.SkiaSharpExtensions.LoadFromFile(System.String)
   name: LoadFromFile(string)
   href: api/OpenSvg.SkiaSharpExtensions.html#OpenSvg_SkiaSharpExtensions_LoadFromFile_System_String_
@@ -3580,6 +4082,24 @@ references:
   commentId: T:OpenSvg.SvgNames
   fullName: OpenSvg.SvgNames
   nameWithType: SvgNames
+- uid: OpenSvg.SvgNames.Circle
+  name: Circle
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Circle
+  commentId: F:OpenSvg.SvgNames.Circle
+  fullName: OpenSvg.SvgNames.Circle
+  nameWithType: SvgNames.Circle
+- uid: OpenSvg.SvgNames.CircleX
+  name: CircleX
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_CircleX
+  commentId: F:OpenSvg.SvgNames.CircleX
+  fullName: OpenSvg.SvgNames.CircleX
+  nameWithType: SvgNames.CircleX
+- uid: OpenSvg.SvgNames.CircleY
+  name: CircleY
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_CircleY
+  commentId: F:OpenSvg.SvgNames.CircleY
+  fullName: OpenSvg.SvgNames.CircleY
+  nameWithType: SvgNames.CircleY
 - uid: OpenSvg.SvgNames.D
   name: D
   href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_D
@@ -3700,6 +4220,18 @@ references:
   commentId: F:OpenSvg.SvgNames.Polyline
   fullName: OpenSvg.SvgNames.Polyline
   nameWithType: SvgNames.Polyline
+- uid: OpenSvg.SvgNames.PreserveAspectRatio
+  name: PreserveAspectRatio
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_PreserveAspectRatio
+  commentId: F:OpenSvg.SvgNames.PreserveAspectRatio
+  fullName: OpenSvg.SvgNames.PreserveAspectRatio
+  nameWithType: SvgNames.PreserveAspectRatio
+- uid: OpenSvg.SvgNames.Radius
+  name: Radius
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Radius
+  commentId: F:OpenSvg.SvgNames.Radius
+  fullName: OpenSvg.SvgNames.Radius
+  nameWithType: SvgNames.Radius
 - uid: OpenSvg.SvgNames.Rect
   name: Rect
   href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Rect
@@ -3826,6 +4358,12 @@ references:
   commentId: F:OpenSvg.SvgNames.Unsupported
   fullName: OpenSvg.SvgNames.Unsupported
   nameWithType: SvgNames.Unsupported
+- uid: OpenSvg.SvgNames.ViewBox
+  name: ViewBox
+  href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_ViewBox
+  commentId: F:OpenSvg.SvgNames.ViewBox
+  fullName: OpenSvg.SvgNames.ViewBox
+  nameWithType: SvgNames.ViewBox
 - uid: OpenSvg.SvgNames.Width
   name: Width
   href: api/OpenSvg.SvgNames.html#OpenSvg_SvgNames_Width
@@ -3919,6 +4457,108 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.ISvgElementContainer.Descendants
   nameWithType: ISvgElementContainer.Descendants
+- uid: OpenSvg.SvgNodes.SvgCircle
+  name: SvgCircle
+  href: api/OpenSvg.SvgNodes.SvgCircle.html
+  commentId: T:OpenSvg.SvgNodes.SvgCircle
+  fullName: OpenSvg.SvgNodes.SvgCircle
+  nameWithType: SvgCircle
+- uid: OpenSvg.SvgNodes.SvgCircle.Center
+  name: Center
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Center
+  commentId: P:OpenSvg.SvgNodes.SvgCircle.Center
+  fullName: OpenSvg.SvgNodes.SvgCircle.Center
+  nameWithType: SvgCircle.Center
+- uid: OpenSvg.SvgNodes.SvgCircle.Center*
+  name: Center
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Center_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.Center
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.Center
+  nameWithType: SvgCircle.Center
+- uid: OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull
+  name: ComputeConvexHull()
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_ComputeConvexHull
+  commentId: M:OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull
+  fullName: OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull()
+  nameWithType: SvgCircle.ComputeConvexHull()
+- uid: OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull*
+  name: ComputeConvexHull
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_ComputeConvexHull_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.ComputeConvexHull
+  nameWithType: SvgCircle.ComputeConvexHull
+- uid: OpenSvg.SvgNodes.SvgCircle.Radius
+  name: Radius
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Radius
+  commentId: P:OpenSvg.SvgNodes.SvgCircle.Radius
+  fullName: OpenSvg.SvgNodes.SvgCircle.Radius
+  nameWithType: SvgCircle.Radius
+- uid: OpenSvg.SvgNodes.SvgCircle.Radius*
+  name: Radius
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Radius_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.Radius
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.Radius
+  nameWithType: SvgCircle.Radius
+- uid: OpenSvg.SvgNodes.SvgCircle.SvgName
+  name: SvgName
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_SvgName
+  commentId: P:OpenSvg.SvgNodes.SvgCircle.SvgName
+  fullName: OpenSvg.SvgNodes.SvgCircle.SvgName
+  nameWithType: SvgCircle.SvgName
+- uid: OpenSvg.SvgNodes.SvgCircle.SvgName*
+  name: SvgName
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_SvgName_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.SvgName
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.SvgName
+  nameWithType: SvgCircle.SvgName
+- uid: OpenSvg.SvgNodes.SvgCircle.X
+  name: X
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_X
+  commentId: P:OpenSvg.SvgNodes.SvgCircle.X
+  fullName: OpenSvg.SvgNodes.SvgCircle.X
+  nameWithType: SvgCircle.X
+- uid: OpenSvg.SvgNodes.SvgCircle.X*
+  name: X
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_X_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.X
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.X
+  nameWithType: SvgCircle.X
+- uid: OpenSvg.SvgNodes.SvgCircle.Y
+  name: Y
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Y
+  commentId: P:OpenSvg.SvgNodes.SvgCircle.Y
+  fullName: OpenSvg.SvgNodes.SvgCircle.Y
+  nameWithType: SvgCircle.Y
+- uid: OpenSvg.SvgNodes.SvgCircle.Y*
+  name: Y
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_Y_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCircle.Y
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCircle.Y
+  nameWithType: SvgCircle.Y
+- uid: OpenSvg.SvgNodes.SvgCircle.radius
+  name: radius
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_radius
+  commentId: F:OpenSvg.SvgNodes.SvgCircle.radius
+  fullName: OpenSvg.SvgNodes.SvgCircle.radius
+  nameWithType: SvgCircle.radius
+- uid: OpenSvg.SvgNodes.SvgCircle.x
+  name: x
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_x
+  commentId: F:OpenSvg.SvgNodes.SvgCircle.x
+  fullName: OpenSvg.SvgNodes.SvgCircle.x
+  nameWithType: SvgCircle.x
+- uid: OpenSvg.SvgNodes.SvgCircle.y
+  name: y
+  href: api/OpenSvg.SvgNodes.SvgCircle.html#OpenSvg_SvgNodes_SvgCircle_y
+  commentId: F:OpenSvg.SvgNodes.SvgCircle.y
+  fullName: OpenSvg.SvgNodes.SvgCircle.y
+  nameWithType: SvgCircle.y
 - uid: OpenSvg.SvgNodes.SvgCssStyle
   name: SvgCssStyle
   href: api/OpenSvg.SvgNodes.SvgCssStyle.html
@@ -3980,9 +4620,22 @@ references:
 - uid: OpenSvg.SvgNodes.SvgCssStyle.Type
   name: Type
   href: api/OpenSvg.SvgNodes.SvgCssStyle.html#OpenSvg_SvgNodes_SvgCssStyle_Type
-  commentId: F:OpenSvg.SvgNodes.SvgCssStyle.Type
+  commentId: P:OpenSvg.SvgNodes.SvgCssStyle.Type
   fullName: OpenSvg.SvgNodes.SvgCssStyle.Type
   nameWithType: SvgCssStyle.Type
+- uid: OpenSvg.SvgNodes.SvgCssStyle.Type*
+  name: Type
+  href: api/OpenSvg.SvgNodes.SvgCssStyle.html#OpenSvg_SvgNodes_SvgCssStyle_Type_
+  commentId: Overload:OpenSvg.SvgNodes.SvgCssStyle.Type
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgCssStyle.Type
+  nameWithType: SvgCssStyle.Type
+- uid: OpenSvg.SvgNodes.SvgCssStyle.type
+  name: type
+  href: api/OpenSvg.SvgNodes.SvgCssStyle.html#OpenSvg_SvgNodes_SvgCssStyle_type
+  commentId: F:OpenSvg.SvgNodes.SvgCssStyle.type
+  fullName: OpenSvg.SvgNodes.SvgCssStyle.type
+  nameWithType: SvgCssStyle.type
 - uid: OpenSvg.SvgNodes.SvgDefs
   name: SvgDefs
   href: api/OpenSvg.SvgNodes.SvgDefs.html
@@ -4082,13 +4735,27 @@ references:
 - uid: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
   name: DefinedViewPortHeight
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight
-  commentId: F:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
+  commentId: P:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
+  fullName: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
+  nameWithType: SvgDocument.DefinedViewPortHeight
+- uid: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight*
+  name: DefinedViewPortHeight
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_DefinedViewPortHeight_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortHeight
   nameWithType: SvgDocument.DefinedViewPortHeight
 - uid: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
   name: DefinedViewPortWidth
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_DefinedViewPortWidth
-  commentId: F:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
+  commentId: P:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
+  fullName: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
+  nameWithType: SvgDocument.DefinedViewPortWidth
+- uid: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth*
+  name: DefinedViewPortWidth
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_DefinedViewPortWidth_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.DefinedViewPortWidth
   nameWithType: SvgDocument.DefinedViewPortWidth
 - uid: OpenSvg.SvgNodes.SvgDocument.EmbedFont(OpenSvg.SvgNodes.SvgFont)
@@ -4162,15 +4829,28 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.Load
   nameWithType: SvgDocument.Load
-- uid: OpenSvg.SvgNodes.SvgDocument.Save(System.String)
-  name: Save(string)
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_Save_System_String_
-  commentId: M:OpenSvg.SvgNodes.SvgDocument.Save(System.String)
-  name.vb: Save(String)
-  fullName: OpenSvg.SvgNodes.SvgDocument.Save(string)
-  fullName.vb: OpenSvg.SvgNodes.SvgDocument.Save(String)
-  nameWithType: SvgDocument.Save(string)
-  nameWithType.vb: SvgDocument.Save(String)
+- uid: OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio
+  name: PreserveAspectRatio
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_PreserveAspectRatio
+  commentId: P:OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio
+  fullName: OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio
+  nameWithType: SvgDocument.PreserveAspectRatio
+- uid: OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio*
+  name: PreserveAspectRatio
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_PreserveAspectRatio_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgDocument.PreserveAspectRatio
+  nameWithType: SvgDocument.PreserveAspectRatio
+- uid: OpenSvg.SvgNodes.SvgDocument.Save(System.String,OpenSvg.FileFormat)
+  name: Save(string, FileFormat)
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_Save_System_String_OpenSvg_FileFormat_
+  commentId: M:OpenSvg.SvgNodes.SvgDocument.Save(System.String,OpenSvg.FileFormat)
+  name.vb: Save(String, FileFormat)
+  fullName: OpenSvg.SvgNodes.SvgDocument.Save(string, OpenSvg.FileFormat)
+  fullName.vb: OpenSvg.SvgNodes.SvgDocument.Save(String, OpenSvg.FileFormat)
+  nameWithType: SvgDocument.Save(string, FileFormat)
+  nameWithType.vb: SvgDocument.Save(String, FileFormat)
 - uid: OpenSvg.SvgNodes.SvgDocument.Save*
   name: Save
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_Save_
@@ -4178,19 +4858,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.Save
   nameWithType: SvgDocument.Save
-- uid: OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize
-  name: SetViewPortToActualSize()
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize
-  commentId: M:OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize
-  fullName: OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize()
-  nameWithType: SvgDocument.SetViewPortToActualSize()
-- uid: OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize*
-  name: SetViewPortToActualSize
-  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_SetViewPortToActualSize_
-  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize
+- uid: OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort
+  name: SetViewBoxToActualSizeAndDefaultViewPort()
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_SetViewBoxToActualSizeAndDefaultViewPort
+  commentId: M:OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort
+  fullName: OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort()
+  nameWithType: SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort()
+- uid: OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort*
+  name: SetViewBoxToActualSizeAndDefaultViewPort
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_SetViewBoxToActualSizeAndDefaultViewPort_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort
   isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgDocument.SetViewPortToActualSize
-  nameWithType: SvgDocument.SetViewPortToActualSize
+  fullName: OpenSvg.SvgNodes.SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort
+  nameWithType: SvgDocument.SetViewBoxToActualSizeAndDefaultViewPort
 - uid: OpenSvg.SvgNodes.SvgDocument.SvgName
   name: SvgName
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_SvgName
@@ -4217,6 +4897,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.ToXDocument
   nameWithType: SvgDocument.ToXDocument
+- uid: OpenSvg.SvgNodes.SvgDocument.ViewBox
+  name: ViewBox
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_ViewBox
+  commentId: P:OpenSvg.SvgNodes.SvgDocument.ViewBox
+  fullName: OpenSvg.SvgNodes.SvgDocument.ViewBox
+  nameWithType: SvgDocument.ViewBox
+- uid: OpenSvg.SvgNodes.SvgDocument.ViewBox*
+  name: ViewBox
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_ViewBox_
+  commentId: Overload:OpenSvg.SvgNodes.SvgDocument.ViewBox
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgDocument.ViewBox
+  nameWithType: SvgDocument.ViewBox
 - uid: OpenSvg.SvgNodes.SvgDocument.ViewPortHeight
   name: ViewPortHeight
   href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_ViewPortHeight
@@ -4243,12 +4936,49 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgDocument.ViewPortWidth
   nameWithType: SvgDocument.ViewPortWidth
+- uid: OpenSvg.SvgNodes.SvgDocument.definedViewPortHeight
+  name: definedViewPortHeight
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_definedViewPortHeight
+  commentId: F:OpenSvg.SvgNodes.SvgDocument.definedViewPortHeight
+  fullName: OpenSvg.SvgNodes.SvgDocument.definedViewPortHeight
+  nameWithType: SvgDocument.definedViewPortHeight
+- uid: OpenSvg.SvgNodes.SvgDocument.definedViewPortWidth
+  name: definedViewPortWidth
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_definedViewPortWidth
+  commentId: F:OpenSvg.SvgNodes.SvgDocument.definedViewPortWidth
+  fullName: OpenSvg.SvgNodes.SvgDocument.definedViewPortWidth
+  nameWithType: SvgDocument.definedViewPortWidth
+- uid: OpenSvg.SvgNodes.SvgDocument.preserveAspectRatio
+  name: preserveAspectRatio
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_preserveAspectRatio
+  commentId: F:OpenSvg.SvgNodes.SvgDocument.preserveAspectRatio
+  fullName: OpenSvg.SvgNodes.SvgDocument.preserveAspectRatio
+  nameWithType: SvgDocument.preserveAspectRatio
+- uid: OpenSvg.SvgNodes.SvgDocument.viewBox
+  name: viewBox
+  href: api/OpenSvg.SvgNodes.SvgDocument.html#OpenSvg_SvgNodes_SvgDocument_viewBox
+  commentId: F:OpenSvg.SvgNodes.SvgDocument.viewBox
+  fullName: OpenSvg.SvgNodes.SvgDocument.viewBox
+  nameWithType: SvgDocument.viewBox
 - uid: OpenSvg.SvgNodes.SvgElement
   name: SvgElement
   href: api/OpenSvg.SvgNodes.SvgElement.html
   commentId: T:OpenSvg.SvgNodes.SvgElement
   fullName: OpenSvg.SvgNodes.SvgElement
   nameWithType: SvgElement
+- uid: OpenSvg.SvgNodes.SvgElement.AttributeStrings
+  name: AttributeStrings()
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_AttributeStrings
+  commentId: M:OpenSvg.SvgNodes.SvgElement.AttributeStrings
+  fullName: OpenSvg.SvgNodes.SvgElement.AttributeStrings()
+  nameWithType: SvgElement.AttributeStrings()
+- uid: OpenSvg.SvgNodes.SvgElement.AttributeStrings*
+  name: AttributeStrings
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_AttributeStrings_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.AttributeStrings
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgElement.AttributeStrings
+  nameWithType: SvgElement.AttributeStrings
 - uid: OpenSvg.SvgNodes.SvgElement.Attributes
   name: Attributes()
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes
@@ -4316,7 +5046,14 @@ references:
 - uid: OpenSvg.SvgNodes.SvgElement.ID
   name: ID
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ID
-  commentId: F:OpenSvg.SvgNodes.SvgElement.ID
+  commentId: P:OpenSvg.SvgNodes.SvgElement.ID
+  fullName: OpenSvg.SvgNodes.SvgElement.ID
+  nameWithType: SvgElement.ID
+- uid: OpenSvg.SvgNodes.SvgElement.ID*
+  name: ID
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_ID_
+  commentId: Overload:OpenSvg.SvgNodes.SvgElement.ID
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgElement.ID
   nameWithType: SvgElement.ID
 - uid: OpenSvg.SvgNodes.SvgElement.InformedEquals(OpenSvg.SvgNodes.SvgElement)
@@ -4478,6 +5215,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgElement.WriteXml
   nameWithType: SvgElement.WriteXml
+- uid: OpenSvg.SvgNodes.SvgElement.id
+  name: id
+  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_id
+  commentId: F:OpenSvg.SvgNodes.SvgElement.id
+  fullName: OpenSvg.SvgNodes.SvgElement.id
+  nameWithType: SvgElement.id
 - uid: OpenSvg.SvgNodes.SvgElement.op_Equality(OpenSvg.SvgNodes.SvgElement,OpenSvg.SvgNodes.SvgElement)
   name: operator ==(SvgElement, SvgElement)
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_op_Equality_OpenSvg_SvgNodes_SvgElement_OpenSvg_SvgNodes_SvgElement_
@@ -4798,27 +5541,79 @@ references:
 - uid: OpenSvg.SvgNodes.SvgLine.X1
   name: X1
   href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_X1
-  commentId: F:OpenSvg.SvgNodes.SvgLine.X1
+  commentId: P:OpenSvg.SvgNodes.SvgLine.X1
+  fullName: OpenSvg.SvgNodes.SvgLine.X1
+  nameWithType: SvgLine.X1
+- uid: OpenSvg.SvgNodes.SvgLine.X1*
+  name: X1
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_X1_
+  commentId: Overload:OpenSvg.SvgNodes.SvgLine.X1
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgLine.X1
   nameWithType: SvgLine.X1
 - uid: OpenSvg.SvgNodes.SvgLine.X2
   name: X2
   href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_X2
-  commentId: F:OpenSvg.SvgNodes.SvgLine.X2
+  commentId: P:OpenSvg.SvgNodes.SvgLine.X2
+  fullName: OpenSvg.SvgNodes.SvgLine.X2
+  nameWithType: SvgLine.X2
+- uid: OpenSvg.SvgNodes.SvgLine.X2*
+  name: X2
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_X2_
+  commentId: Overload:OpenSvg.SvgNodes.SvgLine.X2
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgLine.X2
   nameWithType: SvgLine.X2
 - uid: OpenSvg.SvgNodes.SvgLine.Y1
   name: Y1
   href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_Y1
-  commentId: F:OpenSvg.SvgNodes.SvgLine.Y1
+  commentId: P:OpenSvg.SvgNodes.SvgLine.Y1
+  fullName: OpenSvg.SvgNodes.SvgLine.Y1
+  nameWithType: SvgLine.Y1
+- uid: OpenSvg.SvgNodes.SvgLine.Y1*
+  name: Y1
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_Y1_
+  commentId: Overload:OpenSvg.SvgNodes.SvgLine.Y1
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgLine.Y1
   nameWithType: SvgLine.Y1
 - uid: OpenSvg.SvgNodes.SvgLine.Y2
   name: Y2
   href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_Y2
-  commentId: F:OpenSvg.SvgNodes.SvgLine.Y2
+  commentId: P:OpenSvg.SvgNodes.SvgLine.Y2
   fullName: OpenSvg.SvgNodes.SvgLine.Y2
   nameWithType: SvgLine.Y2
+- uid: OpenSvg.SvgNodes.SvgLine.Y2*
+  name: Y2
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_Y2_
+  commentId: Overload:OpenSvg.SvgNodes.SvgLine.Y2
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgLine.Y2
+  nameWithType: SvgLine.Y2
+- uid: OpenSvg.SvgNodes.SvgLine.x1
+  name: x1
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_x1
+  commentId: F:OpenSvg.SvgNodes.SvgLine.x1
+  fullName: OpenSvg.SvgNodes.SvgLine.x1
+  nameWithType: SvgLine.x1
+- uid: OpenSvg.SvgNodes.SvgLine.x2
+  name: x2
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_x2
+  commentId: F:OpenSvg.SvgNodes.SvgLine.x2
+  fullName: OpenSvg.SvgNodes.SvgLine.x2
+  nameWithType: SvgLine.x2
+- uid: OpenSvg.SvgNodes.SvgLine.y1
+  name: y1
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_y1
+  commentId: F:OpenSvg.SvgNodes.SvgLine.y1
+  fullName: OpenSvg.SvgNodes.SvgLine.y1
+  nameWithType: SvgLine.y1
+- uid: OpenSvg.SvgNodes.SvgLine.y2
+  name: y2
+  href: api/OpenSvg.SvgNodes.SvgLine.html#OpenSvg_SvgNodes_SvgLine_y2
+  commentId: F:OpenSvg.SvgNodes.SvgLine.y2
+  fullName: OpenSvg.SvgNodes.SvgLine.y2
+  nameWithType: SvgLine.y2
 - uid: OpenSvg.SvgNodes.SvgNode
   name: SvgNode
   href: api/OpenSvg.SvgNodes.SvgNode.html
@@ -4917,7 +5712,14 @@ references:
 - uid: OpenSvg.SvgNodes.SvgPath.Path
   name: Path
   href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_Path
-  commentId: F:OpenSvg.SvgNodes.SvgPath.Path
+  commentId: P:OpenSvg.SvgNodes.SvgPath.Path
+  fullName: OpenSvg.SvgNodes.SvgPath.Path
+  nameWithType: SvgPath.Path
+- uid: OpenSvg.SvgNodes.SvgPath.Path*
+  name: Path
+  href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_Path_
+  commentId: Overload:OpenSvg.SvgNodes.SvgPath.Path
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPath.Path
   nameWithType: SvgPath.Path
 - uid: OpenSvg.SvgNodes.SvgPath.SvgName
@@ -4933,6 +5735,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPath.SvgName
   nameWithType: SvgPath.SvgName
+- uid: OpenSvg.SvgNodes.SvgPath.path
+  name: path
+  href: api/OpenSvg.SvgNodes.SvgPath.html#OpenSvg_SvgNodes_SvgPath_path
+  commentId: F:OpenSvg.SvgNodes.SvgPath.path
+  fullName: OpenSvg.SvgNodes.SvgPath.path
+  nameWithType: SvgPath.path
 - uid: OpenSvg.SvgNodes.SvgPolygon
   name: SvgPolygon
   href: api/OpenSvg.SvgNodes.SvgPolygon.html
@@ -4955,7 +5763,14 @@ references:
 - uid: OpenSvg.SvgNodes.SvgPolygon.Polygon
   name: Polygon
   href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_Polygon
-  commentId: F:OpenSvg.SvgNodes.SvgPolygon.Polygon
+  commentId: P:OpenSvg.SvgNodes.SvgPolygon.Polygon
+  fullName: OpenSvg.SvgNodes.SvgPolygon.Polygon
+  nameWithType: SvgPolygon.Polygon
+- uid: OpenSvg.SvgNodes.SvgPolygon.Polygon*
+  name: Polygon
+  href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_Polygon_
+  commentId: Overload:OpenSvg.SvgNodes.SvgPolygon.Polygon
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPolygon.Polygon
   nameWithType: SvgPolygon.Polygon
 - uid: OpenSvg.SvgNodes.SvgPolygon.SvgName
@@ -4971,6 +5786,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPolygon.SvgName
   nameWithType: SvgPolygon.SvgName
+- uid: OpenSvg.SvgNodes.SvgPolygon.polygon
+  name: polygon
+  href: api/OpenSvg.SvgNodes.SvgPolygon.html#OpenSvg_SvgNodes_SvgPolygon_polygon
+  commentId: F:OpenSvg.SvgNodes.SvgPolygon.polygon
+  fullName: OpenSvg.SvgNodes.SvgPolygon.polygon
+  nameWithType: SvgPolygon.polygon
 - uid: OpenSvg.SvgNodes.SvgPolyline
   name: SvgPolyline
   href: api/OpenSvg.SvgNodes.SvgPolyline.html
@@ -4993,7 +5814,14 @@ references:
 - uid: OpenSvg.SvgNodes.SvgPolyline.Polyline
   name: Polyline
   href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_Polyline
-  commentId: F:OpenSvg.SvgNodes.SvgPolyline.Polyline
+  commentId: P:OpenSvg.SvgNodes.SvgPolyline.Polyline
+  fullName: OpenSvg.SvgNodes.SvgPolyline.Polyline
+  nameWithType: SvgPolyline.Polyline
+- uid: OpenSvg.SvgNodes.SvgPolyline.Polyline*
+  name: Polyline
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_Polyline_
+  commentId: Overload:OpenSvg.SvgNodes.SvgPolyline.Polyline
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPolyline.Polyline
   nameWithType: SvgPolyline.Polyline
 - uid: OpenSvg.SvgNodes.SvgPolyline.SvgName
@@ -5009,6 +5837,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgPolyline.SvgName
   nameWithType: SvgPolyline.SvgName
+- uid: OpenSvg.SvgNodes.SvgPolyline.polyline
+  name: polyline
+  href: api/OpenSvg.SvgNodes.SvgPolyline.html#OpenSvg_SvgNodes_SvgPolyline_polyline
+  commentId: F:OpenSvg.SvgNodes.SvgPolyline.polyline
+  fullName: OpenSvg.SvgNodes.SvgPolyline.polyline
+  nameWithType: SvgPolyline.polyline
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect
   name: SvgRectangleAsRect
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html
@@ -5044,19 +5878,40 @@ references:
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
   name: CornerRadiusX
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_CornerRadiusX
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
+  nameWithType: SvgRectangleAsRect.CornerRadiusX
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX*
+  name: CornerRadiusX
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_CornerRadiusX_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusX
   nameWithType: SvgRectangleAsRect.CornerRadiusX
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
   name: CornerRadiusY
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_CornerRadiusY
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
+  nameWithType: SvgRectangleAsRect.CornerRadiusY
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY*
+  name: CornerRadiusY
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_CornerRadiusY_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.CornerRadiusY
   nameWithType: SvgRectangleAsRect.CornerRadiusY
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
   name: DefinedHeight
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_DefinedHeight
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
+  nameWithType: SvgRectangleAsRect.DefinedHeight
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight*
+  name: DefinedHeight
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_DefinedHeight_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeight
   nameWithType: SvgRectangleAsRect.DefinedHeight
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedHeightAbsolute
@@ -5075,7 +5930,14 @@ references:
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
   name: DefinedWidth
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_DefinedWidth
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
+  nameWithType: SvgRectangleAsRect.DefinedWidth
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth*
+  name: DefinedWidth
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_DefinedWidth_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidth
   nameWithType: SvgRectangleAsRect.DefinedWidth
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.DefinedWidthAbsolute
@@ -5133,15 +5995,65 @@ references:
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.X
   name: X
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_X
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.X
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.X
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.X
+  nameWithType: SvgRectangleAsRect.X
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.X*
+  name: X
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_X_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.X
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.X
   nameWithType: SvgRectangleAsRect.X
 - uid: OpenSvg.SvgNodes.SvgRectangleAsRect.Y
   name: Y
   href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_Y
-  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.Y
+  commentId: P:OpenSvg.SvgNodes.SvgRectangleAsRect.Y
   fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.Y
   nameWithType: SvgRectangleAsRect.Y
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.Y*
+  name: Y
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_Y_
+  commentId: Overload:OpenSvg.SvgNodes.SvgRectangleAsRect.Y
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.Y
+  nameWithType: SvgRectangleAsRect.Y
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusX
+  name: cornerRadiusX
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_cornerRadiusX
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusX
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusX
+  nameWithType: SvgRectangleAsRect.cornerRadiusX
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusY
+  name: cornerRadiusY
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_cornerRadiusY
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusY
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.cornerRadiusY
+  nameWithType: SvgRectangleAsRect.cornerRadiusY
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.definedHeight
+  name: definedHeight
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_definedHeight
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.definedHeight
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.definedHeight
+  nameWithType: SvgRectangleAsRect.definedHeight
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.definedWidth
+  name: definedWidth
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_definedWidth
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.definedWidth
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.definedWidth
+  nameWithType: SvgRectangleAsRect.definedWidth
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.x
+  name: x
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_x
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.x
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.x
+  nameWithType: SvgRectangleAsRect.x
+- uid: OpenSvg.SvgNodes.SvgRectangleAsRect.y
+  name: y
+  href: api/OpenSvg.SvgNodes.SvgRectangleAsRect.html#OpenSvg_SvgNodes_SvgRectangleAsRect_y
+  commentId: F:OpenSvg.SvgNodes.SvgRectangleAsRect.y
+  fullName: OpenSvg.SvgNodes.SvgRectangleAsRect.y
+  nameWithType: SvgRectangleAsRect.y
 - uid: OpenSvg.SvgNodes.SvgStyle
   name: SvgStyle
   href: api/OpenSvg.SvgNodes.SvgStyle.html
@@ -5211,13 +6123,27 @@ references:
 - uid: OpenSvg.SvgNodes.SvgText.FontName
   name: FontName
   href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_FontName
-  commentId: F:OpenSvg.SvgNodes.SvgText.FontName
+  commentId: P:OpenSvg.SvgNodes.SvgText.FontName
+  fullName: OpenSvg.SvgNodes.SvgText.FontName
+  nameWithType: SvgText.FontName
+- uid: OpenSvg.SvgNodes.SvgText.FontName*
+  name: FontName
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_FontName_
+  commentId: Overload:OpenSvg.SvgNodes.SvgText.FontName
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgText.FontName
   nameWithType: SvgText.FontName
 - uid: OpenSvg.SvgNodes.SvgText.FontSize
   name: FontSize
   href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_FontSize
-  commentId: F:OpenSvg.SvgNodes.SvgText.FontSize
+  commentId: P:OpenSvg.SvgNodes.SvgText.FontSize
+  fullName: OpenSvg.SvgNodes.SvgText.FontSize
+  nameWithType: SvgText.FontSize
+- uid: OpenSvg.SvgNodes.SvgText.FontSize*
+  name: FontSize
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_FontSize_
+  commentId: Overload:OpenSvg.SvgNodes.SvgText.FontSize
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgText.FontSize
   nameWithType: SvgText.FontSize
 - uid: OpenSvg.SvgNodes.SvgText.Point
@@ -5262,15 +6188,53 @@ references:
 - uid: OpenSvg.SvgNodes.SvgText.X
   name: X
   href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_X
-  commentId: F:OpenSvg.SvgNodes.SvgText.X
+  commentId: P:OpenSvg.SvgNodes.SvgText.X
+  fullName: OpenSvg.SvgNodes.SvgText.X
+  nameWithType: SvgText.X
+- uid: OpenSvg.SvgNodes.SvgText.X*
+  name: X
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_X_
+  commentId: Overload:OpenSvg.SvgNodes.SvgText.X
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgText.X
   nameWithType: SvgText.X
 - uid: OpenSvg.SvgNodes.SvgText.Y
   name: Y
   href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_Y
-  commentId: F:OpenSvg.SvgNodes.SvgText.Y
+  commentId: P:OpenSvg.SvgNodes.SvgText.Y
   fullName: OpenSvg.SvgNodes.SvgText.Y
   nameWithType: SvgText.Y
+- uid: OpenSvg.SvgNodes.SvgText.Y*
+  name: Y
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_Y_
+  commentId: Overload:OpenSvg.SvgNodes.SvgText.Y
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgText.Y
+  nameWithType: SvgText.Y
+- uid: OpenSvg.SvgNodes.SvgText.fontName
+  name: fontName
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_fontName
+  commentId: F:OpenSvg.SvgNodes.SvgText.fontName
+  fullName: OpenSvg.SvgNodes.SvgText.fontName
+  nameWithType: SvgText.fontName
+- uid: OpenSvg.SvgNodes.SvgText.fontSize
+  name: fontSize
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_fontSize
+  commentId: F:OpenSvg.SvgNodes.SvgText.fontSize
+  fullName: OpenSvg.SvgNodes.SvgText.fontSize
+  nameWithType: SvgText.fontSize
+- uid: OpenSvg.SvgNodes.SvgText.x
+  name: x
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_x
+  commentId: F:OpenSvg.SvgNodes.SvgText.x
+  fullName: OpenSvg.SvgNodes.SvgText.x
+  nameWithType: SvgText.x
+- uid: OpenSvg.SvgNodes.SvgText.y
+  name: y
+  href: api/OpenSvg.SvgNodes.SvgText.html#OpenSvg_SvgNodes_SvgText_y
+  commentId: F:OpenSvg.SvgNodes.SvgText.y
+  fullName: OpenSvg.SvgNodes.SvgText.y
+  nameWithType: SvgText.y
 - uid: OpenSvg.SvgNodes.SvgVisual
   name: SvgVisual
   href: api/OpenSvg.SvgNodes.SvgVisual.html
@@ -5345,27 +6309,79 @@ references:
 - uid: OpenSvg.SvgNodes.SvgVisual.FillColor
   name: FillColor
   href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_FillColor
-  commentId: F:OpenSvg.SvgNodes.SvgVisual.FillColor
+  commentId: P:OpenSvg.SvgNodes.SvgVisual.FillColor
+  fullName: OpenSvg.SvgNodes.SvgVisual.FillColor
+  nameWithType: SvgVisual.FillColor
+- uid: OpenSvg.SvgNodes.SvgVisual.FillColor*
+  name: FillColor
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_FillColor_
+  commentId: Overload:OpenSvg.SvgNodes.SvgVisual.FillColor
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgVisual.FillColor
   nameWithType: SvgVisual.FillColor
 - uid: OpenSvg.SvgNodes.SvgVisual.StrokeColor
   name: StrokeColor
   href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_StrokeColor
-  commentId: F:OpenSvg.SvgNodes.SvgVisual.StrokeColor
+  commentId: P:OpenSvg.SvgNodes.SvgVisual.StrokeColor
+  fullName: OpenSvg.SvgNodes.SvgVisual.StrokeColor
+  nameWithType: SvgVisual.StrokeColor
+- uid: OpenSvg.SvgNodes.SvgVisual.StrokeColor*
+  name: StrokeColor
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_StrokeColor_
+  commentId: Overload:OpenSvg.SvgNodes.SvgVisual.StrokeColor
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgVisual.StrokeColor
   nameWithType: SvgVisual.StrokeColor
 - uid: OpenSvg.SvgNodes.SvgVisual.StrokeWidth
   name: StrokeWidth
   href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_StrokeWidth
-  commentId: F:OpenSvg.SvgNodes.SvgVisual.StrokeWidth
+  commentId: P:OpenSvg.SvgNodes.SvgVisual.StrokeWidth
+  fullName: OpenSvg.SvgNodes.SvgVisual.StrokeWidth
+  nameWithType: SvgVisual.StrokeWidth
+- uid: OpenSvg.SvgNodes.SvgVisual.StrokeWidth*
+  name: StrokeWidth
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_StrokeWidth_
+  commentId: Overload:OpenSvg.SvgNodes.SvgVisual.StrokeWidth
+  isSpec: "True"
   fullName: OpenSvg.SvgNodes.SvgVisual.StrokeWidth
   nameWithType: SvgVisual.StrokeWidth
 - uid: OpenSvg.SvgNodes.SvgVisual.Transform
   name: Transform
   href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_Transform
-  commentId: F:OpenSvg.SvgNodes.SvgVisual.Transform
+  commentId: P:OpenSvg.SvgNodes.SvgVisual.Transform
   fullName: OpenSvg.SvgNodes.SvgVisual.Transform
   nameWithType: SvgVisual.Transform
+- uid: OpenSvg.SvgNodes.SvgVisual.Transform*
+  name: Transform
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_Transform_
+  commentId: Overload:OpenSvg.SvgNodes.SvgVisual.Transform
+  isSpec: "True"
+  fullName: OpenSvg.SvgNodes.SvgVisual.Transform
+  nameWithType: SvgVisual.Transform
+- uid: OpenSvg.SvgNodes.SvgVisual.fillColor
+  name: fillColor
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_fillColor
+  commentId: F:OpenSvg.SvgNodes.SvgVisual.fillColor
+  fullName: OpenSvg.SvgNodes.SvgVisual.fillColor
+  nameWithType: SvgVisual.fillColor
+- uid: OpenSvg.SvgNodes.SvgVisual.strokeColor
+  name: strokeColor
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_strokeColor
+  commentId: F:OpenSvg.SvgNodes.SvgVisual.strokeColor
+  fullName: OpenSvg.SvgNodes.SvgVisual.strokeColor
+  nameWithType: SvgVisual.strokeColor
+- uid: OpenSvg.SvgNodes.SvgVisual.strokeWidth
+  name: strokeWidth
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_strokeWidth
+  commentId: F:OpenSvg.SvgNodes.SvgVisual.strokeWidth
+  fullName: OpenSvg.SvgNodes.SvgVisual.strokeWidth
+  nameWithType: SvgVisual.strokeWidth
+- uid: OpenSvg.SvgNodes.SvgVisual.transform
+  name: transform
+  href: api/OpenSvg.SvgNodes.SvgVisual.html#OpenSvg_SvgNodes_SvgVisual_transform
+  commentId: F:OpenSvg.SvgNodes.SvgVisual.transform
+  fullName: OpenSvg.SvgNodes.SvgVisual.transform
+  nameWithType: SvgVisual.transform
 - uid: OpenSvg.SvgNodes.SvgVisualContainer
   name: SvgVisualContainer
   href: api/OpenSvg.SvgNodes.SvgVisualContainer.html

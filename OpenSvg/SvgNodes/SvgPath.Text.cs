@@ -8,7 +8,7 @@ namespace OpenSvg.SvgNodes;
 /// <summary>
 ///     Represents an SVG Path element that renders a text with the specified styling.
 /// </summary>
-public sealed partial class SvgPath : SvgVisual, IDisposable
+public partial class SvgPath : SvgVisual, IDisposable
 {
     private static Path ConvertTextToSkPath(TextConfig textConfig) => ConvertTextToSkPath(textConfig.Text, textConfig.SvgFont.Font, (float)textConfig.FontSize);
 

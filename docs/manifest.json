@@ -25,6 +25,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.AspectRatio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.AspectRatio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.AspectRatioAlign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.AspectRatioAlign.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.AspectRatioMeetOrSlice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.AspectRatioMeetOrSlice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.Attributes.Attr-1.yml",
       "output": {
         ".html": {
@@ -105,6 +135,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.PreserveAspectRatioAttr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.PreserveAspectRatioAttr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.Attributes.StringAttr.yml",
       "output": {
         ".html": {
@@ -129,6 +169,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.Attributes.ValueState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.ViewBoxAttr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.ViewBoxAttr.html"
         }
       },
       "version": ""
@@ -225,6 +275,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.ConvexHull.SkipGrahamsScan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.ConvexHull.SkipGrahamsScan.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.ConvexHull.yml",
       "output": {
         ".html": {
@@ -239,6 +309,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.EnclosedPolygonGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.FileFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.FileFormat.html"
         }
       },
       "version": ""
@@ -289,6 +369,26 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.Path.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PathOptimize.PointReduction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PathOptimize.PointReduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PathOptimize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PathOptimize.html"
         }
       },
       "version": ""
@@ -399,6 +499,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.SvgNodes.ISvgElementContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.SvgNodes.SvgCircle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.SvgNodes.SvgCircle.html"
         }
       },
       "version": ""

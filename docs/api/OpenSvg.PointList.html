@@ -145,19 +145,19 @@ Provides methods for generating bounding boxes and translating polylines using a
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.%23ctor(System.Collections.Immutable.ImmutableArray%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L21">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L22">View Source</a>
   </span>
   <a id="OpenSvg_PointList__ctor_" data-uid="OpenSvg.PointList.#ctor*"></a>
-  <h4 id="OpenSvg_PointList__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.PointList.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})">PointList(IEnumerable&lt;Point&gt;)</h4>
+  <h4 id="OpenSvg_PointList__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__" data-uid="OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point})">PointList(ImmutableArray&lt;Point&gt;)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OpenSvg.PointList.html">PointList</a> class with the specified collection of points.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PointList(IEnumerable&lt;Point&gt; points)</code></pre>
+    <pre><code class="lang-csharp hljs">public PointList(ImmutableArray&lt;Point&gt; points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -170,7 +170,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</td>
         <td><span class="parametername">points</span></td>
         <td><p>The collection of points.</p>
 </td>
@@ -184,14 +184,14 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Points.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Points%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L15">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L16">View Source</a>
   </span>
   <h4 id="OpenSvg_PointList_Points" data-uid="OpenSvg.PointList.Points">Points</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly Point[] Points</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ImmutableArray&lt;Point&gt; Points</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -203,7 +203,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="OpenSvg.Point.html">Point</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +215,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Count.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Count%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L26">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L27">View Source</a>
   </span>
   <a id="OpenSvg_PointList_Count_" data-uid="OpenSvg.PointList.Count*"></a>
   <h4 id="OpenSvg_PointList_Count" data-uid="OpenSvg.PointList.Count">Count</h4>
@@ -247,7 +247,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Item_System_Int32_.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Item(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L28">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L29">View Source</a>
   </span>
   <a id="OpenSvg_PointList_Item_" data-uid="OpenSvg.PointList.Item*"></a>
   <h4 id="OpenSvg_PointList_Item_System_Int32_" data-uid="OpenSvg.PointList.Item(System.Int32)">this[int]</h4>
@@ -299,7 +299,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Contains_OpenSvg_Point_.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Contains(OpenSvg.Point)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L31">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L32">View Source</a>
   </span>
   <a id="OpenSvg_PointList_Contains_" data-uid="OpenSvg.PointList.Contains*"></a>
   <h4 id="OpenSvg_PointList_Contains_OpenSvg_Point_" data-uid="OpenSvg.PointList.Contains(OpenSvg.Point)">Contains(Point)</h4>
@@ -346,7 +346,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Equals_OpenSvg_PointList_.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Equals(OpenSvg.PointList)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L62">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L66">View Source</a>
   </span>
   <a id="OpenSvg_PointList_Equals_" data-uid="OpenSvg.PointList.Equals*"></a>
   <h4 id="OpenSvg_PointList_Equals_OpenSvg_PointList_" data-uid="OpenSvg.PointList.Equals(OpenSvg.PointList)">Equals(PointList?)</h4>
@@ -396,7 +396,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_Equals_System_Object_.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.Equals(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L79">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L83">View Source</a>
   </span>
   <a id="OpenSvg_PointList_Equals_" data-uid="OpenSvg.PointList.Equals*"></a>
   <h4 id="OpenSvg_PointList_Equals_System_Object_" data-uid="OpenSvg.PointList.Equals(System.Object)">Equals(object?)</h4>
@@ -448,7 +448,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_FromXmlString_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.FromXmlString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L41">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L45">View Source</a>
   </span>
   <a id="OpenSvg_PointList_FromXmlString_" data-uid="OpenSvg.PointList.FromXmlString*"></a>
   <h4 id="OpenSvg_PointList_FromXmlString_System_String_" data-uid="OpenSvg.PointList.FromXmlString(System.String)">FromXmlString(string)</h4>
@@ -519,7 +519,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_GetEnumerator.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.GetEnumerator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L99">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L103">View Source</a>
   </span>
   <a id="OpenSvg_PointList_GetEnumerator_" data-uid="OpenSvg.PointList.GetEnumerator*"></a>
   <h4 id="OpenSvg_PointList_GetEnumerator" data-uid="OpenSvg.PointList.GetEnumerator">GetEnumerator()</h4>
@@ -551,7 +551,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_GetHashCode.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L82">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L86">View Source</a>
   </span>
   <a id="OpenSvg_PointList_GetHashCode_" data-uid="OpenSvg.PointList.GetHashCode*"></a>
   <h4 id="OpenSvg_PointList_GetHashCode" data-uid="OpenSvg.PointList.GetHashCode">GetHashCode()</h4>
@@ -585,7 +585,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_ToString.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.ToString%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L95">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L99">View Source</a>
   </span>
   <a id="OpenSvg_PointList_ToString_" data-uid="OpenSvg.PointList.ToString*"></a>
   <h4 id="OpenSvg_PointList_ToString" data-uid="OpenSvg.PointList.ToString">ToString()</h4>
@@ -619,7 +619,7 @@ Provides methods for generating bounding boxes and translating polylines using a
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointList_ToXmlString.md&amp;value=---%0Auid%3A%20OpenSvg.PointList.ToXmlString%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L88">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointList.cs/#L92">View Source</a>
   </span>
   <a id="OpenSvg_PointList_ToXmlString_" data-uid="OpenSvg.PointList.ToXmlString*"></a>
   <h4 id="OpenSvg_PointList_ToXmlString" data-uid="OpenSvg.PointList.ToXmlString">ToXmlString()</h4>
