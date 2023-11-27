@@ -10,13 +10,13 @@ namespace OpenSvg.Gtfs;
 public class GtfsShape
 {
     public string ID { get; }
-    public ImmutableArray<GtfsShapePoint> Coordinates { get; }
+    public ImmutableArray<GtfsShapePoint> ShapePoints { get; }
 
 
     public GtfsShape(string id, IEnumerable<GtfsShapePoint> shapePoints)
     {
         ID = id;
-        Coordinates = shapePoints.ToImmutableArray();
+        ShapePoints = shapePoints.ToImmutableArray();
     }
 
 

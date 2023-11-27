@@ -3,7 +3,7 @@ using SkiaSharp;
 
 namespace OpenSvg.GeoJson;
 
-public class Constants
+public static class Constants
 {
     internal const int CoordinateDecimalPrecision = 8;
 

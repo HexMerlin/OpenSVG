@@ -62,7 +62,7 @@ public class GeoJsonDocument
 
         PointConverter converter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
         svgDocument.AddAll(featureCollection.Features.Select(f => f.ToSvgVisual(converter)));
-        svgDocument.SetViewPortToActualSize();
+        svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
         return svgDocument;
     }
 

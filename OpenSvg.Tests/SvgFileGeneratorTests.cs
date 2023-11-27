@@ -1,4 +1,5 @@
-﻿using OpenSvg.SvgNodes;
+﻿using OpenSvg;
+using OpenSvg.SvgNodes;
 
 namespace OpenSvg.Tests;
 
@@ -13,16 +14,23 @@ public class SvgFileGeneratorTests
         var expectedSvgDocument = SvgDocument.Load(expectedFilePath);
 
         // Act
-        Assert.Equal(860, expectedSvgDocument.ViewPortWidth);
-        Assert.Equal(3920, expectedSvgDocument.ViewPortHeight);
+        Assert.Equal(860, expectedSvgDocument.BoundingBox.Size.Width);
+        Assert.Equal(3920, expectedSvgDocument.BoundingBox.Size.Height);
+        Assert.Equal(expectedSvgDocument.BoundingBox, expectedSvgDocument.ViewBox);
+        Assert.Equal(Constants.DefaultContainerWidth, expectedSvgDocument.ViewPortWidth);
+        Assert.Equal(Constants.DefaultContainerHeight, expectedSvgDocument.ViewPortHeight);
+        
         var config = new SvgImageConfig();
         SvgDocument actualSvgDocument = config.CreateSvgDocument();
-        actualSvgDocument.SetViewPortToActualSize();
+        actualSvgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
         actualSvgDocument.Save(actualFilePath);
 
         // Assert
-        Assert.Equal(860, actualSvgDocument.ViewPortWidth);
-        Assert.Equal(3920, actualSvgDocument.ViewPortHeight);
+        Assert.Equal(860, actualSvgDocument.BoundingBox.Size.Width);
+        Assert.Equal(3920, actualSvgDocument.BoundingBox.Size.Height);
+        Assert.Equal(actualSvgDocument.BoundingBox, actualSvgDocument.ViewBox);
+        Assert.Equal(Constants.DefaultContainerWidth, actualSvgDocument.ViewPortWidth);
+        Assert.Equal(Constants.DefaultContainerHeight, actualSvgDocument.ViewPortHeight);
         (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
         Assert.True(equal, diffMessage);
 

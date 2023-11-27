@@ -43,7 +43,7 @@ public class TextConfigTests
         if (embedFont)
             svgDocument.EmbedFont(textConfig.SvgFont);
 
-        svgDocument.SetViewPortToActualSize();
+        svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
         svgDocument.Save(actualFilePath);
 
         // Assert
@@ -68,7 +68,7 @@ public class TextConfigTests
             new TextConfig("TIME 23:59", embeddedFont, 100, new DrawConfig(SKColors.Blue, SKColors.DarkBlue, 0))
                 .ToSvgPath();
         var actualSvgDocument = actualSvgPath.ToSvgDocument();
-        actualSvgDocument.SetViewPortToActualSize();
+        actualSvgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
         actualSvgDocument.EmbedFont(embeddedFont);
         actualSvgDocument.Save(actualFilePath);
 
@@ -76,8 +76,7 @@ public class TextConfigTests
         Assert.Equal(SKColors.Blue, expectedSvgPath.FillColor);
         Assert.Equal(SKColors.DarkBlue, expectedSvgPath.StrokeColor);
         Assert.Equal(0, expectedSvgPath.StrokeWidth);
-        Assert.Equal(AbsoluteOrRatio.Absolute(403.9112243652344), expectedSvgDocument.DefinedViewPortWidth);
-        Assert.Equal(AbsoluteOrRatio.Absolute(63.59090805053711), expectedSvgDocument.DefinedViewPortHeight);
+     
 
         (bool equal, string diffMessage) = expectedSvgDocument.InformedEquals(actualSvgDocument);
         Assert.True(equal, diffMessage);

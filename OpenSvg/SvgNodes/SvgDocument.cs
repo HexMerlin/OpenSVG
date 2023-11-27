@@ -15,6 +15,12 @@ public class SvgDocument : SvgVisualContainer
 {
     protected readonly AbsoluteOrRatioAttr definedViewPortWidth = new(SvgNames.Width);
     protected readonly AbsoluteOrRatioAttr definedViewPortHeight = new(SvgNames.Height);
+    protected readonly ViewBoxAttr viewBox = new();
+    protected readonly PreserveAspectRatioAttr preserveAspectRatio = new();
+
+    public BoundingBox ViewBox { get => viewBox.Get(); set => viewBox.Set(value); }
+
+    public AspectRatio PreserveAspectRatio { get => preserveAspectRatio.Get(); set => preserveAspectRatio.Set(value); }
 
     /// <summary>
     /// Gets or sets the defined view port width.
@@ -175,11 +181,23 @@ public class SvgDocument : SvgVisualContainer
     public IEnumerable<SvgFont> EmbeddedFonts() => Descendants().OfType<SvgCssStyle>().SelectMany(cssStyle => cssStyle.Fonts);
 
     /// <summary>
-    /// Sets the view port to the actual size.
+    /// Sets the viewBox of the SVG document to the actual size of its bounding box and 
+    /// defines a default viewport size. This method aligns the SVG content to the upper-left corner 
+    /// of the viewport and scales it to fit within the default viewport dimensions, maintaining the aspect ratio.
     /// </summary>
-    public void SetViewPortToActualSize()
+    /// <remarks>
+    /// This method sets the <see cref="ViewBox"/> property to the bounding box of the SVG document.
+    /// It also sets the <see cref="PreserveAspectRatio"/> to align the content to the upper-left corner 
+    /// ('XMinYMin') and scales it to fit ('Meet') within the default viewport.
+    /// The default viewport dimensions are defined by <see cref="Constants.DefaultContainerWidth"/> 
+    /// and <see cref="Constants.DefaultContainerHeight"/>, which are set to 1024 and 768 pixels respectively.
+    /// </remarks>
+    public void SetViewBoxToActualSizeAndDefaultViewPort()
     {
-        DefinedViewPortWidth = BoundingBox.Size.Width;
-        DefinedViewPortHeight = BoundingBox.Size.Height;
+        ViewBox = this.BoundingBox;
+        PreserveAspectRatio = new AspectRatio(AspectRatioAlign.XMinYMin, AspectRatioMeetOrSlice.Meet);
+
+        DefinedViewPortWidth = Constants.DefaultContainerWidth; //= 1024
+        DefinedViewPortHeight = Constants.DefaultContainerHeight; //= 768
     }
 }

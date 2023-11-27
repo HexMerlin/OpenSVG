@@ -1,8 +1,8 @@
-﻿namespace OpenSvg.Attributes;
+﻿//namespace OpenSvg.Attributes;
 
-public enum ValueState
-{
-    NotSet,
-    Set,
-    Constant,
-}
+//public enum ValueState
+//{
+//    NotSet,
+//    Set,
+//    Constant,
+//}

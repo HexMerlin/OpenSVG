@@ -9,7 +9,7 @@ namespace OpenSvg.Gtfs;
 public static class StopsParser
 {
 
-    public static IEnumerable<GtfsStop> ReadStops(ZipArchiveEntry stopEntry)
+    public static IEnumerable<GtfsStop> Read(ZipArchiveEntry stopEntry)
     {
      
         using Stream stopStream = stopEntry.Open();
@@ -38,7 +38,6 @@ public static class StopsParser
         }
     }
 
-
     public static SvgGroup ToSvgGroup(this IEnumerable<GtfsStop> stops, PointConverter converter)
     {
         IEnumerable<SvgVisual> svgShapeElements = stops.Select(s => s.ToSvgShape(converter));
@@ -59,5 +58,4 @@ public static class StopsParser
         svgCircle.Radius = 0.2;
         return svgCircle;
     }
-
 }

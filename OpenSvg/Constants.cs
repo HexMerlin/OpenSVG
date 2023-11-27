@@ -1,10 +1,10 @@
 ﻿namespace OpenSvg;
 
-internal static class Constants
+public static class Constants
 {
-    internal const double DefaultContainerWidth = 1000;
+    public const double DefaultContainerWidth = 1024;
 
-    internal const double DefaultContainerHeight = 1000;
+    public const double DefaultContainerHeight = 768;
 
-    internal const int DoubleDecimalPrecision = 4;
+    public const int DoubleDecimalPrecision = 4;
 }

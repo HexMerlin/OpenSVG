@@ -2,44 +2,32 @@
 
 
 /// <summary>
-///     Represents a bounding box defined by two points.
+/// Represents a bounding box defined by two points: the upper left and the lower right.
 /// </summary>
-public readonly struct BoundingBox
+/// <param name="UpperLeft">The upper left point of the bounding box.</param>
+/// <param name="LowerRight">The lower right point of the bounding box.</param>
+public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="BoundingBox"/> struct.
-    /// </summary>
-    public BoundingBox()
-    {
-        this.UpperLeft = Point.Origin;
-        this.LowerRight = Point.Origin;
-    }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BoundingBox"/> struct.
+    /// Initializes a new instance of the <see cref="BoundingBox"/> struct with zero size, starting at the origin.
     /// </summary>
-    /// <param name="upperLeft">The upper left point.</param>
-    /// <param name="lowerRight">The lower right point.</param>
-    public BoundingBox(Point upperLeft, Point lowerRight)
-    {
-        this.UpperLeft = upperLeft;
-        this.LowerRight = lowerRight;
-    }
+    public BoundingBox() : this(Point.Origin, Point.Origin) { }
 
     /// <summary>
-    /// Gets the upper left point.
+    /// Initializes a new instance of the <see cref="BoundingBox"/> struct with the specified upper left point, width, and height.
     /// </summary>
-    public readonly Point UpperLeft;
+    /// <param name="upperLeft">The upper left point of the bounding box.</param>
+    /// <param name="width">The width of the bounding box.</param>
+    /// <param name="height">The height of the bounding box.</param>
+    public BoundingBox(Point upperLeft, double width, double height) : this(upperLeft, new Point(upperLeft.X + width, upperLeft.Y + height)) { }
+
 
     /// <summary>
-    /// Gets the lower right point.
-    /// </summary>
-    public readonly Point LowerRight;
-
-    /// <summary>
-    ///     A bounding box starting at (0,0) thas has zero size.
+    /// A static instance representing a bounding box with zero size, starting at the origin (0,0).
     /// </summary>
     public static readonly BoundingBox None = new(Point.Origin, Point.Origin);
+
 
     /// <summary>
     ///     Gets the size of the bounding box.
@@ -79,21 +67,22 @@ public readonly struct BoundingBox
     /// <summary>
     ///     Calculates the minimum bounding box that contains both this bounding box and another bounding box.
     /// </summary>
-    /// <param name="other">The other bounding box.</param>
-    /// <returns>The union bounding box.</returns>
+    /// <param name="other">The other bounding box to include in the union.</param>
+    /// <returns>The bounding box that represents the union of this and the other bounding box.</returns>
+
     public readonly BoundingBox UnionWith(BoundingBox other) => new(new Point(double.Min(MinX, other.MinX), double.Min(MinY, other.MinY)),
             new Point(double.Max(MaxX, other.MaxX), double.Max(MaxY, other.MaxY)));
 
     /// <summary>
     ///     Checks if this bounding box intersects with another bounding box.
     /// </summary>
-    /// <param name="other">The other bounding box.</param>
-    /// <returns>True if the bounding boxes intersect, false otherwise.</returns>
+    /// <param name="other">The other bounding box to check for intersection.</param>
+    /// <returns><c>true</c> if the bounding boxes intersect, <c>false</c> otherwise.</returns>
     public readonly bool Intersects(BoundingBox other) => !(MaxX < other.MinX || MinX > other.MaxX || MaxY < other.MinY || MinY > other.MaxY);
 
     /// <summary>
     /// Returns a string that represents the current object.
     /// </summary>
-    /// <returns>A string that represents the current object.</returns>
+    /// <returns>A string representation of the bounding box, showing the upper left and lower right points.</returns>
     public override string ToString() => $"Upper left: {this.UpperLeft}, Lower right: {this.LowerRight}";
 }

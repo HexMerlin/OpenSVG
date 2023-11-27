@@ -10,7 +10,7 @@ namespace OpenSvg.Gtfs;
 public static class ShapesParser
 {
 
-    public static IEnumerable<GtfsShape> ReadShapes(ZipArchiveEntry shapeEntry) 
+    public static IEnumerable<GtfsShape> Read(ZipArchiveEntry shapeEntry) 
         => ParseShapePoints(shapeEntry)
                .GroupBy(sp => sp.ID)
                .Select(group => new GtfsShape(group.Key, group.OrderBy(sp => sp.Sequence)));
@@ -57,7 +57,7 @@ public static class ShapesParser
 
     public static SvgVisual ToSvgShape(this GtfsShape gtfsShape, PointConverter converter)
     {
-        IEnumerable<Point> points = gtfsShape.Coordinates.Select(sp => converter.ToPoint(sp.Coordinate));
+        IEnumerable<Point> points = gtfsShape.ShapePoints.Select(sp => converter.ToPoint(sp.Coordinate));
         Polyline polyline = new Polyline(points);
         //SvgPath svgVisual = polyline.ToPath().ToSvgPath();
 

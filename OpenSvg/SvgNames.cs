@@ -120,6 +120,22 @@ public static class SvgNames
     public const string ID = "id";
 
     /// <summary>
+    ///     Represents the viewBox attribute in SVG.
+    /// </summary>
+    /// <remarks>
+    ///     The viewBox attribute defines the position and dimensions, in user space, of an SVG viewport.
+    /// </remarks>
+    public const string ViewBox = "viewBox";
+
+    /// <summary>
+    ///     Represents the preserveAspectRatio attribute in SVG.
+    /// </summary>
+    /// <remarks>
+    ///     The preserveAspectRatio attribute defines how an element is scaled, stretched, or positioned to fit within a specified viewport.
+    /// </remarks>
+    public const string PreserveAspectRatio = "preserveAspectRatio";
+
+    /// <summary>
     ///     D attribute
     /// </summary>
     /// <remarks>

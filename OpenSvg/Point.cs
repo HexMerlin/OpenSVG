@@ -76,6 +76,20 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <returns>The transformed point.</returns>
     public Point Transform(Transform transform) => new(Vector2.Transform(AsVector, transform.Matrix));
 
+
+    /// <summary>
+    /// Calculates the distance to another point.
+    /// </summary>
+    /// <param name="other">The other point.</param>
+    /// <returns>The distance to the other point.</returns>
+    public double DistanceTo(Point other)
+    {
+        double dx = other.X - X;
+        double dy = other.Y - Y;
+        return Math.Sqrt(dx * dx + dy * dy);
+    }
+    
+
     /// <summary>
     /// Determines whether the point is on a line segment defined by two points.
     /// </summary>

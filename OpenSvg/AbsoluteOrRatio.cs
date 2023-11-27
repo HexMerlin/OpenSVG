@@ -1,4 +1,6 @@
-﻿namespace OpenSvg;
+﻿using System.Data.SqlTypes;
+
+namespace OpenSvg;
 
 
 /// <summary>
@@ -47,6 +49,15 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// <param name="GetReferenceValue">A function that returns the reference value for resolving the abolute value.</param>
     /// <returns>The resolved value of the AbsoluteOrRatio.</returns>
     public double Resolve(Func<double> GetReferenceValue) => this.IsAbsolute ? this.Value : this.Value * GetReferenceValue();
+
+    public static AbsoluteOrRatio FromXmlString(string xmlString)
+    {
+        xmlString = xmlString.Trim();
+        return xmlString.EndsWith("%")
+            ? AbsoluteOrRatio.Ratio(xmlString[..^1].ToDouble() / 100d)
+            : AbsoluteOrRatio.Absolute(xmlString.ToDouble());
+    }
+
 
     /// <summary>
     /// Implicitly converts a double to an AbsoluteOrRatio with an absolute value.

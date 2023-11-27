@@ -5,6 +5,7 @@ using OpenSvg.Config;
 using OpenSvg.GeoJson;
 using OpenSvg.SvgNodes;
 using Microsoft.VisualBasic.FileIO;
+using OpenSvg.Gtfs.Optimized;
 
 namespace OpenSvg.ConsoleTest;
 
@@ -15,9 +16,10 @@ internal class Program
     {
         GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
 
+        AllPoints allPoints = new AllPoints(gtfsFeed);
 
-        SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
-        svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svgz");
+        //SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
+        //svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svgz");
 
 
 
