@@ -20,7 +20,7 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <param name="upperLeft">The upper left point of the bounding box.</param>
     /// <param name="width">The width of the bounding box.</param>
     /// <param name="height">The height of the bounding box.</param>
-    public BoundingBox(Point upperLeft, double width, double height) : this(upperLeft, new Point(upperLeft.X + width, upperLeft.Y + height)) { }
+    public BoundingBox(Point upperLeft, float width, float height) : this(upperLeft, new Point(upperLeft.X + width, upperLeft.Y + height)) { }
 
 
     /// <summary>
@@ -31,12 +31,12 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <summary>
     ///     Gets the width of the bounding box.
     /// </summary>
-    public double Width => this.LowerRight.X - this.UpperLeft.X;
+    public float Width => this.LowerRight.X - this.UpperLeft.X;
 
     /// <summary>
     ///     Gets the height of the bounding box.
     /// </summary>
-    public double Height => this.LowerRight.Y - this.UpperLeft.Y;
+    public float Height => this.LowerRight.Y - this.UpperLeft.Y;
 
     /// <summary>
     ///     Gets the size of the bounding box.
@@ -46,32 +46,32 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <summary>
     ///     Gets the minimum x coordinate of the bounding box.
     /// </summary>
-    public readonly double MinX => this.UpperLeft.X;
+    public readonly float MinX => this.UpperLeft.X;
 
     /// <summary>
     ///     Gets the midpoint of the x coordinates of the bounding box.
     /// </summary>
-    public readonly double MidX => (MinX + MaxX) / 2;
+    public readonly float MidX => (MinX + MaxX) / 2;
 
     /// <summary>
     ///     Gets the maximum x coordinate of the bounding box.
     /// </summary>
-    public readonly double MaxX => this.LowerRight.X;
+    public readonly float MaxX => this.LowerRight.X;
 
     /// <summary>
     ///     Gets the minimum y coordinate of the bounding box.
     /// </summary>
-    public readonly double MinY => this.UpperLeft.Y;
+    public readonly float MinY => this.UpperLeft.Y;
 
     /// <summary>
     ///     Gets the midpoint of the y coordinates of the bounding box.
     /// </summary>
-    public readonly double MidY => (MinY + MaxY) / 2;
+    public readonly float MidY => (MinY + MaxY) / 2;
 
     /// <summary>
     ///     Gets the maximum y coordinate of the bounding box.
     /// </summary>
-    public readonly double MaxY => this.LowerRight.Y;
+    public readonly float MaxY => this.LowerRight.Y;
 
     /// <summary>
     ///     Calculates the minimum bounding box that contains both this bounding box and another bounding box.
@@ -79,8 +79,8 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <param name="other">The other bounding box to include in the union.</param>
     /// <returns>The bounding box that represents the union of this and the other bounding box.</returns>
 
-    public readonly BoundingBox UnionWith(BoundingBox other) => new(new Point(double.Min(MinX, other.MinX), double.Min(MinY, other.MinY)),
-            new Point(double.Max(MaxX, other.MaxX), double.Max(MaxY, other.MaxY)));
+    public readonly BoundingBox UnionWith(BoundingBox other) => new(new Point(float.Min(MinX, other.MinX), float.Min(MinY, other.MinY)),
+            new Point(float.Max(MaxX, other.MaxX), float.Max(MaxY, other.MaxY)));
 
     /// <summary>
     ///     Checks if this bounding box intersects with another bounding box.

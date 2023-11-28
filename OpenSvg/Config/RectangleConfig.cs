@@ -27,7 +27,7 @@ namespace OpenSvg.Config;
 ///     Defines the circle radius of the corners.
 ///     If CornerRadius=0 there will be no rounding corners, but just normal square corners
 /// </param>
-public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCornerPoints = 10, double CornerRadius = 0)
+public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCornerPoints = 10, float CornerRadius = 0)
 {
     /// <summary>
     ///     Gets a transparent RectangleConfig instance.
@@ -87,9 +87,9 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
         if (roundedCorners && NumberOfCornerPoints < 2)
             throw new ArgumentException("numberOfCornerPoints must be at least 2");
 
-        double cr = CornerRadius;
-        double height = Size.Height;
-        double width = Size.Width;
+        float cr = CornerRadius;
+        float height = Size.Height;
+        float width = Size.Width;
         List<Point> points = new();
         const float
             arcLength = -90; //draw the corners arcs clockwise, since we draw the polygon clockwise (from the top left corner)

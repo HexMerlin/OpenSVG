@@ -10,26 +10,26 @@ namespace OpenSvg.SvgNodes;
 public class SvgCircle : SvgVisual
 {
 
-    protected readonly DoubleAttr x = new(SvgNames.CircleX);
-    protected readonly DoubleAttr y = new(SvgNames.CircleY);
-    protected readonly DoubleAttr radius = new(SvgNames.Radius);
+    protected readonly FloatAttr x = new(SvgNames.CircleX);
+    protected readonly FloatAttr y = new(SvgNames.CircleY);
+    protected readonly FloatAttr radius = new(SvgNames.Radius);
 
     /// <summary>
     /// Gets or sets the x-coordinate of the circle center.
     /// </summary>
-    public double X { get => x.Get(); set => x.Set(value); }
+    public float X { get => x.Get(); set => x.Set(value); }
 
     /// <summary>
     /// Gets or sets the y-coordinate of the circle center.
     /// </summary>
     /// 
-    public double Y { get => y.Get(); set => y.Set(value); }
+    public float Y { get => y.Get(); set => y.Set(value); }
 
     /// <summary>
     /// Gets or sets the radius of the circle.
     /// </summary>
     /// 
-    public double Radius { get => radius.Get(); set => radius.Set(value); }
+    public float Radius { get => radius.Get(); set => radius.Set(value); }
 
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Circle;
@@ -54,9 +54,9 @@ public class SvgCircle : SvgVisual
         var points = new Point[pointCount];
         for (int i = 0; i < points.Length; i++)
         {
-            double angle = 2 * Math.PI * i / pointCount;
-            double x = Center.X + Radius * Math.Cos(angle);
-            double y = Center.Y + Radius * Math.Sin(angle);
+            float angle = 2 * MathF.PI * i / pointCount;
+            float x = Center.X + Radius * MathF.Cos(angle);
+            float y = Center.Y + Radius * MathF.Sin(angle);
             points[i] = new Point(x, y);
         }
         return new ConvexHull(points);

@@ -33,30 +33,30 @@ public class TransformAttr : Attr<Transform>
             result = type switch
             {
                 "translate" => paramCount >= 2
-                    ? result.ComposeWith(Transform.CreateTranslation(rawParams[0].ToDouble(), rawParams[1].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateTranslation(rawParams[0].ToFloat(), rawParams[1].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'translate': Expected 2, got {paramCount}"),
                 "scale" => paramCount >= 2
-                    ? result.ComposeWith(Transform.CreateScale(rawParams[0].ToDouble(), rawParams[1].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateScale(rawParams[0].ToFloat(), rawParams[1].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'scale': Expected 2, got {paramCount}"),
                 "rotate" => paramCount >= 3
-                    ? result.ComposeWith(Transform.CreateRotation(rawParams[0].ToDouble(), rawParams[1].ToDouble(),
-                        rawParams[2].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateRotation(rawParams[0].ToFloat(), rawParams[1].ToFloat(),
+                        rawParams[2].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'rotate': Expected 3, got {paramCount}"),
                 "skewX" => paramCount >= 1
-                    ? result.ComposeWith(Transform.CreateSkew(rawParams[0].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateSkew(rawParams[0].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'skewX': Expected 1, got {paramCount}"),
                 "skewY" => paramCount >= 1
-                    ? result.ComposeWith(Transform.CreateSkew(0, rawParams[0].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateSkew(0, rawParams[0].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'skewY': Expected 1, got {paramCount}"),
                 "matrix" => paramCount >= 6
-                    ? result.ComposeWith(Transform.CreateMatrix(rawParams[0].ToDouble(), rawParams[1].ToDouble(),
-                        rawParams[2].ToDouble(), rawParams[3].ToDouble(), rawParams[4].ToDouble(),
-                        rawParams[5].ToDouble()))
+                    ? result.ComposeWith(Transform.CreateMatrix(rawParams[0].ToFloat(), rawParams[1].ToFloat(),
+                        rawParams[2].ToFloat(), rawParams[3].ToFloat(), rawParams[4].ToFloat(),
+                        rawParams[5].ToFloat()))
                     : throw new InvalidOperationException(
                         $"Invalid parameter count for 'matrix': Expected 6, got {paramCount}"),
                 _ => throw new InvalidOperationException($"Invalid or unsupported transform type: {type}")

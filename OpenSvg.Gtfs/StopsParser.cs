@@ -27,8 +27,8 @@ public static class StopsParser
 
             string id = fields.Length > 0 ? fields[0] : string.Empty;
             string name = fields.Length > 1 ? fields[1] : string.Empty;
-            double latitude = fields.Length > 2 ? fields[2].ParseNumber<double>() : 0;
-            double longitude = fields.Length > 3 ? fields[3].ParseNumber<double>() : 0;
+            float latitude = fields.Length > 2 ? fields[2].ParseNumber<float>() : 0;
+            float longitude = fields.Length > 3 ? fields[3].ParseNumber<float>() : 0;
             int locationType = fields.Length > 4 ? fields[4].ParseNumber<int>() : 0;
             string parentStation = fields.Length > 5 ? fields[5] : string.Empty;
             string platformCode = fields.Length > 6 ? fields[6] : string.Empty;
@@ -55,7 +55,7 @@ public static class StopsParser
         SvgCircle svgCircle = new SvgCircle();
         svgCircle.ID = gtfsStop.ID;
         svgCircle.Center = converter.ToPoint(gtfsStop.Coordinate);
-        svgCircle.Radius = 0.2;
+        svgCircle.Radius = 0.2f;
         return svgCircle;
     }
 }

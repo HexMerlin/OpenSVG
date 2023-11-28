@@ -56,7 +56,7 @@ public record SvgImageConfig
 
     public SvgDocument CreateSvgDocument()
     {
-        static SvgGroup CreateLineDelimiter(double width, double height, double strokeWidth)
+        static SvgGroup CreateLineDelimiter(float width, float height, float strokeWidth)
         {
             var rect = RectangleConfig.Transparent(new Size(width, height)).ToSvgPolygon();
             var line = new RectangleConfig(new Size(width, strokeWidth),

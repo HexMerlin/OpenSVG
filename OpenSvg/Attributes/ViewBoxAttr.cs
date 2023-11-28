@@ -29,8 +29,8 @@ public class ViewBoxAttr : Attr<BoundingBox>
         {
             return BoundingBox.None;
         }
-        Point upperLeft = new(values[0].ToDouble(), values[1].ToDouble());
+        Point upperLeft = new(values[0].ToFloat(), values[1].ToFloat());
     
-        return new BoundingBox(upperLeft, values[2].ToDouble(), values[3].ToDouble());
+        return new BoundingBox(upperLeft, values[2].ToFloat(), values[3].ToFloat());
     }
 }

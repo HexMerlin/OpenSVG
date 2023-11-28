@@ -59,15 +59,15 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     {
         if (points.Length == 0) return new BoundingBox(); // return empty bounding box
 
-        const double min = double.MinValue;
-        const double max = double.MaxValue;
+        const float min = float.MinValue;
+        const float max = float.MaxValue;
 
         var bounds = points.Aggregate(
             new { UpperLeft = new Point(max, max), LowerRight = new Point(min, min) },
             (acc, p) => new
             {
-                UpperLeft = new Point(Math.Min(acc.UpperLeft.X, p.X), Math.Min(acc.UpperLeft.Y, p.Y)),
-                LowerRight = new Point(Math.Max(acc.LowerRight.X, p.X), Math.Max(acc.LowerRight.Y, p.Y))
+                UpperLeft = new Point(float.Min(acc.UpperLeft.X, p.X), float.Min(acc.UpperLeft.Y, p.Y)),
+                LowerRight = new Point(float.Max(acc.LowerRight.X, p.X), float.Max(acc.LowerRight.Y, p.Y))
             });
 
         return new BoundingBox(bounds.UpperLeft, bounds.LowerRight);
@@ -95,7 +95,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
 
         Point pivot = points.Min();
         Array.Sort(points,
-            (a, b) => Math.Atan2(a.Y - pivot.Y, a.X - pivot.X).CompareTo(Math.Atan2(b.Y - pivot.Y, b.X - pivot.X)));
+            (a, b) => MathF.Atan2(a.Y - pivot.Y, a.X - pivot.X).CompareTo(MathF.Atan2(b.Y - pivot.Y, b.X - pivot.X)));
         List<Point> hull = new() { pivot };
 
         for (int i = 1; i < points.Length; i++) // Start from 1 to skip the pivot
@@ -124,7 +124,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
 
         // Sort remaining points based on polar angle with respect to pivot
         var sortedByPolarAngle = pointList.Where(p => p != pivot)
-            .OrderBy(p => Math.Atan2(p.Y - pivot.Y, p.X - pivot.X))
+            .OrderBy(p => MathF.Atan2(p.Y - pivot.Y, p.X - pivot.X))
             .ToList();
 
         // Initialize stack with pivot and two points with smallest polar angles
@@ -154,7 +154,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
     /// <param name="b">The second point.</param>
     /// <param name="c">The third point.</param>
     /// <returns>The cross product of the three points.</returns>
-    private static double CrossProduct(Point a, Point b, Point c) => (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
+    private static float CrossProduct(Point a, Point b, Point c) => (b.X - a.X) * (c.Y - a.Y) - (b.Y - a.Y) * (c.X - a.X);
 
  
 

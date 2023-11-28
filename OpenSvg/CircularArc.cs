@@ -28,22 +28,22 @@ public static class CircularArc
     ///     will always have a point, and thus 'numberOfPoints' must not be less than 2
     /// </param>
     /// <returns>A list of points for the generated arc</returns>
-    public static IEnumerable<Point> CreateArcPoints(Point circleCenter, double radius, double startAngle,
-        double arcLength, int numberOfPoints)
+    public static IEnumerable<Point> CreateArcPoints(Point circleCenter, float radius, float startAngle,
+        float arcLength, int numberOfPoints)
     {
         startAngle = NormalizeDegreesToPositiveBelow360(startAngle);
         arcLength = NormalizeDegreesTo360NegativeOrPositive(arcLength);
 
-        double startAngleRad = startAngle * (Math.PI / 180.0);
-        double arcLengthRad = arcLength * (Math.PI / 180.0);
+        float startAngleRad = startAngle * (MathF.PI / 180.0f);
+        float arcLengthRad = arcLength * (MathF.PI / 180.0f);
 
-        double angleStep = arcLengthRad / (numberOfPoints - 1);
+        float angleStep = arcLengthRad / (numberOfPoints - 1);
 
         return Enumerable.Range(0, numberOfPoints).Select(i =>
         {
-            double angle = startAngleRad + i * angleStep;
-            double x = circleCenter.X + radius * Math.Cos(angle);
-            double y = circleCenter.Y - radius * Math.Sin(angle); // Invert the y-coordinate
+            float angle = startAngleRad + i * angleStep;
+            float x = circleCenter.X + radius * MathF.Cos(angle);
+            float y = circleCenter.Y - radius * MathF.Sin(angle); // Invert the y-coordinate
             return new Point((float)x, (float)y);
         });
     }
@@ -52,8 +52,8 @@ public static class CircularArc
     ///     Normalizes degrees to a positive value in the range [0..360[.
     /// </summary>
     /// <param name="degrees">The degrees to normalize</param>
-    /// <returns>A double.</returns>
-    public static double NormalizeDegreesToPositiveBelow360(double degrees)
+    /// <returns>A float.</returns>
+    public static float NormalizeDegreesToPositiveBelow360(float degrees)
     {
         degrees %= 360;
         if (degrees < 0)
@@ -66,6 +66,6 @@ public static class CircularArc
     ///     Normalizes degrees to the range ]-360..360[
     /// </summary>
     /// <param name="degrees">A value in degrees, positive or negative.</param>
-    /// <returns>A double.</returns>
-    private static double NormalizeDegreesTo360NegativeOrPositive(double degrees) => degrees % 360;
+    /// <returns>A float.</returns>
+    private static float NormalizeDegreesTo360NegativeOrPositive(float degrees) => degrees % 360;
 }

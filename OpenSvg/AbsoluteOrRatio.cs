@@ -11,7 +11,7 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// <summary>
     /// The value of the AbsoluteOrRatio.
     /// </summary>
-    public readonly double Value;
+    public readonly float Value;
 
     /// <summary>
     /// Indicates whether the value is absolute or a ratio.
@@ -23,7 +23,7 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// </summary>
     /// <param name="value">The value of the AbsoluteOrRatio.</param>
     /// <param name="isAbsolute">Indicates whether the value is absolute or a ratio.</param>
-    public AbsoluteOrRatio(double value, bool isAbsolute)
+    public AbsoluteOrRatio(float value, bool isAbsolute)
     {
         this.Value = value.Round();
         this.IsAbsolute = isAbsolute;
@@ -34,37 +34,37 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// </summary>
     /// <param name="value">The absolute value.</param>
     /// <returns>A new AbsoluteOrRatio with an absolute value.</returns>
-    public static AbsoluteOrRatio Absolute(double value) => new(value, true);
+    public static AbsoluteOrRatio Absolute(float value) => new(value, true);
 
     /// <summary>
     /// Creates a new AbsoluteOrRatio with a ratio value.
     /// </summary>
     /// <param name="value">The ratio value.</param>
     /// <returns>A new AbsoluteOrRatio with a ratio value.</returns>
-    public static AbsoluteOrRatio Ratio(double value) => new(value, false);
+    public static AbsoluteOrRatio Ratio(float value) => new(value, false);
 
     /// <summary>
     /// Resolves the value of the AbsoluteOrRatio.
     /// </summary>
     /// <param name="GetReferenceValue">A function that returns the reference value for resolving the abolute value.</param>
     /// <returns>The resolved value of the AbsoluteOrRatio.</returns>
-    public double Resolve(Func<double> GetReferenceValue) => this.IsAbsolute ? this.Value : this.Value * GetReferenceValue();
+    public float Resolve(Func<float> GetReferenceValue) => this.IsAbsolute ? this.Value : this.Value * GetReferenceValue();
 
     public static AbsoluteOrRatio FromXmlString(string xmlString)
     {
         xmlString = xmlString.Trim();
         return xmlString.EndsWith("%")
-            ? AbsoluteOrRatio.Ratio(xmlString[..^1].ToDouble() / 100d)
-            : AbsoluteOrRatio.Absolute(xmlString.ToDouble());
+            ? Ratio(xmlString[..^1].ToFloat() / 100f)
+            : Absolute(xmlString.ToFloat());
     }
 
 
     /// <summary>
-    /// Implicitly converts a double to an AbsoluteOrRatio with an absolute value.
+    /// Implicitly converts a float to an AbsoluteOrRatio with an absolute value.
     /// </summary>
     /// <param name="value">The absolute value.</param>
     /// <returns>An AbsoluteOrRatio with an absolute value.</returns>
-    public static implicit operator AbsoluteOrRatio(double value) => Absolute(value);
+    public static implicit operator AbsoluteOrRatio(float value) => Absolute(value);
 
     /// <summary>
     /// Determines whether the specified AbsoluteOrRatio is equal to the current AbsoluteOrRatio.

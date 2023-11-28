@@ -75,7 +75,7 @@ public partial class PolygonTests
             new Point(0, 10)
         });
 
-        var point = new Point(5, 7.5); // Lies on the vertical edge
+        var point = new Point(5, 7.5f); // Lies on the vertical edge
         Assert.Equal(PointRelation.Inside, polygon.RelationTo(point));
     }
 
@@ -114,7 +114,7 @@ public partial class PolygonTests
     [Fact]
     public void Test_PointInRelationToComplexPolygon_ReturnsExpectedResult()
     {
-        var polygon = new Polygon(Enumerable.Range(0, 1000).Select(i => new Point(Math.Cos(i), Math.Sin(i))));
+        var polygon = new Polygon(Enumerable.Range(0, 1000).Select(i => new Point(MathF.Cos(i), MathF.Sin(i))));
 
         var pointInside = new Point(0, 0); // Center of the complex polygon
         Assert.Equal(PointRelation.Inside, polygon.RelationTo(pointInside));

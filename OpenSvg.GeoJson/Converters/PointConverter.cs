@@ -82,6 +82,6 @@ public record PointConverter
         double x = dx / MetersPerPixel;
         double y = -dy / MetersPerPixel; // Invert Y-axis
 
-        return new Point(x, y);
+        return new Point((float) x, (float) y);
     }
 }

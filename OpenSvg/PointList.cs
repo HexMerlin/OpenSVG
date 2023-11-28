@@ -49,8 +49,8 @@ public abstract class PointList : IReadOnlyList<Point>, IEquatable<PointList>
             if (coordinates.Length != 2)
                 throw new ArgumentException("Invalid point in SVG points data.");
 
-            if (!double.TryParse(coordinates[0], NumberStyles.Float, CultureInfo.InvariantCulture, out double x) ||
-                !double.TryParse(coordinates[1], NumberStyles.Float, CultureInfo.InvariantCulture, out double y))
+            if (!float.TryParse(coordinates[0], NumberStyles.Float, CultureInfo.InvariantCulture, out float x) ||
+                !float.TryParse(coordinates[1], NumberStyles.Float, CultureInfo.InvariantCulture, out float y))
                 throw new FormatException("Invalid point in SVG points data.");
 
             return new Point(x, y);

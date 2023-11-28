@@ -243,9 +243,9 @@ public partial class PolygonTests
         var tinyPolygon = new Polygon(new[]
         {
             new Point(5, 5),
-            new Point(5.0001, 5),
-            new Point(5.0001, 5.0001),
-            new Point(5, 5.0001)
+            new Point(5.0001f, 5),
+            new Point(5.0001f, 5.0001f),
+            new Point(5, 5.0001f)
         });
 
         Assert.Equal(PolygonRelation.Inside, tinyPolygon.RelationTo(polygon));
@@ -257,17 +257,17 @@ public partial class PolygonTests
         var largePolygonA = new Polygon(new[]
         {
             new Point(0, 0),
-            new Point(1e6, 0),
-            new Point(1e6, 1e6),
-            new Point(0, 1e6)
+            new Point(1e6f, 0),
+            new Point(1e6f, 1e6f),
+            new Point(0, 1e6f)
         });
 
         var largePolygonB = new Polygon(new[]
         {
-            new Point(1e6, 1e6),
-            new Point(2e6, 1e6),
-            new Point(2e6, 2e6),
-            new Point(1e6, 2e6)
+            new Point(1e6f, 1e6f),
+            new Point(2e6f, 1e6f),
+            new Point(2e6f, 2e6f),
+            new Point(1e6f, 2e6f)
         });
 
         Assert.Equal(PolygonRelation.Disjoint, largePolygonA.RelationTo(largePolygonB));

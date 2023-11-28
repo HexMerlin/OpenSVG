@@ -37,7 +37,7 @@ public static class StopTimesParser
 
 
             string drop_off_type = fields.Length > 7 ? fields[7] : string.Empty;
-            double shape_dist_traveled = fields.Length > 8 ? fields[8].ParseNumber<double>() : 0;
+            float shape_dist_traveled = fields.Length > 8 ? fields[8].ParseNumber<float>() : 0;
             string timepoint = fields.Length > 9 ? fields[9] : string.Empty;
             yield return new GtfsStopTime(trip_id, arrival_time, departure_time, stop_id, stop_sequence, stop_headsign, pickup_type, drop_off_type, shape_dist_traveled, timepoint);
 

@@ -379,7 +379,7 @@ public static class SvgNames
     /// <summary>
     ///     Default Font Size in SVG if no font size is specified
     /// </summary>
-    public const double DefaultFontSize = 16;
+    public const float DefaultFontSize = 16;
 
     /// <summary>
     ///     String for CSS font-face rule

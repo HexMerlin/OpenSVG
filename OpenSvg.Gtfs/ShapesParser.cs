@@ -32,10 +32,10 @@ public static class ShapesParser
             if (fields == null) continue;
 
             string shapeId = fields.Length > 0 ? fields[0] : string.Empty;
-            double latitude = fields.Length > 1 ? fields[1].ParseNumber<double>() : 0;
-            double longitude = fields.Length > 2 ? fields[2].ParseNumber<double>() : 0;
+            float latitude = fields.Length > 1 ? fields[1].ParseNumber<float>() : 0;
+            float longitude = fields.Length > 2 ? fields[2].ParseNumber<float>() : 0;
             int sequence = fields.Length > 3 ? fields[3].ParseNumber<int>() : 0;
-            double distance = fields.Length > 4 ? fields[4].ParseNumber<double>() : 0;
+            float distance = fields.Length > 4 ? fields[4].ParseNumber<float>() : 0;
             yield return new GtfsShapePoint(shapeId, new Coordinate(longitude, latitude), sequence, distance);
 
         }
@@ -48,7 +48,7 @@ public static class ShapesParser
         SvgGroup svgGroup = new SvgGroup();
         svgGroup.ID = "shapes";
         svgGroup.StrokeColor = SKColors.DarkRed;
-        svgGroup.StrokeWidth = 0.1;
+        svgGroup.StrokeWidth = 0.1f;
         svgGroup.FillColor = SKColors.Transparent;
         svgGroup.AddAll(svgShapeElements);
         return svgGroup;

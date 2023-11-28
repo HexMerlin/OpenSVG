@@ -15,7 +15,7 @@ public abstract class SvgVisual : SvgElement
     
     protected readonly ColorAttr fillColor = new(SvgNames.Fill, DrawConfig.DefaultFillColor);
     protected readonly ColorAttr strokeColor = new(SvgNames.Stroke, DrawConfig.DefaultStrokeColor);
-    protected readonly DoubleAttr strokeWidth = new(SvgNames.StrokeWidth, DrawConfig.DefaultStrokeWidth);
+    protected readonly FloatAttr strokeWidth = new(SvgNames.StrokeWidth, DrawConfig.DefaultStrokeWidth);
 
     public readonly TransformAttr transform = new();
 
@@ -45,7 +45,7 @@ public abstract class SvgVisual : SvgElement
     ///     The default stroke-width is <c>1</c> according to the SVG 1.1 specification.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty">SVG 1.1 Stroke Width</seealso>
-    public double StrokeWidth { get => strokeWidth.Get(); set => strokeWidth.Set(value); }
+    public float StrokeWidth { get => strokeWidth.Get(); set => strokeWidth.Set(value); }
 
     /// <summary>
     /// Gets the transformation attribute of this <see cref="SvgVisual"/> element.
@@ -81,7 +81,7 @@ public abstract class SvgVisual : SvgElement
     /// Gets the convex hull of this <see cref="SvgVisual"/> element.
     /// </summary>
     /// <remarks>
-    /// The convex hull is calculated based on the current transformation of the element.
+    /// The convex hull is calculated followed by applying the current transformation of the element.
     /// </remarks>
     public ConvexHull ConvexHull => ComputeConvexHull().Transform(Transform);
 
@@ -94,9 +94,13 @@ public abstract class SvgVisual : SvgElement
     public BoundingBox BoundingBox => ConvexHull.BoundingBox;
 
     /// <summary>
-    /// Protected abstract method to compute the raw convex hull of this <see cref="SvgVisual"/> element.
-    /// By raw meaning that the resulting convex hull of this method does not apply any apply the current transformation of the element.
+    /// Protected method to compute the non-transformed convex hull of this <see cref="SvgVisual"/> element.
     /// </summary>
+    /// <remark>
+    /// The resulting convex hull does NOT apply the element's transformation (if any).
+    /// The transformation is applied as a general step in the <see cref="ConvexHull"/> property.
+    /// </remark>
+
     protected abstract ConvexHull ComputeConvexHull();
 
     /// <summary>
@@ -129,7 +133,7 @@ public abstract class SvgVisual : SvgElement
         BoundingBox thisBox = BoundingBox;
         BoundingBox refBox = referenceElement.BoundingBox;
 
-        double xThis = horizontalAlignment switch
+        float xThis = horizontalAlignment switch
         {
             null => 0,
             HorizontalAlignment.LeftWithLeft or HorizontalAlignment.LeftWithCenter or HorizontalAlignment.LeftWithRight => thisBox.MinX,
@@ -137,7 +141,7 @@ public abstract class SvgVisual : SvgElement
             HorizontalAlignment.RightWithLeft or HorizontalAlignment.RightWithCenter or HorizontalAlignment.RightWithRight => thisBox.MaxX,
             _ => throw new NotSupportedException($"Unknown HorizontalAlignment: {horizontalAlignment}")
         };
-        double xRef = horizontalAlignment switch
+        float xRef = horizontalAlignment switch
         {
             null => 0,
             HorizontalAlignment.LeftWithLeft or HorizontalAlignment.CenterWithLeft or HorizontalAlignment.RightWithLeft => refBox.MinX,
@@ -146,7 +150,7 @@ public abstract class SvgVisual : SvgElement
             _ => throw new NotSupportedException($"Unknown HorizontalAlignment: {horizontalAlignment}")
         };
 
-        double yThis = verticalAlignment switch
+        float yThis = verticalAlignment switch
         {
             null => 0,
             VerticalAlignment.TopWithTop or VerticalAlignment.TopWithCenter or VerticalAlignment.TopWithBottom => thisBox.MinY,
@@ -154,7 +158,7 @@ public abstract class SvgVisual : SvgElement
             VerticalAlignment.BottomWithTop or VerticalAlignment.BottomWithCenter or VerticalAlignment.BottomWithBottom => thisBox.MaxY,
             _ => throw new NotSupportedException($"Unknown VerticalAlignment: {verticalAlignment}")
         };
-        double yRef = verticalAlignment switch
+        float yRef = verticalAlignment switch
         {
             null => 0,
             VerticalAlignment.TopWithTop or VerticalAlignment.CenterWithTop or VerticalAlignment.BottomWithTop => refBox.MinY,
@@ -163,8 +167,8 @@ public abstract class SvgVisual : SvgElement
             _ => throw new NotSupportedException($"Unknown VerticalAlignment: {verticalAlignment}")
         };
 
-        double dx = xRef - xThis;
-        double dy = yRef - yThis;
+        float dx = xRef - xThis;
+        float dy = yRef - yThis;
         this.Transform = Transform.ComposeWith(Transform.CreateTranslation(dx, dy));
     }
 

@@ -5,24 +5,24 @@ namespace OpenSvg.SvgNodes;
 
 public class SvgRectangleAsRect : SvgVisual
 {
-    protected readonly DoubleAttr cornerRadiusX = new(SvgNames.Rx);
-    protected readonly DoubleAttr cornerRadiusY = new(SvgNames.Ry);
+    protected readonly FloatAttr cornerRadiusX = new(SvgNames.Rx);
+    protected readonly FloatAttr cornerRadiusY = new(SvgNames.Ry);
     protected readonly AbsoluteOrRatioAttr definedHeight = new(SvgNames.Height);
     protected readonly AbsoluteOrRatioAttr definedWidth = new(SvgNames.Width);
-    protected readonly DoubleAttr x = new(SvgNames.X);
-    protected readonly DoubleAttr y = new(SvgNames.Y);
+    protected readonly FloatAttr x = new(SvgNames.X);
+    protected readonly FloatAttr y = new(SvgNames.Y);
 
-    public double CornerRadiusX { get => cornerRadiusX.Get(); set => cornerRadiusX.Set(value); }
+    public float CornerRadiusX { get => cornerRadiusX.Get(); set => cornerRadiusX.Set(value); }
 
-    public double CornerRadiusY { get => cornerRadiusY.Get(); set => cornerRadiusY.Set(value); }
+    public float CornerRadiusY { get => cornerRadiusY.Get(); set => cornerRadiusY.Set(value); }
 
     public AbsoluteOrRatio DefinedHeight { get => definedHeight.Get(); set => definedHeight.Set(value); }
 
     public AbsoluteOrRatio DefinedWidth { get => definedWidth.Get(); set => definedWidth.Set(value); }
   
-    public double X { get => x.Get(); set => x.Set(value); }
+    public float X { get => x.Get(); set => x.Set(value); }
 
-    public double Y { get => y.Get(); set => y.Set(value); }
+    public float Y { get => y.Get(); set => y.Set(value); }
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Rect;
 
@@ -40,9 +40,9 @@ public class SvgRectangleAsRect : SvgVisual
         }
     }
 
-    public double DefinedWidthAbsolute => this.DefinedWidth.Resolve(() => ViewPortWidth);
+    public float DefinedWidthAbsolute => this.DefinedWidth.Resolve(() => ViewPortWidth);
 
-    public double DefinedHeightAbsolute => this.DefinedHeight.Resolve(() => ViewPortHeight);
+    public float DefinedHeightAbsolute => this.DefinedHeight.Resolve(() => ViewPortHeight);
 
     public Point TopLeft => new(X, Y);
 

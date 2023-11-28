@@ -10,9 +10,9 @@ namespace OpenSvg.SvgNodes;
 public class SvgText : SvgVisual, IHasElementContent
 {
     protected readonly StringAttr fontName = new(SvgNames.FontName, SvgNames.DefaultFontName, false);
-    protected readonly DoubleAttr fontSize = new(SvgNames.FontSize, SvgNames.DefaultFontSize);
-    protected readonly DoubleAttr x = new(SvgNames.X);
-    protected readonly DoubleAttr y = new(SvgNames.Y);
+    protected readonly FloatAttr fontSize = new(SvgNames.FontSize, SvgNames.DefaultFontSize);
+    protected readonly FloatAttr x = new(SvgNames.X);
+    protected readonly FloatAttr y = new(SvgNames.Y);
 
     /// <summary>
     ///     Gets or sets the font name for this <see cref="SvgVisual" /> element.
@@ -34,17 +34,17 @@ public class SvgText : SvgVisual, IHasElementContent
     ///     The CSS2 specification suggests a "medium" font size that equates to 16px in many desktop browsers, which is adopted here.
     /// </remarks>
     /// <seealso href="https://www.w3.org/TR/CSS2/fonts.html#font-size-props">SVG 1.1 Font size</seealso>
-    public double FontSize { get => this.fontSize.Get(); set => this.fontSize.Set(value); }
+    public float FontSize { get => this.fontSize.Get(); set => this.fontSize.Set(value); }
 
     /// <summary>
     /// Attribute for getting or setting X position of this element
     /// </summary>
-    public double X { get => this.x.Get(); set => this.x.Set(value); }
+    public float X { get => this.x.Get(); set => this.x.Set(value); }
 
     /// <summary>
     /// Attribute for getting or setting Y position of this element
     /// </summary>
-    public double Y { get => this.y.Get(); set => this.y.Set(value); }
+    public float Y { get => this.y.Get(); set => this.y.Set(value); }
 
     private Point offset = Point.Origin;
 
@@ -89,7 +89,7 @@ public class SvgText : SvgVisual, IHasElementContent
                 $"An embedded font with name {fontName} could not be found in the current {nameof(SvgDocument)}");
             DrawConfig drawConfig = DrawConfig;
             string textContent = Content;
-            double svgFontSize = this.FontSize;
+            float svgFontSize = this.FontSize;
             return new TextConfig(textContent, svgFont, svgFontSize, drawConfig);
         }
         set
@@ -118,12 +118,12 @@ public class SvgText : SvgVisual, IHasElementContent
     ///     the X value denotes a value a little less the actual left-most point of the text.
     ///     the Y value denotes a value for the baseline of the text, close to the bottom of the text.
     /// </summary>
-    private static (Size Size, Point Offset) GetSizeAndOffset(string text, SKTypeface font, double fontSize)
+    private static (Size Size, Point Offset) GetSizeAndOffset(string text, SKTypeface font, float fontSize)
     {
         using var textPaint = new SKPaint
         {
             Typeface = font,
-            TextSize = (float)fontSize
+            TextSize = fontSize
         };
 
         var textBounds = new SKRect();
@@ -139,7 +139,7 @@ public class SvgText : SvgVisual, IHasElementContent
 
     protected override ConvexHull ComputeConvexHull()
     {
-        Point ActualXY(double x, double y) => new(this.X - this.offset.X + x, this.Y - this.offset.Y + y);
+        Point ActualXY(float x, float y) => new(this.X - this.offset.X + x, this.Y - this.offset.Y + y);
 
         return new ConvexHull(new[]
             { ActualXY(0, 0), ActualXY(this.size.Width, 0), ActualXY(this.size.Width, this.size.Height), ActualXY(0, this.size.Height) });

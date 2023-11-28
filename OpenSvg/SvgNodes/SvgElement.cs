@@ -75,12 +75,12 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// <summary>
     /// Gets the width of the current viewport for the element.
     /// </summary>
-    public virtual double ViewPortWidth => Parent?.ViewPortWidth ?? Constants.DefaultContainerWidth;
+    public virtual float ViewPortWidth => Parent?.ViewPortWidth ?? Constants.DefaultContainerWidth;
 
     /// <summary>
     /// Gets the height of the current viewport for the element.
     /// </summary>
-    public virtual double ViewPortHeight => Parent?.ViewPortHeight ?? Constants.DefaultContainerHeight;
+    public virtual float ViewPortHeight => Parent?.ViewPortHeight ?? Constants.DefaultContainerHeight;
 
     /// <summary>
     /// Gets the schema for the element.

@@ -13,7 +13,7 @@ namespace OpenSvg.Config;
 ///     The configuration of the pen for drawing text, including StrokeWidth, FillColor, and
 ///     StrokeColor
 /// </param>
-public record TextConfig(string Text, SvgFont SvgFont, double FontSize, DrawConfig DrawConfig)
+public record TextConfig(string Text, SvgFont SvgFont, float FontSize, DrawConfig DrawConfig)
 {
 
     /// <summary>
@@ -25,7 +25,7 @@ public record TextConfig(string Text, SvgFont SvgFont, double FontSize, DrawConf
     /// <summary>
     ///     The default font size used for rendering text.
     /// </summary>
-    public static double DefaultFontSize = SvgNames.DefaultFontSize;
+    public static float DefaultFontSize = SvgNames.DefaultFontSize;
 
     /// <summary>
     ///     Gets the name of the font.

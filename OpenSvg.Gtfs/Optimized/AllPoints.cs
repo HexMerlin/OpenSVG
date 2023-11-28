@@ -25,7 +25,7 @@ public class AllPoints
         var geoBoundingBox = gtfsFeed.ComputeGeoBoundingBox();
 
         var topLeftCoordinate = geoBoundingBox.TopLeft;
-       // double metersPerPixel = PointConverter.MetersPerPixels(1, geoBoundingBox);
+       // float metersPerPixel = PointConverter.MetersPerPixels(1, geoBoundingBox);
         
         this.converter = new PointConverter(topLeftCoordinate, 1, 10);
 

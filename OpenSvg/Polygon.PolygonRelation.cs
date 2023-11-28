@@ -96,23 +96,23 @@ public partial class Polygon
 
     private static Point? ComputeIntersection(Point a1, Point a2, Point b1, Point b2)
     {
-        double A1 = a2.Y - a1.Y;
-        double B1 = a1.X - a2.X;
-        double C1 = A1 * a1.X + B1 * a1.Y;
+        float A1 = a2.Y - a1.Y;
+        float B1 = a1.X - a2.X;
+        float C1 = A1 * a1.X + B1 * a1.Y;
 
-        double A2 = b2.Y - b1.Y;
-        double B2 = b1.X - b2.X;
-        double C2 = A2 * b1.X + B2 * b1.Y;
+        float A2 = b2.Y - b1.Y;
+        float B2 = b1.X - b2.X;
+        float C2 = A2 * b1.X + B2 * b1.Y;
 
-        double determinant = A1 * B2 - A2 * B1;
+        float determinant = A1 * B2 - A2 * B1;
 
         if (determinant == 0)
         {
             return null; // parallel lines
         }
 
-        double x = (B2 * C1 - B1 * C2) / determinant;
-        double y = (A1 * C2 - A2 * C1) / determinant;
+        float x = (B2 * C1 - B1 * C2) / determinant;
+        float y = (A1 * C2 - A2 * C1) / determinant;
         return new Point(x, y);
     }
 }

@@ -8,7 +8,7 @@ namespace OpenSvg.PathOptimize;
 
 public static class PointReduction
 {
-    public static Point[] Reduce(Point[] points, double tolerance)
+    public static Point[] Reduce(Point[] points, float tolerance)
     {
         if (points == null || points.Length < 3 || tolerance <= 0)
             return points;
@@ -21,14 +21,14 @@ public static class PointReduction
         return points.Where((point, index) => keepPoint[index]).ToArray();
     }
 
-    private static void ReducePoints(Point[] points, int firstIndex, int lastIndex, double tolerance, bool[] keepPoint)
+    private static void ReducePoints(Point[] points, int firstIndex, int lastIndex, float tolerance, bool[] keepPoint)
     {
-        double maxDistance = 0;
+        float maxDistance = 0;
         int indexFarthest = 0;
 
         for (int i = firstIndex + 1; i < lastIndex; i++)
         {
-            double distance = PerpendicularDistance(points[firstIndex], points[lastIndex], points[i]);
+            float distance = PerpendicularDistance(points[firstIndex], points[lastIndex], points[i]);
 
             if (distance > maxDistance)
             {
@@ -45,11 +45,11 @@ public static class PointReduction
         }
     }
 
-    private static double PerpendicularDistance(Point lineStart, Point lineEnd, Point point)
+    private static float PerpendicularDistance(Point lineStart, Point lineEnd, Point point)
     {
-        double area = Math.Abs(0.5 * (lineStart.X * lineEnd.Y + lineEnd.X * point.Y + point.X * lineStart.Y
+        float area = MathF.Abs(0.5f * (lineStart.X * lineEnd.Y + lineEnd.X * point.Y + point.X * lineStart.Y
                                       - lineEnd.X * lineStart.Y - point.X * lineEnd.Y - lineStart.X * point.Y));
-        double lineLength = Math.Sqrt(Math.Pow(lineEnd.X - lineStart.X, 2) + Math.Pow(lineEnd.Y - lineStart.Y, 2));
+        float lineLength = MathF.Sqrt(MathF.Pow(lineEnd.X - lineStart.X, 2) + MathF.Pow(lineEnd.Y - lineStart.Y, 2));
         return 2 * area / lineLength;
     }
 }

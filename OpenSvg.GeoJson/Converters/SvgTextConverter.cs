@@ -56,7 +56,7 @@ public static class SvgTextConverter
 
             if (text != null) svgText.Content = text;
             if (fontName != null) svgText.FontName = fontName;
-            if (fontSize != null) svgText.FontSize = fontSize.Value;
+            if (fontSize != null) svgText.FontSize = (float) fontSize.Value;
         }
 
      

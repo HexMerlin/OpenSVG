@@ -13,20 +13,20 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// The X-coordinate of the point.
     /// </summary>
     /// <value>The X-coordinate of the point.</value>
-    public double X { get; }
+    public float X { get; }
 
     /// <summary>
     /// The Y-coordinate of the point.
     /// </summary>
     /// <value>The Y-coordinate of the point.</value>
-    public double Y { get; }
+    public float Y { get; }
 
     /// <summary>
     /// Initializes a new instance of the Point struct with specified X and Y coordinates.
     /// </summary>
     /// <param name="x">The X-coordinate of the point.</param>
     /// <param name="y">The Y-coordinate of the point.</param>
-    public Point(double x, double y)
+    public Point(float x, float y)
     {
         X = x.Round();
         Y = y.Round();
@@ -82,11 +82,11 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// </summary>
     /// <param name="other">The other point.</param>
     /// <returns>The distance to the other point.</returns>
-    public double DistanceTo(Point other)
+    public float DistanceTo(Point other)
     {
-        double dx = other.X - X;
-        double dy = other.Y - Y;
-        return Math.Sqrt(dx * dx + dy * dy);
+        float dx = other.X - X;
+        float dy = other.Y - Y;
+        return MathF.Sqrt(dx * dx + dy * dy);
     }
     
 
@@ -98,36 +98,36 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <returns>True if the point is on the line segment; otherwise, false.</returns>
     public readonly bool IsOnLineSegment(Point a, Point b)
     {
-        const double Tolerance = 1e-6;
+        const float Tolerance = 1e-5f;
 
         // Check if point is within the bounding box of the line segment
-        if (X < Math.Min(a.X, b.X) || X > Math.Max(a.X, b.X)) return false;
-        if (Y < Math.Min(a.Y, b.Y) || Y > Math.Max(a.Y, b.Y)) return false;
+        if (X < MathF.Min(a.X, b.X) || X > MathF.Max(a.X, b.X)) return false;
+        if (Y < MathF.Min(a.Y, b.Y) || Y > MathF.Max(a.Y, b.Y)) return false;
 
         // Check if point is collinear with line segment using cross-product
-        double crossProduct = (Y - a.Y) * (b.X - a.X) - (X - a.X) * (b.Y - a.Y);
-        return Math.Abs(crossProduct) <= Tolerance;
+        float crossProduct = (Y - a.Y) * (b.X - a.X) - (X - a.X) * (b.Y - a.Y);
+        return MathF.Abs(crossProduct) <= Tolerance;
     }
 
     /// <summary>
-    /// Implicitly converts a tuple of doubles to a point.
+    /// Implicitly converts a tuple of floats to a point.
     /// </summary>
     /// <param name="tuple">The tuple to convert.</param>
     /// <returns>The converted point.</returns>
-    public static implicit operator Point((double x, double y) tuple) => new(tuple.x, tuple.y);
+    public static implicit operator Point((float x, float y) tuple) => new(tuple.x, tuple.y);
 
     /// <summary>
-    /// Implicitly converts a point to a tuple of doubles.
+    /// Implicitly converts a point to a tuple of floats.
     /// </summary>
     /// <param name="p">The point to convert.</param>
     /// <returns>The converted tuple.</returns>
-    public static implicit operator (double X, double Y)(Point p) => (p.X, p.Y);
+    public static implicit operator (float X, float Y)(Point p) => (p.X, p.Y);
 
     /// <summary>
     ///     Returns a string that represents the point.
     /// </summary>
     /// <returns>A string representation of this object</returns>
-    public override string ToString() => $"({Math.Round(X, 3).ToXmlString()}, {Math.Round(Y, 3).ToXmlString()})";
+    public override string ToString() => $"({float.Round(X, 3).ToXmlString()}, {float.Round(Y, 3).ToXmlString()})";
 
     ///<inheritdoc/>
     public override bool Equals(object? obj) => obj is Point other && Equals(other);

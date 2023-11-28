@@ -14,8 +14,8 @@ public class CoordinateTests
     public void CoordinateTranslateTest()
     {
         const int precision = 0;
-        const double distance = 10000; //distance in meters
-        Coordinate origin = new Coordinate(15.614, 58.408);
+        const float distance = 10000; //distance in meters
+        Coordinate origin = new Coordinate(15.614f, 58.408f);
 
         Coordinate eastBy10000m = origin.Translate(distance, 0);
         Coordinate westBy10000m = origin.Translate(-distance, 0);

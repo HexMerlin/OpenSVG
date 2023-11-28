@@ -20,26 +20,25 @@ public readonly struct Transform : IEquatable<Transform>
     /// </summary>
     /// <param name="matrix">The matrix.</param>
     private Transform(Matrix3x2 matrix)
-    {
-        static float R(float value) => (float)Math.Round(value, Constants.DoubleDecimalPrecision);
-        Matrix = new Matrix3x2(R(matrix.M11), R(matrix.M12), R(matrix.M21), R(matrix.M22), R(matrix.M31), R(matrix.M32));
+    { 
+        Matrix = matrix;
     }
 
     /// <summary>
     ///     Gets the translation components of the transform.
     /// </summary>
-    public (double dx, double dy) Translation => (this.Matrix.M31, this.Matrix.M32);
+    public (float dx, float dy) Translation => (this.Matrix.M31, this.Matrix.M32);
 
     /// <summary>
     ///     Gets the scale components of the transform.
     /// </summary>
-    public (double scaleX, double scaleY) Scale => (this.Matrix.M11, this.Matrix.M22);
+    public (float scaleX, float scaleY) Scale => (this.Matrix.M11, this.Matrix.M22);
 
     /// <summary>
     ///     Gets the skew components of the transform in degrees.
     /// </summary>
-    public (double skewXDegrees, double skewYDegrees) Skew =>
-        (ToDeg(Math.Atan2(this.Matrix.M21, this.Matrix.M11)), ToDeg(Math.Atan2(this.Matrix.M12, this.Matrix.M22)));
+    public (float skewXDegrees, float skewYDegrees) Skew =>
+        (ToDeg(MathF.Atan2(this.Matrix.M21, this.Matrix.M11)), ToDeg(MathF.Atan2(this.Matrix.M12, this.Matrix.M22)));
 
     /// <summary>
     ///     Creates a translation transform that moves an element along the x and y-axis.
@@ -47,7 +46,7 @@ public readonly struct Transform : IEquatable<Transform>
     /// <param name="dx">The distance to move along the x-axis.</param>
     /// <param name="dy">The distance to move along the y-axis.</param>
     /// <returns>A translation transform.</returns>
-    public static Transform CreateTranslation(double dx = 0, double dy = 0) => new(Matrix3x2.CreateTranslation((float)dx, (float)dy));
+    public static Transform CreateTranslation(float dx = 0, float dy = 0) => new(Matrix3x2.CreateTranslation(dx, dy));
 
     /// <summary>
     ///     Creates a scale transform that resizes an element.
@@ -55,7 +54,7 @@ public readonly struct Transform : IEquatable<Transform>
     /// <param name="scaleX">The scaling factor along the x-axis.</param>
     /// <param name="scaleY">The scaling factor along the y-axis.</param>
     /// <returns>A scaling transform.</returns>
-    public static Transform CreateScale(double scaleX = 1, double scaleY = 1) => new(Matrix3x2.CreateScale((float)scaleX, (float)scaleY));
+    public static Transform CreateScale(float scaleX = 1, float scaleY = 1) => new(Matrix3x2.CreateScale(scaleX, scaleY));
 
     /// <summary>
     ///     Creates a rotation transform that rotates an element around a given point.
@@ -64,7 +63,7 @@ public readonly struct Transform : IEquatable<Transform>
     /// <param name="pivotX">The x-coordinate of the pivot point.</param>
     /// <param name="pivotY">The y-coordinate of the pivot point.</param>
     /// <returns>A rotation transform.</returns>
-    public static Transform CreateRotation(double angleDegrees = 0, double pivotX = 0, double pivotY = 0) => new(Matrix3x2.CreateRotation(ToRad(angleDegrees), new Vector2((float)pivotX, (float)pivotY)));
+    public static Transform CreateRotation(float angleDegrees = 0, float pivotX = 0, float pivotY = 0) => new(Matrix3x2.CreateRotation(ToRad(angleDegrees), new Vector2((float)pivotX, (float)pivotY)));
 
     /// <summary>
     ///     Creates a skew transform that slants the x and y coordinates of an element.
@@ -72,7 +71,7 @@ public readonly struct Transform : IEquatable<Transform>
     /// <param name="skewXDegrees">The skew angle for the x-axis in degrees.</param>
     /// <param name="skewYDegrees">The skew angle for the y-axis in degrees.</param>
     /// <returns>A skew transform.</returns>
-    public static Transform CreateSkew(double skewXDegrees = 0, double skewYDegrees = 0) => new(new Matrix3x2(1, ToRad(skewYDegrees), ToRad(skewXDegrees), 1, 0, 0));
+    public static Transform CreateSkew(float skewXDegrees = 0, float skewYDegrees = 0) => new(new Matrix3x2(1, ToRad(skewYDegrees), ToRad(skewXDegrees), 1, 0, 0));
 
     /// <summary>
     ///     Creates a general 2D transformation matrix.
@@ -84,8 +83,8 @@ public readonly struct Transform : IEquatable<Transform>
     /// <param name="dx">The distance to translate along the x-axis.</param>
     /// <param name="dy">The distance to translate along the y-axis.</param>
     /// <returns>A general 2D transformation matrix.</returns>
-    public static Transform CreateMatrix(double m11 = 1, double m12 = 0, double m21 = 0, double m22 = 1, double dx = 0,
-        double dy = 0) => new(new Matrix3x2((float)m11, (float)m12, (float)m21, (float)m22, (float)dx, (float)dy));
+    public static Transform CreateMatrix(float m11 = 1, float m12 = 0, float m21 = 0, float m22 = 1, float dx = 0, float dy = 0) 
+        => new(new Matrix3x2(m11, m12, m21, m22, dx, dy));
 
     /// <summary>
     ///     Composes this transform with another, resulting in a transform that is the equivalent of applying each in sequence.
@@ -98,13 +97,13 @@ public readonly struct Transform : IEquatable<Transform>
     /// Converts degrees to radians.
     /// </summary>
     /// <param name="degrees">Degrees to convert</param>
-    private static float ToRad(double degrees) => (float)(Math.PI * degrees / 180.0);
+    private static float ToRad(float degrees) => (MathF.PI * degrees / 180.0f);
 
     /// <summary>
     /// Converts radians to degrees.
     /// </summary>
     /// <param name="radians">Radians to convert</param>
-    private static double ToDeg(double radians) => radians * (180.0 / Math.PI);
+    private static float ToDeg(float radians) => radians * (180.0f / MathF.PI);
 
 
     /// <summary>
@@ -131,14 +130,21 @@ public readonly struct Transform : IEquatable<Transform>
     /// </summary>
     /// <param name="other">The <see cref="Transform"/> to compare with the current <see cref="Transform"/>.</param>
     /// <returns>true if the specified <see cref="Transform"/> is equal to the current <see cref="Transform"/>; otherwise, false.</returns>
-    public bool Equals(Transform other) => this.Matrix.Equals(other.Matrix);
+    public bool Equals(Transform other)
+    {
+        static bool AreEqual(float a, float b) => MathF.Abs(a - b) <= 1E-5f;
+        Matrix3x2 m1 = this.Matrix;
+        Matrix3x2 m2 = other.Matrix;
+        return AreEqual(m1.M11, m2.M11) && AreEqual(m1.M12, m2.M12) && AreEqual(m1.M21, m2.M21) && AreEqual(m1.M22, m2.M22) && AreEqual(m1.M31, m2.M31) && AreEqual(m1.M32, m2.M32);
+
+    }
 
     /// <summary>
     ///     Gets the XML string representation of this <see cref="Transform"/>.
     /// </summary>
     /// <returns>The XML string representation of this <see cref="Transform"/>.</returns>
-    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";
-
+    public string ToXmlString() => $"matrix({this.Matrix.M11.Round().ToXmlString()} {this.Matrix.M12.Round().ToXmlString()} {this.Matrix.M21.Round().ToXmlString()} {this.Matrix.M22.Round().ToXmlString()} {this.Matrix.M31.Round().ToXmlString()} {this.Matrix.M32.Round().ToXmlString()})";
+     
     /// <summary>
     ///     Determines whether two specified instances of <see cref="Transform"/> are equal.
     /// </summary>

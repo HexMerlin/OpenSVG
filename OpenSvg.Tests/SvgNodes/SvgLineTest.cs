@@ -14,7 +14,7 @@ public class SvgLineTest
 
         SKColor fillColor = line.FillColor;
         SKColor strokeColor = line.StrokeColor;
-        double strokeWidth = line.StrokeWidth;
+        float strokeWidth = line.StrokeWidth;
 
         Assert.Equal(SKColors.Black, fillColor);
         Assert.Equal(SKColors.Transparent, strokeColor);

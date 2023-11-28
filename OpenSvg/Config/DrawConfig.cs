@@ -8,14 +8,14 @@ namespace OpenSvg.Config;
 /// <remarks>
 ///     Provides properties to set the fill color, stroke color, and stroke width for SVG shapes.
 /// </remarks>
-public record DrawConfig(SKColor FillColor, SKColor StrokeColor, double StrokeWidth)
+public record DrawConfig(SKColor FillColor, SKColor StrokeColor, float StrokeWidth)
 {
 
     public DrawConfig() : this(DefaultFillColor, DefaultStrokeColor, DefaultStrokeWidth) {}
 
     public static SKColor DefaultFillColor { get; } = SKColors.Black;
     public static SKColor DefaultStrokeColor { get; } = SKColors.Transparent;
-    public static double DefaultStrokeWidth { get; } = 1;
+    public static float DefaultStrokeWidth { get; } = 1;
 
     /// <summary>
     ///     Gets a transparent DrawConfig instance.
@@ -42,5 +42,5 @@ public record DrawConfig(SKColor FillColor, SKColor StrokeColor, double StrokeWi
     /// </summary>
     /// <param name="strokeWidth">The new stroke width to set.</param>
     /// <returns>A new DrawConfig with the specified stroke width.</returns>
-    public DrawConfig WithStrokeWidth(double strokeWidth) => this with { StrokeWidth = strokeWidth };
+    public DrawConfig WithStrokeWidth(float strokeWidth) => this with { StrokeWidth = strokeWidth };
 }

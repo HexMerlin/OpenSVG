@@ -33,7 +33,7 @@ public partial class Polygon
 
     private static int Orientation(Point p, Point q, Point r)
     {
-        double val = (q.Y - p.Y) * (r.X - q.X) - (q.X - p.X) * (r.Y - q.Y);
+        float val = (q.Y - p.Y) * (r.X - q.X) - (q.X - p.X) * (r.Y - q.Y);
 
         if (val == 0) return 0; // collinear
         return val > 0 ? 1 : 2; // clock or counterclockwise

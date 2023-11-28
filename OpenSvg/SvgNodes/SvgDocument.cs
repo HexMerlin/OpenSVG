@@ -42,10 +42,10 @@ public class SvgDocument : SvgVisualContainer
     public override string SvgName => SvgNames.Svg;
 
     /// <inheritdoc/>
-    public override double ViewPortWidth => DefinedViewPortWidth.Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Width);
+    public override float ViewPortWidth => DefinedViewPortWidth.Resolve(() => Parent?.ViewPortWidth ?? BoundingBox.Width);
 
     /// <inheritdoc/>
-    public override double ViewPortHeight => DefinedViewPortHeight.Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Height);
+    public override float ViewPortHeight => DefinedViewPortHeight.Resolve(() => Parent?.ViewPortHeight ?? BoundingBox.Height);
 
     /// <summary>
     /// Converts the SVG document to an XDocument.

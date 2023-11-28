@@ -34,7 +34,7 @@ public static class DrawConfigConverter
         {
             SKColor fillColor = (properties.GetValueOrDefault(GeoJsonNames.Fill) as string)?.ToOpenSvgColor() ?? defaultValues.FillColor;
             SKColor strokeColor = (properties.GetValueOrDefault(GeoJsonNames.Stroke) as string)?.ToOpenSvgColor() ?? defaultValues.StrokeColor;
-            double strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToDouble() ?? defaultValues.StrokeWidth;
+            float strokeWidth = (properties.GetValueOrDefault(GeoJsonNames.StrokeWidth) as string)?.ToFloat() ?? defaultValues.StrokeWidth;
             svgVisual.FillColor = fillColor;
             svgVisual.StrokeColor = strokeColor;
             svgVisual.StrokeWidth = strokeWidth;

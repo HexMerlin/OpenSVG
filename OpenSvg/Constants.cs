@@ -2,9 +2,9 @@
 
 public static class Constants
 {
-    public const double DefaultContainerWidth = 1024;
+    public const float DefaultContainerWidth = 1024;
 
-    public const double DefaultContainerHeight = 768;
+    public const float DefaultContainerHeight = 768;
 
-    public const int DoubleDecimalPrecision = 4;
+    public const int FloatDecimalsPrecision = 5;
 }

@@ -146,8 +146,8 @@ public class Path : IEquatable<Path>, IDisposable
         {
             float t = i / (float)segments;
             float u = 1.0f - t;
-            double x = u * u * start.X + 2.0f * u * t * control.X + t * t * end.X;
-            double y = u * u * start.Y + 2.0f * u * t * control.Y + t * t * end.Y;
+            float x = u * u * start.X + 2.0f * u * t * control.X + t * t * end.X;
+            float y = u * u * start.Y + 2.0f * u * t * control.Y + t * t * end.Y;
             yield return new Point(x, y);
         }
 
@@ -168,8 +168,8 @@ public class Path : IEquatable<Path>, IDisposable
         {
             float t = i / (float)segments;
             float u = 1.0f - t;
-            double x = u * u * u * start.X + 3 * u * u * t * control1.X + 3 * u * t * t * control2.X + t * t * t * end.X;
-            double y = u * u * u * start.Y + 3 * u * u * t * control1.Y + 3 * u * t * t * control2.Y + t * t * t * end.Y;
+            float x = u * u * u * start.X + 3 * u * u * t * control1.X + 3 * u * t * t * control2.X + t * t * t * end.X;
+            float y = u * u * u * start.Y + 3 * u * u * t * control1.Y + 3 * u * t * t * control2.Y + t * t * t * end.Y;
             yield return new Point(x, y);
         }
 
@@ -196,8 +196,8 @@ public class Path : IEquatable<Path>, IDisposable
             float t = i / (float)segments;
             float u = 1.0f - t;
             float w = (u * weight + t) / (u + t * weight);
-            double x = u * start.X + t * end.X + w * (control.X - u * start.X - t * end.X);
-            double y = u * start.Y + t * end.Y + w * (control.Y - u * start.Y - t * end.Y);
+            float x = u * start.X + t * end.X + w * (control.X - u * start.X - t * end.X);
+            float y = u * start.Y + t * end.Y + w * (control.Y - u * start.Y - t * end.Y);
             yield return new Point(x, y);
         }
 

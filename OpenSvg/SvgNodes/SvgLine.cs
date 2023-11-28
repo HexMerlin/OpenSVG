@@ -8,30 +8,30 @@ namespace OpenSvg.SvgNodes;
 /// </summary>
 public class SvgLine : SvgVisual
 {
-    protected readonly DoubleAttr x1 = new(SvgNames.X1);
-    protected readonly DoubleAttr x2 = new(SvgNames.X2);
-    protected readonly DoubleAttr y1 = new(SvgNames.Y1);
-    protected readonly DoubleAttr y2 = new(SvgNames.Y2);
+    protected readonly FloatAttr x1 = new(SvgNames.X1);
+    protected readonly FloatAttr x2 = new(SvgNames.X2);
+    protected readonly FloatAttr y1 = new(SvgNames.Y1);
+    protected readonly FloatAttr y2 = new(SvgNames.Y2);
 
     /// <summary>
     /// Gets or sets the x-coordinate of the starting point of the line.
     /// </summary>
-    public double X1 { get => x1.Get(); set => x1.Set(value); }
+    public float X1 { get => x1.Get(); set => x1.Set(value); }
 
     /// <summary>
     /// Gets or sets the x-coordinate of the ending point of the line.
     /// </summary>
-    public double X2 { get => x2.Get(); set => x2.Set(value); }
+    public float X2 { get => x2.Get(); set => x2.Set(value); }
 
     /// <summary>
     /// Gets or sets the y-coordinate of the starting point of the line.
     /// </summary>
-    public double Y1 { get => y1.Get(); set => y1.Set(value); }
+    public float Y1 { get => y1.Get(); set => y1.Set(value); }
 
     /// <summary>
     /// Gets or sets the y-coordinate of the ending point of the line.
     /// </summary>
-    public double Y2 { get => y2.Get(); set => y2.Set(value); }
+    public float Y2 { get => y2.Get(); set => y2.Set(value); }
 
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Line;
