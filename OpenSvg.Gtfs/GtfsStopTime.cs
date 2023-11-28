@@ -5,7 +5,7 @@ using OpenSvg.SvgNodes;
 
 namespace OpenSvg.Gtfs;
 
-public readonly record struct GtfsStopTime(string TripID, string ArrivalTime, string DepartureTime, string StopID, int StopSequence, string StopHeadsign, string PickupType, string DropOffType, float shapeDistTraveled, string Timepoint)
+public record GtfsStopTime(string TripID, string ArrivalTime, string DepartureTime, string StopID, int StopSequence, string StopHeadsign, string PickupType, string DropOffType, float shapeDistTraveled, string Timepoint)
 {
   
 

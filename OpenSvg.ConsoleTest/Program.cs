@@ -22,8 +22,9 @@ internal class Program
 
 
         GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
+        gtfsFeed.JoinDataSources();
 
-        AllPoints allPoints = new AllPoints(gtfsFeed);
+       // AllPoints allPoints = new AllPoints(gtfsFeed);
 
         //SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
         //svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svgz");

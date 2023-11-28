@@ -22,20 +22,20 @@ public class AllPoints
 
     public AllPoints(GtfsFeed gtfsFeed) : this()
     {
-        var geoBoundingBox = gtfsFeed.ComputeGeoBoundingBox();
+       // var geoBoundingBox = gtfsFeed.ComputeGeoBoundingBox();
 
-        var topLeftCoordinate = geoBoundingBox.TopLeft;
-       // float metersPerPixel = PointConverter.MetersPerPixels(1, geoBoundingBox);
+       // var topLeftCoordinate = geoBoundingBox.TopLeft;
+       //// float metersPerPixel = PointConverter.MetersPerPixels(1, geoBoundingBox);
         
-        this.converter = new PointConverter(topLeftCoordinate, 1, 10);
+       // this.converter = new PointConverter(topLeftCoordinate, 1, 10);
 
-        Console.WriteLine("metersPerPixel " + converter.MetersPerPixel);
-        Console.WriteLine("pixels per meter: " + (1.0d / converter.MetersPerPixel));
+       // Console.WriteLine("metersPerPixel " + converter.MetersPerPixel);
+       // Console.WriteLine("pixels per meter: " + (1.0d / converter.MetersPerPixel));
 
 
-        points = new SortedSet<Point>();
+       // points = new SortedSet<Point>();
 
-        AddAll(gtfsFeed.Shapes);
+       // AddAll(gtfsFeed.Shapes);
     }
 
     public void Add(Point point)
@@ -50,10 +50,19 @@ public class AllPoints
 
     public void AddAll(ImmutableArray<GtfsShape> shapes)
     {
-        var coordinates = shapes.SelectMany(s => s.ShapePoints).Select(sp => sp.Coordinate).ToArray();
-        AddAll(coordinates.Select(c => converter.ToPoint(c)).Select(p => new Point((int) p.X, (int) p.Y)));
 
-        Console.WriteLine("Total coordinates: " + coordinates.Length);
-        Console.WriteLine("Total points: " + points.Count);
+        foreach (var shape in shapes)
+        {
+            Point[] shapePoints = shape.ShapePoints.Select(sp => sp.Coordinate).Select(sp => converter.ToPoint(sp)).ToArray();
+           // Console.WriteLine(shapePoints.Length);
+
+            int existCount = shapePoints.Count(sp => points.Contains(sp));
+            Console.WriteLine(existCount + " / " + shapePoints.Length);
+            if (existCount == 0)
+            {
+                AddAll(shapePoints);
+            }
+        }
+        Console.WriteLine("Kept points: " + points.Count());
     }
 }
