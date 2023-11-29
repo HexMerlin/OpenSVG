@@ -241,7 +241,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
     /// <returns>A tuple containing a boolean indicating whether the specified object is equal to the current object and a message describing the differences.</returns>
     public (bool equal, string diffMessage) InformedEquals(SvgElement? other)
     {
-        string Descr = $"Element {SvgName}:";
+        string Descr = $"Element {this.GetType()}:";
 
         if (other is null) return (false, $"{Descr} other is null");
         if (ReferenceEquals(this, other)) return (true, "same reference");
@@ -254,9 +254,9 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             IAttr a1 = attributes1[i];
             IAttr a2 = attributes2[i];
 
-            if (a1.Name != a2.Name) return (false, $"{Descr} Attribute {i + 1}: {a1.Name} != {a2.Name}");
+            if (a1.Name != a2.Name) return (false, $"{Descr} Type {a1.GetType().Name} Attribute {i + 1}: {a1.Name} != {a2.Name}");
             if (!a1.Equals(a2))
-                return (false, $"{Descr} Attribute {a1.Name}:\n{a1.ToXmlString()} !=\n{a2.ToXmlString()}");
+                return (false, $" {Descr} Type {a1.GetType().Name} Attribute {a1.Name}:\n{a1.ToXmlString()} !=\n{a2.ToXmlString()}");
         }
 
         if (this is IHasElementContent hasElementContent && hasElementContent.Content != ((IHasElementContent)other).Content)

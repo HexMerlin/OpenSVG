@@ -10,18 +10,11 @@ public static class CommonTypeExtensions
 {
 
     /// <summary>
-    /// Rounds the given float value to the nearest integer.
-    /// </summary>
-    /// <param name="value">The value to round.</param>
-    /// <returns>The rounded value.</returns>
-    public static float Round(this float value) => MathF.Round(value, Constants.FloatDecimalsPrecision);
-
-    /// <summary>
     /// Converts the given string value to a float.
     /// </summary>
     /// <param name="value">The string value to convert.</param>
     /// <returns>The converted float value.</returns>
-    public static float ToFloat(this string value) => float.Parse(value, NumberStyles.Float, CultureInfo.InvariantCulture).Round();
+    public static float ToFloat(this string value) => float.Parse(value, NumberStyles.Float, CultureInfo.InvariantCulture);
 
 
     /// <summary>

@@ -143,7 +143,7 @@ public readonly struct Transform : IEquatable<Transform>
     ///     Gets the XML string representation of this <see cref="Transform"/>.
     /// </summary>
     /// <returns>The XML string representation of this <see cref="Transform"/>.</returns>
-    public string ToXmlString() => $"matrix({this.Matrix.M11.Round().ToXmlString()} {this.Matrix.M12.Round().ToXmlString()} {this.Matrix.M21.Round().ToXmlString()} {this.Matrix.M22.Round().ToXmlString()} {this.Matrix.M31.Round().ToXmlString()} {this.Matrix.M32.Round().ToXmlString()})";
+    public string ToXmlString() => $"matrix({this.Matrix.M11.ToXmlString()} {this.Matrix.M12.ToXmlString()} {this.Matrix.M21.ToXmlString()} {this.Matrix.M22.ToXmlString()} {this.Matrix.M31.ToXmlString()} {this.Matrix.M32.ToXmlString()})";
      
     /// <summary>
     ///     Determines whether two specified instances of <see cref="Transform"/> are equal.

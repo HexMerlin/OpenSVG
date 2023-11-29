@@ -19,7 +19,7 @@ public class FloatAttr : Attr<float>
     /// </summary>
     /// <param name="name">The name of the attribute.</param>
     /// <param name="defaultValue">The default value of the attribute.</param>
-    public FloatAttr(string name, float defaultValue) : base(name, defaultValue.Round(), false)
+    public FloatAttr(string name, float defaultValue) : base(name, defaultValue, false)
     {
     }
 

@@ -37,15 +37,15 @@ public abstract class PointList : IReadOnlyList<Point>, IEquatable<PointList>
         float accumulatedDistance = 0;
         for (int i = 0; i < Count - 1; i++)
         {
-            Vector2 start = this[i].Vector;
-            Vector2 end = this[i + 1].Vector;
+            Point start = this[i];
+            Point end = this[i + 1];
 
-            float segmentLength = Vector2.Distance(start, end);
+            float segmentLength = Point.Distance(start, end);
             if (accumulatedDistance + segmentLength >= distance)
             {
                 float remainingDistance = distance - accumulatedDistance;
                 float interpolationFactor = remainingDistance / segmentLength;
-                return new Point(Vector2.Lerp(start, end, interpolationFactor));
+                return Point.Lerp(start, end, interpolationFactor);
             }
             accumulatedDistance += segmentLength;
         }

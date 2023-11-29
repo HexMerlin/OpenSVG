@@ -1,5 +1,6 @@
 ﻿using OpenSvg.SvgNodes;
 using System.Collections.Immutable;
+using System.Numerics;
 
 namespace OpenSvg;
 
@@ -94,6 +95,7 @@ public class ConvexHull : PointList, IEquatable<ConvexHull>
         if (points.Length <= 2) return points.ToImmutableArray();
 
         Point pivot = points.Min();
+        
         Array.Sort(points,
             (a, b) => MathF.Atan2(a.Y - pivot.Y, a.X - pivot.X).CompareTo(MathF.Atan2(b.Y - pivot.Y, b.X - pivot.X)));
         List<Point> hull = new() { pivot };

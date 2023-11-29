@@ -1,6 +1,7 @@
 ﻿using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
 using OpenSvg.GeoJson;
+using GeoPoint = GeoJSON.Net.Geometry.Point;
 
 public class GeoJsonBoundingBox
 {
@@ -52,7 +53,7 @@ public class GeoJsonBoundingBox
     {
         switch (geometry)
         {
-            case Point point:
+            case GeoPoint point:
                 UpdateBounds(point.Coordinates);
                 break;
             case MultiPoint multiPoint:

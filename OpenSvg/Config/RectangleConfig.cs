@@ -121,7 +121,7 @@ public record RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCorn
         }
         else
         {
-            points.Add(Point.Origin);
+            points.Add(Point.Zero);
             points.Add(new Point(width, 0));
             points.Add(new Point(width, height));
             points.Add(new Point(0, height));

@@ -46,7 +46,7 @@ public class SvgText : SvgVisual, IHasElementContent
     /// </summary>
     public float Y { get => this.y.Get(); set => this.y.Set(value); }
 
-    private Point offset = Point.Origin;
+    private Point offset = Point.Zero;
 
     private Size size = new(0, 0);
 

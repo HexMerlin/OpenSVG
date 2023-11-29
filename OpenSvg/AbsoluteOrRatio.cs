@@ -25,7 +25,7 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// <param name="isAbsolute">Indicates whether the value is absolute or a ratio.</param>
     public AbsoluteOrRatio(float value, bool isAbsolute)
     {
-        this.Value = value.Round();
+        this.Value = value;
         this.IsAbsolute = isAbsolute;
     }
 

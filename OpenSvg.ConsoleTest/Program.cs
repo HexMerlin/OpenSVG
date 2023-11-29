@@ -1,4 +1,5 @@
-﻿using System;
+﻿global using Point = System.Numerics.Vector2;
+using System;
 using System.Collections.Immutable;
 using SkiaSharp;
 using OpenSvg.Gtfs;
@@ -18,7 +19,11 @@ internal class Program
     public static void Main()
     {
 
-    
+        Point[] points = new Point[] { new Point(0, 10), new Point(20, 5) };
+        Array.Sort(points, PointComparer.Default);
+        Console.WriteLine(String.Join(", ", points));
+        /// 
+
         GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
         gtfsFeed.JoinDataSources();
 

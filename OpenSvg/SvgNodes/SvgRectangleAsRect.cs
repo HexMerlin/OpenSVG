@@ -49,5 +49,5 @@ public class SvgRectangleAsRect : SvgVisual
     public Point BottomRight => new(X + DefinedWidthAbsolute, Y + DefinedHeightAbsolute);
 
     protected override ConvexHull ComputeConvexHull() => new(new Point[]
-            { TopLeft, (BottomRight.X, TopLeft.Y), BottomRight, (TopLeft.X, BottomRight.Y) });
+            { TopLeft, new(BottomRight.X, TopLeft.Y), BottomRight, new(TopLeft.X, BottomRight.Y) });
 }

@@ -12,7 +12,7 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <summary>
     /// Initializes a new instance of the <see cref="BoundingBox"/> struct with zero size, starting at the origin.
     /// </summary>
-    public BoundingBox() : this(Point.Origin, Point.Origin) { }
+    public BoundingBox() : this(Point.Zero, Point.Zero) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="BoundingBox"/> struct with the specified upper left point, width, and height.
@@ -26,7 +26,7 @@ public readonly record struct BoundingBox(Point UpperLeft, Point LowerRight)
     /// <summary>
     /// A static instance representing a bounding box with zero size, starting at the origin (0,0).
     /// </summary>
-    public static readonly BoundingBox None = new(Point.Origin, Point.Origin);
+    public static readonly BoundingBox None = new(Point.Zero, Point.Zero);
 
     /// <summary>
     ///     Gets the width of the bounding box.
