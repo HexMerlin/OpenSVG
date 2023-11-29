@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>OpenSVG</Title>
-    <AssemblyVersion>23.11.29.1</AssemblyVersion>
+    <AssemblyVersion>23.11.29.3</AssemblyVersion>
     <FileVersion>0.9.0.0</FileVersion>
     <Description>OpenSVG  - a free and open source library for creating and manipulating SVG files and data from C# and .NET</Description>
     <Copyright>Veridict - www.veridict.com</Copyright>

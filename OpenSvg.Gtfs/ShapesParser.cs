@@ -50,7 +50,7 @@ public static class ShapesParser
         svgGroup.ID = "shapes";
         svgGroup.StrokeColor = SKColors.DarkRed;
         svgGroup.StrokeWidth = 0.1f;
-        svgGroup.FillColor = SKColors.DarkRed;
+        svgGroup.FillColor = SKColors.Transparent;
         svgGroup.AddAll(svgShapeElements);
         return svgGroup;
 

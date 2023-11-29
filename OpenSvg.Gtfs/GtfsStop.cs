@@ -1,16 +1,16 @@
 ﻿using OpenSvg.GeoJson;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
+using System.Security.Permissions;
 
 namespace OpenSvg.Gtfs;
 public record GtfsStop(string StopID, string Name, Coordinate Coordinate, int LocationType = 0, string ParentStation = "", string PlatformCode = "")
 {
-    public SortedDictionary<string, (GtfsShape gtfsShape, Coordinate? stopPoint)> Shapes { get; } = new();
+    public SortedDictionary<string, (GtfsShape gtfsShape, Coordinate? coordByDistTraveled, Coordinate coordByCloseness)> Shapes { get; } = new();
 
-    public void AddShape(GtfsShape shape, Coordinate? stopPoint)
+    public void AddShape(GtfsShape shape, Coordinate? coordByDistTraveled, Coordinate coordByCloseness)
     {
-
-        Shapes[shape.ID] = (shape, stopPoint);
+        Shapes[shape.ID] = (shape, coordByDistTraveled, coordByCloseness);
     }
 
 
@@ -32,19 +32,31 @@ public record GtfsStop(string StopID, string Name, Coordinate Coordinate, int Lo
         svgGroup.ID = this.StopID;
         svgGroup.Add(svgPolygon);
 
-        IEnumerable<Point> stopPoints = Shapes.Where(c => c.Value.stopPoint != null).Select(c => converter.ToPoint((Coordinate)c.Value.stopPoint));
-       
-        foreach (var stopPoint in stopPoints)
+        IEnumerable<Point> coordsByDistTraveled = Shapes.Values.Where(s => s.coordByDistTraveled != null).Select(c => converter.ToPoint((Coordinate)c.coordByDistTraveled.Value));
+        IEnumerable<Point> coordByCloseness = Shapes.Values.Select(c => converter.ToPoint(c.coordByCloseness));
+        
+        foreach (var stopPoint in coordsByDistTraveled)
         {
             SvgLine svgLine = new SvgLine();
             svgLine.P1 = center;
             svgLine.P2 = stopPoint;
             svgLine.StrokeColor = SKColors.DarkGreen;
             svgLine.StrokeWidth = 0.2f;
-            svgLine.FillColor = SKColors.DarkGreen;
+            svgLine.FillColor = SKColors.DarkMagenta;
             svgGroup.Add(svgLine);
         }
-  
+
+        foreach (var stopPoint in coordByCloseness)
+        {
+            SvgLine svgLine = new SvgLine();
+            svgLine.P1 = center;
+            svgLine.P2 = stopPoint;
+            svgLine.StrokeColor = SKColors.DarkGreen;
+            svgLine.StrokeWidth = 0.2f;
+            svgLine.FillColor = SKColors.DarkRed;
+            svgGroup.Add(svgLine);
+        }
+
         return svgGroup;
     }
 

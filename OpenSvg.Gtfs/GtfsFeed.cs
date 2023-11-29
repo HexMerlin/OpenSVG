@@ -6,16 +6,22 @@ using System.IO.Compression;
 namespace OpenSvg.Gtfs;
 public class GtfsFeed
 {
-    public required ImmutableSortedDictionary<string, GtfsStop> Stops { get; init; }
+   
+
+    public required ImmutableSortedDictionary<string, GtfsStop> RealStops { get; init; }
+
+    public required ImmutableSortedDictionary<string, GtfsStop> OtherStops { get; init; }
 
     public required ImmutableArray<GtfsStopTime> StopTimes { get; init; }
     public required ImmutableSortedDictionary<string, GtfsShape> Shapes { get; init; }
 
     public required ImmutableSortedDictionary<string, GtfsTrip> Trips { get; init; }
 
+  
+
     public GtfsFeed()
     {
-       
+      
     }
 
     public static GtfsFeed Load(string gtfsFilePath)
@@ -48,16 +54,20 @@ public class GtfsFeed
         }
         return new GtfsFeed()
         {
-            Stops = stops,
+            RealStops = stops.Values.Where(s => s.LocationType == 0).ToImmutableSortedDictionary(s => s.StopID, s => s),
+            OtherStops = stops.Values.Where(s => s.LocationType != 0).ToImmutableSortedDictionary(s => s.StopID, s => s),
             StopTimes = stopTimes,
             Shapes = shapes,
             Trips = trips,
-        };
+           
+    };
 
     }
 
     public void JoinDataSources()
     {
+        
+
         Console.WriteLine("Processing...");
         foreach (GtfsStopTime stopTime in StopTimes)
         {
@@ -67,14 +77,16 @@ public class GtfsFeed
             GtfsTrip trip = Trips[tripID];
             GtfsShape shape = Shapes[trip.ShapeID];
 
-            GtfsStop stop = Stops[stopID];
+            GtfsStop stop = RealStops[stopID];
 
-            if (stopTime.ShapeDistTraveled <= 0)
-                continue;
+          
+            Coordinate coordByCloseness = shape.FindClosestCoordinateOnShape(stop.Coordinate);
+            Coordinate? coordByDistTraveled = shape.CoordinateUsingGtfsDistance(stopTime.ShapeDistTraveled);
 
-            Coordinate? coordinate = shape.CoordinateUsingGtfsDistance(stopTime.ShapeDistTraveled);
-            if (coordinate != null && coordinate.Value.DistanceTo(stop.Coordinate) > 200)
-            {
+            stop.AddShape(shape, coordByDistTraveled, coordByCloseness);
+            
+            //if (coordinate != null && coordinate.Value.DistanceTo(stop.Coordinate) > 200)
+            //{
                 //Console.WriteLine("StopTime: " + stopTime);
                 //Console.WriteLine("Trip: " + trip);
                 //Console.WriteLine("Stop: " + stop);
@@ -93,8 +105,8 @@ public class GtfsFeed
                 //}
                 //Console.WriteLine("******** End *******");
               
-            }
-            stop.AddShape(shape, coordinate);
+           // }
+           
         }
 
         //foreach (GtfsStop stop in Stops.Values)
@@ -104,29 +116,6 @@ public class GtfsFeed
 
     }
 
-    public SvgDocument ToSvgDocumentDEBUG()
-    {
-
-        var geoBoundingBox = ComputeGeoBoundingBox();
-
-        var topLeftCoordinate = geoBoundingBox.TopLeft;
-        double metersPerPixel = PointConverter.MetersPerPixels(1000, geoBoundingBox);
-
-
-        PointConverter converter = new PointConverter(topLeftCoordinate, metersPerPixel, 10);
-
-        SvgGroup svgGroupStops = Stops.Where(s => s.Value.StopID == "9022012030082001").Select(s => s.Value).ToSvgGroup(converter);
-        SvgGroup svgGroupShapes = Shapes.Where(s => s.Value.ID == "7121120000307009449").Select(s => s.Value).ToSvgGroup(converter);
-
-        SvgDocument svgDocument = new SvgDocument();
-        svgDocument.Add(svgGroupStops);
-        svgDocument.Add(svgGroupShapes);
-        svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
-
-        GeoJsonDocument geoJsonDocument = new GeoJsonDocument(svgDocument, converter.StartLocation, metersPerPixel, 10);
-        geoJsonDocument.Save(@"D:\Downloads\Test\GTFS\skaneDEBUG.geojson");
-        return svgDocument;
-    }
 
     public SvgDocument ToSvgDocument()
     {
@@ -139,12 +128,12 @@ public class GtfsFeed
 
         PointConverter converter = new PointConverter(topLeftCoordinate, metersPerPixel, 10);
 
-        SvgGroup svgGroupStops = Stops.Values.ToSvgGroup(converter);
-        SvgGroup svgGroupShapes = Shapes.Values.ToSvgGroup(converter);
+        SvgGroup svgGroupStops = RealStops.Values.ToSvgGroup(converter);
+       // SvgGroup svgGroupShapes = Shapes.Values.ToSvgGroup(converter);
 
         SvgDocument svgDocument = new SvgDocument();
         svgDocument.Add(svgGroupStops);
-        svgDocument.Add(svgGroupShapes);
+      //  svgDocument.Add(svgGroupShapes);
         svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
 
         return svgDocument;
@@ -152,7 +141,7 @@ public class GtfsFeed
 
     public GeoBoundingBox ComputeGeoBoundingBox()
     {
-        var stopsBounds = new GeoBoundingBox(Stops.Select(s => s.Value.Coordinate));
+        var stopsBounds = new GeoBoundingBox(RealStops.Select(s => s.Value.Coordinate));
         var shapesBounds = new GeoBoundingBox(Shapes.SelectMany(s => s.Value.ShapePoints).Select(sp => sp.Coordinate));
         return GeoBoundingBox.Union(stopsBounds, shapesBounds);
     } 

@@ -25,7 +25,7 @@ internal class Program
        // AllPoints allPoints = new AllPoints(gtfsFeed);
 
         SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
-        svgDocument.Save(@"D:\Downloads\Test\GTFS\skaneDEBUG.svg");
+        svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svg");
 
         
        

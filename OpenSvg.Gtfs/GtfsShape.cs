@@ -24,7 +24,7 @@ public class GtfsShape
         (GtfsShapePoint? pointA, GtfsShapePoint? pointB, double distanceFractionFromAtoB) = GetPointPairUsingGtfsDistance(distanceTraveled);
         if (pointA != null && distanceFractionFromAtoB == 0)
             return pointA.Value.Coordinate; //exact match
-        if (distanceTraveled == 0)
+        if (distanceTraveled <= 0)
             return null;
         if (pointA == null || pointB == null)
             return null;
@@ -32,6 +32,24 @@ public class GtfsShape
         return Coordinate.Interpolate(pointA.Value.Coordinate, pointB.Value.Coordinate, distanceFractionFromAtoB);
       
     }
+
+    public Coordinate FindClosestCoordinateOnShape(Coordinate coordinate)
+    {
+        Coordinate closestCoordinate = new Coordinate(0, 0);   
+        double closestDistance = double.MaxValue;
+
+        foreach (GtfsShapePoint shapePoint in ShapePoints)
+        {
+            double distance = shapePoint.Coordinate.DistanceTo(coordinate);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestCoordinate = shapePoint.Coordinate;
+            }
+        }
+        return closestCoordinate;
+    }
+
 
     public (GtfsShapePoint? pointA, GtfsShapePoint? pointB, double distanceFractionFromAtoB) GetPointPairUsingGtfsDistance(double distanceTraveled)
     {
