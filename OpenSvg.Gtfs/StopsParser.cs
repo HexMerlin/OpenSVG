@@ -43,19 +43,19 @@ public static class StopsParser
         IEnumerable<SvgVisual> svgShapeElements = stops.Select(s => s.ToSvgShape(converter));
         SvgGroup svgGroup = new SvgGroup();
         svgGroup.ID = "stops";
-        svgGroup.StrokeColor = SKColors.Blue;
+        //svgGroup.StrokeColor = SKColors.Blue;
         svgGroup.FillColor = SKColors.Transparent;
         svgGroup.AddAll(svgShapeElements);
         return svgGroup;
 
     }
 
-    public static SvgVisual ToSvgShape(this GtfsStop gtfsStop, PointConverter converter)
-    {
-        SvgCircle svgCircle = new SvgCircle();
-        svgCircle.ID = gtfsStop.StopID;
-        svgCircle.Center = converter.ToPoint(gtfsStop.Coordinate);
-        svgCircle.Radius = 0.2f;
-        return svgCircle;
-    }
+    //public static SvgVisual ToSvgShape(this GtfsStop gtfsStop, PointConverter converter)
+    //{
+    //    SvgCircle svgCircle = new SvgCircle();
+    //    svgCircle.ID = gtfsStop.StopID;
+    //    svgCircle.Center = converter.ToPoint(gtfsStop.Coordinate);
+    //    svgCircle.Radius = 0.2f;
+    //    return svgCircle;
+    //}
 }

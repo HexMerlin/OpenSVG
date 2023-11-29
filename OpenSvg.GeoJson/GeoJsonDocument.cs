@@ -3,6 +3,8 @@ using GeoJSON.Net.Feature;
 using Newtonsoft.Json;
 using OpenSvg.GeoJson.Converters;
 using OpenSvg.SvgNodes;
+using System;
+using System.Drawing;
 
 namespace OpenSvg.GeoJson;
 
@@ -38,12 +40,13 @@ public class GeoJsonDocument
 
     public GeoJsonDocument(SvgDocument svgDocument, Coordinate startLocation, double metersPerPixel = 1, int segmentCountForCurveApproximation = 10)
     {
-        PointConverter converter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
-               
-        var features = svgDocument.ToFeatures(Transform.Identity, converter).ToList();
-        this.featureCollection = new FeatureCollection(features);    
-        
+        PointConverter pointConverter = new PointConverter(startLocation, metersPerPixel, segmentCountForCurveApproximation);
+
+        var features = svgDocument.ToFeatures(Transform.Identity, pointConverter).ToList();
+        this.featureCollection = new FeatureCollection(features);
+
     }
+
 
     /// <summary>
     /// Converts the GeoJsonDocument to an SvgDocument with the specified desired width in pixels.

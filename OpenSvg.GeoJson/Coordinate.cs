@@ -80,7 +80,7 @@ public readonly struct Coordinate
 
 
     /// <summary>
-    /// Calculates the distance to another coordinate.
+    /// Calculates the distance in meters to another coordinate.
     /// </summary>
     /// <param name="coordinate">The coordinate to calculate the distance to.</param>
     /// <returns>The distance between the two coordinates in meters.</returns>
@@ -91,6 +91,27 @@ public readonly struct Coordinate
         double distance = Math.Sqrt(dx * dx + dy * dy);
         return distance;
     }
+
+    /// <summary>
+    /// Calculates a Coordinate that is a certain fraction along the straight line from this Coordinate to another Coordinate.
+    /// </summary>
+    /// <param name="a">The starting coordinate.</param>
+    /// <param name="b">The ending coordinate.</param>
+    /// <param name="fraction">The fraction along the straight line between the two coordinates, ranging from 0.0 to 1.0.</param>
+    /// <returns>A new Coordinate that represents the specified fraction along the line from 'a' to 'b'.</returns>
+    public static Coordinate Interpolate(Coordinate a, Coordinate b, double fraction)
+
+    {
+        var (dx, dy) = a.CartesianOffset(b);
+
+        // Calculate the translated distance as a percentage of the total distance
+        double translatedDx = dx * fraction;
+        double translatedDy = dy * fraction;
+
+        // Translate the start coordinate by the calculated distances
+        return a.Translate(translatedDx, translatedDy);
+    }
+
 
     /// <summary>
     ///     A world coordinate as a string in a JSON friendly format

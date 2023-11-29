@@ -26,6 +26,7 @@ public static class ShapesParser
 
         if (!parser.EndOfData) parser.ReadLine();
 
+      
         while (!parser.EndOfData)
         {
             string[]? fields = parser.ReadFields();
@@ -34,9 +35,9 @@ public static class ShapesParser
             string shapeId = fields.Length > 0 ? fields[0] : string.Empty;
             float latitude = fields.Length > 1 ? fields[1].ParseNumber<float>() : 0;
             float longitude = fields.Length > 2 ? fields[2].ParseNumber<float>() : 0;
-            int sequence = fields.Length > 3 ? fields[3].ParseNumber<int>() : 0;
-            float distance = fields.Length > 4 ? fields[4].ParseNumber<float>() : 0;
-            yield return new GtfsShapePoint(shapeId, new Coordinate(longitude, latitude), sequence, distance);
+            int shape_pt_sequence = fields.Length > 3 ? fields[3].ParseNumber<int>() : 0;
+            float shape_dist_traveled = fields.Length > 4 ? fields[4].ParseNumber<float>() : -1;
+            yield return new GtfsShapePoint(shapeId, new Coordinate(longitude, latitude), shape_pt_sequence, shape_dist_traveled);
 
         }
     }
@@ -49,22 +50,12 @@ public static class ShapesParser
         svgGroup.ID = "shapes";
         svgGroup.StrokeColor = SKColors.DarkRed;
         svgGroup.StrokeWidth = 0.1f;
-        svgGroup.FillColor = SKColors.Transparent;
+        svgGroup.FillColor = SKColors.DarkRed;
         svgGroup.AddAll(svgShapeElements);
         return svgGroup;
 
     }
 
-    public static SvgVisual ToSvgShape(this GtfsShape gtfsShape, PointConverter converter)
-    {
-        IEnumerable<Point> points = gtfsShape.ShapePoints.Select(sp => converter.ToPoint(sp.Coordinate));
-        Polyline polyline = new Polyline(points);
-        //SvgPath svgVisual = polyline.ToPath().ToSvgPath();
-
-        SvgPolyline svgVisual = polyline.ToSvgPolyline();
-        svgVisual.ID = gtfsShape.ID;
-        return svgVisual;
-    }
 
 
 }

@@ -18,18 +18,17 @@ internal class Program
     public static void Main()
     {
 
-        MathF.PI.ToString();
-
-
+    
         GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
         gtfsFeed.JoinDataSources();
 
        // AllPoints allPoints = new AllPoints(gtfsFeed);
 
-        //SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
-        //svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svgz");
+        SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
+        svgDocument.Save(@"D:\Downloads\Test\GTFS\skaneDEBUG.svg");
 
-
+        
+       
 
         //GeoJsonDocument geoJsonDocument1 = GeoJsonDocument.Load(@"D:\Downloads\Test\legend.geojson");
         //GeoJsonDocument geoJsonDocument2 = GeoJsonDocument.Load(@"D:\Downloads\Test\otraf.geojson");
