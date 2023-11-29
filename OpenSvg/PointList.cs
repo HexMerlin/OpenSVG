@@ -3,6 +3,7 @@ using System.Collections;
 using System.Globalization;
 using System.Collections.Immutable;
 using SkiaSharp;
+using System.Numerics;
 
 namespace OpenSvg;
 
@@ -31,6 +32,27 @@ public abstract class PointList : IReadOnlyList<Point>, IEquatable<PointList>
 
     public bool Contains(Point point) => Points.Contains(point);
 
+    public Point? PointAtDistance(float distance)
+    {
+        float accumulatedDistance = 0;
+        for (int i = 0; i < Count - 1; i++)
+        {
+            Vector2 start = this[i].Vector;
+            Vector2 end = this[i + 1].Vector;
+
+            float segmentLength = Vector2.Distance(start, end);
+            if (accumulatedDistance + segmentLength >= distance)
+            {
+                float remainingDistance = distance - accumulatedDistance;
+                float interpolationFactor = remainingDistance / segmentLength;
+                return new Point(Vector2.Lerp(start, end, interpolationFactor));
+            }
+            accumulatedDistance += segmentLength;
+        }
+
+        // If the distance exceeds the length of the polyline, return null
+        return null;
+    }
 
 
 

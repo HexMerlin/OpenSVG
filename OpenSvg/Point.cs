@@ -9,17 +9,19 @@ namespace OpenSvg;
 public readonly struct Point : IComparable<Point>, IEquatable<Point>
 {
 
+    public readonly Vector2 Vector;
+   
     /// <summary>
     /// The X-coordinate of the point.
     /// </summary>
     /// <value>The X-coordinate of the point.</value>
-    public float X { get; }
+    public float X => Vector.X;
 
     /// <summary>
     /// The Y-coordinate of the point.
     /// </summary>
     /// <value>The Y-coordinate of the point.</value>
-    public float Y { get; }
+    public float Y => Vector.Y;
 
     /// <summary>
     /// Initializes a new instance of the Point struct with specified X and Y coordinates.
@@ -28,8 +30,8 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <param name="y">The Y-coordinate of the point.</param>
     public Point(float x, float y)
     {
-        X = x.Round();
-        Y = y.Round();
+        Vector = new Vector2(x.Round(), y.Round()); 
+
     }
 
     /// <summary>
@@ -52,22 +54,37 @@ public readonly struct Point : IComparable<Point>, IEquatable<Point>
     /// <value>The point as a vector.</value>
     public Vector2 AsVector => new((float)X, (float)Y);
 
+
+
     /// <summary>
-    ///     Points are ordered by Y, then X.
+    /// Compares the current point with another point, primarily based on their Y coordinates, followed by their X coordinates.
+    /// Ordering is similar to how text is read in an English document: left to right, then top to bottom
     /// </summary>
+    /// <remarks>
+    /// The comparison is first made using the Y coordinates. If the Y coordinates are equal,
+    /// the comparison is then made using the X coordinates. 
+    /// </remarks>
     /// <example>
-    ///     <para>
-    ///         The following example demonstrates use of the <see cref="CompareTo" /> method.
-    ///     </para>
-    ///     <code><![CDATA[
-    /// Point[] points = new Point[] { (0, 10), (20, 5) };
-    /// Console.WriteLine(points.Min());
-    /// // Output: (0, 10)
+    /// <para>
+    /// The following example demonstrates the use of the <see cref="CompareTo"/> method for sorting points.
+    /// </para>
+    /// <code><![CDATA[
+    /// Point[] points = new Point[] { new Point(0, 10), new Point(20, 5) };
+    /// Array.Sort(points);
+    /// Console.WriteLine(String.Join(", ", points));
+    /// // Output: (20, 5), (0, 10)
     /// ]]></code>
     /// </example>
-    /// <param name="other">The point to compare to.</param>
-    /// <returns>A value indicating the relative order of the points.</returns>
+    /// <param name="other">The point to compare to this instance.</param>
+    /// <returns>
+    /// A signed integer that indicates the relative order of the points being compared.
+    /// The return value has these meanings: 
+    /// Less than zero: This instance precedes 'other' in the sort order.
+    /// Zero: This instance occurs in the same position in the sort order as 'other'.
+    /// Greater than zero: This instance follows 'other' in the sort order.
+    /// </returns>
     public int CompareTo(Point other) => (Y, X).CompareTo((other.Y, other.X));
+
 
     /// <summary>
     /// Transforms the point by the specified transform.
