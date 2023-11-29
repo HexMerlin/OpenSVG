@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "C:/Dev/HexMerlin/OpenSvg",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -79,6 +78,16 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.Attributes.DoubleAttr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Attributes.FloatAttr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Attributes.FloatAttr.html"
         }
       },
       "version": ""
@@ -399,6 +408,36 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenSvg.Point.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PointCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PointCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PointComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PointComparer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.PointExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.PointExtensions.html"
         }
       },
       "version": ""
@@ -739,6 +778,9 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -774,7 +816,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

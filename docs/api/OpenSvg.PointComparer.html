@@ -5,10 +5,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class SkiaSharpExtensions
+      <title>Class PointComparer
  | OpenSVG </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class SkiaSharpExtensions
+      <meta name="title" content="Class PointComparer
  | OpenSVG ">
       <meta name="generator" content="docfx ">
   
@@ -91,22 +91,26 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SkiaSharpExtensions.md&amp;value=---%0Auid%3A%20OpenSvg.SkiaSharpExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointComparer.md&amp;value=---%0Auid%3A%20OpenSvg.PointComparer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                          </div>
 
-                    <article class="content wrap" id="_content" data-uid="OpenSvg.SkiaSharpExtensions">
+                    <article class="content wrap" id="_content" data-uid="OpenSvg.PointComparer">
 
 
 
-  <h1 id="OpenSvg_SkiaSharpExtensions" data-uid="OpenSvg.SkiaSharpExtensions" class="text-break">Class SkiaSharpExtensions
+  <h1 id="OpenSvg_PointComparer" data-uid="OpenSvg.PointComparer" class="text-break">Class PointComparer
 </h1>
-  <div class="markdown level0 summary"><p>Extension methods for SkiaSharp types</p>
+  <div class="markdown level0 summary"><p>Provides a default comparer for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">SkiaSharpExtensions</span></div>
+    <div class="level1"><span class="xref">PointComparer</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -134,27 +138,61 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="OpenSvg.html">OpenSvg</a></h6>
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
-  <h5 id="OpenSvg_SkiaSharpExtensions_syntax">Syntax</h5>
+  <h5 id="OpenSvg_PointComparer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SkiaSharpExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public class PointComparer : IComparer&lt;Vector2&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SkiaSharpExtensions_LoadFromFile_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SkiaSharpExtensions.LoadFromFile(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointComparer_Default.md&amp;value=---%0Auid%3A%20OpenSvg.PointComparer.Default%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SkiaSharpExtensions.cs/#L20">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointComparer.cs/#L14">View Source</a>
   </span>
-  <a id="OpenSvg_SkiaSharpExtensions_LoadFromFile_" data-uid="OpenSvg.SkiaSharpExtensions.LoadFromFile*"></a>
-  <h4 id="OpenSvg_SkiaSharpExtensions_LoadFromFile_System_String_" data-uid="OpenSvg.SkiaSharpExtensions.LoadFromFile(System.String)">LoadFromFile(string)</h4>
-  <div class="markdown level1 summary"><p>Loads a <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a> font from the specified file path.</p>
+  <a id="OpenSvg_PointComparer_Default_" data-uid="OpenSvg.PointComparer.Default*"></a>
+  <h4 id="OpenSvg_PointComparer_Default" data-uid="OpenSvg.PointComparer.Default">Default</h4>
+  <div class="markdown level1 summary"><p>Returns a default PointComparer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SKTypeface LoadFromFile(this string fontFilePath)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PointComparer Default { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.PointComparer.html">PointComparer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointComparer_Compare_System_Numerics_Vector2_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.PointComparer.Compare(System.Numerics.Vector2%2CSystem.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointComparer.cs/#L34">View Source</a>
+  </span>
+  <a id="OpenSvg_PointComparer_Compare_" data-uid="OpenSvg.PointComparer.Compare*"></a>
+  <h4 id="OpenSvg_PointComparer_Compare_System_Numerics_Vector2_System_Numerics_Vector2_" data-uid="OpenSvg.PointComparer.Compare(System.Numerics.Vector2,System.Numerics.Vector2)">Compare(Vector2, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Compares two points using Default CompareTo.
+Ordering is similar to how text is read in an English document: left to right, then top to bottom</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(Vector2 p1, Vector2 p2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -167,9 +205,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fontFilePath</span></td>
-        <td><p>The file path of the font.</p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first point to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second point to compare.</p>
 </td>
       </tr>
     </tbody>
@@ -184,99 +228,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a></td>
-        <td><p>The loaded <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a> font.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown when <code class="paramref">fontFilePath</code> is null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></td>
-        <td><p>Thrown when the font file is not found.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>Thrown when the font fails to load from the file path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_SkiaSharpExtensions_SaveToFile_SkiaSharp_SKTypeface_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.SkiaSharpExtensions.SaveToFile(SkiaSharp.SKTypeface%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/SkiaSharpExtensions.cs/#L38">View Source</a>
-  </span>
-  <a id="OpenSvg_SkiaSharpExtensions_SaveToFile_" data-uid="OpenSvg.SkiaSharpExtensions.SaveToFile*"></a>
-  <h4 id="OpenSvg_SkiaSharpExtensions_SaveToFile_SkiaSharp_SKTypeface_System_String_" data-uid="OpenSvg.SkiaSharpExtensions.SaveToFile(SkiaSharp.SKTypeface,System.String)">SaveToFile(SKTypeface, string)</h4>
-  <div class="markdown level1 summary"><p>Saves the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a> font to a file</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SaveToFile(this SKTypeface font, string fontFilePath)</code></pre>
+  <h5 id="OpenSvg_PointComparer_Compare_System_Numerics_Vector2_System_Numerics_Vector2__examples">Examples</h5>
+  <p>
+    The following example demonstrates the use of the default <a class="xref" href="OpenSvg.PointComparer.html">PointComparer</a> method for sorting points.
+</p>
+<pre><code class="lang-csharp">Point[] points = new Point[] { new Point(0, 10), new Point(20, 5) };
+Array.Sort(points, PointComparer.Default);
+Console.WriteLine(String.Join(", ", points));
+// Output: (20, 5), (0, 10)</code></pre>
+
+  <h5 id="OpenSvg_PointComparer_Compare_System_Numerics_Vector2_System_Numerics_Vector2__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_CompareTo_System_Numerics_Vector2_System_Numerics_Vector2_">CompareTo</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>)</div>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a></td>
-        <td><span class="parametername">font</span></td>
-        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.sktypeface">SKTypeface</a> font.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fontFilePath</span></td>
-        <td><p>The file path of the font.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown when <code class="paramref">fontFilePath</code> is null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>Thrown if not all the data font from the font can be read.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer&lt;T&gt;</a>
+  </div>
 
 </article>
                 </div>

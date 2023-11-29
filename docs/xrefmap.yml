@@ -13,15 +13,15 @@ references:
   commentId: T:OpenSvg.AbsoluteOrRatio
   fullName: OpenSvg.AbsoluteOrRatio
   nameWithType: AbsoluteOrRatio
-- uid: OpenSvg.AbsoluteOrRatio.#ctor(System.Double,System.Boolean)
-  name: AbsoluteOrRatio(double, bool)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio__ctor_System_Double_System_Boolean_
-  commentId: M:OpenSvg.AbsoluteOrRatio.#ctor(System.Double,System.Boolean)
-  name.vb: New(Double, Boolean)
-  fullName: OpenSvg.AbsoluteOrRatio.AbsoluteOrRatio(double, bool)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.New(Double, Boolean)
-  nameWithType: AbsoluteOrRatio.AbsoluteOrRatio(double, bool)
-  nameWithType.vb: AbsoluteOrRatio.New(Double, Boolean)
+- uid: OpenSvg.AbsoluteOrRatio.#ctor(System.Single,System.Boolean)
+  name: AbsoluteOrRatio(float, bool)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio__ctor_System_Single_System_Boolean_
+  commentId: M:OpenSvg.AbsoluteOrRatio.#ctor(System.Single,System.Boolean)
+  name.vb: New(Single, Boolean)
+  fullName: OpenSvg.AbsoluteOrRatio.AbsoluteOrRatio(float, bool)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.New(Single, Boolean)
+  nameWithType: AbsoluteOrRatio.AbsoluteOrRatio(float, bool)
+  nameWithType.vb: AbsoluteOrRatio.New(Single, Boolean)
 - uid: OpenSvg.AbsoluteOrRatio.#ctor*
   name: AbsoluteOrRatio
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio__ctor_
@@ -32,15 +32,15 @@ references:
   fullName.vb: OpenSvg.AbsoluteOrRatio.New
   nameWithType: AbsoluteOrRatio.AbsoluteOrRatio
   nameWithType.vb: AbsoluteOrRatio.New
-- uid: OpenSvg.AbsoluteOrRatio.Absolute(System.Double)
-  name: Absolute(double)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Absolute_System_Double_
-  commentId: M:OpenSvg.AbsoluteOrRatio.Absolute(System.Double)
-  name.vb: Absolute(Double)
-  fullName: OpenSvg.AbsoluteOrRatio.Absolute(double)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.Absolute(Double)
-  nameWithType: AbsoluteOrRatio.Absolute(double)
-  nameWithType.vb: AbsoluteOrRatio.Absolute(Double)
+- uid: OpenSvg.AbsoluteOrRatio.Absolute(System.Single)
+  name: Absolute(float)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Absolute_System_Single_
+  commentId: M:OpenSvg.AbsoluteOrRatio.Absolute(System.Single)
+  name.vb: Absolute(Single)
+  fullName: OpenSvg.AbsoluteOrRatio.Absolute(float)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.Absolute(Single)
+  nameWithType: AbsoluteOrRatio.Absolute(float)
+  nameWithType.vb: AbsoluteOrRatio.Absolute(Single)
 - uid: OpenSvg.AbsoluteOrRatio.Absolute*
   name: Absolute
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Absolute_
@@ -105,15 +105,15 @@ references:
   commentId: F:OpenSvg.AbsoluteOrRatio.IsAbsolute
   fullName: OpenSvg.AbsoluteOrRatio.IsAbsolute
   nameWithType: AbsoluteOrRatio.IsAbsolute
-- uid: OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
-  name: Ratio(double)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_System_Double_
-  commentId: M:OpenSvg.AbsoluteOrRatio.Ratio(System.Double)
-  name.vb: Ratio(Double)
-  fullName: OpenSvg.AbsoluteOrRatio.Ratio(double)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.Ratio(Double)
-  nameWithType: AbsoluteOrRatio.Ratio(double)
-  nameWithType.vb: AbsoluteOrRatio.Ratio(Double)
+- uid: OpenSvg.AbsoluteOrRatio.Ratio(System.Single)
+  name: Ratio(float)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_System_Single_
+  commentId: M:OpenSvg.AbsoluteOrRatio.Ratio(System.Single)
+  name.vb: Ratio(Single)
+  fullName: OpenSvg.AbsoluteOrRatio.Ratio(float)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.Ratio(Single)
+  nameWithType: AbsoluteOrRatio.Ratio(float)
+  nameWithType.vb: AbsoluteOrRatio.Ratio(Single)
 - uid: OpenSvg.AbsoluteOrRatio.Ratio*
   name: Ratio
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Ratio_
@@ -121,15 +121,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.AbsoluteOrRatio.Ratio
   nameWithType: AbsoluteOrRatio.Ratio
-- uid: OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
-  name: Resolve(Func<double>)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_System_Func_System_Double__
-  commentId: M:OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Double})
-  name.vb: Resolve(Func(Of Double))
-  fullName: OpenSvg.AbsoluteOrRatio.Resolve(System.Func<double>)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.Resolve(System.Func(Of Double))
-  nameWithType: AbsoluteOrRatio.Resolve(Func<double>)
-  nameWithType.vb: AbsoluteOrRatio.Resolve(Func(Of Double))
+- uid: OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Single})
+  name: Resolve(Func<float>)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_System_Func_System_Single__
+  commentId: M:OpenSvg.AbsoluteOrRatio.Resolve(System.Func{System.Single})
+  name.vb: Resolve(Func(Of Single))
+  fullName: OpenSvg.AbsoluteOrRatio.Resolve(System.Func<float>)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.Resolve(System.Func(Of Single))
+  nameWithType: AbsoluteOrRatio.Resolve(Func<float>)
+  nameWithType.vb: AbsoluteOrRatio.Resolve(Func(Of Single))
 - uid: OpenSvg.AbsoluteOrRatio.Resolve*
   name: Resolve
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Resolve_
@@ -162,15 +162,15 @@ references:
   fullName.vb: OpenSvg.AbsoluteOrRatio.=
   nameWithType: AbsoluteOrRatio.operator ==
   nameWithType.vb: AbsoluteOrRatio.=
-- uid: OpenSvg.AbsoluteOrRatio.op_Implicit(System.Double)~OpenSvg.AbsoluteOrRatio
-  name: implicit operator AbsoluteOrRatio(double)
-  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_op_Implicit_System_Double__OpenSvg_AbsoluteOrRatio
-  commentId: M:OpenSvg.AbsoluteOrRatio.op_Implicit(System.Double)~OpenSvg.AbsoluteOrRatio
-  name.vb: CType(Double)
-  fullName: OpenSvg.AbsoluteOrRatio.implicit operator OpenSvg.AbsoluteOrRatio(double)
-  fullName.vb: OpenSvg.AbsoluteOrRatio.CType(Double)
-  nameWithType: AbsoluteOrRatio.implicit operator AbsoluteOrRatio(double)
-  nameWithType.vb: AbsoluteOrRatio.CType(Double)
+- uid: OpenSvg.AbsoluteOrRatio.op_Implicit(System.Single)~OpenSvg.AbsoluteOrRatio
+  name: implicit operator AbsoluteOrRatio(float)
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_op_Implicit_System_Single__OpenSvg_AbsoluteOrRatio
+  commentId: M:OpenSvg.AbsoluteOrRatio.op_Implicit(System.Single)~OpenSvg.AbsoluteOrRatio
+  name.vb: CType(Single)
+  fullName: OpenSvg.AbsoluteOrRatio.implicit operator OpenSvg.AbsoluteOrRatio(float)
+  fullName.vb: OpenSvg.AbsoluteOrRatio.CType(Single)
+  nameWithType: AbsoluteOrRatio.implicit operator AbsoluteOrRatio(float)
+  nameWithType.vb: AbsoluteOrRatio.CType(Single)
 - uid: OpenSvg.AbsoluteOrRatio.op_Implicit*
   name: implicit operator
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_op_Implicit_
@@ -890,6 +890,72 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Attributes.DoubleAttr.Serialize
   nameWithType: DoubleAttr.Serialize
+- uid: OpenSvg.Attributes.FloatAttr
+  name: FloatAttr
+  href: api/OpenSvg.Attributes.FloatAttr.html
+  commentId: T:OpenSvg.Attributes.FloatAttr
+  fullName: OpenSvg.Attributes.FloatAttr
+  nameWithType: FloatAttr
+- uid: OpenSvg.Attributes.FloatAttr.#ctor(System.String)
+  name: FloatAttr(string)
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr__ctor_System_String_
+  commentId: M:OpenSvg.Attributes.FloatAttr.#ctor(System.String)
+  name.vb: New(String)
+  fullName: OpenSvg.Attributes.FloatAttr.FloatAttr(string)
+  fullName.vb: OpenSvg.Attributes.FloatAttr.New(String)
+  nameWithType: FloatAttr.FloatAttr(string)
+  nameWithType.vb: FloatAttr.New(String)
+- uid: OpenSvg.Attributes.FloatAttr.#ctor(System.String,System.Single)
+  name: FloatAttr(string, float)
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr__ctor_System_String_System_Single_
+  commentId: M:OpenSvg.Attributes.FloatAttr.#ctor(System.String,System.Single)
+  name.vb: New(String, Single)
+  fullName: OpenSvg.Attributes.FloatAttr.FloatAttr(string, float)
+  fullName.vb: OpenSvg.Attributes.FloatAttr.New(String, Single)
+  nameWithType: FloatAttr.FloatAttr(string, float)
+  nameWithType.vb: FloatAttr.New(String, Single)
+- uid: OpenSvg.Attributes.FloatAttr.#ctor*
+  name: FloatAttr
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr__ctor_
+  commentId: Overload:OpenSvg.Attributes.FloatAttr.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Attributes.FloatAttr.FloatAttr
+  fullName.vb: OpenSvg.Attributes.FloatAttr.New
+  nameWithType: FloatAttr.FloatAttr
+  nameWithType.vb: FloatAttr.New
+- uid: OpenSvg.Attributes.FloatAttr.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr_Deserialize_System_String_
+  commentId: M:OpenSvg.Attributes.FloatAttr.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: OpenSvg.Attributes.FloatAttr.Deserialize(string)
+  fullName.vb: OpenSvg.Attributes.FloatAttr.Deserialize(String)
+  nameWithType: FloatAttr.Deserialize(string)
+  nameWithType.vb: FloatAttr.Deserialize(String)
+- uid: OpenSvg.Attributes.FloatAttr.Deserialize*
+  name: Deserialize
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr_Deserialize_
+  commentId: Overload:OpenSvg.Attributes.FloatAttr.Deserialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.FloatAttr.Deserialize
+  nameWithType: FloatAttr.Deserialize
+- uid: OpenSvg.Attributes.FloatAttr.Serialize(System.Single)
+  name: Serialize(float)
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr_Serialize_System_Single_
+  commentId: M:OpenSvg.Attributes.FloatAttr.Serialize(System.Single)
+  name.vb: Serialize(Single)
+  fullName: OpenSvg.Attributes.FloatAttr.Serialize(float)
+  fullName.vb: OpenSvg.Attributes.FloatAttr.Serialize(Single)
+  nameWithType: FloatAttr.Serialize(float)
+  nameWithType.vb: FloatAttr.Serialize(Single)
+- uid: OpenSvg.Attributes.FloatAttr.Serialize*
+  name: Serialize
+  href: api/OpenSvg.Attributes.FloatAttr.html#OpenSvg_Attributes_FloatAttr_Serialize_
+  commentId: Overload:OpenSvg.Attributes.FloatAttr.Serialize
+  isSpec: "True"
+  fullName: OpenSvg.Attributes.FloatAttr.Serialize
+  nameWithType: FloatAttr.Serialize
 - uid: OpenSvg.Attributes.IAttr
   name: IAttr
   href: api/OpenSvg.Attributes.IAttr.html
@@ -1403,24 +1469,24 @@ references:
   fullName.vb: OpenSvg.BoundingBox.New()
   nameWithType: BoundingBox.BoundingBox()
   nameWithType.vb: BoundingBox.New()
-- uid: OpenSvg.BoundingBox.#ctor(OpenSvg.Point,OpenSvg.Point)
-  name: BoundingBox(Point, Point)
-  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_OpenSvg_Point_OpenSvg_Point_
-  commentId: M:OpenSvg.BoundingBox.#ctor(OpenSvg.Point,OpenSvg.Point)
-  name.vb: New(Point, Point)
-  fullName: OpenSvg.BoundingBox.BoundingBox(OpenSvg.Point, OpenSvg.Point)
-  fullName.vb: OpenSvg.BoundingBox.New(OpenSvg.Point, OpenSvg.Point)
-  nameWithType: BoundingBox.BoundingBox(Point, Point)
-  nameWithType.vb: BoundingBox.New(Point, Point)
-- uid: OpenSvg.BoundingBox.#ctor(OpenSvg.Point,System.Double,System.Double)
-  name: BoundingBox(Point, double, double)
-  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_OpenSvg_Point_System_Double_System_Double_
-  commentId: M:OpenSvg.BoundingBox.#ctor(OpenSvg.Point,System.Double,System.Double)
-  name.vb: New(Point, Double, Double)
-  fullName: OpenSvg.BoundingBox.BoundingBox(OpenSvg.Point, double, double)
-  fullName.vb: OpenSvg.BoundingBox.New(OpenSvg.Point, Double, Double)
-  nameWithType: BoundingBox.BoundingBox(Point, double, double)
-  nameWithType.vb: BoundingBox.New(Point, Double, Double)
+- uid: OpenSvg.BoundingBox.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)
+  name: BoundingBox(Vector2, Vector2)
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.BoundingBox.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)
+  name.vb: New(Vector2, Vector2)
+  fullName: OpenSvg.BoundingBox.BoundingBox(System.Numerics.Vector2, System.Numerics.Vector2)
+  fullName.vb: OpenSvg.BoundingBox.New(System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: BoundingBox.BoundingBox(Vector2, Vector2)
+  nameWithType.vb: BoundingBox.New(Vector2, Vector2)
+- uid: OpenSvg.BoundingBox.#ctor(System.Numerics.Vector2,System.Single,System.Single)
+  name: BoundingBox(Vector2, float, float)
+  href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_System_Numerics_Vector2_System_Single_System_Single_
+  commentId: M:OpenSvg.BoundingBox.#ctor(System.Numerics.Vector2,System.Single,System.Single)
+  name.vb: New(Vector2, Single, Single)
+  fullName: OpenSvg.BoundingBox.BoundingBox(System.Numerics.Vector2, float, float)
+  fullName.vb: OpenSvg.BoundingBox.New(System.Numerics.Vector2, Single, Single)
+  nameWithType: BoundingBox.BoundingBox(Vector2, float, float)
+  nameWithType.vb: BoundingBox.New(Vector2, Single, Single)
 - uid: OpenSvg.BoundingBox.#ctor*
   name: BoundingBox
   href: api/OpenSvg.BoundingBox.html#OpenSvg_BoundingBox__ctor_
@@ -1625,15 +1691,15 @@ references:
   commentId: T:OpenSvg.CircularArc
   fullName: OpenSvg.CircularArc
   nameWithType: CircularArc
-- uid: OpenSvg.CircularArc.CreateArcPoints(OpenSvg.Point,System.Double,System.Double,System.Double,System.Int32)
-  name: CreateArcPoints(Point, double, double, double, int)
-  href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_CreateArcPoints_OpenSvg_Point_System_Double_System_Double_System_Double_System_Int32_
-  commentId: M:OpenSvg.CircularArc.CreateArcPoints(OpenSvg.Point,System.Double,System.Double,System.Double,System.Int32)
-  name.vb: CreateArcPoints(Point, Double, Double, Double, Integer)
-  fullName: OpenSvg.CircularArc.CreateArcPoints(OpenSvg.Point, double, double, double, int)
-  fullName.vb: OpenSvg.CircularArc.CreateArcPoints(OpenSvg.Point, Double, Double, Double, Integer)
-  nameWithType: CircularArc.CreateArcPoints(Point, double, double, double, int)
-  nameWithType.vb: CircularArc.CreateArcPoints(Point, Double, Double, Double, Integer)
+- uid: OpenSvg.CircularArc.CreateArcPoints(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Int32)
+  name: CreateArcPoints(Vector2, float, float, float, int)
+  href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_CreateArcPoints_System_Numerics_Vector2_System_Single_System_Single_System_Single_System_Int32_
+  commentId: M:OpenSvg.CircularArc.CreateArcPoints(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Int32)
+  name.vb: CreateArcPoints(Vector2, Single, Single, Single, Integer)
+  fullName: OpenSvg.CircularArc.CreateArcPoints(System.Numerics.Vector2, float, float, float, int)
+  fullName.vb: OpenSvg.CircularArc.CreateArcPoints(System.Numerics.Vector2, Single, Single, Single, Integer)
+  nameWithType: CircularArc.CreateArcPoints(Vector2, float, float, float, int)
+  nameWithType.vb: CircularArc.CreateArcPoints(Vector2, Single, Single, Single, Integer)
 - uid: OpenSvg.CircularArc.CreateArcPoints*
   name: CreateArcPoints
   href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_CreateArcPoints_
@@ -1641,15 +1707,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.CircularArc.CreateArcPoints
   nameWithType: CircularArc.CreateArcPoints
-- uid: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(System.Double)
-  name: NormalizeDegreesToPositiveBelow360(double)
-  href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_NormalizeDegreesToPositiveBelow360_System_Double_
-  commentId: M:OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(System.Double)
-  name.vb: NormalizeDegreesToPositiveBelow360(Double)
-  fullName: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(double)
-  fullName.vb: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(Double)
-  nameWithType: CircularArc.NormalizeDegreesToPositiveBelow360(double)
-  nameWithType.vb: CircularArc.NormalizeDegreesToPositiveBelow360(Double)
+- uid: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(System.Single)
+  name: NormalizeDegreesToPositiveBelow360(float)
+  href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_NormalizeDegreesToPositiveBelow360_System_Single_
+  commentId: M:OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(System.Single)
+  name.vb: NormalizeDegreesToPositiveBelow360(Single)
+  fullName: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(float)
+  fullName.vb: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360(Single)
+  nameWithType: CircularArc.NormalizeDegreesToPositiveBelow360(float)
+  nameWithType.vb: CircularArc.NormalizeDegreesToPositiveBelow360(Single)
 - uid: OpenSvg.CircularArc.NormalizeDegreesToPositiveBelow360*
   name: NormalizeDegreesToPositiveBelow360
   href: api/OpenSvg.CircularArc.html#OpenSvg_CircularArc_NormalizeDegreesToPositiveBelow360_
@@ -1737,22 +1803,6 @@ references:
   commentId: T:OpenSvg.CommonTypeExtensions
   fullName: OpenSvg.CommonTypeExtensions
   nameWithType: CommonTypeExtensions
-- uid: OpenSvg.CommonTypeExtensions.Round(System.Double)
-  name: Round(double)
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_Round_System_Double_
-  commentId: M:OpenSvg.CommonTypeExtensions.Round(System.Double)
-  name.vb: Round(Double)
-  fullName: OpenSvg.CommonTypeExtensions.Round(double)
-  fullName.vb: OpenSvg.CommonTypeExtensions.Round(Double)
-  nameWithType: CommonTypeExtensions.Round(double)
-  nameWithType.vb: CommonTypeExtensions.Round(Double)
-- uid: OpenSvg.CommonTypeExtensions.Round*
-  name: Round
-  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_Round_
-  commentId: Overload:OpenSvg.CommonTypeExtensions.Round
-  isSpec: "True"
-  fullName: OpenSvg.CommonTypeExtensions.Round
-  nameWithType: CommonTypeExtensions.Round
 - uid: OpenSvg.CommonTypeExtensions.ToDouble(System.String)
   name: ToDouble(string)
   href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToDouble_System_String_
@@ -1769,6 +1819,31 @@ references:
   isSpec: "True"
   fullName: OpenSvg.CommonTypeExtensions.ToDouble
   nameWithType: CommonTypeExtensions.ToDouble
+- uid: OpenSvg.CommonTypeExtensions.ToFloat(System.Double)
+  name: ToFloat(double)
+  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToFloat_System_Double_
+  commentId: M:OpenSvg.CommonTypeExtensions.ToFloat(System.Double)
+  name.vb: ToFloat(Double)
+  fullName: OpenSvg.CommonTypeExtensions.ToFloat(double)
+  fullName.vb: OpenSvg.CommonTypeExtensions.ToFloat(Double)
+  nameWithType: CommonTypeExtensions.ToFloat(double)
+  nameWithType.vb: CommonTypeExtensions.ToFloat(Double)
+- uid: OpenSvg.CommonTypeExtensions.ToFloat(System.String)
+  name: ToFloat(string)
+  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToFloat_System_String_
+  commentId: M:OpenSvg.CommonTypeExtensions.ToFloat(System.String)
+  name.vb: ToFloat(String)
+  fullName: OpenSvg.CommonTypeExtensions.ToFloat(string)
+  fullName.vb: OpenSvg.CommonTypeExtensions.ToFloat(String)
+  nameWithType: CommonTypeExtensions.ToFloat(string)
+  nameWithType.vb: CommonTypeExtensions.ToFloat(String)
+- uid: OpenSvg.CommonTypeExtensions.ToFloat*
+  name: ToFloat
+  href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToFloat_
+  commentId: Overload:OpenSvg.CommonTypeExtensions.ToFloat
+  isSpec: "True"
+  fullName: OpenSvg.CommonTypeExtensions.ToFloat
+  nameWithType: CommonTypeExtensions.ToFloat
 - uid: OpenSvg.CommonTypeExtensions.ToInt(System.String)
   name: ToInt(string)
   href: api/OpenSvg.CommonTypeExtensions.html#OpenSvg_CommonTypeExtensions_ToInt_System_String_
@@ -1840,15 +1915,15 @@ references:
   fullName.vb: OpenSvg.Config.DrawConfig.New()
   nameWithType: DrawConfig.DrawConfig()
   nameWithType.vb: DrawConfig.New()
-- uid: OpenSvg.Config.DrawConfig.#ctor(SkiaSharp.SKColor,SkiaSharp.SKColor,System.Double)
-  name: DrawConfig(SKColor, SKColor, double)
-  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig__ctor_SkiaSharp_SKColor_SkiaSharp_SKColor_System_Double_
-  commentId: M:OpenSvg.Config.DrawConfig.#ctor(SkiaSharp.SKColor,SkiaSharp.SKColor,System.Double)
-  name.vb: New(SKColor, SKColor, Double)
-  fullName: OpenSvg.Config.DrawConfig.DrawConfig(SkiaSharp.SKColor, SkiaSharp.SKColor, double)
-  fullName.vb: OpenSvg.Config.DrawConfig.New(SkiaSharp.SKColor, SkiaSharp.SKColor, Double)
-  nameWithType: DrawConfig.DrawConfig(SKColor, SKColor, double)
-  nameWithType.vb: DrawConfig.New(SKColor, SKColor, Double)
+- uid: OpenSvg.Config.DrawConfig.#ctor(SkiaSharp.SKColor,SkiaSharp.SKColor,System.Single)
+  name: DrawConfig(SKColor, SKColor, float)
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig__ctor_SkiaSharp_SKColor_SkiaSharp_SKColor_System_Single_
+  commentId: M:OpenSvg.Config.DrawConfig.#ctor(SkiaSharp.SKColor,SkiaSharp.SKColor,System.Single)
+  name.vb: New(SKColor, SKColor, Single)
+  fullName: OpenSvg.Config.DrawConfig.DrawConfig(SkiaSharp.SKColor, SkiaSharp.SKColor, float)
+  fullName.vb: OpenSvg.Config.DrawConfig.New(SkiaSharp.SKColor, SkiaSharp.SKColor, Single)
+  nameWithType: DrawConfig.DrawConfig(SKColor, SKColor, float)
+  nameWithType.vb: DrawConfig.New(SKColor, SKColor, Single)
 - uid: OpenSvg.Config.DrawConfig.#ctor*
   name: DrawConfig
   href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig__ctor_
@@ -1976,15 +2051,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Config.DrawConfig.WithStrokeColor
   nameWithType: DrawConfig.WithStrokeColor
-- uid: OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Double)
-  name: WithStrokeWidth(double)
-  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_WithStrokeWidth_System_Double_
-  commentId: M:OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Double)
-  name.vb: WithStrokeWidth(Double)
-  fullName: OpenSvg.Config.DrawConfig.WithStrokeWidth(double)
-  fullName.vb: OpenSvg.Config.DrawConfig.WithStrokeWidth(Double)
-  nameWithType: DrawConfig.WithStrokeWidth(double)
-  nameWithType.vb: DrawConfig.WithStrokeWidth(Double)
+- uid: OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Single)
+  name: WithStrokeWidth(float)
+  href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_WithStrokeWidth_System_Single_
+  commentId: M:OpenSvg.Config.DrawConfig.WithStrokeWidth(System.Single)
+  name.vb: WithStrokeWidth(Single)
+  fullName: OpenSvg.Config.DrawConfig.WithStrokeWidth(float)
+  fullName.vb: OpenSvg.Config.DrawConfig.WithStrokeWidth(Single)
+  nameWithType: DrawConfig.WithStrokeWidth(float)
+  nameWithType.vb: DrawConfig.WithStrokeWidth(Single)
 - uid: OpenSvg.Config.DrawConfig.WithStrokeWidth*
   name: WithStrokeWidth
   href: api/OpenSvg.Config.DrawConfig.html#OpenSvg_Config_DrawConfig_WithStrokeWidth_
@@ -1998,15 +2073,15 @@ references:
   commentId: T:OpenSvg.Config.RectangleConfig
   fullName: OpenSvg.Config.RectangleConfig
   nameWithType: RectangleConfig
-- uid: OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Double)
-  name: RectangleConfig(Size, DrawConfig, int, double)
-  href: api/OpenSvg.Config.RectangleConfig.html#OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double_
-  commentId: M:OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Double)
-  name.vb: New(Size, DrawConfig, Integer, Double)
-  fullName: OpenSvg.Config.RectangleConfig.RectangleConfig(OpenSvg.Size, OpenSvg.Config.DrawConfig, int, double)
-  fullName.vb: OpenSvg.Config.RectangleConfig.New(OpenSvg.Size, OpenSvg.Config.DrawConfig, Integer, Double)
-  nameWithType: RectangleConfig.RectangleConfig(Size, DrawConfig, int, double)
-  nameWithType.vb: RectangleConfig.New(Size, DrawConfig, Integer, Double)
+- uid: OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Single)
+  name: RectangleConfig(Size, DrawConfig, int, float)
+  href: api/OpenSvg.Config.RectangleConfig.html#OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Single_
+  commentId: M:OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Single)
+  name.vb: New(Size, DrawConfig, Integer, Single)
+  fullName: OpenSvg.Config.RectangleConfig.RectangleConfig(OpenSvg.Size, OpenSvg.Config.DrawConfig, int, float)
+  fullName.vb: OpenSvg.Config.RectangleConfig.New(OpenSvg.Size, OpenSvg.Config.DrawConfig, Integer, Single)
+  nameWithType: RectangleConfig.RectangleConfig(Size, DrawConfig, int, float)
+  nameWithType.vb: RectangleConfig.New(Size, DrawConfig, Integer, Single)
 - uid: OpenSvg.Config.RectangleConfig.#ctor*
   name: RectangleConfig
   href: api/OpenSvg.Config.RectangleConfig.html#OpenSvg_Config_RectangleConfig__ctor_
@@ -2162,15 +2237,15 @@ references:
   fullName.vb: OpenSvg.Config.TextConfig.New()
   nameWithType: TextConfig.TextConfig()
   nameWithType.vb: TextConfig.New()
-- uid: OpenSvg.Config.TextConfig.#ctor(System.String,OpenSvg.SvgNodes.SvgFont,System.Double,OpenSvg.Config.DrawConfig)
-  name: TextConfig(string, SvgFont, double, DrawConfig)
-  href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig__ctor_System_String_OpenSvg_SvgNodes_SvgFont_System_Double_OpenSvg_Config_DrawConfig_
-  commentId: M:OpenSvg.Config.TextConfig.#ctor(System.String,OpenSvg.SvgNodes.SvgFont,System.Double,OpenSvg.Config.DrawConfig)
-  name.vb: New(String, SvgFont, Double, DrawConfig)
-  fullName: OpenSvg.Config.TextConfig.TextConfig(string, OpenSvg.SvgNodes.SvgFont, double, OpenSvg.Config.DrawConfig)
-  fullName.vb: OpenSvg.Config.TextConfig.New(String, OpenSvg.SvgNodes.SvgFont, Double, OpenSvg.Config.DrawConfig)
-  nameWithType: TextConfig.TextConfig(string, SvgFont, double, DrawConfig)
-  nameWithType.vb: TextConfig.New(String, SvgFont, Double, DrawConfig)
+- uid: OpenSvg.Config.TextConfig.#ctor(System.String,OpenSvg.SvgNodes.SvgFont,System.Single,OpenSvg.Config.DrawConfig)
+  name: TextConfig(string, SvgFont, float, DrawConfig)
+  href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig__ctor_System_String_OpenSvg_SvgNodes_SvgFont_System_Single_OpenSvg_Config_DrawConfig_
+  commentId: M:OpenSvg.Config.TextConfig.#ctor(System.String,OpenSvg.SvgNodes.SvgFont,System.Single,OpenSvg.Config.DrawConfig)
+  name.vb: New(String, SvgFont, Single, DrawConfig)
+  fullName: OpenSvg.Config.TextConfig.TextConfig(string, OpenSvg.SvgNodes.SvgFont, float, OpenSvg.Config.DrawConfig)
+  fullName.vb: OpenSvg.Config.TextConfig.New(String, OpenSvg.SvgNodes.SvgFont, Single, OpenSvg.Config.DrawConfig)
+  nameWithType: TextConfig.TextConfig(string, SvgFont, float, DrawConfig)
+  nameWithType.vb: TextConfig.New(String, SvgFont, Single, DrawConfig)
 - uid: OpenSvg.Config.TextConfig.#ctor*
   name: TextConfig
   href: api/OpenSvg.Config.TextConfig.html#OpenSvg_Config_TextConfig__ctor_
@@ -2325,12 +2400,12 @@ references:
   commentId: F:OpenSvg.Constants.DefaultContainerWidth
   fullName: OpenSvg.Constants.DefaultContainerWidth
   nameWithType: Constants.DefaultContainerWidth
-- uid: OpenSvg.Constants.DoubleDecimalPrecision
-  name: DoubleDecimalPrecision
-  href: api/OpenSvg.Constants.html#OpenSvg_Constants_DoubleDecimalPrecision
-  commentId: F:OpenSvg.Constants.DoubleDecimalPrecision
-  fullName: OpenSvg.Constants.DoubleDecimalPrecision
-  nameWithType: Constants.DoubleDecimalPrecision
+- uid: OpenSvg.Constants.FloatDecimalsPrecision
+  name: FloatDecimalsPrecision
+  href: api/OpenSvg.Constants.html#OpenSvg_Constants_FloatDecimalsPrecision
+  commentId: F:OpenSvg.Constants.FloatDecimalsPrecision
+  fullName: OpenSvg.Constants.FloatDecimalsPrecision
+  nameWithType: Constants.FloatDecimalsPrecision
 - uid: OpenSvg.ConvexHull
   name: ConvexHull
   href: api/OpenSvg.ConvexHull.html
@@ -2346,24 +2421,24 @@ references:
   fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Generic.IEnumerable(Of OpenSvg.ConvexHull))
   nameWithType: ConvexHull.ConvexHull(IEnumerable<ConvexHull>)
   nameWithType.vb: ConvexHull.New(IEnumerable(Of ConvexHull))
-- uid: OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name: ConvexHull(IEnumerable<Point>)
-  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
-  commentId: M:OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name.vb: New(IEnumerable(Of Point))
-  fullName: OpenSvg.ConvexHull.ConvexHull(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
-  fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
-  nameWithType: ConvexHull.ConvexHull(IEnumerable<Point>)
-  nameWithType.vb: ConvexHull.New(IEnumerable(Of Point))
-- uid: OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point},OpenSvg.ConvexHull.SkipGrahamsScan)
-  name: ConvexHull(ImmutableArray<Point>, SkipGrahamsScan)
-  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__OpenSvg_ConvexHull_SkipGrahamsScan_
-  commentId: M:OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point},OpenSvg.ConvexHull.SkipGrahamsScan)
-  name.vb: New(ImmutableArray(Of Point), SkipGrahamsScan)
-  fullName: OpenSvg.ConvexHull.ConvexHull(System.Collections.Immutable.ImmutableArray<OpenSvg.Point>, OpenSvg.ConvexHull.SkipGrahamsScan)
-  fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Immutable.ImmutableArray(Of OpenSvg.Point), OpenSvg.ConvexHull.SkipGrahamsScan)
-  nameWithType: ConvexHull.ConvexHull(ImmutableArray<Point>, ConvexHull.SkipGrahamsScan)
-  nameWithType.vb: ConvexHull.New(ImmutableArray(Of Point), ConvexHull.SkipGrahamsScan)
+- uid: OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: ConvexHull(IEnumerable<Vector2>)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.ConvexHull.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: New(IEnumerable(Of Vector2))
+  fullName: OpenSvg.ConvexHull.ConvexHull(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: ConvexHull.ConvexHull(IEnumerable<Vector2>)
+  nameWithType.vb: ConvexHull.New(IEnumerable(Of Vector2))
+- uid: OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2},OpenSvg.ConvexHull.SkipGrahamsScan)
+  name: ConvexHull(ImmutableArray<Vector2>, SkipGrahamsScan)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_System_Collections_Immutable_ImmutableArray_System_Numerics_Vector2__OpenSvg_ConvexHull_SkipGrahamsScan_
+  commentId: M:OpenSvg.ConvexHull.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2},OpenSvg.ConvexHull.SkipGrahamsScan)
+  name.vb: New(ImmutableArray(Of Vector2), SkipGrahamsScan)
+  fullName: OpenSvg.ConvexHull.ConvexHull(System.Collections.Immutable.ImmutableArray<System.Numerics.Vector2>, OpenSvg.ConvexHull.SkipGrahamsScan)
+  fullName.vb: OpenSvg.ConvexHull.New(System.Collections.Immutable.ImmutableArray(Of System.Numerics.Vector2), OpenSvg.ConvexHull.SkipGrahamsScan)
+  nameWithType: ConvexHull.ConvexHull(ImmutableArray<Vector2>, ConvexHull.SkipGrahamsScan)
+  nameWithType.vb: ConvexHull.New(ImmutableArray(Of Vector2), ConvexHull.SkipGrahamsScan)
 - uid: OpenSvg.ConvexHull.#ctor*
   name: ConvexHull
   href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull__ctor_
@@ -2418,15 +2493,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.ConvexHull.GetHashCode
   nameWithType: ConvexHull.GetHashCode
-- uid: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name: IsConvexHull(IEnumerable<Point>)
-  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_OpenSvg_Point__
-  commentId: M:OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name.vb: IsConvexHull(IEnumerable(Of Point))
-  fullName: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
-  fullName.vb: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
-  nameWithType: ConvexHull.IsConvexHull(IEnumerable<Point>)
-  nameWithType.vb: ConvexHull.IsConvexHull(IEnumerable(Of Point))
+- uid: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: IsConvexHull(IEnumerable<Vector2>)
+  href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_IsConvexHull_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: IsConvexHull(IEnumerable(Of Vector2))
+  fullName: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.ConvexHull.IsConvexHull(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: ConvexHull.IsConvexHull(IEnumerable<Vector2>)
+  nameWithType.vb: ConvexHull.IsConvexHull(IEnumerable(Of Vector2))
 - uid: OpenSvg.ConvexHull.IsConvexHull*
   name: IsConvexHull
   href: api/OpenSvg.ConvexHull.html#OpenSvg_ConvexHull_IsConvexHull_
@@ -3056,15 +3131,15 @@ references:
   commentId: T:OpenSvg.PathOptimize.PointReduction
   fullName: OpenSvg.PathOptimize.PointReduction
   nameWithType: PointReduction
-- uid: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[],System.Double)
-  name: Reduce(Point[], double)
-  href: api/OpenSvg.PathOptimize.PointReduction.html#OpenSvg_PathOptimize_PointReduction_Reduce_OpenSvg_Point___System_Double_
-  commentId: M:OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[],System.Double)
-  name.vb: Reduce(Point(), Double)
-  fullName: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point[], double)
-  fullName.vb: OpenSvg.PathOptimize.PointReduction.Reduce(OpenSvg.Point(), Double)
-  nameWithType: PointReduction.Reduce(Point[], double)
-  nameWithType.vb: PointReduction.Reduce(Point(), Double)
+- uid: OpenSvg.PathOptimize.PointReduction.Reduce(System.Numerics.Vector2[],System.Single)
+  name: Reduce(Vector2[], float)
+  href: api/OpenSvg.PathOptimize.PointReduction.html#OpenSvg_PathOptimize_PointReduction_Reduce_System_Numerics_Vector2___System_Single_
+  commentId: M:OpenSvg.PathOptimize.PointReduction.Reduce(System.Numerics.Vector2[],System.Single)
+  name.vb: Reduce(Vector2(), Single)
+  fullName: OpenSvg.PathOptimize.PointReduction.Reduce(System.Numerics.Vector2[], float)
+  fullName.vb: OpenSvg.PathOptimize.PointReduction.Reduce(System.Numerics.Vector2(), Single)
+  nameWithType: PointReduction.Reduce(Vector2[], float)
+  nameWithType.vb: PointReduction.Reduce(Vector2(), Single)
 - uid: OpenSvg.PathOptimize.PointReduction.Reduce*
   name: Reduce
   href: api/OpenSvg.PathOptimize.PointReduction.html#OpenSvg_PathOptimize_PointReduction_Reduce_
@@ -3400,21 +3475,152 @@ references:
   fullName.vb: OpenSvg.Point.<=
   nameWithType: Point.operator <=
   nameWithType.vb: Point.<=
+- uid: OpenSvg.PointCollectionExtensions
+  name: PointCollectionExtensions
+  href: api/OpenSvg.PointCollectionExtensions.html
+  commentId: T:OpenSvg.PointCollectionExtensions
+  fullName: OpenSvg.PointCollectionExtensions
+  nameWithType: PointCollectionExtensions
+- uid: OpenSvg.PointCollectionExtensions.Max(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: Max(IEnumerable<Vector2>)
+  href: api/OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Max_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.PointCollectionExtensions.Max(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: Max(IEnumerable(Of Vector2))
+  fullName: OpenSvg.PointCollectionExtensions.Max(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.PointCollectionExtensions.Max(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: PointCollectionExtensions.Max(IEnumerable<Vector2>)
+  nameWithType.vb: PointCollectionExtensions.Max(IEnumerable(Of Vector2))
+- uid: OpenSvg.PointCollectionExtensions.Max*
+  name: Max
+  href: api/OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Max_
+  commentId: Overload:OpenSvg.PointCollectionExtensions.Max
+  isSpec: "True"
+  fullName: OpenSvg.PointCollectionExtensions.Max
+  nameWithType: PointCollectionExtensions.Max
+- uid: OpenSvg.PointCollectionExtensions.Min(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: Min(IEnumerable<Vector2>)
+  href: api/OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Min_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.PointCollectionExtensions.Min(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: Min(IEnumerable(Of Vector2))
+  fullName: OpenSvg.PointCollectionExtensions.Min(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.PointCollectionExtensions.Min(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: PointCollectionExtensions.Min(IEnumerable<Vector2>)
+  nameWithType.vb: PointCollectionExtensions.Min(IEnumerable(Of Vector2))
+- uid: OpenSvg.PointCollectionExtensions.Min*
+  name: Min
+  href: api/OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Min_
+  commentId: Overload:OpenSvg.PointCollectionExtensions.Min
+  isSpec: "True"
+  fullName: OpenSvg.PointCollectionExtensions.Min
+  nameWithType: PointCollectionExtensions.Min
+- uid: OpenSvg.PointComparer
+  name: PointComparer
+  href: api/OpenSvg.PointComparer.html
+  commentId: T:OpenSvg.PointComparer
+  fullName: OpenSvg.PointComparer
+  nameWithType: PointComparer
+- uid: OpenSvg.PointComparer.Compare(System.Numerics.Vector2,System.Numerics.Vector2)
+  name: Compare(Vector2, Vector2)
+  href: api/OpenSvg.PointComparer.html#OpenSvg_PointComparer_Compare_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.PointComparer.Compare(System.Numerics.Vector2,System.Numerics.Vector2)
+  fullName: OpenSvg.PointComparer.Compare(System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: PointComparer.Compare(Vector2, Vector2)
+- uid: OpenSvg.PointComparer.Compare*
+  name: Compare
+  href: api/OpenSvg.PointComparer.html#OpenSvg_PointComparer_Compare_
+  commentId: Overload:OpenSvg.PointComparer.Compare
+  isSpec: "True"
+  fullName: OpenSvg.PointComparer.Compare
+  nameWithType: PointComparer.Compare
+- uid: OpenSvg.PointComparer.Default
+  name: Default
+  href: api/OpenSvg.PointComparer.html#OpenSvg_PointComparer_Default
+  commentId: P:OpenSvg.PointComparer.Default
+  fullName: OpenSvg.PointComparer.Default
+  nameWithType: PointComparer.Default
+- uid: OpenSvg.PointComparer.Default*
+  name: Default
+  href: api/OpenSvg.PointComparer.html#OpenSvg_PointComparer_Default_
+  commentId: Overload:OpenSvg.PointComparer.Default
+  isSpec: "True"
+  fullName: OpenSvg.PointComparer.Default
+  nameWithType: PointComparer.Default
+- uid: OpenSvg.PointExtensions
+  name: PointExtensions
+  href: api/OpenSvg.PointExtensions.html
+  commentId: T:OpenSvg.PointExtensions
+  fullName: OpenSvg.PointExtensions
+  nameWithType: PointExtensions
+- uid: OpenSvg.PointExtensions.CompareTo(System.Numerics.Vector2,System.Numerics.Vector2)
+  name: CompareTo(Vector2, Vector2)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_CompareTo_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.PointExtensions.CompareTo(System.Numerics.Vector2,System.Numerics.Vector2)
+  fullName: OpenSvg.PointExtensions.CompareTo(System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: PointExtensions.CompareTo(Vector2, Vector2)
+- uid: OpenSvg.PointExtensions.CompareTo*
+  name: CompareTo
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_CompareTo_
+  commentId: Overload:OpenSvg.PointExtensions.CompareTo
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.CompareTo
+  nameWithType: PointExtensions.CompareTo
+- uid: OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)
+  name: IsOnLineSegment(Vector2, Vector2, Vector2)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_IsOnLineSegment_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)
+  fullName: OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2, System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: PointExtensions.IsOnLineSegment(Vector2, Vector2, Vector2)
+- uid: OpenSvg.PointExtensions.IsOnLineSegment*
+  name: IsOnLineSegment
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_IsOnLineSegment_
+  commentId: Overload:OpenSvg.PointExtensions.IsOnLineSegment
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.IsOnLineSegment
+  nameWithType: PointExtensions.IsOnLineSegment
+- uid: OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2,System.Numerics.Vector2,System.Double)
+  name: IsWithinDistance(Vector2, Vector2, double)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_IsWithinDistance_System_Numerics_Vector2_System_Numerics_Vector2_System_Double_
+  commentId: M:OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2,System.Numerics.Vector2,System.Double)
+  name.vb: IsWithinDistance(Vector2, Vector2, Double)
+  fullName: OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2, System.Numerics.Vector2, double)
+  fullName.vb: OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2, System.Numerics.Vector2, Double)
+  nameWithType: PointExtensions.IsWithinDistance(Vector2, Vector2, double)
+  nameWithType.vb: PointExtensions.IsWithinDistance(Vector2, Vector2, Double)
+- uid: OpenSvg.PointExtensions.IsWithinDistance*
+  name: IsWithinDistance
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_IsWithinDistance_
+  commentId: Overload:OpenSvg.PointExtensions.IsWithinDistance
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.IsWithinDistance
+  nameWithType: PointExtensions.IsWithinDistance
+- uid: OpenSvg.PointExtensions.Transform(System.Numerics.Vector2,OpenSvg.Transform)
+  name: Transform(Vector2, Transform)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_Transform_System_Numerics_Vector2_OpenSvg_Transform_
+  commentId: M:OpenSvg.PointExtensions.Transform(System.Numerics.Vector2,OpenSvg.Transform)
+  fullName: OpenSvg.PointExtensions.Transform(System.Numerics.Vector2, OpenSvg.Transform)
+  nameWithType: PointExtensions.Transform(Vector2, Transform)
+- uid: OpenSvg.PointExtensions.Transform*
+  name: Transform
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_Transform_
+  commentId: Overload:OpenSvg.PointExtensions.Transform
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.Transform
+  nameWithType: PointExtensions.Transform
 - uid: OpenSvg.PointList
   name: PointList
   href: api/OpenSvg.PointList.html
   commentId: T:OpenSvg.PointList
   fullName: OpenSvg.PointList
   nameWithType: PointList
-- uid: OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point})
-  name: PointList(ImmutableArray<Point>)
-  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_System_Collections_Immutable_ImmutableArray_OpenSvg_Point__
-  commentId: M:OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{OpenSvg.Point})
-  name.vb: New(ImmutableArray(Of Point))
-  fullName: OpenSvg.PointList.PointList(System.Collections.Immutable.ImmutableArray<OpenSvg.Point>)
-  fullName.vb: OpenSvg.PointList.New(System.Collections.Immutable.ImmutableArray(Of OpenSvg.Point))
-  nameWithType: PointList.PointList(ImmutableArray<Point>)
-  nameWithType.vb: PointList.New(ImmutableArray(Of Point))
+- uid: OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name: PointList(ImmutableArray<Vector2>)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_System_Collections_Immutable_ImmutableArray_System_Numerics_Vector2__
+  commentId: M:OpenSvg.PointList.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name.vb: New(ImmutableArray(Of Vector2))
+  fullName: OpenSvg.PointList.PointList(System.Collections.Immutable.ImmutableArray<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.PointList.New(System.Collections.Immutable.ImmutableArray(Of System.Numerics.Vector2))
+  nameWithType: PointList.PointList(ImmutableArray<Vector2>)
+  nameWithType.vb: PointList.New(ImmutableArray(Of Vector2))
 - uid: OpenSvg.PointList.#ctor*
   name: PointList
   href: api/OpenSvg.PointList.html#OpenSvg_PointList__ctor_
@@ -3425,12 +3631,12 @@ references:
   fullName.vb: OpenSvg.PointList.New
   nameWithType: PointList.PointList
   nameWithType.vb: PointList.New
-- uid: OpenSvg.PointList.Contains(OpenSvg.Point)
-  name: Contains(Point)
-  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Contains_OpenSvg_Point_
-  commentId: M:OpenSvg.PointList.Contains(OpenSvg.Point)
-  fullName: OpenSvg.PointList.Contains(OpenSvg.Point)
-  nameWithType: PointList.Contains(Point)
+- uid: OpenSvg.PointList.Contains(System.Numerics.Vector2)
+  name: Contains(Vector2)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_Contains_System_Numerics_Vector2_
+  commentId: M:OpenSvg.PointList.Contains(System.Numerics.Vector2)
+  fullName: OpenSvg.PointList.Contains(System.Numerics.Vector2)
+  nameWithType: PointList.Contains(Vector2)
 - uid: OpenSvg.PointList.Contains*
   name: Contains
   href: api/OpenSvg.PointList.html#OpenSvg_PointList_Contains_
@@ -3537,6 +3743,22 @@ references:
   fullName.vb: OpenSvg.PointList.this[]
   nameWithType: PointList.this
   nameWithType.vb: PointList.this[]
+- uid: OpenSvg.PointList.PointAtDistance(System.Single)
+  name: PointAtDistance(float)
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_PointAtDistance_System_Single_
+  commentId: M:OpenSvg.PointList.PointAtDistance(System.Single)
+  name.vb: PointAtDistance(Single)
+  fullName: OpenSvg.PointList.PointAtDistance(float)
+  fullName.vb: OpenSvg.PointList.PointAtDistance(Single)
+  nameWithType: PointList.PointAtDistance(float)
+  nameWithType.vb: PointList.PointAtDistance(Single)
+- uid: OpenSvg.PointList.PointAtDistance*
+  name: PointAtDistance
+  href: api/OpenSvg.PointList.html#OpenSvg_PointList_PointAtDistance_
+  commentId: Overload:OpenSvg.PointList.PointAtDistance
+  isSpec: "True"
+  fullName: OpenSvg.PointList.PointAtDistance
+  nameWithType: PointList.PointAtDistance
 - uid: OpenSvg.PointList.Points
   name: Points
   href: api/OpenSvg.PointList.html#OpenSvg_PointList_Points
@@ -3593,15 +3815,15 @@ references:
   commentId: T:OpenSvg.Polygon
   fullName: OpenSvg.Polygon
   nameWithType: Polygon
-- uid: OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name: Polygon(IEnumerable<Point>)
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
-  commentId: M:OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name.vb: New(IEnumerable(Of Point))
-  fullName: OpenSvg.Polygon.Polygon(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
-  fullName.vb: OpenSvg.Polygon.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
-  nameWithType: Polygon.Polygon(IEnumerable<Point>)
-  nameWithType.vb: Polygon.New(IEnumerable(Of Point))
+- uid: OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: Polygon(IEnumerable<Vector2>)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: New(IEnumerable(Of Vector2))
+  fullName: OpenSvg.Polygon.Polygon(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.Polygon.New(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: Polygon.Polygon(IEnumerable<Vector2>)
+  nameWithType.vb: Polygon.New(IEnumerable(Of Vector2))
 - uid: OpenSvg.Polygon.#ctor*
   name: Polygon
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon__ctor_
@@ -3705,12 +3927,12 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.GetHashCode
   nameWithType: Polygon.GetHashCode
-- uid: OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)
-  name: IsOnEdge(Point)
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_IsOnEdge_OpenSvg_Point_
-  commentId: M:OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)
-  fullName: OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)
-  nameWithType: Polygon.IsOnEdge(Point)
+- uid: OpenSvg.Polygon.IsOnEdge(System.Numerics.Vector2)
+  name: IsOnEdge(Vector2)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_IsOnEdge_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Polygon.IsOnEdge(System.Numerics.Vector2)
+  fullName: OpenSvg.Polygon.IsOnEdge(System.Numerics.Vector2)
+  nameWithType: Polygon.IsOnEdge(Vector2)
 - uid: OpenSvg.Polygon.IsOnEdge*
   name: IsOnEdge
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_IsOnEdge_
@@ -3718,18 +3940,18 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Polygon.IsOnEdge
   nameWithType: Polygon.IsOnEdge
-- uid: OpenSvg.Polygon.RelationTo(OpenSvg.Point)
-  name: RelationTo(Point)
-  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_OpenSvg_Point_
-  commentId: M:OpenSvg.Polygon.RelationTo(OpenSvg.Point)
-  fullName: OpenSvg.Polygon.RelationTo(OpenSvg.Point)
-  nameWithType: Polygon.RelationTo(Point)
 - uid: OpenSvg.Polygon.RelationTo(OpenSvg.Polygon)
   name: RelationTo(Polygon)
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_OpenSvg_Polygon_
   commentId: M:OpenSvg.Polygon.RelationTo(OpenSvg.Polygon)
   fullName: OpenSvg.Polygon.RelationTo(OpenSvg.Polygon)
   nameWithType: Polygon.RelationTo(Polygon)
+- uid: OpenSvg.Polygon.RelationTo(System.Numerics.Vector2)
+  name: RelationTo(Vector2)
+  href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Polygon.RelationTo(System.Numerics.Vector2)
+  fullName: OpenSvg.Polygon.RelationTo(System.Numerics.Vector2)
+  nameWithType: Polygon.RelationTo(Vector2)
 - uid: OpenSvg.Polygon.RelationTo*
   name: RelationTo
   href: api/OpenSvg.Polygon.html#OpenSvg_Polygon_RelationTo_
@@ -3805,15 +4027,15 @@ references:
   commentId: T:OpenSvg.Polyline
   fullName: OpenSvg.Polyline
   nameWithType: Polyline
-- uid: OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name: Polyline(IEnumerable<Point>)
-  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__
-  commentId: M:OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})
-  name.vb: New(IEnumerable(Of Point))
-  fullName: OpenSvg.Polyline.Polyline(System.Collections.Generic.IEnumerable<OpenSvg.Point>)
-  fullName.vb: OpenSvg.Polyline.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Point))
-  nameWithType: Polyline.Polyline(IEnumerable<Point>)
-  nameWithType.vb: Polyline.New(IEnumerable(Of Point))
+- uid: OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: Polyline(IEnumerable<Vector2>)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.Polyline.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: New(IEnumerable(Of Vector2))
+  fullName: OpenSvg.Polyline.Polyline(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.Polyline.New(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: Polyline.Polyline(IEnumerable<Vector2>)
+  nameWithType.vb: Polyline.New(IEnumerable(Of Vector2))
 - uid: OpenSvg.Polyline.#ctor*
   name: Polyline
   href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_
@@ -3967,15 +4189,15 @@ references:
   commentId: T:OpenSvg.Size
   fullName: OpenSvg.Size
   nameWithType: Size
-- uid: OpenSvg.Size.#ctor(System.Double,System.Double)
-  name: Size(double, double)
-  href: api/OpenSvg.Size.html#OpenSvg_Size__ctor_System_Double_System_Double_
-  commentId: M:OpenSvg.Size.#ctor(System.Double,System.Double)
-  name.vb: New(Double, Double)
-  fullName: OpenSvg.Size.Size(double, double)
-  fullName.vb: OpenSvg.Size.New(Double, Double)
-  nameWithType: Size.Size(double, double)
-  nameWithType.vb: Size.New(Double, Double)
+- uid: OpenSvg.Size.#ctor(System.Single,System.Single)
+  name: Size(float, float)
+  href: api/OpenSvg.Size.html#OpenSvg_Size__ctor_System_Single_System_Single_
+  commentId: M:OpenSvg.Size.#ctor(System.Single,System.Single)
+  name.vb: New(Single, Single)
+  fullName: OpenSvg.Size.Size(float, float)
+  fullName.vb: OpenSvg.Size.New(Single, Single)
+  nameWithType: Size.Size(float, float)
+  nameWithType.vb: Size.New(Single, Single)
 - uid: OpenSvg.Size.#ctor*
   name: Size
   href: api/OpenSvg.Size.html#OpenSvg_Size__ctor_
@@ -6519,15 +6741,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.ComposeWith
   nameWithType: Transform.ComposeWith
-- uid: OpenSvg.Transform.CreateMatrix(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
-  name: CreateMatrix(double, double, double, double, double, double)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateMatrix_System_Double_System_Double_System_Double_System_Double_System_Double_System_Double_
-  commentId: M:OpenSvg.Transform.CreateMatrix(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
-  name.vb: CreateMatrix(Double, Double, Double, Double, Double, Double)
-  fullName: OpenSvg.Transform.CreateMatrix(double, double, double, double, double, double)
-  fullName.vb: OpenSvg.Transform.CreateMatrix(Double, Double, Double, Double, Double, Double)
-  nameWithType: Transform.CreateMatrix(double, double, double, double, double, double)
-  nameWithType.vb: Transform.CreateMatrix(Double, Double, Double, Double, Double, Double)
+- uid: OpenSvg.Transform.CreateMatrix(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  name: CreateMatrix(float, float, float, float, float, float)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateMatrix_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:OpenSvg.Transform.CreateMatrix(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  name.vb: CreateMatrix(Single, Single, Single, Single, Single, Single)
+  fullName: OpenSvg.Transform.CreateMatrix(float, float, float, float, float, float)
+  fullName.vb: OpenSvg.Transform.CreateMatrix(Single, Single, Single, Single, Single, Single)
+  nameWithType: Transform.CreateMatrix(float, float, float, float, float, float)
+  nameWithType.vb: Transform.CreateMatrix(Single, Single, Single, Single, Single, Single)
 - uid: OpenSvg.Transform.CreateMatrix*
   name: CreateMatrix
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateMatrix_
@@ -6535,15 +6757,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.CreateMatrix
   nameWithType: Transform.CreateMatrix
-- uid: OpenSvg.Transform.CreateRotation(System.Double,System.Double,System.Double)
-  name: CreateRotation(double, double, double)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateRotation_System_Double_System_Double_System_Double_
-  commentId: M:OpenSvg.Transform.CreateRotation(System.Double,System.Double,System.Double)
-  name.vb: CreateRotation(Double, Double, Double)
-  fullName: OpenSvg.Transform.CreateRotation(double, double, double)
-  fullName.vb: OpenSvg.Transform.CreateRotation(Double, Double, Double)
-  nameWithType: Transform.CreateRotation(double, double, double)
-  nameWithType.vb: Transform.CreateRotation(Double, Double, Double)
+- uid: OpenSvg.Transform.CreateRotation(System.Single,System.Single,System.Single)
+  name: CreateRotation(float, float, float)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateRotation_System_Single_System_Single_System_Single_
+  commentId: M:OpenSvg.Transform.CreateRotation(System.Single,System.Single,System.Single)
+  name.vb: CreateRotation(Single, Single, Single)
+  fullName: OpenSvg.Transform.CreateRotation(float, float, float)
+  fullName.vb: OpenSvg.Transform.CreateRotation(Single, Single, Single)
+  nameWithType: Transform.CreateRotation(float, float, float)
+  nameWithType.vb: Transform.CreateRotation(Single, Single, Single)
 - uid: OpenSvg.Transform.CreateRotation*
   name: CreateRotation
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateRotation_
@@ -6551,15 +6773,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.CreateRotation
   nameWithType: Transform.CreateRotation
-- uid: OpenSvg.Transform.CreateScale(System.Double,System.Double)
-  name: CreateScale(double, double)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateScale_System_Double_System_Double_
-  commentId: M:OpenSvg.Transform.CreateScale(System.Double,System.Double)
-  name.vb: CreateScale(Double, Double)
-  fullName: OpenSvg.Transform.CreateScale(double, double)
-  fullName.vb: OpenSvg.Transform.CreateScale(Double, Double)
-  nameWithType: Transform.CreateScale(double, double)
-  nameWithType.vb: Transform.CreateScale(Double, Double)
+- uid: OpenSvg.Transform.CreateScale(System.Single,System.Single)
+  name: CreateScale(float, float)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateScale_System_Single_System_Single_
+  commentId: M:OpenSvg.Transform.CreateScale(System.Single,System.Single)
+  name.vb: CreateScale(Single, Single)
+  fullName: OpenSvg.Transform.CreateScale(float, float)
+  fullName.vb: OpenSvg.Transform.CreateScale(Single, Single)
+  nameWithType: Transform.CreateScale(float, float)
+  nameWithType.vb: Transform.CreateScale(Single, Single)
 - uid: OpenSvg.Transform.CreateScale*
   name: CreateScale
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateScale_
@@ -6567,15 +6789,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.CreateScale
   nameWithType: Transform.CreateScale
-- uid: OpenSvg.Transform.CreateSkew(System.Double,System.Double)
-  name: CreateSkew(double, double)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateSkew_System_Double_System_Double_
-  commentId: M:OpenSvg.Transform.CreateSkew(System.Double,System.Double)
-  name.vb: CreateSkew(Double, Double)
-  fullName: OpenSvg.Transform.CreateSkew(double, double)
-  fullName.vb: OpenSvg.Transform.CreateSkew(Double, Double)
-  nameWithType: Transform.CreateSkew(double, double)
-  nameWithType.vb: Transform.CreateSkew(Double, Double)
+- uid: OpenSvg.Transform.CreateSkew(System.Single,System.Single)
+  name: CreateSkew(float, float)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateSkew_System_Single_System_Single_
+  commentId: M:OpenSvg.Transform.CreateSkew(System.Single,System.Single)
+  name.vb: CreateSkew(Single, Single)
+  fullName: OpenSvg.Transform.CreateSkew(float, float)
+  fullName.vb: OpenSvg.Transform.CreateSkew(Single, Single)
+  nameWithType: Transform.CreateSkew(float, float)
+  nameWithType.vb: Transform.CreateSkew(Single, Single)
 - uid: OpenSvg.Transform.CreateSkew*
   name: CreateSkew
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateSkew_
@@ -6583,15 +6805,15 @@ references:
   isSpec: "True"
   fullName: OpenSvg.Transform.CreateSkew
   nameWithType: Transform.CreateSkew
-- uid: OpenSvg.Transform.CreateTranslation(System.Double,System.Double)
-  name: CreateTranslation(double, double)
-  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateTranslation_System_Double_System_Double_
-  commentId: M:OpenSvg.Transform.CreateTranslation(System.Double,System.Double)
-  name.vb: CreateTranslation(Double, Double)
-  fullName: OpenSvg.Transform.CreateTranslation(double, double)
-  fullName.vb: OpenSvg.Transform.CreateTranslation(Double, Double)
-  nameWithType: Transform.CreateTranslation(double, double)
-  nameWithType.vb: Transform.CreateTranslation(Double, Double)
+- uid: OpenSvg.Transform.CreateTranslation(System.Single,System.Single)
+  name: CreateTranslation(float, float)
+  href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateTranslation_System_Single_System_Single_
+  commentId: M:OpenSvg.Transform.CreateTranslation(System.Single,System.Single)
+  name.vb: CreateTranslation(Single, Single)
+  fullName: OpenSvg.Transform.CreateTranslation(float, float)
+  fullName.vb: OpenSvg.Transform.CreateTranslation(Single, Single)
+  nameWithType: Transform.CreateTranslation(float, float)
+  nameWithType.vb: Transform.CreateTranslation(Single, Single)
 - uid: OpenSvg.Transform.CreateTranslation*
   name: CreateTranslation
   href: api/OpenSvg.Transform.html#OpenSvg_Transform_CreateTranslation_

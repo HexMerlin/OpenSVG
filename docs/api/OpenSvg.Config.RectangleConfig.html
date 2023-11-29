@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.Config.RectangleConfig">
@@ -150,20 +150,20 @@ The rectangle can be rendered either as a 'polygon' or a high-level 'rect' in SV
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.%23ctor(OpenSvg.Size%2COpenSvg.Config.DrawConfig%2CSystem.Int32%2CSystem.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Single_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.%23ctor(OpenSvg.Size%2COpenSvg.Config.DrawConfig%2CSystem.Int32%2CSystem.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
   </span>
   <a id="OpenSvg_Config_RectangleConfig__ctor_" data-uid="OpenSvg.Config.RectangleConfig.#ctor*"></a>
-  <h4 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double_" data-uid="OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Double)">RectangleConfig(Size, DrawConfig, int, double)</h4>
+  <h4 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Single_" data-uid="OpenSvg.Config.RectangleConfig.#ctor(OpenSvg.Size,OpenSvg.Config.DrawConfig,System.Int32,System.Single)">RectangleConfig(Size, DrawConfig, int, float)</h4>
   <div class="markdown level1 summary"><p>Defining attributes of a rectangle in SVG
 The rectangle can be rendered either as a 'polygon' or a high-level 'rect' in SVG.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCornerPoints = 10, double CornerRadius = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public RectangleConfig(Size Size, DrawConfig DrawConfig, int NumberOfCornerPoints = 10, float CornerRadius = 0)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -195,7 +195,7 @@ a polygon</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
         <td><span class="parametername">CornerRadius</span></td>
         <td><p>Defines the circle radius of the corners.
 If CornerRadius=0 there will be no rounding corners, but just normal square corners</p>
@@ -203,14 +203,14 @@ If CornerRadius=0 there will be no rounding corners, but just normal square corn
       </tr>
     </tbody>
   </table>
-  <h5 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Double__remarks">Remarks</h5>
+  <h5 id="OpenSvg_Config_RectangleConfig__ctor_OpenSvg_Size_OpenSvg_Config_DrawConfig_System_Int32_System_Single__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>When converting to GeoJSON rectangles must be drwawn as <a class="xref" href="OpenSvg.SvgNodes.SvgPolygon.html">SvgPolygon</a></p>
 </div>
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_CornerRadius.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.CornerRadius%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_CornerRadius.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.CornerRadius%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
@@ -223,7 +223,7 @@ If CornerRadius=0 there will be no rounding corners, but just normal square corn
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double CornerRadius { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float CornerRadius { get; init; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -235,14 +235,14 @@ If CornerRadius=0 there will be no rounding corners, but just normal square corn
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_DrawConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.DrawConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_DrawConfig.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.DrawConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
@@ -273,7 +273,7 @@ If CornerRadius=0 there will be no rounding corners, but just normal square corn
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_NumberOfCornerPoints.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.NumberOfCornerPoints%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_NumberOfCornerPoints.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.NumberOfCornerPoints%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
@@ -305,7 +305,7 @@ a polygon</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Size.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Size%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Size.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Size%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L30">View Source</a>
@@ -338,7 +338,7 @@ a polygon</p>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L76">View Source</a>
@@ -369,7 +369,7 @@ a polygon</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L45">View Source</a>
@@ -400,7 +400,7 @@ a polygon</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgRect.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgRect%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_ToSvgRect.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.ToSvgRect%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L57">View Source</a>
@@ -431,7 +431,7 @@ a polygon</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Transparent_OpenSvg_Size_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Transparent(OpenSvg.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_Transparent_OpenSvg_Size_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.Transparent(OpenSvg.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L40">View Source</a>
@@ -482,7 +482,7 @@ This is useful for creating invisible spaces between shapes.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithFillColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithFillColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithFillColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithFillColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L64">View Source</a>
@@ -532,7 +532,7 @@ This is useful for creating invisible spaces between shapes.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithStrokeColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithStrokeColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Config_RectangleConfig_WithStrokeColor_SkiaSharp_SKColor_.md&amp;value=---%0Auid%3A%20OpenSvg.Config.RectangleConfig.WithStrokeColor(SkiaSharp.SKColor)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Config/RectangleConfig.cs/#L71">View Source</a>

@@ -91,7 +91,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                               <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="OpenSvg.Polygon">
@@ -112,9 +112,9 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.PointList.html">PointList</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OpenSvg.Polygon.html">Polygon</a>&gt;</div>
@@ -131,7 +131,10 @@ Provides methods for generating bounding boxes and translating polygons using a 
       <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Item_System_Int32_">PointList.this[int]</a>
     </div>
     <div>
-      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Contains_OpenSvg_Point_">PointList.Contains(Point)</a>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Contains_System_Numerics_Vector2_">PointList.Contains(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_PointAtDistance_System_Single_">PointList.PointAtDistance(float)</a>
     </div>
     <div>
       <a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Equals_OpenSvg_PointList_">PointList.Equals(PointList)</a>
@@ -162,25 +165,25 @@ Provides methods for generating bounding boxes and translating polygons using a 
   <h6><strong>Assembly</strong>: OpenSvg.dll</h6>
   <h5 id="OpenSvg_Polygon_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Polygon : PointList, IReadOnlyList&lt;Point&gt;, IReadOnlyCollection&lt;Point&gt;, IEnumerable&lt;Point&gt;, IEnumerable, IEquatable&lt;PointList&gt;, IEquatable&lt;Polygon&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Polygon : PointList, IReadOnlyList&lt;Vector2&gt;, IReadOnlyCollection&lt;Vector2&gt;, IEnumerable&lt;Vector2&gt;, IEnumerable, IEquatable&lt;PointList&gt;, IEquatable&lt;Polygon&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.%23ctor(System.Collections.Generic.IEnumerable%7BOpenSvg.Point%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.%23ctor(System.Collections.Generic.IEnumerable%7BSystem.Numerics.Vector2%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L22">View Source</a>
   </span>
   <a id="OpenSvg_Polygon__ctor_" data-uid="OpenSvg.Polygon.#ctor*"></a>
-  <h4 id="OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Point__" data-uid="OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Point})">Polygon(IEnumerable&lt;Point&gt;)</h4>
+  <h4 id="OpenSvg_Polygon__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__" data-uid="OpenSvg.Polygon.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})">Polygon(IEnumerable&lt;Vector2&gt;)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OpenSvg.Polygon.html">Polygon</a> class with the specified collection of points.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Polygon(IEnumerable&lt;Point&gt; points)</code></pre>
+    <pre><code class="lang-csharp hljs">public Polygon(IEnumerable&lt;Vector2&gt; points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -193,7 +196,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OpenSvg.Point.html">Point</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>&gt;</td>
         <td><span class="parametername">points</span></td>
         <td><p>The collection of points.</p>
 </td>
@@ -204,7 +207,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_BoundingBox.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.BoundingBox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_BoundingBox.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.BoundingBox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L38">View Source</a>
@@ -234,7 +237,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ConvexHull.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ConvexHull%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L36">View Source</a>
@@ -264,7 +267,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Empty.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Empty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Empty.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Empty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L34">View Source</a>
@@ -297,7 +300,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Equals_OpenSvg_Polygon_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Equals(OpenSvg.Polygon)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Equals_OpenSvg_Polygon_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Equals(OpenSvg.Polygon)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L63">View Source</a>
@@ -347,7 +350,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Equals_System_Object_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Equals(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_Equals_System_Object_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.Equals(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L67">View Source</a>
@@ -399,7 +402,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   <div><a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_Equals_System_Object_">PointList.Equals(object?)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_FromXmlString_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.FromXmlString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_FromXmlString_System_String_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.FromXmlString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L29">View Source</a>
@@ -446,7 +449,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_GetHashCode.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_GetHashCode.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L70">View Source</a>
@@ -480,19 +483,19 @@ Provides methods for generating bounding boxes and translating polygons using a 
   <div><a class="xref" href="OpenSvg.PointList.html#OpenSvg_PointList_GetHashCode">PointList.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_IsOnEdge_OpenSvg_Point_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_IsOnEdge_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.IsOnEdge(System.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.PolygonRelation.cs/#L34">View Source</a>
   </span>
   <a id="OpenSvg_Polygon_IsOnEdge_" data-uid="OpenSvg.Polygon.IsOnEdge*"></a>
-  <h4 id="OpenSvg_Polygon_IsOnEdge_OpenSvg_Point_" data-uid="OpenSvg.Polygon.IsOnEdge(OpenSvg.Point)">IsOnEdge(Point)</h4>
+  <h4 id="OpenSvg_Polygon_IsOnEdge_System_Numerics_Vector2_" data-uid="OpenSvg.Polygon.IsOnEdge(System.Numerics.Vector2)">IsOnEdge(Vector2)</h4>
   <div class="markdown level1 summary"><p>Determines if the given point is on the edge of this polygon.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsOnEdge(Point point)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsOnEdge(Vector2 point)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -505,7 +508,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="OpenSvg.Point.html">Point</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
         <td><span class="parametername">point</span></td>
         <td><p>The point to check.</p>
 </td>
@@ -530,57 +533,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_RelationTo_OpenSvg_Point_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.RelationTo(OpenSvg.Point)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.PointRelation.cs/#L10">View Source</a>
-  </span>
-  <a id="OpenSvg_Polygon_RelationTo_" data-uid="OpenSvg.Polygon.RelationTo*"></a>
-  <h4 id="OpenSvg_Polygon_RelationTo_OpenSvg_Point_" data-uid="OpenSvg.Polygon.RelationTo(OpenSvg.Point)">RelationTo(Point)</h4>
-  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a> of a point to a polygon.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PointRelation RelationTo(Point target)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.Point.html">Point</a></td>
-        <td><span class="parametername">target</span></td>
-        <td><p>The point to check.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a></td>
-        <td><p>The <a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a> of the point to the polygon. Either Inside or Disjoint.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_RelationTo_OpenSvg_Polygon_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.RelationTo(OpenSvg.Polygon)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_RelationTo_OpenSvg_Polygon_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.RelationTo(OpenSvg.Polygon)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.PolygonRelation.cs/#L12">View Source</a>
@@ -630,7 +583,57 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ToPath.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ToPath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_RelationTo_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.RelationTo(System.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.PointRelation.cs/#L10">View Source</a>
+  </span>
+  <a id="OpenSvg_Polygon_RelationTo_" data-uid="OpenSvg.Polygon.RelationTo*"></a>
+  <h4 id="OpenSvg_Polygon_RelationTo_System_Numerics_Vector2_" data-uid="OpenSvg.Polygon.RelationTo(System.Numerics.Vector2)">RelationTo(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a> of a point to a polygon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointRelation RelationTo(Vector2 target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The point to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a></td>
+        <td><p>The <a class="xref" href="OpenSvg.PointRelation.html">PointRelation</a> of the point to the polygon. Either Inside or Disjoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ToPath.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ToPath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L44">View Source</a>
@@ -662,7 +665,7 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ToSvgPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ToSvgPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_Polygon_ToSvgPolygon.md&amp;value=---%0Auid%3A%20OpenSvg.Polygon.ToSvgPolygon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/Polygon.cs/#L51">View Source</a>
@@ -708,6 +711,13 @@ Provides methods for generating bounding boxes and translating polygons using a 
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Max_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__">PointCollectionExtensions.Max(IEnumerable&lt;Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="OpenSvg.PointCollectionExtensions.html#OpenSvg_PointCollectionExtensions_Min_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__">PointCollectionExtensions.Min(IEnumerable&lt;Vector2&gt;)</a>
   </div>
 
 </article>
