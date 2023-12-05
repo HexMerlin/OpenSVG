@@ -1,39 +1,41 @@
-﻿global using Point = System.Numerics.Vector2;
-using System;
-using System.Collections.Immutable;
-using SkiaSharp;
-using OpenSvg.Gtfs;
-using OpenSvg.Config;
-using OpenSvg.GeoJson;
+﻿using OpenSvg.Gtfs;
 using OpenSvg.SvgNodes;
-using Microsoft.VisualBasic.FileIO;
-using OpenSvg.Gtfs.Optimized;
+using OpenSvg.Netex;
+using System.Xml.Linq;
 using System.Numerics;
-using System.Data.SqlTypes;
+using System.Collections.Immutable;
 
 namespace OpenSvg.ConsoleTest;
 
 internal class Program
 {
+ 
 
     public static void Main()
     {
+       
+        NetexShared netexShared = new NetexShared(@"D:\Downloads\Test\Netex\skane\_shared_data.xml");
+        //XDocument xDoc = netexShared.XDocument;
+        //List<XElement> posLists = xDoc.Descendants().Where(e => e.Name.LocalName == "posList").ToList();
 
-        Point[] points = new Point[] { new Point(0, 10), new Point(20, 5) };
-        Array.Sort(points, PointComparer.Default);
-        Console.WriteLine(String.Join(", ", points));
-        /// 
+        
+        //Console.WriteLine(posLists.Count());
 
-        GtfsFeed gtfsFeed = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
-        gtfsFeed.JoinDataSources();
+        return;
+
+        GtfsFeed gtfs = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
+        gtfs = gtfs.CreateFiltered();
+
+        //gtfsFeed.JoinDataSources();
 
        // AllPoints allPoints = new AllPoints(gtfsFeed);
 
-        SvgDocument svgDocument = gtfsFeed.ToSvgDocument();
+        SvgDocument svgDocument = gtfs.ToSvgDocument();
         svgDocument.Save(@"D:\Downloads\Test\GTFS\skane.svg");
 
-        
-       
+        Console.WriteLine("Real stops: " + gtfs.RealStops.Count());
+        Console.WriteLine("Real stops with traffic: " + gtfs.RealStopsWithTraffic.Count());
+        Console.WriteLine("Real stops with traffic and distance traveled: " + gtfs.RealStopsWithTraffic.Where(s => s.HasDistTraveled).Count());
 
         //GeoJsonDocument geoJsonDocument1 = GeoJsonDocument.Load(@"D:\Downloads\Test\legend.geojson");
         //GeoJsonDocument geoJsonDocument2 = GeoJsonDocument.Load(@"D:\Downloads\Test\otraf.geojson");

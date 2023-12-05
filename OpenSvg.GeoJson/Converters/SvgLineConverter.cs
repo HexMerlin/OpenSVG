@@ -18,8 +18,8 @@ public static class SvgLineConverter
     {
         Transform composedTransform = parentTransform.ComposeWith(svgLine.Transform);
 
-        Position p1 = converter.ToPosition(svgLine.P1, composedTransform);
-        Position p2 = converter.ToPosition(svgLine.P2, composedTransform);
+        Position p1 = converter.ToCoordinate(svgLine.P1, composedTransform).ToPosition();
+        Position p2 = converter.ToCoordinate(svgLine.P2, composedTransform).ToPosition();
 
         LineString lineString = new LineString(new List<Position> { p1, p2 });
 
@@ -42,8 +42,8 @@ public static class SvgLineConverter
 
         var svgLine = new SvgLine
         {
-            P1 = converter.ToPoint(lineString.Coordinates.First()),
-            P2 = converter.ToPoint(lineString.Coordinates.Last())
+            P1 = converter.ToPoint(lineString.Coordinates.First().ToCoordiate()),
+            P2 = converter.ToPoint(lineString.Coordinates.Last().ToCoordiate())
         };
 
         return svgLine;

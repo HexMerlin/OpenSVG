@@ -17,7 +17,18 @@ public readonly struct Coordinate
         this.Lat = coordinateToDecimalPrecision <= 0 ? latitude : Math.Round(latitude, coordinateToDecimalPrecision);
     }
 
-    
+    /// <summary>
+    /// Determines whether the coordinate is within a specified bounding box.
+    /// </summary>
+    /// <param name="TopLeft">The top-left coordinate of the bounding box.</param>
+    /// <param name="BottomRight">The bottom-right coordinate of the bounding box.</param>
+    /// <returns>True if the coordinate is within the bounding box, false otherwise.</returns>
+    public bool IsWithinBoundingBox(Coordinate TopLeft, Coordinate BottomRight)
+    {
+        return this.Long >= TopLeft.Long && this.Long <= BottomRight.Long
+               && this.Lat <= TopLeft.Lat && this.Lat >= BottomRight.Lat;
+    }
+
     /// <summary>
     /// Translates the coordinate by a specified distance in meters along the X and Y axes.
     /// </summary>

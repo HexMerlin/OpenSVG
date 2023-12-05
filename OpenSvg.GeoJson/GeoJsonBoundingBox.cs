@@ -98,6 +98,7 @@ public class GeoJsonBoundingBox
             UpdateBounds(coord);
     }
 
+    
     private void UpdateBounds(IPosition coord)
     {
         MinLongitude = Math.Min(MinLongitude, coord.Longitude);

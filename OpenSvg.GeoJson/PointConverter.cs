@@ -1,4 +1,4 @@
-﻿using GeoJSON.Net.Geometry;
+﻿
 
 namespace OpenSvg.GeoJson;
 
@@ -12,12 +12,25 @@ public record PointConverter
     /// </summary>
     /// <param name="startLocation">The starting location to use for the conversion</param>
     /// <param name="metersPerPixel">The meters per pixel value used to convert coordinates</param>
-    public PointConverter(Coordinate startLocation, double metersPerPixel, int segmentCountForCurveApproximation)
+    public PointConverter(Coordinate startLocation, double metersPerPixel, int segmentCountForCurveApproximation = 10)
     {
         StartLocation = startLocation;
         MetersPerPixel = metersPerPixel;
         SegmentCountForCurveApproximation = segmentCountForCurveApproximation;
+
     }
+
+    /// <summary>
+    ///     Constructor for PointCoordinateConverter class
+    /// </summary>
+    /// <param name="geoJsonBoundingBox">The geo bounding box covering all coordinates</param>
+    /// <param name="desiredSvgWidth">The desired width of the SVG image</param>
+    public PointConverter(GeoJsonBoundingBox geoJsonBoundingBox, double desiredSvgWidth, int segmentCountForCurveApproximation = 10) 
+        : this(geoJsonBoundingBox.TopLeft, MetersPerPixels(desiredSvgWidth, geoJsonBoundingBox), segmentCountForCurveApproximation)
+    {
+
+    }
+
 
     /// <summary>
     ///     The starting point for the coordinate conversion process
@@ -60,15 +73,6 @@ public record PointConverter
             
         return coordinate;
     }
-
-
-    public Position ToPosition(Point point, Transform? transform)
-    {
-        Coordinate coord = ToCoordinate(point, transform);
-        return new Position(coord.Lat, coord.Long);
-    }
-
-    public Point ToPoint(IPosition position) => ToPoint(new Coordinate(position.Longitude, position.Latitude));
 
     /// <summary>
     ///     Converts a world coordinate to a point.

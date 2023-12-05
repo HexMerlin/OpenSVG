@@ -43,8 +43,7 @@ public static class StopsParser
         IEnumerable<SvgVisual> svgShapeElements = stops.Select(s => s.ToSvgShape(converter));
         SvgGroup svgGroup = new SvgGroup();
         svgGroup.ID = "stops";
-        //svgGroup.StrokeColor = SKColors.Blue;
-        svgGroup.FillColor = SKColors.Transparent;
+        svgGroup.StrokeColor = SKColors.Blue;
         svgGroup.AddAll(svgShapeElements);
         return svgGroup;
 

@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs_project", "docs_projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenSvg.Gtfs", "OpenSvg.Gtfs\OpenSvg.Gtfs.csproj", "{9049B6D7-6828-42FC-9A93-8E747A98DC0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSvg.Netex", "OpenSvg.Netex\OpenSvg.Netex.csproj", "{AE512A20-F582-4B47-B57C-AB3DFF140B57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{9049B6D7-6828-42FC-9A93-8E747A98DC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9049B6D7-6828-42FC-9A93-8E747A98DC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9049B6D7-6828-42FC-9A93-8E747A98DC0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE512A20-F582-4B47-B57C-AB3DFF140B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE512A20-F582-4B47-B57C-AB3DFF140B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE512A20-F582-4B47-B57C-AB3DFF140B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE512A20-F582-4B47-B57C-AB3DFF140B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

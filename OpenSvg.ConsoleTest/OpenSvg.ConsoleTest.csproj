@@ -5,16 +5,17 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>23.11.29.39</AssemblyVersion>
+    <AssemblyVersion>23.11.29.45</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Docfx.App" Version="2.73.2" />
+    <PackageReference Include="Docfx.App" Version="2.74.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OpenSvg.GeoJson\OpenSvg.GeoJson.csproj" />
     <ProjectReference Include="..\OpenSvg.Gtfs\OpenSvg.Gtfs.csproj" />
+    <ProjectReference Include="..\OpenSvg.Netex\OpenSvg.Netex.csproj" />
     <ProjectReference Include="..\OpenSvg\OpenSvg.csproj" />
   </ItemGroup>
 

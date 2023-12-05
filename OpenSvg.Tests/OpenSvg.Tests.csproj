@@ -7,7 +7,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AssemblyVersion>23.11.29.45</AssemblyVersion>
+    <AssemblyVersion>23.11.29.50</AssemblyVersion>
 
   </PropertyGroup>
 
@@ -399,11 +399,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Docfx.App" Version="2.73.2" />
+    <PackageReference Include="Docfx.App" Version="2.74.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="NetTopologySuite" Version="2.5.0" />
-    <PackageReference Include="xunit" Version="2.6.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

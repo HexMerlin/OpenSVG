@@ -1,5 +1,9 @@
 ﻿using OpenSvg.GeoJson;
+using OpenSvg.Optimization;
+using OpenSvg.PathOptimize;
 using OpenSvg.SvgNodes;
+using SkiaSharp;
+using Spectre.Console.Rendering;
 using System.Collections.Immutable;
 using System.IO.Compression;
 
@@ -7,7 +11,6 @@ namespace OpenSvg.Gtfs;
 public class GtfsFeed
 {
    
-
     public required ImmutableSortedDictionary<string, GtfsStop> RealStops { get; init; }
 
     public required ImmutableSortedDictionary<string, GtfsStop> OtherStops { get; init; }
@@ -17,11 +20,27 @@ public class GtfsFeed
 
     public required ImmutableSortedDictionary<string, GtfsTrip> Trips { get; init; }
 
-  
+    public ImmutableArray<GtfsStop> RealStopsWithTraffic => RealStops.Values.Where(s => s.HasTraffic).ToImmutableArray();
 
     public GtfsFeed()
     {
       
+    }
+
+    public GtfsFeed CreateFiltered()
+    {
+        
+        var stops = this.RealStopsWithTraffic.Take(20).ToImmutableSortedDictionary(s => s.StopID, s => s);
+        var shapes = stops.Values.SelectMany(s => s.Shapes.Values).Select(s => s.shape).Distinct().ToImmutableSortedDictionary(s => s.ID, s => s);
+        GtfsFeed filtered = new GtfsFeed()
+        {
+            RealStops = stops,
+            OtherStops = ImmutableSortedDictionary<string, GtfsStop>.Empty,
+            StopTimes = ImmutableArray<GtfsStopTime>.Empty,
+            Shapes = shapes,
+            Trips = ImmutableSortedDictionary<string, GtfsTrip>.Empty,
+        };
+        return filtered;
     }
 
     public static GtfsFeed Load(string gtfsFilePath)
@@ -52,69 +71,20 @@ public class GtfsFeed
             }
             Console.WriteLine("Loaded " + entry.Name);
         }
-        return new GtfsFeed()
+        GtfsFeed gtfsFeed = new GtfsFeed()
         {
             RealStops = stops.Values.Where(s => s.LocationType == 0).ToImmutableSortedDictionary(s => s.StopID, s => s),
             OtherStops = stops.Values.Where(s => s.LocationType != 0).ToImmutableSortedDictionary(s => s.StopID, s => s),
             StopTimes = stopTimes,
             Shapes = shapes,
             Trips = trips,
-           
-    };
 
-    }
-
-    public void JoinDataSources()
-    {
+        };
+        gtfsFeed.JoinDataSources();
         
-
-        Console.WriteLine("Processing...");
-        foreach (GtfsStopTime stopTime in StopTimes)
-        {
-            string tripID = stopTime.TripID;
-            string stopID = stopTime.StopID;
-
-            GtfsTrip trip = Trips[tripID];
-            GtfsShape shape = Shapes[trip.ShapeID];
-
-            GtfsStop stop = RealStops[stopID];
-
-          
-            Coordinate coordByCloseness = shape.FindClosestCoordinateOnShape(stop.Coordinate);
-            Coordinate? coordByDistTraveled = shape.CoordinateUsingGtfsDistance(stopTime.ShapeDistTraveled);
-
-            stop.AddShape(shape, coordByDistTraveled, coordByCloseness);
-            
-            //if (coordinate != null && coordinate.Value.DistanceTo(stop.Coordinate) > 200)
-            //{
-                //Console.WriteLine("StopTime: " + stopTime);
-                //Console.WriteLine("Trip: " + trip);
-                //Console.WriteLine("Stop: " + stop);
-                //Console.WriteLine("Stop coordinate: " + stop.Coordinate);
-                //Console.WriteLine("Selected OnShapeStop: " + coordinate);
-                //Console.WriteLine("Distance from stop to onShapeStop (m): " + coordinate.Value.DistanceTo(stop.Coordinate));
-
-                //Console.WriteLine("Direction ID" + trip.DirectionID);
-                //Console.WriteLine("Dist: traveled: " + stopTime.ShapeDistTraveled);
-                //Console.WriteLine("-- Shape -- ");
-                //foreach (GtfsShapePoint shapePoint in shape.ShapePoints)
-                //{
-                //    var distanceToStop = shapePoint.Coordinate.DistanceTo(stop.Coordinate);
-                //    Console.Write($"{distanceToStop} m: ");
-                //    Console.WriteLine(shapePoint);
-                //}
-                //Console.WriteLine("******** End *******");
-              
-           // }
-           
-        }
-
-        //foreach (GtfsStop stop in Stops.Values)
-        //{
-        //    Console.WriteLine("Stop " + stop.StopID + " " + stop.Shapes.Count());
-        //}
-
+        return gtfsFeed;
     }
+
 
 
     public SvgDocument ToSvgDocument()
@@ -124,16 +94,45 @@ public class GtfsFeed
 
         var topLeftCoordinate = geoBoundingBox.TopLeft;
         double metersPerPixel = PointConverter.MetersPerPixels(1000, geoBoundingBox);
-
-
         PointConverter converter = new PointConverter(topLeftCoordinate, metersPerPixel, 10);
 
-        SvgGroup svgGroupStops = RealStops.Values.ToSvgGroup(converter);
-       // SvgGroup svgGroupShapes = Shapes.Values.ToSvgGroup(converter);
+        
 
+        //LineSet lineSet = new LineSet();
+        Console.WriteLine("ORIGINAL GTFS POINT COUNT: " + Shapes.Values.SelectMany(s => s.ShapePoints).Count());
+        Console.WriteLine("Creating raw polylines...");
+
+        var shapeGroup = new SvgGroup()
+        {
+            StrokeColor = SKColors.DarkGreen,
+            StrokeWidth = 0.5f,
+            FillColor = SKColors.Transparent
+        };
+        Console.WriteLine("Creating SvgPolylines...");
+        foreach (GtfsShape shape in Shapes.Values)
+        {
+            var svgPolyline = shape.ToPolyline(converter).ToSvgPolyline();
+            shapeGroup.ChildElements.Add(svgPolyline);
+
+        }
+
+        SvgGroup stopGroup = new SvgGroup()
+        {
+            StrokeColor = SKColors.DarkRed,
+            StrokeWidth = 2f,
+            FillColor = SKColors.Transparent,
+            
+        };
+        foreach (GtfsStop stop in RealStops.Values)
+        {
+            var svgShape = stop.ToSvgShape(converter);
+            stopGroup.ChildElements.Add(svgShape);
+        }
+       
         SvgDocument svgDocument = new SvgDocument();
-        svgDocument.Add(svgGroupStops);
-      //  svgDocument.Add(svgGroupShapes);
+        svgDocument.Add(stopGroup);
+        svgDocument.Add(shapeGroup);
+
         svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
 
         return svgDocument;
@@ -141,11 +140,41 @@ public class GtfsFeed
 
     public GeoBoundingBox ComputeGeoBoundingBox()
     {
-        var stopsBounds = new GeoBoundingBox(RealStops.Select(s => s.Value.Coordinate));
-        var shapesBounds = new GeoBoundingBox(Shapes.SelectMany(s => s.Value.ShapePoints).Select(sp => sp.Coordinate));
-        return GeoBoundingBox.Union(stopsBounds, shapesBounds);
-    } 
+        var coordinates = Shapes.SelectMany(s => s.Value.ShapePoints).Select(sp => sp.Coordinate)
+            .Concat(RealStops.Select(s => s.Value.Coordinate)); ;
+   
+        return new GeoBoundingBox(coordinates);
+    }
 
 
- 
+    public void JoinDataSources()
+    {
+      
+        Console.WriteLine("Processing...");
+        foreach (GtfsStopTime stopTime in StopTimes)
+        {
+            string tripID = stopTime.TripID;
+            string stopID = stopTime.StopID;
+            GtfsTrip trip = Trips[tripID];
+            GtfsShape shape = Shapes[trip.ShapeID];
+            GtfsStop stop = RealStops[stopID];
+            stop.HasTraffic = true;
+
+            if (stopTime.StopSequence == 0)
+            {
+                stop.HasDistTraveled = true;
+            }
+            if (stopTime.StopSequence > 0 && stopTime.ShapeDistTraveled > 0)
+            {
+                stop.HasDistTraveled = true;
+            }
+            stop.AssociateWith(shape, stopTime);
+
+            //Coordinate coordByCloseness = shape.FindClosestCoordinateOnShape(stop.Coordinate);
+            //Coordinate? coordByDistTraveled = shape.CoordinateUsingGtfsDistance(stopTime.ShapeDistTraveled);
+            //stop.AddShape(shape, coordByDistTraveled, coordByCloseness);
+
+        }
+    }
+
 }

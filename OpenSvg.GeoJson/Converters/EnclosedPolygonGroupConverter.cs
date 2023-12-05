@@ -21,7 +21,7 @@ public static class EnclosedPolygonGroupConverter
 
     private static LineString ToLineString(this Polygon polygon, Transform transform, PointConverter converter)
     {
-        var positions = polygon.Select(svgPoint => converter.ToPosition(svgPoint, transform)).ToList();
+        var positions = polygon.Select(svgPoint => converter.ToCoordinate(svgPoint, transform).ToPosition()).ToList();
         positions.Add(positions.First()); // close the polygon
         return new LineString(positions);
     }

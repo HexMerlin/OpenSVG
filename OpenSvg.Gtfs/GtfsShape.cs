@@ -87,6 +87,11 @@ public class GtfsShape
         return distanceFraction;
     }
 
+    public Polyline ToPolyline(PointConverter converter)
+    {
+        IEnumerable<Point> points = ShapePoints.Select(sp => converter.ToPoint(sp.Coordinate));
+        return new Polyline(points);
+    }
 
     public SvgVisual ToSvgShape(PointConverter converter)
     {

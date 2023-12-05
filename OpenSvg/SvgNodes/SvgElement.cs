@@ -194,15 +194,15 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             .Select(field => field.GetValue(this)).OfType<IAttr>();
 
 
-    public string AttributeStrings() => string.Join("\n", Attributes().Select(attr => attr.Name));
-
     private static SvgElement CreateSvgElement(string elementName) => elementName switch
     {
         SvgNames.Svg => new SvgDocument(),
+        SvgNames.Circle => new SvgCircle(),
         SvgNames.Line => new SvgLine(),
         SvgNames.Group => new SvgGroup(),
         SvgNames.Text => new SvgText(),
         SvgNames.Path => new SvgPath(),
+        SvgNames.Polyline => new SvgPolyline(),
         SvgNames.Polygon => new SvgPolygon(),
         SvgNames.Defs => new SvgDefs(),
         SvgNames.Style => new SvgCssStyle(),

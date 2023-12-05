@@ -47,18 +47,23 @@ public class GeoBoundingBox
 
     public GeoBoundingBox(IEnumerable<Coordinate> coordinates)
     {
+        int count = 0;
         foreach (Coordinate coordinate in coordinates)
         {
            MinLongitude = Math.Min(MinLongitude, coordinate.Long);
            MaxLongitude = Math.Max(MaxLongitude, coordinate.Long);
            MinLatitude = Math.Min(MinLatitude, coordinate.Lat);
            MaxLatitude = Math.Max(MaxLatitude, coordinate.Lat);
+            count++;
         }
+        if (count < 2)
+            throw new ArgumentException("At least 2 coordinates required for computing a GeoBoundingBox.");
     }
 
     public Coordinate[] Corners() => new Coordinate[] { TopLeft, TopRight, BottomRight, BottomLeft };
 
-    public static GeoBoundingBox Union(GeoBoundingBox bounds1, GeoBoundingBox bounds2) 
+    public static GeoBoundingBox Union(GeoBoundingBox bounds1, GeoBoundingBox bounds2)
         => new GeoBoundingBox(bounds1.Corners().Concat(bounds2.Corners()));
+       
 
 }

@@ -20,7 +20,16 @@ public class Polyline : PointList, IEquatable<Polyline>
     ///     Initializes a new instance of the <see cref="Polyline" /> class with the specified collection of points.
     /// </summary>
     /// <param name="points">The collection of points.</param>
-    public Polyline(IEnumerable<Point> points) : base(points.ToImmutableArray())
+    public Polyline(IEnumerable<Point> points) : this(points.ToImmutableArray())
+    {
+        
+    }
+
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="Polyline" /> class with the specified collection of points.
+    /// </summary>
+    /// <param name="points">An immutable array of points.</param>
+    public Polyline(ImmutableArray<Point> points) : base(points)
     {
         convexHull = new ConvexHull(this);
     }

@@ -23,7 +23,7 @@ public static class SvgTextConverter
     {
         Transform composedTransform = parentTransform.ComposeWith(svgText.Transform);
         Point textPoint = new Point(svgText.X, svgText.Y);
-        Position position = converter.ToPosition(textPoint, composedTransform);
+        Position position = converter.ToCoordinate(textPoint, composedTransform).ToPosition();
         TextConfig svgTextConfig = svgText.TextConfig;
         var properties = svgTextConfig.ToDictionary(converter); 
         GeoJSON.Net.Geometry.Point geoJsonPoint = new GeoJSON.Net.Geometry.Point(position);
@@ -41,7 +41,7 @@ public static class SvgTextConverter
         if (feature.Geometry is not GeoJSON.Net.Geometry.Point geoJsonPoint)
             throw new ArgumentException($"Feature must have a Point geometry to convert to {nameof(SvgText)}.");
 
-        Point point = converter.ToPoint(geoJsonPoint.Coordinates);
+        Point point = converter.ToPoint(geoJsonPoint.Coordinates.ToCoordiate());
         var svgText = new SvgText
         {
             Point = point,
