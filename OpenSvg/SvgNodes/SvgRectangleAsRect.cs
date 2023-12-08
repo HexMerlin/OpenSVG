@@ -23,6 +23,7 @@ public class SvgRectangleAsRect : SvgVisual
     public float X { get => x.Get(); set => x.Set(value); }
 
     public float Y { get => y.Get(); set => y.Set(value); }
+
     /// <inheritdoc/>
     public override string SvgName => SvgNames.Rect;
 
@@ -40,9 +41,11 @@ public class SvgRectangleAsRect : SvgVisual
         }
     }
 
-    public float DefinedWidthAbsolute => this.DefinedWidth.Resolve(() => ViewPortWidth);
+    public float DefinedWidthAbsolute 
+        => this.DefinedWidth.IsAbsolute ? DefinedWidth.Value : 100;
 
-    public float DefinedHeightAbsolute => this.DefinedHeight.Resolve(() => ViewPortHeight);
+    public float DefinedHeightAbsolute 
+        => this.DefinedHeight.IsAbsolute ? DefinedHeight.Value : 100;
 
     public Point TopLeft => new(X, Y);
 

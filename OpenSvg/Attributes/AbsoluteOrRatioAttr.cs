@@ -10,12 +10,12 @@ public class AbsoluteOrRatioAttr : Attr<AbsoluteOrRatio>
     /// Initializes a new instance of the <see cref="AbsoluteOrRatioAttr"/> class.
     /// </summary>
     /// <param name="name">The name of the attribute.</param>
-    public AbsoluteOrRatioAttr(string name) : base(name, AbsoluteOrRatio.Ratio(1), false)
+    public AbsoluteOrRatioAttr(string name) : base(name, AbsoluteOrRatio.Absolute(0), false)
     {
     }
 
     /// <inheritdoc/>
-    protected override string Serialize(AbsoluteOrRatio value) => value.IsAbsolute ? value.Value.ToXmlString() : $"{value.Value * 100d}%";
+    protected override string Serialize(AbsoluteOrRatio value) => value.ToXmlString();
 
     /// <inheritdoc/>
     protected override AbsoluteOrRatio Deserialize(string xmlString)

@@ -1,13 +1,13 @@
 ﻿
 using OpenSvg.SvgNodes;
 using System.Collections.Immutable;
-using UglyToad.PdfPig.Fonts.TrueType.Tables;
 
-namespace OpenSvg.Netex;
+namespace OpenSvg.Optimization;
+
 /// <summary>
 /// Represents a fast polyline.
 /// </summary>
-public class FastPolyline : IEquatable<FastPolyline>
+public partial class FastPolyline : IEquatable<FastPolyline>
 {
    
     /// <summary>
@@ -25,15 +25,27 @@ public class FastPolyline : IEquatable<FastPolyline>
     /// </summary>
     /// <param name="points">The points of the polyline.</param>
     /// <exception cref="ArgumentException">Thrown when the polyline has less than two points.</exception>
-    public FastPolyline(ImmutableArray<Point> Points)
+    public FastPolyline(ImmutableArray<Point> points)
     {
-        if (Points.Length < 2) throw new ArgumentException("A polyline must have at least two points");
-        this.Points = Points[0].CompareTo(Points[^1]) <= 0 ? Points : Points.Reverse().ToImmutableArray();
+        if (points.Length < 2) throw new ArgumentException("A polyline must have at least two points");
+        this.Points = points[0].CompareTo(points[^1]) <= 0 ? points : points.Reverse().ToImmutableArray();
       
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="FastPolyline"/> class.
+    /// </summary>
+    /// <param name="points">The points of the polyline.</param>
+    /// <exception cref="ArgumentException">Thrown when the polyline has less than two points.</exception>
     public FastPolyline(IEnumerable<Point> points) : this(points.ToImmutableArray()) { }    
 
+    /// <summary>
+    ///     Gets the point at the specified index.
+    /// </summary>
+    /// <param name="index">The index of the point.</param>
+    /// <returns>The point at the specified index.</returns>
+    /// <exception cref="IndexOutOfRangeException">Thrown when the index is out of range.</exception>
+    public Point this[int index] => Points[index];
 
     /// <summary>
     /// Determines whether the current polyline is equal to another polyline.
@@ -47,7 +59,7 @@ public class FastPolyline : IEquatable<FastPolyline>
     ///     Determines whether the current polyline is equal to another object.
     /// </summary>
     /// <param name="obj">The object to compare with the current polyline.</param>
-    /// <returns><c>true</c> if the current polyline is equal to the other object; otherwise, <c>false</c>.</returns>
+    /// <returns><c>true</c> if the current polyline is equal to the other object; otherwise, <c>false</c>.</returns>  
     public override bool Equals(object? obj)
     {
         if (obj is null) return false;
@@ -56,17 +68,6 @@ public class FastPolyline : IEquatable<FastPolyline>
         return Equals((FastPolyline)obj);
     }
 
-    /// <summary>
-    ///     Computes the hash code for the current polyline.
-    /// </summary>
-    /// <returns>The hash code for the current polyline.</returns>
-    //private int ComputeHashCode()
-    //{
-    //    var hashCode = new HashCode();
-    //    foreach (var point in Points)
-    //        hashCode.Add(point);
-    //    return hashCode.ToHashCode();
-    //}
 
     /// <summary>
     /// Gets the hash code for the current polyline.
@@ -104,7 +105,46 @@ public class FastPolyline : IEquatable<FastPolyline>
         svgPolyline.Polyline = new Polyline(Points);
         return svgPolyline;
     }
+    public bool HasDuplicatedPoints()
+    {
+        HashSet<Point> hashedPoints = new HashSet<Point>(Points);
+        return Length != hashedPoints.Count;
+    }
 
+    /// <summary>
+    /// Removes adjacent points that are identical, or equivalent (i.e. closer than a given threshold).
+    /// </summary>
+    /// <remarks>
+    /// <list type="bullet">
+    /// <item>
+    /// <description>The method always retains the first and last points of the polyline.</description>
+    /// </item>
+    /// <item>
+    /// <description>For polylines of lengths 2, the input polyline is returned.</description>
+    /// </item>
+    /// <item>
+    /// <description>For adjacent equivalent points, the first point is retained, except if one of the points is the last point of the polyline.
+    /// In that case the last point is retained instead.</description>
+    /// </item>
+    /// </list>
+    /// </remarks>
+    public FastPolyline RemoveEquivalentAdjacentPoints(float minDistanceSquaredThreshold = 0.00001f)
+    {
+        if (Length == 2) return this; //do not optimize polylines with only two points
+
+        List<Point> result = new List<Point>(Length);
+        result.Add(this[0]);
+
+        for (int i = 1; i < Points.Length; i++)
+        {
+            if (Point.DistanceSquared(Points[i], result[^1]) >= minDistanceSquaredThreshold)
+                result.Add(Points[i]);
+        }
+        //assert that the last point is the same as the last point of the original polyline
+        if (result[^1] != Points[^1])
+            result[^1] = Points[^1];
+        return new FastPolyline(result);
+    }
 
     /// <summary>
     /// Finds the longest common substring between two polylines.

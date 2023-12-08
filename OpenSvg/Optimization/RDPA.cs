@@ -11,6 +11,17 @@ namespace OpenSvg.PathOptimize;
 //Ramer-Douglas-Peucker Algorithm (RDPA)
 public static class RDPA
 {
+
+    public static List<Point> RemoveClosePoints(Polyline polyline, float minDistanceThreshold)
+    {
+        var points = polyline.ToList();
+        points = RDPA.RemoveClosePoints(points, minDistanceThreshold);
+        if (points.Count <= 1)
+            return new List<Point>(); // Ignore polylines with less than 2 points
+        return points;
+
+    }
+
     public static List<Point> RemoveClosePoints(List<Point> points, float minDistanceThreshold = 0.01f)
     {
         float minDistanceSquared = minDistanceThreshold * minDistanceThreshold;

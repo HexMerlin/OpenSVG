@@ -48,7 +48,18 @@ public readonly struct AbsoluteOrRatio : IEquatable<AbsoluteOrRatio>
     /// </summary>
     /// <param name="GetReferenceValue">A function that returns the reference value for resolving the abolute value.</param>
     /// <returns>The resolved value of the AbsoluteOrRatio.</returns>
-    public float Resolve(Func<float> GetReferenceValue) => this.IsAbsolute ? this.Value : this.Value * GetReferenceValue();
+    public float Resolve(Func<float> GetReferenceValue) 
+        => this.IsAbsolute ? this.Value : this.Value * GetReferenceValue();
+
+
+    /// <summary>
+    /// Returns an XML string representation for the object.
+    /// </summary>
+    /// <returns>A string representing the object in XML format.</returns>
+    public string ToXmlString()
+        => IsAbsolute ? Value.ToXmlString() : $"{(Value * 100d).ToXmlString()}%";
+
+    public override string ToString() => ToXmlString();
 
     public static AbsoluteOrRatio FromXmlString(string xmlString)
     {

@@ -1,4 +1,5 @@
 ﻿using DotSpatial.Projections;
+using Microsoft.Playwright;
 
 namespace OpenSvg.GeoJson;
 
@@ -40,25 +41,38 @@ public readonly struct Coordinate
     public Coordinate Translate(double dxMeters, double dyMeters)
     {
         // Define WGS84 ellipsoid
-        ProjectionInfo wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
 
+       
         // Transform the point to Mercator projection (meters)
         double[] z = { 0 };
         double[] xy = { Long, Lat };
-        Reproject.ReprojectPoints(xy, z, wgs84, KnownCoordinateSystems.Projected.World.WebMercator, 0, 1);
-
+        Reproject.ReprojectPoints(xy, z, sourceProjection, targetProjection, 0, 1);
+        
         // Add the dxMeters and dyMeters
         xy[0] += dxMeters;
         xy[1] += dyMeters;
 
         // Transform the point back to WGS84
-        Reproject.ReprojectPoints(xy, z, KnownCoordinateSystems.Projected.World.WebMercator, wgs84, 0, 1);
+        Reproject.ReprojectPoints(xy, z, targetProjection, sourceProjection, 0, 1);
 
         // the xy array now holds the new coordinates
         var result = new Coordinate(xy[0], xy[1]);
 
         return result;
     }
+
+    public (double x, double y) ToWebMercator()
+    {
+        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
+        double[] z = { 0 };
+        double[] xy = { Long, Lat };
+        Reproject.ReprojectPoints(xy, z, sourceProjection, targetProjection, 0, 1);
+        return (xy[0], xy[1]);
+    }
+
 
     /// <summary>
     /// Calculates the Cartesian offset to another coordinate in meters, as a tuple of X (dx) and Y (dy) distances.
@@ -72,15 +86,17 @@ public readonly struct Coordinate
     /// </returns>
     public (double dx, double dy) CartesianOffset(Coordinate coordinate)
     {
-        // Define WGS84 ellipsoid
-        ProjectionInfo wgs84 = KnownCoordinateSystems.Geographic.World.WGS1984;
+
+        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
+        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
+
 
         // Transform the points to Mercator projection (meters)
         double[] z = new double[2];
-        double[] xy1 = { Long, Lat };
-        double[] xy2 = { coordinate.Long, coordinate.Lat };
-        Reproject.ReprojectPoints(xy1, z, wgs84, KnownCoordinateSystems.Projected.World.WebMercator, 0, 1);
-        Reproject.ReprojectPoints(xy2, z, wgs84, KnownCoordinateSystems.Projected.World.WebMercator, 0, 1);
+        double[] xy1 = [Long, Lat];
+        double[] xy2 = [coordinate.Long, coordinate.Lat];
+        Reproject.ReprojectPoints(xy1, z, sourceProjection, targetProjection, 0, 1);
+        Reproject.ReprojectPoints(xy2, z, sourceProjection, targetProjection, 0, 1);
 
         // Calculate distance on a flat surface
         double dx = xy2[0] - xy1[0];

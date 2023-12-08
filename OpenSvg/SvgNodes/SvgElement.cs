@@ -204,6 +204,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         SvgNames.Path => new SvgPath(),
         SvgNames.Polyline => new SvgPolyline(),
         SvgNames.Polygon => new SvgPolygon(),
+        SvgNames.Rect => new SvgRectangleAsRect(),
         SvgNames.Defs => new SvgDefs(),
         SvgNames.Style => new SvgCssStyle(),
         _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")

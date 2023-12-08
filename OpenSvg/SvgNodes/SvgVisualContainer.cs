@@ -78,6 +78,7 @@ public abstract class SvgVisualContainer : SvgVisual, ISvgElementContainer
     }
 
     ///<inheritdoc/>
-    protected override ConvexHull ComputeConvexHull() => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
+    protected override ConvexHull ComputeConvexHull() 
+        => new(ChildElements.OfType<SvgVisual>().Select(c => c.ConvexHull));
 
 }

@@ -10,7 +10,35 @@ namespace OpenSvg.Netex;
 public class ColorHelper
 {
 
-    public static SKColor[] GetDistinctColors()
+    public static SKColor[] GetBrightDistinctColors()
+    {
+        return new[]
+        {
+        new SKColor(255, 0, 0),       // Bright Red
+        new SKColor(0, 255, 0),       // Lime Green
+        new SKColor(0, 0, 255),       // Bright Blue
+        new SKColor(255, 255, 0),     // Yellow
+        new SKColor(255, 0, 255),     // Magenta
+        new SKColor(0, 255, 255),     // Cyan
+        new SKColor(255, 165, 0),     // Orange
+        new SKColor(255, 105, 180),   // Hot Pink
+        new SKColor(173, 216, 230),   // Light Blue
+        new SKColor(144, 238, 144),   // Light Green
+        new SKColor(255, 182, 193),   // Light Pink
+        new SKColor(255, 215, 0),     // Gold
+        new SKColor(0, 206, 209),     // Turquoise
+        new SKColor(138, 43, 226),    // Blue Violet
+        new SKColor(32, 178, 170),    // Light Sea Green
+        new SKColor(218, 112, 214),   // Orchid
+        new SKColor(255, 99, 71),     // Tomato
+        new SKColor(30, 144, 255),    // Dodger Blue
+        new SKColor(154, 205, 50),    // Yellow Green
+        new SKColor(147, 112, 219)    // Medium Purple
+    };
+    }
+
+
+    public static SKColor[] GetDarkDistinctColors()
     {
         return new[]
         {

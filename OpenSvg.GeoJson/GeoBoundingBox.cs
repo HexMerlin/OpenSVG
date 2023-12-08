@@ -1,11 +1,4 @@
-﻿using GeoJSON.Net.Geometry;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenSvg.GeoJson;
+﻿namespace OpenSvg.GeoJson;
 public class GeoBoundingBox
 {
     public double MinLongitude { get; } = double.MaxValue;

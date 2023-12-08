@@ -25,8 +25,8 @@ public record PointConverter
     /// </summary>
     /// <param name="geoJsonBoundingBox">The geo bounding box covering all coordinates</param>
     /// <param name="desiredSvgWidth">The desired width of the SVG image</param>
-    public PointConverter(GeoJsonBoundingBox geoJsonBoundingBox, double desiredSvgWidth, int segmentCountForCurveApproximation = 10) 
-        : this(geoJsonBoundingBox.TopLeft, MetersPerPixels(desiredSvgWidth, geoJsonBoundingBox), segmentCountForCurveApproximation)
+    public PointConverter(GeoBoundingBox geoBoundingBox, double desiredSvgWidth, int segmentCountForCurveApproximation = 10) 
+        : this(geoBoundingBox.TopLeft, MetersPerPixels(desiredSvgWidth, geoBoundingBox), segmentCountForCurveApproximation)
     {
 
     }
@@ -51,12 +51,6 @@ public record PointConverter
         return metersPerPixel;
     }
 
-    public static double MetersPerPixels(double desiredSvgWidth, GeoJsonBoundingBox geoJsonBoundingBox)
-    {
-        double widthInMeters = geoJsonBoundingBox.TopLeft.DistanceTo(geoJsonBoundingBox.TopRight);
-        double metersPerPixel = widthInMeters / desiredSvgWidth;
-        return metersPerPixel;
-    }
 
     /// <summary>
     ///     Converts a point to a world coordinate.
@@ -81,7 +75,7 @@ public record PointConverter
     /// <returns>A point converted from the input coordinate.</returns>
     public Point ToPoint(Coordinate coordinate)
     {
-        var (dx, dy) = StartLocation.CartesianOffset(coordinate);
+        (double dx, double dy) = StartLocation.CartesianOffset(coordinate);
 
         double x = dx / MetersPerPixel;
         double y = -dy / MetersPerPixel; // Invert Y-axis
