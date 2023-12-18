@@ -194,6 +194,11 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
             .Select(field => field.GetValue(this)).OfType<IAttr>();
 
 
+    /// <summary>
+    /// Creates an <see cref="SvgElement"/> based on the provided element name.
+    /// </summary>
+    /// <param name="elementName">The name of the SVG element.</param>
+    /// <returns>An instance of the corresponding <see cref="SvgElement"/> or throws an exception if the element is unsupported.</returns>
     private static SvgElement CreateSvgElement(string elementName) => elementName switch
     {
         SvgNames.Svg => new SvgDocument(),
@@ -207,7 +212,7 @@ public abstract class SvgElement : IXmlSerializable, IEquatable<SvgElement>
         SvgNames.Rect => new SvgRectangleAsRect(),
         SvgNames.Defs => new SvgDefs(),
         SvgNames.Style => new SvgCssStyle(),
-        _ => throw new InvalidOperationException($"Unsupported SVG element: {elementName}")
+        _ => throw new NotSupportedException($"Unsupported SVG element: {elementName}")
     };
 
     /// <summary>

@@ -17,12 +17,14 @@ public interface IAttr : IEquatable<IAttr>
     public bool IsConstant { get; }
 
     
+    ///<summary>
+    /// Gets a value indicating whether the attribute should be serialized.
+    /// </summary>
+    /// <remarks>
+    /// This property determines whether the attribute should be included in the serialization process.
+    /// </remarks>
     public bool ShouldBeSerialized { get; }
 
-    ///// <summary>
-    ///// Gets a value indicating whether the attribute has a default value.
-    ///// </summary>
-    //public bool HasDefaultValue { get; }
 
     /// <summary>
     /// Used by the serializer to set the value of the attribute from an XML string.

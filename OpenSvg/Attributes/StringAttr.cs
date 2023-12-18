@@ -11,7 +11,6 @@ public class StringAttr : Attr<string>
     /// <param name="name">The name of this attribute.</param> 
     /// <param name="defaultValue">The default value of this attribute.</param>
     /// <param name="isConstant">Set whether this attribute is constant or if the value can be changed.</param>
-
     public StringAttr(string name, string defaultValue, bool isConstant) : base(name, defaultValue, isConstant)
     {
     }

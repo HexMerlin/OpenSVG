@@ -1,9 +1,6 @@
 ﻿using OpenSvg.GeoJson;
-using OpenSvg.Optimization;
-using OpenSvg.PathOptimize;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
-using Spectre.Console.Rendering;
 using System.Collections.Immutable;
 using System.IO.Compression;
 

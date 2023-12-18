@@ -6,6 +6,8 @@ using OpenSvg.SvgNodes;
 using SkiaSharp;
 using OpenSvg.Optimization;
 using System.Collections.Immutable;
+using ICSharpCode.Decompiler.Util;
+using System.Numerics;
 
 namespace OpenSvg.Netex;
 
@@ -15,7 +17,7 @@ public class NetexShared
 
     public NetexShared(string netexXmlFile)
     {
-        bool runOptimization = true;
+      
 
         static bool IsTaxi(XElement pointList)
             => pointList.Parent.Parent.Attributes("id").Any(a => a.Value.ToLower(CultureInfo.InvariantCulture).Contains("taxi"));
@@ -25,15 +27,17 @@ public class NetexShared
 
         List<XElement> posLists = XDocument.Descendants().Where(e => e.Name.LocalName == "posList").Where(e => !IsTaxi(e)).ToList();
         Console.WriteLine("All posLists: " + posLists.Count());
-      
+
         //var ids = posLists.Select(e => e.Parent.Attributes("id").Select(a => a.Value)).Where(a => a != null).ToList();
         //foreach (var id in ids.Take(20))
         //{
         //    Console.WriteLine("Id: " + id);
         //}
 
+        // Coordinate[][] coordinates = posLists.Select(ParsePointList).ToArray();
+      //  Coordinate[][] coordinates = posLists.Select(ParsePointList).Select(list => DEBUG_FILTER_WithinBoundingBox(list)).ToArray();
 
-        Coordinate[][] coordinates = posLists.Select(ParsePointList).Select(list => list.Where(c => IsWithinBoundingBox(c)).ToArray()).ToArray();
+        Coordinate[][] coordinates = posLists.Select(ParsePointList).Where(list => IsAllWithinBoundingBox(list)).ToArray();
 
         GeoBoundingBox geoBoundingBox = new GeoBoundingBox(coordinates.SelectMany(c => c));
 
@@ -41,83 +45,89 @@ public class NetexShared
         PointConverter converter = new PointConverter(geoBoundingBox, 1000, 10);
         Console.WriteLine("Meters per pixel: " + converter.MetersPerPixel);
 
-        FastPolyline[] polylines = coordinates.Where(c => c.Count() >= 2).Select(c => new FastPolyline(c.Select(converter.ToPoint))).ToArray();
+        //FastPolyline[] polylines = coordinates.Where(c => c.Count() >= 2).Select(c => new FastPolyline(c.Select(converter.ToPoint)))
+        //    .Select(p => p.RemoveSharpTurns()).ToArray();
 
+        //FastPolyline[] polylines = coordinates.Where(c => c.Count() >= 2).Select(c => new FastPolyline(c.Select(converter.ToPoint)))
+        //.Where(p => p.HasBadEndPoint()).ToArray();
+
+        FastPolyline[] polylines = coordinates.Where(c => c.Count() >= 2).Select(c => new FastPolyline(c.Select(converter.ToPoint)))
+   .ToArray();
+       
+
+      
+
+
+
+        Console.WriteLine("Polylines with sharp turns: " + polylines.Count(p => p.HasSharpTurns()));
+        polylines = polylines.Select(polyline => polyline.RemoveEquivalentAdjacentPoints()).ToArray();
+        polylines = polylines.Select(p => p.RemoveSharpTurns()).ToArray();
+        polylines = polylines.Select(p => p.ApplyRDPA()).ToArray(); 
+        //Console.WriteLine("Polylines with sharp turns: " + polylines.Count(p => p.HasSharpTurns()));
+        // polylines = polylines.Select(p => p.ReorderMisplacedPoints()).ToArray();
+        //  polylines = polylines.Select(polyline => polyline.RemoveEquivalentAdjacentPoints()).ToArray();
+
+        var originalSvg = CreateSvg(polylines, ImmutableArray<FastPolyline>.Empty, GetEndPoints(polylines), ImmutableArray<Point>.Empty);
+        originalSvg.Save($@"D:\Downloads\Test\Netex\1.svgz");
+        // polylines = polylines.Where(p => p.HasDuplicatedPoints()).ToArray();
+
+        // polylines = polylines.Where(p => p.ContainsSharpTurns()).Take(1).ToArray();
+
+        //polylines = polylines.Where(p => p.HasDuplicatedPoints()).Where(p => p.Length < 13).Take(1).ToArray();
+
+        //FastPolyline debugPolyline = polylines.First(p => p.HasDuplicatedPoints());
+
+        //Console.WriteLine("FOCUS LINE SHARPTURNS: " + debugPolyline.HasSharpTurns());
+
+        //Console.WriteLine(debugPolyline.Points[0]);
+        //for (int i = 1; i < debugPolyline.Length - 1; i++)
+        //{
+        //    Console.WriteLine(debugPolyline.Points[i] + "   " + FastPolyline.GetAngle(debugPolyline[i - 1], debugPolyline[i], debugPolyline[i + 1]) + " Dist: " + Vector2.DistanceSquared(debugPolyline.Points[i - 1], debugPolyline.Points[i]));
+        //}
+        //Console.WriteLine(debugPolyline.Points[^1]);
+
+        //debugPolyline = debugPolyline.RemoveEquivalentAdjacentPoints();
+
+        //Console.WriteLine("After RemoveEquivalentAdjacentPoints");
+        //Console.WriteLine(debugPolyline.Points[0]);
+        //for (int i = 1; i < debugPolyline.Length - 1; i++)
+        //{
+        //    Console.WriteLine(debugPolyline.Points[i] + "   " + FastPolyline.GetAngle(debugPolyline[i - 1], debugPolyline[i], debugPolyline[i + 1]) + " Dist: " + Vector2.DistanceSquared(debugPolyline.Points[i - 1], debugPolyline.Points[i]));
+        //}
+        //Console.WriteLine(debugPolyline.Points[^1]);
+
+
+        Console.WriteLine("Polylines with sharp turns: " + polylines.Count(p => p.HasSharpTurns()));
         Console.WriteLine("Polylines with duplicated points: " + polylines.Count(p => p.HasDuplicatedPoints()));
-
-
-        polylines = polylines.Select(p => p.RemoveEquivalentAdjacentPoints()).ToArray();
-        Console.WriteLine("Polylines with duplicated points: " + polylines.Count(p => p.HasDuplicatedPoints()));
-
-
-        Console.WriteLine("Polylines count " + polylines.Count());
-
-        int DEBUG_uniquePointCount = polylines.SelectMany(p => p.Points).Distinct().Count();
-        Console.WriteLine("DEBUG Original unique points: " + DEBUG_uniquePointCount);
-
 
         Console.WriteLine("Creating line set");
         LineSet lineSet = new LineSet(polylines);
 
-        Console.WriteLine("Lines: " + lineSet.ByMinPoint.Count);
-   
-        int DEBUG_lineSetPointCount = lineSet.ByMinPoint.Select(l => l.MinPoint).Distinct().Count();
-        
-        Console.WriteLine("DEBUG LineSet NON-OPTIMIZED unique points: " + lineSet.TotalPointCount());
-        if (runOptimization)
-            lineSet.Optimize();
-
-        Console.WriteLine("DEBUG LineSet OPTIMIZED unique points: " + lineSet.TotalPointCount());
-
+        lineSet.Optimize(); 
 
         FastPolyline[] optimizedLines = lineSet.OptimizedPolylines.ToArray();
-        Console.WriteLine("Optimized lines: " + optimizedLines.Count());
-
         FastPolyline[] nonOptimizedLines = lineSet.NonOptimizedPolylines.ToArray();
-        Console.WriteLine("Non-Optimized lines: " + nonOptimizedLines.Count());
-        //*** Generate SVG shapes ***//
+ 
 
+        var optimizedSvg = CreateSvg(nonOptimizedLines, optimizedLines, lineSet.OriginalEndPoints, lineSet.AddedEndPoints);
+        optimizedSvg.Save($@"D:\Downloads\Test\Netex\2.svgz");
+
+    }
+
+    private static HashSet<Point> GetEndPoints(IEnumerable<FastPolyline> polylines)
+    {
+        HashSet<Point> endPoints = new HashSet<Point>();
+        foreach (var polyline in polylines)
+        {
+            endPoints.Add(polyline[0]);
+            endPoints.Add(polyline[^1]);
+        }
+        return endPoints;
+    }
+
+    public static SvgDocument CreateSvg(IEnumerable<FastPolyline> nonOptimizedLines, IEnumerable<FastPolyline> optimizedLines, IEnumerable<Point> originalStops, IEnumerable<Point> addedNodes)
+    {
         SKColor[] colors = ColorHelper.GetBrightDistinctColors();
-
-        int index = 0;
-
-        SvgGroup lineGroup = new SvgGroup();
-        lineGroup.FillColor = SKColors.Transparent;
-        lineGroup.StrokeWidth = 0.03f;
-        foreach (FastPolyline polyline in lineSet.NonOptimizedPolylines)
-        {
-            SvgPolyline svgPolyline = polyline.ToSvgPolyline();
-            svgPolyline.StrokeColor = SKColors.DarkGray;
-            lineGroup.ChildElements.Add(svgPolyline);
-
-        }
-
-        foreach (FastPolyline polyline in optimizedLines)
-        {
-            SvgPolyline svgPolyline = polyline.ToSvgPolyline();
-            svgPolyline.StrokeColor = colors[index % colors.Length];
-            lineGroup.ChildElements.Add(svgPolyline);
-            index++;
-        }
-
-   
-
-
-        SvgGroup stopGroup = new SvgGroup();
-        stopGroup.FillColor = SKColors.Transparent;
-        stopGroup.StrokeWidth = 0;
-        foreach (Point endPoint in lineSet.AddedEndPoints)
-        {
-            var svgShape = new SvgCircle() { Center = endPoint, Radius = 0.2f, FillColor = SKColors.Purple };
-            stopGroup.ChildElements.Add(svgShape);
-        }
-        foreach (Point endPoint in lineSet.OriginalEndPoints)
-        {
-            var svgShape = new SvgCircle() { Center = endPoint, Radius = 0.2f, FillColor = SKColors.Yellow };
-            stopGroup.ChildElements.Add(svgShape);
-        }
-     
-
 
         SvgDocument svgDocument = new SvgDocument();
         SvgRectangleAsRect backgroundFill = new SvgRectangleAsRect();
@@ -125,21 +135,66 @@ public class NetexShared
         backgroundFill.DefinedWidth = AbsoluteOrRatio.Ratio(1);
         backgroundFill.DefinedHeight = AbsoluteOrRatio.Ratio(1);
         svgDocument.Add(backgroundFill);
-        svgDocument.Add(lineGroup);
-        svgDocument.Add(stopGroup);
+
+        svgDocument.StrokeWidth = 0.03f;
        
+        SvgGroup lineGroup = new SvgGroup();
+        lineGroup.FillColor = SKColors.Transparent;
+        lineGroup.StrokeWidth = 0.03f;
+        foreach (FastPolyline polyline in nonOptimizedLines)
+        {
+            //SvgPolyline svgPolyline = polyline.ToSvgPolyline();
+            var svgElement = polyline.ToSvgPath();
+            svgElement.StrokeColor = SKColors.DarkGray;
+            svgElement.FillColor = SKColors.Transparent;
+            svgDocument.Add(svgElement);
+
+        }
+
+        int index = 0;
+        foreach (FastPolyline polyline in optimizedLines)
+        {
+            var svgElement = polyline.ToSvgPath();
+            svgElement.StrokeColor = colors[index % colors.Length];
+  
+            svgElement.FillColor = SKColors.Transparent;
+            // svgElement.FillColor = SKColors.Transparent;
+            svgDocument.Add(svgElement);
+            index++;
+        }
+
+
+
+
+        SvgGroup stopGroup = new SvgGroup();
+        stopGroup.FillColor = SKColors.Transparent;
+        stopGroup.StrokeWidth = 0;
+        //foreach (Point endPoint in addedNodes)
+        //{
+        //    var svgShape = new SvgCircle() { Center = endPoint, Radius = 0.2f, FillColor = SKColors.Purple };
+        //    stopGroup.ChildElements.Add(svgShape);
+        //}
+        foreach (Point endPoint in originalStops)
+        {
+            var svgShape = new SvgCircle() { Center = endPoint, Radius = 0.2f, FillColor = SKColors.Yellow };
+            stopGroup.ChildElements.Add(svgShape);
+        }
+
+        
+       // svgDocument.Add(lineGroup);
+        svgDocument.Add(stopGroup);
+
 
 
         svgDocument.SetViewBoxToActualSizeAndDefaultViewPort();
-        svgDocument.Save($@"D:\Downloads\Test\Netex\{(runOptimization ? "2" : "1")}.svg");
-
+        return svgDocument;
     }
 
-   
-     
+    static bool IsAllWithinBoundingBox(Coordinate[] coordinates) => coordinates.All(c => IsWithinBoundingBox(c));
+
     static bool IsWithinBoundingBox(Coordinate coordinate)
     {
-        
+        return true;
         //larger area
         var topLeft = new Coordinate(12.873657850104392, 55.64814360262774);
         var bottomRight = new Coordinate(13.068633658027395, 55.56195788858898);
@@ -171,13 +226,17 @@ public class NetexShared
         {
             throw new InvalidOperationException($"Number of coordinates values ({coordinatesText.Length}) does not match the count attribute ({count}).");
         }
-
-        Coordinate[] coordinates = new Coordinate[count];
+        if (count % 2 != 0)
+        {
+            throw new InvalidOperationException($"Number of coordinates values ({coordinatesText.Length}) is not an even number.");
+        }
+     
+        Coordinate[] coordinates = new Coordinate[count >> 1];
         for (int i = 0; i < count; i+=2)
         {
             double latitude = double.Parse(coordinatesText[i], CultureInfo.InvariantCulture);
             double longitude = double.Parse(coordinatesText[i + 1], CultureInfo.InvariantCulture);
-            coordinates[i] = new Coordinate(longitude, latitude);
+            coordinates[i >> 1] = new Coordinate(longitude, latitude);
         }
 
         return coordinates;

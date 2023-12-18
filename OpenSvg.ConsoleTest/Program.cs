@@ -26,14 +26,25 @@ internal class Program
 
     public static void Main()
     {
-        float[] angles = new float[] { 20, 15, -175, 1, 175, 40, 40, 40, -20, -20, -20 };
 
-        var polyline = FastPolyline.CreatePolyline(new Point(100, 100), angles, 10);
-        SaveSvg(polyline, 1);
-        polyline = polyline.RemoveSharpTurns();
-        SaveSvg(polyline, 2);
+        //float[] initialWeights = new float[] { 1, 2, 3, 20, 5, 1, 2, 8, 15 };
+        //float[] result = FastPolyline.ApplyWeightedMovingAverage(initialWeights);
+
+        //Console.WriteLine(string.Join(", ", initialWeights));
+        //Console.WriteLine("Average: " + initialWeights.Average());
+
+        //Console.WriteLine(string.Join(", ", result));
+        //Console.WriteLine("Average: " + result.Average());
+        //return;
+
+        //float[] angles = new float[] { 20, 15, -175, 1, 175, 40, 40, 40, -20, -20, -20 };
+
+        //var polyline = FastPolyline.CreatePolyline(new Point(100, 100), angles, 10);
+        //SaveSvg(polyline, 1);
+        //polyline = polyline.RemoveSharpTurns();
+        //SaveSvg(polyline, 2);
        
-        return;
+        //return;
 
         //var svgRect = new SvgRectangleAsRect();
         //svgRect.X = 10;

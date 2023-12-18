@@ -1,5 +1,7 @@
 ﻿
 using OpenSvg.SvgNodes;
+using SkiaSharp;
+using System;
 using System.Collections.Immutable;
 
 namespace OpenSvg.Optimization;
@@ -10,6 +12,8 @@ namespace OpenSvg.Optimization;
 public partial class FastPolyline : IEquatable<FastPolyline>
 {
    
+
+
     /// <summary>
     /// The points of the polyline.
     /// </summary>
@@ -46,6 +50,15 @@ public partial class FastPolyline : IEquatable<FastPolyline>
     /// <returns>The point at the specified index.</returns>
     /// <exception cref="IndexOutOfRangeException">Thrown when the index is out of range.</exception>
     public Point this[int index] => Points[index];
+
+
+    /// <summary>
+    /// Gets the point at the specified index.
+    /// </summary>
+    /// <param name="index">The index of the point.</param>
+    /// <returns>The point at the specified index.</returns>
+    /// <exception cref="IndexOutOfRangeException">Thrown when the index is out of range.</exception>
+    public Point this[Index index] => Points[index.IsFromEnd ? Points.Length - index.Value : index.Value];
 
     /// <summary>
     /// Determines whether the current polyline is equal to another polyline.
@@ -105,11 +118,25 @@ public partial class FastPolyline : IEquatable<FastPolyline>
         svgPolyline.Polyline = new Polyline(Points);
         return svgPolyline;
     }
+
+    /// <summary>
+    /// Converts the current polyline to an SVG path.
+    /// </summary>
+    /// <returns>The SVG path representation of the current polyline.</returns>
+    public SvgPath ToSvgPath()
+    {
+        SvgPath svgPath = new SvgPath();
+        svgPath.Path = this.ToPath();
+        return svgPath;
+    }
+
     public bool HasDuplicatedPoints()
     {
         HashSet<Point> hashedPoints = new HashSet<Point>(Points);
         return Length != hashedPoints.Count;
     }
+
+    
 
     /// <summary>
     /// Removes adjacent points that are identical, or equivalent (i.e. closer than a given threshold).
@@ -128,23 +155,52 @@ public partial class FastPolyline : IEquatable<FastPolyline>
     /// </item>
     /// </list>
     /// </remarks>
-    public FastPolyline RemoveEquivalentAdjacentPoints(float minDistanceSquaredThreshold = 0.00001f)
+    public FastPolyline RemoveEquivalentAdjacentPoints(float minDistanceSquaredThreshold = 0.01f)
     {
-        if (Length == 2) return this; //do not optimize polylines with only two points
+        if (Length <= 2) return this;
 
-        List<Point> result = new List<Point>(Length);
-        result.Add(this[0]);
-
-        for (int i = 1; i < Points.Length; i++)
+        List<Point> result = new List<Point>(Length)
         {
-            if (Point.DistanceSquared(Points[i], result[^1]) >= minDistanceSquaredThreshold)
-                result.Add(Points[i]);
+            this[0] // Always retain the first point
+        };
+
+        for (int i = 1; i < Points.Length - 1; i++) // Loop until the second-to-last point
+        {      
+            if (Point.DistanceSquared(result[^1], this[i]) >= minDistanceSquaredThreshold) // && !hashedPoints.Contains(this[i]))
+            {
+                result.Add(this[i]);
+
+            }
         }
-        //assert that the last point is the same as the last point of the original polyline
-        if (result[^1] != Points[^1])
-            result[^1] = Points[^1];
-        return new FastPolyline(result);
+
+        // Always retain the last point, add at end if above threshold, otherwise replace the last point
+        if (result.Count == 1 || Point.DistanceSquared(result[^1], this[^1]) >= minDistanceSquaredThreshold)
+        {
+            result.Add(this[^1]); 
+        }
+        else result[^1] = this[^1]; 
+
+      
+        var polyline = new FastPolyline(result);
+        //if (polyline.HasDuplicatedPoints())
+        //{
+        //    polyline.Dump_DEBUG_Svg();
+        //    throw new Exception("Duplicated points in polyline");
+        //}
+        return polyline;
     }
+
+    /// <summary>
+    /// Converts the <see cref="FastPolyline"/> to a <see cref="Path"/>.
+    /// </summary>
+    /// <returns>The <see cref="FastPolyline"/> represented as a <see cref="Path"/>.</returns>
+    public Path ToPath()
+    {
+        SKPath skPath = new SKPath();
+        skPath.AddPoly(this.Points.Select(p => new SKPoint(p.X, p.Y)).ToArray(), close: false);
+        return new Path(skPath);
+    }
+
 
     /// <summary>
     /// Finds the longest common substring between two polylines.

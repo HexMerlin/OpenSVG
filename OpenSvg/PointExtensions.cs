@@ -8,6 +8,64 @@ namespace OpenSvg;
 /// </summary>
 public static class PointExtensions
 {
+    /// <summary>
+    /// Normalizes an angle in degrees to the range ]-180, 180].
+    /// </summary>
+    /// <remarks>This is useful for using angles to denote turns, where 0 means no turning.
+    /// A negative value means a left turn and a positive value means a right turn.
+    /// The higher the absolute value, the sharper the turn.
+    /// </remarks>
+    /// <param name="degrees">The angle in degrees to normalize.</param>
+    /// <returns>The normalized angle.</returns>
+    public static float NormalizeAngle(float degrees)
+    {
+        degrees %= 360;
+        if (degrees > 180) return degrees - 360;
+        if (degrees <= -180) return degrees + 360;
+        return degrees;
+    }
+
+    /// <summary>
+    /// Calculates the angle formed by three points in 2D space, normalized to the range ]-180, 180].
+    /// </summary>
+    /// <remarks>
+    /// This method computes the angle in degrees between two vectors, v1 and v2, formed by the points a, b, and c.
+    /// Points a, b, and c are represented as 2D vectors (Point/Vector2).
+    /// - If any two of the points are identical (resulting in zero-length vectors), the method returns 0 degrees.
+    /// - The angle is normalized using NormalizeAngle to fall within the range ]-180, 180].
+    /// - The method is robust against floating-point inaccuracies and avoids returning NaN by clamping the cosine of the angle within the range [-1, 1].
+    ///
+    /// Note: The method assumes a coordinate system where positive angles indicate a clockwise rotation and negative angles an anticlockwise rotation.
+    /// </remarks>
+    /// <param name="a">The first point in the sequence, forming vector v1 with point b.</param>
+    /// <param name="b">The second point in the sequence, forming vectors v1 with point a and v2 with point c.</param>
+    /// <param name="c">The third point in the sequence, forming vector v2 with point b.</param>
+    /// <returns>
+    /// The normalized angle in degrees formed by the three points, within the range ]-180, 180].
+    /// Returns 0 degrees if any two points are identical.
+    /// </returns>
+
+    public static float GetAngle(Point a, Point b, Point c)
+    {
+        Vector2 v1 = b - a;
+        Vector2 v2 = c - b;
+
+        if (v1 == Vector2.Zero || v2 == Vector2.Zero)
+            return 0f; //returning 0 for zero-length vectors (identical points)
+
+        float dotProduct = Vector2.Dot(v1, v2);
+        float magnitudeProduct = v1.Length() * v2.Length();
+
+        // Clamping the value to the range [-1, 1] to avoid NaN
+        float cosTheta = Math.Clamp(dotProduct / magnitudeProduct, -1f, 1f);
+
+        float angleRadians = MathF.Acos(cosTheta);
+
+        // Converting radians to degrees
+        float angleDegrees = NormalizeAngle(angleRadians * (180 / MathF.PI));
+        return angleDegrees;
+
+    }
 
     /// <summary>
     /// Determines whether the specified point is within a certain distance from the current point.

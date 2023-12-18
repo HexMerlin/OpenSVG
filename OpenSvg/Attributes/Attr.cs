@@ -38,6 +38,12 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull, IE
     /// </summary>
     public bool IsConstant { get; }
 
+    ///<summary>
+    /// Gets a value indicating whether the attribute should be serialized.
+    /// </summary>
+    /// <remarks>
+    /// This property determines whether the attribute should be included in the serialization process.
+    /// </remarks>
     public bool ShouldBeSerialized => IsConstant || !ValueEquals(DefaultValue);
 
     /// <summary>
@@ -46,10 +52,6 @@ public abstract class Attr<T> : IAttr, IEquatable<Attr<T>> where T : notnull, IE
     /// <param name="xmlString">The XML string.</param>
     public void SetBySerializer(string xmlString) => Set(Deserialize(xmlString));
 
-    ///// <summary>
-    ///// Whether the attribute has the default value.
-    ///// </summary>
-    //public bool HasDefaultValue => ValueEquals(DefaultValue);
 
     /// <summary>
     /// Returns the XML string representation of the attribute.
