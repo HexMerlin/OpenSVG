@@ -364,6 +364,96 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.FastPolyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.FastPolyline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.Line.SkipSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.Line.SkipSort.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.Line.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.LineComparerMaxPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.LineComparerMaxPoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.LineComparerMinPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.LineComparerMinPoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.LineSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.LineSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.SimpleCorrections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.SimpleCorrections.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.SubstringResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.SubstringResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenSvg.Optimization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenSvg.Optimization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OpenSvg.Orientation.yml",
       "output": {
         ".html": {

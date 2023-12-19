@@ -145,7 +145,7 @@
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_CompareTo_System_Numerics_Vector2_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.CompareTo(System.Numerics.Vector2%2CSystem.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L81">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L139">View Source</a>
   </span>
   <a id="OpenSvg_PointExtensions_CompareTo_" data-uid="OpenSvg.PointExtensions.CompareTo*"></a>
   <h4 id="OpenSvg_PointExtensions_CompareTo_System_Numerics_Vector2_System_Numerics_Vector2_" data-uid="OpenSvg.PointExtensions.CompareTo(System.Numerics.Vector2,System.Numerics.Vector2)">CompareTo(Vector2, Vector2)</h4>
@@ -205,10 +205,83 @@ the comparison is then made using the X coordinates.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_GetAngle_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.GetAngle(System.Numerics.Vector2%2CSystem.Numerics.Vector2%2CSystem.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L48">View Source</a>
+  </span>
+  <a id="OpenSvg_PointExtensions_GetAngle_" data-uid="OpenSvg.PointExtensions.GetAngle*"></a>
+  <h4 id="OpenSvg_PointExtensions_GetAngle_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_" data-uid="OpenSvg.PointExtensions.GetAngle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">GetAngle(Vector2, Vector2, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the angle formed by three points in 2D space, normalized to the range ]-180, 180].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetAngle(Vector2 a, Vector2 b, Vector2 c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The first point in the sequence, forming vector v1 with point b.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The second point in the sequence, forming vectors v1 with point a and v2 with point c.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>The third point in the sequence, forming vector v2 with point b.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>The normalized angle in degrees formed by the three points, within the range ]-180, 180].
+Returns 0 degrees if any two points are identical.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_PointExtensions_GetAngle_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method computes the angle in degrees between two vectors, v1 and v2, formed by the points a, b, and c.
+Points a, b, and c are represented as 2D vectors (Point/Vector2).</p>
+<ul>
+<li>If any two of the points are identical (resulting in zero-length vectors), the method returns 0 degrees.</li>
+<li>The angle is normalized using NormalizeAngle to fall within the range ]-180, 180].</li>
+<li>The method is robust against floating-point inaccuracies and avoids returning NaN by clamping the cosine of the angle within the range [-1, 1].</li>
+</ul>
+<p>Note: The method assumes a coordinate system where positive angles indicate a clockwise rotation and negative angles an anticlockwise rotation.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_IsOnLineSegment_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2%2CSystem.Numerics.Vector2%2CSystem.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L51">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L109">View Source</a>
   </span>
   <a id="OpenSvg_PointExtensions_IsOnLineSegment_" data-uid="OpenSvg.PointExtensions.IsOnLineSegment*"></a>
   <h4 id="OpenSvg_PointExtensions_IsOnLineSegment_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_" data-uid="OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">IsOnLineSegment(Vector2, Vector2, Vector2)</h4>
@@ -270,7 +343,7 @@ the comparison is then made using the X coordinates.</p>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_IsWithinDistance_System_Numerics_Vector2_System_Numerics_Vector2_System_Double_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2%2CSystem.Numerics.Vector2%2CSystem.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L34">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L92">View Source</a>
   </span>
   <a id="OpenSvg_PointExtensions_IsWithinDistance_" data-uid="OpenSvg.PointExtensions.IsWithinDistance*"></a>
   <h4 id="OpenSvg_PointExtensions_IsWithinDistance_System_Numerics_Vector2_System_Numerics_Vector2_System_Double_" data-uid="OpenSvg.PointExtensions.IsWithinDistance(System.Numerics.Vector2,System.Numerics.Vector2,System.Double)">IsWithinDistance(Vector2, Vector2, double)</h4>
@@ -340,10 +413,65 @@ Console.WriteLine(isWithin);
 
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_NormalizeAngle_System_Single_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.NormalizeAngle(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L20">View Source</a>
+  </span>
+  <a id="OpenSvg_PointExtensions_NormalizeAngle_" data-uid="OpenSvg.PointExtensions.NormalizeAngle*"></a>
+  <h4 id="OpenSvg_PointExtensions_NormalizeAngle_System_Single_" data-uid="OpenSvg.PointExtensions.NormalizeAngle(System.Single)">NormalizeAngle(float)</h4>
+  <div class="markdown level1 summary"><p>Normalizes an angle in degrees to the range ]-180, 180].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float NormalizeAngle(float degrees)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">degrees</span></td>
+        <td><p>The angle in degrees to normalize.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>The normalized angle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="OpenSvg_PointExtensions_NormalizeAngle_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is useful for using angles to denote turns, where 0 means no turning.
+A negative value means a left turn and a positive value means a right turn.
+The higher the absolute value, the sharper the turn.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/HexMerlin/OpenSVG/new/master/apiSpec/new?filename=OpenSvg_PointExtensions_Transform_System_Numerics_Vector2_OpenSvg_Transform_.md&amp;value=---%0Auid%3A%20OpenSvg.PointExtensions.Transform(System.Numerics.Vector2%2COpenSvg.Transform)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L42">View Source</a>
+    <a href="https://github.com/HexMerlin/OpenSVG/blob/master/OpenSvg/PointExtensions.cs/#L100">View Source</a>
   </span>
   <a id="OpenSvg_PointExtensions_Transform_" data-uid="OpenSvg.PointExtensions.Transform*"></a>
   <h4 id="OpenSvg_PointExtensions_Transform_System_Numerics_Vector2_OpenSvg_Transform_" data-uid="OpenSvg.PointExtensions.Transform(System.Numerics.Vector2,OpenSvg.Transform)">Transform(Vector2, Transform)</h4>

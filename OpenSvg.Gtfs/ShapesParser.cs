@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System.Globalization;
 using System.IO.Compression;
-using OpenSvg.GeoJson;
+using OpenSvg.Geographics;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
 

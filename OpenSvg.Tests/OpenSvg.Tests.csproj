@@ -399,17 +399,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Docfx.App" Version="2.74.0" />
+    <PackageReference Include="Docfx.App" Version="2.74.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="xunit" Version="2.6.2" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OpenSvg.GeoJson\OpenSvg.GeoJson.csproj" />
+    <ProjectReference Include="..\OpenSvg.Geographics\OpenSvg.Geographics.csproj" />
     <ProjectReference Include="..\OpenSvg\OpenSvg.csproj" />
   </ItemGroup>
 

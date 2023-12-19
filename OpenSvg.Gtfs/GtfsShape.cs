@@ -1,4 +1,4 @@
-﻿using OpenSvg.GeoJson;
+﻿using OpenSvg.Geographics;
 using OpenSvg.SvgNodes;
 using SkiaSharp;
 using System;

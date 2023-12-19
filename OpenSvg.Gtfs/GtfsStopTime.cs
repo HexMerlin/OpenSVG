@@ -1,5 +1,4 @@
-﻿using ICSharpCode.Decompiler.TypeSystem;
-using OpenSvg.GeoJson;
+﻿using OpenSvg.Geographics;
 using OpenSvg.SvgNodes;
 
 

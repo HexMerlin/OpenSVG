@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenSvg;
-using OpenSvg.GeoJson;
+using OpenSvg.Geographics;
 
 namespace OpenSvg.Gtfs.Optimized;
 public class AllPoints

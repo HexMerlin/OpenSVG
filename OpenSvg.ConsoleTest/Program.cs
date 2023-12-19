@@ -1,12 +1,7 @@
 ﻿using OpenSvg.Gtfs;
-using OpenSvg.SvgNodes;
 using OpenSvg.Netex;
-using System.Xml.Linq;
-using System.Numerics;
-using System.Collections.Immutable;
-using OpenSvg.GeoJson;
-using OpenSvg.Config;
 using OpenSvg.Optimization;
+using OpenSvg.SvgNodes;
 namespace OpenSvg.ConsoleTest;
 
 internal class Program

@@ -137,6 +137,32 @@ references:
   isSpec: "True"
   fullName: OpenSvg.AbsoluteOrRatio.Resolve
   nameWithType: AbsoluteOrRatio.Resolve
+- uid: OpenSvg.AbsoluteOrRatio.ToString
+  name: ToString()
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_ToString
+  commentId: M:OpenSvg.AbsoluteOrRatio.ToString
+  fullName: OpenSvg.AbsoluteOrRatio.ToString()
+  nameWithType: AbsoluteOrRatio.ToString()
+- uid: OpenSvg.AbsoluteOrRatio.ToString*
+  name: ToString
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_ToString_
+  commentId: Overload:OpenSvg.AbsoluteOrRatio.ToString
+  isSpec: "True"
+  fullName: OpenSvg.AbsoluteOrRatio.ToString
+  nameWithType: AbsoluteOrRatio.ToString
+- uid: OpenSvg.AbsoluteOrRatio.ToXmlString
+  name: ToXmlString()
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_ToXmlString
+  commentId: M:OpenSvg.AbsoluteOrRatio.ToXmlString
+  fullName: OpenSvg.AbsoluteOrRatio.ToXmlString()
+  nameWithType: AbsoluteOrRatio.ToXmlString()
+- uid: OpenSvg.AbsoluteOrRatio.ToXmlString*
+  name: ToXmlString
+  href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_ToXmlString_
+  commentId: Overload:OpenSvg.AbsoluteOrRatio.ToXmlString
+  isSpec: "True"
+  fullName: OpenSvg.AbsoluteOrRatio.ToXmlString
+  nameWithType: AbsoluteOrRatio.ToXmlString
 - uid: OpenSvg.AbsoluteOrRatio.Value
   name: Value
   href: api/OpenSvg.AbsoluteOrRatio.html#OpenSvg_AbsoluteOrRatio_Value
@@ -2853,6 +2879,834 @@ references:
   isSpec: "True"
   fullName: OpenSvg.MultiPolygon.ToPath
   nameWithType: MultiPolygon.ToPath
+- uid: OpenSvg.Optimization
+  name: OpenSvg.Optimization
+  href: api/OpenSvg.Optimization.html
+  commentId: N:OpenSvg.Optimization
+  fullName: OpenSvg.Optimization
+  nameWithType: OpenSvg.Optimization
+- uid: OpenSvg.Optimization.FastPolyline
+  name: FastPolyline
+  href: api/OpenSvg.Optimization.FastPolyline.html
+  commentId: T:OpenSvg.Optimization.FastPolyline
+  fullName: OpenSvg.Optimization.FastPolyline
+  nameWithType: FastPolyline
+- uid: OpenSvg.Optimization.FastPolyline.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name: FastPolyline(IEnumerable<Vector2>)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline__ctor_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__
+  commentId: M:OpenSvg.Optimization.FastPolyline.#ctor(System.Collections.Generic.IEnumerable{System.Numerics.Vector2})
+  name.vb: New(IEnumerable(Of Vector2))
+  fullName: OpenSvg.Optimization.FastPolyline.FastPolyline(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.New(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
+  nameWithType: FastPolyline.FastPolyline(IEnumerable<Vector2>)
+  nameWithType.vb: FastPolyline.New(IEnumerable(Of Vector2))
+- uid: OpenSvg.Optimization.FastPolyline.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name: FastPolyline(ImmutableArray<Vector2>)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline__ctor_System_Collections_Immutable_ImmutableArray_System_Numerics_Vector2__
+  commentId: M:OpenSvg.Optimization.FastPolyline.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name.vb: New(ImmutableArray(Of Vector2))
+  fullName: OpenSvg.Optimization.FastPolyline.FastPolyline(System.Collections.Immutable.ImmutableArray<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.New(System.Collections.Immutable.ImmutableArray(Of System.Numerics.Vector2))
+  nameWithType: FastPolyline.FastPolyline(ImmutableArray<Vector2>)
+  nameWithType.vb: FastPolyline.New(ImmutableArray(Of Vector2))
+- uid: OpenSvg.Optimization.FastPolyline.#ctor*
+  name: FastPolyline
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline__ctor_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Optimization.FastPolyline.FastPolyline
+  fullName.vb: OpenSvg.Optimization.FastPolyline.New
+  nameWithType: FastPolyline.FastPolyline
+  nameWithType.vb: FastPolyline.New
+- uid: OpenSvg.Optimization.FastPolyline.ApplyRDPA(System.Single)
+  name: ApplyRDPA(float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ApplyRDPA_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.ApplyRDPA(System.Single)
+  name.vb: ApplyRDPA(Single)
+  fullName: OpenSvg.Optimization.FastPolyline.ApplyRDPA(float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.ApplyRDPA(Single)
+  nameWithType: FastPolyline.ApplyRDPA(float)
+  nameWithType.vb: FastPolyline.ApplyRDPA(Single)
+- uid: OpenSvg.Optimization.FastPolyline.ApplyRDPA*
+  name: ApplyRDPA
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ApplyRDPA_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ApplyRDPA
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ApplyRDPA
+  nameWithType: FastPolyline.ApplyRDPA
+- uid: OpenSvg.Optimization.FastPolyline.CreatePolyline(System.Numerics.Vector2,System.Single[],System.Single)
+  name: CreatePolyline(Vector2, float[], float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_CreatePolyline_System_Numerics_Vector2_System_Single___System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.CreatePolyline(System.Numerics.Vector2,System.Single[],System.Single)
+  name.vb: CreatePolyline(Vector2, Single(), Single)
+  fullName: OpenSvg.Optimization.FastPolyline.CreatePolyline(System.Numerics.Vector2, float[], float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.CreatePolyline(System.Numerics.Vector2, Single(), Single)
+  nameWithType: FastPolyline.CreatePolyline(Vector2, float[], float)
+  nameWithType.vb: FastPolyline.CreatePolyline(Vector2, Single(), Single)
+- uid: OpenSvg.Optimization.FastPolyline.CreatePolyline*
+  name: CreatePolyline
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_CreatePolyline_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.CreatePolyline
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.CreatePolyline
+  nameWithType: FastPolyline.CreatePolyline
+- uid: OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg
+  name: Dump_DEBUG_Svg()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Dump_DEBUG_Svg
+  commentId: M:OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg
+  fullName: OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg()
+  nameWithType: FastPolyline.Dump_DEBUG_Svg()
+- uid: OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg*
+  name: Dump_DEBUG_Svg
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Dump_DEBUG_Svg_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.Dump_DEBUG_Svg
+  nameWithType: FastPolyline.Dump_DEBUG_Svg
+- uid: OpenSvg.Optimization.FastPolyline.Equals(OpenSvg.Optimization.FastPolyline)
+  name: Equals(FastPolyline?)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Equals_OpenSvg_Optimization_FastPolyline_
+  commentId: M:OpenSvg.Optimization.FastPolyline.Equals(OpenSvg.Optimization.FastPolyline)
+  name.vb: Equals(FastPolyline)
+  fullName: OpenSvg.Optimization.FastPolyline.Equals(OpenSvg.Optimization.FastPolyline?)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.Equals(OpenSvg.Optimization.FastPolyline)
+  nameWithType: FastPolyline.Equals(FastPolyline?)
+  nameWithType.vb: FastPolyline.Equals(FastPolyline)
+- uid: OpenSvg.Optimization.FastPolyline.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Equals_System_Object_
+  commentId: M:OpenSvg.Optimization.FastPolyline.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Optimization.FastPolyline.Equals(object?)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.Equals(Object)
+  nameWithType: FastPolyline.Equals(object?)
+  nameWithType.vb: FastPolyline.Equals(Object)
+- uid: OpenSvg.Optimization.FastPolyline.Equals*
+  name: Equals
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Equals_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.Equals
+  nameWithType: FastPolyline.Equals
+- uid: OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline,System.Int32[0:,0:])
+  name: FindLongestCommonSubstring(FastPolyline, FastPolyline, int[,])
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_FindLongestCommonSubstring_OpenSvg_Optimization_FastPolyline_OpenSvg_Optimization_FastPolyline_System_Int32_0__0___
+  commentId: M:OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline,System.Int32[0:,0:])
+  name.vb: FindLongestCommonSubstring(FastPolyline, FastPolyline, Integer(,))
+  fullName: OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring(OpenSvg.Optimization.FastPolyline, OpenSvg.Optimization.FastPolyline, int[,])
+  fullName.vb: OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring(OpenSvg.Optimization.FastPolyline, OpenSvg.Optimization.FastPolyline, Integer(,))
+  nameWithType: FastPolyline.FindLongestCommonSubstring(FastPolyline, FastPolyline, int[,])
+  nameWithType.vb: FastPolyline.FindLongestCommonSubstring(FastPolyline, FastPolyline, Integer(,))
+- uid: OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring*
+  name: FindLongestCommonSubstring
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_FindLongestCommonSubstring_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.FindLongestCommonSubstring
+  nameWithType: FastPolyline.FindLongestCommonSubstring
+- uid: OpenSvg.Optimization.FastPolyline.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_GetHashCode
+  commentId: M:OpenSvg.Optimization.FastPolyline.GetHashCode
+  fullName: OpenSvg.Optimization.FastPolyline.GetHashCode()
+  nameWithType: FastPolyline.GetHashCode()
+- uid: OpenSvg.Optimization.FastPolyline.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_GetHashCode_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.GetHashCode
+  nameWithType: FastPolyline.GetHashCode
+- uid: OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints
+  name: HasDuplicatedPoints()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_HasDuplicatedPoints
+  commentId: M:OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints
+  fullName: OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints()
+  nameWithType: FastPolyline.HasDuplicatedPoints()
+- uid: OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints*
+  name: HasDuplicatedPoints
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_HasDuplicatedPoints_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.HasDuplicatedPoints
+  nameWithType: FastPolyline.HasDuplicatedPoints
+- uid: OpenSvg.Optimization.FastPolyline.HasSharpTurns(System.Single)
+  name: HasSharpTurns(float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_HasSharpTurns_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.HasSharpTurns(System.Single)
+  name.vb: HasSharpTurns(Single)
+  fullName: OpenSvg.Optimization.FastPolyline.HasSharpTurns(float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.HasSharpTurns(Single)
+  nameWithType: FastPolyline.HasSharpTurns(float)
+  nameWithType.vb: FastPolyline.HasSharpTurns(Single)
+- uid: OpenSvg.Optimization.FastPolyline.HasSharpTurns*
+  name: HasSharpTurns
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_HasSharpTurns_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.HasSharpTurns
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.HasSharpTurns
+  nameWithType: FastPolyline.HasSharpTurns
+- uid: OpenSvg.Optimization.FastPolyline.IsSharpTurn(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)
+  name: IsSharpTurn(Vector2, Vector2, Vector2, float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_IsSharpTurn_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.IsSharpTurn(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)
+  name.vb: IsSharpTurn(Vector2, Vector2, Vector2, Single)
+  fullName: OpenSvg.Optimization.FastPolyline.IsSharpTurn(System.Numerics.Vector2, System.Numerics.Vector2, System.Numerics.Vector2, float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.IsSharpTurn(System.Numerics.Vector2, System.Numerics.Vector2, System.Numerics.Vector2, Single)
+  nameWithType: FastPolyline.IsSharpTurn(Vector2, Vector2, Vector2, float)
+  nameWithType.vb: FastPolyline.IsSharpTurn(Vector2, Vector2, Vector2, Single)
+- uid: OpenSvg.Optimization.FastPolyline.IsSharpTurn*
+  name: IsSharpTurn
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_IsSharpTurn_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.IsSharpTurn
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.IsSharpTurn
+  nameWithType: FastPolyline.IsSharpTurn
+- uid: OpenSvg.Optimization.FastPolyline.Item(System.Index)
+  name: this[Index]
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Item_System_Index_
+  commentId: P:OpenSvg.Optimization.FastPolyline.Item(System.Index)
+  name.vb: this[](Index)
+  fullName: OpenSvg.Optimization.FastPolyline.this[System.Index]
+  fullName.vb: OpenSvg.Optimization.FastPolyline.this[](System.Index)
+  nameWithType: FastPolyline.this[Index]
+  nameWithType.vb: FastPolyline.this[](Index)
+- uid: OpenSvg.Optimization.FastPolyline.Item(System.Int32)
+  name: this[int]
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Item_System_Int32_
+  commentId: P:OpenSvg.Optimization.FastPolyline.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: OpenSvg.Optimization.FastPolyline.this[int]
+  fullName.vb: OpenSvg.Optimization.FastPolyline.this[](Integer)
+  nameWithType: FastPolyline.this[int]
+  nameWithType.vb: FastPolyline.this[](Integer)
+- uid: OpenSvg.Optimization.FastPolyline.Item*
+  name: this
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Item_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: OpenSvg.Optimization.FastPolyline.this
+  fullName.vb: OpenSvg.Optimization.FastPolyline.this[]
+  nameWithType: FastPolyline.this
+  nameWithType.vb: FastPolyline.this[]
+- uid: OpenSvg.Optimization.FastPolyline.Length
+  name: Length
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Length
+  commentId: P:OpenSvg.Optimization.FastPolyline.Length
+  fullName: OpenSvg.Optimization.FastPolyline.Length
+  nameWithType: FastPolyline.Length
+- uid: OpenSvg.Optimization.FastPolyline.Length*
+  name: Length
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Length_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.Length
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.Length
+  nameWithType: FastPolyline.Length
+- uid: OpenSvg.Optimization.FastPolyline.Points
+  name: Points
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_Points
+  commentId: F:OpenSvg.Optimization.FastPolyline.Points
+  fullName: OpenSvg.Optimization.FastPolyline.Points
+  nameWithType: FastPolyline.Points
+- uid: OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints(System.Single)
+  name: RemoveEquivalentAdjacentPoints(float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_RemoveEquivalentAdjacentPoints_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints(System.Single)
+  name.vb: RemoveEquivalentAdjacentPoints(Single)
+  fullName: OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints(float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints(Single)
+  nameWithType: FastPolyline.RemoveEquivalentAdjacentPoints(float)
+  nameWithType.vb: FastPolyline.RemoveEquivalentAdjacentPoints(Single)
+- uid: OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints*
+  name: RemoveEquivalentAdjacentPoints
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_RemoveEquivalentAdjacentPoints_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.RemoveEquivalentAdjacentPoints
+  nameWithType: FastPolyline.RemoveEquivalentAdjacentPoints
+- uid: OpenSvg.Optimization.FastPolyline.RemoveSharpTurns(System.Single)
+  name: RemoveSharpTurns(float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_RemoveSharpTurns_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.RemoveSharpTurns(System.Single)
+  name.vb: RemoveSharpTurns(Single)
+  fullName: OpenSvg.Optimization.FastPolyline.RemoveSharpTurns(float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.RemoveSharpTurns(Single)
+  nameWithType: FastPolyline.RemoveSharpTurns(float)
+  nameWithType.vb: FastPolyline.RemoveSharpTurns(Single)
+- uid: OpenSvg.Optimization.FastPolyline.RemoveSharpTurns*
+  name: RemoveSharpTurns
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_RemoveSharpTurns_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.RemoveSharpTurns
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.RemoveSharpTurns
+  nameWithType: FastPolyline.RemoveSharpTurns
+- uid: OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints(System.Single)
+  name: ReorderMisplacedPoints(float)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ReorderMisplacedPoints_System_Single_
+  commentId: M:OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints(System.Single)
+  name.vb: ReorderMisplacedPoints(Single)
+  fullName: OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints(float)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints(Single)
+  nameWithType: FastPolyline.ReorderMisplacedPoints(float)
+  nameWithType.vb: FastPolyline.ReorderMisplacedPoints(Single)
+- uid: OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints*
+  name: ReorderMisplacedPoints
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ReorderMisplacedPoints_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ReorderMisplacedPoints
+  nameWithType: FastPolyline.ReorderMisplacedPoints
+- uid: OpenSvg.Optimization.FastPolyline.ToPath
+  name: ToPath()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToPath
+  commentId: M:OpenSvg.Optimization.FastPolyline.ToPath
+  fullName: OpenSvg.Optimization.FastPolyline.ToPath()
+  nameWithType: FastPolyline.ToPath()
+- uid: OpenSvg.Optimization.FastPolyline.ToPath*
+  name: ToPath
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToPath_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ToPath
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ToPath
+  nameWithType: FastPolyline.ToPath
+- uid: OpenSvg.Optimization.FastPolyline.ToString
+  name: ToString()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToString
+  commentId: M:OpenSvg.Optimization.FastPolyline.ToString
+  fullName: OpenSvg.Optimization.FastPolyline.ToString()
+  nameWithType: FastPolyline.ToString()
+- uid: OpenSvg.Optimization.FastPolyline.ToString*
+  name: ToString
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToString_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ToString
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ToString
+  nameWithType: FastPolyline.ToString
+- uid: OpenSvg.Optimization.FastPolyline.ToSvgPath
+  name: ToSvgPath()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToSvgPath
+  commentId: M:OpenSvg.Optimization.FastPolyline.ToSvgPath
+  fullName: OpenSvg.Optimization.FastPolyline.ToSvgPath()
+  nameWithType: FastPolyline.ToSvgPath()
+- uid: OpenSvg.Optimization.FastPolyline.ToSvgPath*
+  name: ToSvgPath
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToSvgPath_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ToSvgPath
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ToSvgPath
+  nameWithType: FastPolyline.ToSvgPath
+- uid: OpenSvg.Optimization.FastPolyline.ToSvgPolyline
+  name: ToSvgPolyline()
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToSvgPolyline
+  commentId: M:OpenSvg.Optimization.FastPolyline.ToSvgPolyline
+  fullName: OpenSvg.Optimization.FastPolyline.ToSvgPolyline()
+  nameWithType: FastPolyline.ToSvgPolyline()
+- uid: OpenSvg.Optimization.FastPolyline.ToSvgPolyline*
+  name: ToSvgPolyline
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_ToSvgPolyline_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.ToSvgPolyline
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.FastPolyline.ToSvgPolyline
+  nameWithType: FastPolyline.ToSvgPolyline
+- uid: OpenSvg.Optimization.FastPolyline.op_Equality(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline)
+  name: operator ==(FastPolyline?, FastPolyline?)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_op_Equality_OpenSvg_Optimization_FastPolyline_OpenSvg_Optimization_FastPolyline_
+  commentId: M:OpenSvg.Optimization.FastPolyline.op_Equality(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline)
+  name.vb: =(FastPolyline, FastPolyline)
+  fullName: OpenSvg.Optimization.FastPolyline.operator ==(OpenSvg.Optimization.FastPolyline?, OpenSvg.Optimization.FastPolyline?)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.=(OpenSvg.Optimization.FastPolyline, OpenSvg.Optimization.FastPolyline)
+  nameWithType: FastPolyline.operator ==(FastPolyline?, FastPolyline?)
+  nameWithType.vb: FastPolyline.=(FastPolyline, FastPolyline)
+- uid: OpenSvg.Optimization.FastPolyline.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_op_Equality_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Optimization.FastPolyline.operator ==
+  fullName.vb: OpenSvg.Optimization.FastPolyline.=
+  nameWithType: FastPolyline.operator ==
+  nameWithType.vb: FastPolyline.=
+- uid: OpenSvg.Optimization.FastPolyline.op_Inequality(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline)
+  name: operator !=(FastPolyline?, FastPolyline?)
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_op_Inequality_OpenSvg_Optimization_FastPolyline_OpenSvg_Optimization_FastPolyline_
+  commentId: M:OpenSvg.Optimization.FastPolyline.op_Inequality(OpenSvg.Optimization.FastPolyline,OpenSvg.Optimization.FastPolyline)
+  name.vb: <>(FastPolyline, FastPolyline)
+  fullName: OpenSvg.Optimization.FastPolyline.operator !=(OpenSvg.Optimization.FastPolyline?, OpenSvg.Optimization.FastPolyline?)
+  fullName.vb: OpenSvg.Optimization.FastPolyline.<>(OpenSvg.Optimization.FastPolyline, OpenSvg.Optimization.FastPolyline)
+  nameWithType: FastPolyline.operator !=(FastPolyline?, FastPolyline?)
+  nameWithType.vb: FastPolyline.<>(FastPolyline, FastPolyline)
+- uid: OpenSvg.Optimization.FastPolyline.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Optimization.FastPolyline.html#OpenSvg_Optimization_FastPolyline_op_Inequality_
+  commentId: Overload:OpenSvg.Optimization.FastPolyline.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Optimization.FastPolyline.operator !=
+  fullName.vb: OpenSvg.Optimization.FastPolyline.<>
+  nameWithType: FastPolyline.operator !=
+  nameWithType.vb: FastPolyline.<>
+- uid: OpenSvg.Optimization.Line
+  name: Line
+  href: api/OpenSvg.Optimization.Line.html
+  commentId: T:OpenSvg.Optimization.Line
+  fullName: OpenSvg.Optimization.Line
+  nameWithType: Line
+- uid: OpenSvg.Optimization.Line.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)
+  name: Line(Vector2, Vector2)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line__ctor_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Optimization.Line.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)
+  name.vb: New(Vector2, Vector2)
+  fullName: OpenSvg.Optimization.Line.Line(System.Numerics.Vector2, System.Numerics.Vector2)
+  fullName.vb: OpenSvg.Optimization.Line.New(System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: Line.Line(Vector2, Vector2)
+  nameWithType.vb: Line.New(Vector2, Vector2)
+- uid: OpenSvg.Optimization.Line.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,OpenSvg.Optimization.Line.SkipSort)
+  name: Line(Vector2, Vector2, SkipSort)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line__ctor_System_Numerics_Vector2_System_Numerics_Vector2_OpenSvg_Optimization_Line_SkipSort_
+  commentId: M:OpenSvg.Optimization.Line.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,OpenSvg.Optimization.Line.SkipSort)
+  name.vb: New(Vector2, Vector2, SkipSort)
+  fullName: OpenSvg.Optimization.Line.Line(System.Numerics.Vector2, System.Numerics.Vector2, OpenSvg.Optimization.Line.SkipSort)
+  fullName.vb: OpenSvg.Optimization.Line.New(System.Numerics.Vector2, System.Numerics.Vector2, OpenSvg.Optimization.Line.SkipSort)
+  nameWithType: Line.Line(Vector2, Vector2, Line.SkipSort)
+  nameWithType.vb: Line.New(Vector2, Vector2, Line.SkipSort)
+- uid: OpenSvg.Optimization.Line.#ctor*
+  name: Line
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line__ctor_
+  commentId: Overload:OpenSvg.Optimization.Line.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Optimization.Line.Line
+  fullName.vb: OpenSvg.Optimization.Line.New
+  nameWithType: Line.Line
+  nameWithType.vb: Line.New
+- uid: OpenSvg.Optimization.Line.Equals(OpenSvg.Optimization.Line)
+  name: Equals(Line)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_Equals_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.Line.Equals(OpenSvg.Optimization.Line)
+  fullName: OpenSvg.Optimization.Line.Equals(OpenSvg.Optimization.Line)
+  nameWithType: Line.Equals(Line)
+- uid: OpenSvg.Optimization.Line.Equals(System.Object)
+  name: Equals(object?)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_Equals_System_Object_
+  commentId: M:OpenSvg.Optimization.Line.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: OpenSvg.Optimization.Line.Equals(object?)
+  fullName.vb: OpenSvg.Optimization.Line.Equals(Object)
+  nameWithType: Line.Equals(object?)
+  nameWithType.vb: Line.Equals(Object)
+- uid: OpenSvg.Optimization.Line.Equals*
+  name: Equals
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_Equals_
+  commentId: Overload:OpenSvg.Optimization.Line.Equals
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.Line.Equals
+  nameWithType: Line.Equals
+- uid: OpenSvg.Optimization.Line.GetHashCode
+  name: GetHashCode()
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_GetHashCode
+  commentId: M:OpenSvg.Optimization.Line.GetHashCode
+  fullName: OpenSvg.Optimization.Line.GetHashCode()
+  nameWithType: Line.GetHashCode()
+- uid: OpenSvg.Optimization.Line.GetHashCode*
+  name: GetHashCode
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_GetHashCode_
+  commentId: Overload:OpenSvg.Optimization.Line.GetHashCode
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.Line.GetHashCode
+  nameWithType: Line.GetHashCode
+- uid: OpenSvg.Optimization.Line.MaxPoint
+  name: MaxPoint
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_MaxPoint
+  commentId: F:OpenSvg.Optimization.Line.MaxPoint
+  fullName: OpenSvg.Optimization.Line.MaxPoint
+  nameWithType: Line.MaxPoint
+- uid: OpenSvg.Optimization.Line.MinPoint
+  name: MinPoint
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_MinPoint
+  commentId: F:OpenSvg.Optimization.Line.MinPoint
+  fullName: OpenSvg.Optimization.Line.MinPoint
+  nameWithType: Line.MinPoint
+- uid: OpenSvg.Optimization.Line.SkipSort
+  name: Line.SkipSort
+  href: api/OpenSvg.Optimization.Line.SkipSort.html
+  commentId: T:OpenSvg.Optimization.Line.SkipSort
+  fullName: OpenSvg.Optimization.Line.SkipSort
+  nameWithType: Line.SkipSort
+- uid: OpenSvg.Optimization.Line.SkipSort.Yes
+  name: Yes
+  href: api/OpenSvg.Optimization.Line.SkipSort.html#OpenSvg_Optimization_Line_SkipSort_Yes
+  commentId: F:OpenSvg.Optimization.Line.SkipSort.Yes
+  fullName: OpenSvg.Optimization.Line.SkipSort.Yes
+  nameWithType: Line.SkipSort.Yes
+- uid: OpenSvg.Optimization.Line.ToString
+  name: ToString()
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_ToString
+  commentId: M:OpenSvg.Optimization.Line.ToString
+  fullName: OpenSvg.Optimization.Line.ToString()
+  nameWithType: Line.ToString()
+- uid: OpenSvg.Optimization.Line.ToString*
+  name: ToString
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_ToString_
+  commentId: Overload:OpenSvg.Optimization.Line.ToString
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.Line.ToString
+  nameWithType: Line.ToString
+- uid: OpenSvg.Optimization.Line.Zero
+  name: Zero
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_Zero
+  commentId: P:OpenSvg.Optimization.Line.Zero
+  fullName: OpenSvg.Optimization.Line.Zero
+  nameWithType: Line.Zero
+- uid: OpenSvg.Optimization.Line.Zero*
+  name: Zero
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_Zero_
+  commentId: Overload:OpenSvg.Optimization.Line.Zero
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.Line.Zero
+  nameWithType: Line.Zero
+- uid: OpenSvg.Optimization.Line.op_Equality(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name: operator ==(Line, Line)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_op_Equality_OpenSvg_Optimization_Line_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.Line.op_Equality(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name.vb: =(Line, Line)
+  fullName: OpenSvg.Optimization.Line.operator ==(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  fullName.vb: OpenSvg.Optimization.Line.=(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  nameWithType: Line.operator ==(Line, Line)
+  nameWithType.vb: Line.=(Line, Line)
+- uid: OpenSvg.Optimization.Line.op_Equality*
+  name: operator ==
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_op_Equality_
+  commentId: Overload:OpenSvg.Optimization.Line.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: OpenSvg.Optimization.Line.operator ==
+  fullName.vb: OpenSvg.Optimization.Line.=
+  nameWithType: Line.operator ==
+  nameWithType.vb: Line.=
+- uid: OpenSvg.Optimization.Line.op_Inequality(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name: operator !=(Line, Line)
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_op_Inequality_OpenSvg_Optimization_Line_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.Line.op_Inequality(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name.vb: <>(Line, Line)
+  fullName: OpenSvg.Optimization.Line.operator !=(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  fullName.vb: OpenSvg.Optimization.Line.<>(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  nameWithType: Line.operator !=(Line, Line)
+  nameWithType.vb: Line.<>(Line, Line)
+- uid: OpenSvg.Optimization.Line.op_Inequality*
+  name: operator !=
+  href: api/OpenSvg.Optimization.Line.html#OpenSvg_Optimization_Line_op_Inequality_
+  commentId: Overload:OpenSvg.Optimization.Line.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: OpenSvg.Optimization.Line.operator !=
+  fullName.vb: OpenSvg.Optimization.Line.<>
+  nameWithType: Line.operator !=
+  nameWithType.vb: Line.<>
+- uid: OpenSvg.Optimization.LineComparerMaxPoint
+  name: LineComparerMaxPoint
+  href: api/OpenSvg.Optimization.LineComparerMaxPoint.html
+  commentId: T:OpenSvg.Optimization.LineComparerMaxPoint
+  fullName: OpenSvg.Optimization.LineComparerMaxPoint
+  nameWithType: LineComparerMaxPoint
+- uid: OpenSvg.Optimization.LineComparerMaxPoint.Compare(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name: Compare(Line, Line)
+  href: api/OpenSvg.Optimization.LineComparerMaxPoint.html#OpenSvg_Optimization_LineComparerMaxPoint_Compare_OpenSvg_Optimization_Line_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.LineComparerMaxPoint.Compare(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  fullName: OpenSvg.Optimization.LineComparerMaxPoint.Compare(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  nameWithType: LineComparerMaxPoint.Compare(Line, Line)
+- uid: OpenSvg.Optimization.LineComparerMaxPoint.Compare*
+  name: Compare
+  href: api/OpenSvg.Optimization.LineComparerMaxPoint.html#OpenSvg_Optimization_LineComparerMaxPoint_Compare_
+  commentId: Overload:OpenSvg.Optimization.LineComparerMaxPoint.Compare
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineComparerMaxPoint.Compare
+  nameWithType: LineComparerMaxPoint.Compare
+- uid: OpenSvg.Optimization.LineComparerMinPoint
+  name: LineComparerMinPoint
+  href: api/OpenSvg.Optimization.LineComparerMinPoint.html
+  commentId: T:OpenSvg.Optimization.LineComparerMinPoint
+  fullName: OpenSvg.Optimization.LineComparerMinPoint
+  nameWithType: LineComparerMinPoint
+- uid: OpenSvg.Optimization.LineComparerMinPoint.Compare(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  name: Compare(Line, Line)
+  href: api/OpenSvg.Optimization.LineComparerMinPoint.html#OpenSvg_Optimization_LineComparerMinPoint_Compare_OpenSvg_Optimization_Line_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.LineComparerMinPoint.Compare(OpenSvg.Optimization.Line,OpenSvg.Optimization.Line)
+  fullName: OpenSvg.Optimization.LineComparerMinPoint.Compare(OpenSvg.Optimization.Line, OpenSvg.Optimization.Line)
+  nameWithType: LineComparerMinPoint.Compare(Line, Line)
+- uid: OpenSvg.Optimization.LineComparerMinPoint.Compare*
+  name: Compare
+  href: api/OpenSvg.Optimization.LineComparerMinPoint.html#OpenSvg_Optimization_LineComparerMinPoint_Compare_
+  commentId: Overload:OpenSvg.Optimization.LineComparerMinPoint.Compare
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineComparerMinPoint.Compare
+  nameWithType: LineComparerMinPoint.Compare
+- uid: OpenSvg.Optimization.LineSet
+  name: LineSet
+  href: api/OpenSvg.Optimization.LineSet.html
+  commentId: T:OpenSvg.Optimization.LineSet
+  fullName: OpenSvg.Optimization.LineSet
+  nameWithType: LineSet
+- uid: OpenSvg.Optimization.LineSet.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Optimization.FastPolyline})
+  name: LineSet(IEnumerable<FastPolyline>)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet__ctor_System_Collections_Generic_IEnumerable_OpenSvg_Optimization_FastPolyline__
+  commentId: M:OpenSvg.Optimization.LineSet.#ctor(System.Collections.Generic.IEnumerable{OpenSvg.Optimization.FastPolyline})
+  name.vb: New(IEnumerable(Of FastPolyline))
+  fullName: OpenSvg.Optimization.LineSet.LineSet(System.Collections.Generic.IEnumerable<OpenSvg.Optimization.FastPolyline>)
+  fullName.vb: OpenSvg.Optimization.LineSet.New(System.Collections.Generic.IEnumerable(Of OpenSvg.Optimization.FastPolyline))
+  nameWithType: LineSet.LineSet(IEnumerable<FastPolyline>)
+  nameWithType.vb: LineSet.New(IEnumerable(Of FastPolyline))
+- uid: OpenSvg.Optimization.LineSet.#ctor*
+  name: LineSet
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet__ctor_
+  commentId: Overload:OpenSvg.Optimization.LineSet.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Optimization.LineSet.LineSet
+  fullName.vb: OpenSvg.Optimization.LineSet.New
+  nameWithType: LineSet.LineSet
+  nameWithType.vb: LineSet.New
+- uid: OpenSvg.Optimization.LineSet.AddEndPoint(System.Numerics.Vector2)
+  name: AddEndPoint(Vector2)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_AddEndPoint_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Optimization.LineSet.AddEndPoint(System.Numerics.Vector2)
+  fullName: OpenSvg.Optimization.LineSet.AddEndPoint(System.Numerics.Vector2)
+  nameWithType: LineSet.AddEndPoint(Vector2)
+- uid: OpenSvg.Optimization.LineSet.AddEndPoint*
+  name: AddEndPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_AddEndPoint_
+  commentId: Overload:OpenSvg.Optimization.LineSet.AddEndPoint
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.AddEndPoint
+  nameWithType: LineSet.AddEndPoint
+- uid: OpenSvg.Optimization.LineSet.AddLine(OpenSvg.Optimization.Line)
+  name: AddLine(Line)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_AddLine_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.LineSet.AddLine(OpenSvg.Optimization.Line)
+  fullName: OpenSvg.Optimization.LineSet.AddLine(OpenSvg.Optimization.Line)
+  nameWithType: LineSet.AddLine(Line)
+- uid: OpenSvg.Optimization.LineSet.AddLine*
+  name: AddLine
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_AddLine_
+  commentId: Overload:OpenSvg.Optimization.LineSet.AddLine
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.AddLine
+  nameWithType: LineSet.AddLine
+- uid: OpenSvg.Optimization.LineSet.AddedEndPoints
+  name: AddedEndPoints
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_AddedEndPoints
+  commentId: F:OpenSvg.Optimization.LineSet.AddedEndPoints
+  fullName: OpenSvg.Optimization.LineSet.AddedEndPoints
+  nameWithType: LineSet.AddedEndPoints
+- uid: OpenSvg.Optimization.LineSet.ByMaxPoint
+  name: ByMaxPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_ByMaxPoint
+  commentId: F:OpenSvg.Optimization.LineSet.ByMaxPoint
+  fullName: OpenSvg.Optimization.LineSet.ByMaxPoint
+  nameWithType: LineSet.ByMaxPoint
+- uid: OpenSvg.Optimization.LineSet.ByMinPoint
+  name: ByMinPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_ByMinPoint
+  commentId: F:OpenSvg.Optimization.LineSet.ByMinPoint
+  fullName: OpenSvg.Optimization.LineSet.ByMinPoint
+  nameWithType: LineSet.ByMinPoint
+- uid: OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint(System.Numerics.Vector2)
+  name: GetLinesWithMaxPoint(Vector2)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_GetLinesWithMaxPoint_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint(System.Numerics.Vector2)
+  fullName: OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint(System.Numerics.Vector2)
+  nameWithType: LineSet.GetLinesWithMaxPoint(Vector2)
+- uid: OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint*
+  name: GetLinesWithMaxPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_GetLinesWithMaxPoint_
+  commentId: Overload:OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.GetLinesWithMaxPoint
+  nameWithType: LineSet.GetLinesWithMaxPoint
+- uid: OpenSvg.Optimization.LineSet.GetLinesWithMinPoint(System.Numerics.Vector2)
+  name: GetLinesWithMinPoint(Vector2)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_GetLinesWithMinPoint_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Optimization.LineSet.GetLinesWithMinPoint(System.Numerics.Vector2)
+  fullName: OpenSvg.Optimization.LineSet.GetLinesWithMinPoint(System.Numerics.Vector2)
+  nameWithType: LineSet.GetLinesWithMinPoint(Vector2)
+- uid: OpenSvg.Optimization.LineSet.GetLinesWithMinPoint*
+  name: GetLinesWithMinPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_GetLinesWithMinPoint_
+  commentId: Overload:OpenSvg.Optimization.LineSet.GetLinesWithMinPoint
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.GetLinesWithMinPoint
+  nameWithType: LineSet.GetLinesWithMinPoint
+- uid: OpenSvg.Optimization.LineSet.IsEndPoint(System.Numerics.Vector2)
+  name: IsEndPoint(Vector2)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_IsEndPoint_System_Numerics_Vector2_
+  commentId: M:OpenSvg.Optimization.LineSet.IsEndPoint(System.Numerics.Vector2)
+  fullName: OpenSvg.Optimization.LineSet.IsEndPoint(System.Numerics.Vector2)
+  nameWithType: LineSet.IsEndPoint(Vector2)
+- uid: OpenSvg.Optimization.LineSet.IsEndPoint*
+  name: IsEndPoint
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_IsEndPoint_
+  commentId: Overload:OpenSvg.Optimization.LineSet.IsEndPoint
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.IsEndPoint
+  nameWithType: LineSet.IsEndPoint
+- uid: OpenSvg.Optimization.LineSet.LineCount
+  name: LineCount
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_LineCount
+  commentId: P:OpenSvg.Optimization.LineSet.LineCount
+  fullName: OpenSvg.Optimization.LineSet.LineCount
+  nameWithType: LineSet.LineCount
+- uid: OpenSvg.Optimization.LineSet.LineCount*
+  name: LineCount
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_LineCount_
+  commentId: Overload:OpenSvg.Optimization.LineSet.LineCount
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.LineCount
+  nameWithType: LineSet.LineCount
+- uid: OpenSvg.Optimization.LineSet.NonOptimizedPolylines
+  name: NonOptimizedPolylines
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_NonOptimizedPolylines
+  commentId: F:OpenSvg.Optimization.LineSet.NonOptimizedPolylines
+  fullName: OpenSvg.Optimization.LineSet.NonOptimizedPolylines
+  nameWithType: LineSet.NonOptimizedPolylines
+- uid: OpenSvg.Optimization.LineSet.Optimize
+  name: Optimize()
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_Optimize
+  commentId: M:OpenSvg.Optimization.LineSet.Optimize
+  fullName: OpenSvg.Optimization.LineSet.Optimize()
+  nameWithType: LineSet.Optimize()
+- uid: OpenSvg.Optimization.LineSet.Optimize*
+  name: Optimize
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_Optimize_
+  commentId: Overload:OpenSvg.Optimization.LineSet.Optimize
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.Optimize
+  nameWithType: LineSet.Optimize
+- uid: OpenSvg.Optimization.LineSet.OptimizedPolylines
+  name: OptimizedPolylines
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_OptimizedPolylines
+  commentId: F:OpenSvg.Optimization.LineSet.OptimizedPolylines
+  fullName: OpenSvg.Optimization.LineSet.OptimizedPolylines
+  nameWithType: LineSet.OptimizedPolylines
+- uid: OpenSvg.Optimization.LineSet.OriginalEndPoints
+  name: OriginalEndPoints
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_OriginalEndPoints
+  commentId: F:OpenSvg.Optimization.LineSet.OriginalEndPoints
+  fullName: OpenSvg.Optimization.LineSet.OriginalEndPoints
+  nameWithType: LineSet.OriginalEndPoints
+- uid: OpenSvg.Optimization.LineSet.RemoveLine(OpenSvg.Optimization.Line)
+  name: RemoveLine(Line)
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_RemoveLine_OpenSvg_Optimization_Line_
+  commentId: M:OpenSvg.Optimization.LineSet.RemoveLine(OpenSvg.Optimization.Line)
+  fullName: OpenSvg.Optimization.LineSet.RemoveLine(OpenSvg.Optimization.Line)
+  nameWithType: LineSet.RemoveLine(Line)
+- uid: OpenSvg.Optimization.LineSet.RemoveLine*
+  name: RemoveLine
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_RemoveLine_
+  commentId: Overload:OpenSvg.Optimization.LineSet.RemoveLine
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.RemoveLine
+  nameWithType: LineSet.RemoveLine
+- uid: OpenSvg.Optimization.LineSet.TotalPointCount
+  name: TotalPointCount()
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_TotalPointCount
+  commentId: M:OpenSvg.Optimization.LineSet.TotalPointCount
+  fullName: OpenSvg.Optimization.LineSet.TotalPointCount()
+  nameWithType: LineSet.TotalPointCount()
+- uid: OpenSvg.Optimization.LineSet.TotalPointCount*
+  name: TotalPointCount
+  href: api/OpenSvg.Optimization.LineSet.html#OpenSvg_Optimization_LineSet_TotalPointCount_
+  commentId: Overload:OpenSvg.Optimization.LineSet.TotalPointCount
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.LineSet.TotalPointCount
+  nameWithType: LineSet.TotalPointCount
+- uid: OpenSvg.Optimization.SimpleCorrections
+  name: SimpleCorrections
+  href: api/OpenSvg.Optimization.SimpleCorrections.html
+  commentId: T:OpenSvg.Optimization.SimpleCorrections
+  fullName: OpenSvg.Optimization.SimpleCorrections
+  nameWithType: SimpleCorrections
+- uid: OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints(System.Collections.Generic.IEnumerable{System.Numerics.Vector2},System.Single)
+  name: RemoveEquivalentAdjacentPoints(IEnumerable<Vector2>, float)
+  href: api/OpenSvg.Optimization.SimpleCorrections.html#OpenSvg_Optimization_SimpleCorrections_RemoveEquivalentAdjacentPoints_System_Collections_Generic_IEnumerable_System_Numerics_Vector2__System_Single_
+  commentId: M:OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints(System.Collections.Generic.IEnumerable{System.Numerics.Vector2},System.Single)
+  name.vb: RemoveEquivalentAdjacentPoints(IEnumerable(Of Vector2), Single)
+  fullName: OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints(System.Collections.Generic.IEnumerable<System.Numerics.Vector2>, float)
+  fullName.vb: OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2), Single)
+  nameWithType: SimpleCorrections.RemoveEquivalentAdjacentPoints(IEnumerable<Vector2>, float)
+  nameWithType.vb: SimpleCorrections.RemoveEquivalentAdjacentPoints(IEnumerable(Of Vector2), Single)
+- uid: OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints*
+  name: RemoveEquivalentAdjacentPoints
+  href: api/OpenSvg.Optimization.SimpleCorrections.html#OpenSvg_Optimization_SimpleCorrections_RemoveEquivalentAdjacentPoints_
+  commentId: Overload:OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.SimpleCorrections.RemoveEquivalentAdjacentPoints
+  nameWithType: SimpleCorrections.RemoveEquivalentAdjacentPoints
+- uid: OpenSvg.Optimization.SubstringResult
+  name: SubstringResult
+  href: api/OpenSvg.Optimization.SubstringResult.html
+  commentId: T:OpenSvg.Optimization.SubstringResult
+  fullName: OpenSvg.Optimization.SubstringResult
+  nameWithType: SubstringResult
+- uid: OpenSvg.Optimization.SubstringResult.#ctor(System.Int32,System.Int32,System.Int32)
+  name: SubstringResult(int, int, int)
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult__ctor_System_Int32_System_Int32_System_Int32_
+  commentId: M:OpenSvg.Optimization.SubstringResult.#ctor(System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer)
+  fullName: OpenSvg.Optimization.SubstringResult.SubstringResult(int, int, int)
+  fullName.vb: OpenSvg.Optimization.SubstringResult.New(Integer, Integer, Integer)
+  nameWithType: SubstringResult.SubstringResult(int, int, int)
+  nameWithType.vb: SubstringResult.New(Integer, Integer, Integer)
+- uid: OpenSvg.Optimization.SubstringResult.#ctor*
+  name: SubstringResult
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult__ctor_
+  commentId: Overload:OpenSvg.Optimization.SubstringResult.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: OpenSvg.Optimization.SubstringResult.SubstringResult
+  fullName.vb: OpenSvg.Optimization.SubstringResult.New
+  nameWithType: SubstringResult.SubstringResult
+  nameWithType.vb: SubstringResult.New
+- uid: OpenSvg.Optimization.SubstringResult.StartIndex1
+  name: StartIndex1
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_StartIndex1
+  commentId: P:OpenSvg.Optimization.SubstringResult.StartIndex1
+  fullName: OpenSvg.Optimization.SubstringResult.StartIndex1
+  nameWithType: SubstringResult.StartIndex1
+- uid: OpenSvg.Optimization.SubstringResult.StartIndex1*
+  name: StartIndex1
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_StartIndex1_
+  commentId: Overload:OpenSvg.Optimization.SubstringResult.StartIndex1
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.SubstringResult.StartIndex1
+  nameWithType: SubstringResult.StartIndex1
+- uid: OpenSvg.Optimization.SubstringResult.StartIndex2
+  name: StartIndex2
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_StartIndex2
+  commentId: P:OpenSvg.Optimization.SubstringResult.StartIndex2
+  fullName: OpenSvg.Optimization.SubstringResult.StartIndex2
+  nameWithType: SubstringResult.StartIndex2
+- uid: OpenSvg.Optimization.SubstringResult.StartIndex2*
+  name: StartIndex2
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_StartIndex2_
+  commentId: Overload:OpenSvg.Optimization.SubstringResult.StartIndex2
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.SubstringResult.StartIndex2
+  nameWithType: SubstringResult.StartIndex2
+- uid: OpenSvg.Optimization.SubstringResult.SubstringLength
+  name: SubstringLength
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_SubstringLength
+  commentId: P:OpenSvg.Optimization.SubstringResult.SubstringLength
+  fullName: OpenSvg.Optimization.SubstringResult.SubstringLength
+  nameWithType: SubstringResult.SubstringLength
+- uid: OpenSvg.Optimization.SubstringResult.SubstringLength*
+  name: SubstringLength
+  href: api/OpenSvg.Optimization.SubstringResult.html#OpenSvg_Optimization_SubstringResult_SubstringLength_
+  commentId: Overload:OpenSvg.Optimization.SubstringResult.SubstringLength
+  isSpec: "True"
+  fullName: OpenSvg.Optimization.SubstringResult.SubstringLength
+  nameWithType: SubstringResult.SubstringLength
 - uid: OpenSvg.Orientation
   name: Orientation
   href: api/OpenSvg.Orientation.html
@@ -3564,6 +4418,19 @@ references:
   isSpec: "True"
   fullName: OpenSvg.PointExtensions.CompareTo
   nameWithType: PointExtensions.CompareTo
+- uid: OpenSvg.PointExtensions.GetAngle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)
+  name: GetAngle(Vector2, Vector2, Vector2)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_GetAngle_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_
+  commentId: M:OpenSvg.PointExtensions.GetAngle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)
+  fullName: OpenSvg.PointExtensions.GetAngle(System.Numerics.Vector2, System.Numerics.Vector2, System.Numerics.Vector2)
+  nameWithType: PointExtensions.GetAngle(Vector2, Vector2, Vector2)
+- uid: OpenSvg.PointExtensions.GetAngle*
+  name: GetAngle
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_GetAngle_
+  commentId: Overload:OpenSvg.PointExtensions.GetAngle
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.GetAngle
+  nameWithType: PointExtensions.GetAngle
 - uid: OpenSvg.PointExtensions.IsOnLineSegment(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)
   name: IsOnLineSegment(Vector2, Vector2, Vector2)
   href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_IsOnLineSegment_System_Numerics_Vector2_System_Numerics_Vector2_System_Numerics_Vector2_
@@ -3593,6 +4460,22 @@ references:
   isSpec: "True"
   fullName: OpenSvg.PointExtensions.IsWithinDistance
   nameWithType: PointExtensions.IsWithinDistance
+- uid: OpenSvg.PointExtensions.NormalizeAngle(System.Single)
+  name: NormalizeAngle(float)
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_NormalizeAngle_System_Single_
+  commentId: M:OpenSvg.PointExtensions.NormalizeAngle(System.Single)
+  name.vb: NormalizeAngle(Single)
+  fullName: OpenSvg.PointExtensions.NormalizeAngle(float)
+  fullName.vb: OpenSvg.PointExtensions.NormalizeAngle(Single)
+  nameWithType: PointExtensions.NormalizeAngle(float)
+  nameWithType.vb: PointExtensions.NormalizeAngle(Single)
+- uid: OpenSvg.PointExtensions.NormalizeAngle*
+  name: NormalizeAngle
+  href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_NormalizeAngle_
+  commentId: Overload:OpenSvg.PointExtensions.NormalizeAngle
+  isSpec: "True"
+  fullName: OpenSvg.PointExtensions.NormalizeAngle
+  nameWithType: PointExtensions.NormalizeAngle
 - uid: OpenSvg.PointExtensions.Transform(System.Numerics.Vector2,OpenSvg.Transform)
   name: Transform(Vector2, Transform)
   href: api/OpenSvg.PointExtensions.html#OpenSvg_PointExtensions_Transform_System_Numerics_Vector2_OpenSvg_Transform_
@@ -4036,6 +4919,15 @@ references:
   fullName.vb: OpenSvg.Polyline.New(System.Collections.Generic.IEnumerable(Of System.Numerics.Vector2))
   nameWithType: Polyline.Polyline(IEnumerable<Vector2>)
   nameWithType.vb: Polyline.New(IEnumerable(Of Vector2))
+- uid: OpenSvg.Polyline.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name: Polyline(ImmutableArray<Vector2>)
+  href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_System_Collections_Immutable_ImmutableArray_System_Numerics_Vector2__
+  commentId: M:OpenSvg.Polyline.#ctor(System.Collections.Immutable.ImmutableArray{System.Numerics.Vector2})
+  name.vb: New(ImmutableArray(Of Vector2))
+  fullName: OpenSvg.Polyline.Polyline(System.Collections.Immutable.ImmutableArray<System.Numerics.Vector2>)
+  fullName.vb: OpenSvg.Polyline.New(System.Collections.Immutable.ImmutableArray(Of System.Numerics.Vector2))
+  nameWithType: Polyline.Polyline(ImmutableArray<Vector2>)
+  nameWithType.vb: Polyline.New(ImmutableArray(Of Vector2))
 - uid: OpenSvg.Polyline.#ctor*
   name: Polyline
   href: api/OpenSvg.Polyline.html#OpenSvg_Polyline__ctor_
@@ -5188,19 +6080,6 @@ references:
   commentId: T:OpenSvg.SvgNodes.SvgElement
   fullName: OpenSvg.SvgNodes.SvgElement
   nameWithType: SvgElement
-- uid: OpenSvg.SvgNodes.SvgElement.AttributeStrings
-  name: AttributeStrings()
-  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_AttributeStrings
-  commentId: M:OpenSvg.SvgNodes.SvgElement.AttributeStrings
-  fullName: OpenSvg.SvgNodes.SvgElement.AttributeStrings()
-  nameWithType: SvgElement.AttributeStrings()
-- uid: OpenSvg.SvgNodes.SvgElement.AttributeStrings*
-  name: AttributeStrings
-  href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_AttributeStrings_
-  commentId: Overload:OpenSvg.SvgNodes.SvgElement.AttributeStrings
-  isSpec: "True"
-  fullName: OpenSvg.SvgNodes.SvgElement.AttributeStrings
-  nameWithType: SvgElement.AttributeStrings
 - uid: OpenSvg.SvgNodes.SvgElement.Attributes
   name: Attributes()
   href: api/OpenSvg.SvgNodes.SvgElement.html#OpenSvg_SvgNodes_SvgElement_Attributes
