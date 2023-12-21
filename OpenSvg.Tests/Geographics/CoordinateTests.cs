@@ -1,29 +1,91 @@
-﻿
-using OpenSvg.Geographics;
+﻿using OpenSvg.Geographics;
 
 namespace OpenSvg.Tests.Geographics;
 
+/// <summary>
+/// Testing the DistanceTo method
+/// Reference data is generated from here <see href="https://geodesyapps.ga.gov.au/vincenty-inverse">Austrailian Government Geoscience Australia</see>
+/// </summary>
 public class CoordinateTests
 {
-    ///// <summary>
-    ///// Tests the translation of a coordinate by a given distance in meters to the north, south, east and west directions, respectively.
-    ///// The distance to the destination is then measured in meters to check if it matches the expected distance
-    ///// </summary>
-    //[Fact]
-    //public void CoordinateTranslateTest()
-    //{
-    //    const int precision = 0;
-    //    const float distance = 10000; //distance in meters
-    //    Coordinate origin = new Coordinate(15.614f, 58.408f);
+    
 
-    //    Coordinate eastBy10000m = origin.Translate(distance, 0);
-    //    Coordinate westBy10000m = origin.Translate(-distance, 0);
-    //    Coordinate northBy10000m = origin.Translate(0, distance);
-    //    Coordinate southBy10000m = origin.Translate(0, -distance);
+    [Fact]
+    public void DistanceTo_KnownDistance1_ReturnsCorrect()
+    {
+        Coordinate c1 = new(18.07013179188922, 59.32814079754625);
+        Coordinate c2 = new(18.070139030819174, 59.328136049754185);
 
-    //    Assert.Equal(distance, origin.DistanceTo(eastBy10000m), precision);
-    //    Assert.Equal(distance, origin.DistanceTo(westBy10000m), precision);
-    //    Assert.Equal(distance, origin.DistanceTo(northBy10000m), precision);
-    //    Assert.Equal(distance, origin.DistanceTo(southBy10000m), precision);
-    //}
+        double distance = c1.DistanceTo(c2);
+
+        Assert.Equal(0.67, distance, 3);
+    }
+
+
+    [Fact]
+    public void DistanceTo_KnownDistance2_ReturnsCorrect()
+    {
+        Coordinate c1 = new(18.05870021077238, 59.34039778289869);
+        Coordinate c2 = new(18.059096351138987, 59.340513214964545);
+
+        double distance = c1.DistanceTo(c2);
+
+        Assert.Equal(25.953, distance, 3);
+    }
+
+    [Fact]
+    public void DistanceTo_KnownDistance3_ReturnsCorrect()
+    {
+        Coordinate c1 = new(18.07171594393971, 59.32699728123926);
+        Coordinate c2 = new(18.072050199154425, 59.33831542247987);
+
+        double distance = c1.DistanceTo(c2);
+     
+        Assert.Equal(1260.994, distance, 3);
+    }
+
+    [Fact]
+    public void DistanceTo_KnownDistance4_ReturnsCorrect()
+    {
+        Coordinate c1 = new(17.41782476750391, 64.99286597393623);
+        Coordinate c2 = new(-0.14143351554215036, 51.501565818297294);
+
+        double distance = c1.DistanceTo(c2);
+
+        Assert.Equal(1808807.877, distance, 3);
+    }
+
+    [Fact]
+    public void TranslateByBearingAndDistance1_ReturnsCorrect()
+    {
+        //Arrange
+        Coordinate origin = new(18.062584803276312, 59.33653007566394);
+        const float bearing = 17;
+        const float distance = 20;
+        Coordinate expected = new(18.062687546, 59.336701763);
+
+        //Act
+        Coordinate actual = origin.TranslateByBearingAndDistance(bearing, distance);
+
+        //Assert
+        Assert.Equal(expected.Long, actual.Long, 8);
+        Assert.Equal(expected.Lat, actual.Lat, 8);
+    }
+
+    [Fact]
+    public void TranslateByBearingAndDistance2_ReturnsCorrect()
+    {
+        //Arrange
+        Coordinate origin = new(18.062584803276312, 59.33653007566394);
+        const float bearing = 300;
+        const float distance = 20;
+        Coordinate expected = new(18.062280472, 59.336619841);
+
+        //Act
+        Coordinate actual = origin.TranslateByBearingAndDistance(bearing, distance);
+
+        //Assert
+        Assert.Equal(expected.Long, actual.Long, 9);
+        Assert.Equal(expected.Lat, actual.Lat, 9);
+    }
 }

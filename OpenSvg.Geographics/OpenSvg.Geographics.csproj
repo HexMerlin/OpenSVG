@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotSpatial.Projections" Version="4.0.656" />
+    <PackageReference Include="CoordinateSharp" Version="2.21.1.1" />
     <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
   </ItemGroup>
 

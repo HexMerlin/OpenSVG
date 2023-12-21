@@ -7,7 +7,7 @@ public static class PolylineConverter
 
     public static LineString ToLineString(this Polyline polyline, Transform transform, PointConverter converter)
     {
-        IEnumerable<Position> positions = polyline.Select(svgPoint => converter.ToCoordinate(svgPoint, transform).ToPosition());
+        IEnumerable<Position> positions = polyline.Select(svgPoint => converter.ToCoordinate(svgPoint.Transform(transform)).ToPosition());
 
         return new LineString(positions);
     }

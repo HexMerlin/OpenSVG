@@ -62,7 +62,7 @@ public static class PointExtensions
         float angleRadians = MathF.Acos(cosTheta);
 
         // Converting radians to degrees
-        float angleDegrees = NormalizeAngle(angleRadians * (180 / MathF.PI));
+        float angleDegrees = NormalizeAngle((angleRadians * 180) / MathF.PI);
         return angleDegrees;
 
     }

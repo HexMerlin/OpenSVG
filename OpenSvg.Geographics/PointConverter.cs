@@ -1,5 +1,4 @@
 ﻿
-
 namespace OpenSvg.Geographics;
 
 /// <summary>
@@ -7,6 +6,27 @@ namespace OpenSvg.Geographics;
 /// </summary>
 public record PointConverter
 {
+
+
+    /// <summary>
+    ///     The starting point for the coordinate conversion process
+    /// </summary>
+    public Coordinate StartLocation { get; }
+
+    public double StartXWebMercator { get; }
+
+    public double StartYWebMercator { get; }
+
+
+    /// <summary>
+    ///     The meters per pixel conversion factor.
+    /// </summary>
+    public double MetersPerPixel { get;  }
+
+    public int SegmentCountForCurveApproximation { get; init; }
+
+
+
     /// <summary>
     ///     Constructor for PointCoordinateConverter class
     /// </summary>
@@ -14,9 +34,12 @@ public record PointConverter
     /// <param name="metersPerPixel">The meters per pixel value used to convert coordinates</param>
     public PointConverter(Coordinate startLocation, double metersPerPixel, int segmentCountForCurveApproximation = 10)
     {
-        StartLocation = startLocation;
-        MetersPerPixel = metersPerPixel;
-        SegmentCountForCurveApproximation = segmentCountForCurveApproximation;
+   
+        this.StartLocation = startLocation;
+        (this.StartXWebMercator, this.StartYWebMercator) = startLocation.ToWebMercator();
+
+        this.MetersPerPixel = metersPerPixel;
+        this.SegmentCountForCurveApproximation = segmentCountForCurveApproximation;
 
     }
 
@@ -32,17 +55,6 @@ public record PointConverter
     }
 
 
-    /// <summary>
-    ///     The starting point for the coordinate conversion process
-    /// </summary>
-    public Coordinate StartLocation { get; init; }
-
-    /// <summary>
-    ///     The meters per pixel conversion factor.
-    /// </summary>
-    public double MetersPerPixel { get; init; }
-
-    public int SegmentCountForCurveApproximation { get; init; }
 
     public static double MetersPerPixels(double desiredSvgWidth, GeoBoundingBox geoBoundingBox)
     {
@@ -52,18 +64,22 @@ public record PointConverter
     }
 
 
+
     /// <summary>
     ///     Converts a point to a world coordinate.
     /// </summary>
     /// <param name="point">The point to convert.</param>
     /// <returns>The geographic coordinate.</returns>
-    public Coordinate ToCoordinate(Point point, Transform? transform)
+    public Coordinate ToCoordinate(Point point)
     {
-        if (transform != null) point = point.Transform((Transform)transform);
-        double dxMeters = point.X * MetersPerPixel;
-        double dyMeters = -point.Y * MetersPerPixel; // Invert Y-value
+        //if (transform != null) point = point.Transform((Transform)transform);
 
-        Coordinate coordinate = StartLocation.Translate(dxMeters, dyMeters);
+        double dxMeters = point.X * MetersPerPixel;
+        double dyMeters = -point.Y * MetersPerPixel; //flip the y axis (SVG Y grows downwards, Web mercator Y grows upwards)
+
+        double xWebMercator = StartXWebMercator + dxMeters;
+        double yWebMercator = StartYWebMercator + dyMeters;
+        var coordinate = Coordinate.ToCoordinate(xWebMercator, yWebMercator);
             
         return coordinate;
     }
@@ -75,10 +91,12 @@ public record PointConverter
     /// <returns>A point converted from the input coordinate.</returns>
     public Point ToPoint(Coordinate coordinate)
     {
-        (double dx, double dy) = StartLocation.CartesianOffset(coordinate);
-
-        double x = dx / MetersPerPixel;
-        double y = -dy / MetersPerPixel; // Invert Y-axis
+        (double xWebMercator, double yWebMercator) = coordinate.ToWebMercator();
+        double dxMeters = xWebMercator - StartXWebMercator;
+        double dyMeters = yWebMercator - StartYWebMercator; 
+       
+        double x = dxMeters / MetersPerPixel;
+        double y = -dyMeters / MetersPerPixel;  //flip the y axis (SVG Y grows downwards, Web mercator Y grows upwards)
 
         return new Point((float) x, (float) y);
     }

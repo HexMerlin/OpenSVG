@@ -21,7 +21,7 @@ public static class SvgTextConverter
     {
         Transform composedTransform = parentTransform.ComposeWith(svgText.Transform);
         Point textPoint = new Point(svgText.X, svgText.Y);
-        Position position = converter.ToCoordinate(textPoint, composedTransform).ToPosition();
+        Position position = converter.ToCoordinate(textPoint.Transform(composedTransform)).ToPosition();
         TextConfig svgTextConfig = svgText.TextConfig;
         var properties = svgTextConfig.ToDictionary(converter); 
         GeoJSON.Net.Geometry.Point geoJsonPoint = new GeoJSON.Net.Geometry.Point(position);

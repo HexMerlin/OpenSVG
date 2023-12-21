@@ -19,19 +19,19 @@ public class GtfsShape
         ShapePoints = shapePoints.ToImmutableArray();
     }
 
-    public Coordinate? CoordinateUsingGtfsDistance(double distanceTraveled)
-    {
-        (GtfsShapePoint? pointA, GtfsShapePoint? pointB, double distanceFractionFromAtoB) = GetPointPairUsingGtfsDistance(distanceTraveled);
-        if (pointA != null && distanceFractionFromAtoB == 0)
-            return pointA.Value.Coordinate; //exact match
-        if (distanceTraveled <= 0)
-            return null;
-        if (pointA == null || pointB == null)
-            return null;
+    //public Coordinate? CoordinateUsingGtfsDistance(double distanceTraveled)
+    //{
+    //    (GtfsShapePoint? pointA, GtfsShapePoint? pointB, double distanceFractionFromAtoB) = GetPointPairUsingGtfsDistance(distanceTraveled);
+    //    if (pointA != null && distanceFractionFromAtoB == 0)
+    //        return pointA.Value.Coordinate; //exact match
+    //    if (distanceTraveled <= 0)
+    //        return null;
+    //    if (pointA == null || pointB == null)
+    //        return null;
 
-        return Coordinate.Interpolate(pointA.Value.Coordinate, pointB.Value.Coordinate, distanceFractionFromAtoB);
+    //    return Coordinate.Interpolate(pointA.Value.Coordinate, pointB.Value.Coordinate, distanceFractionFromAtoB);
       
-    }
+    //}
 
     public Coordinate FindClosestCoordinateOnShape(Coordinate coordinate)
     {

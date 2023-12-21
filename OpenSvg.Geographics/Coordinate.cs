@@ -1,5 +1,6 @@
-﻿using DotSpatial.Projections;
+﻿
 
+using CoordinateSharp;
 
 namespace OpenSvg.Geographics;
 
@@ -11,6 +12,13 @@ public readonly struct Coordinate
     public readonly double Long;
     
     public readonly double Lat;
+
+    /// <summary>
+    /// Needed by CoordinateSharp to speed up things
+    /// </summary>
+    /// <seealso cref="https://coordinatesharp.com/Performance"/>
+
+    private readonly static EagerLoad eagerLoad = EagerLoad.Create(EagerLoadType.WebMercator); //
 
     public Coordinate(double longitude, double latitude)
     {
@@ -30,112 +38,37 @@ public readonly struct Coordinate
                && this.Lat <= TopLeft.Lat && this.Lat >= BottomRight.Lat;
     }
 
-    /// <summary>
-    /// Translates the coordinate by a specified distance in meters along the X and Y axes.
-    /// </summary>
-    /// <param name="dxMeters">East-west translation in meters. Positive values move east, negative values move west.</param>
-    /// <param name="dyMeters">North-south translation in meters. Positive values move north, negative values move south.</param>
-    /// <remarks>Note that the y-coordinates increase upwards (north), whereas SVG Y-coordinates increase downwards</remarks>
-    /// <returns>A new Coordinate object representing the translated position.</returns>
-
-    public Coordinate Translate(double dxMeters, double dyMeters)
-    {
-        // Define WGS84 ellipsoid
-        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
-        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
-
-       
-        // Transform the point to Mercator projection (meters)
-        double[] z = { 0 };
-        double[] xy = { Long, Lat };
-        Reproject.ReprojectPoints(xy, z, sourceProjection, targetProjection, 0, 1);
-        
-        // Add the dxMeters and dyMeters
-        xy[0] += dxMeters;
-        xy[1] += dyMeters;
-
-        // Transform the point back to WGS84
-        Reproject.ReprojectPoints(xy, z, targetProjection, sourceProjection, 0, 1);
-
-        // the xy array now holds the new coordinates
-        var result = new Coordinate(xy[0], xy[1]);
-
-        return result;
-    }
-
     public (double x, double y) ToWebMercator()
     {
-        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
-        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
-        double[] z = { 0 };
-        double[] xy = { Long, Lat };
-        Reproject.ReprojectPoints(xy, z, sourceProjection, targetProjection, 0, 1);
-        return (xy[0], xy[1]);
+        CoordinateSharp.Coordinate c = new(this.Lat, this.Long, eagerLoad);
+
+        WebMercator webMercator = c.WebMercator;
+        return (webMercator.Easting, webMercator.Northing);
     }
 
-
-    /// <summary>
-    /// Calculates the Cartesian offset to another coordinate in meters, as a tuple of X (dx) and Y (dy) distances.
-    /// Positive dx indicates eastward distance, negative dx indicates westward distance.
-    /// Positive dy indicates northward distance, negative dy indicates southward distance.
-    /// This method assumes a flat Earth projection to compute the distances.
-    /// </summary>
-    /// <param name="coordinate">The coordinate to calculate the offset to.</param>
-    /// <returns>
-    /// A tuple containing the X (dx) and Y (dy) distances in meters between the current coordinate and the specified coordinate.
-    /// </returns>
-    public (double dx, double dy) CartesianOffset(Coordinate coordinate)
+    public static Coordinate ToCoordinate(double xWebMercator, double yWebMercator)
     {
-
-        ProjectionInfo sourceProjection = KnownCoordinateSystems.Geographic.World.WGS1984;
-        ProjectionInfo targetProjection = KnownCoordinateSystems.Projected.World.WebMercator;
-
-
-        // Transform the points to Mercator projection (meters)
-        double[] z = new double[2];
-        double[] xy1 = [Long, Lat];
-        double[] xy2 = [coordinate.Long, coordinate.Lat];
-        Reproject.ReprojectPoints(xy1, z, sourceProjection, targetProjection, 0, 1);
-        Reproject.ReprojectPoints(xy2, z, sourceProjection, targetProjection, 0, 1);
-
-        // Calculate distance on a flat surface
-        double dx = xy2[0] - xy1[0];
-        double dy = xy2[1] - xy1[1];
-        return (dx, dy);
-
+        CoordinateSharp.Coordinate c = WebMercator.ConvertWebMercatortoLatLong(xWebMercator, yWebMercator, eagerLoad);
+        return new Coordinate(c.Longitude.DecimalDegree, c.Latitude.DecimalDegree);
     }
 
 
+
     /// <summary>
-    /// Calculates the distance in meters to another coordinate.
+    ///     Implements Vincenty's formula (using the inverse method variant) for calculating geodetic distances between two points on the Earth's surface.
+    ///     Coordinates are assumed to be in the WGS84 datum.
     /// </summary>
     /// <remarks>
-    /// This method uses a flat Earth projection to calculate the distance.
-    /// It is fairly fast, but not as accurate as the <see cref="DistanceTo(Coordinate)"/> method.
+    /// <list type="bullet">
+    /// <item>This method is very accurate (down to 0.5 mm in distance) but also very slow.</item>
+    /// <item>However, WGS-84 datum is defined to be accurate to ±1m, which might overshadow the 0.5mm accuracy provided by Vincenty's formulae in several cases.</item>
+    /// <item>The algorithm may fail to converge (and throw an exception) in rare cases,
+    ///     particularly for nearly antipodal points (when the two points are located on nearly opposite sides of the Earth),</item>
+    /// <item>where the iterative algorithm fails to converge to a solution within 50 iterations.</item>
+    /// <item>The method should produce near identical results to this reference <see href="https://geodesyapps.ga.gov.au/vincenty-inverse"></see></item>
+    /// </list>
     /// </remarks>
-    /// <param name="coordinate">The coordinate to calculate the distance to.</param>
-    /// <returns>The distance between the two coordinates in meters.</returns>
-
-    public double DistanceToApprox(Coordinate coordinate)
-    {
-        var (dx, dy) = CartesianOffset(coordinate);
-        double distance = Math.Sqrt(dx * dx + dy * dy);
-        return distance;
-    }
-
-
-    /// <summary>
-    /// Implements Vincenty formula (using the inverse method variant) for calculating geodetic distances between two points on the Earth's surface.
-    /// Coordinates are assumed to be in the WGS84 datum.
-    /// </summary>
-    /// <remarks>
-    /// This method is very accurate (down to 0.5 mm in distance) but also very slow. 
-    /// However, WGS-84 datum is defined to be accurate to ±1m, which might overshadow the 0.5mm accuracy provided by Vincenty's formulae in several cases.
-    /// The algorithm may fail to converge (and throw an exception) in rare cases,
-    /// particularly for nearly antipodal points (when the two points are located on nearly opposite sides of the Earth), 
-    /// where the iterative algorithm fails to converge to a solution within 50 iterations.
-    /// </remarks>
-    /// <param name="coordinate">The coordinate to calculate the distance to.</param>
+    /// <param name="coordinate">The coordinate pair (in WGS84 datum) to calculate the distance to.</param>
     /// <returns>The distance between the two coordinates in meters.</returns>
     /// <exception cref="InvalidOperationException">Thrown when the method fails to converge to a solution.</exception>
     /// <seealso cref="https://en.wikipedia.org/wiki/Vincenty%27s_formulae"/>
@@ -166,8 +99,8 @@ public readonly struct Coordinate
         {
             latRad2 = Math.Sign(latRad2) * 1.5707963266948965;
         }
-      
-        const double flattening = 0.0033528106643315072;
+
+        const double flattening = 1d / 298.257223563;
         double reducedLat1 = Math.Atan((1.0 - flattening) * Math.Tan(latRad1));
         double reducedLat2 = Math.Atan((1.0 - flattening) * Math.Tan(latRad2));
         longRad1 %= Math.PI * 2.0;
@@ -216,6 +149,100 @@ public readonly struct Coordinate
         double factorB = cosineSquaredCorrection / 1024.0 * (256.0 + cosineSquaredCorrection * (-128.0 + cosineSquaredCorrection * (74.0 - 47.0 * cosineSquaredCorrection)));
         double deltaSigma = factorB * Math.Sin(sphericalDistance) * (geodesicCorrection + factorB / 4.0 * (Math.Cos(sphericalDistance) * (-1.0 + 2.0 * Math.Pow(geodesicCorrection, 2.0)) - factorB / 6.0 * geodesicCorrection * (-3.0 + 4.0 * Math.Pow(Math.Sin(sphericalDistance), 2.0)) * (-3.0 + 4.0 * Math.Pow(geodesicCorrection, 2.0))));
         return polarRadiusMeters * factorA * (sphericalDistance - deltaSigma);
+    }
+
+
+    /// <summary>
+    /// Translates the coordinate by given east-west and north-south distances.
+    /// </summary>
+    /// <param name="eastWestMeters">The eastward (positive) or westward (negative) distance in meters.</param>
+    /// <param name="northSouthMeters">The northward (positive) or southward (negative) distance in meters.</param>
+    /// <returns>The translated coordinate.</returns>
+    public Coordinate TranslateByOffsets(double eastWestMeters, double northSouthMeters)
+    {
+        const double EarthRadius = 6378137.0; // Radius of the Earth in meters (WGS84)
+        const double DegreesToRadians = Math.PI / 180.0;
+        const double RadiansToDegrees = 180.0 / Math.PI;
+
+        // Convert latitude and longitude to radians
+        double latitudeRad = this.Lat * DegreesToRadians;
+        double longitudeRad = this.Long * DegreesToRadians;
+
+        // Calculate new latitude
+        double newLatitudeRad = latitudeRad + (northSouthMeters / EarthRadius);
+        double newLatitude = newLatitudeRad * RadiansToDegrees;
+
+        // Correct for reaching beyond the poles
+        if (newLatitude > 90)
+        {
+            newLatitude = 180 - newLatitude;
+        }
+        else if (newLatitude < -90)
+        {
+            newLatitude = -180 - newLatitude;
+        }
+
+        // Calculate the new longitude
+        double latitudeCircumference = 2 * Math.PI * EarthRadius * Math.Cos(latitudeRad);
+        double newLongitudeRad = longitudeRad + (eastWestMeters / latitudeCircumference);
+        double newLongitude = newLongitudeRad * RadiansToDegrees;
+
+        // Normalize the longitude to be within [-180, 180]
+        newLongitude = NormalizeLong(newLongitude);
+
+        return new Coordinate(newLongitude, newLatitude);
+    }
+
+    /// <summary>
+    /// Translates the coordinate by a given bearing and distance.
+    /// </summary>
+    /// <param name="bearingInDegrees">The bearing in degrees.</param>
+    /// <param name="lenInMeters">The distance in meters.</param>
+    /// <returns>The translated coordinate.</returns>
+    public Coordinate TranslateByBearingAndDistance(double bearingInDegrees, double lenInMeters)
+    {
+
+        const double flattening = 1d / 298.257223563; 
+        const double radiusLong = 6378137.0d;
+        const double radiusShort = radiusLong * (1 - flattening);
+        static double Sqr(double x) => x * x;
+        static double ToRadians(double deg) => deg * Math.PI / 180;
+        static double ToDegrees(double rad) => rad * 180 / Math.PI;
+        double bearingInRad = ToRadians(bearingInDegrees);
+        double longRad = ToRadians(this.Long);
+        double latRad = ToRadians(this.Lat);
+        
+        var U1 = Math.Atan((1 - flattening) * Math.Tan(latRad));
+        var sigma1 = Math.Atan(Math.Tan(U1) / Math.Cos(bearingInRad));
+        var alpha = Math.Asin(Math.Cos(U1) * Math.Sin(bearingInRad));
+        var u2 = Sqr(Math.Cos(alpha)) * (Sqr(radiusLong) - Sqr(radiusShort)) / Sqr(radiusShort);
+        var A = 1 + (u2 / 16384) * (4096 + u2 * (-768 + u2 * (320 - 175 * u2)));
+        var B = (u2 / 1024) * (256 + u2 * (-128 + u2 * (74 - 47 * u2)));
+        var sigma = lenInMeters / radiusShort / A;
+
+        double sigma0;
+        double dm2;
+
+        do
+        {
+            sigma0 = sigma;
+            dm2 = 2d * sigma1 + sigma;
+            var tempX = Math.Cos(sigma) * (-1d + 2d * Sqr(Math.Cos(dm2))) - B / 6d * Math.Cos(dm2) * (-3d + 4d * Sqr(Math.Sin(dm2))) * (-3d + 4d * Sqr(Math.Cos(dm2)));
+            var dSigma = B * Math.Sin(sigma) * (Math.Cos(dm2) + B / 4 * tempX);
+            sigma = lenInMeters / radiusShort / A + dSigma;
+        } while (Math.Abs(sigma0 - sigma) > 1e-9);
+
+        var x = Math.Sin(U1) * Math.Cos(sigma) + Math.Cos(U1) * Math.Sin(sigma) * Math.Cos(bearingInRad);
+        var hxy = Math.Sqrt(Sqr(Math.Sin(alpha)) + Sqr(Math.Sin(U1) * Math.Sin(sigma) - Math.Cos(U1) * Math.Cos(sigma) * Math.Cos(bearingInRad)));
+        var tempF = (1.0 - flattening);
+        var y = tempF * hxy;
+        var lamda = Math.Sin(sigma) * Math.Sin(bearingInRad) / (Math.Cos(U1) * Math.Cos(sigma) - Math.Sin(U1) * Math.Sin(sigma) * Math.Cos(bearingInRad));
+        lamda = Math.Atan(lamda);
+        var C = (flattening / 16) * Sqr(Math.Cos(alpha)) * (4 + flattening * (4 - 3 * Sqr(Math.Cos(alpha))));
+        var z = Math.Cos(dm2) + C * Math.Cos(sigma) * (-1 + 2 * Sqr(Math.Cos(dm2)));
+        var omega = lamda - (1 - C) * flattening * Math.Sin(alpha) * (sigma + C * Math.Sin(sigma) * z);
+
+        return new Coordinate(longitude: ToDegrees(longRad + omega), latitude: ToDegrees(Math.Atan(x / y)));
     }
 
 
@@ -291,18 +318,18 @@ public readonly struct Coordinate
     /// <param name="b">The ending coordinate.</param>
     /// <param name="fraction">The fraction along the straight line between the two coordinates, ranging from 0.0 to 1.0.</param>
     /// <returns>A new Coordinate that represents the specified fraction along the line from 'a' to 'b'.</returns>
-    public static Coordinate Interpolate(Coordinate a, Coordinate b, double fraction)
+    //public static Coordinate Interpolate(Coordinate a, Coordinate b, double fraction)
 
-    {
-        var (dx, dy) = a.CartesianOffset(b);
+    //{
+    //    var (dx, dy) = a.CartesianOffset(b);
 
-        // Calculate the translated distance as a percentage of the total distance
-        double translatedDx = dx * fraction;
-        double translatedDy = dy * fraction;
+    //    // Calculate the translated distance as a percentage of the total distance
+    //    double translatedDx = dx * fraction;
+    //    double translatedDy = dy * fraction;
 
-        // Translate the start coordinate by the calculated distances
-        return a.Translate(translatedDx, translatedDy);
-    }
+    //    // Translate the start coordinate by the calculated distances
+    //    return a.Translate(translatedDx, translatedDy);
+    //}
 
 
     /// <summary>

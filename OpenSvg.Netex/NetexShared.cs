@@ -7,6 +7,9 @@ using SkiaSharp;
 using OpenSvg.Optimization;
 using System.Collections.Immutable;
 using System.Numerics;
+using OpenSvg.Geographics.GeoJson;
+using GeoJSON.Net.Geometry;
+using GeoJSON.Net.Feature;
 
 namespace OpenSvg.Netex;
 
@@ -16,7 +19,26 @@ public class NetexShared
 
     public NetexShared(string netexXmlFile)
     {
-      
+
+        const double flattening = 1d / 298.257223563;
+        Console.WriteLine(flattening);
+        const double flattening2 = 0.0033528106643315072;
+
+        Console.WriteLine(flattening2);
+
+        Coordinate coordinate = new Coordinate(18.062584803276312, 59.33653007566394);
+        var c1 = coordinate.TranslateByBearingAndDistance(30, 20);
+
+        var expected1 = new Coordinate(18.062760509, 59.336685555);
+        Console.WriteLine("Expected1 : " + expected1);
+        Console.WriteLine("Actual1   : " + c1);
+
+        var c2 = coordinate.TranslateByBearingAndDistance(300, 20);
+
+        var expected2 = new Coordinate(18.062280472, 59.336619841);
+        Console.WriteLine("Expected2 : " + expected2);
+        Console.WriteLine("Actual1   : " + c2);
+        throw new NotImplementedException();
 
         static bool IsTaxi(XElement pointList)
             => pointList.Parent.Parent.Attributes("id").Any(a => a.Value.ToLower(CultureInfo.InvariantCulture).Contains("taxi"));
@@ -37,6 +59,10 @@ public class NetexShared
       //  Coordinate[][] coordinates = posLists.Select(ParsePointList).Select(list => DEBUG_FILTER_WithinBoundingBox(list)).ToArray();
 
         Coordinate[][] coordinates = posLists.Select(ParsePointList).Where(list => IsAllWithinBoundingBox(list)).ToArray();
+
+        Foo(coordinates);
+
+        return;
 
         GeoBoundingBox geoBoundingBox = new GeoBoundingBox(coordinates.SelectMany(c => c));
 
@@ -67,7 +93,7 @@ public class NetexShared
         //  polylines = polylines.Select(polyline => polyline.RemoveEquivalentAdjacentPoints()).ToArray();
 
         var originalSvg = CreateSvg(polylines, ImmutableArray<FastPolyline>.Empty, GetEndPoints(polylines), ImmutableArray<Point>.Empty);
-        originalSvg.Save($@"D:\Downloads\Test\Netex\1.svgz");
+        originalSvg.Save($@"D:\Downloads\Test\Netex\1.svg");
         // polylines = polylines.Where(p => p.HasDuplicatedPoints()).ToArray();
 
         // polylines = polylines.Where(p => p.ContainsSharpTurns()).Take(1).ToArray();
@@ -109,7 +135,7 @@ public class NetexShared
  
 
         var optimizedSvg = CreateSvg(nonOptimizedLines, optimizedLines, lineSet.OriginalEndPoints, lineSet.AddedEndPoints);
-        optimizedSvg.Save($@"D:\Downloads\Test\Netex\2.svgz");
+        optimizedSvg.Save($@"D:\Downloads\Test\Netex\2.svg");
 
     }
 
@@ -124,6 +150,32 @@ public class NetexShared
         return endPoints;
     }
 
+    public void Foo(Coordinate[][] polylines)
+    {
+        var lineStrings = polylines.Select(CreateLineString);
+      
+
+        GeometryCollection geometryCollection = new GeometryCollection(lineStrings);
+        Feature feature = new Feature(geometryCollection);
+        FeatureCollection featureCollection = new FeatureCollection();
+        featureCollection.Features.Add(feature);
+        GeoJsonDocument geoJsonDocument = new GeoJsonDocument(featureCollection);
+        geoJsonDocument.Save(@"D:\Downloads\Test\Netex\skane1.geojson");
+
+    }
+
+    private static LineString CreateLineString(Coordinate[] polyline)
+    {
+        LineString lineString = new LineString(polyline.Select(c => new GeoJSON.Net.Geometry.Position(c.Lat, c.Long)));
+        return lineString;
+    }
+        
+    //public static SvgDocument CreateGeoJson(IEnumerable<FastPolyline> nonOptimizedLines, IEnumerable<FastPolyline> optimizedLines, IEnumerable<Point> originalStops, IEnumerable<Point> addedNodes)
+    //{
+    //    GeoJsonDocument geoJsonDocument = new GeoJsonDocument();
+
+
+    //}
     public static SvgDocument CreateSvg(IEnumerable<FastPolyline> nonOptimizedLines, IEnumerable<FastPolyline> optimizedLines, IEnumerable<Point> originalStops, IEnumerable<Point> addedNodes)
     {
         SKColor[] colors = ColorHelper.GetBrightDistinctColors();
@@ -193,7 +245,7 @@ public class NetexShared
 
     static bool IsWithinBoundingBox(Coordinate coordinate)
     {
-        return true;
+       // return true;
         //larger area
         var topLeft = new Coordinate(12.873657850104392, 55.64814360262774);
         var bottomRight = new Coordinate(13.068633658027395, 55.56195788858898);
