@@ -1,5 +1,4 @@
 ﻿using OpenSvg.Gtfs;
-using OpenSvg.Netex;
 using OpenSvg.Optimization;
 using OpenSvg.SvgNodes;
 namespace OpenSvg.ConsoleTest;
@@ -88,14 +87,15 @@ internal class Program
       //  return;
 
 
-        NetexShared netexShared = new NetexShared(@"D:\Downloads\Test\Netex\skane\_shared_data.xml");
-        //XDocument xDoc = netexShared.XDocument;
-        //List<XElement> posLists = xDoc.Descendants().Where(e => e.Name.LocalName == "posList").ToList();
+        //NetexShared netexShared = new NetexShared(@"D:\Downloads\Test\Netex\skane\_shared_data.xml");
+        ////netexShared.Process1();
+        ////XDocument xDoc = netexShared.XDocument;
+        ////List<XElement> posLists = xDoc.Descendants().Where(e => e.Name.LocalName == "posList").ToList();
 
         
-        //Console.WriteLine(posLists.Count());
+        ////Console.WriteLine(posLists.Count());
 
-        return;
+        //return;
 
         GtfsFeed gtfs = GtfsFeed.Load(@"D:\Downloads\Test\GTFS\skane.zip");
         gtfs = gtfs.CreateFiltered();

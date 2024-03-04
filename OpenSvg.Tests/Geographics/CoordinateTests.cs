@@ -56,16 +56,16 @@ public class CoordinateTests
     }
 
     [Fact]
-    public void TranslateByBearingAndDistance1_ReturnsCorrect()
+    public void TranslateByDistanceAndBearing1_ReturnsCorrect()
     {
         //Arrange
         Coordinate origin = new(18.062584803276312, 59.33653007566394);
-        const float bearing = 17;
         const float distance = 20;
+        const float bearing = 17;
         Coordinate expected = new(18.062687546, 59.336701763);
 
         //Act
-        Coordinate actual = origin.TranslateByBearingAndDistance(bearing, distance);
+        Coordinate actual = origin.TranslateByDistanceAndBearing(distance, bearing);
 
         //Assert
         Assert.Equal(expected.Long, actual.Long, 8);
@@ -73,19 +73,33 @@ public class CoordinateTests
     }
 
     [Fact]
-    public void TranslateByBearingAndDistance2_ReturnsCorrect()
+    public void TranslateByDistanceAndBearing2_ReturnsCorrect()
     {
         //Arrange
         Coordinate origin = new(18.062584803276312, 59.33653007566394);
-        const float bearing = 300;
         const float distance = 20;
+        const float bearing = 300;
         Coordinate expected = new(18.062280472, 59.336619841);
 
         //Act
-        Coordinate actual = origin.TranslateByBearingAndDistance(bearing, distance);
+        Coordinate actual = origin.TranslateByDistanceAndBearing(distance, bearing);
 
         //Assert
         Assert.Equal(expected.Long, actual.Long, 9);
         Assert.Equal(expected.Lat, actual.Lat, 9);
+    }
+
+    [Fact]
+    public void TranslateByOffsets_ReturnsCorrect()
+    {
+        Coordinate origin = new(18.062584803276312, 59.33653007566394);
+        
+        double eastWestMeters = -30; //west 30 m
+        double northSouthMeters = -40; //south 40 m
+
+        Coordinate actual = origin.TranslateByOffsets(eastWestMeters, northSouthMeters);
+
+        Assert.Equal(59.336171012, actual.Lat, 8);
+        Assert.Equal(18.062057687, actual.Long, 8);
     }
 }

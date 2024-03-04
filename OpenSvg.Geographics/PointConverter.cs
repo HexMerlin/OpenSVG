@@ -72,8 +72,7 @@ public record PointConverter
     /// <returns>The geographic coordinate.</returns>
     public Coordinate ToCoordinate(Point point)
     {
-        //if (transform != null) point = point.Transform((Transform)transform);
-
+       
         double dxMeters = point.X * MetersPerPixel;
         double dyMeters = -point.Y * MetersPerPixel; //flip the y axis (SVG Y grows downwards, Web mercator Y grows upwards)
 

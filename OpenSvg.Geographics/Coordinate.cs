@@ -18,7 +18,7 @@ public readonly struct Coordinate
     /// </summary>
     /// <seealso cref="https://coordinatesharp.com/Performance"/>
 
-    private readonly static EagerLoad eagerLoad = EagerLoad.Create(EagerLoadType.WebMercator); //
+    private readonly static EagerLoad eagerLoad = EagerLoad.Create(EagerLoadType.WebMercator); 
 
     public Coordinate(double longitude, double latitude)
     {
@@ -160,48 +160,29 @@ public readonly struct Coordinate
     /// <returns>The translated coordinate.</returns>
     public Coordinate TranslateByOffsets(double eastWestMeters, double northSouthMeters)
     {
-        const double EarthRadius = 6378137.0; // Radius of the Earth in meters (WGS84)
-        const double DegreesToRadians = Math.PI / 180.0;
-        const double RadiansToDegrees = 180.0 / Math.PI;
-
-        // Convert latitude and longitude to radians
-        double latitudeRad = this.Lat * DegreesToRadians;
-        double longitudeRad = this.Long * DegreesToRadians;
-
-        // Calculate new latitude
-        double newLatitudeRad = latitudeRad + (northSouthMeters / EarthRadius);
-        double newLatitude = newLatitudeRad * RadiansToDegrees;
-
-        // Correct for reaching beyond the poles
-        if (newLatitude > 90)
-        {
-            newLatitude = 180 - newLatitude;
-        }
-        else if (newLatitude < -90)
-        {
-            newLatitude = -180 - newLatitude;
-        }
-
-        // Calculate the new longitude
-        double latitudeCircumference = 2 * Math.PI * EarthRadius * Math.Cos(latitudeRad);
-        double newLongitudeRad = longitudeRad + (eastWestMeters / latitudeCircumference);
-        double newLongitude = newLongitudeRad * RadiansToDegrees;
-
-        // Normalize the longitude to be within [-180, 180]
-        newLongitude = NormalizeLong(newLongitude);
-
-        return new Coordinate(newLongitude, newLatitude);
+        Coordinate result = this;
+        if (eastWestMeters > 0)
+            result = result.TranslateByDistanceAndBearing(eastWestMeters, 90.0);
+        else if (eastWestMeters < 0)
+            result = result.TranslateByDistanceAndBearing(-eastWestMeters, 270.0);
+                     
+        if (northSouthMeters > 0)
+            result = result.TranslateByDistanceAndBearing(northSouthMeters, 0.0);
+        else if (northSouthMeters < 0)
+            result = result.TranslateByDistanceAndBearing(-northSouthMeters, 180.0);
+        return result;
     }
 
-    /// <summary>
+    ///<summary>
     /// Translates the coordinate by a given bearing and distance.
+    /// Implements Vincenty's direct formula.
+    /// Coordinates are assumed to be in the WGS84 datum.
     /// </summary>
-    /// <param name="bearingInDegrees">The bearing in degrees.</param>
     /// <param name="lenInMeters">The distance in meters.</param>
+    /// <param name="bearingInDegrees">The bearing in degrees.</param>
     /// <returns>The translated coordinate.</returns>
-    public Coordinate TranslateByBearingAndDistance(double bearingInDegrees, double lenInMeters)
+    public Coordinate TranslateByDistanceAndBearing(double lenInMeters, double bearingInDegrees)
     {
-
         const double flattening = 1d / 298.257223563; 
         const double radiusLong = 6378137.0d;
         const double radiusShort = radiusLong * (1 - flattening);
