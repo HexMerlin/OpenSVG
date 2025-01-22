@@ -1,5 +1,5 @@
 # OpenSVG Library
-OpenSVG is an open and free library for the SVG format written entirely in C# 12 and .NET 8
+OpenSVG is an open and free library for geometric transforms and vector graphics.
 
 ## View the OpenSVG API Documentation
 <a href="https://hexmerlin.github.io/OpenSVG/api/OpenSvg.html">API Documentation</a>
